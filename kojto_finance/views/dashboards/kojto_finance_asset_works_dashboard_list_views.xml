@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_kojto_finance_asset_works_dashboard_list" model="ir.ui.view">
+            <field name="name">kojto.finance.asset.works.dashboard.list</field>
+            <field name="model">kojto.finance.asset.works.dashboard</field>
+            <field name="arch" type="xml">
+                <list string="Asset Works Dashboard" class="ko-list-main">
+                    <field name="year"/>
+                    <field name="quarter"/>
+                    <field name="month"/>
+                    <field name="asset_works_total" sum="Total"/>
+                    <field name="currency_id"/>
+                    <field name="asset_works_quantity" sum="Total"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_kojto_finance_asset_works_dashboard" model="ir.actions.act_window">
+            <field name="name">Asset Works Dashboard</field>
+            <field name="res_model">kojto.finance.asset.works.dashboard</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_kojto_finance_asset_works_dashboard_list"/>
+        </record>
+    </data>
+</odoo>

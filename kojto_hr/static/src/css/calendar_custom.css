@@ -1,0 +1,13 @@
+.fc-dayGridMonth-view.fc-view.fc-daygrid .fc-daygrid-body td.fc-day-other{
+    background-color: #6f6f6f54;
+}
+
+
+.fc-dayGridMonth-view.fc-view.fc-daygrid .fc-daygrid-day-events .fc-h-event .fc-event-main {
+    color: black;
+    font-weight: bold;
+}
+
+.fc-dayGridMonth-view .fc-daygrid-body tr .fc-daygrid-week-number {
+    font-weight: 800;
+}

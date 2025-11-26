@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_kojto_invoices" model="ir.actions.report">
+        <field name="name">Invoice</field>
+        <field name="model">kojto.finance.invoices</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_finance.report_kojto_invoices</field>
+        <field name="print_report_name">'INVOICE - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_kojto_finance_invoices"/>
+		<field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+    </record>
+</odoo>

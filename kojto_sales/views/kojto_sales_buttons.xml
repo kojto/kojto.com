@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+            <field name="name">kojto.landingpage.form.inherit</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 01 ']" position="after">
+                    <!-- SalesLeads -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_sales_list_view" type="object" class="btn landing_page_button" style="color: #dc3545;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #dc3545;">
+                                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #dc3545;">Sales</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

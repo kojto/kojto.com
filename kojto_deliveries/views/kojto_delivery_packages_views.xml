@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_delivery_packages_at">
+            <field name="name">kojto.delivery_packages.form.at</field>
+            <field name="model">kojto.delivery.packages</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main">
+                    <div class="ko-form-view-title">
+                        <field name="name" class="ko-form-view-title" readonly="1" />
+                    </div>
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <span>PACKAGE ITEMS</span>
+                            </div>
+                        </div>
+                        <div class="ko-tab-textarea col-lg-12">
+                            <field name="pre_content_text" class="mb-2" placeholder="Insert pre content text here ..." />
+                        </div>
+                        <field name="package_content_ids">
+                            <list editable="bottom" default_order="position">
+                                <field name="position" />
+                                <field name="delivery_content_id" />
+                                <field name="quantity" />
+                                <field name="unit_weight" />
+                                <field name="total_weight" />
+                            </list>
+                        </field>
+                        <div class="row mb-4">
+                            <group class="col-lg-6 d-flex">
+                                <div></div>
+                            </group>
+                            <group class="col-lg-6 justify-content-end d-flex">
+                                <div>
+                                    <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                        <label for="net_weight" class="me-2" />
+                                        <field name="net_weight" style="width: 200px;padding-right: 10px;" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+                                </div>
+                            </group>
+                        </div>
+                        <separator class="separator-slim-top" />
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <span>MATERIAL ITEMS</span>
+                            </div>
+                        </div>
+                        <field name="packaging_material_item_ids">
+                            <list editable="bottom" default_order="position">
+                                <field name="position" />
+                                <field name="name" />
+                                <field name="quantity" />
+                                <field name="unit_weight" />
+                                <field name="total_weight" />
+                            </list>
+                        </field>
+                        <div class="row mb-4">
+                            <group class="col-lg-6 d-flex">
+                                <div></div>
+                            </group>
+                            <group class="col-lg-6 justify-content-end d-flex">
+                                <div>
+                                    <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                        <label for="tare_weight" class="me-2" />
+                                        <field name="tare_weight" style="width: 200px;padding-right: 10px;" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+                                    <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                        <label for="gross_weight" class="me-2" />
+                                        <field name="gross_weight" style="width: 200px;padding-right: 10px;" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                    </div>
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

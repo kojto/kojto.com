@@ -1,0 +1,2424 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_deliveries
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:29+0000\n"
+"PO-Revision-Date: 2025-08-11 07:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_cmr
+msgid "'DELIVERY CMR'"
+msgstr "ДОСТАВКА CMR'"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_consumed_materials
+msgid "'DELIVERY Consumed Materials'"
+msgstr "ДОСТАВКА Консумирани материали'"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_dual_use_declaration
+msgid "'DELIVERY Dual Use Declaration'"
+msgstr "ДОСТАВКА Декларация за двойна употреба'"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_export_declaration
+msgid "'DELIVERY Export Declaration'"
+msgstr "ДОСТАВКА Декларация за износ“"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_origin_declaration
+msgid "'DELIVERY Origin Declaration'"
+msgstr "ДОСТАВКА Декларация за произход"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_package_label
+msgid "'DELIVERY Package Label'"
+msgstr "ДОСТАВКА Етикет на опаковката'"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery_packages
+msgid "'DELIVERY Package'"
+msgstr "ДОСТАВКА Пакет'"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_kojto_delivery
+msgid "'DELIVERY' + object.name"
+msgstr "ДОСТАВКА' + име на обект"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_delivery_consumed_materials
+msgid "'Delivery Consumed Materials - %s' % (object.name)"
+msgstr "Консумирани материали за доставка - %s' % (име на обект)"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,print_report_name:kojto_deliveries.action_report_delivery_inspection
+msgid "'Delivery Inspection - %s' % (object.name)"
+msgstr "Проверка на доставката - %s' % (име на обект)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "(ADR*)<br/> (ADR*)"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid ""
+",\n"
+"                                declare that the goods presented for export -"
+msgstr ""
+",\n"
+"                                декларират, че представените за износ стоки -"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid ", in my capacity as authorized representative of company"
+msgstr ", в качеството ми на упълномощен представител на дружеството"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"- В случай на опасни товари обозначете в последния ред на колоната.Номер по ООН; товари от клас 1 и 7; виж специалната документация, изисквана по ADR, Част 5; номерата на етикета за опасност и опаковъчната група<br/> - In case of\n"
+"                                dangerous good mentoin on the last line of the column. UN number; Goods from class 1 and 7; see specail documentation demands in ADR, Part 5; The Label number and Packing Group"
+msgstr ""
+"- В случай на опасни товари обозначете в последния ред на колоната.Номер по ООН; товари от клас 1 и 7; виж специална документация, изисквана по ADR, Част 5; номера на етикета за опасност и опаковъчната група<br/> - In case of\n"
+"                                опасен добър ментоин на последния ред на колоната. UN номер; Стоки от клас 1 и 7; вижте изискванията за специална документация в ADR, част 5; Номер на етикета и опаковъчна група"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "/ NET"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "/ TARE"
+msgstr "/ ТАРА"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "1. Изпращач / Sender (name, address, country) <br/>"
+msgstr "1. Изпращач / Изпращач (име, адрес, държава) <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "10. Знаци и номера<br/> Marks and Nos"
+msgstr "10. Знаци и номера<br/> Знаци и номера"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "11. Брой колети<br/> Number of packages"
+msgstr "11. Брой колети<br/> Брой опаковки"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "12. Вид на опаковка<br/> Method of packing"
+msgstr "12. Вид на опаковката<br/> Начин на опаковане"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "13. Вид на стоката<br/> Nature of the goods"
+msgstr "13. Вид на стоката<br/> Естество на стоката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "14.Тежина бруто, кг<br/>Gross weight in kg"
+msgstr "14.Тежина бруто, кг<br/>Брутно тегло в кг"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "15. Обем <br/>Volume in m³"
+msgstr "15. Обем <br/>Обем в m³"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "17. За плащане от:<br/>To be paid by"
+msgstr "17. За плащане от:<br/>Заплаща се до"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "18. Други полезни подробности<br/>Other useful particulars <br/>"
+msgstr "18. Други полезни подробности<br/>Други полезни подробности <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "19. Наложен платеж<br/>Cash on delivery <br/>"
+msgstr "19. Наложен платеж<br/>Наложен платеж <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "2. Получател / Consignee (name, address, country) <br/>"
+msgstr "2. Получател / Получател (име, адрес, държава) <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"20. Този превоз, независимо от всяка противиречаща клауза, е подчинен на Конвенцията за международен автомобилен превоз(CMR)<br/> This carriage is subject, any clause to the contrary, to the Convention on the Contract for the International\n"
+"                                            Carriage of Goods by Road (CMR)"
+msgstr ""
+"20. Този превоз, независимо от всяка противоречаща клауза, е подчинен на Конвенцията за международен автомобилен превоз (CMR)<br/> Този превоз е предмет, всяка клауза за противното, на Конвенцията за договора за международни\n"
+"                                            Превоз на товари по шосе (CMR)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "21. Изготвено в / Established in:"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"22. Подпис или печат на отправителя <br/> Signature or stamp of the sender"
+msgstr "22. Подпис или печат на изпращача <br/> Подпис или печат на подателя"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"23. Подпис или печат на превозвача<br/>Signature or stamp of the carrier"
+msgstr "23. Подпис или печат на превозвача<br/>Подпис или печат на превозвача"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"24. Стоките получени / Goods received:<br/> Place: <br/> Date: <br/> "
+"Signature:"
+msgstr ""
+"24. Стоките получени / Получени стоки:<br/> Място: <br/> Дата: <br/> Подпис:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"25. Подпис или печат на превозвача <br/> Signature or stamp of the carrier"
+msgstr ""
+"25. Подпис или печат на превозвача <br/> Подпис или печат на превозвача"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "3. Товарене на стоките / Taking over the goods <br/> Place:"
+msgstr "3. Товарене на стоките / Поемане на стоките <br/> Място:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"4. Разтоварване на стоките / Delivery of the goods <br/> Място / Place:"
+msgstr "4. Разтоварване на стоките / Доставка на стоките <br/> Място / Място:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "5. Указания на изпращача / Sender's instructions <br/>"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "6. Превозвач<br/> Carrier (name, address, country)"
+msgstr "6. Превозвач<br/> Превозвач (име, адрес, държава)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"7. Последователни превозвачи / Successive carriers <br/>\n"
+"                                        <span>Име / Name</span>\n"
+"                                        <br/>\n"
+"                                        <span>Адрес / Address</span>\n"
+"                                        <br/>\n"
+"                                        <span>Държава / Country</span>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+msgstr ""
+"7. Последователни превозвачи / Successive carriers <br/>\n"
+"                                        <span>Име / Име</span>\n"
+"                                        <br/>\n"
+"                                        <span>Адрес / Address</span>\n"
+"                                        <br/>\n"
+"                                        <span>Държава / Country</span>\n"
+"                                        <br/>\n"
+"                                        <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"8. Резерви и бележки на превозвача по товарене на стоките<br/>Carrier's "
+"reservations and observations on taking over the goods"
+msgstr ""
+"8. Резерви и бележки на превозвача по стоките<br/>Резерви и забележки на "
+"превозвача при приемане на стоката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"9. Документи, предадени на превозвача от изпращача / Documents handed to the carrier by sender <br/>\n"
+"                                            <br/>"
+msgstr ""
+"9. Документи, предадени на превозвача от изпращача / Документи, предадени на превозвача от изпращача <br/>\n"
+"                                            <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"<br/>\n"
+"                                            Time of Arrival:"
+msgstr ""
+"<br/>\n"
+"                                            Час на пристигане:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Address:"
+msgstr "<br/> Адрес:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Contact:"
+msgstr "<br/> Контакт:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Date:"
+msgstr "<br/> Дата:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Time of Departure:"
+msgstr "<br/> Час на тръгване:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Държава / Country"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> Работно времена склада / Warehouse opening hours <br/>"
+msgstr "<br/> Работно време на склада / Работно време на склада <br/>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<br/> на / on:"
+msgstr "<br/> на / на:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "<em>Signature</em>"
+msgstr "<em>Подпис</em>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #20c997;\">Deliveries</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #20c997;\">Доставки</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "<span style=\"font-weight:900\">1 - 5, 9 - 16, 18 + 22</span>"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "<span>/</span>"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"<span>16. Специални споразумения между изпращача и превозвача:</span>\n"
+"                                            <br/>\n"
+"                                            <span>Special agreements between the sender and carrier</span>"
+msgstr ""
+"<span>16. Специални споразумения между изпращача и превозвача:</span>\n"
+"                                            <br/>\n"
+"                                            <span>Специални споразумения между подателя и превозвача</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_form
+msgid "<span>DELIVERY CONSUMED MATERIALS</span>"
+msgstr "<span>ДОСТАВКАТА ИЗТЪКВА МАТЕРИАЛИ</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_contents_form
+msgid "<span>DELIVERY CONTENT</span>"
+msgstr "<span>СЪДЪРЖАНИЕ НА ДОСТАВКА</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "<span>DELIVERY INSPECTION CERTIFICATE</span>"
+msgstr "<span>СЕРТИФИКАТ ЗА ПРОВЕРКА НА ДОСТАВКА</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packaging_material_items_form
+msgid "<span>DELIVERY PACKAGE MATERIAL ITEM</span>"
+msgstr "<span>МАТЕРИАЛ ЗА ОПАКОВКА ЗА ДОСТАВКА</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_package_materials_form
+msgid "<span>DELIVERY PACKAGE MATERIAL</span>"
+msgstr "<span>ОПАКОВЕН МАТЕРИАЛ ЗА ДОСТАВКА</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "<span>Delivery </span>"
+msgstr "<span>Доставка </span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packages_at
+msgid "<span>MATERIAL ITEMS</span>"
+msgstr "<span>МАТЕРИАЛНИ ЕЛЕМЕНТИ</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_package_contents_form
+msgid "<span>PACKAGE CONTENT</span>"
+msgstr "<span>СЪДЪРЖАНИЕ НА ПАКЕТА</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packages_at
+msgid "<span>PACKAGE ITEMS</span>"
+msgstr "<span>ПАКЕТНИ АРТИКУЛИ</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"<span>МЕЖДУНАРОДНА ТОВАРИТЕЛНИЦA - CMR - INTERNATIONAL CONSIGNMENT "
+"NOTE</span>"
+msgstr ""
+"<span>МЕЖДУНАРОДНА ТОВАРИТЕЛНИЦА - CMR - МЕЖДУНАРОДНА КОНСИНГНАЦИЯ</span>"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "<strong>Gross Weight:</strong>"
+msgstr "<strong>Брутно тегло:</strong>"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__astm_a1123
+msgid "ASTM A1123/A1123M - Sharp cornerd profiles"
+msgstr "ASTM A1123/A1123M - Профили с остри ъгли"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__active
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_contents
+msgid "Add Delivery Contents"
+msgstr "Добавяне на съдържанието на доставката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_package_contents
+msgid "Add Delivery Package Contents"
+msgstr "Добавяне на съдържанието на пакета за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_packaging_material_items
+msgid "Add Delivery Packaging Material Items"
+msgstr "Добавете елементи от опаковъчния материал за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_packaging_materials
+msgid "Add Delivery Packaging Materials"
+msgstr "Добавяне на опаковъчни материали за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Additional Information"
+msgstr "Допълнителна информация"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__additional_notes
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Additional Notes"
+msgstr "Допълнителни бележки"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_address_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Address:"
+msgstr "адрес:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__country_id
+msgid "Arrival Country"
+msgstr "държава"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "As authorized company representative ______________________"
+msgstr "Като упълномощен представител на фирмата ______________________"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__attachments
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__pdf_attachment_id
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_bank_account_id
+msgid "Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_bank_account_id
+msgid "Bank account"
+msgstr "Банкова сметка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Basic Information"
+msgstr "Основна информация"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__batch_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Batch"
+msgstr "Партида"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__batch_ids
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Batches"
+msgstr "Партиди"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__cmr_id
+#: model:ir.ui.menu,name:kojto_deliveries.menu_kojto_delivery_cmr
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+msgid "CMR"
+msgstr "ЧМР"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "CMR #"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_cmr
+msgid ""
+"CMR (International Consignment Note) documents are used for international "
+"road transport of goods."
+msgstr ""
+"Документите CMR (International Consignment Note) се използват за "
+"международен автомобилен транспорт на стоки."
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_cmr
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "CMR Documents"
+msgstr "Доставка CMR"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_list
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "CMR №"
+msgstr "ЧМР №"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__cash_on_delivery
+msgid "Cash On Delivery"
+msgstr "Наложен платеж"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__certificate_type
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+msgid "Certificate Type"
+msgstr "Тип сертификат"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Certificate of Origin"
+msgstr "Сертификат за произход"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Company Information"
+msgstr "Информация за компанията"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Company name:"
+msgstr "Име на фирмата:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__consumed_materials_ids
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__content_compositions
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Consumed Materials"
+msgstr "Консумирани материали"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Consumed Materials Summary"
+msgstr "Резюме на изразходваните материали"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__consumed_materials_table_html
+msgid "Consumed Materials Table"
+msgstr "Таблица на изразходваните материали"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_list
+msgid "Consumed Materials in Delivery"
+msgstr "Консумирани материали при доставка"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__batch_quantity_consumed
+msgid "Consumed Qty"
+msgstr "Консумирано кол"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__contact_person
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Contact Person"
+msgstr "Лице за контакт"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Content"
+msgstr "Съдържание"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+msgid "Content Data"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__content
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+msgid "Copy Delivery"
+msgstr "Доставка на копия"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_type
+msgid "Counterparty Type"
+msgstr "Тип на контрагента"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Country"
+msgstr "Държава"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_cmr
+msgid "Create your first CMR document!"
+msgstr "Създайте своя първи CMR документ!"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_consumed_materials
+msgid "Create your first delivery consumed material"
+msgstr "Създайте своя първи консумиран материал за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_delivery_inspection_certificates
+msgid "Create your first delivery inspection certificate"
+msgstr "Създайте първия си сертификат за проверка на доставката"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__create_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__create_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__currency_id
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Customer"
+msgstr "Клиент"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__counterparty_address_id
+msgid "Customer Address"
+msgstr "Адрес на клиента"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__counterparty_email_id
+msgid "Customer Email"
+msgstr "Имейл на клиента"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Customer Information"
+msgstr "Информация за клиента"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__counterparty_name_id
+msgid "Customer Name"
+msgstr "Име на клиента"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__counterparty_phone_id
+msgid "Customer Phone"
+msgstr "Телефон на клиента"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__customs_number
+msgid "Customs Number"
+msgstr "Митнически номер"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "DELIVERY #"
+msgstr "ДОСТАВКА #"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "DIMENSIONS: W"
+msgstr "РАЗМЕРИ: Ш"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid "DUAL USE DECLARATION"
+msgstr "ДЕКЛАРАЦИЯ ЗА ДВОЙНА УПОТРЕБА"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Date Created"
+msgstr "Дата на създаване"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Date Issued"
+msgstr "Дата на издаване"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__date_issue
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Date of Declaration"
+msgstr "Дата на декларация"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__date_delivery
+msgid "Delivery Date"
+msgstr "Дата на доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Declarations data"
+msgstr "Данни от декларациите"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__delivery_ids
+#: model:ir.ui.menu,name:kojto_deliveries.menu_kojto_deliveries
+#: model:ir.ui.menu,name:kojto_deliveries.menu_kojto_delivery_managment
+msgid "Deliveries"
+msgstr "Доставки"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__delivery_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__delivery_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__delivery_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__delivery_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__delivery_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+msgid "Delivery"
+msgstr "Доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Delivery #"
+msgstr "Доставка #"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__delivery_address
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Delivery Address"
+msgstr "Адрес за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Delivery Address:"
+msgstr "Адрес за доставка:"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_cmr
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_cmr
+msgid "Delivery CMR"
+msgstr "Доставка CMR"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_consumed_materials
+#: model:ir.actions.report,name:kojto_deliveries.action_report_delivery_consumed_materials
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_consumed_materials
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_consumed_materials
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Delivery Consumed Materials"
+msgstr "Доставка Консумирани материали"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__delivery_content_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Delivery Content"
+msgstr "Съдържание на доставката"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_contents
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_contents
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_contents_search
+msgid "Delivery Contents"
+msgstr "Съдържание на доставката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Delivery Date"
+msgstr "Дата на доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Delivery Date:"
+msgstr "Дата на доставка:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "Delivery Details"
+msgstr "Подробности за доставката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Delivery Documents"
+msgstr "Документи за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_dual_use_declaration
+msgid "Delivery Dual Use Declaration"
+msgstr "Декларация за доставка с двойна употреба"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_export_declaration
+msgid "Delivery Export Declaration"
+msgstr "Декларация за износ на доставка"
+
+#. module: kojto_deliveries
+#: model:ir.model,name:kojto_deliveries.model_kojto_deliveries
+msgid "Delivery Information"
+msgstr "Информация за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_delivery_inspection
+msgid "Delivery Inspection (Alias)"
+msgstr "Проверка на доставката (псевдоним)"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_inspection_certificates
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_inspection_certificates
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+msgid "Delivery Inspection Certificates"
+msgstr "Сертификати за проверка на доставката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "Delivery Number"
+msgstr "Номер на доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_origin_declaration
+msgid "Delivery Origin Declaration"
+msgstr "Декларация за произход на доставката"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__delivery_package_id
+msgid "Delivery Package"
+msgstr "Пакет за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_package_contents
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_package_contents
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_package_contents_search
+msgid "Delivery Package Contents"
+msgstr "Съдържание на пакета за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_package_label
+msgid "Delivery Package Label"
+msgstr "Етикет за пакет за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.report,name:kojto_deliveries.action_report_kojto_delivery_packages
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_packages
+msgid "Delivery Packages"
+msgstr "Пакети за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__packaging_material_id
+msgid "Delivery Packaging Material"
+msgstr "Опаковъчен материал за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_packaging_material_items
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_packaging_material_items
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packaging_material_items_search
+msgid "Delivery Packaging Material Items"
+msgstr "Опаковъчни материали за доставка"
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_packaging_materials
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_packaging_materials
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packaging_materials_search
+msgid "Delivery Packaging Materials"
+msgstr "Опаковъчни материали за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Delivery Place"
+msgstr "Място за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Delivery №"
+msgstr "Доставка №"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__description
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__description
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__width
+msgid "Dimension X"
+msgstr "Измерение X"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__depth
+msgid "Dimension Y"
+msgstr "Измерение Y"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__height
+msgid "Dimension Z"
+msgstr "Измерение Z"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Dimensional Tolerance Standard"
+msgstr "Стандарт за толерантност на размерите"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__unit_id
+msgid "Dimensions Unit"
+msgstr "Размери Единица"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__display_name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__document_by_sender
+msgid "Document By Sender"
+msgstr "Документ по подател"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Document Information"
+msgstr "Информация за документа"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "Documents will be calculated automatically..."
+msgstr "Документите ще бъдат изчислени автоматично..."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Dual Use Declaration"
+msgstr "Декларация за двойна употреба"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10025
+msgid "EN 10025 - Hot rolled products of structural steels"
+msgstr "EN 10025 - Горещо валцувани продукти от конструкционни стомани"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10028
+msgid "EN 10028 - Flat products for pressure purposes"
+msgstr "EN 10028 - Плоски продукти за работа под налягане"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10029
+msgid "EN 10029 - Hot-rolled steel plates"
+msgstr "EN 10029 - Горещовалцувани стоманени плочи"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10034
+msgid "EN 10034 - Hot rolled I and H sections"
+msgstr "EN 10034 - Горещо валцувани профили I и H"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10048
+msgid "EN 10048 - Hot rolled narrow strips"
+msgstr "EN 10048 - Горещо валцувани тесни ленти"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10051
+msgid "EN 10051 - Continuously hot-rolled strip and plate"
+msgstr "EN 10051 - Непрекъснато горещовалцувани ленти и плочи"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10055
+msgid "EN 10055 - Hot rolled equal flange tees"
+msgstr "EN 10055 - Горещо валцувани тройници с равни фланци"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10056
+msgid "EN 10056 - Structural steel equal and unequal angles"
+msgstr "EN 10056 - Равни и неравни ъгли от структурна стомана"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10058
+msgid "EN 10058 - Hot rolled flat bars"
+msgstr "EN 10058 - Горещо валцувани плоски пръти"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10059
+msgid "EN 10059 - Hot rolled square bars"
+msgstr "EN 10059 - Горещо валцувани квадратни пръти"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10060
+msgid "EN 10060 - Hot rolled round bars"
+msgstr "EN 10060 - Горещо валцувани кръгли пръти"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__certificate_type__2_1
+msgid "EN 10204 2.1"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__certificate_type__2_2
+msgid "EN 10204 2.2"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__certificate_type__3_1
+msgid "EN 10204 3.1"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__certificate_type__3_2
+msgid "EN 10204 3.2"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10210
+msgid "EN 10210 - Hot finished structural hollow sections"
+msgstr "EN 10210 - Горещ завършен структурен кух профил"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10219
+msgid "EN 10219 - Cold formed welded structural hollow sections"
+msgstr "EN 10219 - Студено формовани заварени структурни кухи профили"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10279
+msgid "EN 10279 - Hot rolled Z sections"
+msgstr "EN 10279 - Горещо валцувани Z профили"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10297
+msgid "EN 10297 - Seamless circular tubes"
+msgstr "EN 10297 - Безшевни кръгли тръби"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_10305
+msgid "EN 10305 - Precision steel tubes"
+msgstr "EN 10305 - Прецизни стоманени тръби"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__dimensional_tolerance_standard__en_1090
+msgid "EN 1090 - Execution of steel structures"
+msgstr "EN 1090 - Изпълнение на стоманени конструкции"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "EURO 1 EXPORT DECLARATION"
+msgstr "ЕВРО 1 ЕКСПОРТНА ДЕКЛАРАЦИЯ"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_email_id
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Email:"
+msgstr "Имейл:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_email_id
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "Enter sender instructions..."
+msgstr "Въведете инструкции на подателя..."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "Enter special agreements..."
+msgstr "Въведете специални споразумения..."
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__established_in
+msgid "Established In"
+msgstr "Създадена през"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__date_established_on
+msgid "Established On"
+msgstr "Създаден на"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__execution_type
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Execution Type"
+msgstr "Тип на изпълнение"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Export Declaration"
+msgstr "Декларация за износ"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__invoices_ids
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Export Invoices"
+msgstr "Експортни фактури"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__exported_material
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Exported Material"
+msgstr "Изнесен материал"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Exporter invoice(s)"
+msgstr "Експортни фактури"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__execution_type__extruded
+msgid "Extruded"
+msgstr "Екструдиран"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_package_contents_list_at
+msgid "Fill with Unallocated Contents"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "From"
+msgstr "от"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__guid
+msgid "GUID"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__gross_weight
+msgid "Gross (kg)"
+msgstr "Бруто (кг)"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__repr_html_gross_weight
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__gross_weight
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+msgid "Gross Weight"
+msgstr "Бруто тегло"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__gross_weight
+msgid "Gross weight"
+msgstr "Тегло бруто"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__height
+msgid "Height (mm)"
+msgstr "Височина (mm)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid ""
+"I am familiar with the provisions of Art. 313 of the Criminal Code for "
+"filing a declaration with false content."
+msgstr ""
+"Запознат съм с разпоредбите на чл. 313 от Наказателния кодекс за подадена "
+"декларация с невярно съдържание."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid ""
+"I declare that I am responsible for incorrect data under Article 313 of the "
+"Penal Code."
+msgstr "Декларирам, че нося отговорност за неверни данни по чл.313 от НК."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid ""
+"I, declare that despite the coincidence of the customs tariff numbers of the"
+" goods intended for export:"
+msgstr ""
+"Декларирам, че въпреки съвпадението на митническите тарифни номера на "
+"стоките, предназначени за износ:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "I, the undersigned"
+msgstr "Аз, долуподписаният"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid ""
+"I, the undersigned, declare that the goods described in the attached invoice"
+" document(s):"
+msgstr ""
+"Аз, долуподписаният, декларирам, че стоките, описани в приложените документи"
+" за фактура:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_landingpage__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+msgid "Import"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Import Content"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.actions.act_window,name:kojto_deliveries.action_kojto_delivery_content_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+msgid "Import Delivery Content"
+msgstr "Импорт на съдържание на доставка"
+
+#. module: kojto_deliveries
+#: model:ir.model,name:kojto_deliveries.model_kojto_delivery_content_import_wizard
+msgid "Import Delivery Content Wizard"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_deliveries__document_in_out_type__incoming
+msgid "In"
+msgstr "Вх."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid ""
+"In case of a normatively substantiated request by the customs authorities, we are able to provide the necessary information and documents regarding the ownership and origin of the goods.\n"
+"                                I declare that I am aware of the responsibility under Article 313 of the Penal Code for submitting incorrect data."
+msgstr ""
+"При нормативно обосновано искане от страна на митническите органи сме в състояние да предоставим необходимата информация и документи относно собствеността и произхода на стоките.\n"
+"                                Декларирам, че съм запознат с отговорността по чл.313 от НК за подаване на неверни данни."
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__quantity_package_contents
+msgid "In package"
+msgstr "В опаковка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__include_in_cmr
+msgid "Include In CMR"
+msgstr "Включви в ЧМР"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Incoming"
+msgstr "Входящи"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__incoterms_id
+msgid "Incoterms"
+msgstr "Инкотермс"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__incoterms_address
+msgid "Incoterms Address"
+msgstr "Инкотермс адрес"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Incoterms Address:"
+msgstr "Инкотермс адрес:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Incoterms:"
+msgstr "Инкотермс:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Insert post content text here ..."
+msgstr "Вмъкнете текст на съдържанието на публикацията тук..."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_packages_at
+msgid "Insert pre content text here ..."
+msgstr "Вмъкнете тук предварителен текст..."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Inspection Certificate"
+msgstr "Сертификат за проверка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Inspection Certificate #"
+msgstr "Сертификат за инспекция #"
+
+#. module: kojto_deliveries
+#: model:ir.ui.menu,name:kojto_deliveries.menu_kojto_delivery_inspection_certificates
+msgid "Inspection Certificates"
+msgstr "Сертификати за проверка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Inspection Details"
+msgstr "Подробности за инспекцията"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__invoice_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Invoice"
+msgstr "Фактура"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__invoice_content_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Invoice Content"
+msgstr "Съдържание на фактурата"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Invoice Number"
+msgstr "Номер на фактура"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__active
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Issued by"
+msgstr "Издадено от"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Issued by:"
+msgstr "Издадено от"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Issued to:"
+msgstr "Издадена на"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__delivery_content_id
+msgid "Item"
+msgstr "Артикул"
+
+#. module: kojto_deliveries
+#: model:ir.model,name:kojto_deliveries.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__language_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__language_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__language_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Language"
+msgstr "език"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__execution_type__laser_welded
+msgid "Laser Welded"
+msgstr "Лазерно заварени"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__write_uid
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_content_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__write_date
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__length
+msgid "Length (mm)"
+msgstr "Дължина (mm)"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__execution_type__mig_mag_welded
+msgid "MIG/MAG Welded"
+msgstr "MIG/MAG заварени"
+
+#. module: kojto_deliveries
+#: model_terms:ir.actions.act_window,help:kojto_deliveries.action_kojto_deliveries
+msgid ""
+"Manage your deliveries here. You can create, view, and edit delivery "
+"documents easily."
+msgstr ""
+"Управлявайте доставките си тук. Можете лесно да създавате, преглеждате и "
+"редактирате документи за доставка."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Manufacturer"
+msgstr "Производител"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__company_address_id
+msgid "Manufacturer Address"
+msgstr "Адрес на производителя"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__company_email_id
+msgid "Manufacturer Email"
+msgstr "Имейл на производителя"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__company_name_id
+msgid "Manufacturer Name"
+msgstr "Име на производителя"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__company_phone_id
+msgid "Manufacturer Phone"
+msgstr "Телефон на производителя"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "Material Consumption Report"
+msgstr "Доклад за разхода на материали"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__material_grade_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Material Grade"
+msgstr "Клас на материала"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__material_grade_type
+msgid "Material Grade Type"
+msgstr "Тип клас на материала"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__material_properties_table
+msgid "Material Properties Table"
+msgstr "Таблица със свойствата на материала"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Material Type ISO 15608"
+msgstr "Тип материал ISO 15608"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__execution_type__milled
+msgid "Milled"
+msgstr "Смлян"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "NO PACKAGE CONTENTS FOUND"
+msgstr "НЕ Е НАМЕРЕНО СЪДЪРЖАНИЕ НА ОПАКОВКАТА"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "NO PACKAGES FOUND"
+msgstr "НЯМА НАМЕРЕНИ ПАКЕТИ"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "NO PACKING MATERIALS FOUND"
+msgstr "НЕ СА НАМЕРЕНИ опаковъчни материали"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__name
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_name_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__net_weight
+msgid "Net (kg)"
+msgstr "Нето (кг)"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__net_weight
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Net Weight"
+msgstr "Нетно тегло"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__net_weight
+msgid "Net Weight (kg)"
+msgstr "Нетно тегло (кг)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Net Weight:"
+msgstr "Нетно тегло:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__net_weight
+msgid "Net weight"
+msgstr "Нетно тегло"
+
+#. module: kojto_deliveries
+#. odoo-python
+#: code:addons/kojto_deliveries/models/kojto_delivery_inspection_certificates.py:0
+msgid "Net weight cannot be negative."
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "No packages are available for this delivery."
+msgstr "Няма налични пакети за тази доставка."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Open consumed materials"
+msgstr "Отворени консумирани материали"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Open package contents"
+msgstr "Отворете съдържанието на опаковката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Open packaging material items"
+msgstr "Елементи от отворен опаковъчен материал"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Origin Declaration"
+msgstr "Декларация за произход"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_delivery_inspection_certificates__execution_type__other
+msgid "Other"
+msgstr "Други"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__other_particulars
+msgid "Other Particulars"
+msgstr "Други подробности"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields.selection,name:kojto_deliveries.selection__kojto_deliveries__document_in_out_type__outgoing
+msgid "Out"
+msgstr "Изх."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Outgoing"
+msgstr "Изходящ"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__pdf_attachment_id
+msgid "PDF Attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__pdf_attachment_id
+msgid "PDF attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__delivery_package_id
+msgid "Package"
+msgstr "Пакет"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Package Contents"
+msgstr "Съдържание на пакета"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Package Documentation"
+msgstr "Пакетна документация"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__package_content_ids
+msgid "Package Items"
+msgstr "Пакетни артикули"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Package Label"
+msgstr "Етикет на опаковката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Package Summary"
+msgstr "Резюме на пакета"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__packages
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Packages"
+msgstr "Пакети"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "Packages Total Weight"
+msgstr "Общо тегло на пакетите"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__packaging_material_item_ids
+msgid "Packaging Material Items"
+msgstr "Опаковъчни материали"
+
+#. module: kojto_deliveries
+#: model:ir.ui.menu,name:kojto_deliveries.menu_kojto_delivery_packaging_materials
+msgid "Packaging Materials"
+msgstr "Опаковъчни материали"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Packaging Weight"
+msgstr "Тегло на опаковката"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Packed in"
+msgstr "Опаковани в"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__packing_list
+msgid "Packing List"
+msgstr "Опаковъчен лист"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Packing List #"
+msgstr "Опаковъчен списък #"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Packing Materials"
+msgstr "Опаковъчни материали"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "Packing list will be calculated automatically..."
+msgstr "Опаковъчният списък ще бъде изчислен автоматично..."
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,help:kojto_deliveries.field_kojto_delivery_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_content_import_wizard_form
+msgid "Paste data here (Position;Name;Quantity;Unit;Unit Weight)"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_phone_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_phone_id
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__phone_number
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Phone Number"
+msgstr "Телефонен номер"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Phone:"
+msgstr "телефон:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__place_for_delivery
+msgid "Place for Delivery"
+msgstr "Място за доставка"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Place: Sofia"
+msgstr "Място: София"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__delivery_content_position
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__position
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__position
+msgid "Position"
+msgstr "Позиция"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__post_content_text
+msgid "Post Content Text"
+msgstr "Текст на съдържанието на публикацията"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__pre_content_text
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__pre_content_text
+msgid "Pre Content Text"
+msgstr "Предварителен текст на съдържанието"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_list
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_form
+msgid "Print CMR"
+msgstr "Отпечатайте ЧМР"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_list
+msgid "Print CMR Document"
+msgstr "Отпечатайте ЧМР документ"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_list
+msgid "Print Certificate"
+msgstr "Печат на сертификат"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Product Information"
+msgstr "Информация за продукта"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__product_name
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Product Name"
+msgstr "Име на продукта"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__product_standard
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Product Standard"
+msgstr "Продуктов стандарт"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__quantity
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__quantity
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Reference №"
+msgstr "Референтен №"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Reg. #:"
+msgstr "Рег. №"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_registration_number
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_registration_number
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "Registration Number"
+msgstr "Регистрационен номер"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_registration_number_type
+msgid "Registration Number Type"
+msgstr "Тип регистрационен номер"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Registration number:"
+msgstr "Регистрационен номер:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "SHIP TO:"
+msgstr "ИЗПРАТЕТЕ ДО:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__sender_instructions
+msgid "Sender Instructions"
+msgstr "Инструкции за изпращача"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__signed_by
+msgid "Signed By"
+msgstr "Подписано от"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Signed by"
+msgstr "Подписано от"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_inspection_certificates_form
+msgid "Source Material Batches"
+msgstr "Партиди от изходни материали"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__special_agreements
+msgid "Special Agreements"
+msgstr "Специални споразумения"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__can_stack_on_it
+msgid "Stack On It"
+msgstr "Може да се подрежда върху него"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__store_id
+msgid "Store"
+msgstr "Магазин"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__subcode_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid "Subcode"
+msgstr "ID на подкод"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__subject
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Subject"
+msgstr "Предмет"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Supplier Invoices"
+msgstr "Фактури на доставчика"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "Supplier Name"
+msgstr "Име на доставчика"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__taking_address
+msgid "Taking Address"
+msgstr "Вземане на адрес"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__date_taking
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Taking Date"
+msgstr "Дата на вземане"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__taking_place
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+msgid "Taking Place"
+msgstr "Заемане на място"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__tare_weight
+msgid "Tare (kg)"
+msgstr "Тара (кг)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Tare Weight:"
+msgstr "Тегло на тарата:"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__tare_weight
+msgid "Tare weight"
+msgstr "Тегло на тарата"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Tax ID:"
+msgstr "Данъчен №"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__company_tax_number_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterparty_tax_number_id
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "Tax number:"
+msgstr "Данъчен номер:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Thank you for your business!"
+msgstr "Благодарим за доверието!"
+
+#. module: kojto_deliveries
+#. odoo-python
+#: code:addons/kojto_deliveries/models/kojto_delivery_inspection_certificates.py:0
+msgid "The Name must be unique!"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid ""
+"The goods are intended for civilian purposes and do not appear on the List "
+"of Controlled Dual-Use Goods and do not meet the characteristics indicated "
+"in the footnote."
+msgstr ""
+"Стоките са предназначени за граждански цели и не фигурират в Списъка на "
+"контролираните стоки с двойна употреба и не отговарят на характеристиките, "
+"посочени в бележката под линия."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "The goods are manufactured by company"
+msgstr "Стоките са произведени от фирма"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid ""
+"The materials used are of EU origin and are classified in a different "
+"position from that of the exported products. No non-originating materials of"
+" heading"
+msgstr ""
+"Използваните материали са с произход от ЕС и са класифицирани на различна "
+"позиция от тази на изнасяните продукти. Няма материали без произход от "
+"позицията"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid ""
+"This consumed materials report certifies that the materials listed above have been consumed in the production of the delivered products.\n"
+"                                All materials have been properly tracked and documented according to the applicable standards and specifications.\n"
+"                                The material consumption data is provided for quality control and traceability purposes."
+msgstr ""
+"Този отчет за изразходвани материали удостоверява, че изброените по-горе материали са използвани при производството на доставените продукти.\n"
+"                                Всички материали са надлежно проследени и документирани съгласно приложимите стандарти и спецификации.\n"
+"                                Данните за потреблението на материали се предоставят за целите на контрола на качеството и проследимостта."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy
+msgid ""
+"This delivery inspection certificate certifies that the products described above have been inspected and meet the specified requirements.\n"
+"                                The inspection was performed in accordance with the applicable standards and specifications.\n"
+"                                The chemical analysis and mechanical properties are provided by the manufacturer of the raw material."
+msgstr ""
+"Този сертификат за проверка на доставката удостоверява, че описаните по-горе продукти са проверени и отговарят на посочените изисквания.\n"
+"                                Проверката е извършена в съответствие с приложимите стандарти и спецификации.\n"
+"                                Химическият анализ и механичните свойства се предоставят от производителя на суровината."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid ""
+"This packing list certifies that the items described above have been properly packaged and prepared for shipment.\n"
+"                                All weights and quantities have been verified and documented according to standard procedures.\n"
+"                                The package has been prepared in accordance with shipping requirements and safety standards."
+msgstr ""
+"Този опаковъчен лист удостоверява, че артикулите, описани по-горе, са правилно опаковани и подготвени за изпращане.\n"
+"                                Всички тегла и количества са проверени и документирани съгласно стандартните процедури.\n"
+"                                Пакетът е изготвен в съответствие с изискванията за доставка и стандартите за безопасност."
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__time_of_arrival
+msgid "Time of Arrival"
+msgstr "Време на пристигане"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__time_of_departure
+msgid "Time of Departure"
+msgstr "Час на заминаване"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_form
+msgid "To"
+msgstr "до"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_cmr_search
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_inspection_certificates__dimensional_tolerance_standard
+msgid "Tolerance Standard"
+msgstr "Стандарт за толерантност"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Total Items"
+msgstr "Общо елементи"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__total_weight
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__total_weight
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "Total Weight"
+msgstr "Общо тегло"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Total Weight (kg)"
+msgstr "Общо тегло (кг)"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__tracking_number
+msgid "Tracking Number"
+msgstr "Номер за проследяване"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Tracking №"
+msgstr "Проследяващ №"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_search
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "UI Номер<br/> UINumber"
+msgstr "UI номер<br/> UINumber"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_consumed_materials__batch_unit_id
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__unit_id
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_contents__unit_weight
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_package_contents__unit_weight
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_material_items__unit_weight
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery
+msgid "Unit Weight"
+msgstr "Единично тегло"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_packages
+msgid "Unit Weight (kg)"
+msgstr "Единично тегло (кг)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_package_label
+msgid "WEIGHTS: GROSS"
+msgstr "ТЕГЛО: БРУТО"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_cmr__warehouse_work_time
+msgid "Warehouse Work Time"
+msgstr "Работно време на склада"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packaging_materials__weight
+msgid "Weight (kg)"
+msgstr "Тегло (кг)"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_delivery_packages__width
+msgid "Width (mm)"
+msgstr "Ширина (mm)"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "With Invoice"
+msgstr "С фактура"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "With respect:"
+msgstr "С уважение:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "With this declaration, we as an exporter declare that exported for"
+msgstr "С тази декларация ние като износител декларираме, че изнасяме за"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.view_kojto_delivery_consumed_materials_search
+msgid "Without Invoice"
+msgstr "Без фактура"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__counterpartys_reference
+msgid "Your Reference"
+msgstr "Ваш реф. №"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "and gross weight"
+msgstr "и бруто тегло"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid "and tracking number:"
+msgstr "и номер за проследяване:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid ""
+"are manufactured by us with materials purchased from the following "
+"company/ies:"
+msgstr "са произведени от нас с материали, закупени от следната фирма/и:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid ""
+"are of Bulgarian/European Union origin and meet the rules of origin in "
+"preferential trade with Switzerland."
+msgstr ""
+"са с произход България/Европейски съюз и отговарят на правилата за произход "
+"при преференциална търговия с Швейцария."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "from date"
+msgstr "от дата"
+
+#. module: kojto_deliveries
+#: model:ir.model.fields,field_description:kojto_deliveries.field_kojto_deliveries__document_in_out_type
+msgid "in/out:"
+msgstr "вход/изход:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_consumed_materials_weasy
+msgid "kg"
+msgstr "кг"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid "on export invoice(s):"
+msgstr "на експортна фактура(и):"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "on invoice(s):"
+msgstr "по фактура(и):"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid ""
+"on the above-mentioned export invoices are manufactured by our company with "
+"materials from the suppliers listed above."
+msgstr ""
+"на гореспоменатите експортни фактури са произведени от нашата компания с "
+"материали от изброените по-горе доставчици."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "packaging unit(s) with net weight"
+msgstr "опаковъчна(и) единица(и) с нетно тегло"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_export_declaration
+msgid "were used in the production."
+msgstr "са използвани в производството."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_origin_declaration
+msgid "with materials from the following suppliers:"
+msgstr "с материали от следните доставчици:"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_dual_use_declaration
+msgid ""
+"with those of the harmonized system of dual-use items and technology under "
+"Council Regulation (EC) No 1382/2014, they do not correspond to the "
+"characteristics and description of the Community regime for the control of "
+"exports of dual-use items and technology controlled by the Council."
+msgstr ""
+"с тези от хармонизираната система за изделия и технологии с двойна употреба "
+"съгласно Регламент (ЕО) № 1382/2014 на Съвета, те не отговарят на "
+"характеристиките и описанието на контролирания от Съвета режим на Общността "
+"за контрол на износа на изделия и технологии с двойна употреба."
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Дата<br/>Date"
+msgstr "Дата<br/>Дата"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Добавки<br/>Suplementary charges"
+msgstr "Добавки<br/>Допълнителни такси"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Други такси<br/>Other charges"
+msgstr "Други такси<br/>Други такси"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"Извъндоговорна част, запазена за превозвача / Non-contractual part reserved "
+"for the carrier"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Изпращача<br/>Sender"
+msgstr "Изпращача<br/>Подател"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Митни сборове<br/>Customs duties"
+msgstr "Митни сборове<br/>Мита"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Номер на етикета за опасност<br/> Label number"
+msgstr "Номер на етикета за опасност<br/> Номер на етикета"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Опаковъчна група<br/> Packing Group"
+msgstr ""
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"Очертаните графи с дебели линии трябва да се попълват от превозвача<br/>The "
+"space framed with heavy lines Must Be Filled In By Carrier"
+msgstr ""
+"Очертаните графи с дебели линии трябва да се попълват от "
+"превозвача<br/>Пространството, рамкирано с плътни линии, трябва да бъде "
+"попълнено от превозвач"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Подпис<br/>Signature"
+msgstr "Подпис<br/>Подпис"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Получаване и приемане<br/>Receipt and Acceptances"
+msgstr "Получаване и приемане<br/>Получаване и приемане"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Получателя<br/>Consignee"
+msgstr "Получателя<br/>Получател"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid ""
+"Попълва се на отговорност на изпращача<br/>To be completed on the sender`s "
+"responsibility"
+msgstr ""
+"Попълва се на отговорност на изпращача<br/>Попълва се на отговорност на "
+"изпращача"
+
+#. module: kojto_deliveries
+#: model_terms:ir.ui.view,arch_db:kojto_deliveries.report_kojto_delivery_cmr
+msgid "Превозна цена<br/>Carrige charge"
+msgstr "Превозна цена<br/>Превозна такса"

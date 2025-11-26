@@ -1,0 +1,27 @@
+<odoo>
+	<data>
+		<!-- Landing Page Button -->
+		<record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+			<field name="name">kojto.landingpage.form.inherit</field>
+			<field name="model">kojto.landingpage</field>
+			<field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//comment()[.=' Button group 04 ']" position="after">
+					<!-- Invoices -->
+					<div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+						<button name="open_invoices_list_view" type="object" class="btn landing_page_button" style="color: #dc3545;">
+							<div class="o_button_icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #dc3545;">
+									<path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v4h10V2a1 1 0 0 0-1-1zm9 6H6v2h7zm0 3H6v2h7zm0 3H6v2h6a1 1 0 0 0 1-1zm-8 2v-2H3v1a1 1 0 0 0 1 1zm-2-3h2v-2H3zm0-3h2V7H3z"/>
+								</svg>
+							</div>
+							<span class="landing_page_text" style="color: #dc3545;">Invoices</span>
+						</button>
+					</div>
+				</xpath>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

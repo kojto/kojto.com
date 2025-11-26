@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Delivery Consumed Materials Template -->
+        <template id="report_kojto_delivery_consumed_materials_weasy">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="delivery">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="delivery.date_delivery and delivery.date_delivery.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: datetime_issue \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="margin-bottom: 20px; font-size: 2em;">Material Consumption Report</div>
+                            </h1>
+                        </div>
+
+                        <!-- Document Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <!-- Document Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                    <td style="padding: 4px; width: 35%;">Delivery Number</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Date Issued</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.date_delivery" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Subcode</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.subcode_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Exporter invoice(s)</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-foreach="delivery.invoices_ids" t-as="invoice">
+                                            <span t-field="invoice.consecutive_number" /><t t-if="not invoice_last">, </t>
+                                        </t>
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Company Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Company Information</td>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Manufacturer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.company_name_id" /><br/>
+                                        <span t-field="delivery.company_address_id" />
+                                        <span t-field="delivery.company_phone_id" /><br/>
+                                        <span t-field="delivery.company_email_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Customer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.counterparty_name_id" /><br/>
+                                        <span t-field="delivery.counterparty_address_id" />
+                                        <span t-field="delivery.counterparty_phone_id" /><br/>
+                                        <span t-field="delivery.counterparty_email_id" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Delivery Details -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Delivery Details</td>
+                                    <td style="padding: 4px; width: 35%;">Total Weight</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.net_weight" /> kg
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Packages Total Weight</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.gross_weight" /> kg
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Delivery Date</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="delivery.date_delivery" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Consumed Materials Table - Full Width -->
+                        <div t-field="delivery.consumed_materials_table_html" t-options='{"widget": "html"}' />
+
+                        <!-- Declaration - Separate Text Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
+                            <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
+                                This consumed materials report certifies that the materials listed above have been consumed in the production of the delivered products.
+                                All materials have been properly tracked and documented according to the applicable standards and specifications.
+                                The material consumption data is provided for quality control and traceability purposes.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!-- ALIAS for backward compatibility -->
+        <template id="report_kojto_delivery_consumed_materials" inherit_id="kojto_deliveries.report_kojto_delivery_consumed_materials_weasy"/>
+
+        <record id="action_report_delivery_consumed_materials" model="ir.actions.report">
+            <field name="name">Delivery Consumed Materials</field>
+            <field name="model">kojto.deliveries</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_deliveries.report_kojto_delivery_consumed_materials</field>
+            <field name="report_file">kojto_deliveries.report_kojto_delivery_consumed_materials</field>
+            <field name="print_report_name">'Delivery Consumed Materials - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_deliveries"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="base.paperformat_euro"/>
+        </record>
+    </data>
+</odoo>

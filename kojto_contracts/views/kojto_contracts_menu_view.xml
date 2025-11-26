@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <!-- Menu Item -->
+        <menuitem id="menu_kojto_contracts_parent" name="Contracts" sequence="80" />
+        <menuitem id="menu_kojto_contracts" name="Contracts" parent="menu_kojto_contracts_parent" action="action_kojto_contracts" sequence="10" />
+    </data>
+</odoo>

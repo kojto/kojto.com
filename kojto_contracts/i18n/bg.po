@@ -1,0 +1,883 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_contracts
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:30+0000\n"
+"PO-Revision-Date: 2025-08-11 07:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "---- END OF CONTRACT ----"
+msgstr "---- КРАЙ НА ДОГОВОРА ----"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #6f42c1;\">Contracts</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #6f42c1;\">Договори</span>"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "<span>/</span>"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "<strong>Parent Contract:</strong>"
+msgstr "<strong>Договор на родител:</strong>"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "<strong>Program:</strong>"
+msgstr "<strong>Програма:</strong>"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "<strong>Subject:</strong>"
+msgstr "<strong>Тема:</strong>"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "<strong>VAT Rate Summary:</strong>"
+msgstr "<strong>Обобщение на ДДС ставките:</strong>"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "ANNEX"
+msgstr "ПРИЛОЖЕНИЕ"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_address_id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Address:"
+msgstr "Адрес:"
+
+#. module: kojto_contracts
+#. odoo-python
+#: code:addons/kojto_contracts/models/kojto_contracts.py:0
+msgid "All 3-digit subcodes (001-999) are used in this code domain."
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__contract_type__annex
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Annex"
+msgstr "Приложение"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__attachments
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__pdf_attachment_id
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "BIC:"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_bank_account_id
+msgid "Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_bank_account_id
+msgid "Bank account"
+msgstr "Банкова сметка"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Bank:"
+msgstr "Банка:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "CONTRACT"
+msgstr "ДОГОВОР"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Client"
+msgstr "Клиент"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Client:"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__color
+msgid "Color"
+msgstr "Цвят"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Company Name"
+msgstr "Име на фирмата"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Company Reg. №"
+msgstr "Регистрационен номер на компанията"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Content Data"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__content
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__contract_id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__contract_id
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__contract_type__contract
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Contract"
+msgstr "Договор"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Contract Documents"
+msgstr "Договорни документи"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Contract Type"
+msgstr "Тип договор"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__contract_type
+msgid "Contract type"
+msgstr "Тип договор"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Contract №"
+msgstr "Договор №"
+
+#. module: kojto_contracts
+#. odoo-python
+#: code:addons/kojto_contracts/models/kojto_contracts.py:0
+msgid "Contract's subcode does not have a code domain."
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Contractor"
+msgstr "Изпълнител"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Contractor:"
+msgstr "Изпълнител:"
+
+#. module: kojto_contracts
+#: model:ir.actions.act_window,name:kojto_contracts.action_kojto_contracts
+#: model:ir.actions.report,name:kojto_contracts.action_report_kojto_contract
+#: model:ir.ui.menu,name:kojto_contracts.menu_kojto_contracts
+#: model:ir.ui.menu,name:kojto_contracts.menu_kojto_contracts_parent
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Contracts"
+msgstr "Договори"
+
+#. module: kojto_contracts
+#. odoo-python
+#: code:addons/kojto_contracts/models/kojto_contracts.py:0
+msgid "Copied Contract"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Copy Content Line"
+msgstr "Копиране на ред със съдържание"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Copy Contract"
+msgstr "Копие на договор"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Counterparty Name"
+msgstr "Име на контрагент"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Counterparty Reg. №"
+msgstr "Регистрационен номер на контрагента"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_type
+msgid "Counterparty Type"
+msgstr "Тип на контрагента"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Create"
+msgstr "Създавайте"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Create Annex"
+msgstr "Създаване на приложение"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Create Delivery"
+msgstr "Създаване на доставка"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Create Invoice"
+msgstr "Създаване на фактура"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__create_date
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__currency_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__date_start
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__name
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Direction"
+msgstr "Посока"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__display_name
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__display_name
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_email_id
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Email:"
+msgstr "Имейл:"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_email_id
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__date_end
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "End Date"
+msgstr "Крайна дата"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "End Date:"
+msgstr "Крайна дата:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "End Month"
+msgstr "Краен месец"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "End Year"
+msgstr "Крайна година"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Expired"
+msgstr "Изтекъл"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__guid
+msgid "GUID"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Has Attachments"
+msgstr "Има прикачени файлове"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Has Content Lines"
+msgstr "Има редове за съдържание"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Has Parent Contract"
+msgstr "Има основен договор"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "IBAN:"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_landingpage__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Import"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Import Content"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.actions.act_window,name:kojto_contracts.action_kojto_contract_content_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Import Contract Content"
+msgstr "Импортирене на контакти"
+
+#. module: kojto_contracts
+#: model:ir.model,name:kojto_contracts.model_kojto_contract_content_import_wizard
+msgid "Import Contract Content Wizard"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__document_in_out_type__incoming
+msgid "In"
+msgstr "Вх."
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Incoming"
+msgstr "Входящи"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__incoterms_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Incoterms"
+msgstr "Инкотермс"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__incoterms_address
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Incoterms Address"
+msgstr "Инкотермс адрес"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Incoterms Address:"
+msgstr "Инкотермс адрес:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Incoterms:"
+msgstr "Инкотермс:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Insert post content text here ..."
+msgstr "Вмъкнете текст на съдържанието на публикацията тук..."
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Insert pre content text here ..."
+msgstr "Вмъкнете тук предварителен текст..."
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Issued By"
+msgstr "Издаден от"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__issued_by_name_id
+msgid "Issued By Name"
+msgstr "Издадено по име"
+
+#. module: kojto_contracts
+#: model:ir.model,name:kojto_contracts.model_kojto_contract_contents
+msgid "Kojto Contract Contents"
+msgstr "Съдържание на договор Kojto"
+
+#. module: kojto_contracts
+#: model:ir.model,name:kojto_contracts.model_kojto_contracts
+msgid "Kojto Contracts"
+msgstr "Който договори"
+
+#. module: kojto_contracts
+#: model:ir.model,name:kojto_contracts.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__language_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Language:"
+msgstr "език:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Last Month"
+msgstr "Миналия месец"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_content_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__write_date
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Main Contract"
+msgstr ""
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_name_id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Net Sum:"
+msgstr "Нетна сума:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Next Month"
+msgstr "Следващия месец"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Next Week"
+msgstr "Следваща седмица"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "No Attachments"
+msgstr "Няма прикачени файлове"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "No Content Lines"
+msgstr "Няма редове за съдържание"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "No Parent Contract"
+msgstr "Няма основен договор"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__name
+msgid "Number"
+msgstr "Номер"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "ORDER"
+msgstr "ПОРЪЧАЙТЕ"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "ORDER CONFIRMATION"
+msgstr "ПОТВЪРЖДАВАНЕ НА ПОРЪЧКАТА"
+
+#. module: kojto_contracts
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__contract_type__order
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Order"
+msgstr "Поръчка"
+
+#. module: kojto_contracts
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__contract_type__order_confirmation
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Order Confirmation"
+msgstr "Потвърждение на поръчката"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Our Reference:"
+msgstr "Наш реф. №:"
+
+#. module: kojto_contracts
+#: model:ir.model.fields.selection,name:kojto_contracts.selection__kojto_contracts__document_in_out_type__outgoing
+msgid "Out"
+msgstr "Изх."
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Outgoing"
+msgstr "Изходящ"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__parent_contract_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Parent Contract"
+msgstr "Договор за родител"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,help:kojto_contracts.field_kojto_contract_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contract_content_import_wizard_form
+msgid "Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate)"
+msgstr ""
+"Поставете данни тук (Позиция;Име;Количество;Единична цена;Единична ставка "
+"ДДС)"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__payment_terms_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Payment Terms"
+msgstr "Условия за плащане"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Payment Terms:"
+msgstr "Условия за плащане:"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_phone_id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_phone_id
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Phone:"
+msgstr "Телефон:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Post Content Text"
+msgstr "Текст след съдържанието"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__post_content_text
+msgid "Post content comment"
+msgstr "Публикувайте коментар на съдържанието"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Pre Content Text"
+msgstr "Текст преди съдържанието"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Pre VAT Total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__pre_vat_total
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__pre_vat_total
+msgid "Pre VAT total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__pre_content_text
+msgid "Pre content comment"
+msgstr "Коментар преди съдържанието"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__program
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Program"
+msgstr "Програма"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Reference №"
+msgstr "Референтен №"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Reg. #:"
+msgstr "Рег. №"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_registration_number
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_registration_number
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_form
+msgid "Registration Number"
+msgstr "Регистрационен номер"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_registration_number_type
+msgid "Registration Number Type"
+msgstr "Тип регистрационен номер"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Start Date:"
+msgstr "Начална дата:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Start Month"
+msgstr "Начален месец"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Start Year"
+msgstr "Начална година"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Subcode"
+msgstr "Код"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__subject
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Subject"
+msgstr "Предмет"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Tax ID:"
+msgstr "Данъчен №"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__company_tax_number_id
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterparty_tax_number_id
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Total Amount:"
+msgstr "Обща сума:"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Total Price"
+msgstr "Обща цена"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Total VAT:"
+msgstr "Общо ДДС:"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__total_price
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__total_price
+msgid "Total price"
+msgstr "Обща цена"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__unit_id
+msgid "Unit"
+msgstr "единица"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__unit_price
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Unit Price"
+msgstr "Единична цена"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__vat_total
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__vat_total
+msgid "VAT"
+msgstr "ДДС"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "VAT Rate"
+msgstr "ДДС ставка"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contract_contents__vat_rate
+msgid "VAT Rate (%)"
+msgstr "ДДС ставка (в %)"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__contract_vat_rate
+msgid "VAT Rate (in %)"
+msgstr "ДДС ставка (в %)"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_search
+msgid "Valid"
+msgstr ""
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.view_kojto_contracts_list
+msgid "Valid to"
+msgstr "Валидна до"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__counterpartys_reference
+msgid "Your Reference"
+msgstr "Ваш реф. №"
+
+#. module: kojto_contracts
+#: model_terms:ir.ui.view,arch_db:kojto_contracts.report_kojto_contract
+msgid "Your Reference:"
+msgstr "Вашата справка:"
+
+#. module: kojto_contracts
+#: model:ir.model.fields,field_description:kojto_contracts.field_kojto_contracts__document_in_out_type
+msgid "in/out:"
+msgstr "Вх./Изх.:"
+
+#. module: kojto_contracts
+#: model:ir.actions.report,print_report_name:kojto_contracts.action_report_kojto_contract
+msgid "object.name"
+msgstr ""

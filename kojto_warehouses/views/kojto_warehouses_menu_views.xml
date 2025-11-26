@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Main Menu -->
+        <menuitem name="Warehouses" id="menu_kojto_warehouses_parent" sequence="250" />
+        <!-- Sub Menus -->
+        <menuitem name="Batches" id="menu_kojto_warehouses_batches" sequence="10" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_batches" />
+        <menuitem name="Inspection" id="menu_kojto_warehouses_inspection_report" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_inspection_report" sequence="20"/>
+        <menuitem name="Items" id="menu_kojto_warehouses_items" sequence="30" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_items" />
+        <menuitem name="Transactions" id="menu_kojto_warehouses_transactions" sequence="40" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_transactions" />
+        <menuitem name="Receipts" id="menu_kojto_warehouses_receipts" sequence="50" parent="menu_kojto_warehouses_parent" action="kojto_warehouses.action_kojto_warehouses_receipts" />
+        <menuitem name="Certificates" id="menu_kojto_warehouses_certificates" sequence="60" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_certificates" />
+        <menuitem name="Inventory" id="menu_kojto_warehouses_inventory" sequence="70" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_inventory" />
+        <menuitem name="Profile Shapes" id="menu_kojto_warehouses_profile_shapes" sequence="80" parent="menu_kojto_warehouses_parent" action="action_kojto_warehouses_profile_shapes" />
+
+        <!-- Dashboards Menu -->
+        <menuitem name="Dashboards" id="menu_kojto_warehouses_dashboards" sequence="90" parent="menu_kojto_warehouses_parent" />
+        <menuitem name="Balance" id="menu_kojto_warehouses_balance" sequence="10" parent="menu_kojto_warehouses_dashboards" action="action_kojto_warehouses_balance" />
+
+    </data>
+</odoo>

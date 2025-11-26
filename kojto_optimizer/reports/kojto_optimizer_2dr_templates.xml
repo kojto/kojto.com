@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_optimizer_2dr">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } } </style>
+                        </t>
+
+                        <!-- Container 0 -->
+                        <div style="font-weight: bold; margin-bottom: 25px; font-size: 16px;">2DR OPTIMIZATION PACKAGE</div>
+
+                        <!-- Container 1 -->
+                        <div style="display: flex; align-items: flex-start; gap: 20px; margin-bottom: 10px;">
+                            <div style="flex: 1;">
+                                <table style="width: 50%; font-size: 10px; line-height: 1.2;">
+                                    <tr><th style="text-align: left;">Package Name</th><td style="text-align: right;" t-esc="doc.name if doc.name else ''" /></tr>
+                                    <tr><th style="text-align: left;">Subcode</th><td style="text-align: right;" t-esc="doc.subcode_id.display_name if doc.subcode_id else ''" /></tr>
+                                    <tr><th style="text-align: left;">Issue Date</th><td style="text-align: right;" t-esc="doc.date_issue if doc.date_issue else ''" /></tr>
+                                    <tr><th style="text-align: left;">Issued By</th><td style="text-align: right;" t-esc="doc.issued_by.display_name if doc.issued_by else ''" /></tr>
+                                    <tr><th style="text-align: left;">Description</th><td style="text-align: right;" t-esc="doc.description if doc.description else ''" /></tr>
+                                    <tr><th style="text-align: left;">Optimization Method</th><td style="text-align: right;" t-esc="doc.optimization_method if doc.optimization_method else ''" /></tr>
+                                    <tr><th style="text-align: left;">Width of Cut (mm)</th><td style="text-align: right;" t-esc="'%.2f' % doc.width_of_cut if doc.width_of_cut or doc.width_of_cut == 0 else ''" /></tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Container 2 (Stock Rectangles) -->
+                        <div style="margin-bottom: 10px;">
+                            <div style="font-weight: bold; margin-bottom: 10px; margin-top: 25px;">AVAILABLE STOCK:</div>
+                            <div style="margin: 0; padding: 0;">
+                                <t t-foreach="doc.stock_rectangles_ids" t-as="stock">
+                                    <div style="margin-bottom: 5px;">
+                                        <t t-esc="'Pos. %s - %s - %.2f x %.2f mm - Available: %s' % (stock.stock_position or 'Sapphire', stock.stock_description or 'N/A', stock.stock_width or 0, stock.stock_length or 0, stock.available_stock_rectangle_pieces or 0)"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+
+                        <!-- Container 2b (Required Stock) -->
+                        <div style="margin-bottom: 10px;">
+                            <div style="font-weight: bold; margin-bottom: 10px; margin-top: 25px;">REQUIRED STOCK:</div>
+                            <t t-set="cutting_plan_json" t-value="doc.cutting_plan_json and json.loads(doc.cutting_plan_json)" />
+                            <t t-if="cutting_plan_json and cutting_plan_json.get('stock_used')">
+                                <div style="margin: 0; padding: 0;">
+                                    <t t-foreach="cutting_plan_json['stock_used']" t-as="stock_used">
+                                        <div style="margin-bottom: 5px;">
+                                            <t t-esc="'Pos. %s - %s - %.2f x %.2f mm - Pieces: %s' % (stock_used['stock_position'] or 'N/A', stock_used['stock_description'] or 'N/A', stock_used['stock_width'] or 0, stock_used['stock_length'] or 0, stock_used['pcs'] or 0)" />
+                                        </div>
+                                    </t>
+                                </div>
+                            </t>
+                        </div>
+
+                        <!-- Container 2a (Required Cut Rectangles) -->
+                        <div style="margin-bottom: 10px;">
+                            <div style="font-weight: bold; margin-bottom: 10px; margin-top: 25px;">REQUIRED CUT RECTANGLES:</div>
+                            <div style="margin: 0; padding: 0;">
+                                <t t-foreach="doc.cutted_rectangles_ids" t-as="cut">
+                                    <div style="margin-bottom: 5px;">
+                                        <t t-esc="'Pos. %s - %s - %.2f x %.2f mm - Required: %s' % (cut.cut_position or 'N/A', cut.cut_description or 'N/A', cut.cut_width or 0, cut.cut_length or 0, cut.required_cut_rectangle_pieces or 0)"/>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+
+                        <!-- Container 3 (Cutting Plans) -->
+                        <div style="margin-bottom: 0;">
+                            <div style="font-weight: bold; margin-bottom: 10px; margin-top: 25px;">CUTTING PLANS:</div>
+                            <t t-if="doc.cutting_plan_svgs">
+                                <t t-set="svg_list" t-value="doc.cutting_plan_svgs.split('\n')" />
+                                <t t-foreach="svg_list" t-as="svg_data">
+                                    <div style="margin: 0; padding: 0; display: inline-block;">
+                                        <t t-raw="svg_data" />
+                                    </div>
+                                </t>
+                                <!-- Minimal end marker to anchor layout -->
+                                <div style="height: 1px; margin: 0; padding: 0; clear: both;"></div>
+                            </t>
+                            <t t-else="">
+                                <div style="margin: 0; padding: 0;">No cutting plan SVGs available</div>
+                            </t>
+                        </div>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+    <template id="print_kojto_optimizer_2dr_packages">
+        <t t-call="kojto_optimizer.report_kojto_optimizer_2dr"/>
+    </template>
+</odoo>

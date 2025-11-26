@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- DWG Files List View -->
+    <record id="view_kojto_product_dwg_file_list" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.list</field>
+        <field name="model">kojto.product.dwg.file</field>
+        <field name="arch" type="xml">
+            <list string="DWG Files">
+                <field name="name"/>
+                <field name="drawing_number"/>
+                <field name="revision"/>
+                <field name="viewport_count"/>
+                <field name="file_size"/>
+                <field name="upload_date"/>
+                <field name="created_by"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- DWG Files Form View -->
+    <record id="view_kojto_product_dwg_file_form" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.form</field>
+        <field name="model">kojto.product.dwg.file</field>
+        <field name="arch" type="xml">
+            <form string="DWG File">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="%(action_kojto_product_dwg_file_viewport)d"
+                                type="action"
+                                class="oe_stat_button"
+                                icon="fa-image"
+                                context="{'default_dwg_file_id': id}">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_value"><field name="viewport_count"/></span>
+                                <span class="o_stat_text">Viewports</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="drawing_number"/>
+                            <field name="revision"/>
+                            <field name="dwg_version"/>
+                        </group>
+                        <group>
+                            <field name="file_size"/>
+                            <field name="upload_date"/>
+                            <field name="created_by"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="dwg_file"/>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Viewports">
+                            <field name="viewport_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="scale"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- DWG Files Search View -->
+    <record id="view_kojto_product_dwg_file_search" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.search</field>
+        <field name="model">kojto.product.dwg.file</field>
+        <field name="arch" type="xml">
+            <search string="Search DWG Files">
+                <field name="name"/>
+                <field name="drawing_number"/>
+                <field name="revision"/>
+                <field name="created_by"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Revision" name="group_by_revision" context="{'group_by': 'revision'}"/>
+                    <filter string="Created By" name="group_by_created_by" context="{'group_by': 'created_by'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- DWG Files Action -->
+    <record id="action_kojto_product_dwg_file" model="ir.actions.act_window">
+        <field name="name">DWG Files</field>
+        <field name="res_model">kojto.product.dwg.file</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Upload your first DWG File
+            </p>
+        </field>
+    </record>
+</odoo>
+

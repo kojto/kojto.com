@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List view for Subcodes -->
+    <record id="view_kojto_commission_codes_list" model="ir.ui.view">
+        <field name="name">kojto.commission.codes.list</field>
+        <field name="model">kojto.commission.codes</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" editable="top">
+                <field name="active" string="is Active" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="maincode_id" />
+                <field name="code" />
+                <field name="name" />
+                <field name="description" />
+            </list>
+        </field>
+    </record>
+    <!-- Form view for Subcodes -->
+    <record id="view_kojto_commission_codes_form" model="ir.ui.view">
+        <field name="name">kojto.commission.codes.form</field>
+        <field name="model">kojto.commission.codes</field>
+        <field name="arch" type="xml">
+            <form class="ko-form-main">
+                <sheet class="ko-form-body">
+                    <div class="d-flex align-items-center">
+                        <div class="ko-form-view-title">
+                            <span>CODE</span>
+                            <field name="code" class="ko-form-view-title" readonly="1" />
+                        </div>
+                    </div>
+                    <!-- Header end -->
+                    <separator class="col-lg-12 separator" />
+                    <group class="col-lg-4">
+                        <field name="active" widget="boolean_toggle" />
+                        <field name="maincode_id" />
+                        <field name="code" />
+                        <field name="name" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_kojto_commission_codes_search">
+        <field name="name">kojto.commission.codes.search</field>
+        <field name="model">kojto.commission.codes</field>
+        <field name="arch" type="xml">
+            <search string="Code">
+                <field name="code" />
+                <field name="code_type" />
+                <field name="maincode_id" />
+                <field name="create_date" />
+                <filter name='active' string="Активни" domain="[('active', '=', True)]" />
+                <filter name='active' string="Неактивни" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <!-- Action for Subcodes -->
+    <record id="action_kojto_commission_codes" model="ir.actions.act_window">
+        <field name="name">Codes</field>
+        <field name="res_model">kojto.commission.codes</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

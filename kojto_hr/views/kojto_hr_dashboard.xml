@@ -1,0 +1,97 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_hr_dashboard_list">
+            <field name="name">kojto.hr.dashboard.list</field>
+            <field name="model">kojto.hr.dashboard</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_hr_dashboard_list" limit="100" sample="1">
+                    <field name="name" optional="show" />
+                    <field name="datetime_start" optional="show" />
+                    <field name="datetime_end" optional="show" />
+                    <field name="employee_ids" widget="many2many_tags" optional="hide" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_hr_dashboard_form">
+            <field name="name">kojto.hr.dashboard.form</field>
+            <field name="model">kojto.hr.dashboard</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_hr_dashboard_form" create="0">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <field name="name" class="ko-form-view-title" readonly="1" />
+                                <button name="create_dashboard_content" type="object" icon="fa-refresh" class="btn btn-secondary border-0 mb-1" />
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <div class="col-lg-4" style="border-right: 1px solid rgba(11, 83, 148, 0.2)">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <field name="datetime_start" class="ko-form-datetime-to-date" />
+                                    <field name="datetime_end" class="ko-form-datetime-to-date" />
+                                </div>
+                                <div class="d-flex justify-content-between flex-wrap" style="width: 100%;">
+                                    <button name="backward_one_year" string="" class="btn btn-outline-primary btn-md fa fa-angle-double-left" type="object" />
+                                    <button name="backward_one_month" string="" class="btn btn-outline-primary btn-md fa fa-angle-left" type="object" />
+                                    <button name="set_dates_to_today" string="today" type="object" class="btn btn-outline-primary btn-md" />
+                                    <button name="set_dates_to_current_week" string="this week" type="object" class="btn btn-outline-primary btn-md" />
+                                    <button name="set_dates_to_current_month" string="this month" type="object" class="btn btn-outline-primary btn-md" />
+                                    <button name="forward_one_month" string="" class="btn btn-outline-primary btn-md fa fa-angle-right" type="object" />
+                                    <button name="forward_one_year" string="" class="btn btn-outline-primary btn-md fa fa-angle-double-right" type="object" />
+                                </div>
+                            </div>
+                            <group class="col-lg-8">
+                                <field name="employee_ids" widget="many2many_tags" string="Employees" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <field name="content" nolabel="1">
+                            <list editable="bottom" class="ko-form-view-one2many-dashboard" limit="300">
+                                <field name="employee_id" />
+                                <field name="work_day_duration" />
+                                <field name="no_record_days" />
+                                <field name="paid_leave" />
+                                <field name="unpaid_leave" />
+                                <field name="sick_leave" />
+                                <field name="workhours" />
+                                <field name="norm" />
+                                <field name="total" />
+                                <field name="balance" />
+                                <field name="overtime_working_day" />
+                                <field name="overtime_weekend" />
+                                <field name="overtime_public_holiday" />
+                            </list>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_hr_dashboard_search">
+            <field name="name">kojto.hr.dashboard.search</field>
+            <field name="model">kojto.hr.dashboard</field>
+            <field name="arch" type="xml">
+                <search string="HR Dashboards">
+                    <field name="name" />
+                    <field name="datetime_start" />
+                    <field name="datetime_end" />
+                    <filter name="recent_dashboards" string="Recent Dashboards" domain="[('datetime_start', '>=', (context_today() - relativedelta(months=1)).strftime('%Y-%m-%d'))]" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_hr_dashboard">
+            <field name="name">HR Dashboards</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.hr.dashboard</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new HR Dashboard to analyze employee performance metrics.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

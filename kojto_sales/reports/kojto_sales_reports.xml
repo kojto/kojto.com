@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="print_kojto_sale_leads" model="ir.actions.report">
+            <field name="name">SaleLeads</field>
+            <field name="model">kojto.sales</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_sales.report_kojto_sales</field>
+            <field name="report_file">kojto_sales.report_kojto_sales</field>
+            <field name="print_report_name">'SalesLeads_' + object.get_kojto_sales_leads_report_filename()</field>
+            <field name="binding_model_id" ref="model_kojto_sale_leads" />
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<!-- kojto_profiles/views/kojto_profiles_buttons.xml -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+            <field name="name">kojto.landingpage.form.inherit</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 15 ']" position="after">
+                    <!-- Delivery -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_profile_batches_list_view" type="object" class="btn landing_page_button" title="Open Profile Batches" style="color: #b35c00;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="landing_page_svg_icon" viewBox="0 0 16 16" aria-hidden="true" style="fill: #b35c00;">
+                                    <title>Profile Batches Icon</title>
+                                    <path d="M3.5.5A.5.5 0 0 1 4 1v13h13a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2H3.5a.5.5 0 0 1-.5-.5V4H1a.5.5 0 0 1 0-1h2V1a.5.5 0 0 1 .5-.5m2.5 3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4H6.5a.5.5 0 0 1-.5-.5" fill="orange"/>
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #b35c00;">PROFILES</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

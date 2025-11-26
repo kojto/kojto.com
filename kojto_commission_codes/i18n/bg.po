@@ -1,0 +1,221 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_commission_codes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:28+0000\n"
+"PO-Revision-Date: 2025-08-11 07:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #198754;\">Codes</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #198754;\">Кодове</span>"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_codes_form
+msgid "<span>CODE</span>"
+msgstr "<span>КОД</span>"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_main_codes_form
+msgid "<span>MAIN CODE</span>"
+msgstr "<span>ОСНОВЕН КОД</span>"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_form
+msgid "<span>SUBCODE</span>"
+msgstr "<span>ПОДКОД</span>"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__cash_flow_only
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_list
+msgid "Cash Flow Only"
+msgstr ""
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_main_codes_list
+msgid "Cash Flow only"
+msgstr "Само паричен поток"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__cash_flow_only
+msgid "Cash flow"
+msgstr "Паричен поток"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__code
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__code
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__code_id
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_codes_search
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_maincode_search
+msgid "Code"
+msgstr "Код"
+
+#. module: kojto_commission_codes
+#: model:ir.actions.act_window,name:kojto_commission_codes.action_kojto_commission_codes
+#: model:ir.ui.menu,name:kojto_commission_codes.menu_codes
+#: model:ir.ui.menu,name:kojto_commission_codes.menu_commission_codes
+msgid "Codes"
+msgstr "Кодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__create_uid
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__create_uid
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__create_date
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__create_date
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__description
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__description
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__description
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__display_name
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__display_name
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__display_name
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__id
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__id
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__id
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_landingpage__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__active
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__active
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__active
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_main_codes_list
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_commission_codes
+#: model:ir.model,name:kojto_commission_codes.model_kojto_commission_codes
+msgid "Kojto Codes"
+msgstr "Който кодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model,name:kojto_commission_codes.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_commission_codes
+#: model:ir.model,name:kojto_commission_codes.model_kojto_commission_main_codes
+msgid "Kojto Main Codes"
+msgstr "Kojto Основни кодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model,name:kojto_commission_codes.model_kojto_commission_subcodes
+msgid "Kojto Subcodes"
+msgstr "Който подкодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__write_uid
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__write_uid
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__write_date
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__write_date
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__maincode_id
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__maincode
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__maincode_id
+msgid "Main Code"
+msgstr "Основен код"
+
+#. module: kojto_commission_codes
+#: model:ir.actions.act_window,name:kojto_commission_codes.action_kojto_commission_main_codes
+#: model:ir.ui.menu,name:kojto_commission_codes.menu_main_codes
+msgid "Main Codes"
+msgstr "Основни кодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__maincode
+msgid "Maincode"
+msgstr "Основен код"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__name
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_main_codes__name
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__show_in_asset_works
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_list
+msgid "Show in Asset Works"
+msgstr ""
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__show_in_hr_tracking
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_list
+msgid "Show in HR Tracking"
+msgstr ""
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_subcodes__subcode
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_search
+msgid "Subcode"
+msgstr "ID на подкод"
+
+#. module: kojto_commission_codes
+#: model:ir.actions.act_window,name:kojto_commission_codes.action_kojto_commission_subcodes_view
+#: model:ir.ui.menu,name:kojto_commission_codes.menu_subcodes
+msgid "Subcodes"
+msgstr "Подкодове"
+
+#. module: kojto_commission_codes
+#: model:ir.model.fields,field_description:kojto_commission_codes.field_kojto_commission_codes__code_type
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_codes_list
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_list
+msgid "is Active"
+msgstr "Активен"
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_codes_search
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_search
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_maincode_search
+msgid "Активни"
+msgstr ""
+
+#. module: kojto_commission_codes
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_codes_search
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_kojto_commission_subcodes_search
+#: model_terms:ir.ui.view,arch_db:kojto_commission_codes.view_maincode_search
+msgid "Неактивни"
+msgstr ""

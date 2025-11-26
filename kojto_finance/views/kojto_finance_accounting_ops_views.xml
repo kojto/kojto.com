@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <!-- List Views -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounting_ops_list">
+            <field name="name">kojto.finance.accounting.ops.list</field>
+            <field name="model">kojto.finance.accounting.ops</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_finance_accounting_ops_list">
+                    <field name="name" optional="show" />
+                    <field name="row_number" />
+                    <field name="acc_operation_type" />
+                    <field name="acc_operation" />
+                    <field name="debit_account_id" />
+                    <field name="credit_account_id" />
+                    <button name="delete_acc_ops" type="object" string=" " icon="fa-trash" class="btn" confirm="Are you sure you want to delete this accounting operation?"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounting_ops_form">
+            <field name="name">kojto.finance.accounting.ops.form</field>
+            <field name="model">kojto.finance.accounting.ops</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_accounting_ops_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>ACCOUNTING OPERATIONS ENTRY</span>
+                                </div>
+                            </div>
+                        </div>
+                        <group>
+                            <field name="name" />
+                            <field name="row_number" />
+                            <field name="acc_operation_type" />
+                            <field name="acc_operation" />
+                            <field name="debit_account_id" />
+                            <field name="credit_account_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_accounting_ops">
+            <field name="name">Accounting Operations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.accounting.ops</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create</p>
+            </field>
+        </record>
+    </data>
+</odoo>

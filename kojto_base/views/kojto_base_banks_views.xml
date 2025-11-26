@@ -1,0 +1,105 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Banks -->
+        <record model="ir.ui.view" id="view_kojto_base_banks_list">
+            <field name="name">kojto.base.banks.list</field>
+            <field name="model">kojto.base.banks</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" limit="100" string="Banks">
+                    <field name="name" />
+                    <field name="BIC" />
+                    <field name="branch_bic" />
+                    <field name="branch_name" />
+                    <field name="address" />
+                    <field name="city" />
+                    <field name="state" />
+                    <field name="country" />
+                    <field name="zip_code" />
+                    <field name="phone" />
+                    <field name="fax" />
+                    <field name="email" />
+                    <field name="website" />
+                    <field name="BAE" />
+                    <field name="fin" />
+                    <field name="score_fileact_real_time" />
+                    <field name="score_fileact_store_forward" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View for Kojto Banks-->
+        <record id="view_kojto_base_banks_form" model="ir.ui.view">
+            <field name="name">kojto.base.banks.form</field>
+            <field name="model">kojto.base.banks</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_banks_form" string="Bank">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Bank</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="name" />
+                                <field name="branch_name" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="BIC" />
+                                <field name="branch_bic" />
+                            </group>
+                            <group class="col-lg-6" string="Contact Information">
+                                <field name="address" />
+                                <field name="city" />
+                                <field name="state" />
+                                <field name="country" />
+                                <field name="zip_code" />
+                            </group>
+                            <group class="col-lg-6" string="">
+                                <field name="phone" />
+                                <field name="fax" />
+                                <field name="email" />
+                                <field name="website" />
+                            </group>
+                            <group class="col-lg-6" string="Additional Information">
+                                <field name="BAE" />
+                                <field name="fin" />
+                                <field name="score_fileact_real_time" />
+                                <field name="score_fileact_store_forward" />
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto Base Banks -->
+        <record model="ir.ui.view" id="view_kojto_base_banks_search">
+            <field name="name">kojto.base.banks.search</field>
+            <field name="model">kojto.base.banks</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name" />
+                    <field name="BIC" />
+                    <field name="branch_bic" />
+                    <field name="branch_name" />
+                    <field name="country" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto Bank -->
+        <record model="ir.actions.act_window" id="action_kojto_base_banks">
+            <field name="name">Banks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.base.banks</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>Create and manage your banks here.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,1027 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_offers
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:24+0000\n"
+"PO-Revision-Date: 2025-08-11 07:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_offers
+#: model:ir.actions.report,print_report_name:kojto_offers.print_kojto_offer
+msgid "'OFFER_' + object.name"
+msgstr "ОФЕРТА_' + име на обект"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "---- END OF OFFER ----"
+msgstr "---- КРАЙ НА ОФЕРТАТА ----"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #198754;\">Offers</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #198754;\">Оферти</span>"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "<span>/</span>"
+msgstr ""
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "<span>OFFER # </span>"
+msgstr "<span>ОФЕРТА № </span>"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "<span>OFFER</span>"
+msgstr "<span>ПРЕДЛОЖЕНИЕ</span>"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "<strong>VAT Rate Summary:</strong>"
+msgstr "<strong>Обобщение на ДДС ставките:</strong>"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_offers
+#: model_terms:ir.actions.act_window,help:kojto_offers.action_kojto_offers
+msgid "Add Offer Documents"
+msgstr "Добавяне на документи за оферта"
+
+#. module: kojto_offers
+#: model_terms:ir.actions.act_window,help:kojto_offers.action_kojto_offer_surcharges
+msgid "Add Surcharge"
+msgstr "Добавете допълнителна такса"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_address_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Address:"
+msgstr "Адрес:"
+
+#. module: kojto_offers
+#. odoo-python
+#: code:addons/kojto_offers/models/kojto_offers.py:0
+msgid "All 3-digit subcodes (001-999) are used in this code domain."
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__position
+msgid "Alphanumeric! Don't change!"
+msgstr "Буквено-цифрови! Не се променяй!"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Amount"
+msgstr "Сума"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__attachments
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__repr_attachments
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__avg_unit_price
+msgid "Avg. Unit Price"
+msgstr "ср. Единична цена"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "BIC:"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_bank_account_id
+msgid "Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_bank_account_id
+msgid "Bank account"
+msgstr "Банкова сметка"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Bank:"
+msgstr "Банка:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__base_price
+msgid "Base Price"
+msgstr "Основна цена"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__total_contribution_margin
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__contribution_margin
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__est_total_contribution_margin_percent
+msgid "C-Margin"
+msgstr "C-марж (%)"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__total_contribution_margin_percent
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__est_total_contribution_margin_percent
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__est_total_contribution_margin
+msgid "C-Margin (%)"
+msgstr "Прогн. Общ C-марж"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__est_total_contribution_margin
+msgid "C-Margin Total"
+msgstr "Прогн. Общ C-марж"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__contribution_margin
+msgid "C-Margin amount"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__c_margin_from_consolidation_id
+msgid "C-Margin from Consolidation ID"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__contribution_margin_percent
+msgid "CM (%)"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__c_margin_from_consolidation_id
+msgid "CM base(%)"
+msgstr ""
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "CONTENT"
+msgstr "СЪДЪРЖАНИЕ"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_form
+msgid "Consolidation"
+msgstr "Консолидация"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__consolidation_breakdown_ids
+msgid "Consolidation Breakdown"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__consolidation_id
+msgid "Consolidation ID"
+msgstr "ID на консолидация"
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offer_consolidation_ids
+#: model:ir.ui.menu,name:kojto_offers.menu_kojto_offer_consolidation_ids
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_search
+msgid "Consolidation IDs"
+msgstr "Консолидационни идентификатори"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__name
+msgid "Consolidation Name"
+msgstr "Име на консолидацията"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__content_id
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Content"
+msgstr "Съдържание"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Content Data"
+msgstr "Данни за съдържанието"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__content_elements
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_search
+msgid "Content Elements"
+msgstr "Съдържателни елементи"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__content_elements_count
+msgid "Content Elements Count"
+msgstr "Брой елементи на съдържанието"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+msgid "Content Elements Data"
+msgstr "Данни за елементите на съдържанието"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__content
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_form
+msgid "Contribution Margin"
+msgstr "Марж на приноса"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__contribution_margin_percent
+msgid "Contribution Margin (%)"
+msgstr "Марж на вноската (%)"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Copy"
+msgstr "Копиране"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_list
+msgid "Copy Consolidation ID"
+msgstr "Копиране на идентификатор за консолидиране"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Copy Offer"
+msgstr "Копиране на оферта"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_type
+msgid "Counterparty Type"
+msgstr "Тип на контрагента"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Create"
+msgstr "Създавайте"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Create Contract"
+msgstr "Създаване на договор"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Create Invoice"
+msgstr "Създаване на фактура"
+
+#. module: kojto_offers
+#: model_terms:ir.actions.act_window,help:kojto_offers.action_kojto_offer_consolidation_ids
+msgid "Create and manage consolidation ID records."
+msgstr "Създавайте и управлявайте консолидационни ID записи."
+
+#. module: kojto_offers
+#: model_terms:ir.actions.act_window,help:kojto_offers.action_kojto_offer_content_elements
+msgid "Create new content elements records."
+msgstr "Създайте нови записи на елементи на съдържание."
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__issued_by_name_id
+msgid "Created By"
+msgstr "Създаден от"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__create_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__create_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__currency_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__currency_id
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_offers
+#. odoo-python
+#: code:addons/kojto_offers/models/kojto_offers_contents.py:0
+msgid "Custom VAT must be -1, 0, or a positive value."
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__custom_vat
+msgid "Custom Vat"
+msgstr "ДДС по поръчка"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_list
+msgid "Delete"
+msgstr "Изтриване"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__name
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__display_name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_form
+msgid "ELEMENT"
+msgstr "ЕЛЕМЕНТ"
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offer_content_elements
+msgid "Elements"
+msgstr "Елементи"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_email_id
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Email:"
+msgstr "Имейл:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_email_id
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Enter your post content text here..."
+msgstr "Въведете тук текста на съдържанието на вашата публикация..."
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Enter your pre content text here..."
+msgstr "Въведете текста на предварително съдържание тук..."
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__total_price_with_all_surcharges
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__est_total_price
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__est_total_price
+msgid "Est. Total Price"
+msgstr "Прогн. Обща цена"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__est_unit_price
+msgid "Est. Unit Price"
+msgstr "ср. Единична цена"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Expired"
+msgstr "Изтекъл"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Export XLSX"
+msgstr "Експортиране в XLSX"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__surcharge
+msgid "Fee in %"
+msgstr "Такса в %"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "From"
+msgstr "От"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "From:"
+msgstr "От:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__guid
+msgid "GUID"
+msgstr ""
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "IBAN:"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Import"
+msgstr "Импортиране"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Import Content"
+msgstr "Импортиране на съдържание"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Import Content Elements"
+msgstr "Импортиране на елементи от съдържанието"
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offer_content_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Import Offer Content"
+msgstr "Импортиране на съдържание на оферта"
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offer_content_elements_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+msgid "Import Offer Content Elements"
+msgstr "Импортиране на съдържание на Елементи"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_content_elements_import_wizard
+msgid "Import Offer Content Elements Wizard"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_content_import_wizard
+msgid "Import Offer Content Wizard"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields.selection,name:kojto_offers.selection__kojto_offers__document_in_out_type__incoming
+msgid "In"
+msgstr "Вх."
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Incoming"
+msgstr "Входящи"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__incoterms_id
+msgid "Incoterms"
+msgstr "Инкотермс"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__incoterms_address
+msgid "Incoterms Address"
+msgstr "Инкотермс адрес"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Incoterms Location:"
+msgstr "Местоположение по Инкотермс:"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Incoterms:"
+msgstr "Инкотермс:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__date_issue
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Issue Date:"
+msgstr "Дата на издаване:"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_consolidation_ids
+msgid "Kojto Consolidation IDs"
+msgstr "Kojto консолидационни идентификатори"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offers
+msgid "Kojto Docs Offer"
+msgstr "Kojto Docs Оферта"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_contents
+msgid "Kojto Docs Offer Contents"
+msgstr "Kojto Docs Съдържание на офертата"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_consolidation_breakdown
+msgid "Kojto Offer Consolidation Breakdown"
+msgstr "Разбивка на консолидацията на оферта Kojto"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_content_elements
+msgid "Kojto Offer Content Elements"
+msgstr "Елементи на съдържанието на оферта Kojto"
+
+#. module: kojto_offers
+#: model:ir.model,name:kojto_offers.model_kojto_offer_surcharges
+msgid "Kojto Surcharges"
+msgstr "Kojto Доплащания"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__language_id
+msgid "Language"
+msgstr "език"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Last Month"
+msgstr "Миналия месец"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__write_uid
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__write_date
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_surcharges__name
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_name_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Net Amount"
+msgstr "Нетна сума"
+
+#. module: kojto_offers
+#: model:ir.actions.report,name:kojto_offers.print_kojto_offer
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__offer_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements_import_wizard__offer_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_import_wizard__offer_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__offer_id
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Offer"
+msgstr "Оферта"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Offer Consolidation Breakdown"
+msgstr "Разбивка на консолидацията на офертата"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Offer Documents"
+msgstr "Офертни документи"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Offer №"
+msgstr "Оферта №"
+
+#. module: kojto_offers
+#. odoo-python
+#: code:addons/kojto_offers/models/kojto_offers.py:0
+msgid "Offer's subcode does not have a code domain."
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offers
+#: model:ir.ui.menu,name:kojto_offers.menu_kojto_offers
+#: model:ir.ui.menu,name:kojto_offers.menu_kojto_offers_parent
+msgid "Offers"
+msgstr "Оферти"
+
+#. module: kojto_offers
+#: model:ir.model.fields.selection,name:kojto_offers.selection__kojto_offers__document_in_out_type__outgoing
+msgid "Out"
+msgstr "Изх."
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Outgoing"
+msgstr "Изходящ"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements_import_wizard__data
+msgid ""
+"Paste data here (Content "
+"Position\tPosition\tName\tConsolidation\tQuantity\tUnit Price)"
+msgstr ""
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_elements_import_wizard_form
+msgid ""
+"Paste data here (Content "
+"Position\\tPosition\\tName\\tConsolidation\\tQuantity\\tUnit Price)"
+msgstr ""
+"Поставете данни тук (Позиция на "
+"съдържанието\\tПозиция\\tИме\\Консолидация\\Количество\\Единична цена)"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_content_import_wizard_form
+msgid "Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate)"
+msgstr ""
+"Поставете данни тук (Позиция;Име;Количество;Единична цена;Единична ставка "
+"ДДС)"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__payment_terms_id
+msgid "Payment Terms"
+msgstr "Условия за плащане"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Payment Terms:"
+msgstr "Условия на плащане:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_phone_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_phone_id
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Phone:"
+msgstr "Телефон:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__post_content_text
+msgid "Post Content Char"
+msgstr "Публикувай съдържание Char"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__pre_content_text
+msgid "Pre Content Char"
+msgstr "Предварително съдържание Char"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Pre VAT Total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__pre_vat_total
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__pre_vat_total
+msgid "Pre VAT total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Pre-VAT Total:"
+msgstr "Общо преди ДДС:"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Prepared by:"
+msgstr "Изготвил:"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__program
+msgid "Program"
+msgstr "програма"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__quantity
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__quantity
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Reference №"
+msgstr "Референтен №"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Reg. #:"
+msgstr "Рег. №"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_registration_number
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_registration_number
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "Registration Number"
+msgstr "Регистрационен номер"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_registration_number_type
+msgid "Registration Number Type"
+msgstr "Тип регистрационен номер"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__subcode_id
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__subject
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Subject"
+msgstr "Предмет"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__surcharges_percent
+msgid "Sum of all surcharge percentages applied to the base price"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__surcharge
+msgid "Surch."
+msgstr "Сума на доплащането"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__surcharges_percent
+msgid "Surch. (%)"
+msgstr "Допълнителни такси (%)"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__surcharge
+msgid "Surcharge amount"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.actions.act_window,name:kojto_offers.action_kojto_offer_surcharges
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__surcharges
+#: model:ir.ui.menu,name:kojto_offers.menu_kojto_offer_surcharges
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_surcharges_form
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_surcharges_search
+msgid "Surcharges"
+msgstr "Доплащания"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Tax ID:"
+msgstr "Данъчен №"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__company_tax_number_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterparty_tax_number_id
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_form
+msgid "To"
+msgstr "До"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "To:"
+msgstr "До:"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Total Amount"
+msgstr "Обща сума"
+
+#. module: kojto_offers
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__contribution_margin_percent
+msgid "Total C-Margin"
+msgstr ""
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__total_price
+msgid "Total Price"
+msgstr "Обща цена"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Total VAT:"
+msgstr "Общо ДДС:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__total_price
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__total_price
+#: model:ir.model.fields,help:kojto_offers.field_kojto_offer_content_elements__total_price
+msgid "Total price"
+msgstr "Обща цена"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offer_consolidation_ids_form
+msgid "Total surcharges"
+msgstr "Общо допълнителни такси"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__surcharges_percent
+msgid "Total surcharges(%)"
+msgstr "Общо допълнителни такси (%)"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Total:"
+msgstr "Общо:"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_breakdown__unit_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_consolidation_ids__unit_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__unit_id
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__unit_id
+msgid "Unit"
+msgstr "единица"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_content_elements__unit_price
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__unit_price
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Unit Price"
+msgstr "Единична цена"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__vat_total
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__vat_total
+msgid "VAT"
+msgstr "ДДС"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "VAT Amount"
+msgstr "Сума на ДДС"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offer_contents__vat_rate
+msgid "VAT Rate (%)"
+msgstr "ДДС ставка (в %)"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__offer_vat_rate
+msgid "VAT Rate (in %)"
+msgstr "ДДС ставка (в %)"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_search
+msgid "Valid"
+msgstr "Валиден"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.view_kojto_offers_list
+msgid "Valid To"
+msgstr "Валидна до"
+
+#. module: kojto_offers
+#: model_terms:ir.ui.view,arch_db:kojto_offers.print_offer
+msgid "Valid To:"
+msgstr "Валидна до:"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__date_end
+msgid "Valid to"
+msgstr "Валиден до"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__counterpartys_reference
+msgid "Your Reference"
+msgstr "Ваш реф. №"
+
+#. module: kojto_offers
+#: model:ir.model.fields,field_description:kojto_offers.field_kojto_offers__document_in_out_type
+msgid "in/out"
+msgstr "вход/изход"

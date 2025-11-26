@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_assets">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <h1 class="heading">
+                            <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Asset Report</div>
+                            <div style="margin-bottom: 20px;">
+                                <span t-field="doc.name" />
+                            </div>
+                        </h1>
+
+                        <!-- Asset Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 0; padding-bottom: 0;">
+                            <tbody>
+                                <!-- Asset Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="6">Asset Information</td>
+                                    <td style="padding: 4px; width: 35%;">Asset #</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Description</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.description" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Unit</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.unit_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Status</td>
+                                    <td style="padding: 4px; width: 40%;"><t t-esc="'Active' if doc.active else 'Inactive'" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Maintenance Information -->
+                        <div style="margin-top: 30px;">
+                            <h2>Maintenance History</h2>
+
+                            <t t-if="doc.maintenances">
+                                <table class="maintenance-table" style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+                                    <thead>
+                                        <tr style="background-color: #B0C4DE;">
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 10%;">Start Date</th>
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 10%;">End Date</th>
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 50%;">Description</th>
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 10%;">Service Type</th>
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 10%;">Invoice</th>
+                                            <th style="padding: 8px; text-align: left; font-weight: bold; width: 10%;">Paid Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.maintenances" t-as="maintenance">
+                                            <tr>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.datetime_start" t-options='{"widget": "date"}' />
+                                                </td>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.datetime_end" t-options='{"widget": "date"}' />
+                                                </td>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.description" />
+                                                </td>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.service_type" />
+                                                </td>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.invoice_number" />
+                                                </td>
+                                                <td style="padding: 8px;">
+                                                    <span t-field="maintenance.datetime_paid" t-options='{"widget": "date"}' />
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <p style="text-align: center; color: #7f8c8d; font-style: italic; margin-top: 20px;">No maintenance records found for this asset.</p>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

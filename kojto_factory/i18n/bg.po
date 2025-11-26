@@ -1,0 +1,1152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_factory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:31+0000\n"
+"PO-Revision-Date: 2025-08-11 07:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "%(context.get('form_view_title', 'Factory Package'))"
+msgstr "%(context.get('form_view_title', 'Производствен пакет'))"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_process_form
+msgid "%(context.get('form_view_title', 'Process'))"
+msgstr "%(context.get('form_view_title', 'Процес'))"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_landingpage_form_inherit_factory
+msgid "<span class=\"landing_page_text\" style=\"color: #8B4513;\">Factory</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: "
+"#8B4513;\">Производство</span>"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "A (m²)"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__active
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__active
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__active
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__total_actual_work_hours
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__actual_work_hours
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Actual HRS"
+msgstr "Действителен HRS"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Actual Work Hours"
+msgstr "Реално работно време"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid ""
+"All contract contents are already in the package or have no remaining "
+"quantity."
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Area (m²)"
+msgstr "Площ (m²)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__asset_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__asset_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Asset"
+msgstr "Актив"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__asset_id_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__asset_id_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__asset_id_is_required
+msgid "Asset Req."
+msgstr "Актив задължителен"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid "Asset is required for process '%s'."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__attachments
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__attachments
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__available_contract_content_ids
+msgid "Available Contract Content"
+msgstr "Налично съдържание на договора"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "Bar Length"
+msgstr "Дължина на лентата"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid ""
+"Cannot change the process of a task that is linked to a job. Please unlink "
+"the task from all jobs first."
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "Cannot copy a package without a subcode."
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "Cannot copy contract contents without a contract."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_package_contents__package_content_status__completed
+msgid "Completed"
+msgstr "Завършено"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Component Rev."
+msgstr "Компонент Rev."
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__component_revision_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__component_revision_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Component Revision"
+msgstr "Ревизия на компонента"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Cons. Field"
+msgstr "Консолидация"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__consolidation_field
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__consolidation_field
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Consolidation Field"
+msgstr "Консолидационно поле"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__package_content_ids
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__contract_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Contract"
+msgstr "Договор"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__contract_content_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Contract Content"
+msgstr "Съдържание на договора"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Copy All Contract Contents"
+msgstr "Копиране на цялото съдържание на договора"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_list
+msgid "Copy Package"
+msgstr "Копирай пакета"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_list
+msgid "Copy Row"
+msgstr "Копиране на ред"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+msgid "Copy Task"
+msgstr "Копирай задачата"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Counterparty"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_list
+msgid "Create Delivery"
+msgstr "Създай доставка"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_list
+msgid "Create Invoice"
+msgstr "Създай фактура"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "Create Item"
+msgstr "Създаване на елемент"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_warehouses_transactions.py:0
+msgid "Create New Item"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.actions.act_window,help:kojto_factory.action_kojto_factory_jobs
+msgid "Create a new factory job."
+msgstr "Създайте нова производствена работа."
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__create_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__create_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_factory
+#: model:ir.model.fields,help:kojto_factory.field_kojto_factory_packages__status
+msgid "Current status of the package"
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__dxf_drawing
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "DXF Drawing"
+msgstr "DXF чертеж"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__description
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__description
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__description
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__description
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_factory
+#: model:ir.model.fields,help:kojto_factory.field_kojto_factory_jobs__description
+msgid "Description of the job and its tasks"
+msgstr "Описание на длъжността и нейните задачи"
+
+#. module: kojto_factory
+#: model:ir.model.fields,help:kojto_factory.field_kojto_factory_packages__description
+msgid "Description of the package and its contents"
+msgstr "Описание на опаковката и нейното съдържание"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_warehouses_transactions__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__date_end
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__date_end
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "End Date"
+msgstr "Крайна дата"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Enter Description"
+msgstr "Въведете описание"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Enter Part Name"
+msgstr "Въведете име на част"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Enter Thickness"
+msgstr "Въведете Дебелина"
+
+#. module: kojto_factory
+#: model:ir.ui.menu,name:kojto_factory.menu_factory_root
+msgid "Factory"
+msgstr "Производство"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Factory Job"
+msgstr "Производствена работа"
+
+#. module: kojto_factory
+#: model:ir.actions.act_window,name:kojto_factory.action_kojto_factory_jobs
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_list
+msgid "Factory Jobs"
+msgstr "Работа"
+
+#. module: kojto_factory
+#: model:ir.actions.act_window,name:kojto_factory.action_factory_packages
+msgid "Factory Package"
+msgstr "Производствен пакет"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_contract_contents.py:0
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Factory Packages"
+msgstr "Производствен пакет"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "G (kg)"
+msgstr "G (кг)"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_tasks__task_priority__high
+msgid "High"
+msgstr "Високо"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_warehouses_transactions__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "In / Out"
+msgstr "Вход / Изход"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_package_contents__package_content_status__in_production
+msgid "In Production"
+msgstr "В производство"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__factory_in_production_quantity
+msgid "In Production Quantity"
+msgstr "Количество в продукция"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "Information"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__date_issue
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__date_issue
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__issued_by
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__issued_by
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Issued By"
+msgstr "Издадено от"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_item_dimensions_wizard
+msgid "Item Dimensions Wizard"
+msgstr "Съветник за размери на артикул"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__item_type
+msgid "Item Type"
+msgstr "Тип артикул"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__job_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_warehouses_transactions__job_id
+msgid "Job"
+msgstr "Работа"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__job_area
+msgid "Job Area (m²)"
+msgstr "Работна площ (m²)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__job_length
+msgid "Job Length (m)"
+msgstr "Дължина на работата (m)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__name
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Job Name"
+msgstr "Име на длъжността"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__job_volume
+msgid "Job Volume (m³)"
+msgstr "Обем на заданието (m³)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__job_weight
+msgid "Job Weight (kg)"
+msgstr "Работно тегло (кг)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__job_content_ids
+#: model:ir.ui.menu,name:kojto_factory.menu_factory_jobs
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Jobs"
+msgstr "Работа"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_contract_contents
+msgid "Kojto Contract Contents"
+msgstr "Съдържание на договор Kojto"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_job_contents
+msgid "Kojto Factory Job-Task Relation"
+msgstr "Kojto Factory Връзка работа-задача"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_jobs
+msgid "Kojto Factory Jobs"
+msgstr "Kojto Factory Работа"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_packages
+msgid "Kojto Factory Packages"
+msgstr "Kojto Factory Пакети"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_processes
+msgid "Kojto Factory Processes"
+msgstr "Kojto Factory Процеси"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_tasks
+msgid "Kojto Factory Tasks"
+msgstr "Kojto Factory Задачи"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "L(m)"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Last Month"
+msgstr "Миналия месец"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__write_uid
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__write_date
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Length (m)"
+msgstr "Дължина (м)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__bar_length
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__length
+msgid "Length (mm)"
+msgstr "Дължина (mm)"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__loaded
+msgid "Loaded"
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_tasks__task_priority__low
+msgid "Low"
+msgstr "Ниско"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__material_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__material_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Material"
+msgstr "Материал"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__material_id_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__material_id_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__material_id_is_required
+msgid "Material Req."
+msgstr "Материал задължителен."
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid "Material is required for process '%s'."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_tasks__task_priority__medium
+msgid "Medium"
+msgstr "Среден"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/wizards/kojto_factory_item_dimensions_wizard.py:0
+msgid "New bar length must be less than parent bar length (%s mm)"
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/wizards/kojto_factory_item_dimensions_wizard.py:0
+msgid "New sheet length must be less than parent sheet length (%s mm)"
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/wizards/kojto_factory_item_dimensions_wizard.py:0
+msgid "New sheet width must be less than parent sheet width (%s mm)"
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "No contract contents found for this contract."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__not_released
+msgid "Not Released"
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__name
+msgid "Number"
+msgstr "Номер"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid ""
+"Only locked component revisions can be linked to a task. Please lock the "
+"revision '%s' before linking."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__open_task_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Open Qty"
+msgstr "Отворено к-во"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__open_task_quantity
+msgid "Open Task Quantity"
+msgstr "Отворено количество работа"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__pdf_drawing
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "PDF Drawing"
+msgstr "PDF чертеж"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__package_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__package_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Package"
+msgstr "Пакет"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_factory_package_contents
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__factory_package_content_ids
+msgid "Package Contents"
+msgstr "Съдържание на пакета"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Package Name"
+msgstr "Име на пакет"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_package_contents.py:0
+msgid "Package content quantity must be greater than zero."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__packaged
+msgid "Packaged"
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.ui.menu,name:kojto_factory.menu_factory_packages
+msgid "Packages"
+msgstr "Пакети"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__part_name
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Part Name"
+msgstr "Име на част"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "Part Quantity"
+msgstr "Количество на частта"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_package_contents__package_content_status__planned
+msgid "Planned"
+msgstr "Планирано"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__total_planned_work_hours
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__planned_work_hours
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Planned HRS"
+msgstr "Планиран HRS"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__factory_planned_quantity
+msgid "Planned Quantity"
+msgstr "Планирано количество"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Planned Work Hours"
+msgstr "Планирано работно време"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Priority"
+msgstr "Приоритет"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__process_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__process_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Process"
+msgstr "Процес"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__name
+msgid "Process Name"
+msgstr "Име на процеса"
+
+#. module: kojto_factory
+#: model:ir.actions.act_window,name:kojto_factory.action_factory_processes
+#: model:ir.ui.menu,name:kojto_factory.menu_factory_processes
+msgid "Processes"
+msgstr "Процеси"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_package_contents__package_content_status__produced
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__produced
+msgid "Produced"
+msgstr "Произведено"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__produced_task_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Produced Qty"
+msgstr "Произведено к-во"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_contract_contents__factory_produced_quantity
+msgid "Produced Quantity"
+msgstr "Произведено количество"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_job_contents.py:0
+msgid "Produced Quantity cannot be negative."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__progress_percent
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Progress"
+msgstr "Прогрес"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__transaction_quantity
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__contract_content_quantity
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__package_content_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__produced_quantity
+msgid "Quantity Produced"
+msgstr "Произведено количество"
+
+#. module: kojto_factory
+#: model:ir.actions.act_window,name:kojto_factory.action_kojto_factory_item_dimensions_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "RETURN TO STORE"
+msgstr "ВРЪЩАНЕ В СКЛАДА"
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__received_by_client
+msgid "Received by Client"
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__released_for_production
+msgid "Released for Production"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+msgid "Required HRS"
+msgstr "Изисква се HRS"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__required_task_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Required Qty"
+msgstr "Задължително ко-во"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Return part of this item to the store"
+msgstr "Върнете част от този артикул в склада"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Select Asset"
+msgstr "Изберете Актив"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Select Component Rev."
+msgstr "Изберете Компонент рев."
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Select Contract"
+msgstr "Изберете Договор"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Select Issued By"
+msgstr "Изберете Издадено от"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Select Material"
+msgstr "Изберете Материал"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Select Package"
+msgstr "Изберете Пакет"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Select Priority"
+msgstr "Изберете Приоритет"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Select Process"
+msgstr "Изберете Процес"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_item_dimensions_wizard_form
+msgid "Sheet Dimensions"
+msgstr "Размери на листа"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__short_name
+msgid "Short Name"
+msgstr "Кратко име"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__show_bar_fields
+msgid "Show Bar Fields"
+msgstr "Показване на полетата на прътите"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__show_part_fields
+msgid "Show Part Fields"
+msgstr "Показване на полета за части"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__show_sheet_fields
+msgid "Show Sheet Fields"
+msgstr "Показване на полетата на листа"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__date_start
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__date_start
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__package_content_status
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__status
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__store_id
+msgid "Store"
+msgstr "Склад"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__subcode_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_job_contents__task_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Task"
+msgstr "Задача"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_area
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Task Area (m²)"
+msgstr "Работна площ (m²)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_length
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Task Length (m)"
+msgstr "Дължина на задачата (m)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__name
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+msgid "Task Name"
+msgstr "Задача име"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_priority
+msgid "Task Priority"
+msgstr "Приоритет на задачата"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_volume
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Task Volume (m³)"
+msgstr "Обем на задачата (m³)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_weight
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+msgid "Task Weight (kg)"
+msgstr "Тегло на задачата (кг)"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid "Task name must be unique."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.actions.act_window,name:kojto_factory.action_factory_tasks
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__job_content_ids
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_packages__task_ids
+#: model:ir.ui.menu,name:kojto_factory.menu_factory_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Tasks"
+msgstr "Задачи"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid ""
+"The selected contract does not have a valid subcode. Please select a "
+"contract with a valid subcode."
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "The selected contract must have a valid subcode."
+msgstr ""
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_package_contents.py:0
+msgid ""
+"The total quantity of this item across all packages (%s + %s) cannot exceed "
+"the contract content quantity (%s)."
+msgstr ""
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__thickness
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__thickness
+msgid "Thickness"
+msgstr "Дебелина"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__thickness_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__thickness_is_required
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__thickness_is_required
+msgid "Thickness Req."
+msgstr "Дебелина Req."
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_tasks.py:0
+msgid "Thickness is required for process '%s'."
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_package_search
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__total_job_quantity
+msgid "Total Quantity"
+msgstr "Общо количество"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__transaction_id
+msgid "Transaction"
+msgstr "Транзакция"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Transaction №"
+msgstr "Транзакция №"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_jobs__transaction_ids
+msgid "Transactions"
+msgstr "Транзакции"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_package_contents__contract_content_unit_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_processes__process_unit_id
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_tasks__task_unit_id
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_process_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_process_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_form
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_factory
+#: model:ir.model.fields.selection,name:kojto_factory.selection__kojto_factory_packages__status__unknown
+msgid "Unknown"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_factory_task_list
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_package_form
+msgid "V (m³)"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Volume (m³)"
+msgstr "Обем (m³)"
+
+#. module: kojto_factory
+#: model:ir.model,name:kojto_factory.model_kojto_warehouses_transactions
+msgid "Warehouse Transactions"
+msgstr "Складови транзакции"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Warehouse transactions"
+msgstr "Складови транзакции"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_packages.py:0
+msgid "Warning"
+msgstr ""
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "Weight (kg)"
+msgstr "Тегло (кг)"
+
+#. module: kojto_factory
+#: model:ir.model.fields,field_description:kojto_factory.field_kojto_factory_item_dimensions_wizard__width
+msgid "Width (mm)"
+msgstr "Ширина (mm)"
+
+#. module: kojto_factory
+#: model_terms:ir.ui.view,arch_db:kojto_factory.view_kojto_factory_jobs_form
+msgid "factory Tasks"
+msgstr "Производство задачи"
+
+#. module: kojto_factory
+#. odoo-python
+#: code:addons/kojto_factory/models/kojto_factory_contract_contents.py:0
+msgid "id"
+msgstr ""

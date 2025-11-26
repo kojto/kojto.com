@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- CMR List View -->
+        <record id="view_kojto_delivery_cmr_list" model="ir.ui.view">
+            <field name="name">kojto.delivery.cmr.list</field>
+            <field name="model">kojto.delivery.cmr</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_delivery_cmr_list" default_order="name desc">
+                    <field name="name" string="CMR №" />
+                    <field name="taking_place" optional="show" />
+                    <field name="taking_address" />
+                    <field name="date_taking" optional="show" />
+
+                    <field name="country_id" optional="show" />
+                    <field name="place_for_delivery" optional="show" />
+                    <field name="time_of_arrival" optional="show" />
+                    <field name="gross_weight" optional="show" />
+                    <field name="delivery_ids" widget="many2many_tags" optional="show" />
+                    <button name="print_delivery_cmr" type="object" class="btn-link" icon="fa-print" title="Print CMR Document"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- CMR Form View -->
+        <record id="view_kojto_delivery_cmr_form" model="ir.ui.view">
+            <field name="name">kojto.delivery.cmr.form</field>
+            <field name="model">kojto.delivery.cmr</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_delivery_cmr_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title">CMR # <field name="name" class="ko-form-view-title" readonly="1" force_save="1" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 d-flex justify-content-center">
+                                        <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 5px!important"/>
+                                    </div>
+                                    <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                        <button name="print_delivery_cmr" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Print CMR">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top" />
+
+                        <!-- General Information -->
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="country_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="taking_place" />
+                                <field name="taking_address" />
+                                <field name="date_taking" />
+                                <field name="time_of_arrival" />
+                                <field name="time_of_departure" />
+                                <field name="sender_instructions" placeholder="Enter sender instructions..." />
+                                <field name="delivery_ids" widget="many2many_tags"
+                                       domain="['|', '&amp;', ('active', '=', True), ('cmr_id', '=', id), '&amp;', ('active', '=', True), ('cmr_id', '=', False)]"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="place_for_delivery" />
+                                <field name="warehouse_work_time" />
+                                <field name="contact_person" />
+                                <field name="phone_number" />
+                                <field name="established_in" />
+                                <field name="date_established_on" />
+                                <field name="special_agreements" placeholder="Enter special agreements..." />
+                                <field name="cash_on_delivery" />
+                            </group>
+                        </div>
+
+                        <separator class="col-lg-12 separator" />
+
+                        <!-- Documents and Packing -->
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="document_by_sender" readonly="1" placeholder="Documents will be calculated automatically..." />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="packing_list" readonly="1" placeholder="Packing list will be calculated automatically..." />
+                                <field name="gross_weight" readonly="1" />
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- CMR Action -->
+        <record id="action_kojto_delivery_cmr" model="ir.actions.act_window">
+            <field name="name">CMR Documents</field>
+            <field name="res_model">kojto.delivery.cmr</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" ref="view_kojto_delivery_cmr_list"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first CMR document!
+                </p>
+                <p>
+                    CMR (International Consignment Note) documents are used for international road transport of goods.
+                </p>
+            </field>
+        </record>
+
+        <!-- CMR Search View -->
+        <record id="view_kojto_delivery_cmr_search" model="ir.ui.view">
+            <field name="name">kojto.delivery.cmr.search</field>
+            <field name="model">kojto.delivery.cmr</field>
+            <field name="arch" type="xml">
+                <search string="CMR Documents">
+                    <!-- Search Fields -->
+                    <field name="name" string="CMR №"/>
+                    <field name="country_id" string="Country"/>
+                    <field name="taking_place" string="Taking Place"/>
+                    <field name="place_for_delivery" string="Delivery Place"/>
+                    <field name="date_taking" string="Taking Date"/>
+                    <field name="contact_person" string="Contact Person"/>
+                    <field name="phone_number" string="Phone Number"/>
+
+                    <!-- Filters -->
+                    <filter name="today_cmr" string="Today" domain="[('date_taking', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_week_cmr" string="This Week" domain="[('date_taking', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_month_cmr" string="This Month" domain="[('date_taking', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_taking', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_country" string="Country" context="{'group_by': 'country_id'}"/>
+                        <filter name="group_by_taking_date" string="Taking Date" context="{'group_by': 'date_taking'}"/>
+                        <filter name="group_by_taking_place" string="Taking Place" context="{'group_by': 'taking_place'}"/>
+                        <filter name="group_by_delivery_place" string="Delivery Place" context="{'group_by': 'place_for_delivery'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

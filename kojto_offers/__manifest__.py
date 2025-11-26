@@ -1,0 +1,27 @@
+{
+    "name": "Kojto Offers",
+    "version": "18.04.07",
+    "category": "KOJTO",
+    "description": "Offer management module for creating and managing offers, surcharges, consolidations, and content elements",
+    "author": "KOJTO",
+    "website": "https://www.kojto.com",
+    "depends": ["kojto_hr"],
+    "data": [
+        "data/kojto.offer.surcharges.csv",
+        "security/ir.model.access.csv",
+        "reports/kojto_offers_reports.xml",
+        "reports/kojto_offers_templates.xml",
+        "views/kojto_offer_surcharges_views.xml",
+        "views/kojto_offer_consolidation_ids_views.xml",
+        "views/kojto_offers_views.xml",
+        "views/kojto_offers_menu_views.xml",
+        "views/kojto_offers_buttons.xml",
+        "views/kojto_offer_content_elements_views.xml",
+        "views/kojto_offer_content_import_wizard_views.xml",
+        "views/kojto_offer_content_elements_import_wizard_views.xml",
+
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

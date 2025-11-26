@@ -1,0 +1,98 @@
+<odoo>
+    <record id="view_kojto_hr_leave_management_list" model="ir.ui.view">
+        <field name="name">kojto.hr.leave.management.list</field>
+        <field name="model">kojto.hr.leave.management</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main view_kojto_hr_leave_management_list" editable="top">
+                <field name="name" />
+                <field name="language_id" />
+                <field name="employee_id" />
+                <field name="leave_type_id" />
+                <field name="date_start" widget="daterange" options="{'end_date_field': 'date_end'}" string="Date"/>
+                <field name="leave_duration" />
+                <field name="reason" />
+                <field name="leave_status" />
+                <field name="leave_order_number" />
+                <button name="print_document" type="object" class="btn-link" icon="fa-print" title="Print Leave Request" invisible="leave_is_printable == False"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kojto_hr_leave_management_form" model="ir.ui.view">
+        <field name="name">kojto.hr.leave.management.form</field>
+        <field name="model">kojto.hr.leave.management</field>
+        <field name="arch" type="xml">
+            <form class="ko-form-main view_kojto_hr_leave_management_form">
+                <sheet class="ko-form-body">
+                    <!-- Custom Header -->
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <!-- Left Section -->
+                        <div class="d-flex align-items-center">
+                            <div class="ko-form-view-title">
+                                <span>LEAVE MANAGEMENT</span>
+                            </div>
+                        </div>
+                        <!-- Right Section - Action Buttons -->
+                        <div class="d-flex align-items-center">
+                            <button name="print_document" type="object" class="btn btn-secondary" string="Print" icon="fa-print" invisible="leave_is_printable == False"/>
+                        </div>
+                    </div>
+                    <group>
+                        <field name="employee_id" context="{'create': False}" options="{'no_create_edit': True,'no_open':True, 'no_create':True}" />
+                        <field name="leave_type_id" context="{'create': False}" options="{'no_create_edit': True,'no_open':True, 'no_create':True}" />
+                        <field name="reason" />
+                        <field name="date_start" widget="daterange" options="{'end_date_field': 'date_end'}" />
+                        <field name="date_end" invisible="1" />
+                        <field name="leave_status" />
+                        <field name="name" readonly='True' />
+                    </group>
+
+                    <!-- Approval Information -->
+                    <group string="Approval Information" invisible="leave_status == 'pending'">
+                        <field name="approved_by" readonly="1" />
+                        <field name="approved_date" readonly="1" />
+                        <field name="leave_order_number" readonly="1" />
+                    </group>
+
+                    <!-- PDF Attachment -->
+                    <group string="Document Attachment">
+                        <field name="pdf_attachment_id" readonly="1" widget="many2one_binary" />
+                        <field name="language_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_kojto_hr_leave_management_search">
+        <field name="name">kojto.hr.leave.management.search</field>
+        <field name="model">kojto.hr.leave.management</field>
+        <field name="arch" type="xml">
+            <search string="Leave requests">
+                <field name="employee_id" />
+                <field name="leave_type_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="name" />
+                <filter string="Ongoing This Month" name="active_current_month" domain="['|', '&amp;', ('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', ((context_today() + relativedelta(months=1)).strftime('%Y-%m-01'))), '&amp;', ('date_start', '&lt;', context_today().strftime('%Y-%m-01')), '|', ('date_end', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_end', '=', False)]"/>
+                <filter name="current_month" string="Current Month"
+                    domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', ((context_today() + relativedelta(months=1)).strftime('%Y-%m-01')))]"/>
+                <filter name="previous_month" string="Previous Month"
+                     domain="[('date_start', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_start', '&lt;', (context_today().strftime('%Y-%m-01'))) ]" />
+                <filter name='leave_status_approved' string="Approved" domain="[('leave_status', '=', 'approved')]" />
+                <filter name='leave_status_denied' string="Denied" domain="[('leave_status', '=', 'denied')]" />
+                <filter name='leave_status_pending' string="Pending" domain="[('leave_status', '=', 'pending')]" />
+                <filter string="Employee" name="groupby_employee" context="{'group_by': 'employee_id'}" />
+                <filter string="Leave type" name="groupby_leave_type" context="{'group_by': 'leave_type_id'}" />
+            </search>
+        </field>
+    </record>
+    <record id="action_kojto_hr_leave_management" model="ir.actions.act_window">
+        <field name="name">Leave Management</field>
+        <field name="res_model">kojto.hr.leave.management</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_hr_leave_management_search" />
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('view_kojto_hr_leave_management_list')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_kojto_hr_leave_management_list')})]" />
+    </record>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Business Trip Report (includes both Order and Report) -->
+        <record id="action_report_kojto_hr_business_trips" model="ir.actions.report">
+            <field name="name">Business Trip Report</field>
+            <field name="model">kojto.hr.business.trips</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_hr.report_kojto_hr_business_trips</field>
+            <field name="report_file">kojto_hr.report_kojto_hr_business_trips</field>
+            <field name="print_report_name">'Business Trip Report - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_hr_business_trips"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+
+        <!-- Time Tracking Report -->
+        <record id="action_report_kojto_hr_time_tracking" model="ir.actions.report">
+            <field name="name">Time Tracking Report</field>
+            <field name="model">kojto.hr.time.tracking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_hr.report_kojto_hr_time_tracking</field>
+            <field name="report_file">kojto_hr.report_kojto_hr_time_tracking</field>
+            <field name="print_report_name">'Time Tracking Report - %s' % (object.name)</field>
+            <field name="binding_model_id" ref="model_kojto_hr_time_tracking"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- Leave Management Report -->
+        <record id="action_report_kojto_hr_leave_management" model="ir.actions.report">
+            <field name="name">Leave Management Report</field>
+            <field name="model">kojto.hr.leave.management</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_hr.report_kojto_hr_leave_management</field>
+            <field name="report_file">kojto_hr.report_kojto_hr_leave_management</field>
+            <field name="print_report_name">'Leave Management Report - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_hr_leave_management"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+    </data>
+</odoo>

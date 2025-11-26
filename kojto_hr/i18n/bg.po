@@ -1,0 +1,1874 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:33+0000\n"
+"PO-Revision-Date: 2025-08-11 07:33+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_hr
+#: model:ir.actions.report,print_report_name:kojto_hr.action_report_kojto_hr_business_trips
+msgid "'Business Trip Report - %s' % (object.name)"
+msgstr "Отчет за командировка - %s' % (име на обект)"
+
+#. module: kojto_hr
+#: model:ir.actions.report,print_report_name:kojto_hr.action_report_kojto_hr_leave_management
+msgid "'Leave Management Report - %s' % (object.name)"
+msgstr "Оставете отчета за управление - %s' % (име на обект)"
+
+#. module: kojto_hr
+#: model:ir.actions.report,print_report_name:kojto_hr.action_report_kojto_hr_time_tracking
+msgid "'Time Tracking Report - %s' % (object.name)"
+msgstr "Отчет за работно време - %s' % (име на обект)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #0d6efd;\">Employees</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #0d6efd;\">Служители</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid ""
+"<span class=\"landing_page_text\" style=\"color: #198754;\">Time "
+"tracker</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #198754;\">Проследяване на "
+"времето</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid ""
+"<span class=\"landing_page_text\" style=\"color: #20c997;\">Leave "
+"Requests</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #20c997;\">Заявки за "
+"отпуски</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid ""
+"<span class=\"landing_page_text\" style=\"color: #6f42c1;\">Business "
+"trips</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #6f42c1;\">Бизнес "
+"пътувания</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid ""
+"<span class=\"landing_page_text\" style=\"color: #dc3545;\">Absent "
+"Employees</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #dc3545;\">Отсъстващи "
+"служители</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid ""
+"<span class=\"landing_page_text\" style=\"color: #fd7e14;\">HR "
+"Dashboard</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #fd7e14;\">Табло за "
+"управление на човешките ресурси</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #ffc107;\">My Calendar</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: #ffc107;\">Моят "
+"календар</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "<span style=\"font-size: 1em;\">№ ______________ / </span>"
+msgstr ""
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid ""
+"<span>\n"
+"                                                BUSINESS TRIP\n"
+"                                            </span>"
+msgstr ""
+"<span>\n"
+"                                                КОМАНДИРОВКА\n"
+"                                            </span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "<span>Employee</span>"
+msgstr "<span>Служител</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_form
+msgid "<span>HR EMPLOYEE SUBCODE RATES</span>"
+msgstr "<span>СТАВКИ ЗА ПОДКОДОВЕ НА СЛУЖИТЕЛИ HR</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_form
+msgid "<span>LEAVE MANAGEMENT</span>"
+msgstr "<span> УПРАВЛЕНИЕ НА ОТПУСКИ</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_form
+msgid "<span>LEAVE TYPES</span>"
+msgstr "<span>ВИДОВЕ ОТПУСКА</span>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "<strong>Order created on:</strong>"
+msgstr "<strong>Поръчката е създадена на:</strong>"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "<strong>Report generated on:</strong>"
+msgstr "<strong>Отчетът е генериран на:</strong>"
+
+#. module: kojto_hr
+#: model:ir.model.constraint,message:kojto_hr.constraint_kojto_hr_calendar_filters_user_id_employee_id_unique
+msgid "A user cannot have the same employee filter twice."
+msgstr ""
+"Един потребител не може да има един и същ филтър за служители два пъти."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "APPROVED"
+msgstr "ОДОБРЕНО"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__user_id_accountant
+msgid "Accountant User ID"
+msgstr "Потребителски идентификатор на счетоводителя"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__active
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__active
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__active
+msgid "Activity"
+msgstr "Активност"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Actual"
+msgstr "Действително"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__is_actual_expense
+msgid "Actual Expense"
+msgstr "Действителен разход"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__content_is_actual_expense
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Actual Expenses"
+msgstr "Действителни разходи"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__workhours
+msgid "Actual Work Hours"
+msgstr "Реално работно време"
+
+#. module: kojto_hr
+#: model:ir.actions.server,name:kojto_hr.add_one_year
+msgid "Add one more year"
+msgstr "Добавете още една година"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__company_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Address:"
+msgstr "Адрес:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__addresses
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Addresses"
+msgstr "Адреси"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__all_day
+msgid "All Day"
+msgstr "Цял ден"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__amount
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Amount"
+msgstr "Сума"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__approved_date
+msgid "Approval Date"
+msgstr "Дата на одобрение"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Approval Date:"
+msgstr "Одобрено на:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_form
+msgid "Approval Information"
+msgstr "Информация за одобрение"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__leave_status__approved
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_management__leave_status__approved
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Approved"
+msgstr "Одобрено"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__approved_by
+msgid "Approved By"
+msgstr "Одобрено от"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Approved By:"
+msgstr "Одобрено от:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__dashboard_id
+msgid "Associated Dashboard"
+msgstr "Свързано табло за управление"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__user_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__user_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__user_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__user_id
+msgid "Associated User"
+msgstr "Асоцииран потребител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__attachments
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Balance"
+msgstr "Баланс"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__balance_trip_currency
+msgid "Balance (Trip Currency)"
+msgstr "Баланс (валута на пътуването)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Balance<br/>Payable to Employee - Payments Made:"
+msgstr "Салдо<br/>Платимо на служител - Извършени плащания:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Bank Accounts"
+msgstr "Банкови сметки"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__bank_accounts
+msgid "Bank accounts"
+msgstr "Банкови сметки"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__based_on
+msgid "Based on"
+msgstr "Въз основа на"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid ""
+"Based on the Regulation for business trips and specializations in foreign "
+"countries with Decree of the Council of Ministers No. 115 from 3 June 2004"
+msgstr ""
+"На основание Наредба за командировките и специализациите в чужбина с ПМС № "
+"115 от 03.06.2004г."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employees_search
+msgid "Binded to terminal"
+msgstr "Свързан с терминал"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Budget"
+msgstr "Бюджет"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__content_not_actual_expense
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Budget Expenses"
+msgstr "Бюджетни разходи"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__business_purpose
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__business_purpose
+msgid "Business Purpose"
+msgstr "Бизнес цел"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Business Purpose:"
+msgstr "Бизнес цел:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__trip_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__trip_id
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__event_type__business_trip
+msgid "Business Trip"
+msgstr "Бизнес пътуване"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_business_trip_logbook
+msgid "Business Trip Logbook Entry"
+msgstr "Вписване в дневника на командировката"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Business Trip Order"
+msgstr "Заповед за командировка"
+
+#. module: kojto_hr
+#: model:ir.actions.report,name:kojto_hr.action_report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Business Trip Report"
+msgstr "Отчет за командировка"
+
+#. module: kojto_hr
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_business_trips
+msgid "Business Trips"
+msgstr "Бизнес пътувания"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__trip_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_search
+msgid "Business trip"
+msgstr "Командировка"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_business_trips
+msgid "Business trips"
+msgstr "Командировки"
+
+#. module: kojto_hr
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_calendar_event
+msgid "Calendar"
+msgstr "Календар"
+
+#. module: kojto_hr
+#: model:ir.model.fields,help:kojto_hr.field_kojto_hr_business_trips__duration_days
+msgid "Calendar days including from and to days"
+msgstr "Календарни дни включително от и до дни"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__can_see_attachments
+msgid "Can See Attachments"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__can_see_contracts
+msgid "Can See Contracts"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__can_see_description
+msgid "Can See Description"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__employee_checked
+msgid "Checked"
+msgstr "Проверено"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__code_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__code_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__code_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Code"
+msgstr "Код"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__color
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__color
+msgid "Color"
+msgstr "Цвят"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__comment
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__comment
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__comment
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Comment"
+msgstr "Коментар"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__company_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_search
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Company:"
+msgstr "Фирма:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__content_ids
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__content
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__contract
+msgid "Contract"
+msgstr "Договор"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__contracts
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Contracts"
+msgstr "Договори"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Copy Business Trip"
+msgstr "Копиране на командировка"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Copy Expense"
+msgstr "Разходи за копиране"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Copy Logbook Entry"
+msgstr "Копиране на запис в бордовия дневник"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__copy_order
+msgid "Copy of order"
+msgstr "Копие от поръчка"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_form
+msgid "Create Default Types"
+msgstr "Създайте типове по подразбиране"
+
+#. module: kojto_hr
+#: model_terms:ir.actions.act_window,help:kojto_hr.action_kojto_hr_dashboard
+msgid "Create a new HR Dashboard to analyze employee performance metrics."
+msgstr ""
+"Създайте ново табло за управление на човешките ресурси, за да анализирате "
+"показателите за представяне на служителите."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_form
+msgid "Create default leave types if none exist"
+msgstr "Създайте типове отпуск по подразбиране, ако не съществува такъв"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__create_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__create_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__credited_subcode_id
+msgid "Credited Subcode"
+msgstr "Кредитиран подкод"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__currency_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__currency_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__currency_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__currency_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__currency_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_search
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__currency_symbol
+msgid "Currency Symbol"
+msgstr "Валута символ"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Current Month"
+msgstr "Текущ месец"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "DENIED"
+msgstr "ОТКАЗАНО"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_contents__trip_group__daily
+msgid "Daily"
+msgstr "Ежедневно"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__work_day_duration
+msgid "Daily Work Hours"
+msgstr "Ежедневно работно време"
+
+#. module: kojto_hr
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_dashboard
+msgid "Dashboard"
+msgstr "Табло за управление"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__date
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Date/Time"
+msgstr "Дата/Час"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__day_of_week
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Day"
+msgstr "ден"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__is_working_day
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__day_type
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Day Type"
+msgstr "Тип ден"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__leave_status__denied
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_management__leave_status__denied
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Denied"
+msgstr "Отказано"
+
+#. module: kojto_hr
+#: model:ir.model.fields,help:kojto_hr.field_kojto_hr_business_trip_logbook__route_description
+msgid ""
+"Describe the journey from start point to end point (e.g., \"Sofia to "
+"Plovdiv\" or \"Office to Client Site\")"
+msgstr ""
+"Опишете пътуването от начална до крайна точка (напр. „София до Пловдив“ или "
+"„Офис до клиентски сайт“)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__description
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__description
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__description
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__description
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__destination
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__destination
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_search
+msgid "Destination"
+msgstr "Дестинация"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Destination:"
+msgstr "Дестинация:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_addresses__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_bank_accounts__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_emails__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_images__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_names__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_phones__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__display_name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__distance_km
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Distance (km)"
+msgstr "Разстояние (км)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_form
+msgid "Document Attachment"
+msgstr "Прикачен документ"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__leave_duration
+msgid "Duration"
+msgstr "Продължителност"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__duration_days
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Duration (Days)"
+msgstr "Продължителност (дни)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Duration (Days):"
+msgstr "Продължителност (дни):"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__emails
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_hr
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_employee_subcode_rates_dashboard
+msgid "Emp. Rates"
+msgstr "Служ. Ставки"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_addresses__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_bank_accounts__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_emails__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_images__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_names__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_phones__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__employee_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__employee_id
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_employees
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Employee"
+msgstr "Служител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__employee_id
+msgid "Employee ID"
+msgstr "ID на служител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__employee_images
+msgid "Employee Images"
+msgstr "Снимки на служители"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__employee_name
+msgid "Employee Name"
+msgstr "Име на служител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__employee_number
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__employee_number
+msgid "Employee Number"
+msgstr "Служител №"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Employee Signature"
+msgstr "Подпис служител"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_employee_subcode_rates_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_search
+msgid "Employee Subcode Rates Dashboard"
+msgstr "Подкод ставка на служителите табло"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_list
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+msgid "Employee №"
+msgstr "Служител №"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Employee:"
+msgstr "Служител:"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_employees
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__employee_ids
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_employees_parent
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_form
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employees_search
+msgid "Employees"
+msgstr "Служители"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "End Date:"
+msgstr "Крайна дата:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__event_type
+msgid "Event Type"
+msgstr "Тип събитие"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__norm
+msgid "Expected Work Hours"
+msgstr "Очаквано работно време"
+
+#. module: kojto_hr
+#. odoo-python
+#: code:addons/kojto_hr/models/kojto_hr_employees.py:0
+msgid "Failed to create user: %s"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__date_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__datetime_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__time_tracking_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__datetime_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__date_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__datetime_start
+msgid "From"
+msgstr "от"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__from_km
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "From (km)"
+msgstr "От (км)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__datetime_start
+msgid "From date:"
+msgstr "От дата:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "From:"
+msgstr "От:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__trip_group
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Group"
+msgstr "Група"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_calendar_event_calendar
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_calendar
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_search
+msgid "HR Calendar Events"
+msgstr "HR календарни събития"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_search
+msgid "HR Dashboards"
+msgstr "HR табла"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_employee_subcode_rates
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_search
+msgid "HR Employee Subcode Rates"
+msgstr "Тарифи за подкод на служителите в HR"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__hour_rate
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__hour_rate
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+msgid "Hour Rate"
+msgstr "Почасова ставка"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__total_hours
+msgid "Hours"
+msgstr "Часове"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_contents__trip_group__housing
+msgid "Housing"
+msgstr "Жилища"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_addresses__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_bank_accounts__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_emails__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_images__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_names__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_base_phones__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_landingpage__id
+msgid "ID"
+msgstr "Име"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Insert employee name here..."
+msgstr "Въведете име на служител тук..."
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__is_working_day
+msgid "Is Working Day"
+msgstr "Е работен ден"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_addresses
+msgid "Kojto Addresses"
+msgstr "Kojto Адреси"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_bank_accounts
+msgid "Kojto Base Bank Accounts"
+msgstr "Kojto Base Банкови сметки"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_images
+msgid "Kojto Base Images"
+msgstr "Kojto Base Изображения"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_emails
+msgid "Kojto Emails"
+msgstr "Който имейли"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_business_trip_contents
+msgid "Kojto HR Business Trip Contents"
+msgstr "Kojto HR Съдържание на командировката"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_business_trip_payments
+msgid "Kojto HR Business Trip Payments to Employee"
+msgstr "Kojto HR командировъчни плащания на служител"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_dashboard
+msgid "Kojto HR Dashboard"
+msgstr "Kojto HR табло"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_dashboard_contents
+msgid "Kojto HR Dashboard Content"
+msgstr "Kojto HR табло съдържание"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_employee_subcode_rates
+msgid "Kojto HR Employee Subcode Rates"
+msgstr "Тарифи за подкод на служители на Kojto HR"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_employee_subcode_rates_dashboard
+msgid "Kojto HR Employee Subcode Rates Dashboard"
+msgstr "Подкод ставка на служители на Kojto HR табло"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_business_trips
+msgid "Kojto Hr Business Trips"
+msgstr "Kojto Hr Командировки"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_calendar_event
+msgid "Kojto Hr Calendar Event"
+msgstr "Kojto Hr Календар"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_calendar_filters
+msgid "Kojto Hr Calendar Filters"
+msgstr "Kojto Hr Календар Филтри"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_employees
+msgid "Kojto Hr Employees"
+msgstr "Kojto Hr Служители"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_employees_contracts
+msgid "Kojto Hr Employees Contracts"
+msgstr "Договори на служителите на Kojto Hr"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_leave_management
+msgid "Kojto Hr Leave Management"
+msgstr "Kojto Hr Управление на отпуски"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_leave_type
+msgid "Kojto Hr Leave Types"
+msgstr "Kojto Hr Видове отпуски"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_time_tracking
+msgid "Kojto Hr Time Tracking"
+msgstr "Kojto Hr Проследяване на времето"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_names
+msgid "Kojto Names"
+msgstr "Kojto Имена"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_base_phones
+msgid "Kojto Phones"
+msgstr "Kojto Телефони"
+
+#. module: kojto_hr
+#: model:ir.model,name:kojto_hr.model_kojto_hr_working_days
+msgid "Kojto Working Days"
+msgstr "Който работни дни"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__language_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__language_id
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__write_uid
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_working_days__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Last Updated:"
+msgstr "Последна актуализация:"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__event_type__leave
+msgid "Leave"
+msgstr "Отпуска"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_leave_management
+msgid "Leave Management"
+msgstr "Управление на отпуски"
+
+#. module: kojto_hr
+#: model:ir.actions.report,name:kojto_hr.action_report_kojto_hr_leave_management
+msgid "Leave Management Report"
+msgstr "Оставете отчета за управление"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Leave Order"
+msgstr "Заповед за отпуска"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__leave_order_number
+msgid "Leave Order Number"
+msgstr "Оставете номер на поръчка"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Leave Request"
+msgstr "Молба за отпуска"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__leave_type_id
+msgid "Leave Type"
+msgstr "Оставете Тип"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Leave Type:"
+msgstr "Тип отпуск:"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_leave_types
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_leave_types
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_types_search
+msgid "Leave Types"
+msgstr "Типове отпуски"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__leave_group
+msgid "Leave group"
+msgstr "Групи отпуски"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__leave_is_printable
+msgid "Leave is Printable"
+msgstr "Отпускът е за печат"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Leave requests"
+msgstr "Заявки за отпуски"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__leave_type_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Leave type"
+msgstr "Оставете тип"
+
+#. module: kojto_hr
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_leave_management
+msgid "Leaves"
+msgstr "Отпуски"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Logbook"
+msgstr "Бордови дневник"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__logbook_ids
+msgid "Logbook Entries"
+msgstr "Записи в бордовия дневник"
+
+#. module: kojto_hr
+#: model_terms:ir.actions.act_window,help:kojto_hr.action_kojto_hr_working_days
+msgid "Manage Working and Non-Working Days"
+msgstr "Управление на работни и неработни дни"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Manager/HR Signature"
+msgstr "Управител/ ЧР подпис"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_filters__user_id
+msgid "Me"
+msgstr "аз"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Month"
+msgstr "Месец"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__name
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__company_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__names
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Names"
+msgstr "Имена"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_calendar_event_form_popup
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_form
+msgid "New Calendar Event"
+msgstr "Ново календарно събитие"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "No actual expenses recorded for this trip."
+msgstr "Няма регистрирани реални разходи за това пътуване."
+
+#. module: kojto_hr
+#: model_terms:ir.actions.act_window,help:kojto_hr.action_kojto_hr_employee_subcode_rates_dashboard
+msgid "No employee subcode rates found"
+msgstr "Не са намерени ставки на подкодове за служители"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "No logbook entries recorded for this trip."
+msgstr "Няма записани записи в бордовия дневник за това пътуване."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "No payments to employee recorded for this trip."
+msgstr "Няма регистрирани плащания към служител за това пътуване."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "No planned expenses recorded for this trip."
+msgstr "Няма записани планирани разходи за това пътуване."
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__no_record_days
+msgid "No record days"
+msgstr "Без рекордни дни"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Non-Working Days"
+msgstr "Неработни дни"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employees_search
+msgid "Not binded to terminal"
+msgstr "Не е обвързано с терминала"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_logbook__is_working_day__not_working
+msgid "Not working day"
+msgstr "Неработен ден"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__number_contract
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__name
+msgid "Number"
+msgstr "Номер"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Number:"
+msgstr "Номер:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Ongoing This Month"
+msgstr "Продължаващи в този месец"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Order Number:"
+msgstr "Заповед №"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_contents__trip_group__other
+msgid "Other"
+msgstr "други"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__overtime_public_holiday
+msgid "Overtime +100%"
+msgstr "Извънреден труд +100%"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__overtime_working_day
+msgid "Overtime +50%"
+msgstr "Извънреден труд +50%"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__overtime_weekend
+msgid "Overtime +75%"
+msgstr "Извънреден труд +75%"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__pdf_attachment_id
+msgid "PDF Attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "PENDING"
+msgstr "В ИЗЧАКВАНЕ"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_type__leave_group__paid
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Paid"
+msgstr "Платен"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__paid_leave
+msgid "Paid Leave Hours"
+msgstr "Платени часове за отпуск"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Pay to Emp."
+msgstr "Платете на Emp."
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Payable"
+msgstr "Платими"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__payable_to_employee
+msgid "Payable to Employee"
+msgstr "Заплаща се на служител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__payment_datetime
+msgid "Payment Date/Time"
+msgstr "Дата/час на плащане"
+
+#. module: kojto_hr
+#. odoo-python
+#: code:addons/kojto_hr/models/kojto_hr_business_trip_payments.py:0
+msgid "Payment amount must be greater than zero."
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__payment_ids
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Payments to Employee"
+msgstr "Плащания към служител"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__leave_status__pending
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_management__leave_status__pending
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+msgid "Pending"
+msgstr "В очакване"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__personal_km
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Personal (km)"
+msgstr "Лични (км)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__phones
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Phones"
+msgstr "Телефони"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__position
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__position
+msgid "Position"
+msgstr "Позиция"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Position:"
+msgstr "Позиция:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,help:kojto_hr.field_kojto_hr_business_trips__balance_trip_currency
+msgid ""
+"Positive value means employee must be paid, negative value means employee "
+"must return money"
+msgstr ""
+"Положителна стойност означава, че служителят трябва да бъде заплатен, "
+"отрицателна стойност означава, че служителят трябва да върне пари"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Positive: employee must be paid, Negative: employee must return money"
+msgstr ""
+"Положително: на служителя трябва да се плати, Отрицателно: служителят трябва"
+" да върне пари"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Previous Month"
+msgstr "Предишнен месец"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_form
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_leave_management_list
+msgid "Print Leave Request"
+msgstr "Отпечатайте молба за отпуска"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Print Report"
+msgstr "Печат на отчет"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_search
+msgid "Project"
+msgstr "Проект"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Project Code:"
+msgstr "Код на проекта:"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_working_days__day_type__public_holiday
+msgid "Public Holiday"
+msgstr "Официален празник"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Public Holidays"
+msgstr "Официални празници"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__hour_rate_in_BGN
+msgid "Rate in BGN"
+msgstr "Курс в BGN"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__hour_rate_in_EUR
+msgid "Rate in EUR"
+msgstr "Курс в EUR"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__reason
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__reason
+msgid "Reason"
+msgstr "Причина"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_search
+msgid "Recent Dashboards"
+msgstr "Последни табла за управление"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_list
+msgid "Ref №"
+msgstr "Реф. №"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__company_registration_number
+msgid "Registration Number"
+msgstr "Рег. №"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Registration Number:"
+msgstr "Рег. №:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Regular Days"
+msgstr "Редовни дни"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_working_days__day_type__regular
+msgid "Regular Working Day"
+msgstr "Редовен работен ден"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Request Created:"
+msgstr "Заявка създадена на:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__route_description
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Route Description"
+msgstr "Описание на маршрута"
+
+#. module: kojto_hr
+#: model_terms:ir.actions.act_window,help:kojto_hr.action_kojto_hr_employee_subcode_rates
+msgid "Set up your HR employee subcode rates here"
+msgstr "Настройте тарифите за подкод на вашия HR служител тук"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_type__leave_group__sick
+msgid "Sick"
+msgstr "Болничен"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__sick_leave
+msgid "Sick Leave Hours"
+msgstr "Часове за отпуск по болест"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__source_model
+msgid "Source Model"
+msgstr "Изходен модел"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__source_record_id
+msgid "Source Record ID"
+msgstr "ID на изходния запис"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_search
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_calendar_event_search
+msgid "Start Date Year"
+msgstr "Начална дата Година"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Start Date:"
+msgstr "Начална дата:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__leave_status
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__leave_status
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "Status:"
+msgstr "Статус:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__subcode_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__subcode_id
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_search
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_search
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__subcode_id
+msgid "Subcode ID"
+msgstr "ID на подкод"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__subcode_name
+msgid "Subcode Name"
+msgstr "Подкод име"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__subcode_rates
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_form
+msgid "Subcode Rates"
+msgstr "Тарифи за подкод"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__sum_overtime_holiday
+msgid "Sum Overtime Holiday (Raw)"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__sum_overtime_weekend
+msgid "Sum Overtime Weekend (Raw)"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__sum_overtime_working_day
+msgid "Sum Overtime Working Day (Raw)"
+msgstr ""
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__work_hours_terminal_binding
+msgid "Terminal Binding"
+msgstr "Терминално свързване"
+
+#. module: kojto_hr
+#: model_terms:ir.actions.act_window,help:kojto_hr.action_kojto_hr_employee_subcode_rates_dashboard
+msgid "This dashboard shows active employees with their latest subcode rates."
+msgstr ""
+"Това табло показва активните служители с техните най-нови ставки по "
+"подкодове."
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_time_tracking
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_time_tracking_calendar
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_calendar_event__event_type__time_tracking
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_time_tracking
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_form
+msgid "Time Tracking"
+msgstr "Работно време"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_time_tracking_calendar
+msgid "Time Tracking Calendar"
+msgstr "Календар за работно време"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_time_tracking_form_popup
+msgid "Time Tracking Details"
+msgstr "Подробности за работно време"
+
+#. module: kojto_hr
+#: model:ir.actions.report,name:kojto_hr.action_report_kojto_hr_time_tracking
+msgid "Time Tracking Report"
+msgstr "Доклад за работно време"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__date_end
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__datetime_end
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_calendar_event__time_tracking_end
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__datetime_end
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_management__date_end
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__datetime_end
+msgid "To"
+msgstr "до"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_logbook__to_km
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "To (km)"
+msgstr "До (км)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard__datetime_end
+msgid "To date:"
+msgstr "Към днешна дата:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "To:"
+msgstr "До:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_actual_expenses_trip_currency
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Total Actual Expenses (Trip Currency)"
+msgstr "Общи действителни разходи (валута на пътуването)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Total Actual Expenses:"
+msgstr "Общо действителни разходи:"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Total Amount"
+msgstr "Обща сума"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_budget_expenses_trip_currency
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Total Budget Expenses (Trip Currency)"
+msgstr "Общи бюджетни разходи (валута на пътуването)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Total Budget Expenses:"
+msgstr "Общо бюджетни разходи:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_distance_km
+msgid "Total Distance (km)"
+msgstr "Общо разстояние (км)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__total
+msgid "Total Hours Accounted"
+msgstr "Общо отчетени часове"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_paid_to_employee_trip_currency
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Total Paid to Employee (Trip Currency)"
+msgstr "Общо изплатено на служител (валута на пътуването)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_payable_to_employee_trip_currency
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_business_trips_form
+msgid "Total Payable to Employee (Trip Currency)"
+msgstr "Общо плащане на служител (валута на пътуването)"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Total Payments to Employee:"
+msgstr "Общо плащания към служител:"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__total_personal_km
+msgid "Total Personal Distance (km)"
+msgstr "Общо лично разстояние (км)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__total_sum
+msgid "Total Sum"
+msgstr "Обща сума"
+
+#. module: kojto_hr
+#. odoo-python
+#: code:addons/kojto_hr/models/kojto_hr_business_trip_contents.py:0
+msgid "Total sum cannot be negative."
+msgstr ""
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Total:"
+msgstr "Общо:"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_contents__trip_group__transport
+msgid "Transport"
+msgstr "транспорт"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Trip Information"
+msgstr "Информация за пътуването"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Trip Logbook"
+msgstr "Дневник на пътуването"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trips__name
+msgid "Trip name"
+msgstr "Име на пътуването"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_leave_type__name
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__unit_id
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__unit_price
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid "Unit Price"
+msgstr "Единична цена"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_leave_type__leave_group__unpaid
+msgid "Unpaid"
+msgstr "Неплатен"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__unpaid_leave
+msgid "Unpaid Leave Hours"
+msgstr "Часове за неплатен отпуск"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_contents__write_date
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_business_trip_payments__write_date
+msgid "Updated on"
+msgstr "Актуализиран на"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees__user_id
+msgid "User"
+msgstr "Потребител"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates__datetime_start
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employee_subcode_rates_dashboard__datetime_start
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_employee_subcode_rates_dashboard_list
+msgid "Valid From"
+msgstr "Валиден от"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__value_in_BGN
+msgid "Value in BGN"
+msgstr "Стойност в BGN"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__value_in_EUR
+msgid "Value in EUR"
+msgstr "Стойност в EUR"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_working_days__day_type__weekend
+msgid "Weekend"
+msgstr "Уикенд"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Weekends"
+msgstr "Почивните дни"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_dashboard_contents__balance
+msgid "Work Hours Balance"
+msgstr "Баланс на работното време"
+
+#. module: kojto_hr
+#: model:ir.actions.act_window,name:kojto_hr.action_kojto_hr_working_days
+#: model:ir.ui.menu,name:kojto_hr.menu_kojto_hr_working_days
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Working Days"
+msgstr "Работни дни"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_calendar
+msgid "Working Days Calendar"
+msgstr "Календар на работните дни"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_employees_contracts__work_day_duration
+msgid "Worktime"
+msgstr "Работно време"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_working_days_search
+msgid "Year"
+msgstr "Година"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_leave_management
+msgid "day(s)"
+msgstr "ден (дни)"
+
+#. module: kojto_hr
+#: model:ir.model.fields,field_description:kojto_hr.field_kojto_hr_time_tracking__total_hours
+msgid "hrs"
+msgstr "часове"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_form
+msgid "this month"
+msgstr "този месец"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_form
+msgid "this week"
+msgstr "тази седмица"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.view_kojto_hr_dashboard_form
+msgid "today"
+msgstr "днес"
+
+#. module: kojto_hr
+#: model:ir.model.fields.selection,name:kojto_hr.selection__kojto_hr_business_trip_logbook__is_working_day__working
+msgid "working day"
+msgstr "работен ден"
+
+#. module: kojto_hr
+#: model_terms:ir.ui.view,arch_db:kojto_hr.report_kojto_hr_business_trips
+msgid ""
+"Въз основа на Наредба за служебните командировки и специализациите в "
+"чужбина, приета с ПМС №115 от 03.06.2004г."
+msgstr ""
+"Въз основа на Наредба за служебните командировки и специализации в страната,"
+" приета с ПМС №115 от 03.06.2004г."

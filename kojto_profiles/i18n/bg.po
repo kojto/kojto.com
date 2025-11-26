@@ -1,0 +1,2246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_profiles
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:44+0000\n"
+"PO-Revision-Date: 2025-08-11 07:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_profiles
+#: model:ir.actions.report,print_report_name:kojto_profiles.print_kojto_profile_batches
+msgid "'PROFILE_BATCH_' + object.name"
+msgstr "PROFILE_BATCH_' + име на обект"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__time_per_meter
+msgid "(min/m)"
+msgstr "(мин/м)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid ""
+"(vl-load-com)(if (setq ent (car (entsel \"\\nSelect a polyline: \"))) (if "
+"(wcmatch (cdr (assoc 0 (entget ent))) \"LWPOLYLINE,POLYLINE\") (progn (setq "
+"coords (vlax-safearray-&gt;list (vlax-variant-value (vlax-get-property "
+"(vlax-ename-&gt;vla-object ent) \"Coordinates\"))) i 0) (princ \"\\n\") "
+"(while (&lt; i (length coords)) (princ (strcat (rtos (nth i coords) 2 3) "
+"\";\" (rtos (nth (1+ i) coords) 2 3) \"\\n\")) (setq i (if (wcmatch (cdr "
+"(assoc 0 (entget ent))) \"LWPOLYLINE\") (+ i 2) (+ i 3)))) (command "
+"\"._TEXTSCR\")) (princ \"\\nNot a polyline.\")))(princ)"
+msgstr ""
+"(vl-load-com)(if (setq ent (car (entsel \"\\nИзберете полилиния: \"))) (if "
+"(wcmatch (cdr (assoc 0 (entget ent))) \"LWPOLYLINE,POLYLINE\") (progn (setq "
+"coords (vlax-safearray-&gt;list (vlax-variant-value (vlax-get-property) "
+"(vlax-ename-&gt;vla-object ent) \"Координати\"))) i 0) (princ \"\\n\") "
+"(while (&lt; i (координи на дължина)) (princ (strcat (rtos (nth i coords) 2 "
+"3) \";\" (rtos (nth (1+ i) coords) 2 3) \"\\n\")) (setq i (if (wcmatch) (cdr"
+" (assoc 0 (entget ent))) \"LWPOLYLINE\") (+ i 2) (+ i 3)))) (команда "
+"\"._TEXTSCR\")) (princ \"\\nНе е полилиния.\")))(princ)"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s', Content ID %s: Invalid weight (%s) or length (%s)."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s': Invalid coating perimeter (%s)."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s': Invalid length (%s)."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s': Invalid number of external corners (%s)."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s': Invalid weight (%s)."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Profile '%s': No associated content found in the batch."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "- Required units (kg, m, m2) not found in the system."
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_create_from_batch_wizard_form
+msgid "1D Optimization"
+msgstr "1D оптимизация"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "1D Optimization Packages for %s"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_create_from_batch_wizard_form
+msgid "2DR Optimization"
+msgstr "2DR оптимизация"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "2DR Optimization Packages for %s"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #b35c00;\">PROFILES</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #b35c00;\">ПРОФИЛИ</span>"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "<strong style=\"margin: 0; padding: 0;\">Batch Description:</strong>"
+msgstr "<strong style=\"margin: 0; padding: 0;\">Описание на партида:</strong>"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "<strong style=\"margin: 0; padding: 0;\">Profile Description:</strong>"
+msgstr "<strong style=\"margin: 0; padding: 0;\">Описание на профила:</strong>"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "<strong>Perimeter Coordinates:</strong>"
+msgstr "<strong>Координати на периметъра:</strong>"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "<strong>Sum</strong>"
+msgstr "<strong>Сума</strong>"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "A (cm²)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__a2
+msgid "A Length"
+msgstr "Дължина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__a1
+msgid "A Thickness"
+msgstr "Дебелина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__a1
+msgid "A1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__a2
+msgid "A2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_profiles
+#: model_terms:ir.actions.act_window,help:kojto_profiles.action_kojto_profiles
+msgid "Add Profiles to associate with Strips."
+msgstr "Добавете профили, които да свържете с Strips."
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Add a batch description ..."
+msgstr "Добавете описание на партида..."
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Add a profile description ..."
+msgstr "Добавете описание на потребителския профил..."
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Angle α1 (°)"
+msgstr "Ъгъл α1 (°)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Angle α2 (°)"
+msgstr "Ъгъл α2 (°)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__angle_2
+msgid "AngleL"
+msgstr "Ъгъл L"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__angle_1
+msgid "AngleR"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__assembly
+msgid "Assembly"
+msgstr "Сглобяване"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__pdf_attachment_id
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__autocad_dxf
+msgid "AutoCAD DXF"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__b3
+msgid "B Distance"
+msgstr "B Разстояние"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__b2
+msgid "B Length"
+msgstr "B Дължина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__b1
+msgid "B Thickness"
+msgstr "B Дебелина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__b1
+msgid "B1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__b2
+msgid "B2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__b3
+msgid "B3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__batch_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__package_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__batch_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__batch_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+msgid "Batch"
+msgstr "Партида"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Batch Name"
+msgstr "Име на партидата"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__batch_content_ids
+msgid "Batch Positions"
+msgstr "Партидни позиции"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+msgid "Batch №"
+msgstr "Партиден №"
+
+#. module: kojto_profiles
+#: model:ir.ui.menu,name:kojto_profiles.menu_kojto_profile_batches
+msgid "Batches"
+msgstr "Партиди"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__black
+msgid "Black"
+msgstr "черен"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__blue
+msgid "Blue"
+msgstr "Синьо"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__brown
+msgid "Brown"
+msgstr "кафяво"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "By Subcode"
+msgstr "По подкод"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__c3
+msgid "C Distance"
+msgstr "C Разстояние"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__c2
+msgid "C Length"
+msgstr "C Дължина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__c1
+msgid "C Thickness"
+msgstr "C Дебелина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__c1
+msgid "C1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__c2
+msgid "C2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__c3
+msgid "C3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_create_from_batch_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Cannot create offer: %s"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__center_of_mass_x
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__center_of_mass_x
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Center of Mass X"
+msgstr "Център на масата X"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Center of Mass X (mm)"
+msgstr "Център на масата X (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__center_of_mass_y
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__center_of_mass_y
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Center of Mass Y"
+msgstr "Център на масата Y"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Center of Mass Y (mm)"
+msgstr "Център на масата Y (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__representation_shape__circle
+msgid "Circle"
+msgstr "кръг"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__coating
+msgid "Coating"
+msgstr "Покритие"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_coating_area
+msgid "Coating Area (m²)"
+msgstr "Площ на покритие (m²)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__coating_perimeter
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Coating Perimeter (mm)"
+msgstr "Периметър на покритие (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_batches__batch_content_ids
+msgid "Collection of profiles with their lengths and quantities in this batch"
+msgstr "Колекция от профили с техните дължини и количества в тази партида"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__color
+msgid "Color"
+msgstr "Цвят"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__drawing
+msgid "Combined Drawing"
+msgstr "Комбинирана рисунка"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_profiles
+#: model_terms:ir.actions.act_window,help:kojto_profiles.action_kojto_profile_configurator
+msgid "Configure a new profile and click \"Create Profile\" to save it."
+msgstr ""
+"Конфигурирайте нов профил и щракнете върху „Създаване на профил“, за да го "
+"запазите."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__contact_lines_list
+msgid "Contact Lines Text"
+msgstr "Текст на контактните линии"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Content"
+msgstr "Съдържание"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+msgid "Content Data"
+msgstr "Данни за съдържанието"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Copy Profile"
+msgstr "Копиране на профил"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Copy Row"
+msgstr "Копиране на ред"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid ""
+"Copy the LISP command above, paste it into AutoCAD's command line, select a "
+"polyline, then copy the output (x;y coordinates) and paste it into the "
+"Polygon Points field."
+msgstr ""
+"Копирайте командата LISP по-горе, поставете я в командния ред на AutoCAD, "
+"изберете полилиния, след това копирайте изхода (координати x;y) и го "
+"поставете в полето Polygon Points."
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_batches.py:0
+msgid "Create New Batch from Profiles"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_configurator
+msgid "Create New Profile"
+msgstr "Създаване на нов профил"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "Create Profile"
+msgstr "Създаване на профил"
+
+#. module: kojto_profiles
+#: model_terms:ir.actions.act_window,help:kojto_profiles.action_kojto_profile_batches
+msgid ""
+"Create a new profile batch to manage collections of profiles with specific "
+"lengths and quantities."
+msgstr ""
+"Създайте нова партида от профили, за да управлявате колекции от профили с "
+"конкретни дължини и количества."
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_create_from_batch_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_create_from_batch_wizard_form
+msgid "Create from Batch"
+msgstr "Създаване от партида"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_create_from_batch_wizard
+msgid "Create from Batch Wizard"
+msgstr "Създаване от съветника за партиди"
+
+#. module: kojto_profiles
+#: model_terms:ir.actions.act_window,help:kojto_profiles.action_kojto_profile_strips
+msgid "Create new strip records."
+msgstr "Създайте нови записи на лента."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__create_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__create_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__cyan
+msgid "Cyan"
+msgstr "циан"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__d3
+msgid "D Distance"
+msgstr "D Разстояние"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__d1
+msgid "D Thickness"
+msgstr "D Дебелина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__d1
+msgid "D1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__d3
+msgid "D3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__description
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__description
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__description
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__description
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__description
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__name
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__description_point_ids
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Description Points"
+msgstr "Описание Точки"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_processes__description
+msgid ""
+"Detailed description of the process, including any specific instructions or "
+"notes."
+msgstr ""
+"Подробно описание на процеса, включително всякакви конкретни инструкции или "
+"бележки."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__display_name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__drawing
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Drawing"
+msgstr "рисуване"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__excel_file
+msgid "Excel File"
+msgstr "Excel файл"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__excel_filename
+msgid "Excel Filename"
+msgstr "Име на файл в Excel"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Export DXF"
+msgstr "Експортиране в DXF формат"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Export PDF"
+msgstr "Експортиране на PDF"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Export XLSX"
+msgstr "Експортирайте XLSX"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Export profile to AutoCAD DXF format"
+msgstr "Експортиране на профил във формат AutoCAD DXF"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+msgid "Export to Excel"
+msgstr "Експортиране в Excel"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+msgid "Export to PDF"
+msgstr "Експортиране в PDF"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__number_ext_corners
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Ext. Corners"
+msgstr "Вътр. Ъгли"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Ext. corners"
+msgstr "Вътр. ъгли"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Extension (mm)"
+msgstr "Разширение (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_external_edges
+msgid "External Edges (m)"
+msgstr "Външни ръбове (m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__is_external
+msgid "External Polygon"
+msgstr "Външен многоъгълник"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create 1D package for profile '%s': %s"
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create 1D package for shape '%s': %s"
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create 2DR package for thickness %smm: %s"
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"Failed to create offer for batch ID %s. Please ensure valid company and "
+"payment terms are set. Error: %s"
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create offer: Batch ID %s does not have a valid subcode."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create offer: Customer contact ID %s does not exist."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"Failed to create offer: No company contact found. Please ensure there is at "
+"least one company contact in the system."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"Failed to create offer: No payment terms found and unable to create default "
+"payment terms. Error: %s"
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Failed to create offer: Subcode '%s' does not have a valid code."
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__description_size
+msgid "Font Size"
+msgstr "Размер на шрифта"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__data
+msgid "Format: x,y or x;y or x   y"
+msgstr "Формат: x,y или x;y или x y"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "G (kg)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "G (kg/m)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Generate Description Points"
+msgstr "Генерирайте Точки за описание"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Generate description points from profile perimeter"
+msgstr "Генерирайте описателни точки от периметъра на профила"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__gray
+msgid "Gray"
+msgstr "Сив"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__green
+msgid "Green"
+msgstr "зелено"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Gross (kg)"
+msgstr "Бруто (кг)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Gross (m)"
+msgstr "Бруто (m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_weight_gross
+msgid "Gross Weight (t)"
+msgstr "Бруто тегло (t)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Gross total Length"
+msgstr "Обща брутна дължина"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Gross total weight"
+msgstr "Общо бруто тегло"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "H (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "How much is the profile extension for manufacturing reasons"
+msgstr "Колко струва разширението на профила по производствени причини"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__drawing
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__drawing
+msgid "Image"
+msgstr "Изображение"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid "Import"
+msgstr "Импортиране"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Import Batch"
+msgstr "Импортиране на партида"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_batch_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_import_wizard_form
+msgid "Import Batch Content"
+msgstr "Импортиране на пакетно съдържание"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_batch_import_wizard
+msgid "Import Batch Content Wizard"
+msgstr "Импортиране на пакетно съдържание"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Import Content"
+msgstr "Импортиране на съдържание"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__data
+msgid "Import Content Data"
+msgstr "Импортиране на данни за съдържанието"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygons_form
+msgid "Import Points"
+msgstr "Импорт точки"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_shape_polygon_points_import_wizard
+msgid "Import Points for Polygon in Kojto Profile Shapes"
+msgstr "Импортиране на точки за многоъгълник в профилни форми Kojto"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_shape_polygon_points_import_wizard
+msgid "Import Polygon Points"
+msgstr "Импортиране на многоъгълни точки"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_batch_content_import_wizard
+msgid "Import Wizard for Kojto Profile Batch Content"
+msgstr "Импортиране на пакетно съдържание на профил Kojto"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Insert X"
+msgstr "Вмъкнете X"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Insert Y"
+msgstr "Вмъкнете Y"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Inserted Shapes"
+msgstr "Вмъкнати форми"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__insert_ids
+msgid "Inserts"
+msgstr "Вложки"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__inspection
+msgid "Inspection"
+msgstr "инспекция"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__active
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__date_issue
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Issue DateTime"
+msgstr "Дата на издаване Час"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Issued By"
+msgstr "Издадено от"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__jx
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__jx
+msgid "Jx"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Jx (cm⁴)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__jy
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__jy
+msgid "Jy"
+msgstr "Джи"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Jy (cm⁴)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Kojto Profile"
+msgstr "Който Профил"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_batch_content
+msgid "Kojto Profile Batch Content"
+msgstr "Пакетно съдържание на профил Kojto"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_batches
+msgid "Kojto Profile Batches"
+msgstr "Kojto Профил Партиди"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_configurator
+msgid "Kojto Profile Configurator"
+msgstr "Конфигуратор на профил Kojto"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_configurator_library
+msgid "Kojto Profile Configurator Library"
+msgstr "Библиотека за конфигуриране на профил Kojto"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "Kojto Profile Configurator Wizard"
+msgstr "Съветник за конфигуриране на профил Kojto"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_description_points
+msgid "Kojto Profile Description Points"
+msgstr "Kojto Профил Описание Точки"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_processes
+msgid "Kojto Profile Processes"
+msgstr "Kojto профилни процеси"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_shapes
+msgid "Kojto Profile Shapes"
+msgstr "Kojto профилни форми"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_strips
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_strips
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_search
+msgid "Kojto Profile Strips"
+msgstr "Профилни лайстни Kojto"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profiles
+msgid "Kojto Profiles"
+msgstr "Kojto Профили"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "L (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid "LISP Command for AutoCAD:"
+msgstr "LISP команда за AutoCAD:"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__language_id
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Last Month"
+msgstr "Миналия месец"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__write_uid
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__write_date
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__length
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Length"
+msgstr "Дължина"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__length_extension
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Length Extension"
+msgstr "Удължаване на дължината"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__machine_chamfering
+msgid "Machine Chamfering"
+msgstr "Машинно скосяване"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__machine_welding
+msgid "Machine Welding"
+msgstr "Машинно заваряване"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__machining
+msgid "Machining"
+msgstr "Машинна обработка"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__magenta
+msgid "Magenta"
+msgstr "Магента"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__manual_chamfering
+msgid "Manual Chamfering"
+msgstr "Ръчно скосяване"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__manual_welding
+msgid "Manual Welding"
+msgstr "Ръчно заваряване"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Manufacturing Data"
+msgstr "Данни за производството"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__material_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__material_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__material_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__material_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_search
+msgid "Material"
+msgstr "Материал"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Max Height (mm)"
+msgstr "Максимална височина (mm)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Max Width (mm)"
+msgstr "Максимална ширина (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Net (kg)"
+msgstr "Нето (кг)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Net (m)"
+msgstr "Нето (m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_weight_net
+msgid "Net Weight (t)"
+msgstr "Нетно тегло (t)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Net total Length"
+msgstr "Нетна обща дължина"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Net total weight"
+msgstr "Нетно общо тегло"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"No 1D optimization packages were created. Please verify the batch contents "
+"have valid length and quantity."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"No 2DR optimization packages were created. Please verify strip data for "
+"selected profiles."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_batches.py:0
+msgid ""
+"No employee found for the current user or the source batch. Please contact "
+"your administrator."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_batches.py:0
+msgid "No profiles found in the batch to create from."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "No profiles or shapes selected to create 1D optimization packages."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "No profiles selected to create 2DR optimization packages."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "No profiles selected to create an offer."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"No valid content found for the selected profiles. Please check the batch "
+"content."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_batches.py:0
+msgid "No valid profiles found in the batch."
+msgstr ""
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"No valid strips found for 2DR optimization. Please ensure selected profiles "
+"have strips with valid dimensions."
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__number_ext_corners
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Number of External Corners"
+msgstr "Брой външни ъгли"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__number_ext_corners
+msgid "Number of External corners"
+msgstr "Брой външни ъгли"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Number of external corners"
+msgstr "Брой външни ъгли"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_create_from_batch_wizard_form
+msgid "Offer"
+msgstr "Оферта"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid "Offer for %s"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_landingpage_form_inherit
+msgid "Open Profile Batches"
+msgstr "Отворете пакетите на профилите"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_shapes__description
+msgid "Optional description of the shape"
+msgstr "Незадължително описание на формата"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__orange
+msgid "Orange"
+msgstr "портокал"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__other
+msgid "Other"
+msgstr "други"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "P1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "P1o"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "P2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "P2o"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "PROFILE BATCH"
+msgstr "ПРОФИЛНА ПАРТИДА"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "P_"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batch_content_import_wizard_form
+msgid ""
+"Paste data here "
+"(Position;Profile;Length;Quantity;LengthExtension;Description)"
+msgstr ""
+"Поставете данни тук (Позиция;Профил;Дължина;Количество;Разширение на "
+"дължина)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Pcs"
+msgstr "бр"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__point_ids
+msgid "Points"
+msgstr "Точки"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__data
+msgid "Points Data"
+msgstr "Данни за точки"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_shape_polygon_points
+msgid "Points in Kojto Profile Shape Polygons"
+msgstr "Точки в многоъгълници на формата на профил Kojto"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__polygon_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points_import_wizard__polygon_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygons_form
+msgid "Polygon"
+msgstr "Многоъгълник"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__name
+msgid "Polygon Name"
+msgstr "Име на многоъгълник"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_shape_polygon_points
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygons_form
+msgid "Polygon Points"
+msgstr "Многоъгълни точки"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__polygon_ids
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shapes_form
+msgid "Polygons"
+msgstr "Многоъгълници"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_shape_polygons
+msgid "Polygons in Kojto Profile Shapes"
+msgstr "Многоъгълници в Kojto Profile Shapes"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Pos."
+msgstr "Поз."
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Process Time (hrs)"
+msgstr "Време за обработка (часове)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Process Time (min)"
+msgstr "Време за обработка (мин.)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__process_type
+msgid "Process Type"
+msgstr "Тип процес"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__process_ids
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Processes"
+msgstr "процеси"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+msgid "Processing (hrs)"
+msgstr "Обработка (часове)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Processing time"
+msgstr "Време за обработка"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__profile_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__profile_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__profile_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__profile_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_search
+msgid "Profile"
+msgstr "Профил"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Profile Batch Name"
+msgstr "Име на партидата на профила"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_batches
+#: model:ir.actions.report,name:kojto_profiles.print_kojto_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Profile Batches"
+msgstr "Партиди от профили"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_landingpage_form_inherit
+msgid "Profile Batches Icon"
+msgstr "Икона за пакети на профили"
+
+#. module: kojto_profiles
+#: model:ir.ui.menu,name:kojto_profiles.menu_kojto_profile_configurator
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Profile Configurator"
+msgstr "Конфигуратор на профили"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__profile_description
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Profile Description"
+msgstr "Описание на профила"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__profile_domain
+msgid "Profile Domain"
+msgstr "Домейн на потребителския профил"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__profile_drawing
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__drawing
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Profile Drawing"
+msgstr "Чертеж на профил"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__name
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_processes__profile_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__name
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_search
+msgid "Profile Name"
+msgstr "Име на профил"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__profile_perimeter_coordinates
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Profile Perimeter Coordinates"
+msgstr "Координати на периметъра на профила"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__profile_description_point_ids
+msgid "Profile Points"
+msgstr "Профил точки"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profile_shapes
+msgid "Profile Shapes"
+msgstr "Профилни форми"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__profile_strip_id
+msgid "Profile Strip"
+msgstr "Профилна лента"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__strip_ids
+msgid "Profile Strips"
+msgstr "Профилни ленти"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__profile_weight
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Profile Weight"
+msgstr "Тегло на профила"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Profile name:"
+msgstr "Име на профила:"
+
+#. module: kojto_profiles
+#: model:ir.actions.act_window,name:kojto_profiles.action_kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__profile_ids
+#: model:ir.ui.menu,name:kojto_profiles.menu_kojto_profiles
+#: model:ir.ui.menu,name:kojto_profiles.menu_kojto_profiles_parent
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Profiles"
+msgstr "Профили"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__projected_length
+msgid "Projected Length"
+msgstr "Проектирана дължина"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Projected Length (mm)"
+msgstr "Проектирана дължина (mm)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__purple
+msgid "Purple"
+msgstr "Лилаво"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__red
+msgid "Red"
+msgstr "червено"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__representation_shape
+msgid "Representation Shape"
+msgstr "Представителна форма"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Rotation"
+msgstr "Въртене"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__rotation
+msgid "Rotation (degrees)"
+msgstr "Завъртане (градуси)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_shape_inserts__rotation
+msgid "Rotation angle in degrees, between -180 and 180"
+msgstr "Ъгъл на въртене в градуси, между -180 и 180"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_search
+msgid "Search Profiles"
+msgstr "Търсене на профили"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__profile_library_id
+msgid "Select Profile from Library"
+msgstr "Изберете Профил от библиотеката"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "Select profile from the library"
+msgstr "Изберете профил от библиотеката"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_create_from_batch_wizard__profile_ids
+msgid "Select profiles to process from the batch."
+msgstr "Изберете профили за обработка от партидата."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_create_from_batch_wizard__shape_ids
+msgid "Select shapes associated with the profiles in the batch."
+msgstr "Изберете форми, свързани с профилите в партидата."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_batch_import_wizard__batch_id
+msgid "Select the batch from which to import content."
+msgstr "Изберете партидата, от която да импортирате съдържание."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__shape_id
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygons__shape_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shapes_form
+msgid "Shape"
+msgstr "Форма"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shapes__area
+msgid "Shape Area (cm²)"
+msgstr "Площ на формата (cm²)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shapes_form
+msgid "Shape Data"
+msgstr "Данни за формата"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__shape_domain
+msgid "Shape Domain"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__shape_insert_ids
+msgid "Shape Inserts"
+msgstr "Фигурни вложки"
+
+#. module: kojto_profiles
+#: model:ir.model,name:kojto_profiles.model_kojto_profile_shape_inserts
+msgid "Shape Inserts for Kojto Profiles"
+msgstr "Фигурни вложки за Който профили"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_create_from_batch_wizard__shape_ids
+#: model:ir.ui.menu,name:kojto_profiles.menu_kojto_profile_shapes
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shapes_list
+msgid "Shapes"
+msgstr "Форми"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__representation_shape_size
+msgid "Size"
+msgstr "Размер"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__batch_id
+msgid "Source Batch"
+msgstr "Изходна партида"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__representation_shape__square
+msgid "Square"
+msgstr "Квадрат"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator_library__name
+msgid "Standard Profile Name"
+msgstr "Стандартно име на профил"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_processes__process_type__straightening
+msgid "Straightening"
+msgstr "Изправяне"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__strip_cross_sectional_area
+msgid "Strip Area"
+msgstr "Район на лентата"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Strip Area (cm²)"
+msgstr "Площ на лентата (cm²)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "Strips"
+msgstr "Ленти"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__subcode_description
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Subcode Description"
+msgstr "Описание на подкод"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_import_wizard__target_batch_id
+msgid "Target Batch"
+msgstr "Целева партида"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_processes__process_type
+msgid "The type of process applied to the profile."
+msgstr "Типът процес, приложен към профила."
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__thickness
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Thickness"
+msgstr "Дебелина"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "Thickness (mm)"
+msgstr "Дебелина  (mm)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_processes__time_per_meter
+msgid "Time required per meter of profile length, in minutes."
+msgstr "Необходимо време за метър дължина на профила, в минути."
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_coating_area
+msgid "Tot. Coating Area (m²)"
+msgstr "Тот. Площ на покритие (m²)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_length_gross
+msgid "Tot. Gross Length (m)"
+msgstr "Тот. Брутна дължина (m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_weight_gross
+msgid "Tot. Gross Weight"
+msgstr "Тот. Бруто тегло"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_length_net
+msgid "Tot. Net Length (m)"
+msgstr "Тот. Нетна дължина (m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_weight_net
+msgid "Tot. Net Weight"
+msgstr "Тот. Нетно тегло"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batch_content__total_profile_process_time
+msgid "Tot. Process Time (min)"
+msgstr "Тот. Време за обработка (мин.)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Tot. Weight Gross"
+msgstr "Тот. Тегло бруто"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Tot. Weight Net"
+msgstr "Тот. Тегло Нетно"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__profile_cross_sectional_area
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__profile_cross_sectional_area
+msgid "Total Area"
+msgstr "Обща площ"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Total Area (cm²)"
+msgstr "Обща площ (cm²)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Total Coating Area (m²)"
+msgstr "Обща площ на покритие (m²)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Total External Edges (m)"
+msgstr "Общо външни ръбове (m)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_list
+msgid "Total Pcs"
+msgstr "Общо бр"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_search
+msgid "Total Process Time"
+msgstr "Общо време на процеса"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_process_time
+msgid "Total Process Time (hrs)"
+msgstr "Общо време на обработка (часове)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__total_process_time_per_m
+msgid "Total Process Time per Meter (min/m)"
+msgstr "Общо време на обработка на метър (мин/м)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_batches__total_batch_pcs
+msgid "Total Profile Pcs"
+msgstr "Общо профил бр"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Total Time (min/m)"
+msgstr "Общо време (min/m)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Total Weight Gross (t)"
+msgstr "Общо бруто тегло (t)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Total Weight Net (t)"
+msgstr "Общо нетно тегло (t)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "Total coating area"
+msgstr "Обща площ на покритие"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profiles__total_process_time_per_m
+msgid "Total time required per meter for all processes combined, in minutes."
+msgstr ""
+"Общо необходимо време на метър за всички процеси комбинирани, в минути."
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__representation_shape__triangle
+msgid "Triangle"
+msgstr "Триъгълник"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "U (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_form
+msgid "U (m²)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__coating_perimeter
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__coating_perimeter
+msgid "U(mm)"
+msgstr "U (mm)"
+
+#. module: kojto_profiles
+#. odoo-python
+#: code:addons/kojto_profiles/models/kojto_profile_create_from_batch_wizard.py:0
+msgid ""
+"Unable to create offer due to the following issues:\n"
+"%s"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,help:kojto_profiles.field_kojto_profile_shapes__name
+msgid "Unique name of the shape (e.g., SHP_001)"
+msgstr "Уникално име на формата (напр. SHP_001)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "W (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__profile_weight
+msgid "Weight"
+msgstr "Тегло"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "Weight (kg/m)"
+msgstr "Тегло (kg/m)"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__profile_weight
+msgid "Weight per m"
+msgstr "Тегло на m"
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__white
+msgid "White"
+msgstr "Бяло"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_batches_search
+msgid "With Positions"
+msgstr "С позиции"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__wx
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__wx
+msgid "Wx"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Wx (cm³)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_configurator__wy
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profiles__wy
+msgid "Wy"
+msgstr "Уай"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_list
+msgid "Wy (cm³)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__x
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__x
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__x
+msgid "X Coordinate"
+msgstr "X координата"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_1_x
+msgid "X1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_2_x
+msgid "X2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_1o_x
+msgid "X3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_2o_x
+msgid "X4"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__y
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_inserts__y
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_shape_polygon_points__y
+msgid "Y Coordinate"
+msgstr "Y координата"
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_1_y
+msgid "Y1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_2_y
+msgid "Y2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_1o_y
+msgid "Y3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_strips__point_2o_y
+msgid "Y4"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields.selection,name:kojto_profiles.selection__kojto_profile_description_points__color__yellow
+msgid "Yellow"
+msgstr "Жълто"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "a1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "a1 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "a2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "a2 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b1 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b2 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "b3 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c1 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c2"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c2 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "c3 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "d1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "d1 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "d3"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+msgid "d3 (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__description_offset_x
+msgid "dX"
+msgstr ""
+
+#. module: kojto_profiles
+#: model:ir.model.fields,field_description:kojto_profiles.field_kojto_profile_description_points__description_offset_y
+msgid "dY"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "h (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "mm"
+msgstr "мм"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.print_profile_batches
+msgid "mm, y:"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p1_X (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p1_Y (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p1o_X (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p1o_Y (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p2_X (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p2_Y (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p2o_X (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "p2o_Y (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_configurator_form
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profiles_form
+msgid "w (mm)"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_shape_polygon_points_import_wizard_form
+msgid ""
+"x;y (one point per line, separated by semicolon, e.g., 0;0\n"
+"20;0\n"
+"20;20\n"
+"0;20)"
+msgstr ""
+"x;y (една точка на ред, разделени с точка и запетая, напр. 0;0\n"
+"20;0\n"
+"20;20\n"
+"0;20)"
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "α1"
+msgstr ""
+
+#. module: kojto_profiles
+#: model_terms:ir.ui.view,arch_db:kojto_profiles.view_kojto_profile_strips_form
+msgid "α2"
+msgstr ""

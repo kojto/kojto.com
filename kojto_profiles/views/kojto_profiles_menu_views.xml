@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_profiles/views/kojto_profiles_menu_views.xml -->
+<odoo>
+    <data>
+        <!-- Main Menu Items -->
+        <menuitem name="Profiles" id="menu_kojto_profiles_parent" sequence="230"/>
+
+        <!-- Kojto Profiles Menu Items -->
+        <menuitem name="Batches" id="menu_kojto_profile_batches" parent="menu_kojto_profiles_parent" sequence="10" action="action_kojto_profile_batches"/>
+        <menuitem name="Profiles" id="menu_kojto_profiles" parent="menu_kojto_profiles_parent" sequence="20" action="action_kojto_profiles"/>
+        <menuitem name="Profile Configurator" id="menu_kojto_profile_configurator" parent="menu_kojto_profiles_parent" sequence="25" action="action_kojto_profile_configurator"/>
+<!-- <menuitem name="Strips" id="menu_kojto_profile_strips" parent="menu_kojto_profiles_parent" sequence="30" action="action_kojto_profile_strips" /> -->
+        <menuitem name="Shapes" id="menu_kojto_profile_shapes" parent="menu_kojto_profiles_parent" sequence="35" action="action_kojto_profile_shapes"/>
+<!-- <menuitem name="Shape Inserts" id="menu_kojto_profile_shape_inserts" parent="menu_kojto_profiles_parent" sequence="39" action="action_kojto_profile_shape_inserts"/> -->
+    </data>
+</odoo>

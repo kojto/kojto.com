@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Assets Maintenance -->
+        <record model="ir.ui.view" id="view_kojto_asset_maintenance_list">
+            <field name="name">kojto.asset.maintenance.list</field>
+            <field name="model">kojto.asset.maintenance</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_asset_maintenance_list" limit="100" sample="1">
+                    <field name="asset_id" />
+                    <field name="datetime_start" />
+                    <field name="datetime_end" />
+                    <field name="service_type" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View for Kojto Assets Maintenance -->
+        <record model="ir.ui.view" id="view_kojto_asset_maintenance_form">
+            <field name="name">kojto.asset.maintenance.form</field>
+            <field name="model">kojto.asset.maintenance</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_asset_maintenance_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>ASSET MAINTENANCE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <group class="col-lg-6">
+                            <field name="asset_id" />
+                            <field name="datetime_start" />
+                            <field name="datetime_end" />
+                            <field name="description" />
+                            <field name="service_type" />
+                            <field name="datetime_paid" />
+                            <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto Assets Maintenance -->
+        <record model="ir.ui.view" id="view_kojto_asset_maintenance_search">
+            <field name="name">kojto.asset.maintenance.search</field>
+            <field name="model">kojto.asset.maintenance</field>
+            <field name="arch" type="xml">
+                <search string="Asset Maintenance">
+                    <field name="asset_id" />
+                    <field name="datetime_start" />
+                    <field name="datetime_end" />
+                    <field name="service_type" />
+                    <filter string="Asset" name="groupby_asset_id" context="{'group_by': 'asset_id'}" />
+                    <filter string="Service Type" name="groupby_service_type" context="{'group_by': 'service_type'}" />
+                    <filter name="service_type_maintenance" string="Maintenance" domain="[('service_type', '=', 'maintenance')]" />
+                    <filter name="service_type_repair" string="Repair" domain="[('service_type', '=', 'repair')]" />
+                    <filter name="service_type_checkup" string="Checkup" domain="[('service_type', '=', 'checkup')]" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto Assets Maintenance -->
+        <record model="ir.actions.act_window" id="action_kojto_asset_maintenance">
+            <field name="name">Asset Maintenance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.asset.maintenance</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your asset maintenance records here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

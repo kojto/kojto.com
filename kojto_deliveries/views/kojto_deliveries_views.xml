@@ -1,0 +1,286 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_delivery_list" model="ir.ui.view">
+            <field name="name">kojto.deliveries.list</field>
+            <field name="model">kojto.deliveries</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_delivery_list" default_order="date_delivery desc" duplicate="false">
+                    <field name="document_in_out_type" widget="badge" decoration-primary="document_in_out_type == 'outgoing'" string="" />
+                    <field name="active" widget="boolean_toggle" string="" />
+                    <field name="name" string="Delivery №" />
+                    <field name="subject" />
+                    <field name="cmr_id" optional="show" string="CMR" />
+                    <field name="counterparty_id" optional="show" string="Counterparty" />
+                    <field name="repr_html_gross_weight" optional="show" string="Gross Weight" />
+                    <field name="date_delivery" />
+                    <field name="attachments" widget="many2many_tags" />
+                    <button type="object" name="copy_delivery" class="fa fa-copy" title="Copy Delivery"/>
+                    <button name="print_document_as_pdf" type="object" class="fa fa-print" title="Print" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_kojto_delivery_form" model="ir.ui.view">
+            <field name="name">kojto.deliveries.form</field>
+            <field name="model">kojto.deliveries</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_delivery_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title">DELIVERY # <field name="name" class="ko-form-view-title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="document_in_out_type" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="currency_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="active" optional="show" widget="boolean_toggle" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <div class="dropdown ms-2">
+                                            <button name="dropdown_empty" class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Create">
+                                                <i>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z" />
+                                                        <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5" />
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                                <button name="print_document_as_pdf" string="Delivery" type="object" class="dropdown-item" />
+                                                <button name="print_delivery_packages" string="Packages" type="object" class="dropdown-item" />
+                                                <button name="print_delivery_consumed_materials" string="Consumed Materials" type="object" class="dropdown-item"/>
+                                                <button name="print_delivery_origin_declaration" string="Origin Declaration" type="object" class="dropdown-item"/>
+                                                <button name="print_delivery_export_declaration" string="Export Declaration" type="object" class="dropdown-item"/>
+                                                <button name="print_delivery_dual_use_declaration" string="Dual Use Declaration" type="object" class="dropdown-item"/>
+                                                <button name="print_delivery_package_label" string="Package Label" type="object" class="dropdown-item"/>
+                                                <button name="action_import_delivery_content" string="Import Content" type="object" class="dropdown-item"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top" />
+                        <!-- General Information -->
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="subject" />
+                                <field name="incoterms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="incoterms_address" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="counterpartys_reference" />
+                                <field name="date_delivery" />
+                                <field name="delivery_address" />
+                                <field name="tracking_number" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'outgoing'">From</h2>
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'incoming'">To</h2>
+                                <group class="col-lg-12">
+                                    <field name="company_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('res_company_id', '=', company_id)]" />
+                                    <field name="company_name_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_address_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_email_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_phone_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_tax_number_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_registration_number" />
+                                </group>
+                            </div>
+                            <div class="col-lg-6 mb-auto" style="margin-bottom: auto">
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'outgoing'">To</h2>
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'incoming'">From</h2>
+                                <group class="col-lg-12">
+                                    <field name="counterparty_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_name_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_address_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_email_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_phone_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_tax_number_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <div class="o_form_label">Registration Number</div>
+                                    <div class="d-flex align-items-center justify-content-start gap-1">
+                                        <field name="counterparty_registration_number" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_type" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_registration_number_type" class="w-auto mb-0" />
+                                    </div>
+                                </group>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <group string="Declarations data"/>
+                            <group class="col-lg-6">
+                                <field name="customs_number" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="exported_material" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="signed_by" />
+                                <field name="invoices_ids" widget="many2many_tags" />
+                            </group>
+                        </div>
+
+                        <separator/>
+                        <!-- Delivery Content -->
+                        <div class="ko-tab-textarea col-lg-12">
+                            <field name="pre_content_text" class="mb-2" placeholder="Insert pre content text here ..." />
+                        </div>
+
+                        <!-- Notebook with Content, Packages, and Consumed Materials -->
+                        <notebook>
+                            <page string="Content" name="content_tab">
+                                <div class="col-lg-12">
+                                    <field name="content" nolabel="1" context="{'default_delivery_id': id}" style="padding-right: 0px;">
+                                        <list editable="bottom" class="one2many_table" default_order="position" limit="200">
+                                            <field name="position" string=" "/>
+                                            <field name="name" />
+                                            <field name="quantity" />
+                                            <field name="quantity_package_contents"/>
+                                            <field name="unit_id"/>
+                                            <field name="unit_weight"/>
+                                            <field name="net_weight" />
+                                            <button type="object" name="open_consumed_materials" class="b-0 text-black bg-transparent ps-0 ms-0 fs-5 mb-2 fa fa-external-link" help="Open consumed materials"/>
+                                        </list>
+                                    </field>
+                                </div>
+
+                                <div class="row mb-4">
+                                    <group class="col-lg-6 d-flex"><div></div></group>
+                                    <group class="col-lg-6 justify-content-end d-flex">
+                                        <div>
+                                            <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                                <label for="net_weight" class="me-2" />
+                                                <field name="net_weight" style="width: 200px;padding-right: 10px;" class="text-end;" />
+                                            </div>
+                                            <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                                <label for="tare_weight" class="me-2" />
+                                                <field name="tare_weight" style="width: 200px;padding-right: 10px;" class="text-end;" />
+                                            </div>
+                                            <div class="col-lg-9 ms-auto d-flex align-items-right">
+                                                <label for="gross_weight" class="me-2" />
+                                                <field name="gross_weight" style="width: 200px;padding-right: 10px;" class="text-end;" />
+                                            </div>
+                                        </div>
+                                    </group>
+                                </div>
+                            </page>
+
+                            <page string="Packages" name="packages_tab">
+                                <div class="col-lg-12">
+                                    <field name="packages" nolabel="1" context="{'default_delivery_id': id}" style="padding-right: 0px;">
+                                        <list editable="bottom" class="one2many_table">
+                                            <field name="can_stack_on_it" widget="boolean_toggle"/>
+                                            <field name="name" />
+                                            <field name="width" />
+                                            <field name="length" />
+                                            <field name="height" />
+                                            <field name="net_weight" />
+                                            <field name="tare_weight" />
+                                            <field name="gross_weight" />
+                                            <button type="object" name="open_package_contents" class="b-0 text-black bg-transparent ps-0 ms-0 fs-5 mb-2 fa fa-external-link" help="Open package contents"/>
+                                            <button type="object" name="open_packaging_material_items" class="b-0 text-black bg-transparent ps-0 ms-0 fs-5 mb-2 fa fa-archive" help="Open packaging material items"/>
+                                        </list>
+                                    </field>
+                                </div>
+                            </page>
+
+                            <page string="Consumed Materials Summary" name="consumed_materials_tab">
+                                <div class="col-lg-12">
+                                    <field name="consumed_materials_ids" nolabel="1" style="padding-right: 0px;">
+                                        <list editable="bottom" class="one2many_table" default_order="delivery_content_position">
+                                            <field name="delivery_content_position"/>
+                                            <field name="delivery_content_id" readonly="1"/>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                            <field name="invoice_id"/>
+                                            <field name="invoice_content_id"/>
+                                            <field name="batch_id"/>
+                                            <field name="batch_unit_id" readonly="1"/>
+                                            <field name="batch_quantity_consumed"/>
+                                        </list>
+                                    </field>
+                                </div>
+                            </page>
+                        </notebook>
+
+                        <div class="ko-tab-textarea col-lg-12">
+                            <field name="post_content_text" class="mb-2" placeholder="Insert post content text here ..." />
+                        </div>
+
+                        <div class="row">
+                            <group class="col-lg-12">
+                                <div>
+                                    <field name="attachments" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False" />
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_kojto_delivery_search" model="ir.ui.view">
+            <field name="name">kojto.deliveries.search</field>
+            <field name="model">kojto.deliveries</field>
+            <field name="arch" type="xml">
+                <search string="Delivery Documents">
+                    <!-- Search Fields -->
+                    <field name="name" string="Delivery №"/>
+                    <field name="subject" string="Subject"/>
+                    <field name="counterparty_name_id" string="Counterparty"/>
+                    <field name="date_delivery" string="Delivery Date"/>
+                    <field name="counterpartys_reference" string="Reference №"/>
+                    <field name="tracking_number" string="Tracking №"/>
+                    <field name="delivery_address" string="Delivery Address"/>
+                    <field name="active" string="Active"/>
+
+                    <!-- Filters -->
+                    <filter name="active_deliveries" string="Active" domain="[('active', '=', True)]"/>
+                    <filter name="inactive_deliveries" string="Inactive" domain="[('active', '=', False)]"/>
+                    <filter name="outgoing_deliveries" string="Outgoing" domain="[('document_in_out_type', '=', 'outgoing')]"/>
+                    <filter name="incoming_deliveries" string="Incoming" domain="[('document_in_out_type', '=', 'incoming')]"/>
+                    <separator/>
+                    <filter name="today_deliveries" string="Today" domain="[('date_delivery', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_week_deliveries" string="This Week" domain="[('date_delivery', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_month_deliveries" string="This Month" domain="[('date_delivery', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_delivery', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_counterparty" string="Counterparty" context="{'group_by': 'counterparty_name_id'}"/>
+                        <filter name="group_by_delivery_date" string="Delivery Date" context="{'group_by': 'date_delivery'}"/>
+                        <filter name="group_by_status" string="Status" context="{'group_by': 'active'}"/>
+                        <filter name="group_by_type" string="Type" context="{'group_by': 'document_in_out_type'}"/>
+                        <filter name="group_by_address" string="Delivery Address" context="{'group_by': 'delivery_address'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- Action -->
+        <record id="action_kojto_deliveries" model="ir.actions.act_window">
+            <field name="name">Deliveries</field>
+            <field name="res_model">kojto.deliveries</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p> Manage your deliveries here. You can create, view, and edit delivery documents easily. </p>
+            </field>
+        </record>
+    </data>
+</odoo>

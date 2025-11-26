@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View for Asset Subcode Rates Dashboard -->
+        <record model="ir.ui.view" id="view_kojto_asset_subcode_rates_dashboard_list">
+            <field name="name">kojto.asset.subcode.rates.dashboard.list</field>
+            <field name="model">kojto.asset.subcode.rates.dashboard</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_asset_subcode_rates_dashboard_list" limit="100" sample="1">
+                    <field name="asset_name" string="Asset" />
+                    <field name="asset_description" string="Description" />
+                    <field name="unit_name" string="Unit" />
+                    <field name="subcode_name" string="Subcode" />
+                    <field name="datetime_start" string="Valid From" />
+                    <field name="rate" string="Rate" />
+                    <field name="currency_symbol" string="Currency" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Search View for Asset Subcode Rates Dashboard -->
+        <record model="ir.ui.view" id="view_kojto_asset_subcode_rates_dashboard_search">
+            <field name="name">kojto.asset.subcode.rates.dashboard.search</field>
+            <field name="model">kojto.asset.subcode.rates.dashboard</field>
+            <field name="arch" type="xml">
+                <search string="Asset Subcode Rates Dashboard">
+                    <field name="asset_name" />
+                    <field name="asset_description" />
+                    <field name="unit_name" />
+                    <field name="subcode_name" />
+                    <field name="currency_symbol" />
+                    <filter string="Asset" name="groupby_asset_id" context="{'group_by': 'asset_id'}" />
+                    <filter string="Subcode" name="groupby_subcode_id" context="{'group_by': 'subcode_id'}" />
+                    <filter string="Unit" name="groupby_unit_id" context="{'group_by': 'unit_id'}" />
+                    <filter string="Currency" name="groupby_currency_id" context="{'group_by': 'currency_id'}" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Asset Subcode Rates Dashboard -->
+        <record model="ir.actions.act_window" id="action_kojto_asset_subcode_rates_dashboard">
+            <field name="name">Asset Subcode Rates Dashboard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.asset.subcode.rates.dashboard</field>
+            <field name="view_mode">list</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'list', 'view_id': ref('view_kojto_asset_subcode_rates_dashboard_list')})]" />
+            <field name="search_view_id" ref="view_kojto_asset_subcode_rates_dashboard_search" />
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No asset subcode rates found</p>
+                <p>This dashboard shows active assets with their latest subcode rates.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

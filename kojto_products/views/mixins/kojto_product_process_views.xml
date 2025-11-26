@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Process List View -->
+    <record id="view_kojto_product_process_list" model="ir.ui.view">
+        <field name="name">kojto.product.component.process.list</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <list string="Processes" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="process_code"/>
+                <field name="process_category"/>
+                <field name="subcode_id"/>
+                <field name="component_revision_number"/>
+                <field name="latest_revision_datetime"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Process Form View -->
+    <record id="view_kojto_product_process_form" model="ir.ui.view">
+        <field name="name">kojto.product.component.process.form</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <form string="Process">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="name"/>
+                            <field name="process_code"/>
+                            <field name="process_category"/>
+                            <field name="subcode_id"/>
+                            <field name="component_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="unit_id"/>
+                            <field name="latest_revision_datetime"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Revisions">
+                            <field name="revision_ids" class="ko-list-main">
+                                <list>
+                                    <field name="revision_number"/>
+                                    <field name="name"/>
+                                    <field name="datetime_issue"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Process Search View -->
+    <record id="view_kojto_product_process_search" model="ir.ui.view">
+        <field name="name">kojto.product.component.process.search</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <search string="Search Processes">
+                <field name="name"/>
+                <field name="process_code"/>
+                <field name="process_category"/>
+                <field name="subcode_id"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter string="Process Category" name="group_by_category" context="{'group_by': 'process_category'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Process Action -->
+    <record id="action_kojto_product_process" model="ir.actions.act_window">
+        <field name="name">Processes</field>
+        <field name="res_model">kojto.product.component</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('component_type', '=', 'process')]</field>
+        <field name="context">{'search_default_active': 1, 'default_component_type': 'process'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Process
+            </p>
+        </field>
+    </record>
+
+    <!-- Link the list and form views to the action -->
+    <record id="action_kojto_product_process_view_list" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_product_process_list"/>
+        <field name="act_window_id" ref="action_kojto_product_process"/>
+    </record>
+
+    <record id="action_kojto_product_process_view_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_kojto_product_process_form"/>
+        <field name="act_window_id" ref="action_kojto_product_process"/>
+    </record>
+</odoo>

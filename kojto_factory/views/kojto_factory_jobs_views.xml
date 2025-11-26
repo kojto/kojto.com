@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Kojto Factory Jobs: List View -->
+    <record id="view_kojto_factory_jobs_list" model="ir.ui.view">
+        <field name="name">kojto.factory.jobs.list</field>
+        <field name="model">kojto.factory.jobs</field>
+        <field name="arch" type="xml">
+            <list string="Factory Jobs" class="ko-list-main">
+                <field name="name"/>
+                <field name="process_id"/>
+                <field name="consolidation_field" string="Consolidation Field"/>
+                <field name="job_length" optional="hide"/>
+                <field name="job_weight" optional="hide"/>
+                <field name="job_area" optional="hide"/>
+                <field name="job_volume" optional="hide"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="active" widget="boolean_toggle"/>
+                <button name="copy_job_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Row"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Kojto Factory Jobs: Form View -->
+    <record id="view_kojto_factory_jobs_form" model="ir.ui.view">
+        <field name="name">kojto.factory.jobs.form</field>
+        <field name="model">kojto.factory.jobs</field>
+        <field name="arch" type="xml">
+            <form string="Factory Job" class="ko-form-main view_kojto_factory_jobs_form">
+                <sheet class="ko-form-body">
+                    <!-- Header Section -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <field name="process_id" class="mx-auto" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" placeholder="Select Process"/>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <button class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" aria-label="Actions" title="Actions">
+                                        <i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                <path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z"/>
+                                                <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5"/>
+                                            </svg>
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <!-- Existing Form Content -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <group>
+                                <field name="consolidation_field" string="Consolidation Field" readonly="1"/>
+                                <field name="store_id" options="{'no_create_edit': True, 'no_create': True, 'no_edit': True, 'no_delete': True, 'no_open': True}"/>
+                                <field name="material_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" invisible="not material_id_is_required" placeholder="Select Material"/>
+                                <field name="asset_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" invisible="not asset_id_is_required" placeholder="Select Asset"/>
+                                <field name="thickness" invisible="not thickness_is_required" placeholder="Enter Thickness"/>
+                                <field name="job_length" string="Length (m)"/>
+                                <field name="job_weight" string="Weight (kg)"/>
+                                <field name="job_area" string="Area (m²)"/>
+                                <field name="job_volume" string="Volume (m³)"/>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                            </group>
+                            <field name="description" nolabel="1"/>
+                        </div>
+                        <div class="col-lg-6">
+                            <group>
+                                <field name="attachments" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False"/>
+                            </group>
+                        </div>
+                        <group string="factory Tasks"/>
+                        <div class="col-lg-12">
+                            <div>
+                                <field name="job_content_ids" nolabel="1" context="{'default_job_id': id}" class="ko-list-main">
+                                    <list editable="bottom" class="ko-list-main">
+                                        <field name="task_id" string="Task" domain="[('process_id', '=', parent.process_id), ('active', '=', True), ('consolidation_field', '=', parent.consolidation_field)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="open_task_quantity" string="Open Qty" readonly="1" widget="float" digits="[16,2]"/>
+                                        <field name="produced_quantity" string="Produced Qty" widget="float" digits="[16,2]"/>
+                                        <button name="copy_job_content_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Row"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <group string="Warehouse transactions"/>
+                            <div>
+                                <field name="transaction_ids">
+                                    <list class="ko-list-main" editable="bottom">
+                                        <field name="to_from_store" string="In / Out" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'" readonly="1" force_save="1"/>
+                                        <field name="name" string="Transaction №"/>
+                                        <field name="batch_id"/>
+                                        <field name="item_id" domain="[('active', '=', True)]" options="{'no_create_edit': True, 'no_create': True}"/>
+                                        <field name="parent_item_id"/>
+                                        <field name="transaction_quantity" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'"/>
+                                        <field name="transaction_unit_id"/>
+                                        <field name="item_summary"/>
+                                        <field name="subcode_id"/>
+                                        <field name="issued_by"/>
+                                        <button name="action_create_item_from_transaction" help="Return part of this item to the store" type="object" class="btn fa fa-plus" invisible="to_from_store != 'from_store'"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kojto Factory Jobs: Search View -->
+    <record id="view_kojto_factory_jobs_search" model="ir.ui.view">
+        <field name="name">kojto.factory.jobs.search</field>
+        <field name="model">kojto.factory.jobs</field>
+        <field name="arch" type="xml">
+            <search string="Jobs">
+                <field name="name" string="Job Name"/>
+                <field name="process_id" string="Process"/>
+                <field name="consolidation_field" string="Consolidation Field" filter_domain="[('consolidation_field', 'ilike', self)]"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <separator/>
+                <filter name="today_jobs" string="Today" domain="[('date_start', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="this_week_jobs" string="This Week" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter name="this_month_jobs" string="This Month" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+                <filter name="last_month_jobs" string="Last Month" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Process" name="group_by_process" context="{'group_by': 'process_id'}"/>
+                    <filter string="Consolidation Field" name="group_by_consolidation" context="{'group_by': 'consolidation_field'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for Kojto Factory Jobs -->
+    <record id="action_kojto_factory_jobs" model="ir.actions.act_window">
+        <field name="name">Factory Jobs</field>
+        <field name="res_model">kojto.factory.jobs</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_factory_jobs_list"/>
+        <field name="search_view_id" ref="view_kojto_factory_jobs_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a new factory job.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_base_stores_list">
+            <field name="name">kojto.base.stores.list</field>
+            <field name="model">kojto.base.stores</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" editable="top">
+                    <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                    <field name="name" />
+                    <field name="name_short" />
+                    <field name="datetime_start" />
+                </list>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="view_kojto_base_stores_form">
+            <field name="name">kojto.base.stores.form</field>
+            <field name="model">kojto.base.stores</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">STORE</div>
+                            </div>
+                        </div>
+                        <br />
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="name_short" />
+                            <field name="datetime_start" />
+                            <field name="description" />
+                            <field name="active" widget="boolean_toggle" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search -->
+        <record model="ir.ui.view" id="view_kojto_base_stores_search">
+            <field name="name">kojto.base.stores.search</field>
+            <field name="model">kojto.base.stores</field>
+            <field name="arch" type="xml">
+                <search string="base">
+                    <field name="name" />
+                    <field name="name_short" />
+                    <field name="datetime_start" />
+                    <field name="active" widget="boolean_toggle" />
+                </search>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_kojto_base_stores">
+            <field name="name">Stores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.base.stores</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your base store here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

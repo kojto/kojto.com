@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_kojto_hr_face_recognition_form" model="ir.ui.view">
+            <field name="name">kojto.hr.face.recognition.form</field>
+            <field name="model">kojto.hr.face.recognition</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main" string="Time Tracking Image" create="false" breadcrumb="false">
+                    <sheet class="ko-form-body">
+                        <style>
+                            .o_control_panel_navigation {
+                            display: none !important
+                            }
+                            .o_breadcrumb {
+                            display: none !important
+                            }
+                        </style>
+
+                        <div class="col-lg-12 m-auto text-center d-none">
+                            <field name="image" widget="image" />
+                        </div>
+                        <div invisible="not employee_id">
+                            <div invisible="not datetime_taken">
+                                <div invisible="not image" class="d-flex justify-content-center align-items-center flex-column text-center p-4">
+                                    <div class="success-content flex-column text-center mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-check2-circle text-success mb-3" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                            <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                                        </svg>
+                                        <div class="alert alert-success" role="alert">
+                                            <h4 class="alert-heading">Success!</h4>
+                                            <p>Time tracking recorded successfully for <strong><field name="employee_id" readonly="1"/></strong>.</p>
+                                            <p>
+                                                <b>START AGAIN!</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div invisible="employee_id">
+                            <div invisible="not datetime_taken">
+                                <div invisible="not image" class="d-flex justify-content-center align-items-center flex-column text-center p-4">
+                                    <div class="error-content flex-column text-center mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-exclamation-octagon text-danger mb-3" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1z" />
+                                            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                                        </svg>
+                                        <div class="alert alert-danger" role="alert">
+                                            <h4 class="alert-heading">Error!</h4>
+                                            <p>No matching employee found.</p>
+                                            <p>
+                                                <b>TRY AGAIN!</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-5 p-5 d-flex flex-column">
+                            <button name="record_datetime" type="object"  onclick="simulateCameraClick()" class="btn btn-outline-primary btn-lg border-0 m-auto p-5 mb-3" title="Incoming">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z" />
+                                    <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 0 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
+                                </svg>
+                            </button>
+                            <button name="action_recalculate_all_face_encodings" type="object" string="Recalculate All Face Encodings" class="btn btn-warning btn-sm mx-auto" confirm="This will recalculate face encodings for all employee images. Continue?" groups="kojto_base.kojto_administrator"/>
+                        </div>
+                    </sheet>
+                    <script type="text/javascript" src="/kojto_hr/static/src/js/simulate_camera.js" />
+                </form>
+            </field>
+        </record>
+
+        <!-- Terminal Server Action -->
+        <record id="action_kojto_hr_terminal_server" model="ir.actions.server">
+            <field name="name">Terminal</field>
+            <field name="model_id" ref="model_kojto_hr_face_recognition"/>
+            <field name="state">code</field>
+            <field name="code">
+action = model.open_terminal()
+            </field>
+        </record>
+
+        <!-- Recalculate Face Encodings Action -->
+        <record id="action_recalculate_all_face_encodings" model="ir.actions.server">
+            <field name="name">Recalculate All Face Encodings</field>
+            <field name="model_id" ref="model_kojto_hr_face_recognition"/>
+            <field name="binding_model_id" ref="model_kojto_hr_face_recognition"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+    action = records.action_recalculate_all_face_encodings()
+else:
+    action = env['kojto.hr.face.recognition'].action_recalculate_all_face_encodings()
+</field>
+        </record>
+    </data>
+</odoo>

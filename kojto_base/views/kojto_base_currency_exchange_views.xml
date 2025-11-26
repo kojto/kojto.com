@@ -1,0 +1,80 @@
+<odoo>
+<!-- kojto_base/views/kojto_base_currency_exchange_views.xml -->
+    <data>
+
+        <!-- List View for Kojto Base Currency Exchange -->
+        <record model="ir.ui.view" id="view_kojto_base_currency_exchange_list">
+            <field name="name">kojto.base.currency.exchange.list</field>
+            <field name="model">kojto.base.currency.exchange</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" string="Currency Exchanges" editable="top">
+                    <field name="base_currency_id" />
+                    <field name="target_currency_id" />
+                    <field name="exchange_rate" />
+                    <field name="datetime"/>
+                    <field name="url" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Server Actions for Import Operations -->
+        <record id="action_import_ecb_daily_rates" model="ir.actions.server">
+            <field name="name">Import ECB Daily Rates</field>
+            <field name="model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = env['kojto.base.currency.exchange'].import_ecb_daily_rates()
+            </field>
+        </record>
+
+        <record id="action_import_ecb_90d_rates" model="ir.actions.server">
+            <field name="name">Import ECB 90-Day Rates</field>
+            <field name="model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = env['kojto.base.currency.exchange'].import_ecb_90d_rates()
+            </field>
+        </record>
+
+        <record id="action_import_ecb_historical_rates" model="ir.actions.server">
+            <field name="name">Import ECB Historical Rates</field>
+            <field name="model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_model_id" ref="model_kojto_base_currency_exchange"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                action = env['kojto.base.currency.exchange'].import_ecb_historical_rates()
+            </field>
+        </record>
+
+
+        <!-- Search View for Kojto Base Currency Exchange -->
+        <record model="ir.ui.view" id="view_kojto_base_currency_exchange_search">
+            <field name="name">kojto.base.currency.exchange.search</field>
+            <field name="model">kojto.base.currency.exchange</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="base_currency_id" />
+                    <field name="target_currency_id" />
+                    <field name="datetime" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action to Open List and Form Views for Kojto Base Currency Exchange -->
+        <record model="ir.actions.act_window" id="action_kojto_base_currency_exchange">
+            <field name="name">Currency Exchanges</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.base.currency.exchange</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>Manage currency exchange rates here.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

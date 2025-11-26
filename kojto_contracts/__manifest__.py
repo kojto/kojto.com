@@ -1,0 +1,20 @@
+{
+    "name": "Kojto Contracts",
+    "version": "18.04.07",
+    "category": "KOJTO",
+    "description": "Contract management module for creating and managing contracts with content import functionality",
+    "author": "KOJTO",
+    "website": "https://www.kojto.com",
+    "depends": ["kojto_hr"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/kojto_contracts_view.xml",
+        "views/kojto_contracts_menu_view.xml",
+        "views/kojto_contracts_buttons.xml",
+        "views/kojto_contract_content_import_wizard_views.xml",
+        "reports/kojto_contracts_reports.xml",
+        "reports/kojto_contracts_templates.xml",
+    ],
+    "installable": True,
+    "application": True,
+}

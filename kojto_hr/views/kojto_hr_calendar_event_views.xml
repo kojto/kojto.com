@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Calendar View -->
+    <record id="view_kojto_hr_calendar_event_calendar" model="ir.ui.view">
+        <field name="name">kojto.hr.calendar.event.calendar</field>
+        <field name="model">kojto.hr.calendar.event</field>
+        <field name="arch" type="xml">
+            <calendar
+                string="HR Calendar Events"
+                date_start="datetime_start"
+                date_stop="datetime_end"
+                mode="month"
+                color="color"
+                quick_create="0"
+                show_unusual_days="1"
+                event_open_popup="1"
+                all_day="all_day"
+                create="create"
+                delete="delete"
+                form_view_id="view_kojto_hr_calendar_event_form">
+                <field name="employee_id" filters="1"
+                    write_model="kojto.hr.calendar.filters"
+                    write_field="employee_id"
+                    filter_field="employee_checked" />
+                <field name="name" />
+                <field name="event_type" />
+                <field name="face_recognition_times_display" invisible="face_recognition_times_display == False"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_kojto_hr_calendar_event_form" model="ir.ui.view">
+        <field name="name">kojto.hr.calendar.event.form</field>
+        <field name="model">kojto.hr.calendar.event</field>
+        <field name="arch" type="xml">
+            <form string="New Calendar Event">
+                <group>
+                    <field name="datetime_start" readonly="1"  options="{'show_time': false}" string="Date"/>
+                    <field name="event_type" widget="radio" required="1" />
+                    <field name="employee_id" required="1" />
+                    <field name="face_recognition_times_display" readonly="1" invisible="face_recognition_times_display == False"/>
+                </group>
+                <group invisible="event_type != 'time_tracking'">
+                    <field name="subcode_id" required="event_type == 'time_tracking'" domain="[('show_in_hr_tracking', '=', True)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" context="{'show_description': True}"/>
+                    <field name="time_tracking_start" required="1" widget="float_time" />
+                    <field name="time_tracking_end" required="1" widget="float_time" />
+                    <field name="comment" />
+                </group>
+                <group invisible="event_type != 'leave'">
+                    <field name="start_date_only_display" widget="daterange" options="{'end_date_field': 'end_date_only_display', 'show_time': false }" />
+                    <field name="leave_type_id" required="event_type == 'leave'" />
+                    <field name="reason" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View with Employee and Date Filters -->
+    <record id="view_kojto_hr_calendar_event_search" model="ir.ui.view">
+        <field name="name">kojto.hr.calendar.event.search</field>
+        <field name="model">kojto.hr.calendar.event</field>
+        <field name="arch" type="xml">
+            <search string="HR Calendar Events">
+                <field name="employee_id" string="Employee" />
+                <field name="datetime_start" />
+                <filter name="filter_start_date" string="Start Date" domain="[]" context="{'group_by': 'datetime_start'}" />
+                <group expand="0" string="Group By" groups="base.group_system">
+                    <filter name="group_by_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id', 'default_group_by': 1}" />
+                    <filter name="group_by_date" string="Start Date Year" domain="[]" context="{'group_by': 'datetime_start:year', 'default_group_by': 1}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+    <!-- Action with Default Context for Employee and Date -->
+    <record id="action_kojto_hr_calendar_event_calendar" model="ir.actions.act_window">
+        <field name="name">HR Calendar Events</field>
+        <field name="res_model">kojto.hr.calendar.event</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="view_kojto_hr_calendar_event_calendar" />
+        <field name="search_view_id" ref="view_kojto_hr_calendar_event_search" />
+        <field name="context">{}</field>
+        <field name="domain">[]</field>
+    </record>
+
+    <record id="action_kojto_hr_calendar_event_form_popup" model="ir.actions.act_window">
+        <field name="name">New Calendar Event</field>
+        <field name="res_model">kojto.hr.calendar.event</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_kojto_hr_calendar_event_form" />
+        <field name="target">new</field>
+    </record>
+
+    <record id="view_kojto_hr_calendar_event_form_time_inputs" model="ir.ui.view">
+        <field name="name">kojto.hr.calendar.event.form.time.inputs</field>
+        <field name="model">kojto.hr.calendar.event</field>
+        <field name="inherit_id" ref="view_kojto_hr_calendar_event_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='time_tracking_start']" position="attributes">
+                <attribute name="widget">float_time</attribute>
+                <attribute name="options">{'format': 'HH:mm'}</attribute>
+                <attribute name="class">time-input-mask</attribute>
+            </xpath>
+            <xpath expr="//field[@name='time_tracking_end']" position="attributes">
+                <attribute name="widget">float_time</attribute>
+                <attribute name="options">{'format': 'HH:mm'}</attribute>
+                <attribute name="class">time-input-mask</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

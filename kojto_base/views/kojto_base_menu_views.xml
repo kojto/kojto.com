@@ -1,0 +1,24 @@
+<odoo>
+    <!-- kojto_base/views/kojto_base_menu_views.xml -->
+    <data>
+        <!-- Menu Structure -->
+        <menuitem name="Base" id="menu_kojto_base" sequence="10"/>
+        <menuitem name="Banks" id="menu_kojto_base_banks" parent="menu_kojto_base" sequence="40" action="kojto_base.action_kojto_base_banks"/>
+        <menuitem name="Bank Accounts" id="menu_kojto_base_bank_accounts" parent="menu_kojto_base" sequence="50" action="kojto_base.action_kojto_base_bank_accounts"/>
+        <menuitem name="Units" id="menu_kojto_base_units" parent="menu_kojto_base" sequence="60" action="kojto_base.action_kojto_base_units"/>
+        <menuitem name="Tax Numbers" id="menu_kojto_base_tax_numbers" parent="menu_kojto_base" sequence="70" action="kojto_base.action_kojto_base_tax_numbers"/>
+        <menuitem name="Certificates" id="menu_kojto_base_certificates" parent="menu_kojto_base" sequence="80" action="kojto_base.action_kojto_base_certificates"/>
+        <menuitem name="Payment Terms" id="menu_kojto_base_payment_terms" parent="menu_kojto_base" sequence="90" action="kojto_base.action_kojto_base_payment_terms"/>
+        <menuitem name="Incoterms" id="menu_kojto_base_incoterms" parent="menu_kojto_base" sequence="100" action="kojto_base.action_kojto_base_incoterms"/>
+        <menuitem name="Materials" id="menu_kojto_base_material_grades" parent="menu_kojto_base" sequence="110" action="kojto_base.action_kojto_base_material_grades"/>
+        <menuitem name="Stores" id="menu_kojto_base_stores" parent="menu_kojto_base" sequence="120" action="kojto_base.action_kojto_base_stores"/>
+        <menuitem name="Predefined Texts" id="menu_kojto_base_predefined_texts" parent="menu_kojto_base" sequence="125" action="kojto_base.action_kojto_base_predefined_texts"/>
+
+        <!-- Currency Exchange Rates Dropdown Menu -->
+        <menuitem name="[+] Currency" id="menu_kojto_base_currency_exchange" parent="menu_kojto_base" sequence="130"/>
+        <menuitem name="Currency Rates" id="menu_kojto_base_currency_exchange_view" parent="menu_kojto_base_currency_exchange" sequence="10" action="kojto_base.action_kojto_base_currency_exchange"/>
+        <menuitem name="Import Daily Rates" id="menu_kojto_base_currency_exchange_daily" parent="menu_kojto_base_currency_exchange" sequence="20" action="kojto_base.action_import_ecb_daily_rates"/>
+        <menuitem name="Import 90-Day Rates" id="menu_kojto_base_currency_exchange_90d" parent="menu_kojto_base_currency_exchange" sequence="30" action="kojto_base.action_import_ecb_90d_rates"/>
+        <menuitem name="Import Historical Rates" id="menu_kojto_base_currency_exchange_historical" parent="menu_kojto_base_currency_exchange" sequence="40" action="kojto_base.action_import_ecb_historical_rates"/>
+    </data>
+</odoo>

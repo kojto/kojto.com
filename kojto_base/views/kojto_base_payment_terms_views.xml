@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <!-- Views for Kojto Base Payment Terms -->
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_base_payment_terms_list">
+            <field name="name">kojto.base.payment.terms.list</field>
+            <field name="model">kojto.base.payment.terms</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" string="Payment terms" editable="top">
+                    <field name="name"/>
+                    <field name="abbreviation" />
+                    <field name="description" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_base_payment_terms_form">
+            <field name="name">kojto.base.payment.terms.form</field>
+            <field name="model">kojto.base.payment.terms</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_payment_terms_form" string="Payment terms">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Payment term</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="abbreviation" />
+                            <field name="description" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_base_payment_terms_search">
+            <field name="name">kojto.base.payment.terms.search</field>
+            <field name="model">kojto.base.payment.terms</field>
+            <field name="arch" type="xml">
+                <search string="Payment Terms">
+                    <field name="name" />
+                </search>
+            </field>
+        </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_base_payment_terms">
+            <field name="name">Payment Terms</field>
+            <field name="res_model">kojto.base.payment.terms</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

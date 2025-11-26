@@ -1,0 +1,12 @@
+<odoo>
+    <!--
+    <record model="ir.actions.server" id="action_update_cyrillic_names_language">
+        <field name="name">Update Cyrillic Names Language</field>
+        <field name="model_id" ref="model_kojto_contacts"/>
+        <field name="binding_view_types">list</field>
+        <field name="binding_model_id" ref="model_kojto_contacts"/>
+        <field name="state">code</field>
+        <field name="code">action = records.update_cyrillic_names_language()</field>
+    </record>
+    -->
+</odoo>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_export_declaration">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="doc.date_delivery and doc.date_delivery.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: date_delivery \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;"></div>
+                                <div style="margin-bottom: 20px; font-size: 2em;">EURO 1 EXPORT DECLARATION</div>
+                            </h1>
+                        </div>
+
+                        <!-- FROM Section -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;"  rowspan="6">Issued by</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Company name:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_name_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Address:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_address_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Registration number:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_registration_number" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Tax number:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_tax_number_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Exporter invoice(s)</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-foreach="doc.invoices_ids" t-as="invoice">
+                                            <span t-field="invoice.consecutive_number" /><t t-if="not invoice_last">, </t>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr><td style="padding: 4px; width: 25%;"></td></tr>
+
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;">Date</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.date_delivery" t-options='{"format": "dd.MM.yyyy"}' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="1">Signed by</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.signed_by" />
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        As authorized company representative ______________________
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Declaration - Styled Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa; font-size: 10px;">
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                With this declaration, we as an exporter declare that exported for <span t-field="doc.exported_material" /> on invoice(s):
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                <t t-foreach="doc.invoices_ids" t-as="inv">
+                                    <div class="label"> - <span t-field="inv.consecutive_number" /> from date <span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' /></div>
+                                </t>
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                Packed in <span t-esc="len(doc.packages)" /> packaging unit(s) with net weight <span t-esc="doc.net_weight" /> and gross weight <span t-esc="doc.gross_weight" /> are manufactured by us with materials purchased from the following company/ies:
+                            </p>
+                            <t t-set="suppliers" t-value="set([inv.counterparty_name_id.name for inv in doc.content.content_compositions.invoice_id if inv.counterparty_name_id])" />
+                                <table class="content-table">
+                                    <thead>
+                                        <tr style="background-color: #B0C4DE;">
+                                            <th style="padding: 8px; text-align: left; width: 40%;">Supplier Name</th>
+                                            <th style="padding: 8px; text-align: left; width: 60%;">Supplier Invoices</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="suppliers" t-as="supplier_name">
+                                            <tr>
+                                                <td style="padding: 6px; text-align: left; font-weight: bold;">
+                                                    <span t-esc="supplier_name" />
+                                                </td>
+                                                <td style="padding: 6px; text-align: left;">
+                                                    <!-- Get unique invoices for this supplier -->
+                                                    <t t-set="invoices_for_supplier" t-value="list({inv for inv in doc.content.content_compositions.invoice_id if inv.counterparty_name_id and inv.counterparty_name_id.name == supplier_name})" />
+                                                    <t t-set="unique_invoices" t-value="{}" />
+                                                    <t t-foreach="invoices_for_supplier" t-as="inv">
+                                                        <t t-if="inv.consecutive_number not in unique_invoices">
+                                                            <div style="margin-bottom: 5px;">
+                                                                • <span t-field="inv.consecutive_number" /> from date <span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' />
+                                                            </div>
+                                                            <t t-set="unique_invoices" t-value="unique_invoices | {inv.consecutive_number: True}" />
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                The materials used are of EU origin and are classified in a different position from that of the exported products. No non-originating materials of heading <span t-esc="doc.customs_number" /> were used in the production.
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                I, the undersigned, declare that the goods described in the attached invoice document(s):
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                <t t-foreach="doc.invoices_ids" t-as="inv">
+                                    <div class="label"> - <span t-field="inv.consecutive_number" /> from date <span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' /></div>
+                                </t>
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                <span t-field="doc.exported_material" /> are of Bulgarian/European Union origin and meet the rules of origin in preferential trade with Switzerland.
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                I declare that I am responsible for incorrect data under Article 313 of the Penal Code.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

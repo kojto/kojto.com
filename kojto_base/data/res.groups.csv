@@ -1,0 +1,13 @@
+id,name
+kojto_administrator,Kojto Administrator
+kojto_manager,Kojto Manager
+kojto_employee,Kojto Employee
+kojto_accountant,Kojto Accountant
+kojto_assistant,Kojto Assistant
+kojto_manufacturing_assistant,Kojto Manufacturing Assistant
+kojto_terminal,Kojto Terminal
+kojto_international_sales,Kojto International Sales
+kojto_terminal,Kojto Terminal
+kojto_hr,Kojto Human Resources
+kojto_api_users, Kojto API users
+kojto_all_human_users, Kojto All Human Users

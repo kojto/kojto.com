@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_profiles/views/kojto_optimizer_menu_views.xml -->
+<odoo>
+    <data>
+        <!-- Main Menu Items -->
+        <menuitem name="Optimizer" id="menu_kojto_optimizer_parent" sequence="210"/>
+        <menuitem name="1D" id="menu_kojto_optimizer_1d" parent="menu_kojto_optimizer_parent" sequence="40" action="action_kojto_optimizer_1d"/>
+        <menuitem name="2DR" id="menu_kojto_optimizer_2dr" parent="menu_kojto_optimizer_parent" sequence="50" action="action_kojto_optimizer_2dr"/>
+    </data>
+</odoo>

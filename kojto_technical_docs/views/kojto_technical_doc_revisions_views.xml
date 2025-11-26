@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_technical_doc_revisions_list" model="ir.ui.view">
+            <field name="name">kojto.technical.doc.revisions.list.view</field>
+            <field name="model">kojto.technical.doc.revisions</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_technical_doc_revisions_list" string="Technical Document Revisions" editable="top">
+                    <field name="name"/>
+                    <field name="technical_document_id"/>
+                    <field name="technical_document_revision"/>
+                    <field name="description" optional="show"/>
+                    <field name="attachment_ids" widget="many2many_binary" string="Attachments"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_kojto_technical_doc_revisions_form" model="ir.ui.view">
+            <field name="name">kojto.technical.doc.revisions.form.view</field>
+            <field name="model">kojto.technical.doc.revisions</field>
+            <field name="arch" type="xml">
+                <form string="Technical Document Revision">
+                    <sheet>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="technical_document_id" options="{'no_create': True, 'no_quick_create': True}"/>
+                            <field name="technical_document_revision" readonly="1"/>
+                            <field name="description" placeholder="Enter revision description..."/>
+                            <field name="attachment_ids" widget="many2many_binary" string="Attachments"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_kojto_technical_doc_revisions" model="ir.actions.act_window">
+            <field name="name">Technical Document Revisions</field>
+            <field name="res_model">kojto.technical.doc.revisions</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

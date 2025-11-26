@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_factory_item_dimensions_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.factory.item.dimensions.wizard.form</field>
+        <field name="model">kojto.factory.item.dimensions.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Enter Item Dimensions">
+                <sheet>
+                    <group>
+                        <field name="transaction_id" invisible="1"/>
+                        <field name="length"/>
+                        <field name="width"/>
+                        <field name="thickness"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_create_item" string="Create Item" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_kojto_factory_item_dimensions_wizard" model="ir.actions.act_window">
+        <field name="name">Enter Item Dimensions</field>
+        <field name="res_model">kojto.factory.item.dimensions.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

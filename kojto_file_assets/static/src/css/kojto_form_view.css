@@ -1,0 +1,80 @@
+.ko-form-body {margin-top: 0px !important;}
+.ko-form-main-header-line .o_selection_badge,
+.ko-form-main-header-line .o_field_boolean_toggle {margin-bottom: 0px !important;}
+.ko-form-main-header-line .ko-offer-wselection-badge div, .ko-offer-wselection-badge {margin-bottom: 0px !important;}
+.ko-form-main-header-line .container {margin: 0px !important;}
+.ko-form-main .o_form_label {color: darkgray !important;}
+.ko-form-main .o_field_invalid {color: red !important;}
+.ko-form-main .o_x2m_control_panel {display: none !important;}
+.ko-form-main .nav-tabs {border-bottom: 1px solid transparent !important;}
+.ko-form-main .o_field_invalid input {border-color: red !important;}
+.ko-form-main .o_list_table td, .ko-form-main .o_list_record_remove {padding: 4px !important;}
+.ko-form-main .o_list_table th {padding: 3px !important;}
+.ko-form-main-from-to-label {font-size: 16px !important; font-weight: bold !important; color: #000000 !important; min-width: 136px !important;}
+.ko-form-main .o_form_label {min-width: 136px !important;}
+.ko-form-main .o_attachments, .ko-form-main .o_attachments .small {font-size: 11px !important;}
+.ko-form-main .o_attachment.o_attachment_many2many {max-width: 50% !important;}
+.ko-form-main .oe_add {margin-top: 10px !important;}
+.ko-form-view-title {margin: 0 10px; min-width: fit-content;}
+.ko-form-view-title, .ko-form-view-title span, .ko-form-view-title input,.ko-form-view-title select {font-weight: 700; font-size: 1rem !important; text-transform: uppercase; color: black;}
+.ko-form-view-title {line-height: 22px; max-width: 50%;}
+.ko-form-view-subtitle {
+    margin-bottom: 1.4rem !important;
+    margin-left: 0;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    font-style: italic;
+    text-transform: uppercase !important;
+    text-align: left;
+    color: var(--o-cc4-bg) !important;
+    position: relative;
+}
+
+.ko-form-view-subtitle::before {
+    content: "➤";
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 2px;
+    color: var(--o-cc4-bg);
+    font-size: 0.8rem;
+    vertical-align: middle;
+}
+
+/* module specific */
+.ko-form-view-one2many-dashboard .o_list_renderer .o_list_table thead .o_list_number_th {white-space: unset !important; text-align: center !important; max-width: 80px;}
+.ko-form-view-one2many-dashboard .o_list_renderer .o_list_table tbody > tr > td:not(.o_list_record_selector).o_list_number {padding-right: 15px !important;}
+.ko-form-datetime-to-date {background-color: rgba(11, 83, 148, 0.02); border: 1px solid rgba(11, 83, 148, 0.2); border-radius: 2px; padding: 0 14%;}
+.ko-form-datetime-to-date [data-field="datetime_start"],
+.ko-form-datetime-to-date [data-field="datetime_end"] {
+    width: calc(1ch * 11) !important;
+    max-width: calc(1ch * 11) !important;
+    border: 0px solid transparent;
+    background: transparent;
+}
+
+.view_kojto_hr_dashboard_form .o_control_panel,.view_kojto_finance_dashboard_form .o_control_panel {display: none !important;}
+
+div[name="profile_drawing"] {width: 100px !important;}
+
+.view_kojto_profile_batches_form th[data-name="position"],
+.view_kojto_profile_batches_form th[data-name="profile_drawing"],
+.view_kojto_profile_batches_form th[data-name="profile_id"],
+.view_kojto_profile_batches_form th[data-name="profile_weight"],
+.view_kojto_profile_batches_form th[data-name="material_id"],
+.view_kojto_profile_batches_form th[data-name="length"],
+.view_kojto_profile_batches_form th[data-name="length_extension"],
+.view_kojto_profile_batches_form th[data-name="number"],
+.view_kojto_profile_batches_form th[data-name="total_profile_length_nett"],
+.view_kojto_profile_batches_form th[data-name="total_profile_length_gross"],
+.view_kojto_profile_batches_form th[data-name="total_profile_weight_nett"],
+.view_kojto_profile_batches_form th[data-name="total_profile_weight_gross"],
+.view_kojto_profile_batches_form th[data-name="total_profile_coating_area"],
+.view_kojto_profile_batches_form th[data-name="number_ext_corners"] { max-width: 30px !important; }
+.view_kojto_profile_batches_form td.o_list_button div.d-flex.flex-wrap.gap-1 {justify-content: flex-end;}
+
+.o_field_binary .o_input {border: none !important; background: none !important; outline: none !important; padding: 0 !important}
+
+
+.ko-form-accounting-body {margin-top: 0px !important;}
+.ko-form-accounting-body .o_form_sheet {max-width: 100% !important;}
+.ko-form-accounting-body .o_pdfview_iframe {min-height: 100vh !important;}

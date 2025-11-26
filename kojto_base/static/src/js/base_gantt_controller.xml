@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="web_base_project_gantt_view.Contoller" owl="1">
+        <div t-att-class="props.className">
+            <Layout className="model.useSampleModel ? 'o_view_sample_data' : ''" display="props.display">
+                <t t-set-slot="control-panel-additional-actions">
+                    <t t-call="{{ props.buttonTemplate }}"/>
+                </t>
+                <t t-component="props.Renderer" t-props="rendererProps" />
+            </Layout>
+        </div>
+    </t>
+
+    <t t-name="web_base_project_gantt_view.Buttons" owl="1">
+        <div>
+            <button accesskey="c" class="ml8 mr8 btn btn-primary btn-xs oe-base-gantt-button-new" type="button" t-on-click="onNewTask">
+                Create
+            </button>
+            <button t-attf-class="btn btn-xs btn-default oe-base-gantt-timeframe {{ state.timeFrame === 'Quarter Day' ? 'active' : '' }}" data-timeframe="Quarter Day" title="Quarter Day" t-on-click="onClicktimeFrame" t-ref="quarter_day">
+                Quarter Day
+            </button>
+            <button t-attf-class="btn btn-xs btn-default oe-base-gantt-timeframe {{ state.timeFrame === 'Half Day' ? 'active' : '' }}" data-timeframe="Half Day" title="Half Day"  t-on-click="onClicktimeFrame" t-ref="half_day">
+                Half Day
+            </button>
+            <button t-attf-class="btn btn-xs btn-default oe-base-gantt-timeframe {{ state.timeFrame === 'Day' ? 'active' : '' }}" data-timeframe="Day" title="Day"  t-on-click="onClicktimeFrame" t-ref="day">
+                Day
+            </button>
+            <button t-attf-class="btn btn-xs btn-default oe-base-gantt-timeframe {{ state.timeFrame === 'Week' ? 'active' : '' }}" data-timeframe="Week" title="Week"  t-on-click="onClicktimeFrame" t-ref="week">
+                Week
+            </button>
+            <button t-attf-class="btn btn-xs btn-default oe-base-gantt-timeframe {{ state.timeFrame === 'Month' ? 'active' : '' }}" data-timeframe="Month" title="Month"  t-on-click="onClicktimeFrame" t-ref="month">
+                Month
+            </button>
+        </div>
+    </t>
+
+</templates>

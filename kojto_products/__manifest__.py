@@ -1,0 +1,32 @@
+# kojto_products/__manifest__.py
+{
+    'name': 'Kojto Products',
+    'version': '18.04.07',
+    'author': 'KOJTO',
+    'category': 'KOJTO',
+    'website': 'https://www.kojto.com',
+    'summary': 'Product and component management',
+    'description': 'Product management module for managing products, components, revisions, articles, technical documents, packages, processes, and DWG files',
+    'depends': ['kojto_contacts'],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/wizards/kojto_product_import_wizard_views.xml',
+        'views/kojto_product_components_views.xml',
+        'views/kojto_product_component_revisions_views.xml',
+        'views/mixins/kojto_product_articles_views.xml',
+        'views/mixins/kojto_product_technical_documents_views.xml',
+        'views/mixins/kojto_product_packages_views.xml',
+        'views/mixins/kojto_product_process_views.xml',
+        'views/kojto_product_dwg_file_viewports_views.xml',
+        'views/kojto_product_dwg_files_views.xml',
+        'views/kojto_product_buttons.xml',
+        'views/kojto_product_menu_views.xml',
+    ],
+    'images': ['static/description/icon.png'],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+    'test': [
+        'tests/test_graph_analysis.py',
+    ],
+}

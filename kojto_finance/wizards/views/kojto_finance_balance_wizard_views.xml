@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Wizard Form View -->
+        <record id="view_kojto_finance_balance_wizard_form" model="ir.ui.view">
+            <field name="name">kojto.finance.balance.wizard.form</field>
+            <field name="model">kojto.finance.balance.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Balance Wizard" create="false">
+                    <style>
+                        .o_form_buttons_view .o_form_button_save,
+                        .o_form_buttons_view .o_form_button_cancel,
+                        .o_form_button_save,
+                        .o_form_button_cancel,
+                        button[name="save"],
+                        button[name="cancel"] {
+                            display: none !important;
+                        }
+                    </style>
+                    <div class="w-100 px-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_from" string="From Date"/>
+                                <field name="date_from"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_to" string="To Date"/>
+                                <field name="date_to"/>
+                            </div>
+                           <div class="col-lg-4 me-0 align-items-center">
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <button name="action_save_balance" string="Recompute &amp; Save" type="object" class="btn-secondary"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <button name="action_export_balance_to_excel" string="Export Balance" type="object" class="btn-primary"/>
+                            </div>
+                        </div>
+                    </div>
+                    <separator/>
+                    <notebook>
+                        <page string="Company Balance">
+                            <field name="company_balance_line_ids" readonly="1">
+                                <list class="ko-list-main" string="Company Balance" create="false" edit="false" no_open="1">
+                                    <field name="outgoing_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="incoming_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_revenue" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_expenses" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="time_tracking_hours"/>
+                                    <field name="time_tracking_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="assets_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="result" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" decoration-success="result &gt; 0" decoration-danger="result &lt; 0"/>
+                                    <button name="action_view_breakdown" type="object" class="fa fa-external-link" title="View Breakdown"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_breakdown_to_excel" type="object" string=" " class="fa fa-file-excel-o" title="Export Breakdown to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Main Code Balance">
+                            <field name="maincode_balance_line_ids" readonly="1">
+                                <list class="ko-list-main" string="Main Code Balance" create="false" edit="false" no_open="1">
+                                    <field name="maincode" string="Main Code" readonly="1"/>
+                                    <field name="description" string="Description" readonly="1"/>
+                                    <field name="outgoing_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                                    <field name="incoming_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                                    <field name="invoiceless_revenue" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                                    <field name="invoiceless_expenses" widget="monetary" options="{'currency_field': 'currency_id'}" readonly="1"/>
+                                    <field name="time_tracking_hours" optional="show" readonly="1"/>
+                                    <field name="time_tracking_total" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show" readonly="1"/>
+                                    <field name="assets_total" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show" readonly="1"/>
+                                    <field name="result" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" decoration-success="result &gt; 0" decoration-danger="result &lt; 0" readonly="1"/>
+                                    <button name="action_view_breakdown" type="object" class="fa fa-external-link" title="View Breakdown"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_breakdown_to_excel" type="object" string=" " class="fa fa-file-excel-o" title="Export Breakdown to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Code Balance">
+                            <field name="code_balance_line_ids" readonly="1">
+                                <list class="ko-list-main" string="Code Balance" create="false" edit="false" no_open="1">
+                                    <field name="code_name" string="Code Name"/>
+                                    <field name="description" string="Description"/>
+                                    <field name="outgoing_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="incoming_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_revenue" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_expenses" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="time_tracking_hours" optional="show"/>
+                                    <field name="time_tracking_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="assets_total" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+                                    <field name="result" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" decoration-success="result &gt; 0" decoration-danger="result &lt; 0"/>
+                                    <button name="action_view_breakdown" type="object" class="fa fa-external-link" title="View Breakdown"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_breakdown_to_excel" type="object" string=" " class="fa fa-file-excel-o" title="Export Breakdown to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Subcode Balance">
+                            <field name="subcode_balance_line_ids" readonly="1">
+                                <list class="ko-list-main" string="Subcode Revenue and Expense" create="false" edit="false" no_open="1">
+                                    <field name="subcode_name" string="Subcode Name"/>
+                                    <field name="description" string="Description"/>
+                                    <field name="outgoing_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="incoming_pre_vat_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_revenue" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="invoiceless_expenses" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="time_tracking_hours" optional="show"/>
+                                    <field name="time_tracking_total" widget="monetary" options="{'currency_field': 'currency_id'}" optional="show"/>
+                                    <field name="assets_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="result" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" decoration-success="result &gt; 0" decoration-danger="result &lt; 0"/>
+                                    <button name="action_view_breakdown" type="object" class="fa fa-external-link" title="View Breakdown"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_breakdown_to_excel" type="object" string=" " class="fa fa-file-excel-o" title="Export Breakdown to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- Wizard List View (for secondary use, e.g. from search) -->
+        <record id="view_kojto_finance_balance_wizard_list" model="ir.ui.view">
+            <field name="name">kojto.finance.balance.wizard.list</field>
+            <field name="model">kojto.finance.balance.wizard</field>
+            <field name="arch" type="xml">
+                <list string="Balance Wizard">
+                    <field name="date_from" string="From Date"/>
+                    <field name="date_to" string="To Date"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Wizard Search View -->
+        <record id="view_kojto_finance_balance_wizard_search" model="ir.ui.view">
+            <field name="name">kojto.finance.balance.wizard.search</field>
+            <field name="model">kojto.finance.balance.wizard</field>
+            <field name="arch" type="xml">
+                <search string="Balance Wizard">
+                    <field name="date_from" string="From Date"/>
+                    <field name="date_to" string="To Date"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Wizard Action (opens in form view) -->
+        <record id="action_kojto_finance_balance" model="ir.actions.act_window">
+            <field name="name">Balance Wizard</field>
+            <field name="res_model">kojto.finance.balance.wizard</field>
+            <field name="view_mode">form,list</field>
+            <field name="view_id" ref="view_kojto_finance_balance_wizard_form"/>
+            <field name="search_view_id" ref="view_kojto_finance_balance_wizard_search"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

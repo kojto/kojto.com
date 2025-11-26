@@ -1,0 +1,83 @@
+<odoo>
+    <data>
+        <!-- List Views -->
+        <record model="ir.ui.view" id="view_kojto_base_certificates_list">
+            <field name="name">kojto.base.certificates.list</field>
+            <field name="model">kojto.base.certificates</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" editable="top">
+                    <field name="active" widget="boolean_toggle" />
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                    <field name="language_id" />
+                    <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_base_certificates_form">
+            <field name="name">kojto.base.certificates.form</field>
+            <field name="model">kojto.base.certificates</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_certificates_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>CERTIFICATE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <br />
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="active" widget="boolean_toggle" />
+                            <field name="language_id" />
+                        </group>
+                        <group class="col-lg-6">
+                            <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search Views -->
+        <record model="ir.ui.view" id="view_kojto_base_certificates_search">
+            <field name="name">kojto.base.certificates.search</field>
+            <field name="model">kojto.base.certificates</field>
+            <field name="arch" type="xml">
+                <search string="Certificates">
+                    <field name="name" />
+                    <separator />
+                    <field name="date_start" />
+                    <separator />
+                    <field name="date_end" />
+                    <separator />
+                    <filter name="active" string="Active" domain="[('active', '=', True)]" />
+                    <filter name="active_inactive" string="Inactive" domain="[('active', '=', False)]" />
+                    <filter string="Language" name="groupby_language_id" context="{'group_by': 'language_id'}" />
+                </search>
+            </field>
+        </record>
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_base_certificates">
+            <field name="name">Certificates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.base.certificates</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Add Certificates </p>
+            </field>
+        </record>
+    </data>
+</odoo>

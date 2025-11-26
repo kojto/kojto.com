@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_package_label">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <t t-if="doc.packages">
+                        <t t-foreach="enumerate(doc.packages)" t-as="pack_data">
+                            <t t-set="pack_index" t-value="pack_data[0]" />
+                            <t t-set="pack" t-value="pack_data[1]" />
+                            <div class="page">
+                                <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                                <t t-if="company_contact and company_contact.company_logo">
+                                    <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                                    <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                                </t>
+
+                                <!-- Simple Package Label -->
+                                <div style="margin: 50px; padding: 40px; border: 3px solid #000; background-color: white; text-align: center;">
+                                    <!-- Package Number -->
+                                    <div t-attf-style="string-set: timestamp '{{ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}';">
+                                        <h1 class="heading">
+                                            <span>Delivery </span>
+                                            <span t-field="doc.name" />
+                                        </h1>
+                                    </div>
+
+                                    <div style="font-size: 4em; font-weight: 900; margin-bottom: 20px;">
+                                        <span t-esc="pack_index + 1" /> / <span t-esc="len(doc.packages)" />
+                                    </div>
+
+                                    <!-- Package Code -->
+                                    <div style="font-size: 3em; font-weight: bold; margin-bottom: 30px;">
+                                        <t t-set="delivery_num" t-value="doc.name.split('.')[-1]" />
+                                        <t t-set="delivery_part" t-value="delivery_num[-2:] if len(delivery_num) >= 2 else delivery_num.zfill(2)" />
+                                        <t t-set="package_num" t-value="pack_index + 1" />
+                                        <span t-esc="'D' + delivery_part + str(package_num).zfill(2)" />
+                                    </div>
+
+                                    <!-- Weight -->
+                                    <div style="font-size: 1.5em; font-weight: bold; margin-bottom: 30px;">
+                                        WEIGHTS: GROSS <span t-esc="'%.1f kg' % pack.gross_weight" /> / NET <span t-esc="'%.1f kg' % pack.net_weight" /> / TARE <span t-esc="'%.1f kg' % pack.tare_weight" />
+                                    </div>
+
+                                    <!-- Dimensions -->
+                                    <div style="font-size: 1.5em; font-weight: bold; margin-bottom: 30px;">
+                                        DIMENSIONS: W <span t-esc="'%.0f mm' % pack.width" /> / L <span t-esc="'%.0f mm' % pack.length" /> / H <span t-esc="'%.0f mm' % pack.height" />
+                                    </div>
+
+                                    <!-- Ship To -->
+                                    <div style="font-size: 2em; font-weight: bold; margin-bottom: 15px;">
+                                        SHIP TO:
+                                    </div>
+                                    <div style="font-size: 1.8em; margin-bottom: 10px;">
+                                        <span t-field="doc.counterparty_name_id" />
+                                    </div>
+                                    <div style="font-size: 1.6em; margin-bottom: 20px;">
+                                        <span t-field="doc.delivery_address" />
+                                    </div>
+
+                                    <!-- Reference -->
+                                    <div style="font-size: 1.4em; font-weight: bold;">
+                                        <span t-field="doc.counterpartys_reference" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Page break after each label -->
+                            <div style="page-break-after: always;"></div>
+                        </t>
+                    </t>
+                    <t t-else="">
+                        <div class="page">
+                            <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                            <t t-if="company_contact and company_contact.company_logo">
+                                <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                                <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                            </t>
+
+                            <div style="margin: 50px; padding: 40px; border: 3px solid #000; background-color: white; text-align: center;">
+                                <div style="font-size: 3em; font-weight: bold; margin-bottom: 30px; color: #6c757d;">
+                                    NO PACKAGES FOUND
+                                </div>
+                                <div style="font-size: 1.5em; color: #6c757d;">
+                                    No packages are available for this delivery.
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Delivery Inherited View -->
+		<record model="ir.ui.view" id="view_kojto_delivery_contents_form_inherit">
+			<field name="name">kojto.delivery.contents.form.inherit</field>
+			<field name="model">kojto.delivery.contents</field>
+			<field name="inherit_id" ref="kojto_deliveries.view_kojto_delivery_contents_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='position']" position="after">
+					<field name="technical_document_revision_id" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

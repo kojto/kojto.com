@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Delivery Inspection Certificate Template -->
+        <template id="report_kojto_delivery_inspection_certificate_weasy">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="doc.date_issue and doc.date_issue.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: date_issue \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;"> <t t-esc="doc.certificate_type"/> </div>
+                                <div style="margin-bottom: 20px; font-size: 2em;">Inspection Certificate</div>
+                            </h1>
+                        </div>
+
+                        <!-- Document Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <!-- Document Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="5">Document Information</td>
+                                    <td style="padding: 4px; width: 35%;">Inspection Certificate #</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Certificate Type</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.certificate_type" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Date Issued</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.date_issue" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Language</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-esc="doc.language_id.name or 'N/A'" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Delivery</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.delivery_id.name" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Company Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Company Information</td>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Manufacturer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.company_name_id" /><br/>
+                                        <span t-field="doc.company_address_id" />
+                                        <span t-field="doc.company_phone_id" /><br/>
+                                        <span t-field="doc.company_email_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Customer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.counterparty_name_id" /><br/>
+                                        <span t-field="doc.counterparty_address_id" />
+                                        <span t-field="doc.counterparty_phone_id" /><br/>
+                                        <span t-field="doc.counterparty_email_id" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Product Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="6">Product Information</td>
+                                    <td style="padding: 4px; width: 35%;">Product Name</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.product_name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Product Standard</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.product_standard" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Dimensional Tolerance Standard</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.dimensional_tolerance_standard" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Execution Type</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.execution_type" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Material Grade</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.material_grade_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Material Type ISO 15608</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.material_grade_type" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Inspection Details -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Inspection Details</td>
+                                    <td style="padding: 4px; width: 35%;">Subcode</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.subcode_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Batches</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-foreach="doc.batch_ids" t-as="batch">
+                                            <t t-esc="batch.name" /><t t-if="not batch_last">, </t>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Additional Notes</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-esc="doc.additional_notes or 'N/A'" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Material Properties Tables - Full Width -->
+                        <div t-field="doc.material_properties_table" t-options='{"widget": "html"}' />
+
+                        <!-- Declaration - Separate Text Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
+                            <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
+                                This delivery inspection certificate certifies that the products described above have been inspected and meet the specified requirements.
+                                The inspection was performed in accordance with the applicable standards and specifications.
+                                The chemical analysis and mechanical properties are provided by the manufacturer of the raw material.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <!-- ALIAS for backward compatibility: report_kojto_delivery_inspection_certificate -->
+        <template id="report_kojto_delivery_inspection_certificate" inherit_id="kojto_deliveries.report_kojto_delivery_inspection_certificate_weasy"/>
+        <record id="action_report_delivery_inspection" model="ir.actions.report">
+            <field name="name">Delivery Inspection (Alias)</field>
+            <field name="model">kojto.delivery.inspection.certificates</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_deliveries.report_kojto_delivery_inspection_certificate</field>
+            <field name="report_file">kojto_deliveries.report_kojto_delivery_inspection_certificate</field>
+            <field name="print_report_name">'Delivery Inspection - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_delivery_inspection_certificates"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="base.paperformat_euro"/>
+        </record>
+    </data>
+</odoo>

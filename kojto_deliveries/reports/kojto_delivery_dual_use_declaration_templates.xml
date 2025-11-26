@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_dual_use_declaration">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="doc.date_delivery and doc.date_delivery.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: date_delivery \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;"></div>
+                                <div style="margin-bottom: 20px; font-size: 2em;">DUAL USE DECLARATION</div>
+                            </h1>
+                        </div>
+
+                        <!-- FROM Section -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;"  rowspan="6">Issued by</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Company name:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_name_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Address:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_address_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Registration number:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_registration_number" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 25%;">
+                                        Tax number:
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        <span t-field="doc.company_tax_number_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Exporter invoice(s)</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-foreach="doc.invoices_ids" t-as="invoice">
+                                            <span t-field="invoice.consecutive_number" /><t t-if="not invoice_last">, </t>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr><td style="padding: 4px; width: 25%;"></td></tr>
+
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;">Date</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.date_delivery" t-options='{"format": "dd.MM.yyyy"}' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="1">Signed by</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.signed_by" />
+                                    </td>
+                                    <td style="padding: 4px; width: 50%;">
+                                        As authorized company representative ______________________
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Declaration - Styled Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa; font-size: 10px;">
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                I, declare that despite the coincidence of the customs tariff numbers of the goods intended for export: <span t-field="doc.exported_material" /> on export invoice(s):
+                            </p>
+                            <p style="margin-bottom: 10px;">
+                                <t t-foreach="doc.invoices_ids" t-as="inv">
+                                    <div class="label"> - <span t-field="inv.consecutive_number" /> from date <span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' /></div>
+                                </t>
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                and tracking number: <span t-field="doc.tracking_number" /> with those of the harmonized system of dual-use items and technology under Council Regulation (EC) No 1382/2014, they do not correspond to the characteristics and description of the Community regime for the control of exports of dual-use items and technology controlled by the Council.
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                The goods are intended for civilian purposes and do not appear on the List of Controlled Dual-Use Goods and do not meet the characteristics indicated in the footnote.
+                            </p>
+                            <p style="margin-bottom: 10px; text-align: justify;">
+                                I am familiar with the provisions of Art. 313 of the Criminal Code for filing a declaration with false content.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

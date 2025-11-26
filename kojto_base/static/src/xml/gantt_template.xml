@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <templates>
+    <t t-name="Basegantt.buttons">
+	    <div>
+        <button accesskey="c" class="btn btn-primary btn-xs oe-base-gantt-button-new" type="button">Create</button>
+        <button class="btn btn-xs btn-default oe-base-gantt-timeframe" data-timeframe="Quarter Day" title="Quarter Day">Quarter Day</button>
+        <button class="btn btn-xs btn-default oe-base-gantt-timeframe" data-timeframe="Half Day" title="Half Day">Half Day</button>
+        <button class="btn btn-xs btn-default oe-base-gantt-timeframe" data-timeframe="Day" title="Day">Day</button>
+        <button class="btn btn-xs btn-default oe-base-gantt-timeframe" data-timeframe="Week" title="Week">Week</button>
+        <button class="btn btn-xs btn-default oe-base-gantt-timeframe" data-timeframe="Month" title="Month">Month</button>
+      </div>
+    </t>
+  
+</templates>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit_factory">
+            <field name="name">kojto.landingpage.form.inherit.factory</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 14 ']" position="after">
+                    <!-- Factory Tasks -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_factory_packages_list_view" type="object" class="btn landing_page_button" style="color: #8B4513;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #8B4513;">
+                                    <path d="M 9.278 12.648 H 6.712 V 10.085 H 9.278 V 12.648 Z M 7.246 12.114 H 8.749 V 10.611 H 7.246 V 12.114 Z" style="stroke: none; stroke-width: 0.178; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" stroke-linecap="round"/>
+                                    <path d="M 13.007 12.648 H 10.441 V 10.085 H 13.007 V 12.648 Z M 10.975 12.114 H 12.478 V 10.611 H 10.975 V 12.114 Z" style="stroke: none; stroke-width: 0.178; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" stroke-linecap="round"/>
+                                    <path d="M 5.563 12.648 H 2.997 V 10.085 H 5.563 V 12.648 Z M 3.531 12.114 H 5.034 V 10.611 H 3.531 V 12.114 Z" style="stroke: none; stroke-width: 0.178; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" stroke-linecap="round"/>
+                                    <path d="M 14.874 15.162 V 5.678 L 14.105 6.094 L 13.727 0.299 H 11.488 L 10.991 7.486 L 10.482 7.762 V 5.678 L 6.062 8.056 V 5.678 L 1.128 8.368 V 15.162 H 0 V 15.698 H 16 V 15.162 H 14.874 Z M 13.207 0.831 L 13.263 1.676 H 11.911 L 11.967 0.831 H 13.207 Z M 11.878 2.209 H 13.303 L 13.580 6.372 L 11.526 7.482 L 11.878 2.209 Z M 1.662 8.669 L 5.533 6.578 V 8.958 L 9.934 6.578 V 8.958 L 14.335 6.578 V 15.162 H 1.662 V 8.669 Z" style="stroke: none; stroke-width: 0.178; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill-rule: nonzero; opacity: 1;" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #8B4513;">Factory</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,3 @@
+"id","name","model_id","groups","domain_force","perm_create","perm_read","perm_write","perm_unlink"
+
+"rule_kojto_time_tracking_image","Rule Kojto Hr Face Recognition","kojto.hr.face.recognition","Kojto Employee","[('user_id', '=', user.id)]","True","True","True","True"

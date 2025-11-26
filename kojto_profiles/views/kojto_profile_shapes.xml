@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_profiles/views/kojto_profile_shapes.xml -->
+<odoo>
+
+    <!-- List View for KojtoProfileShapes -->
+    <record id="view_kojto_profile_shapes_list" model="ir.ui.view">
+        <field name="name">kojto.profile.shapes.list</field>
+        <field name="model">kojto.profile.shapes</field>
+        <field name="arch" type="xml">
+            <list string="Shapes" class="ko-list-main" duplicate="false">
+                <field name="drawing" widget="image" nolabel="1" class="oe_image_full" optional="hide"/>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="area" readonly="1"/>
+                <field name="polygon_ids" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
+            </list>
+        </field>
+    </record>
+
+
+    <!-- Wizard Form View -->
+    <record id="view_kojto_profile_shape_polygon_points_import_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.profile.shape.polygon.points.import.wizard.form</field>
+        <field name="model">kojto.profile.shape.polygon.points.import.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <style>.modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <div class="row">
+                    <div class="col-6">
+                        <group string="Polygon Points"></group>
+                        <div style="height: 500px; overflow-y: auto;">
+                            <field name="data" nolabel="1" widget="text" placeholder="x;y (one point per line, separated by semicolon, e.g., 0;0&#10;20;0&#10;20;20&#10;0;20)"/>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <group string="LISP Command for AutoCAD:"></group>
+                        <pre style="background-color: #f8f8f8; padding: 10px; border: 1px solid #ddd; overflow-x: auto;">(vl-load-com)(if (setq ent (car (entsel &quot;\nSelect a polyline: &quot;))) (if (wcmatch (cdr (assoc 0 (entget ent))) &quot;LWPOLYLINE,POLYLINE&quot;) (progn (setq coords (vlax-safearray-&gt;list (vlax-variant-value (vlax-get-property (vlax-ename-&gt;vla-object ent) &quot;Coordinates&quot;))) i 0) (princ &quot;\n&quot;) (while (&lt; i (length coords)) (princ (strcat (rtos (nth i coords) 2 3) &quot;;&quot; (rtos (nth (1+ i) coords) 2 3) &quot;\n&quot;)) (setq i (if (wcmatch (cdr (assoc 0 (entget ent))) &quot;LWPOLYLINE&quot;) (+ i 2) (+ i 3)))) (command &quot;._TEXTSCR&quot;)) (princ &quot;\nNot a polyline.&quot;)))(princ)</pre>
+                        <p>Copy the LISP command above, paste it into AutoCAD's command line, select a polyline, then copy the output (x;y coordinates) and paste it into the Polygon Points field.</p>
+                    </div>
+                    <footer>
+                        <button name="action_import_polygon_points" type="object" string="Import" class="oe_highlight"/>
+                        <button string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+                </div>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- Form View for KojtoProfileShapes -->
+    <record id="view_kojto_profile_shapes_form" model="ir.ui.view">
+        <field name="name">kojto.profile.shapes.form</field>
+        <field name="model">kojto.profile.shapes</field>
+        <field name="arch" type="xml">
+            <form string="Shape">
+                <sheet>
+                    <div class="row">
+                        <div class="col-8">
+                            <group string="Shape Data">
+                                <field name="name" required="1"/>
+                                <field name="area" readonly="1"/>
+                                <field name="description"/>
+                            </group>
+                            <group string="Polygons"></group>
+                            <group>
+                                <field name="polygon_ids" nolabel="1">
+                                    <list editable="bottom" class="ko-list-main">
+                                        <field name="name" required="1"/>
+                                        <field name="is_external" readonly="1"/>
+                                        <button name="action_open_polygon_form" type="object" icon="fa-external-link" class="btn btn" title=" "/>
+                                    </list>
+                                </field>
+                            </group>
+                        </div>
+                        <div class="col-4">
+                            <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Form View for KojtoProfileShapePolygons -->
+    <record id="view_kojto_profile_shape_polygons_form" model="ir.ui.view">
+        <field name="name">kojto.profile.shape.polygons.form</field>
+        <field name="model">kojto.profile.shape.polygons</field>
+        <field name="arch" type="xml">
+            <form string="Polygon">
+                <sheet nolabel="1">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="ko-form-view-title"></div>
+                        <button name="open_import_points_wizard" type="object" string="Import Points" class="oe_highlight"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <group string="Polygon Points"></group>
+                            <group>
+                                <field name="point_ids" nolabel="1">
+                                    <list editable="bottom" class="ko-list-main">
+                                        <field name="x" required="1"/>
+                                        <field name="y" required="1"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </div>
+                        <div class="col-6">
+                            <group>
+                                <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                            </group>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View for KojtoProfileShapePolygonPoints -->
+    <record id="view_kojto_profile_shape_polygon_points_list" model="ir.ui.view">
+        <field name="name">kojto.profile.shape.polygon.points.list</field>
+        <field name="model">kojto.profile.shape.polygon.points</field>
+        <field name="arch" type="xml">
+            <list string="Polygon Points">
+                <field name="polygon_id"/>
+                <field name="x"/>
+                <field name="y"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action for KojtoProfileShapes -->
+    <record id="action_kojto_profile_shapes" model="ir.actions.act_window">
+        <field name="name">Profile Shapes</field>
+        <field name="res_model">kojto.profile.shapes</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_profile_shapes_list"/>
+        <field name="context">{'from_ui_create_shape': True}</field>
+    </record>
+
+    <!-- Action for KojtoProfileShapePolygonPointsImportWizard -->
+    <record id="action_kojto_profile_shape_polygon_points_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import Polygon Points</field>
+        <field name="res_model">kojto.profile.shape.polygon.points.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_kojto_profile_shape_polygon_points_import_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Action for KojtoProfileShapePolygonPoints -->
+    <record id="action_kojto_profile_shape_polygon_points" model="ir.actions.act_window">
+        <field name="name">Polygon Points</field>
+        <field name="res_model">kojto.profile.shape.polygon.points</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_profile_shape_polygon_points_list"/>
+    </record>
+</odoo>

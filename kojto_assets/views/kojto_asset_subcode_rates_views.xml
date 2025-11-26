@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Asset Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_asset_subcode_rates_list">
+            <field name="name">kojto.asset.subcode.rates.list</field>
+            <field name="model">kojto.asset.subcode.rates</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_asset_subcode_rates_list" limit="100" sample="1">
+                    <field name="asset_id" />
+                    <field name="currency_id" />
+                    <field name="subcode_id" />
+                    <field name="datetime_start" />
+                    <field name="rate" />
+                    <field name="rate_in_BGN" />
+                    <field name="rate_in_EUR" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View for Kojto Asset Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_asset_subcode_rates_form">
+            <field name="name">kojto.asset.subcode.rates.form</field>
+            <field name="model">kojto.asset.subcode.rates</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_asset_subcode_rates_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>ASSET SUBCODE RATES</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <br />
+                        <group class="col-lg-6">
+                            <field name="asset_id" />
+                            <field name="currency_id" />
+                            <field name="subcode_id" />
+                            <field name="datetime_start" />
+                            <field name="rate" />
+                            <field name="rate_in_BGN" />
+                            <field name="rate_in_EUR" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto Asset Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_asset_subcode_rates_search">
+            <field name="name">kojto.asset.subcode.rates.search</field>
+            <field name="model">kojto.asset.subcode.rates</field>
+            <field name="arch" type="xml">
+                <search string="Asset Subcode Rates">
+                    <field name="asset_id" />
+                    <field name="currency_id" />
+                    <field name="subcode_id" />
+                    <field name="datetime_start" />
+                    <filter string="Asset" name="groupby_asset_id" context="{'group_by': 'asset_id'}" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto Asset Subcode Rates -->
+        <record model="ir.actions.act_window" id="action_kojto_asset_subcode_rates">
+            <field name="name">Asset Subcode Rates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.asset.subcode.rates</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your asset subcode rates here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

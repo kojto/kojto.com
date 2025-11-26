@@ -1,0 +1,284 @@
+.ko-list-main { font-size: 12px; }
+.ko-list-main table { table-layout: fixed !important; width: 100% !important; }
+.ko-list-main th, .ko-list-main td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0px !important; }
+.ko-list-main td, .ko-list-main th { padding: 3px !important; min-height: 22px !important; vertical-align: middle !important; }
+.ko-list-main .o-checkbox.form-check { min-height: 1rem !important; margin-bottom: 0px !important; }
+.ko-list-main tr> :first-child { max-width: 30px !important; text-align: center !important; padding-left: 10px !important; padding-right: 10px !important; }
+.ko-list-main p { padding: 0px !important; margin: 0px !important; }
+.ko-list-main div[name="transaction_id"].o_field_widget { font-size: 12px; }
+.ko-list-main tr.text-muted { opacity: 0.5; color: #6c757d !important; }
+.ko-list-main .o_data_row.text-success>td { background-color: #d4edda !important; }
+.ko-list-main .o_boolean_toggle_cell { max-width: 66px !important; }
+.view_kojto_finance_vat_treatment_list tr th[data-name="code"] { max-width: 50px !important; }
+.view_kojto_finance_vat_treatment_list tr th[data-name="language_id"] { max-width: 50px !important; }
+.view_kojto_finance_vat_treatment_list tr th[data-name="vat_in_out_type"] { max-width: 50px !important; }
+.view_kojto_finance_vat_treatment_list tr th[data-name="description"] { min-width: 250px !important; }
+.ko-list-main td[name="repr_html_open_amount"] { text-align: right !important; padding-right: 15px !important; max-width: 150px !important; }
+.ko-list-main td[name="repr_html_total_price"] { text-align: right !important; padding-right: 15px !important; max-width: 150px !important; }
+
+/* Sorted field widths */
+.ko-list-main tr th[data-name="abbreviation"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="accounting_identifier_id"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="accounting_row_ids"] { max-width: 500px !important; }
+.ko-list-main tr th[data-name="accounting_template_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="accounting_warehouse"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="account_number"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="address"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="aluminum"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="allocation_summary"] { max-width: 650px !important; }
+.ko-list-main tr th[data-name="area"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="attachment_ids"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="avcp_system"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="article_id"] { max-width: 150px !important; }
+
+
+.ko-list-main tr th[data-name="bank_account_description"] { min-width: 200px !important; max-width: 200px !important; }
+.ko-list-main tr th[data-name="bank_account_iban"] { min-width: 200px !important; max-width: 200px !important; }
+.ko-list-main tr th[data-name="bank_currency"] { min-width: 60px !important; max-width: 60px !important; }
+.ko-list-main tr th[data-name="bank_name"] { min-width: 200px !important; max-width: 200px !important; }
+.ko-list-main tr th[data-name="batch_summary"] { max-width: 500px !important; }
+.ko-list-main tr th[data-name="batch_type"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="BIC"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="boron"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="branch_bic"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="branch_name"] { max-width: 200px !important; }
+
+.ko-list-main tr th[data-name="calibration_date"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="can_stack_on_it"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="carbon"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="carbon_equivalent"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="cash_flow_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="certificate_type"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="certificate_number"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="chemical_composition_summary"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="chromium"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="city"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="cmr_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="cobalt"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="code"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="code_name"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="code_id"] { max-width: 110px !important; }
+.ko-list-main tr th[data-name="color"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="company_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="component_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="component_revision_number"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="component_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="consecutive_number"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="consolidation_field"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="content_quantity"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="content_weight"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="contract_type"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="control_type"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="control_performeted_by"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="copper"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="counterparty_id"] { max-width: 250px !important; }
+.ko-list-main tr th[data-name="counterparty_bank_account_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="country"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="credit_account_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="current_item_quantity"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="cut_pattern"] { max-width: 500px !important; }
+
+.ko-list-main tr th[data-name="datetime_executed"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="datetime_issue"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="datetime_planned"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="datetime_locked"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="debit_account_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="delivery_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="density"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="description"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="document_in_out_type"] { max-width: 25px !important; }
+.ko-list-main tr th[data-name="drawing"] { max-width: 60px !important; }
+
+.ko-list-main tr th[data-name="electrical_resistivity"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="elongation"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="employee_number"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="equipment_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="equipment_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="exchange"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="execution_class"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="formula_type"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="gross_weight"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="hardness_hb"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="hardness_hrc"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="hardness_hv"] { max-width: 30px !important; }
+
+.ko-list-main tr th[data-name="identifier"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="identifier_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="identifier_type"] { max-width: 140px !important; }
+.ko-list-main tr th[data-name="impact_energy"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="impact_temperature"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="insured"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="invoice_type"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="invoice_id"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="iron"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="is_active"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="is_locked"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="is_required"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="iso_15614_acceptance_level"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="issuing_authority_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="item_summary"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="item_type"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="item_unit_id"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="job_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="journal_signed_by"] { max-width: 75px !important; }
+
+.ko-list-main tr th[data-name="language_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="language_name_1_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="language_name_2_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="length"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="link_description"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="link_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="linked_to"] { max-width: 75px !important; }
+
+.ko-list-main tr th[data-name="magnesium"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="maincode"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="maincode_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="manganese"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="manufacturer"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="material_grade_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="material_grade_type"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="material_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="mechanical_properties_summary"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="materials_summary"] { max-width: 150px !important; }
+
+.ko-list-main tr th[data-name="metal_type"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="model"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="molybdenum"] { max-width: 20px !important; }
+
+.ko-list-main tr th[data-name="name"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="name_secondary"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="name_summary"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="net_weight"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="next_calibration_date"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="nickel"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="nitrogen"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="number_of_passes"] { max-width: 75px !important; }
+
+.ko-list-main tr th[data-name="other_attribute"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="our_company_id"] { max-width: 100px !important; }
+
+.ko-list-main tr th[data-name="paid"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="parent_item_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="part_type"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="phosphorus"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="plan_issued_by"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="poisson_ratio"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="position"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="power_meter_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="price"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="primary_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="process_definition_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="process_type"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="produced_quantity"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="profile_drawing"] { max-width: 60px !important; }
+.ko-list-main tr th[data-name="profile_id"] { max-width: 60px !important; }
+.ko-list-main tr th[data-name="progress_percent"] { max-width: 80px !important; }
+
+.ko-list-main tr th[data-name="quantity"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="reduction_of_area"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="reference"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="repr_attachments"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="repr_dates"] { text-align: right !important; padding-right: 15px !important; max-width: 150px !important; }
+.ko-list-main tr th[data-name="repr_html_open_amount"] { text-align: right !important; padding-right: 15px !important; max-width: 150px !important; }
+.ko-list-main tr th[data-name="repr_html_total_price"] { text-align: right !important; padding-right: 15px !important; max-width: 150px !important; }
+.ko-list-main tr th[data-name="reference_model"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="reference_name"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="required"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="requires_identifier_id"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="requires_subtype_id"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="revision_number"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="rotation"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="secondary_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="serial_number"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="sequence_in_wps"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="shape_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="silicon"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="specialist_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="standard"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="state"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="store_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="subcode"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="subcode_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="subcode_name"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="subject"] { max-width: 500px !important; }
+.ko-list-main tr th[data-name="subtype_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="sulfur"] { max-width: 20px !important; }
+
+.ko-list-main tr th[data-name="target_component_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="target_latest_revision_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="tare_weight"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="task_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="task_priority"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="task_unit_id"] { max-width: 40px !important; }
+.ko-list-main tr th[data-name="template_type_id"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="technical_document_revision"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="tensile_strength"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="thermal_conductivity"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="thermal_expansion"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="thickness"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="time"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="time_per_meter"] { max-width: 80px !important; }
+.ko-list-main tr th[data-name="tin"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="titanium"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="to_from_store"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="transaction_date"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="transaction_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="transaction_quantity"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="translated_text"] { max-width: 300px !important; }
+.ko-list-main tr th[data-name="translated_name"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="type"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="unit"] { max-width: 40px !important; }
+.ko-list-main tr th[data-name="unit_id"] { max-width: 40px !important; }
+.ko-list-main tr th[data-name="unit_type"] { max-width: 70px !important; }
+.ko-list-main tr th[data-name="used_welding_processes_summary"] { max-width: 75px !important;}
+
+.ko-list-main tr th[data-name="value"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="vanadium"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="vat_treatment_id"] { max-width: 200px !important; }
+.ko-list-main tr th[data-name="volume"] { max-width: 50px !important; }
+
+.ko-list-main tr th[data-name="warehouse_name"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="waste_percentage"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="weight"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="weight_override"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="weld_drawing_svg"] { max-width: 40px !important; }
+.ko-list-main tr th[data-name="weld_type"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="welder_id"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="welding_engineer_id"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="welding_joint_geometry_id"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="welding_position"] { max-width: 75px !important; }
+.ko-list-main tr th[data-name="welding_processes_summary"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="welding_joint_geometry_id"] { max-width: 150px !important; }
+.ko-list-main tr th[data-name="width"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="wps_type"] { max-width: 75px !important; }
+
+.ko-list-main tr th[data-name="x"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="y"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="yield_strength_0_2"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="yield_strength_1_0"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="young_modulus"] { max-width: 30px !important; }
+.ko-list-main tr th[data-name="zinc"] { max-width: 20px !important; }
+.ko-list-main tr th[data-name="zip_code"] { max-width: 100px !important; }
+
+
+.ko-list-main tr th[data-name="year"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="quarter"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="month"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="currency_id"] { max-width: 50px !important; }
+.ko-list-main tr th[data-name="outgoing_pre_vat_total"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="incoming_pre_vat_total"] { max-width: 100px !important; }
+.ko-list-main tr th[data-name="employee_id"] { max-width: 200px !important; text-align: left !important;}
+
+.ko-list-main.balance-table tr> :first-child { text-align: left !important; }
+
+.view_kojto_list_invoices_accounting .o_data_row.text-warning > td,
+.ko-form-view-title.text-warning { background-color: #efedce !important; }
+
+

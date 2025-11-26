@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Packages List View -->
+    <record id="view_kojto_product_packages_list" model="ir.ui.view">
+        <field name="name">kojto.product.component.packages.list</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <list string="Packages" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="package_name"/>
+                <field name="package_type"/>
+                <field name="subcode_id"/>
+                <field name="component_revision_number"/>
+                <field name="latest_revision_datetime"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Packages Form View -->
+    <record id="view_kojto_product_packages_form" model="ir.ui.view">
+        <field name="name">kojto.product.component.packages.form</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <form string="Package">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="name"/>
+                            <field name="package_name"/>
+                            <field name="package_type"/>
+                            <field name="subcode_id"/>
+                            <field name="component_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="unit_id"/>
+                            <field name="latest_revision_datetime"/>
+                            <field name="package_description"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Revisions">
+                            <field name="revision_ids" class="ko-list-main">
+                                <list>
+                                    <field name="revision_number"/>
+                                    <field name="name"/>
+                                    <field name="weight_attribute" string="W (kg)" optional="show"/>
+                                    <field name="length_attribute" string="L (m)" optional="hide"/>
+                                    <field name="area_attribute" string="A (m²)" optional="hide"/>
+                                    <field name="volume_attribute" string="V (m³)" optional="hide"/>
+                                    <field name="price_attribute" string="Price (€)" optional="show"/>
+                                    <field name="time_attribute" string="Time (min)" optional="hide"/>
+                                    <field name="other_attribute" string="Other" optional="hide"/>
+                                    <field name="datetime_issue"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Packages Search View -->
+    <record id="view_kojto_product_packages_search" model="ir.ui.view">
+        <field name="name">kojto.product.component.packages.search</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <search string="Search Packages">
+                <field name="name"/>
+                <field name="package_name"/>
+                <field name="package_type"/>
+                <field name="subcode_id"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter string="Package Type" name="group_by_package_type" context="{'group_by': 'package_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Packages Action -->
+    <record id="action_kojto_product_packages" model="ir.actions.act_window">
+        <field name="name">Packages</field>
+        <field name="res_model">kojto.product.component</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('component_type', '=', 'package')]</field>
+        <field name="context">{'search_default_active': 1, 'default_component_type': 'package'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Package
+            </p>
+        </field>
+    </record>
+
+    <!-- Link the list and form views to the action -->
+    <record id="action_kojto_product_packages_view_list" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_product_packages_list"/>
+        <field name="act_window_id" ref="action_kojto_product_packages"/>
+    </record>
+
+    <record id="action_kojto_product_packages_view_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_kojto_product_packages_form"/>
+        <field name="act_window_id" ref="action_kojto_product_packages"/>
+    </record>
+</odoo>
+
+

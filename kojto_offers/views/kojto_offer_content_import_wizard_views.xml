@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <!-- Wizard Form View for kojto.offer.content.import.wizard -->
+        <record id="view_kojto_offer_content_import_wizard_form" model="ir.ui.view">
+            <field name="name">kojto.offer.content.import.wizard.form</field>
+            <field name="model">kojto.offer.content.import.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Import Offer Content">
+                    <style>.modal-dialog {max-width: 1000px !important; min-width: 1000px !important;}</style>
+                    <group>
+                        <field name="offer_id" readonly="1" string="Offer"/>
+                        <field name="data" widget="text" placeholder="Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate)" string="Content Data"/>
+                    </group>
+                    <footer>
+                        <button name="action_import" string="Import" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for the wizard -->
+        <record id="action_kojto_offer_content_import_wizard" model="ir.actions.act_window">
+            <field name="name">Import Offer Content</field>
+            <field name="res_model">kojto.offer.content.import.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="view_kojto_offer_content_import_wizard_form"/>
+            <field name="context">{'default_offer_id': active_id, 'form_view_initial_mode': 'edit'}</field>
+        </record>
+    </data>
+</odoo>

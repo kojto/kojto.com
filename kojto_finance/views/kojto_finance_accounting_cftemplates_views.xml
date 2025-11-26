@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounting_cftemplates_list">
+            <field name="name">kojto.finance.accounting.cftemplates.list</field>
+            <field name="model">kojto.finance.accounting.cftemplates</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_finance_accounting_cftemplates_list">
+                    <field name="name" />
+                    <field name="cash_flow_type" />
+                    <field name="debit_account_id" />
+                    <field name="credit_account_id" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounting_cftemplates_form">
+            <field name="name">kojto.finance.accounting.cftemplates.form</field>
+            <field name="model">kojto.finance.accounting.cftemplates</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_accounting_cftemplates_form">
+                    <sheet class="ko-form-body">
+                        <div class="row">
+                            <group class="col-lg-6 col-md-7 col-sm-9">
+                                <field name="name" />
+                                <field name="cash_flow_type" />
+                                <field name="debit_account_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="credit_account_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounting_cftemplates_search">
+            <field name="name">kojto.finance.accounting.cftemplates.search</field>
+            <field name="model">kojto.finance.accounting.cftemplates</field>
+            <field name="arch" type="xml">
+                <search string="Cash Flow Templates">
+                    <field name="name" />
+                    <field name="cash_flow_type" />
+                    <field name="debit_account_id" />
+                    <field name="credit_account_id" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_accounting_cftemplates">
+            <field name="name">Cash Flow Templates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.accounting.cftemplates</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new cash flow template</p>
+            </field>
+        </record>
+    </data>
+</odoo>

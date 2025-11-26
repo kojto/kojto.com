@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+            <field name="name">kojto.landingpage.form.inherit</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 00 ']" position="after">
+                    <!-- Codes -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_comission_codes_list_view" type="object" class="btn landing_page_button" style="color: #198754;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #198754;">
+                                    <path
+                                        d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5M3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0z" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #198754;">Codes</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

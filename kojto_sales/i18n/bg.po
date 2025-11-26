@@ -1,0 +1,634 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_sales
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:45+0000\n"
+"PO-Revision-Date: 2025-08-11 07:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_sales
+#: model:ir.actions.report,print_report_name:kojto_sales.print_kojto_sale_leads
+msgid "'SalesLeads_' + object.get_kojto_sales_leads_report_filename()"
+msgstr "SalesLeads_' + object.get_kojto_sales_leads_report_filename()"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #dc3545;\">Sales</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #dc3545;\">Продажби</span>"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "<span>SaleLeads # </span>"
+msgstr ""
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "<strong>Issued by</strong>"
+msgstr "<strong>Издадено от</strong>"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "<strong>Issued to</strong>"
+msgstr "<strong>Издадено на</strong>"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__action_ids
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__active
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Active Sale Leads"
+msgstr "Активни потенциални клиенти за продажба"
+
+#. module: kojto_sales
+#: model_terms:ir.actions.act_window,help:kojto_sales.action_kojto_sale_leads
+msgid "Add Sale Lead Documents"
+msgstr "Добавяне на документи за продажба"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__address_id
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_sales
+#: model:ir.ui.menu,name:kojto_sales.menu_kojto_sale_leads
+msgid "All Sale Leads"
+msgstr "Всички потенциални клиенти за продажба"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__architect
+msgid "Architect"
+msgstr "Архитект"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__attachment_ids
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__bank_account_id
+msgid "Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "CONTENT"
+msgstr "СЪДЪРЖАНИЕ"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__call
+msgid "Call"
+msgstr "Обадете се"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__cancelled
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Cancelled"
+msgstr "Отменено"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__channel
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Channel"
+msgstr "Канал"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "City"
+msgstr "град"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__client
+msgid "Client"
+msgstr "Клиент"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__counterparty_lead_comment
+msgid "Comment"
+msgstr "Коментирайте"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__competitor
+msgid "Competitor"
+msgstr "Състезател"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__consultant
+msgid "Consultant"
+msgstr "Консултант"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__content_ids
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__contract
+msgid "Contract"
+msgstr "Договор"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__counterparty_ids
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__repr_html_counterparties
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Counterparties"
+msgstr "Контрагенти"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__counterparty_id
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__counterparty_type
+msgid "Counterparty Type"
+msgstr "Тип на контрагента"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Country"
+msgstr "Държава"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__create_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__create_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__create_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__create_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__create_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__create_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_currency_id
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__description
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__description
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__display_name
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__display_name
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__display_name
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__email_id
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__email
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__email
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__engineer
+msgid "Engineer"
+msgstr "Инженер"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Enter description here..."
+msgstr "Въведете описание тук..."
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__date_execution
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Execution Date"
+msgstr "Дата на изпълнение"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Expected Quantity"
+msgstr "Очаквано количество"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Expected Value"
+msgstr "Очаквана стойност"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__facade_contractor
+msgid "Facade Contractor"
+msgstr "Фасаден изпълнител"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__in_progress
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "In Progress"
+msgstr "В ход"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Inactive Sale Leads"
+msgstr "Неактивни потенциални клиенти за продажба"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__inquiry
+msgid "Inquiry"
+msgstr "Запитване"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__investor
+msgid "Investor"
+msgstr "Инвеститор"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_sales
+#: model:ir.model,name:kojto_sales.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_sales
+#: model:ir.model,name:kojto_sales.model_kojto_sale_lead_action
+msgid "Kojto Sale Lead Action"
+msgstr "Kojto Действия Потенциални клиенти "
+
+#. module: kojto_sales
+#: model:ir.model,name:kojto_sales.model_kojto_sale_lead_content
+msgid "Kojto Sale Lead Content"
+msgstr "Kojto Sale Водещо съдържание"
+
+#. module: kojto_sales
+#: model:ir.model,name:kojto_sales.model_kojto_sale_lead_counterparty
+msgid "Kojto Sale Lead Counterparty"
+msgstr "Kojto Sale Водещ контрагент"
+
+#. module: kojto_sales
+#: model:ir.model,name:kojto_sales.model_kojto_sale_leads
+msgid "Kojto Sale Leads"
+msgstr "Kojto Продажба води"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__last_sales_interaction_datetime
+msgid "Last Interaction"
+msgstr "Последно взаимодействие"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__write_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__write_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__write_uid
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__write_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__write_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__write_date
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__lost
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Lost"
+msgstr "Изгубен"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__main_contractor
+msgid "Main Contractor"
+msgstr "Главен изпълнител"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "Managing director:"
+msgstr "Управляващ директор:"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__meeting
+msgid "Meeting"
+msgstr "Среща"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__name_id
+msgid "Name on Document"
+msgstr "Име на документа"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__negotiation
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Negotiation"
+msgstr "Преговори"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__new
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "New"
+msgstr "Нов"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__next_sales_interaction_datetime
+msgid "Next Interaction"
+msgstr "Следващо взаимодействие"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__next_interaction_datetime
+msgid "Next Interaction Date"
+msgstr "Дата на следващо взаимодействие"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__next_interaction_description
+msgid "Next Interaction Description"
+msgstr "Описание на следващото взаимодействие"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__offer
+msgid "Offer"
+msgstr "Оферта"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__offer_ids
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Offers"
+msgstr "Оферти"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__online_meeting
+msgid "Online Meeting"
+msgstr "Онлайн среща"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__other
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_content__type__other
+msgid "Other"
+msgstr "други"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__phone_id
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__phone
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__phone_call
+msgid "Phone Call"
+msgstr "Телефонно обаждане"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__expected_project_value
+msgid "Price"
+msgstr "Цена"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__print_number
+msgid "Print Number"
+msgstr "Печат на номер"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_address
+msgid "Project Address"
+msgstr "Адрес на проекта"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_city
+msgid "Project City"
+msgstr "Проект Град"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_country_id
+msgid "Project Country"
+msgstr "Държава на проекта"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_name
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Project Name"
+msgstr "Име на проекта"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Project name"
+msgstr "Име на проекта"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__proposal_sent
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Proposal Sent"
+msgstr "Предложението е изпратено"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__qualified
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Qualified"
+msgstr "Квалифицирани"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__expected_project_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__registration_number
+msgid "Registration Number"
+msgstr "Регистрационен номер"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__registration_number_type
+msgid "Registration Number Type"
+msgstr "Тип регистрационен номер"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__role
+msgid "Role"
+msgstr "Роля"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__sms
+msgid "SMS"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__lead_id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__sale_lead_id
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__sale_lead_id
+msgid "Sale Lead"
+msgstr "Продажби"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Sale Lead #"
+msgstr "Възможен клиент #"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Sale Lead Documents"
+msgstr "Водещи документи за продажба"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__name
+msgid "Sale Lead Nr"
+msgstr "Продажба №"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Sale Lead №"
+msgstr "Продажба №"
+
+#. module: kojto_sales
+#: model:ir.actions.act_window,name:kojto_sales.action_kojto_sale_leads
+msgid "Sale Leads"
+msgstr "Водещи продажби"
+
+#. module: kojto_sales
+#: model:ir.actions.report,name:kojto_sales.print_kojto_sale_leads
+msgid "SaleLeads"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.ui.menu,name:kojto_sales.menu_kojto_sale_leads_parent
+msgid "Sales"
+msgstr "Продажби"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__skype
+msgid "Skype"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__date_start
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__date_start
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__status
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__subject
+msgid "Subject"
+msgstr "Предмет"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_counterparty__tax_number_id
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__telegram
+msgid "Telegram"
+msgstr "Телеграма"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "Thank you for your business!"
+msgstr "Благодаря ви за вашия бизнес!"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_content__type
+#: model_terms:ir.ui.view,arch_db:kojto_sales.report_kojto_sales
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_leads__project_unit_id
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_counterparty__role__unknown
+msgid "Unknown"
+msgstr "Неизвестен"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Valid To"
+msgstr "Валиден до"
+
+#. module: kojto_sales
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_list
+msgid "Value"
+msgstr "Стойност"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__viber
+msgid "Viber"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__description
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "What was discussed"
+msgstr "Какво се обсъждаше"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_lead_action__channel__whatsapp
+msgid "Whatsapp"
+msgstr ""
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__date
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "When"
+msgstr "Кога"
+
+#. module: kojto_sales
+#: model:ir.model.fields,field_description:kojto_sales.field_kojto_sale_lead_action__contact_person
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_form
+msgid "Who"
+msgstr "СЗО"
+
+#. module: kojto_sales
+#: model:ir.model.fields.selection,name:kojto_sales.selection__kojto_sale_leads__status__won
+#: model_terms:ir.ui.view,arch_db:kojto_sales.view_kojto_sale_leads_search
+msgid "Won"
+msgstr "спечели"

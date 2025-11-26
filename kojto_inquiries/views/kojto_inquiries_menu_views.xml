@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<!-- Main Menu Items -->
+		<menuitem name="Inquiries" id="menu_kojto_inquiries_parent" sequence="50" />
+		<menuitem name="Inquiries" id="menu_kojto_inquiries" parent="menu_kojto_inquiries_parent" sequence="10" action="action_kojto_inquiries" />
+	</data>
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="kojto_pdf_1090_css_assets">
+            <style>
+						
+			body,
+			table {
+				font-family: "Roboto", sans-serif;
+				font-size: 12px;
+				/* Changed from 16px to 12px */
+			}
+
+			.header-table {
+				width: 100%;
+				border-collapse: collapse;
+				border-bottom: 1px solid black;
+				margin-bottom: 50px;
+			}
+
+			.logo-container {
+				text-align: right;
+			}
+
+			table {
+				width: 100%;
+				margin: 20px 0px;
+			}
+
+			.no_border_table,
+			.no_border_table td {
+				border: none;
+				border-collapse: collapse;
+				padding: 4px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+
+			.no_border_table .label-cell,
+			.content-table .label-cell {
+				font-weight: bold;
+			}
+
+			.content-table {
+				width: 100%;
+				border-collapse: collapse;
+				border: 1px solid black;
+				margin-bottom: 20px;
+			}
+
+			.content-table td {
+				padding: 4px;
+				text-align: left;
+				border: 1px solid black;
+			}
+
+			.detailed-table td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+
+			.table-9-columns td {
+				width: calc(100% / 9);
+			}
+
+			.table-9-columns td[colspan="3"] {
+				width: calc(100% / 3);
+			}
+
+			@media print {
+				.break_inside_avoid {
+					break-inside: avoid;
+				}
+			}
+
+			.label-cell {
+				width: 30%;
+			}
+
+			.value-cell {
+				width: 70%;
+			}
+
+            </style>
+    </template>
+</odoo>

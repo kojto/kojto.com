@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- kojto_profiles/views/kojto_profile_batches_views.xml -->
+<odoo>
+    <data>
+
+
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_profile_batches_list">
+            <field name="name">kojto.profile.batches.list</field>
+            <field name="model">kojto.profile.batches</field>
+            <field name="arch" type="xml">
+                <list string="Profile Batches" class="ko-list-main" duplicate="false">
+                    <field name="active" widget="boolean_toggle" string=" " class="d-flex justify-content-center"/>
+                    <field name="name" string="Batch №"/>
+                    <field name="description" string="Description"/>
+                    <field name="issued_by" string="Issued By"/>
+                    <field name="date_issue" string="Issue Date"/>
+                    <field name="total_batch_weight_gross"/>
+                    <field name="total_batch_weight_net"/>
+                    <field name="total_batch_pcs" string="Total Pcs"/>
+                    <field name="total_batch_process_time" string="Processing (hrs)"/>
+                    <button name="print_document_as_pdf" type="object" icon="fa-print" title="Export to PDF" class="btn"/>
+                    <button name="export_to_excel" type="object" icon="fa-file-excel-o" title="Export to Excel" class="btn"/>
+                    <button name="copy_and_open" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Profile" context="{'from_list_view': True}"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_profile_batches_form">
+            <field name="name">kojto.profile.batches.form</field>
+            <field name="model">kojto.profile.batches</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_profile_batches_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title">
+                                            <field name="name" class="ko-form-view-title"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 d-flex align-items-center">
+                                        <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge mx-auto"/>
+                                    </div>
+                                    <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <div class="dropdown ms-2">
+                                            <button class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Actions">
+                                                <i>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                        <path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z"/>
+                                                        <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5"/>
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                            <!-- Within the form view's dropdown-menu div -->
+                                            <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                                <button name="%(kojto_profiles.action_kojto_profile_configurator)d" string="Profile Configurator" type="action" class="dropdown-item" context="{'default_batch_id': id}"/>
+                                                <button name="print_document_as_pdf" string="Export PDF" type="object" class="dropdown-item"/>
+                                                <button name="export_to_excel" string="Export XLSX" type="object" class="dropdown-item"/>
+                                                <button name="action_import_batch_content" string="Import Content" type="object" class="dropdown-item"/>
+                                                <button name="%(kojto_profiles.action_kojto_profile_batch_import_wizard)d" string="Import Batch" type="action" class="dropdown-item"/>
+                                                <button name="%(kojto_profiles.action_kojto_profile_create_from_batch_wizard)d" string="Create from Batch" type="action" class="dropdown-item"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top"/>
+                        <div class="row">
+                            <group class="col-lg-4">
+                                <field name="subcode_id" string="Subcode" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <field name="subcode_description" string="Subcode Description"/>
+                                <field name="date_issue"/>
+                                <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <field name="total_batch_pcs" string="Total Pcs"/>
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="total_batch_weight_gross"/>
+                                <field name="total_batch_weight_net"/>
+                                <field name="total_batch_external_edges"/>
+                                <field name="total_batch_coating_area"/>
+                                <field name="total_batch_process_time" string="Process Time (hrs)"/>
+                            </group>
+                            <div class="col-lg-4">
+                                <field name="description" string="Description" placeholder="Add a batch description ..."/>
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator"/>
+                        <div class="col-lg-12">
+                            <notebook>
+                                <page string="Content">
+                                    <field name="batch_content_ids" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" limit="1000">
+                                            <field name="position"/>
+                                            <field name="profile_drawing" string="Drawing" widget="image" optional="show"/>
+                                            <field name="profile_id" string="Profile" widget="many2one" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}"/>
+                                            <field name="description" string="Description"/>
+                                            <field name="quantity" string="Quantity"/>
+                                            <field name="material_id" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}"/>
+                                            <field name="profile_weight" string="G (kg/m)"/>
+                                            <field name="length" string="L (mm)"/>
+                                            <field name="length_extension" string="Extension (mm)"/>
+                                            <field name="total_profile_length_net" string="Net (m)" help="Net total Length" optional="show"/>
+                                            <field name="total_profile_weight_net" string="Net (kg)" help="Net total weight" optional="show"/>
+                                            <field name="total_profile_process_time" string="Process Time (min)" help="Processing time" optional="show"/>
+                                            <button name="open_o2m_record" type="object" class="btn-link" icon="fa-external-link" invisible="not profile_id"/>
+                                            <button name="copy_content_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Row"/>
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Manufacturing Data">
+                                    <field name="batch_content_ids" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" limit="1000">
+                                            <field name="position"/>
+                                            <field name="profile_drawing" string="Drawing" widget="image" optional="show" alt="Profile Drawing"/>
+                                            <field name="profile_id" string="Profile" widget="many2one" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}"/>
+                                            <field name="length_extension" string="Extension (mm)" help="How much is the profile extension for manufacturing reasons"/>
+                                            <field name="total_profile_length_gross" string="Gross (m)" help="Gross total Length" optional="show"/>
+                                            <field name="total_profile_weight_gross" string="Gross (kg)" help="Gross total weight" optional="show"/>
+                                            <field name="total_profile_coating_area" string="U (m²)" help="Total coating area" optional="show"/>
+                                            <field name="number_ext_corners" string="Ext. Corners" help="Number of external corners" optional="show"/>
+                                            <button name="open_o2m_record" type="object" class="btn-link" icon="fa-external-link" invisible="not profile_id"/>
+                                            <button name="copy_content_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Row"/>
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_profile_batches_search">
+            <field name="name">kojto.profile.batches.search</field>
+            <field name="model">kojto.profile.batches</field>
+            <field name="arch" type="xml">
+                <search string="Profile Batches">
+                    <field name="name" string="Batch Name"/>
+                    <field name="description" string="Description"/>
+                    <field name="subcode_id" string="Subcode"/>
+                    <field name="date_issue" string="Issue Date"/>
+                    <field name="issued_by" string="Issued By"/>
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                    <filter string="With Positions" name="has_positions" domain="[('batch_content_ids', '!=', False)]"/>
+                    <filter string="By Subcode" name="by_subcode" domain="[('subcode_id', '!=', False)]"/>
+                    <separator/>
+                    <filter name="today_batches" string="Today" domain="[('date_issue', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_week_batches" string="This Week" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_month_batches" string="This Month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+                    <filter name="last_month_batches" string="Last Month" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_issue', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Batch Name" name="group_by_name" context="{'group_by': 'name'}"/>
+                        <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                        <filter string="Issue Date" name="group_by_date" context="{'group_by': 'date_issue'}"/>
+                        <filter string="Issued By" name="group_by_issued_by" context="{'group_by': 'issued_by'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_profile_batches">
+            <field name="name">Profile Batches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.profile.batches</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_kojto_profile_batches_search"/>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new profile batch to manage collections of profiles with specific lengths and quantities.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

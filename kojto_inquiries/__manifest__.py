@@ -1,0 +1,20 @@
+{
+    "name": "Kojto Inquiries",
+    "version": "18.04.07",
+    "description": "Inquiry management module for creating and managing customer inquiries with content import functionality and reporting",
+    "author": "KOJTO",
+    "website": "https://www.kojto.com",
+    "category": "KOJTO",
+    "depends": ["kojto_hr"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/kojto_inquiries_view.xml",
+        "views/kojto_inquiries_menu_views.xml",
+        "views/kojto_inquiries_buttons.xml",
+        "views/kojto_inquiry_content_import_wizard_views.xml",
+        "reports/kojto_inquiries_reports.xml",
+        "reports/kojto_inquiries_templates.xml",
+    ],
+    "installable": True,
+    "application": True,
+}

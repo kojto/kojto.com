@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_kojto_hr_time_tracking_list" model="ir.ui.view">
+            <field name="name">kojto.hr.time.tracking.list</field>
+            <field name="model">kojto.hr.time.tracking</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_hr_time_tracking_list" editable="top" default_order="datetime_start desc">
+                    <field name="employee_id" optional="show"/>
+                    <field name="employee_name_2" optional="show"/>
+                    <field name="subcode_id" domain="[('show_in_hr_tracking', '=', True)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    <field name="subcode_description" optional="show"/>
+                    <field name="datetime_start" widget="datetime" />
+                    <field name="datetime_end" widget="datetime" />
+                    <field name="comment" />
+                    <field name="total_hours" />
+                </list>
+            </field>
+        </record>
+
+        <record id="view_kojto_hr_time_tracking_search" model="ir.ui.view">
+            <field name="name">kojto.hr.time.tracking.search</field>
+            <field name="model">kojto.hr.time.tracking</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id" />
+                    <field name="code_id" />
+                    <field name="subcode_id" />
+                    <filter name="current_month" string="Current Month"
+                        domain="[('datetime_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('datetime_start', '&lt;', ((context_today() + relativedelta(months=1)).strftime('%Y-%m-01')))]"/>
+                    <filter name="previous_month" string="Previous Month"
+                        domain="[('datetime_start', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('datetime_start', '&lt;', (context_today().strftime('%Y-%m-01'))) ]" />
+                    <filter name="current_week" string="This Week"
+                        domain="[('datetime_start', '&gt;=', (context_today() + relativedelta(weeks=-1, days=1, weekday=0)).strftime('%Y-%m-%d')), ('datetime_start', '&lt;=', (context_today() + relativedelta(weeks=0, weekday=6)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="last_week" string="Last Week"
+                        domain="[('datetime_start', '&gt;=', (context_today() + relativedelta(weeks=-2, days=1, weekday=0)).strftime('%Y-%m-%d')), ('datetime_start', '&lt;=', (context_today() + relativedelta(weeks=-1, weekday=6)).strftime('%Y-%m-%d'))]"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id', 'default_group_by': 1}" />
+                        <filter name="group_by_subcode" string="Subcode" context="{'group_by': 'subcode_id', 'default_group_by': 1}" />
+                        <filter name="group_by_code" string="Code" context="{'group_by': 'code_id', 'default_group_by': 1}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_kojto_hr_time_tracking_form" model="ir.ui.view">
+            <field name="name">kojto.hr.time.tracking.form</field>
+            <field name="model">kojto.hr.time.tracking</field>
+            <field name="arch" type="xml">
+                <form string="Time Tracking">
+                    <sheet>
+                        <group>
+                            <field name="employee_id" />
+                            <field name="subcode_id" />
+                            <field name="datetime_start" widget="datetime" />
+                            <field name="datetime_end" widget="datetime" />
+                            <field name="total_hours" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_kojto_hr_time_tracking_calendar" model="ir.ui.view">
+            <field name="name">kojto.hr.time.tracking.calendar</field>
+            <field name="model">kojto.hr.time.tracking</field>
+            <field name="arch" type="xml">
+                <calendar string="Time Tracking Calendar"
+                    date_start="datetime_start"
+                    date_stop="datetime_end"
+                    color="employee_id"
+                    form_view_id="view_kojto_hr_time_tracking_form"
+                    quick_create="1">
+                    <field name="employee_id" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant" />
+                </calendar>
+            </field>
+        </record>
+
+        <!-- Main action for the menu -->
+        <record id="action_kojto_hr_time_tracking" model="ir.actions.act_window">
+            <field name="name">Time Tracking</field>
+            <field name="res_model">kojto.hr.time.tracking</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_kojto_hr_time_tracking_list" />
+            <field name="search_view_id" ref="view_kojto_hr_time_tracking_search" />
+            <field name="target">current</field>
+        </record>
+
+        <!-- Main action for the menu -->
+        <record id="action_kojto_hr_time_tracking_calendar" model="ir.actions.act_window">
+            <field name="name">Time Tracking</field>
+            <field name="res_model">kojto.hr.time.tracking</field>
+            <field name="view_mode">calendar</field>
+            <field name="view_id" ref="view_kojto_hr_time_tracking_calendar" />
+            <field name="search_view_id" ref="view_kojto_hr_time_tracking_search" />
+            <field name="target">current</field>
+        </record>
+
+        <!-- Specific action for calendar event click -->
+        <record id="action_kojto_hr_time_tracking_form_popup" model="ir.actions.act_window">
+            <field name="name">Time Tracking Details</field>
+            <field name="res_model">kojto.hr.time.tracking</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_kojto_hr_time_tracking_form" />
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_finance_cashflow_allocation_list">
+            <field name="name">kojto.finance.cashflow.allocation.list</field>
+            <field name="model">kojto.finance.cashflow.allocation</field>
+            <field name="arch" type="xml">
+                <list string="Cashflow Allocations" default_order="id desc" class="ko-list-main">
+                    <field name="transaction_id"/>
+                    <field name="transaction_date"/>
+                    <field name="subcode_id"/>
+                    <field name="invoice_id"/>
+                    <field name="description"/>
+                    <field name="amount" />
+                    <field name="amount_base" string="Amount Doc."/>
+                    <field name="currency_id"/>
+                    <field name="exchange_rate_to_bgn"/>
+                    <field name="exchange_rate_to_eur"/>
+                    <field name="accounting_template_id"/>
+                    <field name="accounting_ref_number"/>
+                    <field name="subtype_id"/>
+                    <field name="cash_flow_only_inherited"/>
+                    <field name="cash_flow_only"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_cashflow_allocations">
+            <field name="name">Cashflow Allocations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.cashflow.allocation</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a Cashflow Allocation record</p>
+            </field>
+        </record>
+    </data>
+</odoo>

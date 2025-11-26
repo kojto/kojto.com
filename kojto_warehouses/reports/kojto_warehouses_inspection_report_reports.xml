@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="action_report_inspection_report" model="ir.actions.report">
+            <field name="name">Inspection Report</field>
+            <field name="model">kojto.warehouses.inspection.report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_warehouses.print_inspection_report</field>
+            <field name="report_file">kojto_warehouses.print_inspection_report</field>
+            <field name="print_report_name">'Inspection Report - %s' % (object.name)</field>
+            <field name="attachment">(object.name)</field>
+            <field name="binding_model_id" ref="model_kojto_warehouses_inspection_report"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>
+

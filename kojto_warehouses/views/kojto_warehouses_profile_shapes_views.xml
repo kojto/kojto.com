@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Profile Shapes List View -->
+    <record id="view_kojto_warehouses_profile_shapes_list" model="ir.ui.view">
+        <field name="name">kojto.warehouses.profile.shapes.list</field>
+        <field name="model">kojto.warehouses.profile.shapes</field>
+        <field name="arch" type="xml">
+            <list string="Profile Shapes" editable="bottom" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name" string="Profile Name"/>
+                <field name="standard" string="Standard"/>
+                <field name="cross_section" string="Cross Section (mm²)"/>
+                <field name="surface" string="Surface (m²)"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Profile Shapes Search View -->
+    <record id="view_kojto_warehouses_profile_shapes_search" model="ir.ui.view">
+        <field name="name">kojto.warehouses.profile.shapes.search</field>
+        <field name="model">kojto.warehouses.profile.shapes</field>
+        <field name="arch" type="xml">
+            <search string="Profile Shapes">
+                <field name="name"/>
+                <field name="standard"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Standard" name="group_by_standard" context="{'group_by': 'standard'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Profile Shapes Action -->
+    <record id="action_kojto_warehouses_profile_shapes" model="ir.actions.act_window">
+        <field name="name">Profile Shapes</field>
+        <field name="res_model">kojto.warehouses.profile.shapes</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_warehouses_profile_shapes_list"/>
+        <field name="search_view_id" ref="view_kojto_warehouses_profile_shapes_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first profile shape
+            </p>
+            <p>
+                Define profile shapes to be used in bar items.
+            </p>
+        </field>
+    </record>
+</odoo>

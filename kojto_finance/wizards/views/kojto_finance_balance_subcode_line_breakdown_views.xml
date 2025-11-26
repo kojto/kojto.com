@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Subcode Balance Line Breakdown Form View -->
+        <record id="view_kojto_finance_balance_subcode_line_form" model="ir.ui.view">
+            <field name="name">kojto.finance.balance.subcode.line.form</field>
+            <field name="model">kojto.finance.balance.subcode.line</field>
+            <field name="arch" type="xml">
+                <form string="Subcode Balance Line" create="false" edit="false">
+                    <style>
+                        .o_form_buttons_view,
+                        .o_form_button_save,
+                        .o_form_button_cancel,
+                        button[name="save"],
+                        button[name="cancel"],
+                        .o_form_statusbar,
+                        .o_form_sheet_bg footer {
+                            display: none !important;
+                        }
+                    </style>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="date_from" invisible="1"/>
+                    <field name="date_to" invisible="1"/>
+                    <div class="w-100 px-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_from" string="From Date"/>
+                                <field name="date_from" readonly="1"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_to" string="To Date"/>
+                                <field name="date_to" readonly="1"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="subcode_id" string="Subcode"/>
+                                <field name="subcode_id" readonly="1"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <button name="action_export_breakdown_to_excel" string="Export to Excel" type="object" class="btn-primary"/>
+                            </div>
+                        </div>
+                    </div>
+                    <notebook>
+                        <page string="Outgoing Pre-VAT Total">
+                            <field name="outgoing_pre_vat_total_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main" string="Outgoing Pre-VAT Breakdown">
+                                    <field name="invoice_id"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_id"/>
+                                    <field name="unit_price"/>
+                                    <field name="pre_vat_total"/>
+                                    <field name="currency_id"/>
+                                    <field name="value_in_eur"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Incoming Pre-VAT Total">
+                            <field name="incoming_pre_vat_total_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main" string="Incoming Pre-VAT Breakdown">
+                                    <field name="invoice_id"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_id"/>
+                                    <field name="unit_price"/>
+                                    <field name="pre_vat_total"/>
+                                    <field name="currency_id"/>
+                                    <field name="value_in_eur"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Invoiceless Revenue">
+                            <field name="invoiceless_revenue_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main balance-table" string="Invoiceless Revenue Breakdown">
+                                    <field name="transaction_id"/>
+                                    <field name="transaction_date"/>
+                                    <field name="subcode_id"/>
+                                    <field name="invoice_id"/>
+                                    <field name="description"/>
+                                    <field name="amount"/>
+                                    <field name="amount_base" string="Amount Doc."/>
+                                    <field name="currency_id"/>
+                                    <field name="allocation_value_in_eur"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Invoiceless Expenses">
+                            <field name="invoiceless_expenses_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main balance-table" string="Invoiceless Expenses Breakdown">
+                                    <field name="transaction_id"/>
+                                    <field name="transaction_date"/>
+                                    <field name="subcode_id"/>
+                                    <field name="invoice_id"/>
+                                    <field name="description"/>
+                                    <field name="amount"/>
+                                    <field name="amount_base" string="Amount Doc."/>
+                                    <field name="currency_id"/>
+                                    <field name="allocation_value_in_eur"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Time Tracking Total">
+                            <field name="hr_time_tracking_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main balance-table" string="Time Tracking Breakdown">
+                                    <field name="employee_id"/>
+                                    <field name="subcode_id"/>
+                                    <field name="datetime_start"/>
+                                    <field name="datetime_end"/>
+                                    <field name="total_hours"/>
+                                    <field name="comment"/>
+                                    <field name="value_in_EUR"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Assets Total">
+                            <field name="assets_works_breakdown" nolabel="1" context="{'default_wizard_id': id}">
+                                <list class="ko-list-main" string="Assets Works Breakdown">
+                                    <field name="asset_id"/>
+                                    <field name="subcode_id"/>
+                                    <field name="datetime_start"/>
+                                    <field name="datetime_end"/>
+                                    <field name="quantity"/>
+                                    <field name="comment"/>
+                                    <field name="value_in_EUR"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

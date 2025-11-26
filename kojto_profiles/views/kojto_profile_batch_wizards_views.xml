@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_profiles/views/kojto_profile_batch_wizards_views.xml -->
+<odoo>
+    <record id="view_kojto_profile_create_from_batch_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.profile.create.from.batch.wizard.form</field>
+        <field name="model">kojto.profile.create.from.batch.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create from Batch">
+            <style> .modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+            <div class="row no-gutters" style="padding-right: 0; margin-right: 0;">
+                <div class="col-lg-6">
+                    <group>
+                        <field name="profile_ids" nolabel="1" widget="many2many_checkboxes" options="{'no_create': True, 'no_open': True, 'no_create_edit': True, 'no_quick_create': True}" />
+                        <field name="shape_ids" nolabel="1" widget="many2many_checkboxes" options="{'no_create': True, 'no_open': True, 'no_create_edit': True, 'no_quick_create': True}" />
+                    </group>
+                </div>
+                <div class="col-lg-6">
+                    <table style="border: none; border-collapse: collapse; border-style: none;">
+                        <tr style="border: none; border-style: none;">
+                            <td style="border: none; border-style: none;">
+                                <button name="action_create_1d_packages" string="1D Optimization" type="object" class="btn-primary" style="width: 150px; box-sizing: border-box;"/>
+                            </td>
+                        </tr>
+                        <tr style="border: none; border-style: none; height: 5px;"></tr>
+                        <tr style="border: none; border-style: none;">
+                            <td style="border: none; border-style: none;">
+                                <button name="action_create_2dr_packages" string="2DR Optimization" type="object" class="btn-primary" style="width: 150px; box-sizing: border-box;"/>
+                            </td>
+                        </tr>
+                        <tr style="border: none; border-style: none; height: 5px;"></tr>
+                        <tr style="border: none; border-style: none;">
+                            <td style="border: none; border-style: none;">
+                                <button name="action_create_offer" string="Offer" type="object" class="btn-primary" style="width: 150px; box-sizing: border-box;"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <footer>
+                <button string="Cancel" class="btn-secondary mb-2" special="cancel" style="width: 150px; box-sizing: border-box;"/>
+            </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_kojto_profile_create_from_batch_wizard" model="ir.actions.act_window">
+        <field name="name">Create from Batch</field>
+        <field name="res_model">kojto.profile.create.from.batch.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_kojto_profile_create_from_batch_wizard_form"/>
+        <field name="context">{'default_batch_id': active_id, 'form_view_initial_mode': 'edit'}</field>
+    </record>
+
+
+
+    <!-- Wizard Form View for kojto.profile.batch.content.import.wizard -->
+    <record id="view_kojto_profile_batch_content_import_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.profile.batch.content.import.wizard.form</field>
+        <field name="model">kojto.profile.batch.content.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Batch Content">
+                <style>.modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <group>
+                    <field name="package_id" readonly="1" string="Batch"/>
+                    <field name="data" widget="text" placeholder="Paste data here (Position;Profile;Length;Quantity;LengthExtension;Description)" string="Content Data"/>
+                </group>
+                <footer>
+                    <button name="action_import" string="Import" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Form View for kojto.profile.batch.import.wizard -->
+    <record id="view_kojto_profile_batch_import_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.profile.batch.import.wizard.form</field>
+        <field name="model">kojto.profile.batch.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Batch Content">
+                <style>.modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <group>
+                    <field name="target_batch_id" readonly="1"/>
+                    <field name="batch_id" options="{'no_create': True, 'no_open': True}" domain="[('id', '!=', context.get('active_id'))]"/>
+                </group>
+                <footer>
+                    <button name="action_import_selected_batch_content" string="Import" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Action for kojto.profile.batch.import.wizard -->
+    <record id="action_kojto_profile_batch_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import Batch Content</field>
+        <field name="res_model">kojto.profile.batch.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_kojto_profile_batch_import_wizard_form"/>
+    </record>
+</odoo>

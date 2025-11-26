@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem id="menu_kojto_hr_face_recognition" name="Time Tracking Image" parent="kojto_hr.menu_kojto_hr_employees_parent" action="action_kojto_hr_face_recognition" sequence="25" />
+
+        <menuitem id="menu_kojto_hr_terminal" name="Terminal" parent="kojto_hr.menu_kojto_hr_employees_parent" action="action_kojto_hr_terminal_server" sequence="26" />
+    </data>
+</odoo>

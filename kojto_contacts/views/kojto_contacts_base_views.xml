@@ -1,0 +1,76 @@
+<!-- kojto_contacts/views/kojto_contacts_base_views.xml -->
+<odoo>
+    <data>
+        <!-- Inherited Bank Accounts List View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_bank_accounts_list_inherit">
+            <field name="name">kojto.base.bank.accounts.list.inherit</field>
+            <field name="model">kojto.base.bank.accounts</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_bank_accounts_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="contact_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherited Bank Accounts Form View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_bank_accounts_form_inherit">
+            <field name="name">kojto.base.bank.accounts.form.inherit</field>
+            <field name="model">kojto.base.bank.accounts</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_bank_accounts_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <field name="contact_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherited Tax Numbers List View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_tax_numbers_list_inherit">
+            <field name="name">kojto.base.tax.numbers.list.inherit</field>
+            <field name="model">kojto.base.tax.numbers</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_tax_numbers_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="contact_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherited Tax Numbers Form View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_tax_numbers_form_inherit">
+            <field name="name">kojto.base.tax.numbers.form.inherit</field>
+            <field name="model">kojto.base.tax.numbers</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_tax_numbers_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <field name="contact_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherited Certificates List View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_certificates_list_inherit">
+            <field name="name">kojto.base.certificates.list.inherit</field>
+            <field name="model">kojto.base.certificates</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_certificates_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="contact_id" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Inherited Certificates Form View to add contact_id field -->
+        <record model="ir.ui.view" id="view_kojto_base_certificates_form_inherit">
+            <field name="name">kojto.base.certificates.form.inherit</field>
+            <field name="model">kojto.base.certificates</field>
+            <field name="inherit_id" ref="kojto_base.view_kojto_base_certificates_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <field name="contact_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

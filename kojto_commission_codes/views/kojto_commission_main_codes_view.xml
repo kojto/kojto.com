@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List view for Main Codes -->
+    <record id="view_kojto_commission_main_codes_list" model="ir.ui.view">
+        <field name="name">main.code.list</field>
+        <field name="model">kojto.commission.main.codes</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" editable="top">
+                <field name="active" string="Is Active" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="maincode" />
+                <field name="description" />
+                <field name="cash_flow_only" string="Cash Flow only" widget="boolean_toggle" class="w-100 d-flex justify-content-left" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Form view for Main Codes -->
+    <record id="view_kojto_commission_main_codes_form" model="ir.ui.view">
+        <field name="name">kojto.commission.main.codes.form</field>
+        <field name="model">kojto.commission.main.codes</field>
+        <field name="arch" type="xml">
+            <form class="ko-form-main">
+                <sheet class="ko-form-body">
+                    <div class="d-flex align-items-center">
+                        <div class="ko-form-view-title">
+                            <span>MAIN CODE</span>
+                        </div>
+                    </div>
+                    <!-- Header end -->
+                    <separator class="col-lg-12 separator" />
+                    <group class="col-lg-6">
+                        <field name="maincode" />
+                        <field name="description" />
+                        <field name="active" widget="boolean_toggle" />
+                        <field name="cash_flow_only" widget="boolean_toggle" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="view_maincode_search">
+        <field name="name">kojto.commission.main.codes.search</field>
+        <field name="model">kojto.commission.main.codes</field>
+        <field name="arch" type="xml">
+            <search string="Code">
+                <field name="maincode" />
+                <field name="create_date" />
+                <filter name='active' string="Активни" domain="[('active', '=', True)]" />
+                <filter name='active' string="Неактивни" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action for Main Codes -->
+    <record id="action_kojto_commission_main_codes" model="ir.actions.act_window">
+        <field name="name">Main Codes</field>
+        <field name="res_model">kojto.commission.main.codes</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

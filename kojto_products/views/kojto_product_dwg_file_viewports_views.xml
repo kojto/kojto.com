@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- DWG File Viewports List View -->
+    <record id="view_kojto_product_dwg_file_viewport_list" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.viewport.list</field>
+        <field name="model">kojto.product.dwg.file.viewport</field>
+        <field name="arch" type="xml">
+            <list string="DWG File Viewports">
+                <field name="name"/>
+                <field name="dwg_file_id"/>
+                <field name="scale"/>
+                <field name="created_date"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- DWG File Viewports Form View -->
+    <record id="view_kojto_product_dwg_file_viewport_form" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.viewport.form</field>
+        <field name="model">kojto.product.dwg.file.viewport</field>
+        <field name="arch" type="xml">
+            <form string="DWG File Viewport">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="dwg_file_id"/>
+                            <field name="scale"/>
+                        </group>
+                        <group>
+                            <field name="created_date"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <group string="Viewport Image">
+                        <field name="viewport_image"/>
+                    </group>
+                    <group string="Position and Dimensions">
+                        <group>
+                            <field name="x_position"/>
+                            <field name="y_position"/>
+                        </group>
+                        <group>
+                            <field name="width"/>
+                            <field name="height"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- DWG File Viewports Search View -->
+    <record id="view_kojto_product_dwg_file_viewport_search" model="ir.ui.view">
+        <field name="name">kojto.product.dwg.file.viewport.search</field>
+        <field name="model">kojto.product.dwg.file.viewport</field>
+        <field name="arch" type="xml">
+            <search string="Search DWG File Viewports">
+                <field name="name"/>
+                <field name="dwg_file_id"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="DWG File" name="group_by_dwg_file" context="{'group_by': 'dwg_file_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- DWG File Viewports Action -->
+    <record id="action_kojto_product_dwg_file_viewport" model="ir.actions.act_window">
+        <field name="name">DWG File Viewports</field>
+        <field name="res_model">kojto.product.dwg.file.viewport</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first DWG File Viewport
+            </p>
+        </field>
+    </record>
+</odoo>
+

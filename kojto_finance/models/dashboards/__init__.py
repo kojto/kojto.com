@@ -1,0 +1,7 @@
+from . import kojto_finance_asset_works_dashboard
+from . import kojto_finance_cashflow_dashboard
+from . import kojto_finance_counterparty_balance_dashboard
+from . import kojto_finance_open_amount_dashboard
+from . import kojto_finance_revenue_expense_dashboard
+from . import kojto_finance_time_tracking_dashboard
+from . import kojto_finance_vat_balance_dashboard

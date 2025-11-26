@@ -1,0 +1,2315 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_warehouses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:46+0000\n"
+"PO-Revision-Date: 2025-08-11 07:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_warehouses
+#: model:ir.actions.report,print_report_name:kojto_warehouses.action_report_inspection_report
+msgid "'Inspection Report - %s' % (object.name)"
+msgstr "Доклад от инспекция - %s' % (име на обект)"
+
+#. module: kojto_warehouses
+#: model:ir.actions.report,print_report_name:kojto_warehouses.print_kojto_warehouses_receipt
+msgid "'RECEIPT_' + object.name"
+msgstr "RECEIPT_' + object.name"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "---- END OF INSPECTION REPORT ----"
+msgstr "---- КРАЙ НА ДОКЛАДА ЗА ИНСПЕКЦИЯТА ----"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "---- END OF RECEIPT ----"
+msgstr "---- КРАЙ НА ПОЛУЧАВАНЕ ----"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #556B2F;\">Warehouses</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #556B2F;\">Складове</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "<span>CHECK LIST</span>"
+msgstr "<span>КОНТРОЛЕН СПИСЪК</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "<span>DESCRIPTION</span>"
+msgstr "<span>ОПИСАНИЕ</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "<span>INSPECTED ITEMS</span>"
+msgstr "<span>ПРОВЕРЕНИ АРТИКУЛИ</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "<span>INSPECTION NOTE</span>"
+msgstr "<span>БЕЛЕЖКА ПРИ ПРОВЕРКА</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "<span>INSPECTION REPORT # </span>"
+msgstr "<span>ДОКЛАД ЗА ИНСПЕКЦИЯ № </span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_form
+msgid "<span>RECEIPT</span>"
+msgstr "<span>РАЗПИСАНИЕ</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_form
+msgid "<span>TRANSACTION</span>"
+msgstr "<span>ТРАНЗАКЦИЯ</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "<span>TRANSACTIONS</span>"
+msgstr "<span>ТРАНЗАКЦИИ</span>"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "<span>WAREHOUSE RECEIPT # </span>"
+msgstr "<span>СКЛАДОВА РАЗПИСКА № </span>"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid "A batch with name '%s' already exists."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "A receipt with name '%s' already exists."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__accounting_identifier_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__accounting_identifier_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+msgid "Accounting Identifier"
+msgstr "Счетоводен идентификатор"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid "Accounting Identifier is required for batch '%s'."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__active
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Active + Type"
+msgstr "Активност + Тип"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Active Items"
+msgstr "Акивни"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Active Status"
+msgstr "Активност"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Add Transactions"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__notes
+msgid "Additional Notes"
+msgstr "Допълнителни бележки"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__company_address_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__company_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Advanced Grouping"
+msgstr "Разширено групиране"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__aluminum
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Al %"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "All transactions must be of the same type (To Store or From Store)."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "All transactions must match receipt type (%s). Invalid: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__allowed_parent_item_ids
+msgid "Allowed Parent Items"
+msgstr "Разрешени родителски елементи"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__aluminum
+msgid "Aluminum"
+msgstr "Алуминий"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Archived"
+msgstr "Архивирано"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__reduction_of_area
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Area red. Z (%)"
+msgstr "Зона червена. Z (%)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__aod
+msgid "Argon Oxygen Decarburization (AOD)"
+msgstr "Аргоново-кислородна декарбуризация (AOD)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inventory__identifier_type__asset
+msgid "Asset"
+msgstr "Актив"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__certificate_ids
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__repr_attachments
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__attachment_id
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Available Items"
+msgstr "Налични артикули"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__batch_type__bar
+msgid "Bar"
+msgstr "Прът"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Bar Items"
+msgstr "Листов материал"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid "Bar batch needs profile."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Bar items must have length."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Bar items need a batch with profile."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__bof
+msgid "Basic Oxygen Furnace (BOF)"
+msgstr "Основна кислородна пещ (BOF)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__batch_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__batch_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__batch_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__batch_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__batch_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Batch"
+msgstr "Партида"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Batch + Material"
+msgstr "Плавка + Материал"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Batch ID is required."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+msgid "Batch Name"
+msgstr "Име на партидата"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__batch_properties_ids
+msgid "Batch Properties"
+msgstr "Свойства на партидата"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__batch_summary
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+msgid "Batch Summary"
+msgstr "Резюме на партидата"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_batches
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__batch_ids
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_batches
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Batches"
+msgstr "Партиди"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__boron
+msgid "Boron"
+msgstr "Бор"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hb
+msgid "Brinell Hardness"
+msgstr "Твърдост по Бринел"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__carbon_equivalent
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "CE %"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Cannot assign transactions already linked: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_inspection_report.py:0
+msgid "Cannot confirm report without items."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Cannot create receipt. Transactions already linked: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_inspection_report.py:0
+msgid "Cannot delete confirmed or rejected reports."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "Cannot delete transaction %s as it is linked to receipt %s."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Cannot unset batch ID."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__carbon
+msgid "Carbon"
+msgstr "Въглерод"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__carbon_equivalent
+msgid "Carbon Equivalent (EN 1011-2)"
+msgstr "Въглероден еквивалент (EN 1011-2)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_certificates__certificate_type__certificate
+msgid "Certificate"
+msgstr "Сертификат"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+msgid "Certificate Name"
+msgstr "Име на сертификата"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_certificates
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__certificate_ids
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_certificates
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Certificates"
+msgstr "Сертификати"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Checks performed"
+msgstr "Извършени проверки"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Chemical Composition"
+msgstr "Химичен състав"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__chemical_composition_summary
+msgid "Chemical Composition Summary"
+msgstr "Резюме на химичния състав"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__chromium
+msgid "Chromium"
+msgstr "Хром"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Clear Reservation"
+msgstr "Изчистване на резервацията"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__cobalt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Co %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__cobalt
+msgid "Cobalt"
+msgstr "Кобалт"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__thermal_expansion
+msgid "Coefficient of Thermal Expansion"
+msgstr "Коефициент на топлинно разширение"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__reservation_comment
+msgid "Comment"
+msgstr "Коментар"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__part_type__common
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_items__part_type__common
+msgid "Common"
+msgstr "Чести"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__company_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Company Information"
+msgstr "Информация за компанията"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_inspection_report.py:0
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Company contact not found."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inspection_report__status__confirmed
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Confirmed"
+msgstr "Потвърдено"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__unit_price_conversion_rate
+msgid "Conversion Rate"
+msgstr "Коефициент на реализация"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__copper
+msgid "Copper"
+msgstr "Мед"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__chromium
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Cr %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+msgid "Create IR"
+msgstr "Създайте IR"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_create_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+msgid "Create Inspection Report"
+msgstr "Създайте доклад за инспекция"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Create Outgoing Transaction of this item"
+msgstr "Създайте изходяща транзакция на този артикул"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_form
+msgid "Create Receipt"
+msgstr "Създаване на разписка"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_create_inspection_report
+msgid "Create a new inspection report"
+msgstr "Създайте нов доклад за проверка"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_form
+msgid "Create receipt"
+msgstr "Създаване на разписка"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_batches
+msgid "Create your first batch!"
+msgstr "Създайте своята първа партида!"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_certificates
+msgid "Create your first certificate!"
+msgstr "Създайте своя първи сертификат!"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_inspection_report
+msgid "Create your first inspection report"
+msgstr "Създайте първия си доклад за проверка"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_items
+msgid "Create your first item!"
+msgstr "Създайте първия си артикул!"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_profile_shapes
+msgid "Create your first profile shape"
+msgstr "Създайте първата си профилна форма"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_receipts
+msgid "Create your first receipt!"
+msgstr "Създайте първата си складова разписка!"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_transactions
+msgid "Create your first transaction!"
+msgstr "Създайте първата си транзакция!"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_inventory
+msgid "Create your first warehouse inventory record"
+msgstr "Създайте първия си запис на складови наличности"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__create_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "Created from transactions: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__create_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__cross_section
+msgid "Cross Section (mm2)"
+msgstr "Напречно сечение (mm2)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_list
+msgid "Cross Section (mm²)"
+msgstr "Напречно сечение (mm²)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__copper
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Cu %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__current_item_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Current Qty"
+msgstr "Текущо кол"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__current_batch_quantity
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__current_quantity
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Current Quantity"
+msgstr "Текущо количество"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Current Quantity Range"
+msgstr "Текущ диапазон на количеството"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__current_value
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+msgid "Current Value"
+msgstr "Текуща стойност"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__current_batch_value
+msgid "Current Value (BGN)"
+msgstr "Текуща стойност (лева)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "DETAILS"
+msgstr "ПОДРОБНОСТИ"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__date_issued
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+msgid "Date Issued"
+msgstr "Дата на издаване"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Declaration"
+msgstr "Декларация"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__declaration_note
+msgid "Declaration Note"
+msgstr "Забележка към декларацията"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_certificates__certificate_type__conformity
+msgid "Declaration of Conformity"
+msgstr "Декларация за съответствие"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__declaration_ok
+msgid "Declaration of Conformity OK"
+msgstr "Декларация за съответствие OK"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_profile_shapes
+msgid "Define profile shapes to be used in bar items."
+msgstr ""
+"Определете профилните форми, които да се използват в елементите на лентата."
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__description
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__description
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__description
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__description
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__to_from_store
+msgid "Direction"
+msgstr "Посока"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__display_name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inspection_report__status__draft
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Draft"
+msgstr "Чернова"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__young_modulus
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "E (GPa)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__eaf
+msgid "Electric Arc Furnace (EAF)"
+msgstr "Електродъгова пещ (EAF)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__electrical_resistivity
+msgid "Electrical Resistivity"
+msgstr "Електрическо съпротивление"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__electroslag
+msgid "Electroslag Remelting (ESR)"
+msgstr "Електрошлаково претопяване (ESR)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__elongation
+msgid "Elongation at Break (A)"
+msgstr "Удължение при скъсване (A)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__company_email_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__company_email_id
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Enter additional notes..."
+msgstr "Въведете допълнителни бележки..."
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__part_type__fastener
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_items__part_type__fastener
+msgid "Fastener"
+msgstr "Крепеж"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__iron
+msgid "Fe %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Filters"
+msgstr "Филтри"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_form
+msgid "From"
+msgstr "От"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_receipts__to_from_store__from_store
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_transactions__to_from_store__from_store
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "From Store"
+msgstr "От склада"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "G (kg)"
+msgstr "G (кг)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "General Note"
+msgstr "Обща бележка"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inventory__identifier_type__goods
+msgid "Goods"
+msgstr "Стоки"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hb
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "HB"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hrc
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "HRC"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hv
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "HV"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__heat_number
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Heat Number"
+msgstr "Плавка"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "ISSUED BY"
+msgstr "ИЗДАДЕНО ОТ"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__identifier
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__identifier_type
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+msgid "Identifier Type"
+msgstr "Тип идентификатор"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__impact_energy
+msgid "Impact Energy at specified temperature"
+msgstr "Енергия на удара при определена температура"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__impact_energy
+msgid "Impact KV (J)"
+msgstr "Удар KV (J)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__to_from_store
+msgid "In / Out"
+msgstr "Вход / Изход"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Inactive Items"
+msgstr "Неактивни"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__induction
+msgid "Induction Melting"
+msgstr "Индукционно топене"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__inspected_by
+msgid "Inspected By"
+msgstr "Проверен от"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "Inspected by:"
+msgstr "Проверен от:"
+
+#. module: kojto_warehouses
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_inspection_report
+msgid "Inspection"
+msgstr "Инспекция"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Inspection Certificates"
+msgstr "Сертификати за проверка"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__inspection_certificates_note
+msgid "Inspection Certificates Note"
+msgstr "Сертификати за проверка Забележка"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__inspection_certificates_ok
+msgid "Inspection Certificates OK"
+msgstr "Сертификати за инспекция ОК"
+
+#. module: kojto_warehouses
+#: model:ir.actions.report,name:kojto_warehouses.action_report_inspection_report
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__inspection_report_ids
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__inspection_report_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Inspection Report"
+msgstr "Доклад от проверката"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_inspection_report
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__inspection_report_ids
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_list
+msgid "Inspection Reports"
+msgstr "Доклади от инспекции"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Inspector"
+msgstr "Инспектор"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "Invalid item ID."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"Invalid subcode for To Store transaction.\n"
+"Batch '%s' does not have a subcode from its invoice content.\n"
+"Current subcode: '%s'"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"Invalid subcode for To Store transaction.\n"
+"Batch '%s' has subcode '%s' from its invoice content.\n"
+"You must use this subcode for all To Store transactions without a parent.\n"
+"Current subcode: '%s'"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"Invalid subcode for To Store transaction.\n"
+"This item has a parent item, and its subcode must match the subcode of the parent's From Store transaction.\n"
+"Parent item: '%s' | Parent From Store subcode: '%s'\n"
+"Current subcode: '%s'"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"Invalid subcode for To Store transaction.\n"
+"This item has a parent item, but the parent does not have a From Store transaction with a subcode.\n"
+"Parent item: '%s'\n"
+"Current subcode: '%s'"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_inventory
+msgid "Inventory"
+msgstr "Инвентаризация"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__invoice_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Invoice"
+msgstr "Фактура"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__invoice_content_id
+msgid "Invoice Content"
+msgstr "Съдържание на фактурата"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid "Invoice Content is required for batch '%s'."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__invoice_note
+msgid "Invoice Note"
+msgstr "Бележка към фактурата"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__invoice_ok
+msgid "Invoice OK"
+msgstr "Фактура ОК"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid ""
+"Invoice content '%s' does not belong to invoice '%s'. Please select an "
+"invoice content from the selected invoice."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+msgid "Invoice is required for batch '%s'."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__iron
+msgid "Iron"
+msgstr "Желязо"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__active
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__active
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__active
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__active
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__active
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__is_part_type
+msgid "Is Part Type"
+msgstr "Тип part"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__date_issue
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__date_issue
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__issued_by
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Issued By"
+msgstr "Издадено от"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__date_issue
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Issued On"
+msgstr "Издадена на"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__issued_to
+msgid "Issued To"
+msgstr "Издадено на"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "Issued by:"
+msgstr "Издадено от:"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__date_issued
+msgid "Issued Date"
+msgstr "Издадена на"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__item_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Item"
+msgstr "Артикул"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Item %s created but initial transaction failed: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_inspection_report.py:0
+msgid "Item %s is already assigned to inspection report %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__item_description
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Item Description"
+msgstr "Описание на елемента"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Item Info"
+msgstr "Информация за артикула"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__item_summary
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__item_summary
+msgid "Item Summary"
+msgstr "Резюме на артикула"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Item Type"
+msgstr "Тип артикул"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Item type (%s) must match batch type (%s) for item %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_items
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__items_ids
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__item_ids
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_items
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Items"
+msgstr "Предмети"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items with Certificates"
+msgstr "Артикули със сертификати"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items with Parent"
+msgstr "Парчета"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items with Transactions"
+msgstr "Артикули с транзакции"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items without Certificates"
+msgstr "Артикули без сертификати"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items without Parent"
+msgstr "Цели артикули"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Items without Transactions"
+msgstr "Артикули без транзакции"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_batch_properties
+msgid "Kojto Warehouses Batch Properties"
+msgstr "Kojto Складове Партидни свойства"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "L (m)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__ladle_refining
+msgid "Ladle Refining"
+msgstr "Рафиниране на черпак"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__language_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__language_id
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__write_uid
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__write_date
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__length
+msgid "Length (mm)"
+msgstr "Дължина (mm)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Length Range"
+msgstr "Диапазон на дължината"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__mssql_2_entity_file_id
+msgid "MSSQL 2 Entity File ID"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__mssql_active
+msgid "MSSQL Is Active"
+msgstr "MSSQL е активен"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__mssql_stocking_id
+msgid "MSSQL Stocking ID"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__magnesium
+msgid "Magnesium"
+msgstr "Магнезий"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__manganese
+msgid "Manganese"
+msgstr "Манган"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__counterparty_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__counterparty_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+msgid "Manufacturer"
+msgstr "Производител"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batches__counterparty_id
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_certificates__counterparty_id
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_inspection_report__counterparty_id
+msgid "Manufacturer of the batch"
+msgstr "Производител на партидата"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__material_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__material_id
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inventory__identifier_type__material
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Material"
+msgstr "Материал"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Material + Type"
+msgstr "Материал + Тип"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__density
+msgid "Material Density"
+msgstr "Плътност на материала"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__material_grade_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Material Grade"
+msgstr "Клас на материала"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__material_grade_note
+msgid "Material Grade Note"
+msgstr "Бележка за класа на материала"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__material_grade_ok
+msgid "Material Grade OK"
+msgstr "Клас на материала ОК"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__material_note
+msgid "Material Note"
+msgstr "Забележка за материала"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__material_ok
+msgid "Material OK"
+msgstr "Материал ОК"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Material Reservations"
+msgstr "Материални резервации"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Mechanical Properties"
+msgstr "Механични свойства"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__mechanical_properties_summary
+msgid "Mechanical Properties Summary"
+msgstr "Резюме на механичните свойства"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__melting_process
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Melting Process"
+msgstr "Процес на топене"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__magnesium
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Mg %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__manganese
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Mn %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__molybdenum
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Mo %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__molybdenum
+msgid "Molybdenum"
+msgstr "Молибден"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__name
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__name
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__name_secondary
+msgid "Name Secondary"
+msgstr "Име Второстепенно"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__company_name_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__company_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__nickel
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Ni %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__nickel
+msgid "Nickel"
+msgstr "Никел"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__nitrogen
+msgid "Nitrogen"
+msgstr "Азот"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "No items available in batch %s for transaction creation."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "No transactions selected."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"No valid transactions available after re-validation. Some transactions may "
+"have been linked concurrently."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"No valid transactions available. All selected transactions are already "
+"linked to receipts."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "Not Specified"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "Note"
+msgstr "Забележка"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_certificates.py:0
+msgid "Only one PDF attachment is allowed per certificate."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__open_hearth
+msgid "Open Hearth Furnace"
+msgstr "Промишлена пещ"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Open Item Form"
+msgstr "Отворете формуляра за артикул"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__other
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__part_type__other
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_items__part_type__other
+msgid "Other"
+msgstr "Други"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__pdf_attachment_id
+msgid "PDF Attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__part_type__package
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_items__part_type__package
+msgid "Package"
+msgstr "Пакет"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Package Items"
+msgstr "Елементи от пакета"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+msgid "Parameter"
+msgstr "Параметър"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__parent_item_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__parent_item_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Parent Item"
+msgstr "Родителски елемент"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Parent item must belong to the same batch."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__batch_type__part
+msgid "Part"
+msgstr "Част"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Part Items"
+msgstr "Крепежи и др."
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__part_type
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__part_type
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Part Type"
+msgstr "Тип част"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Part items must have a weight override value."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__company_phone_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__company_phone_id
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__phosphorus
+msgid "Phosphorus"
+msgstr "Фосфор"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__poisson_ratio
+msgid "Poisson's Ratio (ν)"
+msgstr "Коефициент на Поасон (ν)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_form
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__profile_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__profile_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Profile"
+msgstr "Профил"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_list
+msgid "Profile Name"
+msgstr "Име на профил"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_profile_shapes
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_profile_shapes
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_profile_shapes
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_search
+msgid "Profile Shapes"
+msgstr "Профилни форми"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Properties"
+msgstr "Свойства"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__name
+msgid "Properties Name"
+msgstr "Име на свойства"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__name
+msgid "Protocol Number"
+msgstr "Номер на протокола"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__transaction_quantity
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__transaction_quantity_override
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__quantity_note
+msgid "Quantity Note"
+msgstr "Забележка за количеството"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__quantity_ok
+msgid "Quantity OK"
+msgstr "Количество ОК"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "RECEIPT DETAILS"
+msgstr "ПОДРОБНОСТИ ЗА ПОЛУЧАВАНЕТО"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+#: model:ir.actions.report,name:kojto_warehouses.print_kojto_warehouses_receipt
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__receipt_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Receipt"
+msgstr "Разписка"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_receipts
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_receipts
+msgid "Receipts"
+msgstr "Разписки"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__reduction_of_area
+msgid "Reduction of Area (Z)"
+msgstr "Намаляване на площта (Z)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_inspection_report__status__rejected
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Rejected"
+msgstr "Отхвърлено"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Reservation Status + Type"
+msgstr "Статус на резервацията + Тип"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__reservation_subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Reservation Subcode"
+msgstr "Подкод на резервация"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__reserved_by
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Reserved By"
+msgstr "Запазено от"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Reserved Items"
+msgstr "Резервирани артикули"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__reserved_datetime
+msgid "Reserved On"
+msgstr "Запазено на"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Reserved by Me"
+msgstr "Резервирано от мен"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__tensile_strength
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Rm (MPa)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hrc
+msgid "Rockwell C Hardness"
+msgstr "Твърдост по Рокуел C"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__yield_strength_0_2
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Rp 0.2% (MPa)"
+msgstr "Rp 0,2% (MPa)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__yield_strength_1_0
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Rp 1.0% (MPa)"
+msgstr "Rp 1,0% (MPa)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Search Inspection Reports"
+msgstr "Доклади от инспекции при търсене"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__name_secondary
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Secondary Name"
+msgstr "Вторично име"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Select Transactions"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_create_inspection_report
+msgid "Select a batch and items to create an inspection report."
+msgstr "Изберете партида и елементи, за да създадете доклад за проверка."
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Select batch"
+msgstr "Изберете партида"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"Selected transactions must all be of the same type (To Store or From Store)."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batches__batch_type__sheet
+msgid "Sheet"
+msgstr "Лист"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Sheet Items"
+msgstr "Прътов материал"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_batches.py:0
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Sheet batch needs thickness."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Sheet item %s needs material."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Sheet item %s needs valid dimensions."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Sheet items must have length, width, and thickness."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Sheet items need a batch and material."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__silicon
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Si %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+msgid "Signature"
+msgstr "Подпис"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__silicon
+msgid "Silicon"
+msgstr "Силиций"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__tin
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Sn %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__standard
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__standard
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_search
+msgid "Standard"
+msgstr "Стандарт"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__status
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_search
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__mssql_2_entity_file_stocking_id
+msgid "Stocking ID"
+msgstr "ID на склад"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__store_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__store_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_search
+msgid "Store"
+msgstr "Склад"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__subcode_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__sulfur
+msgid "Sulfur"
+msgstr "Сяра"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Summary"
+msgstr "Резюме"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Supplier"
+msgstr "Доставчик"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_certificates__certificate_type__supplier
+msgid "Supplier Declaration"
+msgstr "Декларация на доставчика"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__supplier_note
+msgid "Supplier Note"
+msgstr "Бележка на доставчика"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__supplier_ok
+msgid "Supplier OK"
+msgstr "Доставчикът е ОК"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_profile_shapes__surface
+msgid "Surface (m2/m)"
+msgstr "Площ (m2/m)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_profile_shapes_list
+msgid "Surface (m²)"
+msgstr "Площ (m²)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_certificates__certificate_type__surface
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Surface Defects"
+msgstr "Повърхностни дефекти"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__surface_defects_note
+msgid "Surface Defects Note"
+msgstr "Забележка за повърхностни дефекти"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__surface_defects_ok
+msgid "Surface Defects OK"
+msgstr "Повърхностни дефекти ОК"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__impact_temperature
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "T (°C)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__impact_temperature
+msgid "Temperature for Impact Test"
+msgstr "Температура за изпитване на удар"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__tensile_strength
+msgid "Tensile Strength (Rm)"
+msgstr "Якост на опън (Rm)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_certificates__certificate_type__test
+msgid "Test Report"
+msgstr "Доклад от теста"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Test Reports"
+msgstr "Доклади от тестове"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__test_reports_note
+msgid "Test Reports Note"
+msgstr "Забележка за докладите от тестовете"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inspection_report__test_reports_ok
+msgid "Test Reports OK"
+msgstr "Докладите от тестовете са ОК"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__thermal_conductivity
+msgid "Thermal Conductivity"
+msgstr "Топлопроводимост"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__thickness
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__thickness
+msgid "Thickness (mm)"
+msgstr "дебелина (mm)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Thickness Range"
+msgstr "Диапазон на дебелината"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__titanium
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Ti %"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__tin
+msgid "Tin"
+msgstr "Калай"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__titanium
+msgid "Titanium"
+msgstr "Титан"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_form
+msgid "To"
+msgstr "До"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_receipts__to_from_store__to_store
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_transactions__to_from_store__to_store
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "To Store"
+msgstr "Към склада"
+
+#. module: kojto_warehouses
+#: model_terms:ir.actions.act_window,help:kojto_warehouses.action_kojto_warehouses_inspection_report
+msgid "Track inspection reports for items in batches."
+msgstr "Проследявайте доклади от инспекции за артикули в партиди."
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__transaction_summary
+msgid "Transaction Summary"
+msgstr "Резюме на транзакцията"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Transaction Type"
+msgstr "Тип транзакция"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "Transaction batch ID must match item's batch ID."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_transactions
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__transaction_ids
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__transaction_ids
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_receipts__transaction_ids
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_transactions
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_receipts_form
+msgid "Transactions"
+msgstr "Транзакции"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "Transactions already linked to other receipts: %s"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__batch_type
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_certificates__certificate_type
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__item_type
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_certificates_search
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Type + Unit"
+msgstr "Тип + Единица"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__unit_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__unit_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__unit_id
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_transactions__transaction_unit_id
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_receipt
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__unit_price
+msgid "Unit Price"
+msgstr "Ед. цена"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batches__unit_price_converted
+msgid "Unit Price (BGN)"
+msgstr "Единична цена (лв.)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__vacuum_arc
+msgid "Vacuum Arc Remelting (VAR)"
+msgstr "Вакуумно дъгово претопяване (VAR)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields.selection,name:kojto_warehouses.selection__kojto_warehouses_batch_properties__melting_process__vacuum_induction
+msgid "Vacuum Induction Melting (VIM)"
+msgstr "Вакуумно индукционно топене (VIM)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+msgid "Value"
+msgstr "Стойност"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__vanadium
+msgid "Vanadium"
+msgstr "Ванадий"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__hardness_hv
+msgid "Vickers Hardness"
+msgstr "Твърдост по Викерс"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "W (m)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_batches
+msgid "Warehouse Batches"
+msgstr "Складови партиди"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_certificates
+msgid "Warehouse Certificates"
+msgstr "Складови сертификати"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_inspection_report
+msgid "Warehouse Inspection Report"
+msgstr "Доклад за проверка на склада"
+
+#. module: kojto_warehouses
+#: model:ir.actions.act_window,name:kojto_warehouses.action_kojto_warehouses_inventory
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_inventory
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_search
+msgid "Warehouse Inventory"
+msgstr "Складов инвентар"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_items
+msgid "Warehouse Items"
+msgstr "Складови артикули"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_receipts
+msgid "Warehouse Receipts"
+msgstr "Складови разписки"
+
+#. module: kojto_warehouses
+#: model:ir.model,name:kojto_warehouses.model_kojto_warehouses_transactions
+msgid "Warehouse Transactions"
+msgstr "Складови транзакции"
+
+#. module: kojto_warehouses
+#: model:ir.ui.menu,name:kojto_warehouses.menu_kojto_warehouses_parent
+msgid "Warehouses"
+msgstr "Складове"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__weight
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.print_inspection_report
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inspection_report_form
+msgid "Weight (kg)"
+msgstr "Тегло (кг)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Weight Range"
+msgstr "Диапазон на теглото"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "Weight calculation failed for sheet item %s."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_inventory__weighted_unit_price
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_form
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_inventory_list
+msgid "Weighted Unit Price"
+msgstr "Претеглена единична цена"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_items__width
+msgid "Width (mm)"
+msgstr "ширина (mm)"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_items_search
+msgid "Width Range"
+msgstr "Диапазон на ширината"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "With Receipt"
+msgstr "С разписка"
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_transactions_search
+msgid "Without Receipt"
+msgstr "Без разписка"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__yield_strength_0_2
+msgid "Yield Strength at 0.2% strain (Rp0.2)"
+msgstr "Граница на провлачване при 0,2% напрежение (Rp0,2)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__yield_strength_1_0
+msgid "Yield Strength at 1.0% strain (Rp1.0)"
+msgstr "Граница на провлачване при 1,0% напрежение (Rp1,0)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__young_modulus
+msgid "Young's Modulus (E)"
+msgstr "Модул на Йънг (E)"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,help:kojto_warehouses.field_kojto_warehouses_batch_properties__zinc
+msgid "Zinc"
+msgstr "Цинк"
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__zinc
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "Zn %"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid ""
+"[Item Model] For sheets and bars, transaction quantity must match the item's"
+" weight (%.2f kg)."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "[Item Model] Item %s has negative quantity: %.2f"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "[Item Model] The first transaction for item %s must be to store."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid ""
+"[Item Model] This transaction would result in negative quantity for item %s."
+" Current quantity would be: %.2f"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_items.py:0
+msgid "[Item Model] Transaction quantity must be positive."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"[Transaction Model] A transaction can only be linked to one receipt at a "
+"time."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"[Transaction Model] The first transaction for a job must be from store."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"[Transaction Model] The first transaction for an item must be to store."
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid ""
+"[Transaction Model] This transaction would result in negative quantity for "
+"item %s. Current quantity would be: %.2f"
+msgstr ""
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_transactions.py:0
+msgid "[Transaction Model] Transaction quantity must be positive."
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "impact KV (J)"
+msgstr "удар KV (J)"
+
+#. module: kojto_warehouses
+#. odoo-python
+#: code:addons/kojto_warehouses/models/kojto_warehouses_receipts.py:0
+msgid "receipt_id"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "t (mm)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__thermal_expansion
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "α (10⁻⁶/K)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__thermal_conductivity
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "λ (W/m·K)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__density
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "ρ (kg/m³)"
+msgstr ""
+
+#. module: kojto_warehouses
+#: model:ir.model.fields,field_description:kojto_warehouses.field_kojto_warehouses_batch_properties__electrical_resistivity
+#: model_terms:ir.ui.view,arch_db:kojto_warehouses.view_kojto_warehouses_batches_form
+msgid "ρ (Ω·m)"
+msgstr ""

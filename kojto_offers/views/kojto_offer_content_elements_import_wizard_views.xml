@@ -1,0 +1,33 @@
+<!-- Create a new file views/kojto_offer_content_elements_import_wizard_views.xml -->
+<odoo>
+    <data>
+        <!-- Wizard Form View -->
+        <record id="view_kojto_offer_content_elements_import_wizard_form" model="ir.ui.view">
+            <field name="name">kojto.offer.content.elements.import.wizard.form</field>
+            <field name="model">kojto.offer.content.elements.import.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Import Offer Content Elements">
+                    <style>.modal-dialog {max-width: 1000px !important; min-width: 1200px !important;}</style>
+                    <group>
+                        <field name="offer_id" readonly="1" string="Offer"/>
+                        <field name="data" widget="text" placeholder="Paste data here (Content Position\tPosition\tName\tConsolidation\tQuantity\tUnit Price)" string="Content Elements Data"/>
+                    </group>
+                    <footer>
+                        <button name="action_import" string="Import" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for the wizard -->
+        <record id="action_kojto_offer_content_elements_import_wizard" model="ir.actions.act_window">
+            <field name="name">Import Offer Content Elements</field>
+            <field name="res_model">kojto.offer.content.elements.import.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="view_kojto_offer_content_elements_import_wizard_form"/>
+            <field name="context">{'default_offer_id': active_id, 'form_view_initial_mode': 'edit'}</field>
+        </record>
+    </data>
+</odoo>

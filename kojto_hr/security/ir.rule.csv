@@ -1,0 +1,11 @@
+id,name,model_id,groups,domain_force,perm_create,perm_read,perm_write,perm_unlink
+,,,,,,,,
+rule_kojto_time_tracking_employee,Rule Kojto Hr Time Tracking Employee,kojto.hr.time.tracking,Kojto Employee,"[('user_id', '=', user.id)]",True,True,True,True
+rule_kojto_leave_management_employee,Rule Kojto Hr Leave Management Employee,kojto.hr.leave.management,Kojto Employee,"[('user_id', '=', user.id)]",True,False,True,True
+rule_kojto_business_trips_employee,Rule Kojto Hr Business Trips Employee,kojto.hr.business.trips,Kojto Employee,"[('user_id', '=', user.id)]",True,True,True,True
+rule_kojto_employees_employee,Rule Kojto Hr Employees Employee,kojto.hr.employees,Kojto Employee,"[('user_id', '=', user.id)]",True,True,True,True
+rule_kojto_calendar_event_employee,Rule Kojto Hr Calendar Event Employee,kojto.hr.calendar.event,Kojto Employee,"[('user_id', '=', user.id)]",True,True,True,True
+rule_kojto_hr_dashboard_employee,Rule Kojto Hr Dashboard Employee,kojto.hr.dashboard,Kojto Employee,"[('create_uid', '=', user.id)]",True,True,True,True
+rule_kojto_hr_dashboard_manager,Rule Kojto Hr Dashboard Manager,kojto.hr.dashboard,Kojto Manager,"[('create_uid', '=', user.id)]",True,True,True,True
+rule_kojto_employees_manager,Rule Kojto Hr Employees Employee,kojto.hr.employees,Kojto Manager,"[('user_id', '=', user.id)]",True,False,True,True
+rule_kojto_employees_administrator,Rule Kojto Hr Dashboard Administrator,kojto.hr.dashboard,Kojto Administrator,"[('create_uid', '=', user.id)]",True,True,True,True

@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <!-- List Views -->
+        <record model="ir.ui.view" id="view_kojto_finance_bank_statements_list">
+            <field name="name">kojto.finance.bank.statements.list</field>
+            <field name="model">kojto.finance.bank.statements</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_finance_bank_statements_list" create="false">
+                    <field name="name" optional='show' />
+                    <field name="statement_filename" optional='show' />
+                    <field name="date_start" optional='show'/>
+                    <field name="date_end" optional='show'/>
+                    <field name="start_balance" optional='show' />
+                    <field name="end_balance" optional='show' />
+                    <field name="number_of_transactions" optional='show' />
+                    <field name="status" optional='hide' />
+                </list>
+            </field>
+        </record>
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_finance_bank_statements_form">
+            <field name="name">kojto.finance.bank.statements.form</field>
+            <field name="model">kojto.finance.bank.statements</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_bank_statements_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>BANK STATEMENT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class='col-lg-12 separator' />
+                        <group>
+                            <field name="name" />
+                            <field name="number" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="start_balance" />
+                            <field name="end_balance" />
+                            <field name="number_of_transactions" />
+                            <field name="status" />
+                            <field name="comment" />
+                            <field name="uploader_id" />
+                            <field name="bank_account_id" />
+                            <field name="statement_file" />
+                            <field name="statement_filename" />
+                            <field name="statement_file_text" readonly="1" />
+                        </group>
+                        <separator class='col-lg-12 separator' />
+                        <group class="col-lg-6">
+                            <field name="tag_20" readonly="1" />
+                            <field name="tag_25" readonly="1" />
+                            <field name="tag_28" readonly="1" />
+                            <field name="tag_28c" readonly="1" />
+                            <field name="tag_60f" readonly="1" />
+                            <field name="tag_60m" readonly="1" />
+                            <field name="tag_62f" readonly="1" />
+                        </group>
+                        <group class="col-lg-6">
+                            <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search Views -->
+        <record model="ir.ui.view" id="view_kojto_finance_bank_statements_search">
+            <field name="name">kojto.finance.bank.statements.search</field>
+            <field name="model">kojto.finance.bank.statements</field>
+            <field name="arch" type="xml">
+                <search string="Bank Statements">
+                    <field name="bank_account_id" />
+                    <field name="number" />
+                    <field name="date_start" />
+                    <field name="date_end" />
+                </search>
+            </field>
+        </record>
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_bank_statements">
+            <field name="name">Bank Statements</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.bank.statements</field>
+            <field name="view_mode">list,form,pivot</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create</p>
+            </field>
+        </record>
+        <!-- Menu Items -->
+    </data>
+</odoo>

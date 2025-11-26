@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Existing list view -->
+		<record model="ir.ui.view" id="view_kojto_hr_working_days_list">
+			<field name="name">kojto.hr.working.days.list</field>
+			<field name="model">kojto.hr.working.days</field>
+			<field name="arch" type="xml">
+				<list class="ko-list-main view_kojto_hr_working_days_list" editable="bottom" default_order="date desc">
+					<field name="date"/>
+					<field name="is_working_day" widget="boolean_toggle"/>
+					<field name="day_type"/>
+					<field name="description"/>
+				</list>
+			</field>
+		</record>
+		<!-- New Calendar View -->
+		<record model="ir.ui.view" id="view_kojto_hr_working_days_calendar">
+			<field name="name">kojto.hr.working.days.calendar</field>
+			<field name="model">kojto.hr.working.days</field>
+			<field name="arch" type="xml">
+				<calendar date_start="date" mode="month" string="Working Days Calendar" color="day_type">
+					<field name="description"/>
+					<field name="is_working_day"/>
+					<field name="day_type" invisible="1"/>
+				</calendar>
+			</field>
+		</record>
+		<!-- Updated Search View with Year and Month Filters -->
+		<record model="ir.ui.view" id="view_kojto_hr_working_days_search">
+			<field name="name">kojto.hr.working.days.search</field>
+			<field name="model">kojto.hr.working.days</field>
+			<field name="arch" type="xml">
+				<search string="Working Days">
+					<field name="date"/>
+					<field name="is_working_day"/>
+					<field name="day_type"/>
+					<field name="description"/>
+					<!-- Year Filter -->
+					<filter name="filter_year" string="Year" domain="[]" context="{'group_by': 'date:year'}"/>
+					<!-- Month Filter within Year -->
+					<filter name="filter_month" string="Month" domain="[]" context="{'group_by': 'date:month'}"/>
+					<!-- Other filters -->
+					<filter name="working_days" string="Working Days" domain="[('is_working_day', '=', True)]"/>
+					<filter name="non_working_days" string="Non-Working Days" domain="[('is_working_day', '=', False)]"/>
+					<filter name="regular_days" string="Regular Days" domain="[('day_type', '=', 'regular')]"/>
+					<filter name="weekends" string="Weekends" domain="[('day_type', '=', 'weekend')]"/>
+					<filter name="holidays" string="Public Holidays" domain="[('day_type', '=', 'public_holiday')]"/>
+				</search>
+			</field>
+		</record>
+		<!-- Action with updated view_mode to include calendar -->
+		<record model="ir.actions.act_window" id="action_kojto_hr_working_days">
+			<field name="name">Working Days</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">kojto.hr.working.days</field>
+			<field name="view_mode">calendar,list,form</field>
+			<field name="search_view_id" ref="view_kojto_hr_working_days_search"/>
+			<field name="help" type="html">
+				<p class="o_view_nocontent_smiling_face">Manage Working and Non-Working Days</p>
+			</field>
+		</record>
+	</data>
+</odoo>

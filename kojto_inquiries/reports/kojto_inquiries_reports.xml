@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="print_kojto_inquiry" model="ir.actions.report">
+            <field name="name">Inquiry</field>
+            <field name="model">kojto.inquiry.counterparty</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_inquiries.report_kojto_inquiry_counterparty</field>
+            <field name="report_file">kojto_inquiries.report_kojto_inquiry_counterparty</field>
+            <field name="print_report_name">'Inquiry_' + object.get_kojto_inquiry_report_filename()</field>
+            <field name="binding_model_id" ref="model_kojto_inquiry_counterparty" />
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+        </record>
+    </data>
+</odoo>

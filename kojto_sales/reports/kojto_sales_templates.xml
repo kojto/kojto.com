@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_sales">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <t t-if="doc.counterparty_id and len(doc.counterparty_id) >= doc.print_number">
+                        <t t-set="counterparty" t-value="doc.counterparty_id[doc.print_number - 1]" />
+                        <!-- Beginning of page -->
+                        <div class="page">
+                            <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                            <t t-if="company_contact and company_contact.company_logo">
+                                <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                                <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } } </style>
+                            </t>
+                            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600&amp;display=swap" rel="stylesheet" />
+                            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&amp;display=swap" rel="stylesheet" />
+                            <div t-attf-style="string-set: timestamp '{{ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}';">
+                                <h1 class="heading">
+                                    <span>SaleLeads # </span>
+                                    <span t-field="doc.name" />
+                                </h1>
+                            </div>
+                            <!-- Issuer Info -->
+                            <div class="info-section">
+                                <div class="info-cell">
+                                    <div>
+                                        <strong>Issued by</strong>
+                                    </div>
+                                    <div t-field="doc.company_id" />
+                                    <div t-field="doc.company_id.address_id" t-options="{'widget': 'contact', 'fields': ['address']}" />
+                                    <div t-field="doc.company_id.vat" />
+                                    <div t-field="doc.company_id.email" />
+                                    <div t-field="doc.company_id.phone" />
+                                    <div>Managing director:</div>
+                                </div>
+                                <!-- Receiver Info (Use the dynamically selected counterparty here) -->
+                                <div class="info-cell">
+                                    <div>
+                                        <strong>Issued to</strong>
+                                    </div>
+                                    <div t-field="counterparty.counterparty_id" />
+                                    <div t-field="counterparty.counterparty_address_id" />
+                                    <div t-field="counterparty.counterparty_tax_number_id" />
+                                    <div t-field="counterparty.counterparty_email_id" />
+                                    <div t-field="counterparty.counterparty_phone_id" />
+                                    <div>Managing director:</div>
+                                </div>
+                            </div>
+                            <!-- Contents -->
+                            <h1 class="section-heading">CONTENT</h1>
+                            <table class="content-table">
+                                <thead>
+                                    <tr class="header-row">
+                                        <th>#</th>
+                                        <th>Description</th>
+                                        <th>Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-set="row_index" t-value="0" />
+                                    <t t-foreach="doc.content" t-as="line">
+                                        <t t-set="row_index" t-value="row_index + 1" />
+                                        <tr t-att-class="row_index % 2 == 0 and 'even-row' or 'odd-row'">
+                                            <td>
+                                                <t t-esc="line.number" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.name" />
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.type" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <!-- Footer -->
+                            <div class="footer-section new-page">
+                                <p>Thank you for your business!</p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

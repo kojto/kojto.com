@@ -1,0 +1,20 @@
+{
+    "name": "Kojto HR Face Recognition",
+    "version": "18.04.07",
+    "category": "KOJTO",
+    "description": "Face recognition module for HR time tracking with camera integration and terminal interface",
+    "author": "KOJTO",
+    "website": "https://www.kojto.com",
+    "license": "LGPL-3",
+    "depends": ["base", "web", "kojto_hr"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/kojto_hr_face_recognition_buttons.xml",
+        "views/kojto_hr_face_recognition_views.xml",
+        "views/kojto_hr_terminal.xml",
+        "views/kojto_hr_face_recognition_menu_views.xml",
+    ],
+    "assets": {"web.assets_backend": ["kojto_hr_face_recognition/static/src/xml/image_upload.xml", "kojto_hr_face_recognition/static/src/js/image_upload.js", "kojto_hr_face_recognition/static/src/xml/camera_dialog.xml", "kojto_hr_face_recognition/static/src/js/camera_dialog.js"]},
+    "installable": True,
+    "auto_install": False,
+}

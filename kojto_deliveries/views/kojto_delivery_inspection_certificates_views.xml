@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- list View -->
+        <record model="ir.ui.view" id="view_kojto_delivery_inspection_certificates_list">
+            <field name="name">kojto.delivery.inspection.certificates.list</field>
+            <field name="model">kojto.delivery.inspection.certificates</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" string="Delivery Inspection Certificates">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="language_id"/>
+                    <field name="name"/>
+                    <field name="certificate_type"/>
+                    <field name="date_issue" />
+                    <field name="delivery_id"/>
+                    <field name="product_name"/>
+                    <field name="product_standard"/>
+                    <field name="dimensional_tolerance_standard"/>
+                    <field name="execution_type"/>
+                    <field name="material_grade_id"/>
+                    <field name="counterparty_name_id"/>
+                    <button name="print_document" type="object" class="btn-link" icon="fa-print" title="Print Certificate"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_delivery_inspection_certificates_form">
+            <field name="name">kojto.delivery.inspection.certificates.form</field>
+            <field name="model">kojto.delivery.inspection.certificates</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main">
+                    <sheet class="ko-form-body ko-form-main">
+                        <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                         <span>DELIVERY INSPECTION CERTIFICATE</span>
+                                            <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 d-flex justify-content-center">
+                                        <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 5px!important"/>
+                                    </div>
+                                    <div class="col-lg-4 d-flex justify-content-end">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                            <field name="active" widget="boolean_toggle"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <group string="Basic Information">
+                                    <field name="name"/>
+                                    <field name="certificate_type"/>
+                                    <field name="date_issue" />
+                                    <field name="active" widget="boolean_toggle"/>
+                                    <field name="delivery_id" required="1"/>
+                                    <field name="subcode_id" readonly="1"/>
+                                </group>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <!-- Company Information -->
+                                <group string="Company Information">
+                                    <field name="company_name_id" readonly="1"/>
+                                    <field name="company_address_id" readonly="1"/>
+                                    <field name="company_phone_id" readonly="1"/>
+                                    <field name="company_email_id" readonly="1"/>
+                                </group>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <!-- Counterparty Information -->
+                                <group string="Customer Information">
+                                    <field name="counterparty_name_id" readonly="1"/>
+                                    <field name="counterparty_address_id" readonly="1"/>
+                                    <field name="counterparty_phone_id" readonly="1"/>
+                                    <field name="counterparty_email_id" readonly="1"/>
+                                </group>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <!-- Product Information -->
+                                <group string="Product Information">
+                                    <field name="material_grade_id"/>
+                                    <field name="material_grade_type" readonly="1"/>
+                                    <field name="net_weight"/>
+                                </group>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <!-- Source Material -->
+                                <group string="Source Material Batches"/>
+                                <field name="batch_ids" context="{'active_test': False}">
+                                    <list editable="bottom" style="margin-right: 0px!important; padding-right: 0px!important;">
+                                        <field name="name"/>
+                                    </list>
+                                </field>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <!-- Additional Information -->
+                                <group string="Additional Information">
+                                    <field name="product_name"/>
+                                    <field name="product_standard"/>
+                                    <field name="dimensional_tolerance_standard"/>
+                                    <field name="execution_type"/>
+                                    <field name="additional_notes"/>
+                                </group>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_delivery_inspection_certificates_search">
+            <field name="name">kojto.delivery.inspection.certificates.search</field>
+            <field name="model">kojto.delivery.inspection.certificates</field>
+            <field name="arch" type="xml">
+                <search string="Delivery Inspection Certificates">
+                    <field name="name"/>
+                    <field name="certificate_type"/>
+                    <field name="date_issue"/>
+                    <field name="delivery_id"/>
+                    <field name="product_name"/>
+                    <field name="material_grade_id"/>
+                    <field name="net_weight"/>
+                    <separator/>
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Delivery" name="group_by_delivery" context="{'group_by': 'delivery_id'}"/>
+                        <filter string="Certificate Type" name="group_by_certificate_type" context="{'group_by': 'certificate_type'}"/>
+                        <filter string="Issue Date" name="group_by_issue_date" context="{'group_by': 'date_issue'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_kojto_delivery_inspection_certificates" model="ir.actions.act_window">
+            <field name="name">Delivery Inspection Certificates</field>
+            <field name="res_model">kojto.delivery.inspection.certificates</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_kojto_delivery_inspection_certificates_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first delivery inspection certificate
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

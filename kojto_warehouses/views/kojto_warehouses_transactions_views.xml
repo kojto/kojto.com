@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_warehouses/views/kojto_warehouses_transactions_views.xml -->
+<odoo>
+    <!-- Transaction List View -->
+    <record id="view_kojto_warehouses_transactions_list" model="ir.ui.view">
+        <field name="name">kojto.warehouses.transactions.list</field>
+        <field name="model">kojto.warehouses.transactions</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main">
+                <field name="to_from_store" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'"/>
+                <field name="name"/>
+                <field name="identifier_id" string="Identifier ID"/>
+                <field name="batch_id"/>
+                <field name="item_id"/>
+                <field name="parent_item_id"/>
+                <field name="subcode_id"/>
+                <field name="date_issue"/>
+                <field name="transaction_quantity"/>
+                <field name="transaction_unit_id"/>
+                <field name="item_summary"/>
+                <field name="transaction_summary"/>
+                <field name="issued_by"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Transaction Form View -->
+    <record id="view_kojto_warehouses_transactions_form" model="ir.ui.view">
+        <field name="name">kojto.warehouses.transactions.form</field>
+        <field name="model">kojto.warehouses.transactions</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet class="ko-form-body ko-form-main view_kojto_warehouses_transactions_form">
+                    <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title" style="padding-top: 1px;">
+                                        <span>TRANSACTION</span>
+                                        <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                    <div class="d-flex align-items-center">
+                                        <field name="to_from_store" widget="selection_badge" style="margin-bottom: 0 !important; padding-bottom: 0 !important;"/>
+                                        <field name="batch_id" class="ko-form-view-title" style="margin-bottom: 15px !important; padding-bottom: 0 !important;"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 10px;">
+                                    <button name="action_create_receipt" string="Create Receipt" type="object" class="btn btn-primary" invisible="receipt_id != False" title="Create receipt" style="margin-bottom: 0 !important; padding-bottom: 5px !important;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <group>
+                        <group>
+                            <field name="item_id" options="{'no_create_edit': True, 'no_create': True, 'no_edit': True, 'no_delete': True, 'no_open': True}"/>
+                            <field name="parent_item_id"/>
+                            <field name="date_issue"/>
+                            <field name="issued_by"/>
+                            <field name="subcode_id"/>
+                        </group>
+                        <group>
+                            <field name="transaction_quantity" invisible="is_part_type"/>
+                            <field name="transaction_quantity_override" invisible="not is_part_type"/>
+                            <field name="transaction_unit_id"/>
+                            <field name="item_summary"/>
+                            <field name="transaction_summary"/>
+                            <field name="receipt_id" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Transaction Search View -->
+    <record id="view_kojto_warehouses_transactions_search" model="ir.ui.view">
+        <field name="name">kojto.warehouses.transactions.search</field>
+        <field name="model">kojto.warehouses.transactions</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="identifier_id"/>
+                <field name="item_id"/>
+                <field name="parent_item_id"/>
+                <field name="batch_id"/>
+                <field name="date_issue"/>
+                <field name="issued_by"/>
+                <field name="transaction_quantity"/>
+                <field name="receipt_id"/>
+                <separator/>
+                <filter string="To Store" name="to_store" domain="[('to_from_store', '=', 'to_store')]"/>
+                <filter string="From Store" name="from_store" domain="[('to_from_store', '=', 'from_store')]"/>
+                <filter string="With Receipt" name="with_receipt" domain="[('receipt_id', '!=', False)]"/>
+                <filter string="Without Receipt" name="without_receipt" domain="[('receipt_id', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Identifier ID" name="groupby_identifier" context="{'group_by': 'identifier_id'}"/>
+                    <filter string="Item" name="groupby_item" context="{'group_by': 'item_id'}"/>
+                    <filter string="Parent Item" name="groupby_parent_item" context="{'group_by': 'parent_item_id'}"/>
+                    <filter string="Batch" name="groupby_batch" context="{'group_by': 'batch_id'}"/>
+                    <filter string="Transaction Type" name="groupby_type" context="{'group_by': 'to_from_store'}"/>
+                    <filter string="Issued By" name="groupby_issued_by" context="{'group_by': 'issued_by'}"/>
+                    <filter string="Receipt" name="groupby_receipt" context="{'group_by': 'receipt_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Transaction Action -->
+    <record id="action_kojto_warehouses_transactions" model="ir.actions.act_window">
+        <field name="name">Transactions</field>
+        <field name="res_model">kojto.warehouses.transactions</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_warehouses_transactions_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first transaction!
+            </p>
+        </field>
+    </record>
+
+    <!-- Transactions View for Warehouse Balance (shows transaction values) -->
+    <record id="view_kojto_warehouses_transactions_balance_list" model="ir.ui.view">
+        <field name="name">kojto.warehouses.transactions.balance.list</field>
+        <field name="model">kojto.warehouses.transactions</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" string="Transactions" default_order="date_issue desc">
+                <field name="date_issue"/>
+                <field name="name" string="Transaction"/>
+                <field name="identifier_id" string="Identifier ID"/>
+                <field name="item_id" string="Item"/>
+                <field name="batch_id" string="Batch"/>
+                <field name="to_from_store" string="Type" widget="badge" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'"/>
+                <field name="transaction_quantity" string="Quantity"/>
+                <field name="transaction_unit_id" string="Unit"/>
+                <field name="transaction_value_pre_vat_eur" string="Transaction Value" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+                <field name="currency_id" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Server Action: Recompute Transaction Values -->
+    <record id="action_server_recompute_transaction_values" model="ir.actions.server">
+        <field name="name">Recompute Transaction Values</field>
+        <field name="model_id" ref="model_kojto_warehouses_transactions"/>
+        <field name="binding_model_id" ref="model_kojto_warehouses_transactions"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.action_recompute_transaction_values()
+else:
+    action = env['kojto.warehouses.transactions'].action_recompute_transaction_values()
+        </field>
+    </record>
+
+    <!-- Server Action: Recompute Identifier ID -->
+    <record id="action_server_recompute_identifier_id" model="ir.actions.server">
+        <field name="name">Recompute Identifier ID</field>
+        <field name="model_id" ref="model_kojto_warehouses_transactions"/>
+        <field name="binding_model_id" ref="model_kojto_warehouses_transactions"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.action_recompute_identifier_id()
+else:
+    action = env['kojto.warehouses.transactions'].action_recompute_identifier_id()
+        </field>
+    </record>
+</odoo>

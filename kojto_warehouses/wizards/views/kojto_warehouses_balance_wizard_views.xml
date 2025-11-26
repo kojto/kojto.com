@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Wizard Form View -->
+        <record id="view_kojto_warehouses_balance_wizard_form" model="ir.ui.view">
+            <field name="name">kojto.warehouses.balance.wizard.form</field>
+            <field name="model">kojto.warehouses.balance.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Warehouse Balance Wizard" create="false">
+                    <style>
+                        .o_form_buttons_view .o_form_button_save,
+                        .o_form_buttons_view .o_form_button_cancel,
+                        .o_form_button_save,
+                        .o_form_button_cancel,
+                        button[name="save"],
+                        button[name="cancel"] {
+                            display: none !important;
+                        }
+                    </style>
+                    <div class="w-100 px-0">
+                        <div class="row no-gutters">
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_from" string="From Date"/>
+                                <field name="date_from"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <label for="date_to" string="To Date"/>
+                                <field name="date_to"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <button name="action_save_balance" string="Recompute &amp; Save" type="object" class="btn-secondary"/>
+                            </div>
+                            <div class="col-lg-2 me-0 align-items-center">
+                                <button name="action_export_balance_to_excel" string="Export Balance" type="object" class="btn-primary"/>
+                            </div>
+                        </div>
+                    </div>
+                    <separator/>
+                    <notebook>
+                        <page string="Warehouses">
+                            <field name="warehouse_balance_line_ids" readonly="1" domain="[('warehouse_id', '!=', False)]">
+                                <list class="ko-list-main" string="Warehouse Balance" create="false" edit="false" no_open="1">
+                                    <field name="warehouse_name" string="Warehouse"/>
+                                    <field name="beginning_value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="to_store_value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="to_store_value &gt; 0"/>
+                                    <field name="from_store_value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-danger="from_store_value &gt; 0"/>
+                                    <field name="ending_value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="change_value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="change_value &gt; 0" decoration-danger="change_value &lt; 0"/>
+                                    <button name="action_view_transactions" type="object" class="fa fa-external-link" title="View Transactions"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_warehouse_to_excel" type="object" class="fa fa-file-excel-o" title="Export to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Identifiers">
+                            <field name="identifier_line_ids" readonly="1">
+                                <list class="ko-list-main" create="false" edit="false" default_order="identifier_id">
+                                    <field name="identifier_id" string="Identifier ID"/>
+                                    <field name="identifier_name" string="Identifier Name"/>
+                                    <field name="identifier_type" string="Type"/>
+                                    <field name="transaction_count" string="Count"/>
+                                    <field name="total_to_store_quantity" string="To Store Qty" decoration-success="total_to_store_quantity &gt; 0"/>
+                                    <field name="total_from_store_quantity" string="From Store Qty" decoration-danger="total_from_store_quantity &gt; 0"/>
+                                    <field name="total_quantity" string="Total Quantity"/>
+                                    <field name="unit_id" string="Unit"/>
+                                    <field name="total_to_store_value_eur" string="To Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="total_to_store_value_eur &gt; 0"/>
+                                    <field name="total_from_store_value_eur" string="From Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-danger="total_from_store_value_eur &gt; 0"/>
+                                    <field name="total_value_eur" string="Total Value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <button name="action_view_transactions" type="object" class="fa fa-external-link" title="View Transactions"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_identifier_to_excel" type="object" class="fa fa-file-excel-o" title="Export to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Subcodes">
+                            <field name="subcode_line_ids" readonly="1">
+                                <list class="ko-list-main" create="false" edit="false" default_order="subcode_id">
+                                    <field name="subcode_id" string="Subcode"/>
+                                    <field name="subcode_description" string="Description"/>
+                                    <field name="transaction_count" string="Count"/>
+                                    <field name="total_to_store_value_eur" string="To Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="total_to_store_value_eur &gt; 0"/>
+                                    <field name="total_from_store_value_eur" string="From Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-danger="total_from_store_value_eur &gt; 0"/>
+                                    <field name="total_value_eur" string="Total Value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <button name="action_view_transactions" type="object" class="fa fa-external-link" title="View Transactions"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_subcode_to_excel" type="object" class="fa fa-file-excel-o" title="Export to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Subcodes @ Identifiers">
+                            <field name="subcode_identifier_line_ids" readonly="1">
+                                <list class="ko-list-main" create="false" edit="false" default_order="subcode_id, identifier_id">
+                                    <field name="subcode_id" string="Subcode"/>
+                                    <field name="subcode_description" string="Subcode Description"/>
+                                    <field name="identifier_id" string="Identifier ID"/>
+                                    <field name="identifier_name" string="Identifier Name" optional="show"/>
+                                    <field name="identifier_type" string="Type" optional="hide"/>
+                                    <field name="transaction_count" string="Count"/>
+                                    <field name="total_to_store_quantity" string="To Store Qty" decoration-success="total_to_store_quantity &gt; 0"/>
+                                    <field name="total_from_store_quantity" string="From Store Qty" decoration-danger="total_from_store_quantity &gt; 0"/>
+                                    <field name="total_quantity" string="Total Quantity"/>
+                                    <field name="unit_id" string="Unit"/>
+                                    <field name="total_to_store_value_eur" string="To Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="total_to_store_value_eur &gt; 0"/>
+                                    <field name="total_from_store_value_eur" string="From Store Value" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-danger="total_from_store_value_eur &gt; 0"/>
+                                    <field name="total_value_eur" string="Total Value" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <button name="action_view_transactions" type="object" class="fa fa-external-link" title="View Transactions"/>
+                                    <field name="currency_id" column_invisible="1"/>
+                                    <button name="action_export_subcode_identifier_to_excel" type="object" class="fa fa-file-excel-o" title="Export to Excel"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                    <field name="currency_id" invisible="1"/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Wizard List View -->
+        <record id="view_kojto_warehouses_balance_wizard_list" model="ir.ui.view">
+            <field name="name">kojto.warehouses.balance.wizard.list</field>
+            <field name="model">kojto.warehouses.balance.wizard</field>
+            <field name="arch" type="xml">
+                <list string="Warehouse Balance Wizard">
+                    <field name="date_from" string="From Date"/>
+                    <field name="date_to" string="To Date"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Wizard Search View -->
+        <record id="view_kojto_warehouses_balance_wizard_search" model="ir.ui.view">
+            <field name="name">kojto.warehouses.balance.wizard.search</field>
+            <field name="model">kojto.warehouses.balance.wizard</field>
+            <field name="arch" type="xml">
+                <search string="Warehouse Balance Wizard">
+                    <field name="date_from" string="From Date"/>
+                    <field name="date_to" string="To Date"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Wizard Action (opens in form view) -->
+        <record id="action_kojto_warehouses_balance" model="ir.actions.act_window">
+            <field name="name">Warehouse Balance</field>
+            <field name="res_model">kojto.warehouses.balance.wizard</field>
+            <field name="view_mode">form,list</field>
+            <field name="view_id" ref="view_kojto_warehouses_balance_wizard_form"/>
+            <field name="search_view_id" ref="view_kojto_warehouses_balance_wizard_search"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
+

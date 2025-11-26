@@ -1,0 +1,335 @@
+<odoo>
+    <data>
+
+        <!-- List Views -->
+        <record model="ir.ui.view" id="view_kojto_offers_list">
+            <field name="name">kojto.offers.list</field>
+            <field name="model">kojto.offers</field>
+            <field name="arch" type="xml">
+                <list limit="100" sample="1" default_order="id desc" class="ko-list-main" decoration-muted="not active" duplicate="false">
+                    <field name="document_in_out_type" class="fa" widget="badge" decoration-primary="document_in_out_type == 'outgoing'" decoration-info="document_in_out_type == 'incoming'" string=" " />
+                    <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center"/>
+                    <field name="name" optional="show" string="Offer №" />
+                    <field name="subject" optional="show" string="Subject" />
+                    <field name="counterparty_name_id" optional="show" string="Counterparty" />
+                    <field name="total_price" optional="show" string="Amount" widget="monetary" options="{'currency_field': 'currency_id'}" />
+                    <field name="currency_id" string="Currency" optional="hide"/>
+                    <field name="date_issue" optional="show" string="Issue Date" />
+                    <field name="date_end" optional="show" string="Valid To" />
+                    <!-- Corrected Attachments Field -->
+                    <field name="repr_attachments" optional="show" string="Attachments" widget="badge" decoration-muted="attachments" />
+                    <button type="object" name="copy_offer" class="fa fa-copy" title="Copy Offer"/>
+                    <button name="print_document_as_pdf" type="object" class="fa fa-print" title="Print" />
+                    <button name="action_export_offer_to_xlsx" type="object" class="fa fa-file-excel-o" title="Export XLSX" />
+                    <button name="create_invoice" type="object" class="fa fa-file-text-o" title="Create Invoice" />
+                    <button name="create_contract" type="object" class="fa fa-file-text" title="Create Contract" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_offers_form">
+            <field name="name">kojto.offers.form</field>
+            <field name="model">kojto.offers</field>
+            <field name="arch" type="xml">
+                <form class="">
+                    <style>
+                        .est-field {
+                            font-style: italic !important;
+                            height: 90% !important;
+                        }
+                    </style>
+                    <sheet class="ko-form-body ko-form-main view_kojto_offers_form">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title">
+                                            <span>OFFER</span>
+                                            <field name="name" class="ko-form-view-title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center">
+                                            <field name="document_in_out_type" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-4 mx-2" style="height: 24px;" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-4 mx-2" style="height: 24px;" />
+                                            <field name="currency_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <div class="dropdown ms-2">
+                                            <button name="dropdown_empty" class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Create">
+                                                <i>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z" />
+                                                        <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5" />
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                                <button name="create_contract" string="Create Contract" type="object" class="dropdown-item" />
+                                                <button name="create_invoice" string="Create Invoice" type="object" class="dropdown-item" />
+                                                <button name="action_import_offer_content" string="Import Content" type="object" class="dropdown-item"/>
+                                                <button name="action_import_offer_content_elements" string="Import Content Elements" type="object" class="dropdown-item"/>
+                                            </div>
+                                        </div>
+                                        <button name="copy_offer" class="bg-transparent border-0 d-flex align-items-center" type="object" title="Copy">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-files" viewBox="0 0 16 16">
+                                                    <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2m0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1M3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z" />
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button name="print_document_as_pdf" class="bg-transparent border-0 d-flex align-items-center" type="object" title="Print">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                                                    <path
+                                                        d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1" />
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <button name="action_export_offer_to_xlsx" type="object" class="fa fa-file-excel-o" title="Export XLSX" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Header end -->
+                        <!-- <separator class="col-lg-12 separator" /> -->
+                        <separator class="separator-slim-top" />
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" required="1" />
+                                <field name="subject" required="1" />
+                                <field name="program" />
+                                <field name="incoterms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="incoterms_address" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="issued_by_name_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="payment_terms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" required="1" />
+                                <field name="date_issue" required="1" />
+                                <field name="date_end" required="1" />
+                                <field name="counterpartys_reference" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <!-- Company and Person Information Section -->
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'outgoing'">From</h2>
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'incoming'">To</h2>
+                                <group class="col-lg-12">
+                                    <field name="company_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('res_company_id', '=', company_id)]" />
+                                    <field name="company_name_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_address_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_bank_account_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_email_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_phone_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_tax_number_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_registration_number" />
+                                </group>
+                            </div>
+                            <div class="col-lg-6 mb-auto" style="margin-bottom: auto">
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'outgoing'">To</h2>
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'incoming'">From</h2>
+                                <group class="col-lg-12">
+                                    <field name="counterparty_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_name_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_address_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_bank_account_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_email_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_phone_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="counterparty_tax_number_id" domain="[('contact_id', '=', counterparty_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <div class="o_form_label">Registration Number</div>
+                                    <div class="d-flex align-items-center justify-content-start gap-1">
+                                        <field name="counterparty_registration_number" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_type" class="w-auto mb-0" />
+                                        <span>/</span>
+                                        <field name="counterparty_registration_number_type" class="w-auto mb-0" />
+                                    </div>
+                                </group>
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <field name="pre_content_text" class="my-4" placeholder="Enter your pre content text here..." />
+                        <div class="col-lg-12">
+                            <notebook>
+                                <page string="Content">
+                                    <field name="content" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main" decoration-danger="content_elements_count == 0" limit="200">
+                                            <field name="position" />
+                                            <field name="name" />
+                                            <field name="quantity" />
+                                            <field name="unit_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                            <field name="estimation_quantity" optional="show" class="est-field"/>
+                                            <field name="est_unit_price" class="est-field" widget="monetary" currency_field="currency_id" />
+                                            <field name="est_total_contribution_margin_percent" optional="show" class="est-field" />
+                                            <field name="est_total_contribution_margin" optional="hide" class="est-field" />
+                                            <field name="unit_price" widget="monetary" currency_field="currency_id" />
+                                            <field name="pre_vat_total" widget="monetary" currency_field="currency_id" />
+                                            <field name="vat_rate" optional="hide" />
+                                            <field name="vat_total" widget="monetary" currency_field="currency_id" />
+                                            <field name="custom_vat" widget="monetary" currency_field="currency_id" optional="hide" />
+                                            <field name="currency_id" readonly="1" class="ms-2" options="{'no_open': True}" optional="hide"/>
+                                            <button type="object" name="open_content_elements" class="b-0 text-black bg-transparent fa fa-external-link" decoration-danger="content_elements_count == 0" />
+                                            <button type="object" name="copy" class="b-0 text-black bg-transparent fa fa-copy" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Offer Consolidation Breakdown">
+                                    <field name="consolidation_breakdown_ids" class="ko-list-main" readonly="1">
+                                        <list editable="bottom">
+                                            <field name="position" />
+                                            <field name="name" />
+                                            <field name="quantity" />
+                                            <field name="unit_id" />
+                                            <field name="avg_unit_price" />
+                                            <field name="total_price_with_all_surcharges" />
+                                            <field name="total_contribution_margin_percent" />
+                                            <field name="total_contribution_margin" />
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                            <div class="row">
+                                <group class="col-lg-6 justify-content-start d-flex">
+                                    <div class="w-100">
+                                        <!-- Estimated Total Contribution Margin Row -->
+                                        <div class="d-flex align-items-start">
+                                            <label for="est_total_contribution_margin" class="me-2" />
+                                            <div class="d-flex align-items-start">
+                                                <field name="currency_id" class="me-1" readonly="1" style="width: 60px" options="{'no_create_edit': True, 'no_open': True}" />
+                                                <field name="est_total_contribution_margin" style="width: 160px; font-style: italic; height: 90%;" decoration-danger="est_total_price == 0 or est_total_price >= pre_vat_total" />
+                                            </div>
+                                        </div>
+                                        <!-- Estimated Total Contribution Margin Percent Row -->
+                                        <div class="d-flex align-items-start">
+                                            <label for="est_total_contribution_margin_percent" class="me-2" />
+                                            <div class="d-flex align-items-start">
+                                                <div style="width: 60px" class="me-1 text-start">%</div>
+                                                <field name="est_total_contribution_margin_percent" style="width: 160px; font-style: italic; height: 90%;" />
+                                            </div>
+                                        </div>
+                                        <!-- Estimated Total Price Row -->
+                                        <div class="d-flex align-items-start">
+                                            <label for="est_total_price" class="me-2" />
+                                            <div class="d-flex align-items-start">
+                                                <field name="currency_id" class="me-1" readonly="1" style="width: 60px" options="{'no_create_edit': True, 'no_open': True}" />
+                                                <field name="est_total_price" style="width: 160px; font-style: italic; height: 90%;" decoration-danger="est_total_price == 0 or est_total_price >= pre_vat_total" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </group>
+                                <group class="col-lg-6 justify-content-end d-flex">
+                                    <div>
+                                        <!-- Net Price Row -->
+                                        <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                            <label for="pre_vat_total" class="me-2" />
+                                            <field name="pre_vat_total" style="width: 200px" class="text-end" />
+                                            <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                        </div>
+
+                                        <!-- VAT Rate Row -->
+                                        <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                            <label for="offer_vat_rate" class="me-2" />
+                                            <field name="offer_vat_rate" style="width: 200px" class="text-end" />
+                                            <div style="width: 60px" class="text-start p-1">%</div>
+                                        </div>
+
+                                        <!-- VAT Row -->
+                                        <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                            <label for="vat_total" class="me-2" />
+                                            <field name="vat_total" style="width: 200px" class="text-end" />
+                                            <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                        </div>
+
+                                        <!-- Total Price Row -->
+                                        <div class="col-lg-9 ms-auto d-flex align-items-center">
+                                            <label for="total_price" class="me-2" />
+                                            <field name="total_price" style="width: 200px" class="text-end" />
+                                            <field name="currency_id" style="width: 60px" class="text-start p-1" readonly="1" options="{'no_create_edit': True, 'no_open': True}" />
+                                        </div>
+                                    </div>
+                                </group>
+                            </div>
+                        </div>
+                        <field name="post_content_text" class="my-2" placeholder="Enter your post content text here..." />
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="attachments" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False" />
+                            </group>
+
+                            <group class="col-lg-6 d-flex justify-content-end">
+                                <div>
+                                    <div class="d-flex align-items-center">
+                                        <label for="active" />
+                                        <field name="active" widget="boolean_toggle" />
+                                    </div>
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Search Views -->
+        <record model="ir.ui.view" id="view_kojto_offers_search">
+            <field name="name">kojto.offers.search</field>
+            <field name="model">kojto.offers</field>
+            <field name="arch" type="xml">
+                <search string="Offer Documents">
+                    <!-- Search Fields -->
+                    <field name="name" string="Offer №"/>
+                    <field name="subject" string="Subject"/>
+                    <field name="counterparty_name_id" string="Counterparty"/>
+                    <field name="date_issue" string="Issue Date"/>
+                    <field name="counterpartys_reference" string="Reference №"/>
+                    <field name="total_price" string="Total Amount"/>
+                    <field name="currency_id" string="Currency"/>
+                    <field name="vat_total" string="VAT Amount"/>
+                    <field name="pre_vat_total" string="Net Amount"/>
+                    <field name="active" string="Active"/>
+
+                    <!-- Filters -->
+                    <filter name="active_offers" string="Active" domain="[('active', '=', True)]"/>
+                    <filter name="inactive_offers" string="Inactive" domain="[('active', '=', False)]"/>
+                    <filter name="outgoing_offers" string="Outgoing" domain="[('document_in_out_type', '=', 'outgoing')]"/>
+                    <filter name="incoming_offers" string="Incoming" domain="[('document_in_out_type', '=', 'incoming')]"/>
+                    <separator/>
+                    <filter name="expired_offers" string="Expired" domain="[('date_end', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="valid_offers" string="Valid" domain="[('date_end', '&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="today_offers" string="Today" domain="[('date_issue', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_week_offers" string="This Week" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_month_offers" string="This Month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+                    <filter name="last_month_offers" string="Last Month" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_issue', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_counterparty" string="Counterparty" context="{'group_by': 'counterparty_name_id'}"/>
+                        <filter name="group_by_issue_date" string="Issue Date" context="{'group_by': 'date_issue'}"/>
+                        <filter name="group_by_status" string="Status" context="{'group_by': 'active'}"/>
+                        <filter name="group_by_type" string="Type" context="{'group_by': 'document_in_out_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_offers">
+            <field name="name">Offers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.offers</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{"search_default_active_offers":1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Add Offer Documents </p>
+            </field>
+        </record>
+    </data>
+</odoo>

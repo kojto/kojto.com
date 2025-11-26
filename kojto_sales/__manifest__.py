@@ -1,0 +1,20 @@
+{
+    "name": "Kojto Sales",
+    "version": "18.04.07",
+    "category": "KOJTO",
+    "description": "Sales management module for tracking sales activities and generating sales reports",
+    "author": "KOJTO",
+    "website": "https://www.kojto.com",
+    "depends": ["kojto_hr", "kojto_offers"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/kojto_sales_view.xml",
+        "views/kojto_sales_menu_views.xml",
+        "views/kojto_sales_buttons.xml",
+        "reports/kojto_sales_reports.xml",
+        "reports/kojto_sales_templates.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+}

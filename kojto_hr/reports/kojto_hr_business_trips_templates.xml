@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Business Trip Report Template (includes both Order and Report) -->
+        <template id="report_kojto_hr_business_trips">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <!-- Page 1: Business Trip Order -->
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <div>
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Business Trip Order</div>
+                            </h1>
+                        </div>
+
+                        <!-- Trip Information -->
+                        <div class="section">
+                            <h2 style="font-size: 1.5em; margin-bottom: 15px; padding: 4px; margin-top: 15px;">Trip Information</h2>
+                            <table class="performance-table">
+                                <tr>
+                                    <td>Number:</td>
+                                    <td><span t-field="doc.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Company:</td>
+                                    <td><t t-esc="doc.get_company_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Registration Number:</td>
+                                    <td><span t-field="doc.company_registration_number" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Address:</td>
+                                    <td><t t-esc="doc.get_company_address_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Employee:</td>
+                                    <td><t t-esc="doc.get_employee_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Position:</td>
+                                    <td><t t-esc="doc.get_employee_position_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Project Code:</td>
+                                    <td><span t-field="doc.code_id.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Destination:</td>
+                                    <td><span t-field="doc.destination" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Business Purpose:</td>
+                                    <td><span t-field="doc.business_purpose" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Issued on:</td>
+                                    <td><span t-field="doc.date_issued" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Start Date:</td>
+                                    <td><span t-field="doc.date_start" /></td>
+                                </tr>
+                                <tr>
+                                    <td>End Date:</td>
+                                    <td><span t-field="doc.date_end" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration (Days):</td>
+                                    <td><span t-field="doc.duration_days" /></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Regulation Text -->
+                        <div class="row" style="margin-bottom: 30px; background-color:rgb(209, 209, 209); padding: 10px; border-radius: 10px;">
+                            <div class="col-12">
+                                <p style="font-size: 1.1em; margin-top: 20px; margin-bottom: 10px; text-align: left; color: #000;">
+                                    Based on the Regulation for business trips and specializations in foreign countries with Decree of the Council of Ministers No. 115 from 3 June 2004
+                                </p>
+                                <p style="font-size: 1.1em; margin-top: 10px; margin-bottom: 20px; text-align: left;">
+                                    Въз основа на Наредба за служебните командировки и специализациите в чужбина, приета с ПМС №115 от 03.06.2004г.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Budget Expenses Section -->
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-12">
+                                <h2 style="font-size: 1.5em; margin-top: 15px;">Budget Expenses</h2>
+                                <t t-set="budget_expenses" t-value="doc.content_ids.filtered(lambda e: not e.is_actual_expense)" />
+                                <t t-if="budget_expenses">
+                                    <table class="performance-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Description</th>
+                                                <th style="text-align: right; width: 10%; ">Quantity</th>
+                                                <th style="text-align: left; width: 10%; ">Unit</th>
+                                                <th style="text-align: right; width: 15%; ">Unit Price</th>
+                                                <th style="text-align: right; width: 15%; ">Total Amount</th>
+                                                <th style="text-align: center; width: 10%; ">Group</th>
+                                                <th style="text-align: left; width: 15%; "> </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="budget_expenses" t-as="expense">
+                                                <tr>
+                                                    <td style="text-align: left; "><span t-field="expense.name" /></td>
+                                                    <td style="text-align: right; "><span t-field="expense.quantity" /></td>
+                                                    <td style="text-align: left; "><t t-esc="expense.get_unit_name_for_printing()" /></td>
+                                                    <td style="text-align: right; "><span t-field="expense.unit_price" /></td>
+                                                    <td style="text-align: right; "><span t-field="expense.total_sum" /></td>
+                                                    <td style="text-align: center; "><t t-esc="expense.trip_group or 'Not specified'" /></td>
+                                                    <td style="text-align: left; "><span t-field="expense.currency_id.name" /></td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr style="font-weight: bold;">
+                                                <td colspan="4" style="text-align: left; ">Total Budget Expenses:</td>
+                                                <td style="text-align: right; "><span t-field="doc.total_budget_expenses_trip_currency" /></td>
+                                                <td style="text-align: center; "></td>
+                                                <td style="text-align: left; "><span t-field="doc.currency_id.name" /></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </t>
+                                <t t-else="">
+                                    <p style="font-style: italic; color: #666;">No planned expenses recorded for this trip.</p>
+                                </t>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Page Break -->
+                    <div style="page-break-after: always;"></div>
+
+                    <!-- Page 2: Business Trip Report -->
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <div>
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Business Trip Report</div>
+                            </h1>
+                        </div>
+
+                        <!-- Trip Information -->
+                        <div class="section">
+                            <h2 style="font-size: 1.5em; margin-bottom: 15px; padding: 4px; margin-top: 15px;">Trip Information</h2>
+                            <table class="performance-table">
+                                <tr>
+                                    <td style="width: 30%;">Number:</td>
+                                    <td><span t-field="doc.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Company:</td>
+                                    <td><t t-esc="doc.get_company_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Registration Number:</td>
+                                    <td><span t-field="doc.company_registration_number" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Address:</td>
+                                    <td><t t-esc="doc.get_company_address_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Employee:</td>
+                                    <td><t t-esc="doc.get_employee_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Position:</td>
+                                    <td><t t-esc="doc.get_employee_position_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Project Code:</td>
+                                    <td><span t-field="doc.code_id.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Destination:</td>
+                                    <td><span t-field="doc.destination" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Business Purpose:</td>
+                                    <td><span t-field="doc.business_purpose" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Report Issued on:</td>
+                                    <td><span t-field="doc.date_issued" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">Start Date:</td>
+                                    <td><span t-field="doc.date_start" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 30%;">End Date:</td>
+                                    <td style="width: 70%;"><span t-field="doc.date_end" /></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width: 30%;">Balance<br/>Payable to Employee - Payments Made:</td>
+                                    <td style="width: 70%;"><span t-field="doc.balance_trip_currency" /> <span t-field="doc.currency_id.name" /></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Expenses Section -->
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-12">
+                                <h2 style="font-size: 1.5em; margin-top: 15px;">Actual Expenses</h2>
+                                <t t-set="actual_expenses" t-value="doc.content_ids.filtered(lambda e: e.is_actual_expense)" />
+                                <t t-if="actual_expenses">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px; ">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 20%; ">Description</th>
+                                                <th style="padding: 4px; text-align: right; width: 8%; ">Quantity</th>
+                                                <th style="padding: 4px; text-align: left; width: 5%; ">Unit</th>
+                                                <th style="padding: 4px; text-align: right; width: 12%; ">Unit Price</th>
+                                                <th style="padding: 4px; text-align: right; width: 12%; ">Total Amount</th>
+                                                <th style="padding: 4px; text-align: left; width: 8%; "> </th>
+                                                <th style="padding: 4px; text-align: center; width: 12%; ">Group</th>
+                                                <th style="padding: 4px; text-align: center; width: 8%; ">Pay to Emp.</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="actual_expenses" t-as="expense">
+                                                <tr>
+                                                    <td style="padding: 4px; text-align: left; "><span t-field="expense.name" /></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="expense.quantity" /></td>
+                                                    <td style="padding: 4px; text-align: left; "><t t-esc="expense.get_unit_name_for_printing()" /></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="expense.unit_price" /></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="expense.total_sum" /></td>
+                                                    <td style="padding: 4px; text-align: left; "><span t-field="expense.currency_id.name" /></td>
+                                                    <td style="padding: 4px; text-align: center; "><t t-esc="expense.trip_group or 'Not specified'" /></td>
+                                                    <td style="padding: 4px; text-align: center; ">
+                                                        <t t-if="expense.payable_to_employee">&#10003;</t>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr style="font-weight: bold;">
+                                                <td colspan="4" style="padding: 4px; text-align: left; ">Total Actual Expenses:</td>
+                                                <td style="padding: 4px; text-align: right; "><span t-field="doc.total_actual_expenses_trip_currency" /></td>
+                                                <td style="padding: 4px; text-align: left; "><span t-field="doc.currency_id.name" /></td>
+                                                <td style="padding: 4px; text-align: center; "></td>
+                                                <td style="padding: 4px; text-align: center; "></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </t>
+                                <t t-else="">
+                                    <p style="font-style: italic; color: #666;">No actual expenses recorded for this trip.</p>
+                                </t>
+                            </div>
+                        </div>
+
+                        <!-- Payments to Employee Section -->
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-12">
+                                <h2 style="font-size: 1.5em; margin-top: 15px;">Payments to Employee</h2>
+                                <t t-set="payments" t-value="doc.payment_ids" />
+                                <t t-if="payments">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px; ">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 20%; ">Date</th>
+                                                <th style="padding: 4px; text-align: left; width: 40%; ">Description</th>
+                                                <th style="padding: 4px; text-align: right; width: 20%; ">Amount</th>
+                                                <th style="padding: 4px; text-align: left; width: 20%; "> </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="payments" t-as="payment">
+                                                <tr>
+                                                    <td style="padding: 4px; text-align: left; "><span t-field="payment.payment_date" /></td>
+                                                    <td style="padding: 4px; text-align: left; "><span t-field="payment.description" /></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="payment.amount" /></td>
+                                                    <td style="padding: 4px; text-align: left; "><span t-field="payment.currency_id.name" /></td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr style="font-weight: bold;">
+                                                <td colspan="2" style="padding: 4px; text-align: left; ">Total Payments to Employee:</td>
+                                                <td style="padding: 4px; text-align: left; ">
+                                                    <span t-field="doc.total_paid_to_employee_trip_currency"/>
+                                                </td>
+                                                <td style="padding: 4px; text-align: left; "><span t-field="doc.currency_id.name" /></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </t>
+                                <t t-else="">
+                                    <p style="font-style: italic; color: #666;">No payments to employee recorded for this trip.</p>
+                                </t>
+                            </div>
+                        </div>
+
+                        <!-- Logbook Section -->
+                        <div class="row" style="margin-bottom: 30px;">
+                            <div class="col-12">
+                                <h2 style="font-size: 1.5em; margin-top: 15px;">Trip Logbook</h2>
+                                <t t-if="doc.logbook_ids">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px; ">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: center; width: 10%; ">Date</th>
+                                                <th style="padding: 4px; text-align: center; width: 10%; ">Day Type</th>
+                                                <th style="padding: 4px; text-align: center; width: 10%; ">Day</th>
+                                                <th style="padding: 4px; text-align: center; width: 15%; ">Route Description</th>
+                                                <th style="padding: 4px; text-align: right; width: 10%; ">From (km)</th>
+                                                <th style="padding: 4px; text-align: right; width: 10%; ">To (km)</th>
+                                                <th style="padding: 4px; text-align: right; width: 10%; ">Distance (km)</th>
+                                                <th style="padding: 4px; text-align: right; width: 10%; ">Personal (km)</th>
+                                                <th style="padding: 4px; text-align: center; width: 15%; ">Comment</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="doc.logbook_ids" t-as="log">
+                                                <tr>
+                                                    <td style="padding: 4px; text-align: center; "><span t-field="log.date"/></td>
+                                                    <td style="padding: 4px; text-align: center; "><span t-field="log.is_working_day"/></td>
+                                                    <td style="padding: 4px; text-align: center; "><span t-field="log.day_of_week"/></td>
+                                                    <td style="padding: 4px; text-align: center; "><span t-field="log.route_description"/></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="log.from_km"/></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="log.to_km"/></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="log.distance_km"/></td>
+                                                    <td style="padding: 4px; text-align: right; "><span t-field="log.personal_km"/></td>
+                                                    <td style="padding: 4px; text-align: center; "><span t-field="log.comment"/></td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr style="font-weight: bold;">
+                                                <td colspan="6" style="padding: 4px; text-align: left; ">Total:</td>
+                                                <td style="padding: 4px; text-align: right; ">
+                                                    <span t-field="doc.total_distance_km"/>
+                                                </td>
+                                                <td style="padding: 4px; text-align: right; ">
+                                                    <span t-field="doc.total_personal_km"/>
+                                                </td>
+                                                <td style="padding: 4px; text-align: center; "></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </t>
+                                <t t-else="">
+                                    <p style="font-style: italic; color: #666;">No logbook entries recorded for this trip.</p>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

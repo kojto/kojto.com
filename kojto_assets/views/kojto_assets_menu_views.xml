@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+		<menuitem name="Assets" id="menu_kojto_asset_parent" sequence="30" />
+		<menuitem name="Assets" id="menu_kojto_assets" parent="menu_kojto_asset_parent" sequence="10" action="action_kojto_assets" />
+		<menuitem name="Asset Works List" id="menu_kojto_asset_works" parent="menu_kojto_asset_parent" sequence="20" action="action_kojto_asset_works" />
+		<menuitem name="Asset Booking List" id="menu_kojto_asset_booking" parent="menu_kojto_asset_parent" sequence="30" action="action_kojto_asset_booking" />
+		<menuitem name="Asset Rates Dashboard" id="menu_kojto_asset_subcode_rates_dashboard" parent="menu_kojto_asset_parent" sequence="40" action="action_kojto_asset_subcode_rates_dashboard" />
+		<!-- <menuitem name="Asset Maintenance List" id="menu_kojto_asset_maintenance" parent="menu_kojto_asset_parent" sequence="40" action="action_kojto_asset_maintenance" />
+		<menuitem name="Asset Value List" id="menu_kojto_asset_value" parent="menu_kojto_asset_parent" sequence="50" action="action_kojto_asset_value" />
+		<menuitem name="Asset Subcode Rates" id="menu_kojto_asset_subcode_rates" parent="menu_kojto_asset_parent" sequence="60" action="action_kojto_asset_subcode_rates" /> -->
+	</data>
+</odoo>

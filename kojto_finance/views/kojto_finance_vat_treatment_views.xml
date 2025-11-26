@@ -1,0 +1,121 @@
+<odoo>
+    <data>
+        <!-- List View for Base VAT Treatment -->
+        <record model="ir.ui.view" id="view_kojto_finance_vat_treatment_list">
+            <field name="name">kojto.finance.vat.treatment.list</field>
+            <field name="model">kojto.finance.vat.treatment</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_finance_vat_treatment_list">
+                    <field name="display_name" />
+                    <field name="code" />
+                    <field name="vat_in_out_type" />
+                    <field name="vat_treatment_type" width="200" />
+                    <field name="accounting_ops_ids" width="300" widget="many2many_tags" />
+                    <field name="all_translations" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Base VAT Treatment -->
+        <record model="ir.ui.view" id="view_kojto_finance_vat_treatment_form">
+            <field name="name">kojto.finance.vat.treatment.form</field>
+            <field name="model">kojto.finance.vat.treatment</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_vat_treatment_form" string="Vat treatment">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Vat treatment</span>
+                                </div>
+                            </div>
+                        </div>
+                        <group class="col-lg-12">
+                            <field name="display_name" readonly="1" />
+                            <field name="vat_in_out_type" widget="radio" options="{'horizontal': false}" />
+                            <field name="vat_treatment_type" />
+
+                            <field name="code" />
+                            <field name="accounting_ops_ids" string="Accounting Operations">
+                                <list editable="bottom" default_order="row_number asc">
+                                    <field name="row_number" />
+                                    <field name="acc_operation_type" />
+                                    <field name="acc_operation" />
+                                    <field name="debit_account_id" />
+                                    <field name="credit_account_id" />
+                                </list>
+                            </field>
+                        </group>
+
+                        <separator />
+
+                        <group>
+                            <field name="translation_ids">
+                                <list editable="bottom">
+                                    <field name="language_id" domain="[('active' , '=' , True)]" />
+                                    <field name="name" />
+                                    <field name="description" />
+                                </list>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View for Base VAT Treatment -->
+        <record model="ir.ui.view" id="view_kojto_finance_vat_treatment_search">
+            <field name="name">kojto.finance.vat.treatment.search</field>
+            <field name="model">kojto.finance.vat.treatment</field>
+            <field name="arch" type="xml">
+                <search string="VAT Treatments">
+                    <field name="code" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Base VAT Treatment -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_vat_treatment">
+            <field name="name">VAT Treatments</field>
+            <field name="res_model">kojto.finance.vat.treatment</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Optional: Separate Views for Translations -->
+        <record model="ir.ui.view" id="view_kojto_finance_vat_treatment_translation_list">
+            <field name="name">kojto.finance.vat.treatment.translation.list</field>
+            <field name="model">kojto.finance.vat.treatment.translation</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="treatment_id" />
+                    <field name="language_id" />
+                    <field name="name" />
+                    <field name="description" />
+                </list>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_kojto_finance_vat_treatment_translation_form">
+            <field name="name">kojto.finance.vat.treatment.translation.form</field>
+            <field name="model">kojto.finance.vat.treatment.translation</field>
+            <field name="arch" type="xml">
+                <form string="VAT Treatment Translation">
+                    <sheet>
+                        <group>
+                            <field name="treatment_id" />
+                            <field name="language_id" />
+                            <field name="name" />
+                            <field name="description" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_kojto_finance_vat_treatment_translation">
+            <field name="name">VAT Treatment Translations</field>
+            <field name="res_model">kojto.finance.vat.treatment.translation</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

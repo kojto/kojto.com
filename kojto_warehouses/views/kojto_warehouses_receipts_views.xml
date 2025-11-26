@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_warehouses/views/kojto_warehouses_receipts_views.xml -->
+<odoo>
+    <!-- Receipt List View -->
+    <record id="view_kojto_warehouses_receipts_list" model="ir.ui.view">
+        <field name="name">kojto.warehouses.receipts.list</field>
+        <field name="model">kojto.warehouses.receipts</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main">
+                <field name="to_from_store" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'"/>
+                <field name="name"/>
+                <field name="store_id"/>
+                <field name="date_issue"/>
+                <field name="issued_by"/>
+                <field name="issued_to"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Receipt Form View -->
+    <record id="view_kojto_warehouses_receipts_form" model="ir.ui.view">
+        <field name="name">kojto.warehouses.receipts.form</field>
+        <field name="model">kojto.warehouses.receipts</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet class="ko-form-body ko-form-main">
+                    <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title" style="padding-top: 1px;">
+                                        <span>RECEIPT</span>
+                                        <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                    <div class="d-flex align-items-center">
+                                        <field name="to_from_store" class="ko-form-view-title" style="margin-bottom: 20px; !important;"/>
+                                        <field name="store_id" widget="selection_badge" options="{'no_create_edit': True}" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                    <button name="action_print_pdf" class="bg-transparent border-0 d-flex align-items-center" type="object" title="Print">
+                                        <i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                                                <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1" />
+                                            </svg>
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <group>
+
+                        <!-- Company Information Section -->
+                        <group string="From">
+                            <group class="col-lg-12">
+                                <field name="company_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('res_company_id', '=', company_id)]" readonly="1" invisible="1"/>
+                                <field name="company_name_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="company_address_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="company_email_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="company_phone_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                            </group>
+                        </group>
+                        <group string="To">
+                            <field name="date_issue"/>
+                            <field name="issued_by"/>
+                            <field name="issued_to"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                    <separator/>
+                    <group string="Transactions"/>
+                    <field name="transaction_ids" widget="many2many_selection" domain="[('receipt_id', '=', False)]">
+                        <list class="ko-list-main" default_order="date_issue asc">
+                            <field name="to_from_store" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'" readonly="1"/>
+                            <field name="name" readonly="1"/>
+                            <field name="item_id" readonly="1"/>
+                            <field name="transaction_quantity" readonly="1"/>
+                            <field name="transaction_unit_id" readonly="1"/>
+                            <field name="date_issue" readonly="1"/>
+                            <field name="issued_by" readonly="1"/>
+                        </list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Receipt Search View -->
+    <record id="view_kojto_warehouses_receipts_search" model="ir.ui.view">
+        <field name="name">kojto.warehouses.receipts.search</field>
+        <field name="model">kojto.warehouses.receipts</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="store_id"/>
+                <field name="date_issue"/>
+                <field name="issued_by"/>
+                <field name="issued_to"/>
+                <separator/>
+                <filter string="To Store" name="to_store" domain="[('to_from_store', '=', 'to_store')]"/>
+                <filter string="From Store" name="from_store" domain="[('to_from_store', '=', 'from_store')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Store" name="groupby_store" context="{'group_by': 'store_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Receipts Action -->
+    <record id="action_kojto_warehouses_receipts" model="ir.actions.act_window">
+        <field name="name">Receipts</field>
+        <field name="res_model">kojto.warehouses.receipts</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_warehouses_receipts_search"/>
+        <field name="context">{'search_default_to_store': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first receipt!
+            </p>
+        </field>
+    </record>
+</odoo>

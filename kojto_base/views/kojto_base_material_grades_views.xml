@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_base_material_grades_list">
+            <field name="name">kojto.base.material.grades.list</field>
+            <field name="model">kojto.base.material.grades</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" editable="top">
+                    <field name="density" />
+                    <field name="name" />
+                    <field name="material_grade_type"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_base_material_grades_form">
+            <field name="name">kojto.base.material.grades.form</field>
+            <field name="model">kojto.base.material.grades</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_material_grades_form" string="Vat treatment">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Grades</span>
+                                </div>
+                            </div>
+                        </div>
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="density" string="Density kg/m3" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_base_material_grades_search">
+            <field name="name">kojto.base.material.grades.search</field>
+            <field name="model">kojto.base.material.grades</field>
+            <field name="arch" type="xml">
+                <search string="Material Grades">
+                    <field name="name" />
+                    <field name="density" />
+                </search>
+            </field>
+        </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_base_material_grades">
+            <field name="name">Material Grades</field>
+            <field name="res_model">kojto.base.material.grades</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

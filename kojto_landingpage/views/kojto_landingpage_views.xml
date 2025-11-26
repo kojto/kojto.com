@@ -1,0 +1,248 @@
+<odoo>
+    <data>
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_landingpage_form">
+            <field name="name">kojto.landingpage.form</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main" create="False">
+                    <style>
+                        .o_navbar a.o-dropdown-item {
+                        display: none !important;
+                        }
+
+                        .o_menu_sections {
+                        display: none !important;
+                        }
+
+                        .o_content {
+                        overflow-x: hidden !important;
+                        }
+
+                        .o_form_sheet_bg {
+                        margin: auto;
+                        }
+
+                        .o_control_panel {
+                        display: none !important;
+                        }
+
+                        .o_form_nosheet {
+                        padding: 0px !important;
+                        background-color: #f8f9fa;
+                        }
+
+                        .o_content {
+                        background-color: #f8f9fa;
+                        overflow-x: hidden !important
+                        }
+
+                        h1 {
+                        margin: 10px 0 20px;
+                        color: #3f51b4ff;
+                        font-family: 'Roboto Condensed', Arial, sans-serif;
+                        font-weight: 500;
+                        font-size: 18px
+                        }
+
+                        .instruction_text {
+                        margin: 10px 0;
+                        color: #3f51b4ff;
+                        font-family: 'Roboto Condensed', Arial, sans-serif;
+                        font-weight: 500;
+                        font-size: 14px
+                        }
+
+                        .container {
+                        max-width: 1400px;
+                        margin: auto;
+                        opacity: 0;
+                        animation: fadeIn 0.5s ease forwards;
+                        animation-delay: 0.1s;
+                        }
+
+                        @keyframes fadeIn {
+                        to {
+                        opacity: 1;
+                        }
+                        }
+
+                        .container_subheader {
+                        background-color: #3f51b438;
+                        height: 80px;
+                        border-bottom: 1px solid #3f51b44d
+                        }
+
+                        .container_footer {
+                        background-color: transparent;
+                        }
+
+                        .landing_page {
+                        background: #fff;
+                        padding: 10px
+                        }
+
+                        .landing_page .landing_page_content {
+                        padding: 0;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        align-content: flex-start;
+                        height: auto !important
+                        }
+
+                        .landing_page .landing_page_content .landing_page_item {
+                        flex: 1 1 200px;
+                        margin: 2rem 0;
+                        text-align: center
+                        }
+
+                        @media (max-width:900px) {
+                        .landing_page .landing_page_content .landing_page_item {
+                        flex: 1 1 150px
+                        }
+                        }
+
+                        @media (max-width:500px) {
+                        .landing_page .landing_page_content .landing_page_item {
+                        flex: 1 1 100px
+                        }
+                        }
+
+                        .landing_page_text {
+                        display: block;
+                        text-align: center;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-family: 'Roboto Condensed', Arial, sans-serif;
+                        font-weight: 500;
+                        margin-top: 15px
+                        }
+
+                        .landing_page_icon {
+                        font-size: 3em;
+                        width: 100px;
+                        height: auto;
+                        display: block;
+                        text-align: center;
+                        margin: 5px auto
+                        }
+
+                        .landing_page_button {
+                        background: 0 0 !important;
+                        border: 0 solid transparent !important;
+                        color: var(--o-cc2-btn-primary)
+                        }
+
+                        .landing_page_svg_icon {
+                        width: 40px;
+                        stroke: #fff;
+                        stroke-width: .5;
+                        fill: currentColor
+                        }
+
+                        .o_web_client > .o_action_manager > .o_action .o_content {
+                        background-color: white;
+                        }
+
+                    </style>
+                    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed" rel="stylesheet" />
+                    <div class="container">
+                        <div class="row">
+                            <div class="landing_page col-xl-12 col-lg-12 col-md-12 col-sm-12" data-content-min_height="0" data-content-max_height="0">
+                                <div class="landing_page_container">
+                                    <div class="landing_page_content" style="height: 360px;">
+                                        <!-- Button group 00 -->
+                                        <!-- Button group 01 -->
+                                        <!-- Button group 02 -->
+                                        <!-- Button group 03 -->
+                                        <!-- Button group 04 -->
+                                        <!-- Button group 05 -->
+                                        <!-- Button group 06 -->
+                                        <!-- Button group 07 -->
+                                        <!-- Button group 08 -->
+                                        <!-- Button group 09 -->
+                                        <!-- Button group 10 -->
+                                        <!-- Button group 11 -->
+                                        <!-- Button group 12 -->
+                                        <!-- Button group 13 -->
+                                        <!-- Button group 14 -->
+                                        <!-- Button group 15 -->
+                                        <!-- Button group 16 -->
+                                        <!-- Button group 17 -->
+                                        <!-- Button group 18 -->
+                                        <!-- Button group 19 -->
+                                        <!-- Button group 20 -->
+                                        <!-- Button group 21 -->
+                                        <!-- Button group 22 -->
+                                        <!-- Button group 23 -->
+                                        <!-- Button group 24 -->
+                                        <!-- Button group 25 -->
+                                        <!-- Button group 26 -->
+                                        <!-- Button group 27 -->
+                                        <!-- Button group 28 -->
+                                        <!-- Button group 29 -->
+                                        <!-- Button group 30 -->
+                                        <!-- Apps -->
+                                        <div class="landing_page_item" groups="base.group_erp_manager">
+                                            <button name="open_apps_list_view" type="object" class="btn landing_page_button" style="color: #6c757d;">
+                                                <div class="o_button_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #6c757d;">
+                                                        <path
+                                                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                                                    </svg>
+                                                </div>
+                                                <span class="landing_page_text" style="color: #6c757d;">Apps</span>
+                                            </button>
+                                        </div>
+                                        <!-- Settings -->
+                                        <div class="landing_page_item" groups="base.group_erp_manager">
+                                            <button name="open_settings_list_view" type="object" class="btn landing_page_button" style="color: #6c757d;">
+                                                <div class="o_button_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="landing_page_svg_icon" style="fill: #6c757d;">
+                                                        <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
+                                                        <path
+                                                            d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
+                                                    </svg>
+                                                </div>
+                                                <span class="landing_page_text" style="color: #6c757d;">Settings</span>
+                                            </button>
+                                        </div>
+                                        <!-- Placeholder divs for layout -->
+                                        <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                                        <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                                        <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                                        <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                                        <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                                        <separator class="col-lg-12 separator" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_footer">
+                        <div class="row">
+                            <div id="footer" class="footer text-center instruction_text">© 2024 Kojto. All Rights Reserved.</div>
+                        </div>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!-- Action to Open the Form View -->
+        <record model="ir.actions.act_window" id="action_kojto_landingpage">
+            <field name="name">Home</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.landingpage</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_kojto_landingpage_form" />
+            <field name="context">{}</field>
+        </record>
+        <record id="server_action_open_landingpage" model="ir.actions.server">
+            <field name="name">Home</field>
+            <field name="model_id" ref="model_kojto_landingpage" />
+            <field name="state">code</field>
+            <field name="code"> action = env['kojto.landingpage'].open_landingpage() </field>
+        </record>
+        <menuitem name="Home" id="menu_kojto_landingpage" sequence="1" action="server_action_open_landingpage" />
+    </data>
+</odoo>

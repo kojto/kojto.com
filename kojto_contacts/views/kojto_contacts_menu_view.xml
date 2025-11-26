@@ -1,0 +1,6 @@
+<!-- kojto_contacts/views/kojto_contacts_menu_view.xml -->
+<odoo>
+	<data>
+		<menuitem name="Contacts" id="menu_kojto_contacts" sequence="20" action="action_kojto_contacts"/>
+	</data>
+</odoo>

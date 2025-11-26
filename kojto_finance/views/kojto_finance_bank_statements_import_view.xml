@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- View for the bank statements import  -->
+        <record id="view_kojto_finance_bank_statements_import_form" model="ir.ui.view">
+            <field name="name">kojto.finance.bank.statements.import.form</field>
+            <field name="model">kojto.finance.bank.statements.import</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main" string="Bank Statements Import">
+                    <sheet class="ko-form-body mb-3">
+                        <div>
+                            <field name="files" widget="many2many_binary" style="width: 100%" options="{'accepted_file_types': '.txt'}"/>
+                        </div>
+                        <footer style="margin: 10px">
+                            <button name="import_files" string="Import" type="object" class="oe_highlight" />
+                            <button string="Cancel" class="oe_link" special="cancel" />
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Popup view for import summary -->
+        <record id="view_kojto_finance_bank_statements_import_message_popup" model="ir.ui.view">
+            <field name="name">kojto.finance.bank.statements.import.message.popup</field>
+            <field name="model">kojto.finance.bank.statements.import</field>
+            <field name="arch" type="xml">
+                <form string="Bank Statements Import Summary" create="0" edit="0" delete="0">
+                    <sheet class="ko-form-body mb-3">
+                        <div>
+                            <field name="result_message" nolabel="1" widget="text" readonly="1" class="fs-5" style="height:300px;"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Action for the bank statements import  -->
+        <record id="action_kojto_finance_bank_statements_import" model="ir.actions.act_window">
+            <field name="name">Bank Statements Import</field>
+            <field name="res_model">kojto.finance.bank.statements.import</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem name="Finance" id="menu_kojto_finance" sequence="80" web_icon="kojto_finance,static/description/icon.png" />
+
+        <menuitem name="Invoices" id="menu_kojto_finance_invoices" parent="menu_kojto_finance" action="action_kojto_finance_invoices" sequence="10" />
+        <!--
+        <menuitem name="Invoice Contents" id="menu_kojto_finance_invoice_contents" parent="menu_kojto_finance" action="action_kojto_finance_invoice_contents" sequence="15" />
+        -->
+        <menuitem name="[+] Cash Flow" id="menu_kojto_finance_cashflow" parent="menu_kojto_finance" sequence="20" />
+        <menuitem name="Accounts Balance" id="menu_kojto_finance_accounts_balance" parent="menu_kojto_finance_cashflow" action="action_kojto_finance_accounts_balance_report" sequence="25" />
+        <menuitem name="Transactions" id="menu_kojto_finance_cashflow_transactions" parent="menu_kojto_finance_cashflow" action="action_kojto_finance_cashflow" sequence="30" />
+        <!--
+        <menuitem name="Allocations" id="menu_kojto_finance_cashflow_allocations" parent="menu_kojto_finance_cashflow" action="action_kojto_finance_cashflow_allocations" sequence="40" />
+        -->
+        <menuitem name="Bank Statements" id="menu_kojto_finance_bank_statements" parent="menu_kojto_finance_cashflow" action="action_kojto_finance_bank_statements" sequence="50" />
+        <menuitem name="Bank Statement Upload" id="menu_kojto_finance_bank_statements_import" parent="menu_kojto_finance_cashflow" action="action_kojto_finance_bank_statements_import" sequence="60" />
+
+        <menuitem name="[+] Accounting" id="menu_kojto_finance_accounting" parent="menu_kojto_finance" sequence="70" />
+        <menuitem name="Invoices" id="menu_kojto_finance_accounting_invoices" parent="menu_kojto_finance_accounting" action="action_kojto_finance_invoices_accounting" sequence="5" />
+        <menuitem name="Templates" id="menu_kojto_finance_accounting_templates" parent="menu_kojto_finance_accounting" action="action_kojto_finance_accounting_templates" sequence="10" />
+        <menuitem name="Types" id="menu_kojto_finance_accounting_types" parent="menu_kojto_finance_accounting" action="action_kojto_finance_accounting_types" sequence="20" />
+        <menuitem name="Subtypes" id="menu_kojto_finance_accounting_subtypes" parent="menu_kojto_finance_accounting" action="action_kojto_finance_accounting_subtypes" sequence="30" />
+        <menuitem name="Identifiers" id="menu_kojto_finance_accounting_identifiers" parent="menu_kojto_finance_accounting" action="action_kojto_finance_accounting_identifiers" sequence="40" />
+        <menuitem name="Accounts" id="menu_kojto_finance_accounting_accounts" parent="menu_kojto_finance_accounting" action="action_kojto_finance_accounting_accounts" sequence="50" />
+        <menuitem name="VAT Treatments" id="menu_kojto_finance_vat_treatment" parent="menu_kojto_finance_accounting" action="action_kojto_finance_vat_treatment" sequence="60" />
+
+        <menuitem name="[+] Dashboards" id="menu_kojto_finance_dashboards" parent="menu_kojto_finance" sequence="80" />
+        <menuitem name="Revenue Expense" id="menu_kojto_finance_dashboard_revenue_expense" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_revenue_expense_dashboard" sequence="10" />
+        <menuitem name="VAT Balance" id="menu_kojto_finance_vat_balance_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_vat_balance_dashboard" sequence="15" />
+        <menuitem name="Cash Flow" id="menu_kojto_finance_cashflow_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_cashflow_dashboard" sequence="20" />
+        <menuitem name="Time Tracking" id="menu_kojto_finance_time_tracking_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_time_tracking_dashboard" sequence="30"/>
+        <menuitem name="Asset Works" id="menu_kojto_finance_asset_works_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_asset_works_dashboard" sequence="40"/>
+        <menuitem name="Balance" id="menu_kojto_finance_balance" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_balance" sequence="50" />
+        <menuitem name="Unpayed Invoices" id="menu_kojto_finance_open_amount_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_open_amount_dashboard" sequence="60" />
+        <menuitem name="Counterparty Balance" id="menu_kojto_finance_counterparty_balance_dashboard" parent="menu_kojto_finance_dashboards" action="action_kojto_finance_counterparty_balance_dashboard" sequence="70" />
+    </data>
+</odoo>

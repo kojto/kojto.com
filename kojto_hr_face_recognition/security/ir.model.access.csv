@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kojto_hr_face_recognition,kojto.hr.face.recognition,model_kojto_hr_face_recognition,base.group_erp_manager,1,1,1,1
+access_kojto_hr_face_recognition_admin,kojto.hr.face.recognition,model_kojto_hr_face_recognition,kojto_base.kojto_administrator,1,1,1,1
+access_kojto_hr_face_recognition_manager,kojto.hr.face.recognition,model_kojto_hr_face_recognition,kojto_base.kojto_manager,1,1,1,0
+access_kojto_hr_face_recognition_accountant,kojto.hr.face.recognition,model_kojto_hr_face_recognition,kojto_base.kojto_accountant,1,0,0,0
+access_kojto_hr_face_recognition_assistant,kojto.hr.face.recognition,model_kojto_hr_face_recognition,kojto_base.kojto_assistant,1,1,0,0
+access_kojto_hr_face_recognition_terminal,kojto.hr.face.recognition,model_kojto_hr_face_recognition,kojto_base.kojto_terminal,1,1,1,0

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{record_name} Bundle</title>
+        <meta charset="UTF-8" />
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&subset=cyrillic&display=swap');
+            {css_content}
+            {css_combined_content}
+        </style>
+    </head>
+    <body>
+        <article id="cover"></article>
+        <article id="contents">
+            <h1>Table of Contents</h1>
+            <ul>
+                {toc_items}
+            </ul>
+        </article>
+        {html_contents}
+    </body>
+</html>

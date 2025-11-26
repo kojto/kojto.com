@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Main Menu  -->
+		<menuitem id="menu_commission_codes" name="Codes" sequence="20" />
+		<!-- Submenu for Main Codes -->
+		<menuitem id="menu_main_codes" name="Main Codes" parent="menu_commission_codes" action="action_kojto_commission_main_codes" sequence="20" />
+		<menuitem id="menu_codes" name="Codes" parent="menu_commission_codes" action="action_kojto_commission_codes" sequence="30" />
+		<menuitem id="menu_subcodes" name="Subcodes" parent="menu_commission_codes" action="action_kojto_commission_subcodes_view" sequence="40" />
+	</data>
+</odoo>

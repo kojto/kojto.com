@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_finance_accounts_balance_report_form">
+            <field name="name">kojto.finance.accounts.balance.report.form</field>
+            <field name="model">kojto.finance.accounts.balance.report</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_accounts_balance_report_form" readonly="1">
+                    <sheet>
+                        <group style="max-width: 400px;">
+                            <field name="from_date" />
+                            <field name="to_date" />
+                            <field name="start_amount_preview" />
+                            <field name="period_amount_in_preview" />
+                            <field name="period_amount_out_preview" decoration-danger="1" />
+                            <field name="period_amount_preview" decoration-danger="period_amount_is_negative" />
+                        </group>
+
+                        <separator class="col-lg-12 separator" />
+
+
+                        <group>
+                            <style>
+                                .ko-list-main tr> :first-child {
+                                text-align: left !important;
+                                }
+                            </style>
+                            <field name="bank_account_balance_id" nolabel="1" no_open="1">
+                                <list class="ko-list-main" create="false" edit="false" no_open="1">
+                                    <field name="bank_account_description" />
+                                    <field name="bank_account_iban" optional="hide" />
+                                    <field name="bank_name" optional="show" />
+                                    <field name="bank_currency" optional="show" />
+                                    <field name="start_amount_preview" optional="show" />
+                                    <field name="amount_in_preview" optional="show" />
+                                    <field name="amount_out_preview" decoration-danger="1" optional="show" />
+                                    <field name="amount_preview" optional="show" decoration-danger="amount_is_negative" />
+                                    <field name="exchange_rate_to_bgn" optional="hide" />
+                                </list>
+                            </field>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button string="Cancel" class="btn-secondary mb-2" special="cancel" style="width: 150px; box-sizing: border-box;" />
+                    </footer>
+                </form>
+
+            </field>
+        </record>
+
+        <!-- Action to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_accounts_balance_report">
+            <field name="name">Cash Flow Balance Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.accounts.balance.report</field>
+            <field name="view_mode">form</field>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Cash Flow Balance Report to analyze Cash Flow metrics.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

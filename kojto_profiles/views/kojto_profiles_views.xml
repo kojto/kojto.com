@@ -1,0 +1,239 @@
+<!-- kojto_profiles/views/kojto_profiles_views.xml -->
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_profiles_list">
+            <field name="name">kojto.profiles.list</field>
+            <field name="model">kojto.profiles</field>
+            <field name="arch" type="xml">
+                <list string="Profiles" class="ko-list-main" duplicate="false">
+                    <field name="active" widget="boolean_toggle" string=" " class="d-flex justify-content-center"/>
+                    <field name="name"/>
+                    <field name="material_id"/>
+                    <field name="process_ids" widget="one2many" string="Processes"/>
+                    <field name="total_process_time_per_m" string="Total Time (min/m)" readonly="1"/>
+                    <field name="profile_cross_sectional_area" string="A (cm²)" readonly="1"/>
+                    <field name="profile_weight" string="G (kg)" readonly="1"/>
+                    <field name="jx" string="Jx (cm⁴)" readonly="1"/>
+                    <field name="jy" string="Jy (cm⁴)" readonly="1"/>
+                    <field name="wx" string="Wx (cm³)" readonly="1"/>
+                    <field name="wy" string="Wy (cm³)" readonly="1"/>
+                    <field name="max_height" string="H (mm)" readonly="1"/>
+                    <field name="max_width" string="W (mm)" readonly="1"/>
+                    <field name="coating_perimeter" string="U (mm)" readonly="1"/>
+                    <button name="copy_with_relations" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Profile" context="{'from_list_view': True}"/>
+                    <button name="action_export_autocad" type="object" class="b-0 text-black bg-transparent fa fa-download" title="Export DXF" context="{'from_list_view': True}"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for KojtoProfiles -->
+        <record model="ir.ui.view" id="view_kojto_profiles_form">
+            <field name="name">kojto.profiles.form</field>
+            <field name="model">kojto.profiles</field>
+            <field name="arch" type="xml">
+                <form string="Kojto Profile">
+                    <sheet class="ko-form-body ko-form-main view_kojto_profiles_form">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="ko-form-view-title">
+                                <field name="name" class="ko-form-view-title" required="True"/>
+                            </div>
+
+                            <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                            </div>
+
+                            <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                <button name="generate_description_points" type="object" class="oe_highlight" string="Generate Description Points" title="Generate description points from profile perimeter"/>
+                                <button name="action_export_autocad" type="object" class="oe_highlight" string="Export DXF" title="Export profile to AutoCAD DXF format"/>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top" />
+
+                        <div class="row">
+                            <div class="col-3   ">
+                                <table class="table table-sm border-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Material</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="material_id" required="True" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">A (cm²)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="profile_cross_sectional_area" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">G (kg/m)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="profile_weight" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Jx (cm⁴)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="jx" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Jy (cm⁴)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="jy" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Wx (cm³)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="wx" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Wy (cm³)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="wy" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Center of Mass X</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="center_of_mass_x" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">Center of Mass Y</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="center_of_mass_y" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">h (mm)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="max_height" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">w (mm)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="max_width" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 35%; padding: 0; margin-right: 0;">U (mm)</td>
+                                            <td class="border-0" style="width: 65%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="coating_perimeter" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Ext. corners</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="number_ext_corners" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-3">
+                                <div>
+                                    <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div>
+                                    <field name="profile_description" string="Profile Description" placeholder="Add a profile description ..." style="height: 300px;"/>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <notebook>
+                                    <page string="Strips">
+                                        <field name="strip_ids" widget="one2many" nolabel="1">
+                                            <list editable="bottom" style="width: 100%;">
+                                                <field name="name"/>
+                                                <field name="point_1_x"/>
+                                                <field name="point_1_y"/>
+                                                <field name="point_2_x"/>
+                                                <field name="point_2_y"/>
+                                                <field name="thickness"/>
+                                                <field name="angle_1"/>
+                                                <field name="angle_2"/>
+                                                <button name="open_strip_window" type="object" icon="fa-external-link" class="btn-link" context="{}" title=" "/>
+                                            </list>
+                                        </field>
+                                    </page>
+                                    <page string="Inserted Shapes">
+                                        <field name="shape_insert_ids" widget="one2many" nolabel="1">
+                                            <list editable="bottom" style="width: 100%;">
+                                                <field name="shape_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                                <field name="x" string="Insert X"/>
+                                                <field name="y" string="Insert Y"/>
+                                                <field name="rotation" string="Rotation"/>
+                                                <button name="open_shape_window" type="object" icon="fa-external-link" class="btn-link" context="{}" title=" "/>
+                                            </list>
+                                        </field>
+                                    </page>
+                                    <page string="Processes">
+                                        <field name="process_ids" widget="one2many" nolabel="1">
+                                            <list editable="bottom" style="width: 100%;">
+                                                <field name="description"/>
+                                                <field name="process_type"/>
+                                                <field name="time_per_meter"/>
+                                            </list>
+                                        </field>
+                                    </page>
+                                    <page string="Description Points">
+                                        <field name="profile_description_point_ids" widget="one2many" nolabel="1">
+                                            <list editable="bottom" style="width: 100%;">
+                                                <field name="x"/>
+                                                <field name="y"/>
+                                                <field name="description"/>
+                                                <field name="color"/>
+                                                <field name="representation_shape"/>
+                                                <field name="representation_shape_size"/>
+                                                <field name="description_offset_x"/>
+                                                <field name="description_offset_y"/>
+                                                <field name="description_size"/>
+                                                <field name="profile_strip_id"/>
+                                            </list>
+                                        </field>
+
+                                    </page>
+                                    <page string="Profile Perimeter Coordinates">
+                                        <field name="profile_perimeter_coordinates" widget="json" nolabel="1"/>
+                                    </page>
+                                </notebook>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_profiles_search">
+            <field name="name">kojto.profiles.search</field>
+            <field name="model">kojto.profiles</field>
+            <field name="arch" type="xml">
+                <search string="Search Profiles">
+                    <field name="name" string="Profile Name"/>
+                    <field name="material_id" string="Material"/>
+                    <field name="total_process_time_per_m" string="Total Process Time"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_profiles">
+            <field name="name">Profiles</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.profiles</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Add Profiles to associate with Strips.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

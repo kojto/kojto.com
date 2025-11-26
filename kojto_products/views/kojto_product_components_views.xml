@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_products/views/kojto_product_components_views.xml -->
+<odoo>
+    <!-- 1. Component List View -->
+    <record id="component_list_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component List</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="subcode_id"/>
+                <field name="name" decoration-bf="1"/>
+                <field name="component_revision_number"/>
+                <field name="component_type"/>
+                <field name="unit_id"/>
+                <field name="latest_revision_datetime"/>
+                <button name="copy_and_open" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Component" context="{'from_list_view': True}"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- 1.1 Component Search View -->
+    <record id="component_search_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component Search</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <search string="Search Components">
+                <!-- Searchable Fields -->
+                <field name="name" string="Component Name"/>
+                <field name="subcode_id"/>
+                <field name="component_type"/>
+                <field name="active"/>
+                <!-- Filters -->
+                <filter name="active_components" string="Active Components" domain="[('active', '=', True)]"/>
+                <filter name="inactive_components" string="Inactive Components" domain="[('active', '=', False)]"/>
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_by_subcode" string="Subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter name="group_by_component_type" string="Component Type" context="{'group_by': 'component_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- 2. Component Form View -->
+    <record id="component_form_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component Form</field>
+        <field name="model">kojto.product.component</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <form string="Component" class="ko-form-main">
+                <sheet class="ko-form-body">
+                    <!-- Header Section -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <field name="subcode_id" class="ko-form-view-title" readonly="1" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                        <field name="latest_revision_id" class="ko-form-view-title" readonly="1" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <!-- Free for Content -->
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <button name="action_export_last_revision" type="object" class="btn fa fa-file-excel-o" title="Export to Excel"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <!-- Form Content -->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <group>
+                                <field name="subcode_id" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                <field name="name" placeholder="Enter Component Name" required="1"/>
+                                <field name="component_type"/>
+                                <field name="unit_id" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="latest_revision_datetime" readonly="1"/>
+                            </group>
+                        </div>
+                        <div class="col-md-8">
+                            <field name="revision_ids" mode="list" nolabel="1" editable="bottom">
+                                <list editable="bottom" class="ko-list-main">
+                                    <field name="is_locked" widget="boolean_toggle"/>
+                                    <field name="name" string="Revision" readonly="1" force_save="1"/>
+                                    <field name="weight_attribute" string="W (kg)" optional="show"/>
+                                    <field name="length_attribute" string="L (m)" optional="hide"/>
+                                    <field name="area_attribute" string="A (m2)" optional="hide"/>
+                                    <field name="volume_attribute" string="V (m3)" optional="hide"/>
+                                    <field name="price_attribute" string="Price (€)" optional="show"/>
+                                    <field name="time_attribute" string="Time (min)" optional="hide"/>
+                                    <field name="other_attribute" string="Other" optional="hide"/>
+                                    <button name="action_open_revision_form" type="object" class="b-0 text-black bg-transparent fa fa-external-link" title="Open Latest Revision" attrs="{'invisible': [('latest_revision_id', '=', False)]}"/>
+                                    <button name="copy_revision" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Revision" context="{'from_list_view': True}" attrs="{'invisible': [('is_last_revision', '=', False)]}"/>
+                                </list>
+                            </field>
+                        </div>
+                        <div class="col-md-6">
+                            <group string="TOP DOWN ANALYSIS"/>
+                            <div string="Top Down">
+                                <field name="analysis_top_down" nolabel="1" widget="html"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <group string="BOTTOM UP ANALYSIS"/>
+                            <div string="Bottom Up">
+                                <field name="analysis_bottom_up" nolabel="1" widget="html"/>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 5. Action for Components -->
+    <record id="action_kojto_product_component" model="ir.actions.act_window">
+        <field name="name">Kojto Product Components</field>
+        <field name="res_model">kojto.product.component</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('component_list_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('component_form_view')})]"/>
+        <field name="search_view_id" ref="component_search_view"/>
+    </record>
+
+</odoo>

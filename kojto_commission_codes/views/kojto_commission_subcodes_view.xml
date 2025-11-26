@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List view for Sub-Subcodes -->
+    <record id="view_kojto_commission_subcodes_list" model="ir.ui.view">
+        <field name="name">kojto.commission.subcodes.list</field>
+        <field name="model">kojto.commission.subcodes</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" editable="top">
+                <field name="active" string="is Active" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="code_id" />
+                <field name="subcode" />
+                <field name="name" />
+                <field name="description" />
+                <field name="cash_flow_only" string="Cash Flow Only" widget="boolean_toggle" class="w-100 d-flex justify-content-left" />
+                <field name="show_in_hr_tracking" string="Show in HR Tracking" widget="boolean_toggle" class="w-100 d-flex justify-content-left" />
+                <field name="show_in_asset_works" string="Show in Asset Works" widget="boolean_toggle" class="w-100 d-flex justify-content-left" />
+            </list>
+        </field>
+    </record>
+    <!-- Form view for Sub-Subcodes -->
+    <record id="view_kojto_commission_subcodes_form" model="ir.ui.view">
+        <field name="name">kojto.commission.subcodes.form</field>
+        <field name="model">kojto.commission.subcodes</field>
+        <field name="arch" type="xml">
+            <form class="ko-form-main">
+
+                <sheet class="ko-form-body">
+                    <div class="d-flex align-items-center">
+                        <div class="ko-form-view-title">
+                            <span>SUBCODE</span>
+                        </div>
+                    </div>
+                    <!-- Header end -->
+                    <separator class="col-lg-12 separator" />
+                    <group class="col-lg-6">
+                        <field name="maincode_id" />
+                        <field name="code_id" />
+                        <field name="subcode" />
+                        <field name="description" />
+                    </group>
+                    <group>
+                        <field name="active" widget="boolean_toggle" />
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_kojto_commission_subcodes_search">
+        <field name="name">kojto.commission.subcodes.search</field>
+        <field name="model">kojto.commission.subcodes</field>
+        <field name="arch" type="xml">
+            <search string="Subcode">
+                <field name="name" />
+                <field name="code_id" />
+                <field name="create_date" />
+                <filter name='active' string="Активни" domain="[('active', '=', True)]" />
+                <filter name='active' string="Неактивни" domain="[('active', '=', False)]" />
+            </search>
+        </field>
+    </record>
+    <!-- Action for Sub-Subcodes -->
+    <record id="action_kojto_commission_subcodes_view" model="ir.actions.act_window">
+        <field name="name">Subcodes</field>
+        <field name="res_model">kojto.commission.subcodes</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+				(0, 0, {'view_mode': 'list', 'view_id': ref('view_kojto_commission_subcodes_list')}),
+				(0, 0, {'view_mode': 'form', 'view_id': ref('view_kojto_commission_subcodes_form')})]" />
+    </record>
+</odoo>

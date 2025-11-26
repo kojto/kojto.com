@@ -1,0 +1,2945 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_finance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:32+0000\n"
+"PO-Revision-Date: 2025-08-11 07:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_finance
+#: model:ir.actions.report,print_report_name:kojto_finance.action_report_kojto_invoices
+msgid "'INVOICE - %s' % (object.name)"
+msgstr "ФАКТУРА - %s' % (име на обект)"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "---- END OF INVOICE ----"
+msgstr "---- КРАЙ НА ФАКТУРАТА ----"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "2$Производствен цех#100#Разходи основни материали#BRK.240180"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "2$Производствен цех#{content_subtype}${content_subtype_name}#{subcode}"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+msgid "<span class=\"ko-offer-wselection-badge fw-bold\">Unallocated: </span>"
+msgstr "<span class=\"ko-offer-wselection-badge fw-bold\">Неразпределено: </span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #dc3545;\">Invoices</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #dc3545;\">Фактури</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "<span>/</span>"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_ops_form
+msgid "<span>ACCOUNTING OPERATIONS ENTRY</span>"
+msgstr "<span>ВПИСВАНЕ НА СЧЕТОВОДНИ ОПЕРАЦИИ</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_subtypes_form
+msgid "<span>ACCOUNTING SUBTYPE</span>"
+msgstr "<span>ПОДТИП СЧЕТОВОДСТВО</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_types_form
+msgid "<span>ACCOUNTING TYPES ENTRY</span>"
+msgstr "<span>ВЪПИСВАНЕ НА ВИДОВЕ СЧЕТОВОДСТВО</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_bank_statements_form
+msgid "<span>BANK STATEMENT</span>"
+msgstr "<span>БАНКОВО ИЗВЛЕЧЕНИЕ</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_vat_treatment_form
+msgid "<span>Vat treatment</span>"
+msgstr "<span>ДДС</span>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "<strong>VAT Rate Summary:</strong>"
+msgstr "<strong>ДДС ставка/и:</strong>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "<strong>VAT Treatment Summary:</strong>"
+msgstr "<strong>ДДС третиране:</strong>"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_list
+msgid "Acc Anum"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Acc Date"
+msgstr "Дата на акц"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Acc Identifier"
+msgstr "Идентификатор на Acc"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Acc Number"
+msgstr "Номер на сметката"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Acc Op Date"
+msgstr "Дата на операция"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+msgid "Acc Ref"
+msgstr "Реф. номер на сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Acc Subtype"
+msgstr "Подтип на сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Acc Template"
+msgstr "Шаблон на сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Acc User"
+msgstr "Потребител на акаунт"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "Account Name"
+msgstr "Име на акаунта"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__account_number
+msgid "Account Number"
+msgstr "Номер на сметката"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__account_structure_template
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "Account Structure Template"
+msgstr "Шаблон за структура на акаунта"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__accountant_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__accountant_id
+msgid "Accountant User ID"
+msgstr "Потребителски идентификатор на счетоводителя"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Accounting"
+msgstr "Счетоводство"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__accounting_archive_number
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__accounting_archive_number
+msgid "Accounting Archive Number"
+msgstr "Номер на счетоводен архив"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Accounting Date"
+msgstr "Счетоводна дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__accounting_export_date
+msgid "Accounting Export Date"
+msgstr "Счетоводна дата на експорт"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_invoices_accounting
+msgid "Accounting Invoices"
+msgstr "Счетоводни фактури"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__accounting_is_exported
+msgid "Accounting Is Exported"
+msgstr "Счетоводството е експортирано"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Accounting Number"
+msgstr "Счетоводен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__acc_operation
+msgid "Accounting Operation"
+msgstr "Счетоводна операция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__accounting_op_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__accounting_op_date
+msgid "Accounting Operation Date"
+msgstr "Дата на счетоводна операция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__acc_operation_type
+msgid "Accounting Operation Type"
+msgstr "Вид счетоводна операция"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_ops
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__accounting_ops_ids
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__accounting_ops_ids
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_vat_treatment_form
+msgid "Accounting Operations"
+msgstr "Счетоводни операции"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__accounting_ref_number
+msgid "Accounting Reference Number"
+msgstr "Счетоводен референтен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__accounting_template_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__accounting_template_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Accounting Template"
+msgstr "Счетоводен шаблон"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__accounting_template_domain
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__accounting_template_domain
+msgid "Accounting Template Domain"
+msgstr "Домейн на счетоводен шаблон"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_types
+msgid "Accounting Types"
+msgstr "Видове счетоводство"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__accounting_warehouse
+msgid "Accounting Warehouse"
+msgstr "Счетоводен склад"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__accounting_warehouse_name
+msgid "Accounting Warehouse Name"
+msgstr "Име на счетоводния склад"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_identifiers
+msgid "Accounting identifiers"
+msgstr "Счетоводни идентификатори"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_subtypes
+msgid "Accounting subtypes"
+msgstr "Счетоводни подвидове"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_templates
+msgid "Accounting templates"
+msgstr "Счетоводни шаблони"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_accounts
+msgid "Accounts"
+msgstr "Сметки"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounts_balance
+msgid "Accounts Balance"
+msgstr "Салдо по сметки"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Actions"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__active
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Active"
+msgstr "Активна"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Active Invoices"
+msgstr "Активни фактури"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__subcode_ids
+msgid "Active Subcodes"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__information
+msgid "Additional information"
+msgstr "Допълнителна информация"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_address_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Address:"
+msgstr "Адрес:"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__advance
+msgid "Advance Payment"
+msgstr "Авансово плащане"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__allocation_summary
+msgid "Allocation Summary"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__allocation_value_in_bgn
+msgid "Allocation Value in BGN"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__allocation_value_in_eur
+msgid "Allocation Value in EUR"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_list
+msgid "Allocations"
+msgstr "Разпределения"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_in_bgn
+msgid "Amoint In BGN"
+msgstr "Сума в лева"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__amount
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__amount
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+msgid "Amount"
+msgstr "Сума"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__amount_base
+msgid "Amount Base"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_allocation_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+msgid "Amount Doc."
+msgstr "Сума Документ"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_in
+msgid "Amount In"
+msgstr "Сума в"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_out
+msgid "Amount Out"
+msgstr "Изходяща сума"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_out_bgn
+msgid "Amount Out BGN"
+msgstr "Изходяща сума лв"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_identifiers__identifier_type__asset
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__asset
+msgid "Asset"
+msgstr "Актив"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__asset_works_count
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_asset_works_dashboard
+msgid "Asset Works"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_asset_works_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_asset_works_dashboard_list
+msgid "Asset Works Dashboard"
+msgstr "Табло за управление на активи"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__asset_works_quantity
+msgid "Asset Works Quantity"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__asset_works_total
+msgid "Asset Works Total"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachment_1_pdf
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Attachment 1"
+msgstr "Приложение 1"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachment_2_pdf
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Attachment 2"
+msgstr "Приложение 2"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachment_3_pdf
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Attachment 3"
+msgstr "Приложение 3"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachment_4_pdf
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Attachment 4"
+msgstr "Приложение 4"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachment_5_pdf
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Attachment 5"
+msgstr "Приложение 5"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__attachments
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachments
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__repr_attachments
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__attachments_for_preview
+msgid "Attachments for preview"
+msgstr "Прикачени файлове за преглед"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Available Numbers"
+msgstr "Налични номера"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__bank_bic_code
+msgid "BIC Code"
+msgstr "BIC код"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "BIC:"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_preview
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__balance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_preview
+msgid "Balance"
+msgstr "Баланс"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_bgn
+msgid "Balance BGN"
+msgstr "Остатък лв"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_is_negative
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_is_negative
+msgid "Balance is negative"
+msgstr "Балансът е отрицателен"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__bank_account_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_bank_account_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_account_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__bank_account_balance_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_account_balance_id
+msgid "Bank Account Balance"
+msgstr "Салдо по банкова сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__bank_account_id
+msgid "Bank Account ID"
+msgstr "Банкова сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__counterparty_bank_account_owner_id
+msgid "Bank Account Owner"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_name
+msgid "Bank Name"
+msgstr "Име на банката"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_bank_statements_import
+msgid "Bank Statement Upload"
+msgstr "Качване на банкови извлечения"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_bank_statements
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_bank_statements
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_bank_statements_search
+msgid "Bank Statements"
+msgstr "Банкови извлечения"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_bank_statements_import
+#: model:ir.model,name:kojto_finance.model_kojto_finance_bank_statements_import
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_bank_statements_import_form
+msgid "Bank Statements Import"
+msgstr "Качване на банкови извлечения"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_bank_account_id
+msgid "Bank account"
+msgstr "Банкова сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Bank:"
+msgstr "Банка:"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__transaction_data_raw
+msgid "Base Data"
+msgstr "Базови данни"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_search
+msgid "By Account Number"
+msgstr "По номер на сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_export_to_ajur_form
+msgid ""
+"By clicking submit, you will export the selected transactions in a txt file "
+"suitable for AJUR import."
+msgstr ""
+"Като щракнете върху изпращане, ще експортирате избраните транзакции в txt "
+"файл, подходящ за импортиране на AJUR."
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "CREDIT NOTE"
+msgstr "КРЕДИТНО ИЗВЕСТИЕ"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounts_balance_report_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_bank_statements_import_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_export_to_ajur_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoices_export_to_ajur_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_cashflow.py:0
+msgid ""
+"Cannot delete cashflow record that is linked to a bank statement. Please "
+"unlink it from the statement first."
+msgstr ""
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice.py:0
+msgid ""
+"Cannot print invoice: Redistribution total is not valid. Please check the "
+"redistribution items."
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__cash_allocation_count
+msgid "Cash Allocations"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_cashflow_dashboard
+msgid "Cash Flow"
+msgstr "Паричен поток"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounts_balance_report
+msgid "Cash Flow Balance Report"
+msgstr "Отчет за баланса на паричния поток"
+
+#. module: kojto_finance
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounts_balance_report
+msgid "Cash Flow Balance Report to analyze Cash Flow metrics."
+msgstr ""
+"Отчет за баланса на паричните потоци за анализ на показателите за паричните "
+"потоци."
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_cashflow_dashboard
+msgid "Cash Flow Dashboard"
+msgstr "Табло за управление на паричния поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__cash_flow_only
+msgid "Cash Flow Only"
+msgstr "Само паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__cash_flow_only_inherited
+msgid "Cash Flow Only (i)"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_cashflow
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__transaction_id
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__cashflow
+msgid "Cashflow"
+msgstr "Паричен поток"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_allocation_list
+msgid "Cashflow Allocations"
+msgstr "Разпределения на паричния поток"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Cashflow Search"
+msgstr "Търсене на паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__is_catalogue_account
+msgid "Catalogue Account"
+msgstr "Каталожен акаунт"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_list
+msgid "Catalogue account"
+msgstr "Каталожен акаунт"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__child_document_sum_all_totals
+msgid "Child Doc. Totals"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Child Documents"
+msgstr "Вторични документи"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_popup_pdf
+msgid "Close"
+msgstr "Затвори"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__transaction_code
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__code
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_tree
+msgid "Code"
+msgstr "Код"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__comment
+msgid "Comment"
+msgstr "Коментирайте"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_id
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+msgid "Compute"
+msgstr "Изчисляване"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__consecutive_number
+msgid "Consecutive Number"
+msgstr "Пореден номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__consecutive_number_selection
+msgid "Consecutive Number Selection"
+msgstr "Избор на пореден номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__consecutive_number
+msgid "Consecutive №"
+msgstr "Пореден №"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Content"
+msgstr "Съдържание"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+msgid "Content Data"
+msgstr "Данни за съдържанието"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Content Translation"
+msgstr "Превод на съдържание"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__content
+msgid "Contents"
+msgstr "Съдържание"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__base_currency_id
+msgid "Converted Currency"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Copy Invoice"
+msgstr "Копиране на фактура"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__counterparty_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__counterparty_bank_id
+msgid "Counterparty Bank"
+msgstr "Банка контрагент"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__counterparty_bank_account_id
+msgid "Counterparty Bank Account"
+msgstr "Банкова сметка на контрагента"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__counterparty_bank_account_domain
+msgid "Counterparty Bank Account Domain"
+msgstr "Домейн на банковата сметка на контрагента"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_type
+msgid "Counterparty Type"
+msgstr "Тип на контрагента"
+
+#. module: kojto_finance
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounting_identifiers
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounting_ops
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounting_subtypes
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounting_templates
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_accounting_types
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_bank_statements
+msgid "Create"
+msgstr "Създавайте"
+
+#. module: kojto_finance
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_cashflow
+msgid "Create a Cashflow record"
+msgstr "Създайте запис на паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__create_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__create_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__creator_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Creator"
+msgstr "Създател"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__credit_account_id
+msgid "Credit"
+msgstr "Кредит"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__invoice_type__credit_note
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Credit Note"
+msgstr "Кредитна бележка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,help:kojto_finance.field_kojto_finance_invoices__child_document_ids
+msgid "Credit and debit notes linked to this invoice."
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__child_document_ids
+msgid "Credit/Debit Notes"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__currency_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__currency
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__currency_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__currency_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__currency_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__currency_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_currency
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__currency_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__is_currency_account
+msgid "Currency Account"
+msgstr "Валутна сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,help:kojto_finance.field_kojto_finance_single_account_balance__bank_currency
+msgid "Currency Code (ISO 4217)"
+msgstr "Код на валутата (ISO 4217)"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_list
+msgid "Currency account"
+msgstr "Валутна сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__custom_vat
+msgid "Custom VAT"
+msgstr "ДДС по поръчка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__custom_vat
+msgid "Custom Vat"
+msgstr "ДДС по поръчка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "DEBIT NOTE"
+msgstr "ДЕБИТНО ИЗВЕСТИЕ"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__datetime_value
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__debit_account_id
+msgid "Debit"
+msgstr "Дебит"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__invoice_type__debit_note
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Debit Note"
+msgstr "Дебитна бележка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__accounting_template_id
+msgid "Default Accounting Template"
+msgstr "Счетоводен шаблон по подразбиране"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__description
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__description
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__description
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_account_description
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__description
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__name_translation
+msgid "Description Translation"
+msgstr "Описание Превод"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__display_name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Document №"
+msgstr "Документ №"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__datetime_due
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Due Date"
+msgstr "Краен срок"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Due Date:"
+msgstr "Краен срок:"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_email_id
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_email_id
+msgid "Emails"
+msgstr "Имейли"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__end_balance
+msgid "End Balance"
+msgstr "Краен баланс"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__datetime_end
+msgid "End Date"
+msgstr "Крайна дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__datetime_entry
+msgid "Entry Date"
+msgstr "Въвеждане на дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__exchange_rate_to_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__exchange_rate_to_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__exchange_rate_to_bgn
+msgid "Exchange Rate to BGN"
+msgstr "Обменен курс към лева"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__exchange_rate_to_eur
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__exchange_rate_to_eur
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__exchange_rate_to_eur
+msgid "Exchange Rate to EUR"
+msgstr "Обменен курс към EUR"
+
+#. module: kojto_finance
+#: model:ir.actions.server,name:kojto_finance.action_open_wizard_export_cashflow_to_ajur
+msgid "Export Cashflow To Ajur"
+msgstr "Експортиране на паричен поток към Ajur"
+
+#. module: kojto_finance
+#: model:ir.actions.server,name:kojto_finance.action_open_wizard_export_invoices_to_ajur
+msgid "Export Invoices To Ajur"
+msgstr "Експортиране на фактури към Ajur"
+
+#. module: kojto_finance
+#: model:ir.actions.server,name:kojto_finance.action_open_wizard_export_single_invoice_to_ajur
+msgid "Export Single Invoice To Ajur"
+msgstr "Експортиране на единична фактура към Ajur"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Export to Ajur"
+msgstr "Експорт в Ajur"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice.py:0
+msgid "Failed to generate PDF: %s"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__statement_filename
+msgid "Filename"
+msgstr "Име на файл"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance
+msgid "Finance"
+msgstr "Финанси"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_asset_works_dashboard
+msgid "Finance Asset Works Dashboard"
+msgstr "Табло за управление – активност на активи"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_cashflow_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_dashboard_list
+msgid "Finance Cash Flow Dashboard"
+msgstr "Табло за управление – паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_revenue_expense_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_revenue_expense_dashboard_list
+msgid "Finance Revenue Expense Dashboard"
+msgstr "Табло за управление – приходи и разходи"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_time_tracking_dashboard
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_time_tracking_dashboard_list
+msgid "Finance Time Tracking Dashboard"
+msgstr "Табло за управление – работно време"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_accounting_accounts
+msgid "Financial Accounts"
+msgstr "Финансови сметки"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__financial_service
+msgid "Financial Service"
+msgstr "Финансово обслужване"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "From"
+msgstr "От"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__from_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__from_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__date_from
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_search
+msgid "From Date"
+msgstr "От дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__full_vat
+msgid "Full VAT"
+msgstr "Пълно ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__full9_vat
+msgid "Full VAT deduction 9%"
+msgstr "Пълно приспадане на ДДС 9%"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Fully allocated"
+msgstr "Напълно разпределена"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__future
+msgid "Future Period"
+msgstr "Бъдещ период"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__guid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__guid
+msgid "GUID"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_identifiers__identifier_type__goods
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__goods
+msgid "Goods"
+msgstr "стоки"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Grouping"
+msgstr "Групиране"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__bank_account_iban
+msgid "IBAN"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "IBAN:"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_landingpage__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "INSURANCE POLICY"
+msgstr "ЗАСТРАХОВАТЕЛНА ПОЛИСА"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "INVOICE"
+msgstr "ФАКТУРА"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__identifier
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_list
+msgid "Identifier"
+msgstr "Идентификатор"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__name
+msgid "Identifier Description"
+msgstr "Идентификатор Описание"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__identifier_id
+msgid "Identifier ID"
+msgstr "ID на идентификатора"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__identifier_type
+msgid "Identifier Type"
+msgstr "Тип идентификатор"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_identifiers
+msgid "Identifiers"
+msgstr "Идентификатори"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_bank_statements_import_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+msgid "Import"
+msgstr "Импортиране"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Import Content"
+msgstr "Импортиране на съдържание"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_invoice_content_import_wizard
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+msgid "Import Invoice Content"
+msgstr "Импортиране на съдържание на фактура"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_invoice_content_import_wizard
+msgid "Import Invoice Content Wizard"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__document_in_out_type__incoming
+msgid "In"
+msgstr "Вх."
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__vat_in_out_type
+msgid "In/Out"
+msgstr "Вход/Изход"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Inactive"
+msgstr "Неактивна"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Inactive Invoices"
+msgstr "Неактивни фактури"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_cashflow__transaction_direction__incoming
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_in_out_type__incoming
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Incoming"
+msgstr "Входящи"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__incoming_cash_flow
+msgid "Incoming Cash Flow"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__primary_type__cashflow_in
+msgid "Incoming Cashflow"
+msgstr "Входящ паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__incoming_pre_vat_total
+msgid "Incoming Pre-VAT Total"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__incoterms_id
+msgid "Incoterms"
+msgstr "Инкотермс"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__incoterms_address
+msgid "Incoterms Address"
+msgstr "Инкотермс адрес"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Insert post content text here ... /* add notes */"
+msgstr "Въведете текста след съдържанието тук… /* добавете бележки */"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Insert pre content text here ..."
+msgstr "Вмъкнете тук предварителен текст..."
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Insert translated post content text here .../* add notes */"
+msgstr ""
+"Въведете преведен текст след съдържанието тук .../* добавете бележки */"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__invoice_type__insurance_policy
+msgid "Insurance Policy"
+msgstr "Застрахователна полица"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__insured
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Insured"
+msgstr "Застраховани"
+
+#. module: kojto_finance
+#: model:ir.actions.report,name:kojto_finance.action_report_kojto_invoices
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__invoice_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__invoice_id
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__invoice_type__invoice
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+msgid "Invoice"
+msgstr "Фактура"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice_contents.py:0
+msgid "Invoice Content"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_contents_list
+msgid "Invoice Contents"
+msgstr "Съдържание на фактура"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice.py:0
+msgid "Invoice PDF"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__invoice_id
+msgid "Invoice Reference"
+msgstr "Справка за фактура"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Invoice Type"
+msgstr "Тип фактура"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_has_invalid_redistribution
+msgid "Invoice has invalid redistribution"
+msgstr "Фактурата има невалидно преразпределение"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_type
+msgid "Invoice type"
+msgstr "Тип фактура"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__invoiceless_expenses
+msgid "Invoiceless Expenses"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__invoiceless_revenue
+msgid "Invoiceless Revenue"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_invoices
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__invoice_count
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_invoices
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Invoices"
+msgstr "Фактури"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__active
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_is_in_company_language
+msgid "Is Company Language"
+msgstr "Е фирмен език"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__is_redistribution
+msgid "Is Redistribution"
+msgstr "Е преразпределение"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__datetime_issue
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Issue Date:"
+msgstr "Дата на издаване:"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__issued_by_name_id
+msgid "Issued By Name"
+msgstr "Издадено по име"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Issued by:"
+msgstr "Издадена от:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Issued to:"
+msgstr "Издадена на:"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_vat_treatment_translation
+msgid "Kojto Base Vat Treatment Translations"
+msgstr "Kojto Base Преводи за обработка на ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_export_to_ajur_form
+msgid "Kojto Cashflow Export To Ajur"
+msgstr "Експорт на парични потоци Kojto към Ajur"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_accounts
+msgid "Kojto Finance Accounting Accounts"
+msgstr "Kojto Finance Счетоводни сметки"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_identifiers
+msgid "Kojto Finance Accounting Identifiers"
+msgstr "Счетоводни идентификатори на Kojto Finance"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_ops
+msgid "Kojto Finance Accounting Operations"
+msgstr "Kojto Finance Счетоводни операции"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_subtypes
+msgid "Kojto Finance Accounting Subtypes"
+msgstr "Kojto Finance Счетоводни подвидове"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_templates
+msgid "Kojto Finance Accounting Templates"
+msgstr "Kojto Finance Счетоводни шаблони"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounting_types
+msgid "Kojto Finance Accounting Types"
+msgstr "Kojto Finance Видове счетоводство"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_accounts_balance_report
+msgid "Kojto Finance Accounts Balance Report"
+msgstr "Отчет за салдото на сметки Kojto Finance"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_bank_statements
+msgid "Kojto Finance Bank Statements"
+msgstr "Банкови извлечения"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_cashflow
+msgid "Kojto Finance Cashflow"
+msgstr "Kojto Finance Паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_cashflow_allocation
+msgid "Kojto Finance Cashflow Allocation"
+msgstr "Kojto Finance Разпределение на паричните потоци"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_cashflow_exportselectiontoajur
+msgid "Kojto Finance Cashflow Export Selection To Ajur"
+msgstr "Kojto Finance Избор на износ на паричен поток към Ajur"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_exportselectiontoajur
+msgid "Kojto Finance Export Selection To Ajur"
+msgstr "Kojto Finance Паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_invoices
+msgid "Kojto Finance Invoice"
+msgstr "Kojto Finance Фактура"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_invoice_contents
+msgid "Kojto Finance Invoice Contents"
+msgstr "Kojto Finance Съдържание на фактурата"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_invoices_exportselectiontoajur
+msgid "Kojto Finance Invoices Export Selection To Ajur"
+msgstr "Kojto Finance Експортиране на фактури към Ajur"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_single_account_balance
+msgid "Kojto Finance Single Account Balance"
+msgstr "Салдо по единична сметка Kojto Finance"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_subcode_balance
+msgid "Kojto Finance Subcode Balance Wizard"
+msgstr "Kojto Finance Събкод баланс"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_finance_vat_treatment
+msgid "Kojto Finance Vat Treatment"
+msgstr "Kojto Finance ДДС лечение"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoices_export_to_ajur_form
+msgid "Kojto Invoice Export To Ajur"
+msgstr "Kojto Фактура Експорт към Ajur"
+
+#. module: kojto_finance
+#: model:ir.model,name:kojto_finance.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__language_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__language_id
+msgid "Language"
+msgstr "език"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Last Month"
+msgstr "Миналия месец"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__write_uid
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_exportselectiontoajur__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_exportselectiontoajur__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_content_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__write_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__locked
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Locked"
+msgstr "Заключено"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_tree
+msgid "Main Code"
+msgstr "Главен код"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+msgid "Main code"
+msgstr "Главен код"
+
+#. module: kojto_finance
+#: model_terms:ir.actions.act_window,help:kojto_finance.action_kojto_finance_invoices
+msgid ""
+"Manage your invoices here. You can create, view, and edit invoices easily."
+msgstr ""
+"Управлявайте фактурите си тук. Можете лесно да създавате, преглеждате и "
+"редактирате фактури."
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_identifiers__identifier_type__material
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__material
+msgid "Material"
+msgstr "Материал"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Month"
+msgstr "Месец"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__month
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__month
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__month
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__month
+msgid "Month (YYYY-MM)"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__name
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_name_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Net Sum:"
+msgstr "Нетна сума:"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__no_vat
+msgid "No VAT"
+msgstr "Без ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__content_not_redistribution
+msgid "Non-Redistribution Contents"
+msgstr "Съдържание без повторно разпространение"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__pdf_notes
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Notes"
+msgstr "Бележки"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Notes ..."
+msgstr "Бележки..."
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__number
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__name
+msgid "Number"
+msgstr "Номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__number_of_transactions
+msgid "Number of Transactions"
+msgstr "Брой транзакции"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__open_amount
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Open Amount"
+msgstr "Отворена сума"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Open PDF"
+msgstr "Отваряне на PDF"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices_exportselectiontoajur__acc_op_datetime
+msgid "Operation Date"
+msgstr "Дата на операция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__bank_account_id
+msgid "Our Bank Account"
+msgstr "Банкова сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Our Reference:"
+msgstr "Наш реф. №:"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__document_in_out_type__outgoing
+msgid "Out"
+msgstr "Изх."
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_cashflow__transaction_direction__outgoing
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_in_out_type__outgoing
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Outgoing"
+msgstr "Изходящ"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__outgoing_cash_flow
+msgid "Outgoing Cash Flow"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__primary_type__cashflow_out
+msgid "Outgoing Cashflow"
+msgstr "Изходящ паричен поток"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__outgoing_pre_vat_total
+msgid "Outgoing Pre-VAT Total"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Over allocated"
+msgstr "Преразпределена"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "PROFORMA"
+msgstr "ПРОФОРМА"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__pad
+msgid "Pad"
+msgstr "Подложка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__paid
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Paid"
+msgstr "Платено"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__parent_invoice_id
+msgid "Parent Invoice"
+msgstr "Родителска фактура"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Parent Invoice Date:"
+msgstr "Дата на фактура"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__parent_invoice_datetime_issue
+msgid "Parent Invoice Issue Date"
+msgstr "Дата на издаване на основната фактура"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__partial_vat
+msgid "Partial VAT"
+msgstr "Частично ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,help:kojto_finance.field_kojto_finance_invoice_content_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoice_content_import_wizard_form
+msgid "Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate)"
+msgstr ""
+"Поставете данни тук (Позиция;Име;Количество;Единична цена;Единична ставка "
+"ДДС)"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__payable_amount
+msgid "Payable Amount"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__paid_amount
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Paid Amount"
+msgstr "Платена сума"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__payment_terms_id
+msgid "Payment Terms"
+msgstr "Условия за плащане"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Payments"
+msgstr "Плащания"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_phone_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_phone_id
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "Possible names that can be used in the template:"
+msgstr "Възможни имена, които могат да се използват в шаблона:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Post Content text"
+msgstr "Текст след съдържанието"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__post_content_text
+msgid "Post content comment"
+msgstr "Публикувайте коментар на съдържанието"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__post_content_text_translation
+msgid "Post content translated comment"
+msgstr "Публикувайте преведен коментар на съдържание"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Pre Content text"
+msgstr "Текст преди съдържанието"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Pre VAT"
+msgstr "Преди ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Pre VAT Total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__pre_vat_total
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__pre_vat_total
+msgid "Pre VAT total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__pre_content_text
+msgid "Pre content comment"
+msgstr "Коментар преди съдържанието"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__pre_content_text_translation
+msgid "Pre content translated comment"
+msgstr "Коментар с предварително преведено съдържание"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Pre-VAT Total"
+msgstr "Общо преди ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Prepared by:"
+msgstr "Подготвен от:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Print"
+msgstr "Печат"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+msgid "Print Invoice"
+msgstr "Печат на фактура"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Print in Company Language"
+msgstr "Печат на фирмен език"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__products
+msgid "Products"
+msgstr "Продукти"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_invoices__invoice_type__proforma
+msgid "Proforma"
+msgstr "Проформа"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Proforma Invoices"
+msgstr "Проформа фактури"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__primary_type__purchase
+msgid "Purchase"
+msgstr "Покупка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__quantity
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__quarter
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__quarter
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__quarter
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__quarter
+msgid "Quarter (YYYY-QN)"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__exchange_rate_to_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__exchange_rate_to_bgn
+msgid "Rate to BGN"
+msgstr "Обменен курс към лева"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__exchange_rate_to_eur
+msgid "Rate to EUR"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_in_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_in_preview
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_in_preview
+msgid "Received"
+msgstr "получено"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Redistribution"
+msgstr "Преразпределение"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__content_is_redistribution
+msgid "Redistribution Contents"
+msgstr "Преразпределение на съдържанието"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice_contents.py:0
+msgid ""
+"Redistribution with negative amount for invoice %s must have the same "
+"subcode as the invoice (%s)."
+msgstr ""
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice_contents.py:0
+msgid ""
+"Redistribution with positive amount for invoice %s cannot have the same "
+"subcode as the invoice (%s)."
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_list
+msgid "Ref Number"
+msgstr "Референтен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__is_ref_number_account
+msgid "Ref Number Account"
+msgstr "Референтен номер сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_list
+msgid "Ref Number account"
+msgstr "Реф. номер на сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Ref №"
+msgstr "Реф. №"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Reg. #:"
+msgstr "Рег. №:"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_registration_number
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_registration_number
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Registration Number"
+msgstr "Регистрационен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_registration_number_type
+msgid "Registration Number Type"
+msgstr "Тип регистрационен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__related_reference
+msgid "Related Reference"
+msgstr "Свързана справка"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__requires_identifier_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__requires_identifier_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__requires_identifier_id
+msgid "Requires Identifier"
+msgstr "Изисква идентификатор"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__requires_ref_number
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__requires_ref_number
+msgid "Requires Ref Number"
+msgstr "Изисква референтен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__requires_subtype_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__requires_subtype_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__requires_subtype_id
+msgid "Requires Subtype"
+msgstr "Изисква подтип"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__result
+msgid "Result"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_dashboard_revenue_expense
+msgid "Revenue Expense"
+msgstr "Приходи Разходи"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_revenue_expense_dashboard
+msgid "Revenue Expense Dashboard"
+msgstr "Табло за приходи и разходи"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__swift_transaction_code
+msgid "SWIFT"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__primary_type__sale
+msgid "Sale"
+msgstr "Продажби"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Search Invoices"
+msgstr "Търсене на фактури"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Select VAT Treatment"
+msgstr "Изберете Третиране по ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements_import__files
+msgid "Select files"
+msgstr "Изберете файлове"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_out_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__period_amount_out_preview
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__amount_out_preview
+msgid "Sent"
+msgstr "Изпратено"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__service
+msgid "Service"
+msgstr "Обслужване"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__skip_vat
+msgid "Skip VAT"
+msgstr "Пропуснете ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__start_balance
+msgid "Start Balance"
+msgstr "Начален баланс"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__datetime_start
+msgid "Start Date"
+msgstr "Начална дата"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__start_amount_bgn
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__start_amount_preview
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_preview
+msgid "Starting Balance"
+msgstr "Начален баланс"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_bgn
+msgid "Starting Balance BGN"
+msgstr "Начален баланс лв"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_in
+msgid "Starting Balance In"
+msgstr "Начален баланс в"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_in_bgn
+msgid "Starting Balance In BGN"
+msgstr "Начален баланс в лева"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_out
+msgid "Starting Balance Out"
+msgstr "Започване на балансиране"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__start_amount_out_bgn
+msgid "Starting Balance Out BGN"
+msgstr "Starting Balance Out лв"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__statement_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Statement"
+msgstr "Изявление"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__statement_file
+msgid "Statement File"
+msgstr "Файл с извлечения"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__statement_file_text
+msgid "Statement File Text"
+msgstr "Текст на файл с изявление"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__status
+msgid "Status"
+msgstr "Статус"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__subcode_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__subcode_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_tree
+msgid "Subcode"
+msgstr "ID на подкод"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_subcode_balance
+msgid "Subcode Balance"
+msgstr "Събкод баланс"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_subcode_balance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_tree
+msgid "Subcode Balance Search"
+msgstr "Търсене на баланс на подкодове"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_tree
+msgid "Subcode Name"
+msgstr "Име на подкод"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__subject
+msgid "Subject"
+msgstr "Предмет"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_export_to_ajur_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_invoices_export_to_ajur_form
+msgid "Submit"
+msgstr "Изпратете"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_list
+msgid "Subtype"
+msgstr "Подтип"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__subtype_domain
+msgid "Subtype Domain"
+msgstr "Подтип домейн"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__subtype_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__subtype_id
+msgid "Subtype ID"
+msgstr "ID на подтип"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__subtype_number
+msgid "Subtype Number"
+msgstr "Номер на подтип"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_subtypes
+msgid "Subtypes"
+msgstr "Подтипове"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_20
+msgid "Tag 20"
+msgstr "Етикет 20"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_25
+msgid "Tag 25"
+msgstr "Етикет 25"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_28
+msgid "Tag 28"
+msgstr "Етикет 28"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_28c
+msgid "Tag 28C"
+msgstr "Етикет 28C"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_60f
+msgid "Tag 60F"
+msgstr "Етикет 60F"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_60m
+msgid "Tag 60M"
+msgstr "Етикет 60M"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__tag_62f
+msgid "Tag 62F"
+msgstr "Етикет 62F"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__datetime_tax_event
+msgid "Tax Event Date"
+msgstr "Дата на данъчно събитие"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Tax Event Date:"
+msgstr "Дата на данъчно събитие:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Tax ID:"
+msgstr "ИН по ДДС:"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__company_tax_number_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterparty_tax_number_id
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_ops__template_id
+msgid "Template"
+msgstr "Шаблон"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_templates__template_type_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__secondary_type
+msgid "Template Type"
+msgstr "Тип шаблон"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_form
+msgid "Template description"
+msgstr "Описание на шаблона"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_templates
+msgid "Templates"
+msgstr "Шаблони"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Terms of Payment:"
+msgstr "Условия за плащане:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid ""
+"The Account structure template is a string/template that will be used when exporting to external Accounting System that requires specific structure for the accounts. Each name enclosed in {} will be replaced with the actual value from the document, every other text will\n"
+"                            be left as is."
+msgstr ""
+"Шаблонът за структура на акаунта е низ/шаблон, който ще се използва при експортиране към външна счетоводна система, която изисква специфична структура за акаунтите. Всяко име, затворено в {}, ще бъде заменено с действителната стойност от документа, всеки друг текст ще бъде заменен\n"
+"                            бъде оставено както е."
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "The followng exmaple:"
+msgstr "Следният пример:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "This Week"
+msgstr "Тази седмица"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_time_tracking_dashboard
+msgid "Time Tracking"
+msgstr "Работно време"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_time_tracking_dashboard
+msgid "Time Tracking Dashboard"
+msgstr "Табло за проследяване на времето"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__time_tracking_count
+msgid "Time Tracking Events"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__time_tracking_hours
+msgid "Time Tracking Hours"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__time_tracking_total
+msgid "Time Tracking Total"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "To"
+msgstr "До"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounts_balance_report__to_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_single_account_balance__to_date
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__date_to
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_subcode_balance_wizard_search
+msgid "To Date"
+msgstr "Към днешна дата"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "To Invoice id:"
+msgstr "Към фактура:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_asset_works_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_revenue_expense_dashboard_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_time_tracking_dashboard_list
+msgid "Total"
+msgstr "Общо"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__total_activities
+msgid "Total Activities"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Total Amount:"
+msgstr "Обща сума:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Total Price"
+msgstr "Обща цена"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__total_price_base_currency
+msgid "Total Price Base Currency"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_subcode_balance__total_subcodes
+msgid "Total Subcodes"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Total VAT"
+msgstr "Общо ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__total_price
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__total_price
+msgid "Total price"
+msgstr "Обща цена"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__transaction_allocation_ids
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__transaction_allocation_ids
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_form
+msgid "Transaction Allocation"
+msgstr "Разпределение на транзакция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__transaction_currency
+msgid "Transaction Currency"
+msgstr "Валута на транзакцията"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__transaction_date
+msgid "Transaction Date"
+msgstr "Дата на транзакцията"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__transaction_direction
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__transaction_direction
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Transaction Direction"
+msgstr "Посока на транзакцията"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_allocation__transaction_exchange_rate_to_bgn
+msgid "Transaction Exchange Rate"
+msgstr "Обменен курс на транзакция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_types__primary_type
+msgid "Transaction Type"
+msgstr "Тип транзакция"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__transactions
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_cashflow_transactions
+msgid "Transactions"
+msgstr "Транзакции"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Translate Invoice"
+msgstr "Превод на фактура"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Translated Post Content text"
+msgstr "Преведен текст след съдържанието"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+msgid "Translated Pre Content text"
+msgstr "Преведен текст преди съдържанието"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__all_translations
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__translation_ids
+msgid "Translations"
+msgstr "Преводи"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_list_accounting
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting_types
+msgid "Types"
+msgstr "Acc. Видове"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow__unallocated_amount
+msgid "Unallocated"
+msgstr "Неразпределена сума"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Unallocated amount"
+msgstr "Неразпределена сума"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_acc_subtype_id
+msgid "Unified Accounting Subtype"
+msgstr "Унифициран счетоводен подвид"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_acc_subtype_domain
+msgid "Unified Accounting Subtype Domain"
+msgstr "Домейн на унифициран счетоводен подтип"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_acc_template_id
+msgid "Unified Accounting Template"
+msgstr "Единен счетоводен шаблон"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_acc_template_domain
+msgid "Unified Accounting Template Domain"
+msgstr "Домейн на унифициран счетоводен шаблон"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_vat_rate
+msgid "Unified VAT Rate (in %)"
+msgstr "Единна ДДС ставка (в %)"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__invoice_vat_treatment_id
+msgid "Unified VAT Treatment"
+msgstr "Единно третиране по ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Uninsured"
+msgstr "Неосигурени"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_identifiers__unit_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__unit_id
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__unit_price
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Unit Price"
+msgstr "Единична цена"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_search
+msgid "Unpaid"
+msgstr "Неплатени"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_bank_statements__uploader_id
+msgid "Uploader ID"
+msgstr "ID на качващия"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_subtypes__template_type_ids
+msgid "Used for following Accounting Types"
+msgstr "Използва се за следните видове счетоводство"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__vat_total
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__vat_total
+msgid "VAT"
+msgstr "ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "VAT %"
+msgstr "ДДС %"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__vat_rate
+msgid "VAT Rate (%)"
+msgstr "ДДС ставка (в %)"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__vat_treatment_id
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment_translation__treatment_id
+msgid "VAT Treatment"
+msgstr "Третиране по ДДС"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_vat_treatment_translation_form
+msgid "VAT Treatment Translation"
+msgstr "Превод на ДДС"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_vat_treatment_translation
+msgid "VAT Treatment Translations"
+msgstr "Преводи на ДДС"
+
+#. module: kojto_finance
+#: model:ir.actions.act_window,name:kojto_finance.action_kojto_finance_vat_treatment
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_vat_treatment
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_vat_treatment_search
+msgid "VAT Treatments"
+msgstr "Обработки по ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__exempt_deleveries_vat
+msgid "VAT for Exempt Deleveries"
+msgstr "ДДС за освободени доставки"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__intermediary_tripartie_vat
+msgid "VAT for Intermediary Tripartie"
+msgstr "ДДС за посредник тристранно"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__sale_waste_art163a_vat
+msgid "VAT for Selling Waste Article 163a"
+msgstr "ДДС при продажба на отпадъци Чл. 163а"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__art82_2_5_vat
+msgid "VAT for deliveries Article 82 2 5"
+msgstr "ДДС за доставки чл.82 2 5"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__art140_art146_art173_vat
+msgid "VAT for trades inside EU Article 140 146 173"
+msgstr "ДДС за търговия в ЕС Член 140 146 173"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__art21_2_vat
+msgid "VAT for trades inside EU Article 21 2"
+msgstr "ДДС за търговия в ЕС Член 21 2"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__inside_eu_art53_vat
+msgid "VAT for trades inside EU Article 53"
+msgstr "ДДС за търговия в ЕС Член 53"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__outside_eu_art28_1_2_vat
+msgid "VAT for trades outside EU Article 28 1 2"
+msgstr "ДДС за търговия извън ЕС Член 28 1 2"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_vat_treatment__vat_treatment_type__art69_21_2_vat_non_eu
+msgid "VAT for trades outside EU Article 69 2 / 21 2"
+msgstr "ДДС за сделки извън ЕС Член 69 2 / 21 2"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_vat_treatment__vat_treatment_type
+msgid "VAT treatment type"
+msgstr "Вид третиране по ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__redistribution_is_valid
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_invoices_form_accounting
+msgid "Valid"
+msgstr "Валиден"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__value_in_bgn
+msgid "Value in BGN"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoice_contents__value_in_eur
+msgid "Value in EUR"
+msgstr ""
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Vat Total:"
+msgstr "ДДС Общо:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_vat_treatment_form
+msgid "Vat treatment"
+msgstr "Обработка на ДДС"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_accounting_accounts__is_warehouse_account
+msgid "Warehouse Account"
+msgstr "Складова сметка"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_list
+msgid "Warehouse account"
+msgstr "Складова сметка"
+
+#. module: kojto_finance
+#: model:ir.model.fields.selection,name:kojto_finance.selection__kojto_finance_accounting_types__secondary_type__waste
+msgid "Waste"
+msgstr "отпадъци"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid "Will be replaced with something like:"
+msgstr "Ще бъде заменен с нещо като:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_cashflow_search
+msgid "Year"
+msgstr "Година"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_asset_works_dashboard__year
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_cashflow_dashboard__year
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_revenue_expense_dashboard__year
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_time_tracking_dashboard__year
+msgid "Year (YYYY)"
+msgstr ""
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__counterpartys_reference
+msgid "Your Reference"
+msgstr "Ваш реф. №"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices
+#: model_terms:ir.ui.view,arch_db:kojto_finance.report_kojto_invoices_company_lang
+msgid "Your Reference:"
+msgstr "Ваш №:"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_accounting
+msgid "[+] Accounting"
+msgstr "[+] Счетоводство"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_cashflow
+msgid "[+] Cash Flow"
+msgstr "[+] Паричен поток"
+
+#. module: kojto_finance
+#: model:ir.ui.menu,name:kojto_finance.menu_kojto_finance_dashboards
+msgid "[+] Dashboards"
+msgstr "[+] Табла за управление"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_identifiers_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_subtypes_search
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_templates_search
+msgid "accounting"
+msgstr "счетоводство"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_types_search
+msgid "accounting types"
+msgstr "видове счетоводство"
+
+#. module: kojto_finance
+#: model:ir.model.fields,field_description:kojto_finance.field_kojto_finance_invoices__document_in_out_type
+msgid "in/out:"
+msgstr "вход/изход:"
+
+#. module: kojto_finance
+#: model_terms:ir.ui.view,arch_db:kojto_finance.view_kojto_finance_accounting_accounts_form
+msgid ""
+"{num}: Invoice Number\n"
+"                                {pnum}: Parent Invoice Number\n"
+"                                {subcode}: Invoice Subcode\n"
+"                                {maincode_code}: Invoice Maincode.Code\n"
+"                                {type}: Invoice Type\n"
+"                                {issue_date}: Invoice Issue Date\n"
+"                                {pissue_date}: Parent Invoice Issue Date\n"
+"                                {due_date}: Invoice Due Date\n"
+"                                {op_date}: Accounting Operation Date\n"
+"                                {arch_num}: Accounting Archive Number\n"
+"                                {acc_user}: Accounting User ID\n"
+"                                {counterparty_name}: Counterparty Name\n"
+"                                {counterparty_reg_num}: Counterparty Registration Number\n"
+"                                {counterparty_short_num}: Counterparty Registration Number Last 4 Digits\n"
+"                                {counterparty_tax_num}: Counterparty Tax Number\n"
+"                                {counterparty_client_number}: Counterparty Client Number\n"
+"                                {currency}: Currency\n"
+"                                {currency_code}: Currency Code\n"
+"                                {exchange_rate_to_bgn}: Exchange Rate to BGN\n"
+"                                {content_maincode_code}: Content Row Maincode.Code\n"
+"                                {content_subtype}: Subtype\n"
+"                                {content_subtype_name}: Subtype Name\n"
+"                                {content_identifier}: Identifier\n"
+"                                {content_identifier_name}: Identifier Name\n"
+"                                {content_warehouse}: Warehouse\n"
+"                                {content_warehouse_name}: Warehouse Name\n"
+"                                {content_quantity}: Quantity\n"
+"                                {content_unit}: Unit for the particular content in BG(based on the unit of the identifier)\n"
+"                                {content_name}: Content Name\n"
+"                                {auto_vat_num}: Counterparty VAT Number auto-generated based on the counterparty country and EU status\n"
+"                                {auto_eik_num}: Counterparty EIK Number auto-generated based on the counterparty country and EU status\n"
+"\n"
+"                                {trx_direction}: Cashflow Transaction Direction\n"
+"                                {trx_medium}: Cashflow Transaction Medium\n"
+"                                {trx_date}: Cashflow Transaction Date\n"
+"                                {trx_bank_account_iban}: Cashflow Transaction Bank Account IBAN\n"
+"                                {trx_bank_account_desc}: Cashflow Transaction Bank Account Description\n"
+"                                {trx_bank_account_ref_number}: Cashflow Transaction Bank Account Ref Number\n"
+"                                {trx_exchange_rate_to_bgn}: Cashflow Transaction Exchange Rate to BGN\n"
+"                                {trx_amount}: Cashflow Transaction Amount\n"
+"                                {trx_amount_bgn}: Cashflow Transaction Amount in BGN\n"
+"                                {trx_acc_archive_number}: Cashflow Transaction Accounting Archive Number\n"
+"                                {trx_acc_op_date}: Cashflow Transaction Accounting Operation Date\n"
+"                                {trx_accountant_id}: Cashflow Transaction Accounting Accountant ID\n"
+"\n"
+"                                {trx_allocation_accounting_ref_number}: Cashflow Transaction Allocation Accounting Ref Number\n"
+"                                {trx_allocation_subtype_name}: Cashflow Transaction Allocation Subtype Name\n"
+"                                {trx_allocation_subtype}: Cashflow Transaction Allocation Subtype\n"
+"                                {trx_allocation_subcode}: Cashflow Transaction Allocation Subcode\n"
+"                                {trx_allocation_maincode_code}: Cashflow Transaction Allocation Maincode Code\n"
+"                                {trx_allocation_amount}: Cashflow Transaction Allocation Amount\n"
+"                                {trx_allocation_amount_bgn}: Cashflow Transaction Allocation Amount in BGN\n"
+"                                {trx_allocation_currency_code}: Cashflow Transaction Allocation Currency Code\n"
+"                                {trx_allocation_currency_name}: Cashflow Transaction Allocation Currency Name"
+msgstr ""
+"{num}: Номер на фактура\n"
+"                                {pnum}: Номер на родителска фактура\n"
+"                                {subcode}: Подкод на фактура\n"
+"                                {maincode_code}: Основен код.Код на фактура\n"
+"                                {type}: Тип фактура\n"
+"                                {issue_date}: Дата на издаване на фактурата\n"
+"                                {pissue_date}: Дата на издаване на основна фактура\n"
+"                                {due_date}: Краен срок на фактурата\n"
+"                                {op_date}: Дата на счетоводна операция\n"
+"                                {arch_num}: Номер на счетоводния архив\n"
+"                                {acc_user}: ИД на счетоводния потребител\n"
+"                                {counterparty_name}: Име на контрагента\n"
+"                                {counterparty_reg_num}: Регистрационен номер на контрагента\n"
+"                                {counterparty_short_num}: Регистрационен номер на контрагента, последните 4 цифри\n"
+"                                {counterparty_tax_num}: Данъчен номер на контрагента\n"
+"                                {counterparty_client_number}: Клиентски номер на контрагента\n"
+"                                {currency}: Валута\n"
+"                                {currency_code}: Код на валутата\n"
+"                                {exchange_rate_to_bgn}: Обменен курс към лева\n"
+"                                {content_maincode_code}: Ред със съдържание Основен код.Код\n"
+"                                {content_subtype}: Подтип\n"
+"                                {content_subtype_name}: Име на подтип\n"
+"                                {content_identifier}: Идентификатор\n"
+"                                {content_identifier_name}: Име на идентификатора\n"
+"                                {content_warehouse}: Склад\n"
+"                                {content_warehouse_name}: Име на склад\n"
+"                                {content_quantity}: Количество\n"
+"                                {content_unit}: Единица за конкретното съдържание в BG (базирано на единицата на идентификатора)\n"
+"                                {content_name}: Име на съдържанието\n"
+"                                {auto_vat_num}: ДДС номер на контрагента, генериран автоматично въз основа на държавата на контрагента и статута на ЕС\n"
+"                                {auto_eik_num}: EIK номер на контрагента, генериран автоматично въз основа на държавата на контрагента и статуса на ЕС\n"
+"\n"
+"                                {trx_direction}: Посока на транзакцията на паричния поток\n"
+"                                {trx_medium}: Средство за транзакция на паричен поток\n"
+"                                {trx_date}: Дата на транзакцията на паричния поток\n"
+"                                {trx_bank_account_iban}: IBAN на банкова сметка за транзакция на паричен поток\n"
+"                                {trx_bank_account_desc}: Описание на банковата сметка за транзакция на паричен поток\n"
+"                                {trx_bank_account_ref_number}: Референтен номер на банкова сметка за транзакция на паричен поток\n"
+"                                {trx_exchange_rate_to_bgn}: Обменен курс на транзакция на паричен поток към BGN\n"
+"                                {trx_amount}: Сума на транзакцията за паричен поток\n"
+"                                {trx_amount_bgn}: Сума на транзакцията за паричен поток в лева\n"
+"                                {trx_acc_archive_number}: Архивен номер на счетоводната транзакция на паричния поток\n"
+"                                {trx_acc_op_date}: Операционна дата на отчитане на транзакция на паричен поток\n"
+"                                {trx_accountant_id}: Идентификационен номер на счетоводител за отчитане на паричните потоци\n"
+"\n"
+"                                {trx_allocation_accounting_ref_number}: Счетоводен референтен номер на разпределение на транзакция на парични потоци\n"
+"                                {trx_allocation_subtype_name}: Име на подтипа на разпределение на транзакция на паричен поток\n"
+"                                {trx_allocation_subtype}: Подтип разпределение на транзакция на паричен поток\n"
+"                                {trx_allocation_subcode}: Подкод за разпределение на транзакция на паричен поток\n"
+"                                {trx_allocation_maincode_code}: Код на основния код за разпределение на транзакция на парични потоци\n"
+"                                {trx_allocation_amount}: Сума за разпределение на транзакция на паричен поток\n"
+"                                {trx_allocation_amount_bgn}: Сума за разпределение на транзакция на паричен поток в лева\n"
+"                                {trx_allocation_currency_code}: Код на валутата за разпределение на транзакциите на паричните потоци\n"
+"                                {trx_allocation_currency_name}: Име на валутата на разпределението на транзакцията на паричните потоци"

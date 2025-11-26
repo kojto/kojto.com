@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_optimizer/views/kojto_optimizer_2dr_views.xml -->
+<odoo>
+    <!-- List View for Packages (unchanged) -->
+    <record id="view_kojto_optimizer_2dr_list" model="ir.ui.view">
+        <field name="name">Kojto Optimizer 2D Rectangular Packages List</field>
+        <field name="model">kojto.optimizer.2dr.packages</field>
+        <field name="arch" type="xml">
+            <list string="2DR Packages" default_order="name desc" class="ko-list-main" duplicate="false">
+                <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="name" />
+                <field name="description" />
+                <field name="date_issue" />
+                <field name="optimization_method" />
+                <field name="stock_rectangles_ids" string="Stock Rectangles" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
+                <field name="cutted_rectangles_ids" string="Cut Rectangles" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
+                <field name="issued_by" />
+                <field name="width_of_cut" />
+                <button name="copy_and_open" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Package" context="{'from_list_view': True}"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Updated Form View for Packages -->
+    <record id="view_kojto_optimizer_2dr_form" model="ir.ui.view">
+        <field name="name">Kojto Optimizer 2D Rectangular Packages Form</field>
+        <field name="model">kojto.optimizer.2dr.packages</field>
+        <field name="arch" type="xml">
+            <form string="2DR Cutting Package">
+                <sheet class="ko-form-body ko-form-main">
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <field name="name" class="ko-form-view-title" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge mx-auto" />
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <div class="dropdown ms-2">
+                                        <button class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Actions">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                    <path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z" />
+                                                    <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5" />
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                            <button name="action_export_to_excel" string="Export to Excel" type="object" class="dropdown-item"/>
+                                            <button name="action_export_to_dxf" string="Export Cutting Plans to DXF" type="object" class="dropdown-item"/>
+                                            <button name="action_import_stock_rectangles" string="Import Stock Rectangles" type="object" class="dropdown-item"/>
+                                            <button name="action_import_cut_rectangles" string="Import Cut Rectangles" type="object" class="dropdown-item"/>
+                                            <button name="action_generate_pdf" string="Print PDF" type="object" class="dropdown-item"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 20px;"></div>
+                            <separator class="separator-slim-top"/>
+                            <div class="row no-gutters align-items-start">
+                                <div class="col-lg-4">
+                                    <group string="2Dr optimisation data"></group>
+                                    <group>
+                                        <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="date_issue"/>
+                                        <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="description"/>
+                                        <field name="optimization_method" string="Method"/>
+                                        <field name="width_of_cut"/>
+                                        <field name="margin_left" string="Margin Left (mm)"/>
+                                        <field name="margin_right" string="Margin Right (mm)"/>
+                                        <field name="margin_top" string="Margin Top (mm)"/>
+                                        <field name="margin_bottom" string="Margin Bottom (mm)"/>
+                                        <field name="material_id"/>
+                                        <field name="thickness" string="Thickness (mm)"/>
+                                        <field name="use_stock_priority"/>
+                                    </group>
+                                </div>
+                                <div class="col-lg-4">
+                                    <group string="Stock Rectangles"></group>
+                                    <div style="height: 200px; overflow-y: auto;">
+                                        <group>
+                                            <field name="stock_rectangles_ids" nolabel="1">
+                                                <list editable="bottom" class="ko-list-main" limit="100" style="height: 100px; overflow-y: auto;">
+                                                    <field name="stock_position" string="Pos." />
+                                                    <field name="stock_description" />
+                                                    <field name="stock_width" string="Width" />
+                                                    <field name="stock_length" string="Length" />
+                                                    <field name="available_stock_rectangle_pieces" string="Available pcs." />
+                                                </list>
+                                            </field>
+                                        </group>
+                                    </div>
+                                    <separator/>
+                                    <group string="Cut Rectangles"></group>
+                                    <div style="height: 450px; overflow-y: auto;">
+                                        <group>
+                                            <field name="cutted_rectangles_ids" nolabel="1" widget="one2many">
+                                                <list editable="bottom" class="ko-list-main" limit="1000" style="height: 500px; overflow-y: auto;">
+                                                    <field name="cut_position" string="Pos." />
+                                                    <field name="cut_description" />
+                                                    <field name="cut_width" string="Width" />
+                                                    <field name="cut_length" string="Length" />
+                                                    <field name="required_cut_rectangle_pieces" string="Required pcs." />
+                                                </list>
+                                            </field>
+                                        </group>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <group string="Cutting Plan"></group>
+                                    <div class="row align-items-start" style="height: 650px; overflow-y: auto;">
+                                        <group>
+                                            <field name="cutting_plan" nolabel="1" widget="text" readonly="1" />
+                                        </group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Form View (unchanged) -->
+    <record id="view_kojto_optimizer_2dr_import_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.optimizer.2dr.import.wizard.form</field>
+        <field name="model">kojto.optimizer.2dr.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Data">
+                <style>.modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <group>
+                    <field name="package_id" invisible="1" />
+                    <field name="import_type" invisible="1" />
+                    <field name="data" widget="text" placeholder="Description;Width;Height;Quantity (; , tab)" />
+                </group>
+                <footer>
+                    <button name="action_import" type="object" string="Import" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" class="oe_link" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for the List View (unchanged) -->
+    <record id="action_kojto_optimizer_2dr" model="ir.actions.act_window">
+        <field name="name">Kojto Optimizer 2D Rectangular Packages</field>
+        <field name="res_model">kojto.optimizer.2dr.packages</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_optimizer_2dr_list" />
+    </record>
+</odoo>

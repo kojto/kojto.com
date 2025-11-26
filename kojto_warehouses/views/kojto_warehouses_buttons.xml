@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_warehouses/views/kojto_warehouses_buttons.xml -->
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+            <field name="name">kojto.landingpage.form.inherit</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 13 ']" position="after">
+                    <!-- Warehouses -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_kojto_warehouses_list_view" type="object" class="btn landing_page_button" style="color: #556B2F;">
+                            <div class="o_button_icon">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="landing_page_svg_icon" style="fill: #556B2F;">
+									<path d="M5,63a1,1,0,0,1-1-1V15a1,1,0,0,1,.566-.9l27-13a1,1,0,0,1,.868,0l27,13A1,1,0,0,1,60,15V40a1,1,0,0,1-2,0V15.628L32,3.11,6,15.628V62A1,1,0,0,1,5,63Z" />
+									<path d="M12,47a1,1,0,0,1-1-1V25a1,1,0,0,1,1-1H52a1,1,0,0,1,1,1V40a1,1,0,0,1-2,0V26H13V46A1,1,0,0,1,12,47Z" />
+									<path d="M21,63H9a1,1,0,0,1-1-1V50a1,1,0,0,1,1-1H21a1,1,0,0,1,1,1V62A1,1,0,0,1,21,63ZM10,61H20V51H10Z" />
+									<path d="M61,60H59a1,1,0,0,1,0-2h1V52.181L57.307,45H52v7a1,1,0,0,1-1,1H32v5h2a1,1,0,0,1,0,2H31a1,1,0,0,1-1-1V52a1,1,0,0,1,1-1H50V44a1,1,0,0,1,1-1h7a1,1,0,0,1,.937.649l3,8A1,1,0,0,1,62,52v7A1,1,0,0,1,61,60Z" />
+									<path d="M53,60H40a1,1,0,0,1,0-2H53a1,1,0,0,1,0,2Z" />
+									<path d="M37,63a4,4,0,1,1,4-4A4,4,0,0,1,37,63Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,37,57Z" />
+									<path d="M56,63a4,4,0,1,1,4-4A4,4,0,0,1,56,63Zm0-6a2,2,0,1,0,2,2A2,2,0,0,0,56,57Z" />
+									<path d="M62,63H2a1,1,0,0,1,0-2H62a1,1,0,0,1,0,2Z" />
+								</svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #556B2F;">Warehouses</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

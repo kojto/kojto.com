@@ -1,0 +1,11 @@
+<odoo>
+    <data>
+        <!-- Main Menu Items -->
+        <menuitem name="Offers" id="menu_kojto_offers_parent" sequence="70" />
+        <!-- Kojto Offers Menu Items -->
+        <menuitem name="Offers" id="menu_kojto_offers" parent="menu_kojto_offers_parent" sequence="10" action="action_kojto_offers" />
+        <menuitem name="Consolidation IDs" id="menu_kojto_offer_consolidation_ids" parent="menu_kojto_offers_parent" sequence="40" action="action_kojto_offer_consolidation_ids" />
+        <menuitem name="Surcharges" id="menu_kojto_offer_surcharges" parent="menu_kojto_offers_parent" sequence="50" action="action_kojto_offer_surcharges" />
+            action="action_kojto_offer_statistics_contents" />
+    </data>
+</odoo>

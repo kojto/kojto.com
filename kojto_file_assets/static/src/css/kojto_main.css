@@ -1,0 +1,500 @@
+h2 {
+    font-size: 18px;
+    padding-bottom: 10px;
+    /*color:  var(--o-cc4-bg);*/
+}
+
+select {
+    background-position: right 3px center;
+}
+
+textarea {
+    border-top-width: 1px !important;
+}
+
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 1250px !important;
+    }
+}
+
+.o_form_label.o_form_label_readonly {
+    opacity: 1 !important;
+    font-weight: 500 !important;
+    font-size: 14px;
+}
+
+.o_inner_group .o_field_widget {
+    width: 100%;
+    color: black;
+    font-size: 12px;
+}
+
+.o_input {
+    background-color: rgba(11, 83, 148, 0.02);
+    border: 1px solid rgba(11, 83, 148, 0.2);
+    border-radius: 2px;
+}
+
+.o_form_view .o_form_label {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    width: fit-content;
+    min-width: 220px;
+}
+
+.o_form_view .o_inner_group {
+    margin-bottom: auto !important;
+    gap: 0px 16px !important;
+}
+
+.separator {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid rgba(11, 83, 148, 0.2);
+}
+
+.separator-slim-top {
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid rgba(11, 83, 148, 0.2);
+}
+
+.separator-invisible {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid transparent;
+}
+
+.o_form_label {
+    white-space: nowrap;
+}
+
+.container {
+    text-align: center;
+    margin: 20px 0 40px;
+}
+
+.o_field_widget {
+    /*padding-right: 5px;*/
+    font-size: 12px;
+    color: black;
+}
+
+.o_radio_item {
+    display: inline-block;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.o_dropdown_button {
+    visibility: visible !important;
+}
+
+.o_form_view .o_form_sheet_bg {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 10px;
+}
+
+.o_form_sheet {
+    margin: 0px auto !important;
+    max-width: 1400px !important;
+    width: 100%;
+}
+
+.o_field_many2many_tags {
+    margin-bottom: var(--fieldWidget-margin-bottom) !important;
+}
+
+.o_field_many2many_tags > .o_field_tags.o_input {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
+}
+
+.o_field_many2many_tags .o_field_tags .o_tag {
+    border-radius: 2px !important;
+    background-color: rgba(11, 83, 148, 0.02) !important;
+    border: 1px solid rgba(11, 83, 148, 0.2) !important;
+}
+
+.btn {
+    margin: 0 3px;
+}
+
+.o_selection_badge.btn.btn-secondary.mb-1 {
+    --btn-padding-y: 0.15rem;
+    --btn-padding-x: 0.8rem;
+    --btn-font-size: 0.7rem;
+    --btn-border-radius: 15px;
+}
+
+.btn-secondary {
+    --btn-color: darkgray;
+    --btn-bg: #ffffff;
+    --btn-border-color: darkgray;
+    --btn-hover-color: #212529;
+    --btn-hover-bg: #ced4da;
+    --btn-hover-border-color: #ced4da;
+    --btn-focus-shadow-rgb: 197, 201, 205;
+    --btn-active-color: #3f51b4;
+    --btn-active-bg: #3f51b41f;
+    --btn-active-border-color: #3f51b4;
+    --btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --btn-disabled-color: #000000;
+    --btn-disabled-bg: darkgray;
+    --btn-disabled-border-color: darkgray;
+}
+
+.custom-loading-overlay {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-loading-spinner {
+    border: 4px solid rgba(11, 83, 148, 0.5);
+    border-top: 4px solid rgb(11, 83, 148);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-outline-danger {
+    color: #990000 !important;
+    border-color: #990000 !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:focus {
+    color: #fff !important;
+    background-color: #990000 !important;
+    border-color: #990000 !important;
+}
+
+table {
+    border: 1px solid rgba(11, 83, 148, 0.2) !important;
+}
+
+tfoot {
+    display: none !important;
+}
+
+th {
+    background-color: rgb(243 246 250) !important;
+    border-top: 1px solid rgba(11, 83, 148, 0.2) !important;
+    border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+}
+
+.o_list_renderer .o_list_table thead {
+    background-color: transparent !important;
+    color: #495057;
+}
+
+.custom_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.o_field_widget.o_field_one2many th[data-name="unit"],
+.o_field_widget.o_field_one2many th[data-name="currency_id"],
+.o_field_widget.o_field_one2many th.o_list_button,
+.o_field_widget.o_field_one2many th.o_list_controller,
+.o_field_widget.o_field_many2many th[data-name="unit"],
+.o_field_widget.o_field_many2many th[data-name="currency_id"],
+.o_field_widget.o_field_many2many th.o_list_button,
+.o_field_widget.o_field_many2many th.o_list_controller {
+    max-width: 50px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.o_field_widget.o_field_one2many,
+.o_field_widget.o_field_many2many {
+
+    th[data-name="position"] {
+        max-width: 20px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th[data-name="unit"],
+    th[data-name="currency_id"],
+    th.o_list_button,
+    th.o_list_controller {
+        max-width: 50px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th[data-name="unit_price"] {
+        max-width: 100px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th[data-name="image"],
+    th[data-name="quantity"],
+    th[data-name="counterparty_id"],
+    th[data-name="delivery_package_id"] {
+        max-width: 150px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th[data-name="counterparty_address_id"] {
+        max-width: 200px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    th[data-name="description"],
+    th[data-name="name"] {
+        max-width: 300px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    td[data-name="description"] {
+        text-align: left !important;
+    }
+
+    button[name="open_o2m_record"] {
+        margin: 0 5px !important;
+        padding: 3px 0 0 0 !important;
+    }
+
+    .o_list_sortable_caret {
+        display: none !important;
+    }
+}
+
+div[name="content_elements"].o_field_widget.o_field_one2many th[data-name="consolidation_id"] {
+    max-width: 150px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div[name="surcharges"].o_field_widget.o_field_many2many th[data-name="unit_type"] {
+    max-width: 150px !important;
+}
+
+.o_external_button {
+    visibility: visible !important;
+}
+
+.o_field_float {
+    text-align: right !important;
+}
+
+div[name="invoice_type"].ko-form-view-title select,
+div[name="contract_type"].ko-form-view-title select,
+div[name="name"].ko-form-view-title input {
+    border-top: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+    border-right: 1px solid transparent !important;
+    border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+    background-color: rgba(11, 83, 148, 0.02) !important;
+    margin-bottom: 0px !important;
+    padding-right: 0px !important;
+}
+
+div[name="invoice_type"] select:hover,
+div[name="contract_type"] select:hover,
+div[name="name"].ko-form-view-title input:hover {
+    background-color: rgba(11, 83, 148, 0.02) !important;
+    border-bottom: 1px solid rgba(11, 83, 148, 0.2) !important;
+    color: black !important;
+}
+
+select#contract_type_0 option,
+select#invoice_type_0 option {
+    font-size: 0.8rem;
+    text-transform: none !important;
+}
+
+.currently_active {
+    background-color: white !important;
+    color: var(--o-cc4-bg) !important;
+}
+
+.o_notebook_content,
+.o_notebook_headers {
+    margin: 0px !important;
+}
+
+.o_form_view .o_notebook > .tab-content > .tab-pane > :first-child:not(.o_group) .o_field_x2many.o_field_x2many_list .o_list_renderer,
+.o_form_view .o_notebook > .tab-content > .tab-pane > :first-child.o_invisible_modifier .o_field_x2many.o_field_x2many_list .o_list_renderer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* incoming / outgoing start */
+.o_list_view .o_data_cell[name="transaction_direction"] .o_field_badge .badge,
+.o_list_view .o_data_cell[name="document_in_out_type"] .o_field_badge .badge {
+    visibility: hidden;
+    position: relative;
+}
+
+.o_list_view .o_data_cell[name="document_in_out_type"] .o_field_badge .badge:after,
+.o_list_view .o_data_cell[name="transaction_direction"] .o_field_badge .badge:after {
+    visibility: visible;
+    position: absolute;
+    left: 5%;
+    /* margin-left: 5px;
+    transform: translateX(-10%);
+    font-weight: bold; */
+    content: "\f061";
+    font-family: FontAwesome;
+    font-size: 14px;
+    /* width: 18px;
+    height: 18px; */
+    color: #f09595 !important;
+    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"%3E%3C/path%3E%3Cpath fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"%3E%3C/path%3E%3C/svg%3E'); */
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.o_list_view .o_data_cell[name="document_in_out_type"] .o_field_badge .badge.text-bg-primary:after,
+.o_list_view .o_data_cell[name="transaction_direction"] .o_field_badge .badge.text-bg-primary:after {
+    content: "\f0a8";
+    font-family: FontAwesome;
+    color: green !important;
+    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-box-arrow-right" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"%3E%3C/path%3E%3Cpath fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"%3E%3C/path%3E%3C/svg%3E'); */
+}
+
+
+.ko-form-main .o_notebook > .tab-content {
+    border-bottom: none !important;
+}
+.ko-form-main .o_notebook > .tab-content > .tab-pane {
+    padding-bottom: 0px !important;
+}
+.ko-form-main .ko-tab-textarea .o_notebook > .tab-content > .tab-pane {
+    padding-top: 0px !important;
+}
+
+.orange-toggle .form-check-input:checked {
+    background-color: #f87427;
+    border-color: #f87427;
+}
+.blue-toggle .form-check-input:checked {
+    background-color: #266ff7;
+    border-color: #266ff7;
+}
+
+.orange-toggle .form-check-input:checked::before {
+    background-color: #ffffff; /* Dot color */
+}
+
+.orange-toggle .form-check:hover {
+    border-color: #f87427;
+}
+.blue-toggle .form-check:hover {
+    border-color: #266ff7;
+}
+
+.ko-w-10 {
+    width: 10px;
+}
+.ko-w-20 {
+    width: 20px;
+}
+.ko-w-30 {
+    width: 30px;
+}
+.ko-w-40 {
+    width: 40px;
+}
+.ko-w-50 {
+    width: 50px;
+}
+.ko-w-60 {
+    width: 60px;
+}
+.ko-w-70 {
+    width: 70px;
+}
+.ko-w-80 {
+    width: 80px;
+}
+.ko-w-90 {
+    width: 90px;
+}
+.ko-w-100 {
+    width: 100px;
+}
+.ko-w-110 {
+    width: 110px;
+}
+.ko-w-120 {
+    width: 120px;
+}
+.ko-w-130 {
+    width: 130px;
+}
+.ko-w-140 {
+    width: 140px;
+}
+.ko-w-150 {
+    width: 150px;
+}
+.ko-w-160 {
+    width: 160px;
+}
+.ko-w-170 {
+    width: 170px;
+}
+.ko-w-180 {
+    width: 180px;
+}
+.ko-w-190 {
+    width: 190px;
+}
+.ko-w-200 {
+    width: 200px;
+}
+
+.ko-fa {
+    font-size: 1.2rem !important;
+}
+
+.ko-fa:hover {
+    opacity: 0.7;
+}

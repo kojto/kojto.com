@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem name="Technical Docs" id="menu_kojto_technical_docs_parent" sequence="240" />
+        <menuitem name="Documents" id="menu_kojto_technical_docs" sequence="10" parent="menu_kojto_technical_docs_parent" action="action_kojto_technical_docs"/>
+        <menuitem name="Revisions" id="menu_kojto_technical_doc_revisions" sequence="20" parent="menu_kojto_technical_docs_parent" action="action_kojto_technical_doc_revisions"/>
+    </data>
+</odoo>

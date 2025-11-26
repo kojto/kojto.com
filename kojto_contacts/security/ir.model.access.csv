@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kojto_contacts,kojto.contacts,model_kojto_contacts,base.group_erp_manager,1,1,1,1
+access_kojto_contacts_positions,kojto.contacts.positions,model_kojto_contacts_positions,base.group_erp_manager,1,1,1,1
+access_kojto_contacts_credit_limit,kojto.contacts.credit.limit,model_kojto_contacts_credit_limit,base.group_erp_manager,1,1,1,1
+,,,,,,,
+access_kojto_contacts_administrator,kojto.contacts,model_kojto_contacts,kojto_base.kojto_administrator,1,1,1,0
+access_kojto_contacts_positions_administrator,kojto.contacts.positions,model_kojto_contacts_positions,kojto_base.kojto_administrator,1,1,1,0
+access_kojto_contacts_credit_limit_administrator,kojto.contacts.credit.limit,model_kojto_contacts_credit_limit,kojto_base.kojto_administrator,1,1,1,0
+,,,,,,,
+access_kojto_contacts_m_assistant,kojto.contacts,model_kojto_contacts,kojto_base.kojto_manufacturing_assistant,1,1,1,0
+access_kojto_contacts_positions_m_assistant,kojto.contacts.positions,model_kojto_contacts_positions,kojto_base.kojto_manufacturing_assistant,1,1,1,0
+access_kojto_contacts_credit_limit_m_assistant,kojto.contacts.credit.limit,model_kojto_contacts_credit_limit,kojto_base.kojto_manufacturing_assistant,1,1,1,0
+,,,,,,,
+access_kojto_contacts_sales,kojto.contacts,model_kojto_contacts,kojto_base.kojto_international_sales,1,1,1,1
+access_kojto_contacts_positions_sales,kojto.contacts.positions,model_kojto_contacts_positions,kojto_base.kojto_international_sales,1,1,1,1
+access_kojto_contacts_credit_limit_sales,kojto.contacts.credit.limit,model_kojto_contacts_credit_limit,kojto_base.kojto_international_sales,1,1,1,1

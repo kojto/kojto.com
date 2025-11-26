@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_finance_revenue_expense_dashboard_list" model="ir.ui.view">
+            <field name="name">kojto.finance.revenue.expense.dashboard.list</field>
+            <field name="model">kojto.finance.revenue.expense.dashboard</field>
+            <field name="arch" type="xml">
+                <list string="Finance Revenue Expense Dashboard" class="ko-list-main">
+                    <field name="year"/>
+                    <field name="quarter"/>
+                    <field name="month"/>
+                    <field name="currency_id"/>
+                    <field name="outgoing_pre_vat_total" widget="monetary"/>
+                    <button name="action_outgoing_invoice_contents" type="object" string=" " icon="fa-external-link"/>
+                    <field name="incoming_pre_vat_total" widget="monetary"/>
+                    <button name="action_incoming_invoice_contents" type="object" string=" " icon="fa-external-link"/>
+                    <field name="invoiceless_revenue" widget="monetary"/>
+                    <button name="action_invoiceless_revenue" type="object" string=" " icon="fa-external-link"/>
+                    <field name="invoiceless_expenses" widget="monetary"/>
+                    <button name="action_invoiceless_expense" type="object" string=" " icon="fa-external-link"/>
+                    <field name="result" widget="monetary" sum="Total"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_kojto_finance_revenue_expense_dashboard" model="ir.actions.act_window">
+            <field name="name">Revenue Expense Dashboard</field>
+            <field name="res_model">kojto.finance.revenue.expense.dashboard</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_kojto_finance_revenue_expense_dashboard_list"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_warehouses/views/kojto_warehouses_items_views.xml -->
+<odoo>
+    <!-- Item List Views -->
+    <record id="view_kojto_warehouses_items_list" model="ir.ui.view">
+        <field name="name">kojto.warehouses.items.list</field>
+        <field name="model">kojto.warehouses.items</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" decoration-danger="active and reservation_subcode_id">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="batch_id" options="{'no_create_edit': True, 'no_open': True, 'no_delete': True, 'no_copy': True}"/>
+                <field name="name"/>
+                <field name="name_secondary"/>
+                <field name="item_description"/>
+                <field name="item_type"/>
+                <field name="material_id"/>
+                <field name="weight"/>
+                <field name="current_item_quantity"/>
+                <field name="unit_id"/>
+                <field name="item_summary"/>
+                <field name="reservation_subcode_id" optional="show"/>
+                <field name="reserved_by" optional="hide"/>
+                <field name="reserved_datetime" optional="hide"/>
+                <field name="reservation_comment" optional="hide"/>
+                <field name="certificate_ids" optional="show"/>
+                <field name="length" invisible="1"/>
+                <field name="width" invisible="1"/>
+                <field name="thickness" invisible="1"/>
+                <field name="profile_id" invisible="1"/>
+                <field name="parent_item_id" invisible="1"/>
+                <field name="part_type" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Item Form View -->
+    <record id="view_kojto_warehouses_items_form" model="ir.ui.view">
+        <field name="name">kojto.warehouses.items.form</field>
+        <field name="model">kojto.warehouses.items</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet class="ko-form-body ko-form-main">
+                    <!-- Header Section -->
+                    <div class="d-flex justify-content-between align-items-center ko-form-main-header-line" style="margin-bottom: 5px;">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title" style="margin-left: 0; !important;">
+                                        <field name="name" class="ko-form-view-title" readonly="1" force_save="1" style="margin-left: 0; !important;"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-center py-2 py-md-0">
+                                    <div>
+                                        <field name="batch_id" widget="selection" invisible="batch_id" placeholder="Select batch"/>
+                                        <field name="batch_id" class="ko-form-view-title" readonly="1" force_save="1" invisible="not batch_id"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0" style="padding-right: 0;">
+                                    <div class="ko-form-view-title">
+                                        <field name="item_type" class="ko-form-view-title" readonly="1" force_save="1" decoration-danger="item_type == 'part'"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <div invisible="not batch_id">
+                        <!-- Form Content -->
+                        <div class="row no-gutters" style="padding-right: 0; margin-right: 0;">
+                            <div class="col-lg-3">
+                                <group string="Item Info">
+                                    <field name="active" widget="boolean_toggle"/>
+                                    <field name="material_id"/>
+                                    <field name="current_item_quantity" string="Current Quantity"/>
+                                    <field name="unit_id"/>
+                                    <field name="name_secondary"/>
+                                    <field name="item_description"/>
+                                </group>
+                            </div>
+                            <div class="col-lg-3">
+                                <group string="Properties">
+                                    <field name="length" invisible="item_type not in ('sheet', 'bar')"/>
+                                    <field name="width" invisible="item_type != 'sheet'"/>
+                                    <field name="thickness" invisible="item_type != 'sheet'"/>
+                                    <field name="profile_id" invisible="item_type != 'bar'"/>
+                                    <field name="parent_item_id" invisible="item_type != 'package'"/>
+                                    <field name="part_type" invisible="item_type != 'part'"/>
+                                    <field name="item_summary"/>
+                                </group>
+                            </div>
+                            <div class="col-lg-3">
+                                <group string="Material Reservations">
+                                    <field name="reserved_by"/>
+                                    <field name="reserved_datetime"/>
+                                    <field name="reservation_subcode_id" string="Subcode"/>
+                                    <field name="reservation_comment"/>
+                                </group>
+                                <button name="action_clear_reservation" string="Clear Reservation" type="object" class="btn"/>
+                            </div>
+                            <div class="col-lg-3" style="padding-right: 0;">
+                                <group string="Item Description"/>
+                                <div>
+                                    <field name="item_description"/>
+                                </div>
+                            </div>
+                        </div>
+                        <group string="Transactions"/>
+                        <field name="transaction_ids" options="{'no_open': True}">
+                            <list editable="top">
+                                <field name="to_from_store" decoration-success="to_from_store == 'to_store'" decoration-danger="to_from_store == 'from_store'"/>
+                                <field name="subcode_id"/>
+                               <field name="name"/>
+                                <field name="item_id"/>
+                                <field name="transaction_quantity" decoration-danger="to_from_store == 'from_store'"/>
+                                <field name="transaction_unit_id"/>
+                                <field name="date_issue" decoration-danger="to_from_store == 'from_store'"/>
+                                <field name="issued_by"/>
+                            </list>
+                        </field>
+                        <group string="Certificates"/>
+                        <field name="certificate_ids">
+                            <list class="ko-list-main" no_create="1" no_edit="1" no_delete="1" no_open="1">
+                                <field name="name"/>
+                                <field name="certificate_type"/>
+                                <field name="standard"/>
+                                <field name="description"/>
+                                <field name="attachment_id" widget="many2many_binary" invisible="id == False"/>
+                            </list>
+                        </field>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Item Search View -->
+    <record id="view_kojto_warehouses_items_search" model="ir.ui.view">
+        <field name="name">kojto.warehouses.items.search</field>
+        <field name="model">kojto.warehouses.items</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="name_secondary"/>
+                <field name="batch_id"/>
+                <field name="material_id"/>
+                <field name="profile_id"/>
+                <field name="reservation_subcode_id"/>
+                <field name="reserved_by"/>
+                <field name="item_description"/>
+                <field name="item_summary"/>
+
+                <filter string="Active Items" name="active_items" domain="[('active', '=', True)]"/>
+                <filter string="Inactive Items" name="inactive_items" domain="[('active', '=', False)]"/>
+
+                <separator/>
+
+                <filter string="Sheet Items" name="sheet_items" domain="[('item_type', '=', 'sheet')]"/>
+                <filter string="Bar Items" name="bar_items" domain="[('item_type', '=', 'bar')]"/>
+                <filter string="Part Items" name="part_items" domain="[('item_type', '=', 'part')]"/>
+                <filter string="Package Items" name="package_items" domain="[('item_type', '=', 'package')]"/>
+
+                <separator/>
+
+                <filter string="Reserved Items" name="reserved_items" domain="[('reservation_subcode_id', '!=', False)]"/>
+                <filter string="Available Items" name="available_items" domain="[('reservation_subcode_id', '=', False)]"/>
+                <filter string="Reserved by Me" name="reserved_by_me" domain="[('reserved_by', '=', uid)]"/>
+
+                <separator/>
+
+                <filter string="Items with Certificates" name="with_certificates" domain="[('certificate_ids', '!=', False)]"/>
+                <filter string="Items without Certificates" name="without_certificates" domain="[('certificate_ids', '=', False)]"/>
+
+                <separator/>
+
+                                <filter string="Items with Transactions" name="with_transactions" domain="[('transaction_ids', '!=', False)]"/>
+                <filter string="Items without Transactions" name="without_transactions" domain="[('transaction_ids', '=', False)]"/>
+
+                <separator/>
+
+                <filter string="Items with Parent" name="with_parent" domain="[('parent_item_id', '!=', False)]"/>
+                <filter string="Items without Parent" name="without_parent" domain="[('parent_item_id', '=', False)]"/>
+
+                <group expand="0" string="Group By">
+                    <filter string="Item Type" name="group_by_type" context="{'group_by': 'item_type'}"/>
+                    <filter string="Material" name="group_by_material" context="{'group_by': 'material_id'}"/>
+                    <filter string="Batch" name="group_by_batch" context="{'group_by': 'batch_id'}"/>
+                    <filter string="Unit" name="group_by_unit" context="{'group_by': 'unit_id'}"/>
+                    <filter string="Profile" name="group_by_profile" context="{'group_by': 'profile_id'}"/>
+                    <filter string="Reservation Subcode" name="group_by_reservation_subcode" context="{'group_by': 'reservation_subcode_id'}"/>
+                    <filter string="Reserved By" name="group_by_reserved_by" context="{'group_by': 'reserved_by'}"/>
+                    <filter string="Part Type" name="group_by_part_type" context="{'group_by': 'part_type'}"/>
+                    <filter string="Active Status" name="group_by_active" context="{'group_by': 'active'}"/>
+                </group>
+
+                <group expand="0" string="Filters">
+                    <filter string="Thickness Range" name="thickness_filter" context="{'group_by': 'thickness:quarter'}"/>
+                    <filter string="Length Range" name="length_filter" context="{'group_by': 'length:quarter'}"/>
+                    <filter string="Width Range" name="width_filter" context="{'group_by': 'width:quarter'}"/>
+                    <filter string="Weight Range" name="weight_filter" context="{'group_by': 'weight:quarter'}"/>
+                    <filter string="Current Quantity Range" name="current_quantity_filter" context="{'group_by': 'current_item_quantity:quarter'}"/>
+                </group>
+
+                <group expand="0" string="Advanced Grouping">
+                    <filter string="Material + Type" name="group_material_type" context="{'group_by': 'material_id:asc,item_type:asc'}"/>
+                    <filter string="Batch + Material" name="group_batch_material" context="{'group_by': 'batch_id:asc,material_id:asc'}"/>
+                    <filter string="Type + Unit" name="group_type_unit" context="{'group_by': 'item_type:asc,unit_id:asc'}"/>
+                    <filter string="Reservation Status + Type" name="group_reservation_type" context="{'group_by': 'reservation_subcode_id:asc,item_type:asc'}"/>
+                    <filter string="Active + Type" name="group_active_type" context="{'group_by': 'active:asc,item_type:asc'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+
+
+    <!-- Actions -->
+    <record id="action_kojto_warehouses_items" model="ir.actions.act_window">
+        <field name="name">Items</field>
+        <field name="res_model">kojto.warehouses.items</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_warehouses_items_list"/>
+        <field name="views" eval="[(ref('view_kojto_warehouses_items_search'), 'search'), (ref('view_kojto_warehouses_items_list'), 'list'), (ref('view_kojto_warehouses_items_form'), 'form')]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first item!
+            </p>
+        </field>
+    </record>
+</odoo>

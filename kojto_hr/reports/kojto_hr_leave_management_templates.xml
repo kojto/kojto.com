@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Leave Management Report Template -->
+        <template id="report_kojto_hr_leave_management">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="font-size: 1.2em;">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <!-- Header -->
+                        <div>
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2.1em;">Leave Request</div>
+                            </h1>
+                        </div>
+                        <!-- Leave Information -->
+                        <div class="section">
+                            <table class="performance-table" >
+                                <tr >
+                                    <td>Employee:</td>
+                                    <td><t t-esc="doc.get_employee_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Position:</td>
+                                    <td><t t-esc="doc.get_employee_position_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Leave Type:</td>
+                                    <td><span t-field="doc.leave_type_id.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td>From:</td>
+                                    <td><span t-field="doc.date_start" t-options='{"widget": "date"}' /></td>
+                                </tr>
+                                <tr>
+                                    <td>To:</td>
+                                    <td><span t-field="doc.date_end" t-options='{"widget": "date"}' /></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration (Days):</td>
+                                    <td><span t-esc="doc.leave_duration"/> day(s)</td>
+                                </tr>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td>
+                                        <span t-if="doc.leave_status == 'approved'" style="font-weight: bold; color: #27ae60;">APPROVED</span>
+                                        <span t-elif="doc.leave_status == 'denied'" style="font-weight: bold; color: #e74c3c;">DENIED</span>
+                                        <span t-else="" style="font-weight: bold; color: #f39c12;">PENDING</span>
+                                    </td>
+                                </tr>
+                                <tr t-if="doc.approved_by">
+                                    <td>Approved By:</td>
+                                    <td><span t-field="doc.approved_by.name" /></td>
+                                </tr>
+                                <tr t-if="doc.approved_date">
+                                    <td>Approval Date:</td>
+                                    <td><span t-field="doc.approved_date" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Request Created:</td>
+                                    <td><span t-field="doc.create_date" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Last Updated:</td>
+                                    <td><span t-field="doc.write_date" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Signature Section -->
+                        <div class="row hr_signature_section">
+                            <div class="col-12">
+                                <div class="hr_signature_section_content">
+                                    <div>
+                                        <div class="hr_signature_section_content_divider"></div>
+                                        <p>Employee Signature</p>
+                                        <p><t t-esc="doc.get_employee_name_for_printing()" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2.1em;">Leave Order</div>
+                            </h1>
+                            <span style="font-size: 1em;">№ ______________ / </span><span t-field="doc.date_start" style="font-size: 1em;" />
+                        </div>
+
+                        <!-- Leave Order Section -->
+                        <div class="section">
+                            <table class="performance-table" >
+                                <tr>
+                                    <td>Order Number:</td>
+                                    <td><span t-field="doc.leave_order_number" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Employee:</td>
+                                    <td><t t-esc="doc.get_employee_name_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Position:</td>
+                                    <td><t t-esc="doc.get_employee_position_for_printing()" /></td>
+                                </tr>
+                                <tr>
+                                    <td>Leave Type:</td>
+                                    <td><span t-field="doc.leave_type_id.name" /></td>
+                                </tr>
+                                <tr>
+                                    <td>From:</td>
+                                    <td><span t-field="doc.date_start" t-options='{"widget": "date"}' /></td>
+                                </tr>
+                                <tr>
+                                    <td>To:</td>
+                                    <td><span t-field="doc.date_end" t-options='{"widget": "date"}' /></td>
+                                </tr>
+                                <tr>
+                                    <td>Duration (Days):</td>
+                                    <td><span t-esc="doc.leave_duration"/> day(s)</td>
+                                </tr>
+                                <tr>
+                                    <td>Status:</td>
+                                    <td>
+                                        <span t-if="doc.leave_status == 'approved'" style="font-weight: bold; color: #27ae60;">APPROVED</span>
+                                        <span t-elif="doc.leave_status == 'denied'" style="font-weight: bold; color: #e74c3c;">DENIED</span>
+                                        <span t-else="" style="font-weight: bold; color: #f39c12;">PENDING</span>
+                                    </td>
+                                </tr>
+                                <tr t-if="doc.approved_by">
+                                    <td>Approved By:</td>
+                                    <td><span t-field="doc.approved_by.name" /></td>
+                                </tr>
+                                <tr t-if="doc.approved_date">
+                                    <td>Approval Date:</td>
+                                    <td><span t-field="doc.approved_date" /></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Signature Section -->
+                        <div class="row hr_signature_section">
+                            <div class="col-12">
+                                <div class="hr_signature_section_content">
+                                    <div>
+                                        <div class="hr_signature_section_content_divider"></div>
+                                        <p>Manager/HR Signature</p>
+                                        <p t-if="doc.approved_by"><span t-field="doc.approved_by.name" /></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

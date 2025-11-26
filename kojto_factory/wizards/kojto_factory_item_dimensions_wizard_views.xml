@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_factory_item_dimensions_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.factory.item.dimensions.wizard.form</field>
+        <field name="model">kojto.factory.item.dimensions.wizard</field>
+        <field name="arch" type="xml">
+            <form string="RETURN TO STORE" class="o_form_small o_form_dialog">
+                <style> .modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <div>
+                    <field name="transaction_id" invisible="1"/>
+                    <field name="item_type" invisible="1"/>
+
+                    <!-- Sheet Fields -->
+                    <group string="Sheet Dimensions" invisible="not show_sheet_fields">
+                        <field name="length"/>
+                        <field name="width"/>
+                    </group>
+
+                    <!-- Bar Fields -->
+                    <group string="Bar Length" invisible="not show_bar_fields">
+                        <field name="bar_length"/>
+                    </group>
+
+                    <!-- Part Fields -->
+                    <group string="Part Quantity" invisible="not show_part_fields">
+                        <field name="transaction_quantity"/>
+                    </group>
+                </div>
+                <footer>
+                    <button name="action_create_item" string="Create Item" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_kojto_factory_item_dimensions_wizard" model="ir.actions.act_window">
+        <field name="name">RETURN TO STORE</field>
+        <field name="res_model">kojto.factory.item.dimensions.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_kojto_factory_item_dimensions_wizard_form"/>
+    </record>
+</odoo>

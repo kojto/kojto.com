@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <menuitem id="menu_kojto_hr_employees_parent" name="Employees" sequence="40" />
+        <menuitem id="menu_kojto_hr_employees" name="Employee" parent="menu_kojto_hr_employees_parent" action="action_kojto_hr_employees" sequence="10" />
+        <menuitem id="menu_kojto_hr_calendar_event" name="Calendar" parent="menu_kojto_hr_employees_parent" action="action_kojto_hr_calendar_event_calendar" sequence="20" />
+        <menuitem id="menu_kojto_hr_time_tracking" name="Time Tracking" parent="menu_kojto_hr_employees_parent" action="action_kojto_hr_time_tracking" sequence="30" />
+
+        <menuitem id="menu_kojto_hr_business_trips" name="Business Trips" parent="menu_kojto_hr_employees_parent" sequence="50" action="action_kojto_hr_business_trips" />
+        <menuitem id="menu_kojto_hr_leave_management" name="Leaves" parent="menu_kojto_hr_employees_parent" sequence="60" action="action_kojto_hr_leave_management" />
+        <menuitem id="menu_kojto_hr_leave_types" name="Leave Types" parent="menu_kojto_hr_employees_parent" sequence="70" action="action_kojto_hr_leave_types" />
+        <menuitem id="menu_kojto_hr_dashboard" name="Dashboard" parent="menu_kojto_hr_employees_parent" sequence="80" action="action_kojto_hr_dashboard" />
+        <menuitem id="menu_kojto_hr_working_days" name="Working Days" parent="menu_kojto_hr_employees_parent" sequence="90" action="action_kojto_hr_working_days" />
+        <menuitem id="menu_kojto_hr_employee_subcode_rates_dashboard" name="Emp. Rates" parent="menu_kojto_hr_employees_parent" sequence="100" action="action_kojto_hr_employee_subcode_rates_dashboard" />
+    </data>
+</odoo>

@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_content_compositions">
+            <t t-call="web.html_container">
+                <div class="page">
+                                            <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                        </t>
+                    <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } } @page { size: A4 landscape; } .content-table th, .content-table td { border: 0.5px solid gray; padding: 5px; }</style>
+                    <div class="body">
+                        <table class="content-table">
+                            <thead>
+                                <tr style="text-align: center;">
+                                    <th colspan="10"> Material description by invoice: <t t-foreach="docs[0].delivery_id.invoices_ids" t-as="invoice">
+                                            <span t-esc="invoice.consecutive_number" />
+                                            <t t-if="not invoice_last">, </t> <!-- Add comma between invoices -->
+                                        </t>
+                                            <t t-if="not docs[0].delivery_id.invoices_ids">-</t>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>Bracket Type</th>
+                                    <th>Detail Number</th>
+                                    <th>Material</th>
+                                    <th>Supplier</th>
+                                    <th>Invoice</th>
+                                    <th>Certificate</th>
+                                    <th>Unit Weight Per Detail</th>
+                                    <th>Weight of Bracket</th>
+                                    <th>Quantity</th>
+                                    <th>Sum Weight</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="doc">
+                                    <t t-if="doc.content_compositions">
+                                        <tr>
+                                            <td t-att-rowspan="len(doc.content_compositions)" t-esc="doc.name" />
+
+                                            <td t-esc="doc.content_compositions[0].name" />
+                                            <td t-esc="doc.content_compositions[0].batch_id.material_id.name" />
+                                            <td t-esc="doc.content_compositions[0].invoice_id.counterparty_name_id.name" />
+                                            <td t-esc="doc.content_compositions[0].invoice_id.consecutive_number" />
+                                            <td>certificate</td>
+                                            <td t-esc="doc.content_compositions[0].batch_unit_id.name" class="text-right" />
+
+                                            <td t-att-rowspan="len(doc.content_compositions)" t-esc="doc.unit_weight" class="text-right" />
+                                            <td t-att-rowspan="len(doc.content_compositions)" t-esc="doc.quantity" class="text-right" />
+                                            <td t-att-rowspan="len(doc.content_compositions)" t-esc="doc.net_weight" class="text-right" />
+                                        </tr>
+                                        <t t-foreach="doc.content_compositions[1:]" t-as="composition">
+                                            <tr>
+                                                <td t-esc="composition.name" />
+                                                <td t-esc="composition.batch_id.material_id.name" />
+                                                <td t-esc="composition.invoice_id.counterparty_name_id.name" />
+                                                <td t-esc="composition.invoice_id.consecutive_number" />
+                                                <td>certificate</td>
+                                                <td t-esc="composition.batch_unit_id.name" class="text-right" />
+                                            </tr>
+                                        </t>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <div style="page-break-inside: avoid; display: inline-block; width: 100%;">
+                            <table class="totals-table">
+                                <tr>
+                                    <td>Net Weight:</td>
+                                    <td t-esc="'%.2f kg' % doc.delivery_id.net_weight" />
+                                </tr>
+                                <tr>
+                                    <td>Tare Weight:</td>
+                                    <td t-esc="'%.2f kg' % doc.delivery_id.tare_weight" />
+                                </tr>
+                                <tr>
+                                    <td><strong>Gross Weight:</strong></td>
+                                    <td><strong t-esc="'%.2f kg' % doc.delivery_id.gross_weight" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

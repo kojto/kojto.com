@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_finance_open_amount_dashboard_list" model="ir.ui.view">
+        <field name="name">kojto.finance.open.amount.dashboard.list</field>
+        <field name="model">kojto.finance.open.amount.dashboard</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" string="Unpayed Invoices Dashboard" create="false" delete="false" edit="false" default_group_by="document_in_out_type">
+                <field name="invoice_id" optional="hide"/>
+                <field name="date_issue" optional="show" string="Issue Date"/>
+                <field name="date_due" optional="show" string="Due Date"/>
+                <field name="has_child_documents" widget="boolean_toggle"/>
+                <field name="document_in_out_type"/>
+                <field name="invoice_type"/>
+                <field name="consecutive_number"/>
+                <field name="currency"/>
+                <field name="currency_id" optional="hide"/>
+                <field name="counterparty_id"/>
+                <field name="invoice_total_in_eur" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+                <field name="allocated_amount_in_eur_incoming" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+                <field name="allocated_amount_in_eur_outgoing" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+                <field name="open_amount_in_eur" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kojto_finance_open_amount_dashboard_search" model="ir.ui.view">
+        <field name="name">kojto.finance.open.amount.dashboard.search</field>
+        <field name="model">kojto.finance.open.amount.dashboard</field>
+        <field name="arch" type="xml">
+            <search string="Unpayed Invoices Dashboard Search">
+                <field name="consecutive_number"/>
+                <field name="counterparty_id"/>
+                <field name="date_issue" string="Issue Date"/>
+                <field name="invoice_type"/>
+                <field name="document_in_out_type"/>
+                <separator/>
+                <filter name="incoming" string="Incoming" domain="[('document_in_out_type', '=', 'incoming')]"/>
+                <filter name="outgoing" string="Outgoing" domain="[('document_in_out_type', '=', 'outgoing')]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_kojto_finance_open_amount_dashboard" model="ir.actions.act_window">
+        <field name="name">Unpayed Invoices - Dashboard</field>
+        <field name="res_model">kojto.finance.open.amount.dashboard</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_finance_open_amount_dashboard_list"/>
+        <field name="help" type="html">
+            <p>Shows all invoices with open amounts (in EUR) greater than 1 or less than -1.</p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,121 @@
+<!-- kojto_profiles/views/kojto_profile_strips_views.xml -->
+<odoo>
+    <data>
+        <!-- List View for Kojto Profile Strips -->
+        <record model="ir.ui.view" id="view_kojto_profile_strips_list">
+            <field name="name">kojto.profile.strips.list</field>
+            <field name="model">kojto.profile.strips</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" duplicate="false">
+                    <field name="name" />
+                    <field name="profile_id" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Kojto Profile Strips -->
+        <record model="ir.ui.view" id="view_kojto_profile_strips_form">
+            <field name="name">kojto.profile.strips.form</field>
+            <field name="model">kojto.profile.strips</field>
+            <field name="arch" type="xml">
+                <form string="Kojto Profile Strips">
+                    <sheet class="ko-form-body ko-form-main view_kojto_profile_strips_form">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="ko-form-view-title">
+                                <field name="name" class="ko-form-view-title" required="True"/>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3">
+                                <group>
+                                    <div>
+                                        <svg viewBox="-55 -95 185 160" xmlns="http://www.w3.org/2000/svg">
+                                            <polygon points="0,-20 -20,0 100,0 120,-20" fill="blue" fill-opacity="0.1" stroke="black" stroke-width="2"/>
+
+                                            <line x1="-40" y1="-20" x2="-40" y2="0" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-30" y1="0" x2="-40" y2="0" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-30" y1="-20" x2="-40" y2="-20" stroke="black" stroke-width="0.5"/>
+                                            <circle cx="-40" cy="-20" r=".8" fill="black" stroke="black"/>
+                                            <circle cx="-40" cy="0" r=".8" fill="black" stroke="black"/>
+
+                                            <circle cx="-20" cy="0" r="2" fill="red" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                            <circle cx="0" cy="-20" r="2" fill="blue" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                            <circle cx="120" cy="-20" r="2" fill="magenta" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                            <circle cx="100" cy="0" r="2" fill="green" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+
+                                            <text x="-47" y="7" font-size="8" transform="rotate(-90 -44 7)" font-weight="bold">Thickness</text>
+                                            <text x="-25" y="10" fill="red" font-size="8" font-weight="bold">P1</text>
+                                            <text x="95" y="10" fill="green" font-size="8" font-weight="bold">P2</text>
+                                            <text x="0" y="-25" fill="blue" font-size="8" font-weight="bold">P1o</text>
+                                            <text x="110" y="-25" fill="magenta" font-size="8" font-weight="bold">P2o</text>
+                                            <text x="-8" y="-3" fill="black" font-size="8" font-weight="bold">α1</text>
+                                            <text x="90" y="-3" fill="black" font-size="8" font-weight="bold">α2</text>
+                                        </svg>
+                                    </div>
+                                </group>
+                            </div>
+                            <!-- Left: Input Fields -->
+                            <div class="col-3">
+                                <group class="small">
+                                    <field name="point_1_x" string="p1_X (mm)" />
+                                    <field name="point_1_y" string="p1_Y (mm)" />
+                                    <field name="point_2_x" string="p2_X (mm)" />
+                                    <field name="point_2_y" string="p2_Y (mm)" />
+                                    <field name="thickness" string="Thickness (mm)" />
+                                    <field name="angle_1" string="Angle α1 (°)" />
+                                    <field name="angle_2" string="Angle α2 (°)" />
+                                </group>
+                            </div>
+
+                            <!-- Middle Computed Fields -->
+                            <div class="col-3">
+                                <group class="small">
+                                    <field name="point_1o_x" string="p1o_X (mm)" readonly="1" />
+                                    <field name="point_1o_y" string="p1o_Y (mm)" readonly="1" />
+                                    <field name="point_2o_x" string="p2o_X (mm)" readonly="1" />
+                                    <field name="point_2o_y" string="p2o_Y (mm)" readonly="1" />
+                                    <field name="projected_length" string="Projected Length (mm)" readonly="1" />
+                                    <field name="strip_cross_sectional_area" string="Strip Area (cm²)" readonly="1" />
+                                </group>
+                            </div>
+
+                            <!-- Right: Drawing -->
+                            <div class="col-3">
+                                <group>
+                                    <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                                </group>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View for Kojto Profile Strips -->
+        <record model="ir.ui.view" id="view_kojto_profile_strips_search">
+            <field name="name">kojto.profile.strips.search</field>
+            <field name="model">kojto.profile.strips</field>
+            <field name="arch" type="xml">
+                <search string="Kojto Profile Strips">
+                    <filter string="Profile" name="profile_filter" domain="[('profile_id', '!=', False)]" />
+                    <field name="name" />
+                    <field name="profile_id" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Kojto Profile Strips -->
+        <record model="ir.actions.act_window" id="action_kojto_profile_strips">
+            <field name="name">Kojto Profile Strips</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.profile.strips</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create new strip records.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

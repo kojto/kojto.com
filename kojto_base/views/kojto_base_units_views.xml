@@ -1,0 +1,122 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Base Units -->
+        <record model="ir.ui.view" id="view_kojto_base_units_list">
+            <field name="name">kojto.base.units.list</field>
+            <field name="model">kojto.base.units</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" limit="100">
+                    <field name="name" />
+                    <field name="unit_type" />
+                    <field name="description" />
+                    <field name="conversion_factor" />
+                    <field name="translation_ids" widget="many2many_tags" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Kojto Base Units -->
+        <record model="ir.ui.view" id="view_kojto_base_units_form">
+            <field name="name">kojto.base.units.form</field>
+            <field name="model">kojto.base.units</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_units_form" string="Units">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Unit</span>
+                                </div>
+                            </div>
+                        </div>
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="unit_type" />
+                            <field name="description" />
+                            <field name="conversion_factor" />
+                        </group>
+                        <notebook>
+                            <page string="Translations">
+                                <field name="translation_ids">
+                                    <list>
+                                        <field name="unit_id" readonly="1" />
+                                        <field name="language_id" />
+                                        <field name="name" />
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- List View for Kojto Base Units Translation -->
+        <record model="ir.ui.view" id="view_kojto_base_units_translation_list">
+            <field name="name">kojto.base.units.translation.list</field>
+            <field name="model">kojto.base.units.translation</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="unit_id" />
+                    <field name="language_id" />
+                    <field name="name" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Kojto Base Units Translation -->
+        <record model="ir.ui.view" id="view_kojto_base_units_translation_form">
+            <field name="name">kojto.base.units.translation.form</field>
+            <field name="model">kojto.base.units.translation</field>
+            <field name="arch" type="xml">
+                <form string="Unit Translation">
+                    <sheet>
+                        <group>
+                            <field name="unit_id" readonly="1" />
+                            <field name="language_id" />
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for Unit Translations -->
+        <record model="ir.actions.act_window" id="action_kojto_base_units_translation">
+            <field name="name">Unit Translations</field>
+            <field name="res_model">kojto.base.units.translation</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+        <!-- Search View for Kojto Base Units -->
+        <record model="ir.ui.view" id="view_kojto_base_units_search">
+            <field name="name">kojto.base.units.search</field>
+            <field name="model">kojto.base.units</field>
+            <field name="arch" type="xml">
+                <search string="Units">
+                    <field name="name" />
+                    <field name="unit_type" />
+                    <field name="description" />
+                    <field name="conversion_factor" />
+                    <filter string="Type: Time" name="type_time" domain="[('unit_type', '=', 'time')]" />
+                    <filter string="Type: Length" name="type_length" domain="[('unit_type', '=', 'length')]" />
+                    <filter string="Type: Weight" name="type_weight" domain="[('unit_type', '=', 'weight')]" />
+                    <filter string="Base Units" name="base_units" domain="[('conversion_factor', '=', 1.0)]" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action to Open List and Form Views for Kojto Base Units -->
+        <record model="ir.actions.act_window" id="action_kojto_base_units">
+            <field name="name">Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.base.units</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p>Manage your unit records here.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

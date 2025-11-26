@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_factory/views/kojto_factory_menu_views.xml -->
+<odoo>
+    <data>
+        <menuitem name="Factory" id="menu_factory_root" sequence="100"/>
+        <menuitem name="Packages" id="menu_factory_packages" parent="menu_factory_root" action="action_factory_packages" sequence="20"/>
+        <menuitem name="Tasks" id="menu_factory_tasks" parent="menu_factory_root" action="action_factory_tasks" sequence="30"/>
+        <menuitem name="Jobs" id="menu_factory_jobs" parent="menu_factory_root" action="action_kojto_factory_jobs" sequence="40"/>
+        <menuitem name="Processes" id="menu_factory_processes" parent="menu_factory_root" action="action_factory_processes" sequence="60"/>
+    </data>
+</odoo>

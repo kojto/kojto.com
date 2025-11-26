@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Assets Booking -->
+        <record model="ir.ui.view" id="view_kojto_asset_booking_list">
+            <field name="name">kojto.asset.booking.list</field>
+            <field name="model">kojto.asset.booking</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_asset_booking_list" limit="100" sample="1">
+                    <field name="asset_id" />
+                    <field name="datetime_start" />
+                    <field name="datetime_end" />
+                    <field name="comment" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View for Kojto Assets Booking -->
+        <record model="ir.ui.view" id="view_kojto_asset_booking_form">
+            <field name="name">kojto.asset.booking.form</field>
+            <field name="model">kojto.asset.booking</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_asset_booking_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>ASSET BOOKING</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <br />
+                        <group class="col-lg-6">
+                            <field name="asset_id" />
+                            <field name="datetime_start" />
+                            <field name="datetime_end" />
+                            <field name="comment" />
+                            <field name="create_date" readonly="1" />
+                            <field name="write_date" readonly="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto Assets Booking -->
+        <record model="ir.ui.view" id="view_kojto_asset_booking_search">
+            <field name="name">kojto.asset.booking.search</field>
+            <field name="model">kojto.asset.booking</field>
+            <field name="arch" type="xml">
+                <search string="Asset Booking">
+                    <field name="asset_id" />
+                    <field name="datetime_start" />
+                    <field name="datetime_end" />
+                    <filter string="Asset" name="groupby_asset_id" context="{'group_by': 'asset_id'}" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto Assets Booking -->
+        <record model="ir.actions.act_window" id="action_kojto_asset_booking">
+            <field name="name">Asset Booking</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.asset.booking</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your asset booking records here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_hr_employee_list">
+            <field name="name">kojto.hr.employees.list</field>
+            <field name="model">kojto.hr.employees</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_hr_employee_list" limit="100" sample="1">
+                    <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                    <field name="employee_number" string="Employee №" />
+                    <field name="name" />
+                    <field name="name_2" />
+                    <field name="position" />
+                    <field name="user_id" />
+
+                </list>
+            </field>
+        </record>
+        <!-- Form View -->
+        <record id="view_kojto_hr_employee_form" model="ir.ui.view">
+            <field name="name">kojto.hr.employees.form</field>
+            <field name="model">kojto.hr.employees</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_hr_employee_form">
+                    <style>
+                        .o_field_image > div > img {
+                        height: 120px;
+                        }
+                        .o_kanban_renderer.o_kanban_ungrouped .o_kanban_record {
+                        width: auto !important;
+                        }
+                        .o_data_row td.o_data_cell[name="position"],
+                        .o_list_table thead th.o_column_sortable[data-name="position"] {
+                        min-width: 250px !important;
+                        width: 250px !important;
+                        max-width: 250px !important;
+                        }
+                    </style>
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Buttons -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Employee</span>
+                                </div>
+                                <field name="name" class="ko-form-view-title" placeholder="Insert employee name here..." />
+                            </div>
+                            <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                            </div>
+                        </div>
+
+                        <group class="col-lg-6">
+                            <field name="active" widget="boolean_toggle" />
+                            <field name="name_2" />
+                            <field name="employee_number" />
+                            <field name="position" />
+                            <field name="user_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                            <field name="user_id_accountant" />
+                            <field name="work_hours_terminal_binding" />
+                        </group>
+
+                        <div class="col-lg-12">
+                            <notebook>
+                                <page string="Names">
+                                    <field name="names" context="{'default_company_id': id}">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="active" widget="boolean_toggle" />
+                                            <field name="name" />
+                                            <field name="language_id" />
+
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Addresses">
+                                    <field name="addresses" context="{'default_contact_company_id': id}">
+                                        <list editable="bottom">
+                                            <field name="address" />
+                                            <field name="city" />
+                                            <field name="postal_code" />
+                                            <field name="country_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Phones">
+                                    <field name="phones" context="{'default_employee_id': id}">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="name" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Emails">
+                                    <field name="emails" context="{'default_employee_id': id}">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="name" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Bank Accounts">
+                                    <field name="bank_accounts" context="{'default_employee_id': id}">
+                                        <list editable="bottom">
+                                            <field name="bank_id" />
+                                            <field name="BIC" />
+                                            <field name="IBAN" />
+                                            <field name="currency_id" />
+                                            <field name="active" widget="boolean_toggle" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Contracts">
+                                    <field name="contracts" context="{'default_employee_id': id}" default_order="date_start desc">
+                                        <list editable="bottom">
+                                            <field name="number_contract" />
+                                            <field name="description" invisible="not can_see_contracts"/>
+                                            <field name="date_start" />
+                                            <field name="date_end" />
+                                            <field name="position"/>
+                                            <field name="work_day_duration" widget="float_time" />
+                                            <field name="contract" invisible="not can_see_contracts"/>
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Subcode Rates">
+                                    <field name="subcode_rates" context="{'default_employee_id': id}" default_order="date_start desc">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="subcode_id" />
+                                            <field name="date_start" />
+                                            <field name="hour_rate" />
+                                            <field name="currency_id" />
+                                            <field name="hour_rate_in_BGN" />
+                                            <field name="hour_rate_in_EUR" />
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </div>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <div>
+                                    <field name="attachments" widget="many2many_binary" nolabel="1" class="mt-2" invisible="not can_see_attachments"/>
+                                </div>
+                            </group>
+                            <group class="col-lg-6 d-flex justify-content-end">
+                                <div>
+                                    <field name="employee_images" widget="one2many" mode="kanban" kanban_view_ref="kojto_base_images.view_kojto_base_images_kanban" context="{'default_employee_id': id}" />
+                                </div>
+                            </group>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_hr_employees_search">
+            <field name="name">kojto.hr.employees.search</field>
+            <field name="model">kojto.hr.employees</field>
+            <field name="arch" type="xml">
+                <search string="Employees">
+                    <field name="name" />
+                    <field name="employee_number" />
+                    <filter name="work_hours_terminal_binding" string="Binded to terminal" domain="[('work_hours_terminal_binding', '=', '0')]" />
+                    <filter name="work_hours_terminal_binding_not" string="Not binded to terminal" domain="[('work_hours_terminal_binding', '!=', '0')]" />
+                </search>
+            </field>
+        </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_hr_employees">
+            <field name="name">Employees</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.hr.employees</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+				(0, 0, {'view_mode': 'list', 'view_id': ref('view_kojto_hr_employee_list')}),
+				(0, 0, {'view_mode': 'form', 'view_id': ref('view_kojto_hr_employee_form')})]" />
+            <field name="search_view_id" ref="view_kojto_hr_employees_search" />
+        </record>
+    </data>
+</odoo>

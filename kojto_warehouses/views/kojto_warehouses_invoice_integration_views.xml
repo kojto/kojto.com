@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_invoices_form_accounting_batch_button" model="ir.ui.view">
+        <field name="name">kojto.finance.invoices.form.accounting.batch.button</field>
+        <field name="model">kojto.finance.invoices</field>
+        <field name="inherit_id" ref="kojto_finance.view_kojto_invoices_form"/>
+        <field name="arch" type="xml">
+            <!-- Target the vat_rate field which only exists in the Accounting page's list view -->
+            <xpath expr="//field[@name='content']/list/field[@name='vat_rate']" position="after">
+                <button name="action_create_batch_from_content_line"
+                        type="object"
+                        icon="fa-plus-square"
+                        class="btn-sm btn-link"
+                        invisible="parent.document_in_out_type != 'incoming' or not identifier_id"
+                        help="Create a batch from this invoice line"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

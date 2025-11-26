@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_warehouses_invoice_batch_creation_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.warehouses.invoice.batch.creation.wizard.form</field>
+        <field name="model">kojto.warehouses.invoice.batch.creation.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Batch from Invoice">
+                <group>
+                    <group>
+                        <field name="invoice_id" readonly="1"/>
+                        <field name="invoice_content_id" options="{'no_create': True}"/>
+                        <field name="counterparty_id" options="{'no_create': True}"/>
+                        <field name="batch_type"/>
+                        <field name="store_id" required="1" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="material_id" options="{'no_create': True}"/>
+                        <field name="profile_id" invisible="batch_type != 'bar'" required="batch_type == 'bar'" options="{'no_create': True}"/>
+                        <field name="thickness" invisible="batch_type != 'sheet'" required="batch_type == 'sheet'"/>
+                        <field name="part_type" invisible="batch_type != 'part'"/>
+                        <field name="accounting_identifier_id" options="{'no_create': True}"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="unit_price"/>
+                        <field name="unit_price_conversion_rate"/>
+                    </group>
+                    <group>
+                        <field name="name_secondary"/>
+                        <field name="description"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Create Batch" name="action_create_batch" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
+

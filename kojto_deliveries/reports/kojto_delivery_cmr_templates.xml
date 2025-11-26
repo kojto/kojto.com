@@ -1,0 +1,358 @@
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_cmr">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="delivery" t-value="doc.delivery_ids[0]" />
+                    <t t-foreach="range(7)" t-as="copy_number">
+                        <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                        </t>
+                        <style>
+                            @page {
+                                size: A4 !important;
+                                margin: 10mm 10mm 10mm 10mm !important;
+                                padding: 0mm 0 !important;
+                                border-top: 0px solid transparent !important;
+                                border-bottom: 0px solid transparent !important;
+                                background: white !important;
+                                color: black !important;
+                                font-family: "Roboto", sans-serif !important;
+                                font-size: 10px !important;
+                                @top-left-corner {
+                                    content: "" !important;
+                                    text-align: center !important;
+                                }
+                            }
+
+                            table.content-table.cmr-table {
+                                width: 100% !important;
+                                height: 230mm !important;
+                                border-collapse: collapse !important;
+                                table-layout: fixed !important;
+                            }
+
+                            table.content-table.cmr-table td {
+                                padding: 2px !important;
+                                line-height: 9px !important;
+                                border: 0.5px solid !important;
+                                vertical-align: top !important;
+                            }
+
+                            table.content-table.cmr-table tr:nth-child(1) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(2) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(3) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(4) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(5) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(6) { height: 20% !important; }
+                            table.content-table.cmr-table tr:nth-child(7) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(8) { height: 8% !important; }
+                            table.content-table.cmr-table tr:nth-child(9) { height: 5% !important; }
+                            table.content-table.cmr-table tr:nth-child(10) { height: 5% !important; }
+                            table.content-table.cmr-table tr:nth-child(11) { height: 5% !important; }
+                            table.content-table.cmr-table tr:nth-child(12) { height: 2% !important; }
+
+                            div.div-justify {
+                                display: flex !important;
+                                justify-content: space-between !important;
+                                width: 98% !important;
+                            }
+
+                            .page .small-font {
+                                font-size: 8px !important;
+                            }
+
+                            table.td-table {
+                                width: 100% !important;
+                                border-collapse: collapse !important;
+                                table-layout: fixed !important;
+                                font-size: 9px !important;
+                            }
+
+                            table.td-table td {
+                                border: 3px solid !important;
+                            }
+
+                            div.left-caption, div.right-caption {
+                                position: absolute !important;
+                                font-size: 8px !important;
+                            }
+
+                            div.left-caption {
+                                left: -5px !important;
+                                top: 94% !important;
+                                transform: rotate(-90deg) !important;
+                                transform-origin: left center !important;
+                                width: 220mm !important;
+                                text-align: left !important;
+                            }
+
+                            div.right-caption {
+                                right: -5px !important;
+                                top: 98% !important;
+                                transform: rotate(90deg) !important;
+                                transform-origin: right center !important;
+                                width: 240mm !important;
+                                text-align: left !important;
+                            }
+
+                            div.heading {
+                                height: 5mm !important;
+                                margin: 0 !important;
+                                position: relative !important;
+                                top: 10px !important;
+                            }
+
+                            div#wrapper {
+                                display: flex !important;
+                                flex-flow: row wrap !important;
+                            }
+
+                            div#wrapper .left-caption,
+                            div#wrapper .body,
+                            div#wrapper .right-caption {
+                                flex: 1 100% !important;
+                            }
+
+                            div#wrapper .body {
+                                flex: 3 0px !important;
+                            }
+
+                            div.heading span {
+                                font-size: 17.5px !important;
+                                white-space: nowrap !important;
+                                overflow: hidden !important;
+                                text-overflow: ellipsis !important;
+                            }
+
+                            @bottom-left {
+                                content: "www.braiko.com" !important;
+                                text-align: left !important;
+                                vertical-align: top !important;
+                                padding-top: 10px !important;
+                            }
+                            @bottom-center {
+                                content: "" !important;
+                                text-align: center !important;
+                                vertical-align: top !important;
+                                padding-top: 10px !important;
+                            }
+                            @bottom-right {
+                                content: "page " counter(page) " / " counter(pages) !important;
+                                text-align: right !important;
+                                vertical-align: top !important;
+                                padding-top: 10px !important;
+                            }
+
+                            .copy-number {
+                                position: absolute !important;
+                                top: 10px !important;
+                                right: 10px !important;
+                                font-size: 12px !important;
+                                font-weight: bold !important;
+                                color: #333 !important;
+                            }
+                        </style>
+                        <div id="wrapper">
+                            <div t-attf-style="string-set: timestamp '{{ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}';">
+                                <div class="heading div-justify">
+                                    <span>МЕЖДУНАРОДНА ТОВАРИТЕЛНИЦA - CMR - INTERNATIONAL CONSIGNMENT NOTE</span>
+                                    <span t-esc="copy_label" style="font-size: 14px; font-weight: bold;" />
+                                </div>
+                            </div>
+                            <div class="body">
+                                <table class="content-table cmr-table">
+                                    <tr>
+                                        <td> 1. Изпращач / Sender (name, address, country) <br />
+                                        <span t-esc="delivery.company_name_id.name" />
+                                        <br />
+                                        <span t-esc="delivery.company_address_id.name" />
+                                        </td>
+                                        <td> 6. Превозвач<br /> Carrier (name, address, country) </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 2. Получател / Consignee (name, address, country) <br />
+                                        <span t-esc="delivery.counterparty_name_id.name " />
+                                        <br />
+                                        <span t-esc="delivery.counterparty_address_id.name" />
+                                        </td>
+                                        <td> 7. Последователни превозвачи / Successive carriers <br />
+                                        <span>Име / Name</span>
+                                        <br />
+                                        <span>Адрес / Address</span>
+                                        <br />
+                                        <span>Държава / Country</span>
+                                        <br />
+                                        <br />
+                                        <div class="div-justify">
+                                                <div>Получаване и приемане<br />Receipt and Acceptances</div>
+                                                <div>Дата<br />Date</div>
+                                                <div>Подпис<br />Signature</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 3. Товарене на стоките / Taking over the goods <br /> Place: <span t-field="doc.taking_place" />
+                                        <br /> Address: <span t-field="doc.taking_address" />
+                                        <br /> Date: <span t-field="doc.date_taking" t-options="{&quot;format&quot;: &quot;dd.MM.yyyy&quot;}" />
+                                        <br />
+                                            Time of Arrival: <span t-field="doc.time_of_arrival" />
+                                        <br /> Time of Departure: <span t-field="doc.time_of_departure" />
+                                        </td>
+                                        <td rowspan="2">
+                                            <div class="div-justify">
+                                                <div>8. Резерви и бележки на превозвача по товарене на стоките<br />Carrier's reservations and observations on taking over the goods</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 4. Разтоварване на стоките / Delivery of the goods <br /> Място / Place: <span t-field="doc.place_for_delivery" />
+                                            <br /> Държава / Country <span t-field="doc.country_id.name" />
+                                            <br /> Работно времена склада / Warehouse opening hours <br />
+                                            <span
+                                                t-field="doc.warehouse_work_time" />
+                                            <br /> Contact: <span t-field="doc.contact_person" />
+                                            <span t-field="doc.phone_number" />
+                                        </td>
+                                    </tr>
+                                    <tr rowspan="2">
+                                        <td> 5. Указания на изпращача / Sender's instructions <br />
+                                        <span t-field="doc.sender_instructions" />
+                                        </td>
+                                        <td> 9. Документи, предадени на превозвача от изпращача / Documents handed to the carrier by sender <br />
+                                            <br />
+                                            <span t-field="doc.document_by_sender" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <div style="display: flex; height: 100%;">
+                                                <div style="width:70%;border-right:1px solid">
+                                                    <div class="div-justify small-font">
+                                                        <div>10. Знаци и номера<br /> Marks and Nos</div>
+                                                        <div>11. Брой колети<br /> Number of packages</div>
+                                                        <div>12. Вид на опаковка<br /> Method of packing</div>
+                                                        <div>13. Вид на стоката<br /> Nature of the goods</div>
+                                                    </div>
+                                                    <div style="padding:0px 5px;margin: 5px 0; white-space: pre-line;">
+                                                        <t t-if="not doc.packing_list_overflow">
+                                                            <br/>
+                                                            <span t-esc="doc.packing_list"/>
+                                                        </t>
+                                                        <t t-if="doc.packing_list_overflow">
+                                                            <br/>
+                                                            The total number of packages <span t-esc="'%.2f' % doc.number_of_packages_in_cmr"/>
+                                                           <b>See attached list for full information</b>
+                                                        </t>
+                                                    </div>
+                                                    <div class="div-justify small-font" style="position: relative;">
+                                                        <div>UI Номер<br /> UINumber</div>
+                                                        <div>Номер на етикета за опасност<br /> Label number</div>
+                                                        <div>Опаковъчна група<br /> Packing Group</div>
+                                                        <div>(ADR*)<br /> (ADR*)</div>
+                                                    </div>
+                                                </div>
+
+                                                <div style="width:15%;border-right:1px solid">
+                                                    <div class="div-justify small-font">
+                                                        <div>14.Тежина бруто, кг<br />Gross weight in kg</div>
+                                                    </div>
+                                                    <br />
+                                                    <span t-esc="'%.2f' % doc.gross_weight"></span>
+                                                </div>
+                                                <div style="width:15%">
+                                                    <div class="div-justify small-font">
+                                                        <div>15. Обем <br />Volume in m³</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span>16. Специални споразумения между изпращача и превозвача:</span>
+                                            <br />
+                                            <span>Special agreements between the sender and carrier</span>
+                                        </td>
+                                        <td style="padding:0">
+                                            <table class="td-table">
+                                                <tr>
+                                                    <td>17. За плащане от:<br />To be paid by</td>
+                                                    <td>Изпращача<br />Sender</td>
+                                                    <td>Получателя<br />Consignee</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Превозна цена<br />Carrige charge</td>
+                                                    <td />
+                                                    <td />
+                                                </tr>
+                                                <tr>
+                                                    <td>Добавки<br />Suplementary charges</td>
+                                                    <td />
+                                                    <td />
+                                                </tr>
+                                                <tr>
+                                                    <td>Митни сборове<br />Customs duties</td>
+                                                    <td />
+                                                    <td />
+                                                </tr>
+                                                <tr>
+                                                    <td>Други такси<br />Other charges</td>
+                                                    <td />
+                                                    <td />
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr rowspan="4">
+                                        <td> 18. Други полезни подробности<br />Other useful particulars <br />
+                                        <span t-field="doc.special_agreements" />
+                                        </td>
+                                        <td> 19. Наложен платеж<br />Cash on delivery <br />
+                                        <span t-field="doc.cash_on_delivery" />
+                                        </td>
+                                    </tr>
+                                    <tr rowspan="3">
+                                        <td colspan="2">20. Този превоз, независимо от всяка противиречаща клауза, е подчинен на Конвенцията за международен автомобилен превоз(CMR)<br /> This carriage is subject, any clause to the contrary, to the Convention on the Contract for the International
+                                            Carriage of Goods by Road (CMR) </td>
+                                    </tr>
+                                    <tr>
+                                        <td> 21. Изготвено в / Established in: <span t-field="doc.established_in" />
+                                        <br /> на / on: <span t-field="doc.date_established_on" />
+                                        </td>
+                                        <td> 24. Стоките получени / Goods received:<br /> Place: <br /> Date: <br /> Signature: </td>
+                                    </tr>
+                                    <tr rowspan="2">
+                                        <td>
+                                            <div style="display: flex">
+                                                <div style="width:50%;border-right:1px solid"> 22. Подпис или печат на отправителя <br /> Signature or stamp of the sender </div>
+                                                <div style="width:50%;border-right:1px solid"> 25. Подпис или печат на превозвача <br /> Signature or stamp of the carrier </div>
+                                            </div>
+                                        </td>
+                                        <td> 23. Подпис или печат на превозвача<br />Signature or stamp of the carrier </td>
+                                    </tr>
+                                    <tr rowspan="2">
+                                        <td colspan="2">Извъндоговорна част, запазена за превозвача / Non-contractual part reserved for the carrier</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                            <t t-if="doc.packing_list_overflow">
+                                <div style="page-break-before: always;"></div>
+                                <div class="page">
+                                    <h3 t-esc="doc.loading_list_pages[copy_number]"/>
+                                    <div style="white-space: pre-line;">
+                                        <span t-esc="doc.packing_list"/>
+                                    </div>
+                                </div>
+                                <div style="page-break-after: always;"></div>
+                            </t>
+                    </div>
+                </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

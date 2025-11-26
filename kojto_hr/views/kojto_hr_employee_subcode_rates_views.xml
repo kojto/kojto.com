@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto HR Employee Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_hr_employee_subcode_rates_list">
+            <field name="name">kojto.hr.employee.subcode.rates.list</field>
+            <field name="model">kojto.hr.employee.subcode.rates</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_hr_employee_subcode_rates_list" limit="100" sample="1">
+                    <field name="employee_id" />
+                    <field name="subcode_id" />
+                    <field name="date_start" />
+                    <field name="hour_rate" />
+                    <field name="currency_id" />
+                </list>
+            </field>
+        </record>
+        <!-- Form View for Kojto HR Employee Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_hr_employee_subcode_rates_form">
+            <field name="name">kojto.hr.employee.subcode.rates.form</field>
+            <field name="model">kojto.hr.employee.subcode.rates</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_hr_employee_subcode_rates_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>HR EMPLOYEE SUBCODE RATES</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <br />
+                        <group class="col-lg-6">
+                            <field name="employee_id" />
+                            <field name="subcode_id" />
+                            <field name="date_start" />
+                            <field name="hour_rate" />
+                            <field name="currency_id" />
+                            <field name="create_date" readonly="1" />
+                            <field name="write_date" readonly="1" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto HR Employee Subcode Rates -->
+        <record model="ir.ui.view" id="view_kojto_hr_employee_subcode_rates_search">
+            <field name="name">kojto.hr.employee.subcode.rates.search</field>
+            <field name="model">kojto.hr.employee.subcode.rates</field>
+            <field name="arch" type="xml">
+                <search string="HR Employee Subcode Rates">
+                    <field name="employee_id" />
+                    <field name="subcode_id" />
+                    <field name="date_start" />
+                    <field name="currency_id" />
+                    <filter string="Employee" name="groupby_employee_id" context="{'group_by': 'employee_id'}" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto HR Employee Subcode Rates -->
+        <record model="ir.actions.act_window" id="action_kojto_hr_employee_subcode_rates">
+            <field name="name">HR Employee Subcode Rates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.hr.employee.subcode.rates</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Set up your HR employee subcode rates here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

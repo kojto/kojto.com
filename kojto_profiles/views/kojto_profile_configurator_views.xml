@@ -1,0 +1,283 @@
+<!-- kojto_profiles/views/kojto_profile_configurator_views.xml -->
+<odoo>
+    <data>
+        <!-- Form View for Wizard -->
+        <record model="ir.ui.view" id="view_kojto_profile_configurator_form">
+            <field name="name">kojto.profile.configurator.wizard.form</field>
+            <field name="model">kojto.profile.configurator</field>
+            <field name="arch" type="xml">
+                <form string="Kojto Profile Configurator Wizard">
+                    <sheet>
+                        <div class="row">
+                            <div class="col-3">
+                                <group>
+                                    <div>
+                                        <svg viewBox="-50 -170 175 200" xmlns="http://www.w3.org/2000/svg">
+                                            <polygon points="-20,-20 -20,0 100,0 100,-20" fill="blue" fill-opacity="0.1" stroke="black" stroke-width="2"/>
+                                            <polygon points="0,-20 20,-20 20,-120 0,-120" fill="red" fill-opacity="0.1" stroke="black" stroke-width="2"/>
+                                            <polygon points="70,-20 90,-20 90,-120 70,-120" fill="yellow" fill-opacity="0.1" stroke="black" stroke-width="2"/>
+                                            <polygon points="-10,-140 -10,-120 110,-120 110,-140" fill="green" fill-opacity="0.1" stroke="black" stroke-width="2"/>
+                                            <line x1="-20" y1="12" x2="100" y2="12" stroke="black" stroke-width="0.5"/>
+                                            <line x1="100" y1="4" x2="100" y2="12" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-20" y1="4" x2="-20" y2="12" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-40" y1="-20" x2="-40" y2="0" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="0" x2="-40" y2="0" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="-20" x2="-40" y2="-20" stroke="black" stroke-width="0.5"/>
+                                            <line x1="0" y1="-30" x2="20" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="20" y1="-24" x2="20" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="0" y1="-24" x2="0" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-40" y1="-20" x2="-40" y2="-120" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="-120" x2="-40" y2="-120" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="-20" x2="-40" y2="-20" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-40" y1="-120" x2="-40" y2="-140" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="-140" x2="-40" y2="-140" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-29" y1="-120" x2="-40" y2="-120" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-10" y1="-156" x2="110" y2="-156" stroke="black" stroke-width="0.5"/>
+                                            <line x1="110" y1="-146" x2="110" y2="-156" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-10" y1="-146" x2="-10" y2="-156" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-20" y1="-30" x2="0" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="0" y1="-24" x2="0" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-20" y1="-24" x2="-20" y2="-30" stroke="black" stroke-width="0.5"/>
+                                            <line x1="70" y1="-107" x2="90" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="90" y1="-116" x2="90" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="70" y1="-116" x2="70" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-28" y1="-107" x2="-10" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-10" y1="-116" x2="-10" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="-20" y1="-97" x2="-20" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="100" y1="-107" x2="90" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="100" y1="-107" x2="110" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="90" y1="-116" x2="90" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <line x1="100" y1="-97" x2="100" y2="-107" stroke="black" stroke-width="0.5"/>
+                                            <g id="small-circles">
+                                                <circle cx="-40" cy="-120" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="100" cy="-107" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="90" cy="-107" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-20" cy="-107" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-10" cy="-107" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="70" cy="-107" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-20" cy="-30" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="0" cy="-30" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-10" cy="-156" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="110" cy="-156" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-40" cy="-140" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-40" cy="-20" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="20" cy="-30" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-40" cy="0" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="-20" cy="12" r=".8" fill="black" stroke="black"/>
+                                                <circle cx="100" cy="12" r=".8" fill="black" stroke="black"/>
+                                            </g>
+                                            <g id="large-circles">
+                                                <circle cx="-10" cy="-120" r="2" fill="green" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                                <circle cx="20" cy="-20" r="2" fill="red" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                                <circle cx="90" cy="-20" r="2" fill="yellow" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                                <circle cx="-20" cy="0" r="2" fill="blue" fill-opacity=".5" stroke="black" stroke-width="0.3"/>
+                                            </g>
+                                            <text x="-50" y="-10" font-size="8">a1</text>
+                                            <text x="35" y="10" font-size="8">a2</text>
+                                            <text x="5" y="-32" font-size="8">b1</text>
+                                            <text x="-50" y="-65" font-size="8">b2</text>
+                                            <text x="-15" y="-32" font-size="8">b3</text>
+                                            <text x="-50" y="-128" font-size="8">c1</text>
+                                            <text x="45" y="-158" font-size="8">c2</text>
+                                            <text x="-28" y="-108" font-size="8">c3</text>
+                                            <text x="76" y="-108" font-size="8">d1</text>
+                                            <text x="103" y="-108" font-size="8">d3</text>
+                                            <text x="45" y="-6" font-size="12">A</text>
+                                            <text x="7" y="-70" font-size="12">B</text>
+                                            <text x="45" y="-127" font-size="12">C</text>
+                                            <text x="76" y="-70" font-size="12">D</text>
+                                        </svg>
+                                    </div>
+                                </group>
+                            </div>
+                            <div class="col-3">
+                                <field name="profile_library_id" placeholder="Select profile from the library" class="w-100 d-flex" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <table class="table table-sm border-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Profile Name</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="name" placeholder="Profile Name" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Material</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="material_id" class="w-100 d-flex" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">a1 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="a1" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">a2 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="a2" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">b1 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="b1" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">b2 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="b2" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">b3 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="b3" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">c1 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="c1" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">c2 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="c2" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">c3 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="c3" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">d1 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="d1" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">d3 (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0;">
+                                                <field name="d3" class="w-100 d-flex"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-3">
+                                <table class="table table-sm border-0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">A (cm²)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="profile_cross_sectional_area" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">G (kg/m)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="profile_weight" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Jx (cm⁴)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="jx" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Jy (cm⁴)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="jy" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Wx (cm³)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="wx" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Wy (cm³)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="wy" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 50%; padding: 0; margin-right: 0;">Center of Mass X</td>
+                                            <td class="border-0" style="width: 50%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="center_of_mass_x" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 50%; padding: 0; margin-right: 0;">Center of Mass Y</td>
+                                            <td class="border-0" style="width: 50%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="center_of_mass_y" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">h (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="max_height" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">w (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="max_width" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">U (mm)</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="coating_perimeter" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0" style="width: 40%; padding: 0; margin-right: 0;">Ext. corners</td>
+                                            <td class="border-0" style="width: 60%; padding: 0; margin-right: 0; text-align: right;">
+                                                <field name="number_ext_corners" readonly="1" class="w-100"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-3">
+                                <group>
+                                    <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                                </group>
+                            </div>
+                        </div>
+                    </sheet>
+                    <footer>
+                        <button name="create_profile_from_configurator" type="object" string="Create Profile" class="btn-primary"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Remove Search View (not needed for a wizard) -->
+        <!-- <record model="ir.ui.view" id="view_kojto_profile_configurator_search"> ... </record> -->
+
+        <!-- Updated Action for Wizard -->
+        <record model="ir.actions.act_window" id="action_kojto_profile_configurator">
+            <field name="name">Create New Profile</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.profile.configurator</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="view_kojto_profile_configurator_form"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Configure a new profile and click "Create Profile" to save it.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

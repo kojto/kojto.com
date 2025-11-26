@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_warehouses/wizards/views/kojto_warehouses_generate_items_wizard_views.xml -->
+<odoo>
+    <!-- Generate Items Wizard Form View -->
+    <record id="view_kojto_warehouses_generate_items_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.warehouses.generate.items.wizard.form</field>
+        <field name="model">kojto.warehouses.generate.items.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generate Items">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Generate Items for Batch</h1>
+                        <p>Specify the number of items and their dimensions to generate.</p>
+                    </div>
+
+                    <group>
+                        <field name="batch_id" readonly="1"/>
+                        <field name="batch_type" readonly="1"/>
+                        <field name="number_of_items"/>
+                    </group>
+
+                    <group string="Dimensions">
+                        <!-- Sheet batch type fields -->
+                        <group invisible="batch_type != 'sheet'">
+                            <field name="gen_items_length" required="batch_type == 'sheet'"/>
+                            <field name="gen_items_width" required="batch_type == 'sheet'"/>
+                        </group>
+
+                        <!-- Bar batch type fields -->
+                        <group invisible="batch_type != 'bar'">
+                            <field name="gen_items_length" required="batch_type == 'bar'"/>
+                        </group>
+
+                        <!-- Part batch type fields -->
+                        <group invisible="batch_type != 'part'">
+                            <field name="gen_items_weight" required="batch_type == 'part'"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_generate_items" string="Generate Items" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Generate Items Wizard Action -->
+    <record id="action_kojto_warehouses_generate_items_wizard" model="ir.actions.act_window">
+        <field name="name">Generate Items</field>
+        <field name="res_model">kojto.warehouses.generate.items.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
+

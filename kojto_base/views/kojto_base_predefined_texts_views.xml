@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Kojto Base Predefined Texts Views -->
+    <record id="view_kojto_base_predefined_text_list" model="ir.ui.view">
+        <field name="name">kojto.base.predefined.text.list</field>
+        <field name="model">kojto.base.predefined.texts</field>
+        <field name="arch" type="xml">
+            <list string="Predefined Texts" class="ko-list-main">
+                <field name="name"/>
+                <field name="text_type"/>
+                <field name="translation_ids"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kojto_base_predefined_text_form" model="ir.ui.view">
+        <field name="name">kojto.base.predefined.text.form</field>
+        <field name="model">kojto.base.predefined.texts</field>
+        <field name="arch" type="xml">
+            <form string="Predefined Text">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="text_type"/>
+                    </group>
+                    <group string="Translations">
+                        <field name="translation_ids">
+                            <list editable="bottom" class="ko-list-main">
+                                <field name="language_id"/>
+                                <field name="translated_text"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_kojto_base_predefined_text_search" model="ir.ui.view">
+        <field name="name">kojto.base.predefined.text.search</field>
+        <field name="model">kojto.base.predefined.texts</field>
+        <field name="arch" type="xml">
+            <search string="Search Predefined Texts">
+                <field name="name"/>
+                <field name="text_type"/>
+                <filter string="Offer Pre-Content" name="offer_pre" domain="[('text_type', '=', 'offer_pre_content_text')]"/>
+                <filter string="Offer Post-Content" name="offer_post" domain="[('text_type', '=', 'offer_post_content_text')]"/>
+                <filter string="Invoice" name="invoice" domain="[('text_type', '=', 'invoice_text')]"/>
+                <filter string="Contract" name="contract" domain="[('text_type', '=', 'contract_text')]"/>
+                <filter string="Delivery" name="delivery" domain="[('text_type', '=', 'delivery_text')]"/>
+                <filter string="UT Control" name="ut_control" domain="[('text_type', '=', 'ut_control_result')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Text Type" name="group_by_type" context="{'group_by': 'text_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_base_predefined_texts" model="ir.actions.act_window">
+        <field name="name">Predefined Texts</field>
+        <field name="res_model">kojto.base.predefined.texts</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_base_predefined_text_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first predefined text
+            </p>
+        </field>
+    </record>
+</odoo>

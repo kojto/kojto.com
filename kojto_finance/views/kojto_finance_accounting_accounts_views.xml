@@ -1,0 +1,131 @@
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_finance_accounting_accounts_list" model="ir.ui.view">
+        <field name="name">kojto.finance.accounting.accounts.list</field>
+        <field name="model">kojto.finance.accounting.accounts</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main view_kojto_finance_accounting_accounts_list">
+                <field name="account_number" />
+                <field name="name" />
+                <field name="account_structure_template" />
+                <field name="is_currency_account" widget="boolean_toggle" string=" Currency account" />
+                <field name="is_warehouse_account" widget="boolean_toggle" string=" Warehouse account" />
+                <field name="is_catalogue_account" widget="boolean_toggle" string=" Catalogue account" />
+                <field name="is_ref_number_account" widget="boolean_toggle" string=" Ref Number account" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_finance_accounting_accounts_form" model="ir.ui.view">
+        <field name="name">kojto.finance.accounting.accounts.form</field>
+        <field name="model">kojto.finance.accounting.accounts</field>
+        <field name="arch" type="xml">
+            <form class="ko-form-main view_kojto_finance_accounting_accounts_form">
+                <sheet class="ko-form-body">
+                    <group class="col-10">
+                        <field name="account_number" />
+                        <field name="name" string="Account Name" />
+                        <field name="account_structure_template" string="Account Structure Template" />
+                        <field name="is_currency_account" widget="boolean_toggle" string=" Currency account" />
+                        <field name="is_warehouse_account" widget="boolean_toggle" string=" Warehouse account" />
+                        <field name="is_catalogue_account" widget="boolean_toggle" string=" Catalogue account" />
+                        <field name="is_ref_number_account" widget="boolean_toggle" string=" Ref Number account" />
+                    </group>
+                    <separator />
+                    <group class="col-10">
+                        <div> The Account structure template is a string/template that will be used when exporting to external Accounting System that requires specific structure for the accounts. Each name enclosed in {} will be replaced with the actual value from the document, every other text will
+                            be left as is. <p>Possible names that can be used in the template:</p>
+                            <pre>
+                                {num}: Invoice Number
+                                {pnum}: Parent Invoice Number
+                                {subcode}: Invoice Subcode
+                                {maincode_code}: Invoice Maincode.Code
+                                {type}: Invoice Type
+                                {issue_date}: Invoice Issue Date
+                                {pissue_date}: Parent Invoice Issue Date
+                                {due_date}: Invoice Due Date
+                                {op_date}: Accounting Operation Date
+                                {arch_num}: Accounting Archive Number
+                                {acc_user}: Accounting User ID
+                                {counterparty_name}: Counterparty Name
+                                {counterparty_reg_num}: Counterparty Registration Number
+                                {counterparty_short_num}: Counterparty Registration Number Last 4 Digits
+                                {counterparty_tax_num}: Counterparty Tax Number
+                                {counterparty_client_number}: Counterparty Client Number
+                                {currency}: Currency
+                                {currency_code}: Currency Code
+                                {exchange_rate_to_bgn}: Exchange Rate to BGN
+                                {content_maincode_code}: Content Row Maincode.Code
+                                {content_subtype}: Subtype
+                                {content_subtype_name}: Subtype Name
+                                {content_identifier}: Identifier
+                                {content_identifier_name}: Identifier Name
+                                {content_warehouse}: Warehouse
+                                {content_warehouse_name}: Warehouse Name
+                                {content_quantity}: Quantity
+                                {content_unit}: Unit for the particular content in BG(based on the unit of the identifier)
+                                {content_name}: Content Name
+                                {auto_vat_num}: Counterparty VAT Number auto-generated based on the counterparty country and EU status
+                                {auto_eik_num}: Counterparty EIK Number auto-generated based on the counterparty country and EU status
+
+                                {trx_direction}: Cashflow Transaction Direction
+                                {trx_medium}: Cashflow Transaction Medium
+                                {trx_date}: Cashflow Transaction Date
+                                {trx_bank_account_iban}: Cashflow Transaction Bank Account IBAN
+                                {trx_bank_account_desc}: Cashflow Transaction Bank Account Description
+                                {trx_bank_account_ref_number}: Cashflow Transaction Bank Account Ref Number
+                                {trx_exchange_rate_to_bgn}: Cashflow Transaction Exchange Rate to BGN
+                                {trx_amount}: Cashflow Transaction Amount
+                                {trx_amount_bgn}: Cashflow Transaction Amount in BGN
+                                {trx_acc_archive_number}: Cashflow Transaction Accounting Archive Number
+                                {trx_acc_op_date}: Cashflow Transaction Accounting Operation Date
+                                {trx_accountant_id}: Cashflow Transaction Accounting Accountant ID
+
+                                {trx_allocation_accounting_ref_number}: Cashflow Transaction Allocation Accounting Ref Number
+                                {trx_allocation_subtype_name}: Cashflow Transaction Allocation Subtype Name
+                                {trx_allocation_subtype}: Cashflow Transaction Allocation Subtype
+                                {trx_allocation_subcode}: Cashflow Transaction Allocation Subcode
+                                {trx_allocation_maincode_code}: Cashflow Transaction Allocation Maincode Code
+                                {trx_allocation_amount}: Cashflow Transaction Allocation Amount
+                                {trx_allocation_amount_bgn}: Cashflow Transaction Allocation Amount in BGN
+                                {trx_allocation_currency_code}: Cashflow Transaction Allocation Currency Code
+                                {trx_allocation_currency_name}: Cashflow Transaction Allocation Currency Name
+                                {trx_allocation_accounting_ref_number}: Cashflow Accounting RefNumber used in the allocation
+                            </pre>
+
+                            <p style="margin-top:10px;">The followng exmaple:</p>
+                            <ul>
+                                <li style="font-style:italic;">2$Производствен цех#{content_subtype}${content_subtype_name}#{subcode}</li>
+                            </ul>
+                            <p style="margin-top:10px;">Will be replaced with something like:</p>
+                            <ul>
+                                <li style="font-style:italic;">2$Производствен цех#100#Разходи основни материали#BRK.240180</li>
+                            </ul>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_finance_accounting_accounts_search" model="ir.ui.view">
+        <field name="name">kojto.finance.accounting.accounts.search</field>
+        <field name="model">kojto.finance.accounting.accounts</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="account_number" />
+                <field name="name" />
+                <filter string="By Account Number" name="filter_account_number" domain="[('account_number', '!=', False)]" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_finance_accounting_accounts" model="ir.actions.act_window">
+        <field name="name">Financial Accounts</field>
+        <field name="res_model">kojto.finance.accounting.accounts</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

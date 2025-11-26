@@ -1,0 +1,449 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+table {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+tbody td {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+}
+thead th {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+}
+p {
+    margin: 10px 0;
+}
+.body {
+    margin-top: 0.5cm;
+}
+.body p {
+    margin-top: 0.5cm;
+}
+.body-table {
+    width: 100%;
+    margin-bottom: 0.5cm;
+}
+.body-table td.label {
+    width: 15%;
+    font-weight: bold;
+}
+.body-table td.content {
+    width: 35%;
+}
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 0.5px solid gray;
+    border-bottom: 0.5px solid gray;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.content-table th {
+    padding: 4px;
+    text-align: left;
+    border-top: none;
+    border-bottom: 0.5px solid gray;
+    border-left: none;
+    border-right: none;
+}
+.content-table td {
+    padding: 4px;
+    text-align: left;
+    border-top: none;
+    border-bottom: 0.5px solid gray;
+    border-left: none;
+    border-right: none;
+}
+.content-table .text-right {
+    text-align: right;
+}
+.even-row {
+    background-color: #f0f0f0;
+    border-bottom: 0.5px solid gray;
+}
+.odd-row {
+    background-color: white;
+    border-bottom: 0.5px solid gray;
+}
+.header-row {
+    background-color: #d3d3d3;
+}
+.heading {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 3mm 0;
+}
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+}
+.info-cell {
+    width: 45%;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+}
+.info-cell div {
+    margin: 0 0 1mm 0;
+}
+.label {
+    font-weight: bold;
+}
+.section-heading {
+    margin: 5mm auto;
+    font-size: 14px;
+    text-align: center;
+}
+.summary-section {
+    margin-top: 30px;
+    text-align: right;
+}
+.left-summary-section {
+    margin-top: 30px;
+    text-align: left;
+}
+.footer-section {
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-section p {
+    margin: 0;
+    font-size: 12px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3.3cm;
+    padding-top: 0.5cm;
+}
+.footer hr {
+    border: 0.5pt solid black;
+    margin: 0.5cm 0;
+}
+.footer-table {
+    width: 100%;
+}
+.footer-table td {
+    width: 50%;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+.references-table {
+    width: 100%;
+    padding: 4px 0px;
+    border-top: 0.5px solid gray;
+    border-bottom: 0.5px solid gray;
+}
+.references-table td.label {
+    width: 15%;
+}
+.references-table td.content {
+    width: 40%;
+}
+.totals-table {
+    width: 50%;
+    float: right;
+    margin-top: 0.5cm;
+}
+.totals-table td {
+    text-align: right;
+}
+.totals-table tr:last-child td {
+    font-weight: bold;
+}
+.attachments {
+    margin-top: 0.5cm;
+}
+.attachments a {
+    color: blue;
+}
+.attachments-table {
+    width: 100%;
+}
+.attachments-table th {
+    font-weight: bold;
+    border-bottom: 1pt solid black;
+}
+.copy_original_indicator {
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    color: grey;
+    text-transform: uppercase;
+}
+.vat-treatment-summary {
+    margin-top: 20px;
+}
+.vat-rate-summary {
+    margin-top: 20px;
+}
+.ko-w-10 {
+    width: 10px;
+}
+.ko-w-20 {
+    width: 20px;
+}
+.ko-w-30 {
+    width: 30px;
+}
+.ko-w-40 {
+    width: 40px;
+}
+.ko-w-50 {
+    width: 50px;
+}
+.ko-w-60 {
+    width: 60px;
+}
+.ko-w-70 {
+    width: 70px;
+}
+.ko-w-80 {
+    width: 80px;
+}
+.ko-w-90 {
+    width: 90px;
+}
+.ko-w-100 {
+    width: 100px;
+}
+.ko-w-110 {
+    width: 110px;
+}
+.ko-w-120 {
+    width: 120px;
+}
+.ko-w-130 {
+    width: 130px;
+}
+.ko-w-140 {
+    width: 140px;
+}
+.ko-w-150 {
+    width: 150px;
+}
+.ko-w-160 {
+    width: 160px;
+}
+.ko-w-170 {
+    width: 170px;
+}
+.ko-w-180 {
+    width: 180px;
+}
+.ko-w-190 {
+    width: 190px;
+}
+.ko-w-200 {
+    width: 200px;
+}
+.break-after {
+    page-break-after: always;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.profile-drawing {
+    width: 50%;
+    text-align: center;
+}
+.profile-img {
+    max-width: 90%;
+    max-height: 300px;
+}
+.table_50_percent {
+    width: 50%;
+    margin-right: 10px;
+}
+.table_100_percent {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.table_100_percent th {
+    padding: 4px;
+    text-align: right;
+}
+.table_100_percent td {
+    padding: 4px;
+    text-align: right;
+}
+.section-heading {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.new_page {
+    page-break-before: always;
+    padding: 20px;
+}
+.summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.summary-table th {
+    padding: 4px;
+    text-align: right;
+}
+.summary-table td {
+    padding: 4px;
+    text-align: right;
+}
+.summary-table .total-row {
+    font-weight: bold;
+}
+.summary-table th.position {
+    text-align: left;
+}
+.summary-table td.position {
+    text-align: left;
+}
+
+table.performance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+table.performance-table td {
+    padding: 4px;
+    font-size: 0.7em;
+}
+
+table.performance-table td:first-of-type {
+    width: 30%;
+    font-weight: bold;
+    background-color: #B0C4DE;
+}
+
+table.performance-table th {
+    padding: 4px;
+    font-size: 0.6em;
+}
+
+.hr_signature_section {
+    margin-top: 40px;
+}
+
+.hr_signature_section_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.hr_signature_section_content > div {
+    width: 45%;
+    text-align: center;
+}
+.hr_signature_section_content .hr_signature_section_content_divider {
+    border-bottom: 2px solid #000;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.hr_signature_section p:first-of-type {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.hr_signature_section p:last-of-type {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #7f8c8d;
+}
+
+@page {
+    size: A4;
+    margin: 22mm 10mm 15mm 10mm;
+    padding: 5mm 0;
+    border-top: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    background: white;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    @top-left-corner {
+        content: "";
+        text-align: center;
+    }
+    @top-left {
+        content: "";
+        text-align: left;
+    }
+    @top-center {
+        content: "";
+        text-align: center;
+    }
+    @top-right-corner {
+        content: "";
+        text-align: center;
+    }
+    @left-top {
+        content: "";
+        text-align: center;
+    }
+    @left-middle {
+        content: "";
+        text-align: center;
+    }
+    @left-bottom {
+        content: "";
+        text-align: center;
+    }
+    @bottom-left-corner {
+        content: "";
+        text-align: center;
+    }
+    @bottom-left {
+        content: "This document was printed by kojto.com ERP";
+        text-align: left;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-center {
+        content: "";
+        text-align: center;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-right {
+        content: "page " counter(page) " / " counter(pages);
+        text-align: right;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-right-corner {
+        content: "";
+        text-align: center;
+    }
+    @right-top {
+        content: "";
+        text-align: center;
+    }
+    @right-middle {
+        content: "";
+        text-align: center;
+    }
+    @right-bottom {
+        content: "";
+        text-align: center;
+    }
+}

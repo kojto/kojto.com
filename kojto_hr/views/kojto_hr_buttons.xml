@@ -1,0 +1,116 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_kojto_landingpage_form_inherit">
+            <field name="name">kojto.landingpage.form.inherit</field>
+            <field name="model">kojto.landingpage</field>
+            <field name="inherit_id" ref="kojto_landingpage.view_kojto_landingpage_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//comment()[.=' Button group 16 ']" position="before">
+                    <!-- Placeholder divs for layout -->
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <div class="landing_page_item" style="margin: 0 !important; height: 0;" />
+                    <separator class="col-lg-12 separator" />
+                    <!-- Employees -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_employees_list_view" type="object" class="btn landing_page_button" style="color: #0d6efd;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="landing_page_svg_icon" style="fill: #0d6efd;">
+                                    <path d="M49.106,50.437c-12.167,0-22.066,9.898-22.066,22.065c0,0.828,0.671,1.5,1.5,1.5h41.131c0.828,0,1.5-0.672,1.5-1.5   C71.171,60.335,61.272,50.437,49.106,50.437z M30.099,71.002c0.768-9.814,9-17.565,19.007-17.565   c10.007,0,18.239,7.751,19.006,17.565H30.099z" />
+                                    <path
+                                        d="M48.746,48.456c7.143,0,12.954-5.811,12.954-12.954c0-7.143-5.812-12.954-12.954-12.954   c-7.143,0-12.954,5.811-12.954,12.954C35.792,42.645,41.603,48.456,48.746,48.456z M48.746,25.548c5.488,0,9.954,4.465,9.954,9.954   c0,5.488-4.466,9.954-9.954,9.954c-5.489,0-9.954-4.465-9.954-9.954C38.792,30.013,43.257,25.548,48.746,25.548z" />
+                                    <path
+                                        d="M19.78,58.714c2.461,0,4.878,0.656,6.99,1.898c0.714,0.422,1.634,0.181,2.053-0.532c0.42-0.714,0.182-1.634-0.533-2.054   c-2.572-1.513-5.515-2.312-8.51-2.312c-9.257,0-16.788,7.531-16.788,16.788c0,0.828,0.671,1.5,1.5,1.5h19.012   c0.829,0,1.5-0.672,1.5-1.5s-0.671-1.5-1.5-1.5H6.073C6.823,64.102,12.684,58.714,19.78,58.714z" />
+                                    <path
+                                        d="M19.514,53.319c5.521,0,10.014-4.492,10.014-10.014c0-5.522-4.492-10.014-10.014-10.014   c-5.522,0-10.014,4.492-10.014,10.014C9.5,48.826,13.992,53.319,19.514,53.319z M19.514,36.291c3.867,0,7.014,3.146,7.014,7.014   c0,3.867-3.146,7.014-7.014,7.014c-3.868,0-7.014-3.146-7.014-7.014C12.5,39.437,15.646,36.291,19.514,36.291z" />
+                                    <path
+                                        d="M78.553,55.714c-2.994,0-5.937,0.8-8.51,2.312c-0.715,0.42-0.953,1.339-0.533,2.053c0.42,0.716,1.342,0.953,2.053,0.533   c2.113-1.242,4.53-1.898,6.99-1.898c7.096,0,12.957,5.388,13.707,12.288H74.832c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5   h19.009c0.828,0,1.5-0.672,1.5-1.5C95.341,63.245,87.81,55.714,78.553,55.714z" />
+                                    <path
+                                        d="M78.82,53.319c5.521,0,10.014-4.492,10.014-10.014c0-5.522-4.492-10.014-10.014-10.014   c-5.522,0-10.015,4.492-10.015,10.014C68.806,48.826,73.298,53.319,78.82,53.319z M78.82,36.291c3.867,0,7.014,3.146,7.014,7.014   c0,3.867-3.146,7.014-7.014,7.014c-3.868,0-7.015-3.146-7.015-7.014C71.806,39.437,74.952,36.291,78.82,36.291z" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #0d6efd;">Employees</span>
+                        </button>
+                    </div>
+                    <!-- Time tracker -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_employee,kojto_base.kojto_manager,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_time_tracking_list_view" type="object" class="btn landing_page_button" style="color: #198754;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="landing_page_svg_icon" viewBox="0 0 16 16" style="fill: #198754;">
+                                    <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z" />
+                                    <path
+                                        d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #198754;">Time tracker</span>
+                        </button>
+                    </div>
+                    <!-- Dashboard -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_hr_dashboard" type="object" class="btn landing_page_button" style="color: #fd7e14;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="landing_page_svg_icon" viewBox="0 0 16 16" style="fill: #fd7e14;">
+                                    <path
+                                        d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4.01V10c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.76.76 0 0 0 .254-.302 1.5 1.5 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #fd7e14;">HR Dashboard</span>
+                        </button>
+                    </div>
+                    <!-- Business trips -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_business_trips_list_view" type="object" class="btn landing_page_button" style="color: #6f42c1;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="landing_page_svg_icon" viewBox="0 0 16 16" style="fill: #6f42c1;">
+                                    <path d="M2.5 1a.5.5 0 0 0-.5.5V5h-.5A1.5 1.5 0 0 0 0 6.5v7a1.5 1.5 0 0 0 1 1.415v.335a.75.75 0 0 0 1.5 0V15H4v-1H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5V7h1v-.5A1.5 1.5 0 0 0 6.5 5H6V1.5a.5.5 0 0 0-.5-.5zM5 5H3V2h2z" />
+                                    <path
+                                        d="M3 7.5a.5.5 0 0 0-1 0v5a.5.5 0 0 0 1 0zM11 6a1.5 1.5 0 0 1 1.5 1.5V8h2A1.5 1.5 0 0 1 16 9.5v5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 14.5v-5A1.5 1.5 0 0 1 6.5 8h2v-.5A1.5 1.5 0 0 1 10 6zM9.5 7.5V8h2v-.5A.5.5 0 0 0 11 7h-1a.5.5 0 0 0-.5.5M6 9.5v5a.5.5 0 0 0 .5.5H7V9h-.5a.5.5 0 0 0-.5.5m7 5.5V9H8v6zm1.5 0a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5H14v6z" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #6f42c1;">Business trips</span>
+                        </button>
+                    </div>
+                    <!-- Leave requests -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_leave_management_list_view" type="object" class="btn landing_page_button" style="color: #20c997;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="landing_page_svg_icon" viewBox="0 0 32 32" style="stroke: #20c997; fill: #20c997;">
+                                    <path d="M1.5 20.71l3.795-1.236M1.5 8.728l5.795-1.954M4.529 24.652l5.766-1.878M30.4 30.5h.1m-29 0h27" stroke="#20c997" stroke-width="1" />
+                                    <path d="M14.398 18.689l-1.339 3.767a.5.5 0 0 0 .625.643l1.258-.408a.5.5 0 0 0 .249-.181l5.854-8.01" stroke="#20c997" stroke-width="1" />
+                                    <path
+                                        d="M25.597 8.714l-5.506 1.789-7.974-5.61c-.126-.096-.29-.116-.442-.066l-1.531.497a.5.5 0 0 0-.265.738l4.03 6.45-6.115 1.986c-.637.208-1.329.086-1.854-.333l-1.783-1.408c-.129-.104-.306-.132-.467-.079l-.97.314c-.333.109-.456.506-.24.783l1.948 2.532c1.3 1.67 3.499 2.354 5.505 1.702l19.668-6.391c.685-.223 1.057-.954.834-1.638-.135-.417-.468-.73-.888-.857l-1.632-.458c-.763-.214-1.566-.195-2.318.049z"
+                                        stroke="#20c997" stroke-width="1" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #20c997;">Leave Requests</span>
+                        </button>
+                    </div>
+                    <!-- My calendar -->
+                    <div class="landing_page_item" groups="base.group_erp_manager,kojto_base.kojto_administrator,kojto_base.kojto_manager,kojto_base.kojto_accountant,kojto_base.kojto_assistant">
+                        <button name="open_time_tracking_image_calendar_view" type="object" class="btn landing_page_button" style="color: #ffc107;">
+                            <div class="o_button_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" class="landing_page_svg_icon" style="fill: #ffc107;">
+                                    <path
+                                        d="M60.0002518,6.0037999h-15V1c0-0.5527-0.4472008-1-1-1c-0.5527,0-1,0.4473-1,1v5.0037999H22.0002499V1 c0-0.5527-0.4472008-1-1-1c-0.5527,0-1,0.4473-1,1v5.0037999H3.9997499c-2.2090998,0-4,1.7908001-4,4.0000005V60 c0,2.2090988,1.7909,4,4,4h56.0005035c2.209198,0,4-1.7909012,4-4V10.0038004 C64.0002518,7.7946,62.2094498,6.0037999,60.0002518,6.0037999z M3.9997499,8.0038004h16.0004997V11c0,0.5527,0.4473,1,1,1 c0.5527992,0,1-0.4473,1-1V8.0038004h21.0000019V11c0,0.5527,0.4473,1,1,1c0.5527992,0,1-0.4473,1-1V8.0038004h15 c1.1027985,0,2,0.8970995,2,2V17h-60L1.99975,17.0000992v-6.9962988C1.99975,8.9008999,2.8970499,8.0038004,3.9997499,8.0038004z M62.0002518,60c0,1.1027985-0.8972015,2-2,2H3.9997499c-1.1027,0-1.9999999-0.8972015-1.9999999-2V18.9999008L2.0002501,19h60V60z" />
+                                    <path d="M18.0002499,24h-8v8h8V24z M16.0002499,30h-4v-4h4V30z" />
+                                    <path d="M36.0002518,24h-8.0000019v8h8.0000019V24z M34.0002518,30h-4.0000019v-4h4.0000019V30z" />
+                                    <path d="M54.0002518,24h-8v8h8V24z M52.0002518,30h-4v-4h4V30z" />
+                                    <path d="M18.0002499,36h-8v8h8V36z M16.0002499,42h-4v-4h4V42z" />
+                                    <path d="M36.0002518,36h-8.0000019v8h8.0000019V36z M34.0002518,42h-4.0000019v-4h4.0000019V42z" />
+                                    <path d="M18.0002499,48h-8v8h8V48z M16.0002499,54h-4v-4h4V54z" />
+                                    <path d="M36.0002518,48h-8.0000019v8h8.0000019V48z M34.0002518,54h-4.0000019v-4h4.0000019V54z" />
+                                    <path d="M54.0002518,36h-8v8h8V36z M52.0002518,42h-4v-4h4V42z" />
+                                    <path d="M54.0002518,48h-8v8h8V48z M52.0002518,54h-4v-4h4V54z" />
+                                </svg>
+                            </div>
+                            <span class="landing_page_text" style="color: #ffc107;">My Calendar</span>
+                        </button>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

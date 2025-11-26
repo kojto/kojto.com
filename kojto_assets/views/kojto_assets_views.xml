@@ -1,0 +1,133 @@
+<odoo>
+    <data>
+        <!-- List View for Kojto Assets -->
+        <record model="ir.ui.view" id="view_kojto_assets_list">
+            <field name="name">kojto.assets.list</field>
+            <field name="model">kojto.assets</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_assets_list" limit="100" sample="1">
+                    <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                    <field name="name" string="Asset №" />
+                    <field name="description" />
+                    <field name="unit_id" />
+                    <field name="language_id" optional="show" />
+                    <field name="repr_attachments" optional="show" string="Attachments" widget="badge" decoration-muted="attachments" />
+                    <button name="print_asset" type="object" class="btn-link" icon="fa-print" title="Print Asset"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View for Kojto Assets -->
+        <record model="ir.ui.view" id="view_kojto_assets_form">
+            <field name="name">kojto.assets.form</field>
+            <field name="model">kojto.assets</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_assets_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                            <span>ASSET</span>
+                                            <field name="name" class="ko-form-view-title" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 d-flex justify-content-center">
+                                        <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 5px!important"/>
+                                    </div>
+                                    <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                        <button name="print_asset" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Print Asset">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top"/>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="description" />
+                                <field name="unit_id" />
+                                <field name="active" string="Activity" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                                <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                            </group>
+                        </div>
+                        <separator/>
+                        <!-- Information -->
+                         <div class="col-lg-12">
+                            <notebook>
+                                <page string="Value">
+                                    <field name="values" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="datetime_start" />
+                                            <field name="comment" />
+                                            <field name="value" />
+                                            <field name="currency_id" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Subcode Rate">
+                                    <field name="subcode_rates" nolabel="1">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="subcode_id" />
+                                            <field name="datetime_start" />
+                                            <field name="rate" />
+                                            <field name="currency_id" />
+                                            <field name="rate_in_BGN" />
+                                            <field name="rate_in_EUR" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Maintenance">
+                                    <field name="maintenances">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="datetime_start" />
+                                            <field name="datetime_end" />
+                                            <field name="description" />
+                                            <field name="service_type" />
+                                            <field name="datetime_paid" />
+                                            <field name="invoice_number" />
+                                            <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View for Kojto Assets -->
+        <record model="ir.ui.view" id="view_kojto_assets_search">
+            <field name="name">kojto.assets.search</field>
+            <field name="model">kojto.assets</field>
+            <field name="arch" type="xml">
+                <search string="Assets">
+                    <field name="name" />
+                    <field name="active" />
+                    <field name="language_id" />
+                    <filter name="active" string="Active" domain="[('active', '=', True)]" />
+                    <filter name="active_inactive" string="Inactive" domain="[('active', '=', False)]" />
+                </search>
+            </field>
+        </record>
+        <!-- Action to Open List and Form Views for Kojto Assets -->
+        <record model="ir.actions.act_window" id="action_kojto_assets">
+            <field name="name">Assets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.assets</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create your assets here</p>
+            </field>
+        </record>
+    </data>
+</odoo>

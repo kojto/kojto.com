@@ -1,0 +1,106 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_offer_consolidation_ids_list">
+            <field name="name">kojto.offer.consolidation.ids.list</field>
+            <field name="model">kojto.offer.consolidation.ids</field>
+            <field name="arch" type="xml">
+                <list string="Consolidation IDs" sample="1" class="ko-list-main">
+                    <field name="name" optional="show" />
+                    <field name="unit_id" optional="show" />
+                    <field name="contribution_margin_percent" optional="show" />
+                    <field name="surcharges_percent" optional="show" />
+                    <button name="copy_consolidation_id" type="object" class="fa fa-copy" title="Copy Consolidation ID"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_offer_consolidation_ids_form">
+            <field name="name">kojto.offer.consolidation.ids.form</field>
+            <field name="model">kojto.offer.consolidation.ids</field>
+            <field name="arch" type="xml">
+                <form breadcrumb="false">
+                    <sheet class="ko-form-body ko-form-main">
+                        <div class="row justify-content-between align-items-center">
+                            <group class="col-lg-6">
+                                <field name="name" string="Consolidation" />
+                            </group>
+                        </div>
+
+                        <separator class="col-lg-12 separator" />
+
+                        <label for="surcharges" class="mb-2" />
+
+                        <div class="col-lg-12">
+                            <field name="surcharges" nolabel="1">
+                                <list editable="bottom" default_order="name">
+                                    <field name="name" />
+                                    <field name="surcharge" />
+                                    <button type="object" name="open_o2m_record" class="b-0 text-black bg-transparent ps-0 ms-0 fs-5 mb-2 fa fa-external-link" />
+                                </list>
+                            </field>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                            </div>
+                            <div class="col-lg-6 mb-auto flex-column">
+                                <div class="justify-content-end d-flex">
+                                    <div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <label for="unit_id" />
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-1" style="width: 60px"></div>
+                                                <field name="unit_id" style="width: 160px" options="{'no_open': True}" />
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <label for="contribution_margin_percent" />
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-1" style="width: 60px">%</div>
+                                                <field name="contribution_margin_percent" style="width: 160px" string="Contribution Margin" />
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <label for="surcharges_percent" />
+                                            <div class="d-flex align-items-center">
+                                                <div class="me-1" style="width: 60px">%</div>
+                                                <field name="surcharges_percent" style="width: 160px" string="Total surcharges" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_offer_consolidation_ids_search">
+            <field name="name">kojto.offer.consolidation.ids.search</field>
+            <field name="model">kojto.offer.consolidation.ids</field>
+            <field name="arch" type="xml">
+                <search string="Consolidation IDs">
+                    <field name="name" />
+                    <field name="unit_id" />
+                    <field name="surcharges" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_offer_consolidation_ids">
+            <field name="name">Consolidation IDs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.offer.consolidation.ids</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create and manage consolidation ID records.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

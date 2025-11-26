@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Articles List View -->
+    <record id="view_kojto_product_articles_list" model="ir.ui.view">
+        <field name="name">kojto.product.component.articles.list</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <list string="Articles" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="article_number"/>
+                <field name="is_parent_article" optional="show" widget="boolean_toggle"/>
+                <field name="parent_article_id" optional="show"/>
+                <field name="subcode_id"/>
+                <field name="article_supplier_id"/>
+                <field name="component_type"/>
+                <field name="unit_id"/>
+                <field name="component_revision_number"/>
+                <field name="latest_revision_datetime"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Articles Form View -->
+    <record id="view_kojto_product_articles_form" model="ir.ui.view">
+        <field name="name">kojto.product.component.articles.form</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <form string="Article">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="name"/>
+                            <field name="article_number"/>
+                            <field name="article_barcode"/>
+                            <field name="subcode_id"/>
+                            <field name="component_type" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="article_supplier_id"/>
+                            <field name="is_parent_article" readonly="1"/>
+                            <field name="parent_article_id"/>
+                            <field name="unit_id"/>
+
+                            <field name="latest_revision_datetime"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Interchangeable Articles">
+                            <group>
+                                <field name="interchangeable_article_ids" nolabel="1" readonly="1" class="ko-list-main">
+                                    <list>
+                                        <field name="name"/>
+                                        <field name="article_number"/>
+                                        <field name="article_supplier_id"/>
+                                        <field name="article_barcode"/>
+                                        <field name="parent_article_id" widget="boolean_toggle"/>
+                                    </list>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Revisions">
+                            <field name="revision_ids" class="ko-list-main">
+                                <list>
+                                    <field name="revision_number"/>
+                                    <field name="name"/>
+                                    <field name="weight_attribute" string="W (kg)" optional="show"/>
+                                    <field name="length_attribute" string="L (m)" optional="hide"/>
+                                    <field name="area_attribute" string="A (m²)" optional="hide"/>
+                                    <field name="volume_attribute" string="V (m³)" optional="hide"/>
+                                    <field name="price_attribute" string="Price (€)" optional="show"/>
+                                    <field name="time_attribute" string="Time (min)" optional="hide"/>
+                                    <field name="other_attribute" string="Other" optional="hide"/>
+                                    <field name="datetime_issue"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Articles Search View -->
+    <record id="view_kojto_product_articles_search" model="ir.ui.view">
+        <field name="name">kojto.product.component.articles.search</field>
+        <field name="model">kojto.product.component</field>
+        <field name="arch" type="xml">
+            <search string="Search Articles">
+                <field name="name"/>
+                <field name="article_number"/>
+                <field name="article_supplier_id"/>
+                <field name="subcode_id"/>
+                <field name="parent_article_id"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Child Articles" name="child_articles" domain="[('parent_article_id', '!=', False)]"/>
+                <filter string="Parent/Standalone Articles" name="parent_articles" domain="[('parent_article_id', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Parent Article" name="group_by_parent" context="{'group_by': 'parent_article_id'}"/>
+                    <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter string="Component Type" name="group_by_type" context="{'group_by': 'component_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Articles Action -->
+    <record id="action_kojto_product_articles" model="ir.actions.act_window">
+        <field name="name">Articles</field>
+        <field name="res_model">kojto.product.component</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('component_type', '=', 'article')]</field>
+        <field name="context">{'search_default_active': 1, 'default_component_type': 'article'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Article
+            </p>
+        </field>
+    </record>
+
+    <!-- Link the list and form views to the action -->
+    <record id="action_kojto_product_articles_view_list" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_product_articles_list"/>
+        <field name="act_window_id" ref="action_kojto_product_articles"/>
+    </record>
+
+    <record id="action_kojto_product_articles_view_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_kojto_product_articles_form"/>
+        <field name="act_window_id" ref="action_kojto_product_articles"/>
+    </record>
+</odoo>
+
+

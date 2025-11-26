@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_kojto_finance_counterparty_balance_dashboard_list" model="ir.ui.view">
+        <field name="name">kojto.finance.counterparty.balance.dashboard.list</field>
+        <field name="model">kojto.finance.counterparty.balance.dashboard</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" string="Counterparty Balance Dashboard (EUR)" create="false" delete="false" edit="false">
+                <field name="counterparty_id"/>
+                <field name="receivables_in_eur" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" string="What They Owe Us (EUR)"/>
+                <field name="payables_in_eur" widget="monetary" options="{'currency_field': 'currency_id'}" sum="Total" string="What We Owe Them (EUR)" class="text-danger"/>
+                <field name="currency_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kojto_finance_counterparty_balance_dashboard_search" model="ir.ui.view">
+        <field name="name">kojto.finance.counterparty.balance.dashboard.search</field>
+        <field name="model">kojto.finance.counterparty.balance.dashboard</field>
+        <field name="arch" type="xml">
+            <search string="Counterparty Balance Dashboard Search">
+                <field name="counterparty_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_kojto_finance_counterparty_balance_dashboard" model="ir.actions.act_window">
+        <field name="name">Counterparty Balance - Dashboard</field>
+        <field name="res_model">kojto.finance.counterparty.balance.dashboard</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="view_kojto_finance_counterparty_balance_dashboard_list"/>
+        <field name="help" type="html">
+            <p>Shows consolidated open amounts by counterparty. "What They Owe Us" shows receivables (incoming invoices), "What We Owe Them" shows payables (outgoing invoices).</p>
+        </field>
+    </record>
+</odoo>
+

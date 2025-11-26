@@ -1,0 +1,124 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_offer_content_elements_list">
+            <field name="name">kojto.offer.content.elements.list</field>
+            <field name="model">kojto.offer.content.elements</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" editable="top">
+                    <field name="position" />
+                    <field name="name" />
+                    <field name="consolidation_id" />
+                    <field name="quantity" />
+                    <field name="unit_id" />
+                    <field name="unit_price" />
+                    <field name="base_price" />
+                    <field name="c_margin_from_consolidation_id" optional="show" />
+                    <field name="surcharges_percent" optional="show" />
+                    <field name="surcharge" optional="show" />
+                    <field name="contribution_margin" optional="show" />
+                    <field name="contribution_margin_percent" optional="show" />
+                    <field name="total_price" />
+                    <button type="object" name="copy_content_element" class="fa fa-copy" title="Copy" />
+                    <button type="object" name="unlink" class="fa fa-trash" title="Delete" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_offer_content_elements_form">
+            <field name="name">kojto.offer.content.elements.form</field>
+            <field name="model">kojto.offer.content.elements</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex">
+                                <div class="ko-form-view-title">ELEMENT</div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <separator class="col-lg-12 separator" />
+                        <!-- Basic Fields Group -->
+                        <group class="col-lg-6 mx-auto">
+                            <field name="name" />
+                            <field name="position" />
+                            <field name="content_id" options="{'no_quick_create':True,'no_create_edit':True,'no_open': True}" />
+                        </group>
+                        <separator class="col-lg-12 separator" />
+                        <!-- Consolidation ID and Related Fields Group -->
+                        <group class="col-lg-6 mx-auto">
+                            <field name="consolidation_id" options="{'no_create': True}" />
+                            <field name="surcharges_percent" readonly="1" />
+                            <field name="unit_id" readonly="1" options="{'no_open': True}" />
+                        </group>
+
+                        <separator class="col-lg-12 separator" />
+
+                        <!-- Pricing and Calculation Group -->
+                        <group class="col-lg-6 mx-auto">
+                            <div>
+                                <!-- Unit Price Row -->
+                                <div class="mb-auto d-flex align-items-center">
+                                    <label for="unit_price" class="me-2" />
+                                    <field name="unit_price" class="text-end" />
+                                    <field name="currency_id" readonly="1" class="ms-2" options="{'no_open': True}" />
+                                </div>
+                                <!-- Quantity Row -->
+                                <div class="mb-auto d-flex align-items-center">
+                                    <label for="quantity" class="me-2" />
+                                    <field name="quantity" class="text-end" />
+                                </div>
+
+                                <!-- Base Price Row -->
+                                <div class="mb-auto d-flex align-items-center">
+                                    <label for="base_price" class="me-2" />
+                                    <field name="base_price" readonly="1" class="text-end" />
+                                    <field name="currency_id" readonly="1" class="ms-2" options="{'no_open': True}" />
+                                </div>
+                                <!-- Surcharge Row -->
+                                <div class="mb-auto d-flex align-items-center">
+                                    <label for="surcharge" class="me-2" />
+                                    <field name="surcharge" readonly="1" class="text-end" />
+                                    <field name="currency_id" readonly="1" class="ms-2" options="{'no_open': True}" />
+                                </div>
+                                <!-- Total Price Row -->
+                                <div class=" mb-auto d-flex align-items-center">
+                                    <label for="total_price" class="me-2" />
+                                    <field name="total_price" readonly="1" class="text-end" />
+                                    <field name="currency_id" readonly="1" class="ms-2" options="{'no_open': True}" />
+                                </div>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_offer_content_elements_search">
+            <field name="name">kojto.offer.content.elements.search</field>
+            <field name="model">kojto.offer.content.elements</field>
+            <field name="arch" type="xml">
+                <search string="Content Elements">
+                    <field name="name" />
+                    <field name="position" />
+                    <field name="consolidation_id" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_offer_content_elements">
+            <field name="name">Elements</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.offer.content.elements</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create new content elements records.</p>
+            </field>
+        </record>
+    </data>
+</odoo>

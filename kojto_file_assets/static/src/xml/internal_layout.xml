@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="modified_internal_layout" inherit_id="web.internal_layout" name="Modified Internal Layout">
+        <xpath expr="*" position="replace">
+            <!-- Set the 'doc' if 'o' is not already defined -->
+            <t t-if="not o" t-set="o" t-value="doc"/>
+            <!-- Handle company logic -->
+            <t t-if="not company">
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+            <!-- Article -->
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-out="0"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

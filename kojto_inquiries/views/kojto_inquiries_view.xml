@@ -1,0 +1,182 @@
+<odoo>
+    <data>
+        <!-- List Views -->
+        <record model="ir.ui.view" id="view_kojto_inquiries_list">
+            <field name="name">kojto.inquiries.list</field>
+            <field name="model">kojto.inquiries</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" limit="100" sample="1" duplicate="false">
+                    <field name="document_in_out_type" widget="badge" string=" " />
+                    <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                    <field name="name" optional="show" string="Inquiry №" />
+                    <field name="subject" optional="show" />
+                    <field name="counterparty_names" optional="show" string="Counterparties" widget="text" />
+                    <field name="date_issue" optional="show" string="Issue Date" />
+                    <field name="date_end" optional="show" string="Valid To" />
+                    <field name="issued_by_name_id" optional="show" />
+                    <button type="object" name="copy_and_open" class="fa fa-copy" title="Copy Inquiry"/>
+                </list>
+            </field>
+        </record>
+        <!-- Form Views -->
+        <record model="ir.ui.view" id="view_kojto_inquiries_form">
+            <field name="name">kojto.inquiries.form</field>
+            <field name="model">kojto.inquiries</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main" breadcrumb="false">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title">Inquiry # <field name="name" class="ko-form-view-title" /></div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="document_in_out_type" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="currency_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+                                            <div class="border-start border-1 mx-2" style="height: 24px;" />
+                                            <field name="active" optional="show" widget="boolean_toggle" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <div class="dropdown ms-2">
+                                            <button name="dropdown_empty" class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Actions">
+                                                <i>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z" />
+                                                        <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5" />
+                                                    </svg>
+                                                </i>
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                                <button name="copy_and_open" string="Copy Inquiry" type="object" class="dropdown-item" />
+                                                <button name="action_import_inquiry_content" string="Import Content" type="object" class="dropdown-item"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top" />
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" required="1" />
+                                <field name="subject" />
+                                <field name="program" />
+                                <field name="incoterms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="incoterms_address" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="issued_by_name_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="payment_terms_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="date_issue" />
+                                <field name="date_end" />
+                                <field name="attachments" widget="many2many_binary" invisible="id == False" />
+                            </group>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'outgoing'">From</h2>
+                                <h2 style="font-size: 18px;" label="0" invisible="document_in_out_type != 'incoming'">To</h2>
+                                <group class="col-lg-12">
+                                    <field name="company_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('res_company_id', '=', company_id)]" />
+                                    <field name="company_name_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_address_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_email_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_phone_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_tax_number_id" domain="[('contact_id', '=', company_id)]" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <field name="company_registration_number" />
+                                </group>
+                            </div>
+                            <div class="col-lg-6">
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'outgoing'">To</h2>
+                                <h2 style="font-size: 18px;" invisible="document_in_out_type != 'incoming'">From</h2>
+                                <field name="counterparty_ids" nolabel="1">
+                                    <list editable="bottom" default_order="counterparty_id">
+                                        <field name="counterparty_id" />
+                                        <field name="counterparty_address_id" domain="[('contact_id', '=', counterparty_id)]" />
+                                        <button type="object" name="print_document_as_pdf" class="btn-sm p-1 text-black fa fa-file-pdf-o" string="" title="Download PDF file" />
+                                        <button type="object" name="create_offer_for_counterparty" class="btn-sm p-1 text-black fa fa-calculator" string="" title="Create Offer" />
+                                        <button type="object" name="create_invoice_for_counterparty" class="btn-sm p-1 text-black fa fa-file-text-o" string="" title="Create Invoice" />
+                                        <button type="object" name="create_contract_for_counterparty" class="btn-sm p-1 text-black fa fa-file-o" string="" title="Create Contract" />
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+                        <separator class="col-lg-12 separator" />
+                        <field name="pre_content_text" class="my-4" placeholder="Enter your pre content text here..." />
+                        <div class="col-lg-12">
+                            <field name="content" nolabel="1">
+                                <list editable="bottom" default_order="position">
+                                    <field name="position" />
+                                    <field name="name" />
+                                    <field name="quantity" />
+                                    <field name="unit_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                    <button type="object" name="open_o2m_record" class="b-0 text-black bg-transparent ps-0 ms-0 fs-5 mb-2 fa fa-external-link" />
+                                </list>
+                            </field>
+                        </div>
+                        <field name="post_content_text" class="my-2" placeholder="Enter your post content text here..." />
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search Views -->
+        <record model="ir.ui.view" id="view_kojto_inquiries_search">
+            <field name="name">kojto.inquiries.search</field>
+            <field name="model">kojto.inquiries</field>
+            <field name="arch" type="xml">
+                <search string="Inquiry Documents">
+                    <!-- Search Fields -->
+                    <field name="name" string="Inquiry №"/>
+                    <field name="subject" string="Subject"/>
+                    <field name="counterparty_ids" string="Counterparties"/>
+                    <field name="date_issue" string="Issue Date"/>
+                    <field name="date_end" string="Valid Until"/>
+                    <field name="issued_by_name_id" string="Issued By"/>
+                    <field name="active" string="Active"/>
+
+                    <!-- Filters -->
+                    <filter name="active_inquiries" string="Active" domain="[('active', '=', True)]"/>
+                    <filter name="inactive_inquiries" string="Inactive" domain="[('active', '=', False)]"/>
+                    <filter name="outgoing_inquiries" string="Outgoing" domain="[('document_in_out_type', '=', 'outgoing')]"/>
+                    <filter name="incoming_inquiries" string="Incoming" domain="[('document_in_out_type', '=', 'incoming')]"/>
+                    <separator/>
+                    <filter name="expired_inquiries" string="Expired" domain="[('date_end', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="valid_inquiries" string="Valid" domain="[('date_end', '&gt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="today_inquiries" string="Today" domain="[('date_issue', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_week_inquiries" string="This Week" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                    <filter name="this_month_inquiries" string="This Month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_counterparty" string="Counterparty" context="{'group_by': 'counterparty_ids'}"/>
+                        <filter name="group_by_issue_date" string="Issue Date" context="{'group_by': 'date_issue'}"/>
+                        <filter name="group_by_valid_until" string="Valid Until" context="{'group_by': 'date_end'}"/>
+                        <filter name="group_by_status" string="Status" context="{'group_by': 'active'}"/>
+                        <filter name="group_by_type" string="Type" context="{'group_by': 'document_in_out_type'}"/>
+                        <filter name="group_by_issued_by" string="Issued By" context="{'group_by': 'issued_by_name_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- Actions to Return Model Views -->
+        <record model="ir.actions.act_window" id="action_kojto_inquiries">
+            <field name="name">Inquiries</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.inquiries</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face"> Add Inquiry Documents </p>
+            </field>
+        </record>
+    </data>
+</odoo>

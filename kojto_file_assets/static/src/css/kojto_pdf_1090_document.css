@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&subset=cyrillic&display=swap");
+
+body,
+table {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+table {
+    width: 100%;
+    margin: 5px 0;
+}
+td[style*="font-weight: bold"],
+span[style*="font-weight: bold"] {
+    font-size: 14px;
+    font-weight: bold;
+}
+.header-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+.logo-container {
+    text-align: right;
+    padding: 2px;
+}
+.no_border_table,
+.no_border_table td {
+    border: none;
+    border-collapse: collapse;
+    padding: 2px;
+    margin: 5px 0;
+}
+.no_border_table .label-cell,
+.content-table .label-cell {
+    font-weight: bold;
+}
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-bottom: 5px;
+}
+.content-table td {
+    padding: 2px;
+    text-align: left;
+    border: none;
+}
+.detailed-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.detailed-table td {
+    border: 1px solid black;
+    padding: 2px;
+}
+.table-9-columns td {
+    width: calc(100% / 9);
+}
+.table-9-columns td[colspan="3"] {
+    width: calc(100% / 3);
+}
+@media print {
+    .break_inside_avoid {
+        break-inside: avoid;
+    }
+}
+.label-cell {
+    width: 30%;
+    font-weight: bold;
+}
+.value-cell {
+    width: 70%;
+}
+.page {
+    margin: 5mm;
+}
+
+@page {
+    size: A4;
+    margin: 2cm 1cm 1cm 1cm;
+    padding: 5mm 0;
+    background: white;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    @top-left-corner {
+        content: "";
+        text-align: center;
+    }
+    @top-left {
+        content: "";
+        text-align: left;
+    }
+    @top-center {
+        content: "";
+        text-align: center;
+    }
+    @top-right {
+        width: 80px;
+        vertical-align: bottom;
+        padding-top: 20px;
+        height: 100%;
+        content: "";
+    }
+    @top-right-corner {
+        content: "";
+        text-align: center;
+    }
+    @left-top {
+        content: "";
+        text-align: center;
+    }
+    @left-middle {
+        content: "";
+        text-align: center;
+    }
+    @left-bottom {
+        content: "";
+        text-align: center;
+    }
+    @bottom-left-corner {
+        content: "";
+        text-align: center;
+    }
+    @bottom-left {
+        content: "www.kojto.com";
+        text-align: left;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-center {
+        content: "";
+        text-align: center;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-right {
+        content: "page " counter(page) " / " counter(pages);
+        text-align: right;
+        vertical-align: top;
+        padding-top: 10px;
+    }
+    @bottom-right-corner {
+        content: "";
+        text-align: center;
+    }
+    @right-top {
+        content: "";
+        text-align: center;
+    }
+    @right-middle {
+        content: "";
+        text-align: center;
+    }
+    @right-bottom {
+        content: "";
+        text-align: center;
+    }
+}

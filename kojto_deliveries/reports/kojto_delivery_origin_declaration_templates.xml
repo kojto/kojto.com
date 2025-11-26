@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_origin_declaration">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="doc.date_delivery and doc.date_delivery.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: datetime_issue \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="margin-bottom: 20px; font-size: 2em;">Certificate of Origin</div>
+                            </h1>
+                        </div>
+
+                        <!-- Document Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <!-- Document Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                    <td style="padding: 4px; width: 35%;">Delivery #</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Exporter invoice(s)</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <t t-foreach="doc.invoices_ids" t-as="invoice">
+                                            <span t-field="invoice.consecutive_number" /><t t-if="not invoice_last">, </t>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Date of Declaration</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.date_delivery" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Exported Material</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.exported_material" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Company Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Company Information</td>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Manufacturer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-esc="env['kojto.base.names'].search([('contact_id', '=', doc.company_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name or doc.company_name_id.name" /><br/>
+                                        <span t-field="doc.company_address_id" />
+                                        <span t-field="doc.company_phone_id" /><br/>
+                                        <span t-field="doc.company_email_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Customer</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.counterparty_name_id" /><br/>
+                                        <span t-field="doc.counterparty_address_id" />
+                                        <span t-field="doc.counterparty_phone_id" /><br/>
+                                        <span t-field="doc.counterparty_email_id" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Export Invoices Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px;">
+                            <h2 style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px;">Export Invoices</h2>
+                            <table class="content-table">
+                                <thead>
+                                    <tr style="background-color: #B0C4DE;">
+                                        <th style="padding: 8px; text-align: left; width: 50%;">Invoice Number</th>
+                                        <th style="padding: 8px; text-align: center; width: 50%;">Issue Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.invoices_ids" t-as="inv">
+                                        <tr>
+                                            <td style="padding: 6px; text-align: left;"><span t-field="inv.consecutive_number" /></td>
+                                            <td style="padding: 6px; text-align: center;"><span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' /></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Material Suppliers Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px;">
+                            <div style="margin-bottom: 20px;">
+                                <h2 style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px;">
+                                    The goods are manufactured by company <strong><span t-esc="env['kojto.base.names'].search([('contact_id', '=', doc.company_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name or doc.company_name_id.name" /></strong> with materials from the following suppliers:
+                                </h2>
+
+                                <!-- Get unique suppliers -->
+                                <t t-set="suppliers" t-value="set([inv.counterparty_name_id.name for inv in doc.content.content_compositions.invoice_id if inv.counterparty_name_id])" />
+                                <table class="content-table">
+                                    <thead>
+                                        <tr style="background-color: #B0C4DE;">
+                                            <th style="padding: 8px; text-align: left; width: 40%;">Supplier Name</th>
+                                            <th style="padding: 8px; text-align: left; width: 60%;">Supplier Invoices</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="suppliers" t-as="supplier_name">
+                                            <tr>
+                                                <td style="padding: 6px; text-align: left; font-weight: bold;">
+                                                    <span t-esc="supplier_name" />
+                                                </td>
+                                                <td style="padding: 6px; text-align: left;">
+                                                    <!-- Get unique invoices for this supplier -->
+                                                    <t t-set="invoices_for_supplier" t-value="[inv for inv in doc.content.content_compositions.invoice_id if inv.counterparty_name_id and inv.counterparty_name_id.name == supplier_name]" />
+                                                    <t t-set="seen_invoices" t-value="set()" />
+                                                    <t t-foreach="invoices_for_supplier" t-as="inv">
+                                                        <t t-if="inv.consecutive_number not in seen_invoices">
+                                                            <div style="margin-bottom: 5px;">
+                                                                • <span t-field="inv.consecutive_number" /> from date <span t-field="inv.date_issue" t-options='{"format": "dd.MM.yyyy"}' />
+                                                            </div>
+                                                            <t t-set="seen_invoices" t-value="seen_invoices | {inv.consecutive_number}" />
+                                                        </t>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Declaration Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
+                            <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
+                                I, the undersigned <strong><span t-esc="env['kojto.base.names'].search([('employee_id.name', '=', doc.signed_by), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name or doc.signed_by" /></strong>, in my capacity as authorized representative of company <strong><span t-esc="env['kojto.base.names'].search([('contact_id', '=', doc.company_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name or doc.company_name_id.name" /></strong>,
+                                declare that the goods presented for export - <strong><span t-field="doc.exported_material" /></strong> on the above-mentioned export invoices are manufactured by our company with materials from the suppliers listed above.
+                            </p>
+                            <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
+                                In case of a normatively substantiated request by the customs authorities, we are able to provide the necessary information and documents regarding the ownership and origin of the goods.
+                                I declare that I am aware of the responsibility under Article 313 of the Penal Code for submitting incorrect data.
+                            </p>
+                        </div>
+
+                        <!-- Signature Section -->
+                        <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: flex-end;">
+                            <div style="text-align: left;">
+                                <div><span t-field="doc.date_delivery" t-options='{"format": "dd.MM.yyyy"}' /></div>
+                                <div style="margin-top: 10px; font-weight: bold;">Place: Sofia</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: bold; margin-bottom: 5px;">With respect:</div>
+                                <div><span t-esc="env['kojto.base.names'].search([('employee_id.name', '=', doc.signed_by), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name or doc.signed_by" /></div>
+                                <div style="margin-top: 20px; border-top: 1px solid #000; padding-top: 5px; min-width: 200px;">
+                                    <em>Signature</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

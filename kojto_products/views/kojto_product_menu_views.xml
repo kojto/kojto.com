@@ -1,0 +1,20 @@
+<odoo>
+    <menuitem id="menu_kojto_products_root" name="Products" sequence="220"/>
+
+    <!-- Data Dropdown -->
+    <menuitem id="menu_kojto_products_data" name="Data" parent="menu_kojto_products_root" sequence="10"/>
+    <menuitem id="menu_kojto_products_component" name="Components" parent="menu_kojto_products_data" action="action_kojto_product_component" sequence="10"/>
+    <menuitem id="menu_kojto_products_component_revision" name="Revisions" parent="menu_kojto_products_data" action="action_kojto_product_component_revision" sequence="20"/>
+    <menuitem id="menu_kojto_product_import_wizard" name="Import" parent="menu_kojto_products_data" action="action_kojto_product_import_wizard" sequence="30"/>
+
+    <!-- Tangible Models Menu Items -->
+    <menuitem id="menu_kojto_products_articles" name="Articles" parent="menu_kojto_products_root" action="action_kojto_product_articles" sequence="20"/>
+    <menuitem id="menu_kojto_products_technical_document" name="Technical Documents" parent="menu_kojto_products_root" action="action_kojto_product_technical_document" sequence="30"/>
+    <menuitem id="menu_kojto_products_packages" name="Packages" parent="menu_kojto_products_root" action="action_kojto_product_packages" sequence="40"/>
+    <menuitem id="menu_kojto_products_process" name="Processes" parent="menu_kojto_products_root" action="action_kojto_product_process" sequence="50"/>
+
+    <!-- DWG Dropdown -->
+    <menuitem id="menu_kojto_products_dwg" name="DWG" parent="menu_kojto_products_root" sequence="60"/>
+    <menuitem id="menu_kojto_products_dwg_file" name="DWG Files" parent="menu_kojto_products_dwg" action="action_kojto_product_dwg_file" sequence="10"/>
+    <menuitem id="menu_kojto_products_dwg_file_viewport" name="DWG Viewports" parent="menu_kojto_products_dwg" action="action_kojto_product_dwg_file_viewport" sequence="20"/>
+</odoo>

@@ -1,0 +1,270 @@
+<odoo>
+    <data>
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_finance_cashflow_list">
+            <field name="name">kojto.finance.cashflow.list</field>
+            <field name="model">kojto.finance.cashflow</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main view_kojto_finance_cashflow_list" default_order="date_value desc" editable="top">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="id" string="ID" />
+                    <field name="transaction_direction" decoration-success="transaction_direction == 'incoming'" decoration-danger="transaction_direction == 'outgoing'" string=" " optional="show"/>
+                    <field name="date_value" optional="show"/>
+                    <field name="bank_account_id"/>
+                    <field name="counterparty_id" optional="show" />
+                    <field name="counterparty_bank_account_id" optional="show" />
+                    <field name="counterparty_bank_account_owner_id" optional="hide" />
+                    <field name="description" optional="show" />
+                    <field name="information" optional="hide" />
+                    <field name="related_reference" optional="hide" />
+                    <field name="amount" optional="show" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-danger="transaction_direction == 'outgoing'" decoration-success="transaction_direction == 'incoming'"/>
+                    <field name="currency_id" optional="hide"/>
+                    <field name="allocation_summary" optional="show" string="Allocation summary" width="300"/>
+                    <field name="unallocated_amount" optional="show" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                    <field name="accounting_op_date" optional="hide" string="Acc Date" width="300"/>
+                    <field name="accounting_archive_number" optional="hide" string="Acc Anum" />
+                    <field name="exchange_rate_to_bgn" optional="show" />
+                    <field name="exchange_rate_to_eur" optional="show" />
+                    <field name="accounting_is_exported" widget="boolean_toggle" string="Ajur Exported" optional="hide" />
+                    <field name="date_export" optional="hide" />
+                    <button name="open_form" type="object" string=" " class="btn" icon="fa-external-link" context="{'from_list_view': True}"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_finance_cashflow_form">
+            <field name="name">kojto.finance.cashflow.form</field>
+            <field name="model">kojto.finance.cashflow</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_finance_cashflow_form">
+                    <sheet class="ko-form-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-10 d-flex align-items-center py-2 py-md-0">
+                                        <field name="transaction_direction" widget="selection_badge" class="ko-offer-wselection-badge" />
+
+                                        <div class="border-start border-4 mx-2" style="height: 24px;" />
+
+                                        <field name="currency_id" related="bank_account_id.currency_id" widget="selection_badge" class="ko-offer-wselection-badge" />
+
+                                        <div class="border-start border-4 mx-2" style="height: 24px;" />
+
+                                        <div class="d-flex align-items-center space-between">
+                                            <span class="ko-offer-wselection-badge fw-bold">Unallocated: </span>
+                                            <field name="unallocated_amount" class="ko-offer-wselection-badge fw-bolder px-2"  decoration-success="unallocated_amount > 0"/>
+                                            <button name="auto_allocate" type="object" string="Auto Allocate" class="btn btn-primary ms-3" invisible="unallocated_amount == 0"/>
+                                        </div>
+
+                                        <div class="border-start border-4 mx-2" style="height: 24px;" />
+
+                                        <div>
+                                            <button name="export_to_ajur" class="ko-fa fa fa-arrow-circle-down" type="object" title="Export to Ajur" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                        <field name="active" widget="boolean_toggle" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <separator class="separator-slim-top" />
+
+                        <div class="row">
+                            <!-- Left Column (50% wide): Our Account Details and Amount -->
+                            <group class="col-lg-6">
+                                <field name="description" />
+                                <field name="bank_account_id" options="{'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
+                                <field name="date_value" />
+                                <field name="transaction_direction" />
+                                <field name="amount" />
+                                <field name="accounting_template_id" domain="accounting_template_domain" />
+                                <field name="information" />
+                                <field name="related_reference" />
+                                <field name="swift_transaction_code" />
+                                <field name="statement_id" string="Statement" />
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="counterparty_id" options="{'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
+                                <field name="counterparty_bank_account_id" options="{'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
+                                <field name="counterparty_bank_account_owner_id" options="{'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
+                                <field name="exchange_rate_to_bgn"/>
+                                <field name="exchange_rate_to_eur"/>
+                            </group>
+                        </div>
+                        <group class="col-lg-12" string="Transaction Allocation" />
+                        <div>
+                            <field name="transaction_allocation_ids" nolabel="1">
+                                <list editable="bottom" default_order="subcode_id">
+                                    <field name="invoice_id" domain="invoice_domain" options="{'no_quick_create': True, 'no_create_edit': True}" />
+                                    <field name="subcode_id" />
+                                    <field name="description" />
+                                    <field name="amount" string="Amount" />
+                                    <field name="amount_base" string="Amount Doc." />
+                                    <field name="accounting_template_id" domain="accounting_template_domain" string="Acc Template" context="{'ppp': parent.accounting_template_id}" />
+                                    <field name="accounting_ref_number" string="Acc Ref" readonly="not requires_ref_number" required="requires_ref_number" />
+                                    <field name="subtype_id" string="Acc Subtype" readonly="not requires_subtype_id" required="requires_subtype_id" />
+                                    <field name="auto_allocated" widget="boolean_toggle" />
+
+                                    <field name="cash_flow_only_inherited" string="CFO (i)" readonly="1" widget="boolean_toggle" />
+                                    <field name="cash_flow_only" string="CFO" widget="boolean_toggle"/>
+                                    <button type="object" name="auto_accounting" class="fa fa-magic text-primary" title="Auto Accounting" />
+                                </list>
+                            </field>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_finance_cashflow_search">
+            <field name="name">kojto.finance.cashflow.search</field>
+            <field name="model">kojto.finance.cashflow</field>
+            <field name="arch" type="xml">
+                <search string="Cashflow Search">
+                    <!-- Basic Information -->
+                    <field name="bank_account_id"/>
+                    <field name="description"/>
+                    <field name="information"/>
+                    <field name="related_reference"/>
+                    <field name="amount"/>
+                    <field name="unallocated_amount"/>
+
+                    <!-- Dates -->
+                    <field name="date_value"/>
+                    <field name="date_entry"/>
+                    <field name="accounting_op_date"/>
+
+                    <!-- Bank and Account Information -->
+                    <field name="counterparty_id"/>
+                    <field name="counterparty_bank_account_id"/>
+
+                    <!-- Transaction Details -->
+                    <field name="currency_id"/>
+                    <field name="swift_transaction_code"/>
+                    <field name="transaction_code"/>
+
+                    <!-- Accounting Information -->
+                    <field name="accounting_template_id"/>
+                    <field name="accounting_archive_number"/>
+                    <field name="accountant_id"/>
+
+                    <!-- Statement Information -->
+                    <field name="statement_id"/>
+
+                    <!-- Creator -->
+                    <field name="creator_id"/>
+
+                    <!-- Filters -->
+                    <filter name="transaction_direction_incoming" string="Incoming" domain="[('transaction_direction', '=', 'incoming')]" />
+                    <filter name="transaction_direction_outgoing" string="Outgoing" domain="[('transaction_direction', '=', 'outgoing')]" />
+                    <filter name="unallocated_amount" string="Unallocated amount" domain="[('unallocated_amount', '>', 0)]" />
+                    <filter name="fully_allocated" string="Fully allocated" domain="[('unallocated_amount', '=', 0)]" />
+                    <filter name="over_allocated" string="Over allocated" domain="[('unallocated_amount', '&lt;', 0)]" />
+                    <filter name="date_value_this_month" string="This Month" domain="[('date_value', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_value', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]" />
+                    <filter name="date_value_last_month" string="Last Month" domain="[('date_value', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_value', '&lt;', context_today().strftime('%Y-%m-01'))]" />
+                    <filter name="active" string="Active" domain="[('active', '=', True)]" />
+                    <filter name="inactive" string="Inactive" domain="[('active', '=', False)]" />
+
+                    <!-- Group By -->
+                    <group expand="0" string="Group By">
+                        <filter name="group_by_direction" string="Transaction Direction" context="{'group_by': 'transaction_direction'}"/>
+                        <filter name="group_by_bank_account" string="Bank Account" context="{'group_by': 'bank_account_id'}"/>
+                        <filter name="group_by_counterparty" string="Counterparty" context="{'group_by': 'counterparty_id'}"/>
+                        <filter name="group_by_currency" string="Currency" context="{'group_by': 'currency_id'}"/>
+                        <filter name="group_by_accounting_template" string="Accounting Template" context="{'group_by': 'accounting_template_id'}"/>
+                        <filter name="group_by_date" string="Date" context="{'group_by': 'date_value'}"/>
+                        <filter name="group_by_month" string="Month" context="{'group_by': 'date_value:month'}"/>
+                        <filter name="group_by_year" string="Year" context="{'group_by': 'date_value:year'}"/>
+                        <filter name="group_by_statement" string="Statement" context="{'group_by': 'statement_id'}"/>
+                        <filter name="group_by_creator" string="Creator" context="{'group_by': 'creator_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_open_wizard_export_cashflow_to_ajur" model="ir.actions.server">
+            <field name="name">Export Cashflow To Ajur</field>
+            <field name="model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                action = {
+                "name": "Kojto Cashflow Export To Ajur",
+                "type": "ir.actions.act_window",
+                "res_model": "kojto.finance.cashflow.exportselectiontoajur",
+                "view_mode": "form",
+                "target": "new",
+                "context": {
+                "selected_transactions": records.ids,
+                },
+                }
+                result = action
+            </field>
+        </record>
+
+        <record id="action_recalculate_unallocated_amount" model="ir.actions.server">
+            <field name="name">Recalculate Unallocated Amount</field>
+            <field name="model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+                if records:
+                records.compute_unallocated_amount()
+            </field>
+        </record>
+
+        <record id="view_kojto_finance_cashflow_export_to_ajur_form" model="ir.ui.view">
+            <field name="name">kojto.finance.cashflow.exportselectiontoajur.form</field>
+            <field name="model">kojto.finance.cashflow.exportselectiontoajur</field>
+            <field name="arch" type="xml">
+                <form string="Cashflow Export To Ajur">
+                    <sheet>
+                        <div class="alert alert-info">
+                            By clicking Submit, you will export the selected transactions in a .txt file suitable for "АЖУР" import.
+                            <br />
+                            All selected transactions will be marked as exported with current date and your accountant ID.
+                        </div>
+                    </sheet>
+                    <footer>
+                        <button string="Submit" name="action_export_to_ajur" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_kojto_base_bank_accounts_contact_only">
+            <field name="name">kojto.base.bank.accounts.contact.only</field>
+            <field name="model">kojto.base.bank.accounts</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main">
+                    <sheet class="ko-form-body">
+                        <group>
+                            <field name="contact_id" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_finance_cashflow">
+            <field name="name">Cashflow</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">kojto.finance.cashflow</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a Cashflow record</p>
+            </field>
+        </record>
+    </data>
+</odoo>

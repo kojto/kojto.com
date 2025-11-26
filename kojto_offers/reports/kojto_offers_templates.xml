@@ -1,0 +1,301 @@
+<odoo>
+    <data>
+        <template id="print_offer">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <!-- Beginning of page -->
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } } </style>
+                        </t>
+                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue }}';" />
+                        <div class="heading">
+                            <span>OFFER # </span>
+                            <span t-field="doc.name" />
+                        </div>
+                        <div class="info-section">
+                            <div class="info-cell" t-if="doc.document_in_out_type == 'outgoing'">
+                                <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">From:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_name_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_address_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.company_tax_number_id.name" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.company_registration_number" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <span t-esc="doc.company_bank_account_id.IBAN or ''" />
+                                            <span t-if="doc.company_bank_account_id and doc.company_bank_account_id.currency_id" t-esc="'(' + doc.company_bank_account_id.currency_id.name + ')'" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.company_bank_account_id.BIC or ''" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_email_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_phone_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Prepared by:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <t t-if="doc.issued_by_name_id and doc.language_id">
+                                                <t t-set="employee_name" t-value="env['kojto.base.names'].search([('employee_id', '=', doc.issued_by_name_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1)" />
+                                                <span t-esc="employee_name.name if employee_name else doc.issued_by_name_id.name" />
+                                            </t>
+                                            <t t-elif="doc.issued_by_name_id">
+                                                <span t-esc="doc.issued_by_name_id.name" />
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="info-cell" t-if="doc.document_in_out_type == 'outgoing'">
+                                <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">To:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_address_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_tax_number_id.name" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_registration_number" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <span t-esc="doc.counterparty_bank_account_id.IBAN or ''" />
+                                            <span t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.currency_id" t-esc="'(' + doc.counterparty_bank_account_id.currency_id.name + ')'" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_bank_account_id.BIC or ''" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_email_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_phone_id" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="info-cell" t-if="doc.document_in_out_type == 'incoming'">
+                                <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">From:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_address_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_tax_number_id.name" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_registration_number" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <span t-esc="doc.counterparty_bank_account_id.IBAN or ''" />
+                                            <span t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.currency_id" t-esc="'(' + doc.counterparty_bank_account_id.currency_id.name + ')'" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_bank_account_id.BIC or ''" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_email_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_phone_id" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="info-cell" t-if="doc.document_in_out_type == 'incoming'">
+                                <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">To:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_name_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_address_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.company_registration_number" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <span t-esc="doc.company_bank_account_id.IBAN or ''" />
+                                            <span t-if="doc.company_bank_account_id and doc.company_bank_account_id.currency_id" t-esc="'(' + doc.company_bank_account_id.currency_id.name + ')'" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.company_bank_account_id.BIC or ''" />
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_email_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.company_phone_id" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label" style="vertical-align: top; width: 25%;">Prepared by:</td>
+                                        <td class="content" style="vertical-align: top; width: 75%;">
+                                            <t t-if="doc.issued_by_name_id and doc.language_id">
+                                                <t t-set="employee_name_2" t-value="env['kojto.base.names'].search([('employee_id', '=', doc.issued_by_name_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1)" />
+                                                <span t-esc="employee_name_2.name if employee_name_2 else doc.issued_by_name_id.name" />
+                                            </t>
+                                            <t t-elif="doc.issued_by_name_id">
+                                                <span t-esc="doc.issued_by_name_id.name" />
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- OFFER Contents -->
+                        <h1 class="section-heading">CONTENT</h1>
+
+                        <!-- Payment Terms and Incoterms Section -->
+                        <div class="terms-section" style="margin-bottom: 10px;">
+                            <table class="terms-table" style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Payment Terms:</td>
+                                    <td style="padding: 2px; vertical-align: top;" t-esc="doc.payment_terms_id.name if doc.payment_terms_id else ''" />
+                                </tr>
+                                <tr t-if="doc.incoterms_id">
+                                    <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Incoterms:</td>
+                                    <td style="padding: 2px; vertical-align: top;" t-esc="doc.incoterms_id.name" />
+                                </tr>
+                                <tr t-if="doc.incoterms_address">
+                                    <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Incoterms Location:</td>
+                                    <td style="padding: 2px; vertical-align: top;" t-esc="doc.incoterms_address" />
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Issue Date:</td>
+                                    <td style="padding: 2px; vertical-align: top;" t-esc="doc.date_issue" />
+                                </tr>
+                                <tr>
+                                    <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Valid To:</td>
+                                    <td style="padding: 2px; vertical-align: top;" t-esc="doc.date_end" />
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div t-esc="doc.pre_content_text" style="white-space: pre-wrap;" />
+                        <div style="height: 10px;" />
+                        <table class="content-table" style="border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th style="vertical-align: top;">#</th>
+                                    <th style="vertical-align: top;">Description</th>
+                                    <th style="text-align: right; vertical-align: top;" class="ko-w-70">Quantity</th>
+                                    <th style="text-align: right; vertical-align: top;" class="ko-w-70">Unit Price</th>
+                                    <th style="text-align: right; vertical-align: top;" class="ko-w-70">Pre VAT Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.content.sorted(lambda x: x.position or 0)" t-as="line">
+                                    <tr>
+                                        <td style="vertical-align: top;" t-esc="line.position if line.position else ''" />
+                                        <td style="vertical-align: top;" t-esc="line.name if line.name else ''" />
+                                        <td style="text-align: right; vertical-align: top;">
+                                            <t t-set="translated_unit_name"
+                                                t-value="line.unit_id.translation_ids.filtered(lambda t: t.language_id.code == env.context.get('lang', 'en_US')).name or line.unit_id.name" />
+                                            <t t-esc="'%.2f %s' % (line.quantity, translated_unit_name) if line.quantity or line.quantity == 0 else ''" />
+                                        </td>
+                                        <td style="text-align: right; vertical-align: top;" t-esc="'%.2f %s' % (line.unit_price, doc.currency_id.name) if line.unit_price or line.unit_price == 0 else ''" />
+                                        <td style="text-align: right; vertical-align: top;" t-esc="'%.2f %s' % (line.pre_vat_total, doc.currency_id.name) if line.pre_vat_total or line.pre_vat_total == 0 else ''" />
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <!-- Financial Summary -->
+                        <div class="summary-section" style="text-align: right; margin-top: 20px;">
+                            <table style="width: 30%; margin-left: auto; border-collapse: collapse;">
+                                <tr>
+                                    <td style="text-align: right; padding: 2px; font-weight: bold;">Pre-VAT Total:</td>
+                                    <td style="text-align: right; padding: 2px;">
+                                        <t t-esc="'{:,.2f}'.format(doc.pre_vat_total)" />
+                                        <t t-esc="' ' + doc.currency_id.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; padding: 2px; font-weight: bold;">Total VAT:</td>
+                                    <td style="text-align: right; padding: 2px;">
+                                        <t t-esc="'%.2f %s' % (doc.vat_total, doc.currency_id.name)" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right; padding: 2px; font-weight: bold;">Total:</td>
+                                    <td style="text-align: right; padding: 2px;">
+                                        <t t-esc="'{:,.2f}'.format(doc.total_price)" />
+                                        <t t-esc="' ' + doc.currency_id.name" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div t-esc="doc.post_content_text" style="white-space: pre-wrap;" />
+                        <!-- VAT Rate Summary -->
+                        <div class="vat-rate-summary">
+                            <strong>VAT Rate Summary:</strong>
+                            <t t-set="vat_rate_groups" t-value="{}" />
+                            <t t-foreach="doc.content.sorted(lambda x: x.position or 0)" t-as="line">
+                                <t t-if="line.vat_rate or line.vat_rate == 0">
+                                    <t t-set="vat_rate_key" t-value="'%.2f' % line.vat_rate" />
+                                    <t t-set="vat_rate_groups" t-value="dict(vat_rate_groups, **{vat_rate_key: vat_rate_groups.get(vat_rate_key, []) + [line.position or '']})" />
+                                </t>
+                            </t>
+                            <t t-foreach="vat_rate_groups" t-as="vat_rate_group">
+                                <p t-esc="'{}% (position {})'.format(vat_rate_group, ', '.join([pos for pos in vat_rate_groups[vat_rate_group] if pos]))" />
+                            </t>
+                        </div>
+                        <div class="footer-section">
+                            <p>---- END OF OFFER ----</p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

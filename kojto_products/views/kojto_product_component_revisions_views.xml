@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_products/views/kojto_product_component_revisions_views.xml -->
+<odoo>
+    <!-- 1. Component Revision List View -->
+    <record id="component_revision_list_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component Revision List</field>
+        <field name="model">kojto.product.component.revision</field>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" duplicate="false">
+                <field name="is_locked" widget="boolean_toggle" readonly="1"/>
+                <field name="is_last_revision" widget="boolean_toggle"/>
+                <field name="datetime_locked"/>
+                <field name="subcode_id"/>
+                <field name="component_id"/>
+                <field name="revision_number"/>
+                <field name="component_type"/>
+                <field name="weight_attribute" optional="show"/>
+                <field name="length_attribute" optional="show"/>
+                <field name="volume_attribute" optional="show"/>
+                <field name="area_attribute" optional="show"/>
+                <field name="price_attribute" string="Price (€)" optional="show"/>
+                <field name="time_attribute" string="Time (min)" optional="show"/>
+                <field name="other_attribute" optional="show"/>
+                <field name="datetime_issue"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- 1.1 Component Revision Search View -->
+    <record id="component_revision_search_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component Revision Search</field>
+        <field name="model">kojto.product.component.revision</field>
+        <field name="arch" type="xml">
+            <search string="Search Component Revisions">
+                <!-- Searchable Fields -->
+                <field name="component_id" string="Component"/>
+                <field name="subcode_id"/>
+                <field name="component_type"/>
+                <field name="is_locked"/>
+                <!-- Filters -->
+                <filter name="locked_revisions" string="Locked Revisions" domain="[('is_locked', '=', True)]"/>
+                <filter name="unlocked_revisions" string="Unlocked Revisions" domain="[('is_locked', '=', False)]"/>
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_by_subcode" string="Subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter name="group_by_component_type" string="Component Type" context="{'group_by': 'component_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- 2. Component Revision Form View -->
+    <record id="component_revision_form_view" model="ir.ui.view">
+        <field name="name">Kojto Product Component Revision Form</field>
+        <field name="model">kojto.product.component.revision</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <!-- Header Section -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <div class="d-flex align-items-center">
+                                            <field name="subcode_id" class="ko-form-view-title" readonly="1" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                            <field name="component_id" class="ko-form-view-title" readonly="1"/>
+                                            <span class="me-1">rev</span>
+                                            <field name="revision_number" class="ko-form-view-title" readonly="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <button name="action_lock" string="Lock Revision" type="object" class="btn-primary" confirm="DO YOU REALLY WANT TO LOCK THIS REVISION AND ALL REVISIONS LINKED TO IT? UNLOCKING IS IMPOSSIBLE. CHANGES TO THESE REVISIONS WILL BE IMPOSSIBLE" invisible="is_locked"/>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <button name="action_export_revision_tree" type="object" class="btn fa fa-file-excel-o" title="Export to Excel"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top"/>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <group>
+                                <field name="is_locked" widget="boolean_toggle" readonly="1"/>
+                                <field name="component_type"/>
+                                <field name="weight_attribute" digits="[16,8]"/>
+                                <field name="length_attribute" digits="[16,8]"/>
+                                <field name="area_attribute" digits="[16,8]"/>
+                                <field name="volume_attribute" digits="[16,8]"/>
+                                <field name="price_attribute" digits="[16,8]"/>
+                                <field name="time_attribute" digits="[16,8]"/>
+                                <field name="other_attribute" digits="[16,8]"/>
+                                <field name="datetime_issue" readonly="1"/>
+                                <field name="datetime_locked"/>
+                                <field name="attachment_ids" widget="many2many_binary" invisible="id == False"/>
+                            </group>
+                        </div>
+                        <div class="col-md-8">
+                            <field name="link_ids" widget="one2many" nolabel="1" context="{'default_target_subcode_id': subcode_id}">
+                                <list no_create="1" class="ko-list-main" editable="bottom">
+                                    <field name="link_type"/>
+                                    <field name="target_subcode_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="target_component_id" widget="many2one" domain="[('subcode_id', '=', target_subcode_id), ('id', '!=', parent.component_id)]" options="{'no_create': True, 'no_open': True, 'no_quick_create': True, 'no_quick_edit': True}"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_id"/>
+                                    <field name="link_description"/>
+                                    <button name="action_open_revision_form" type="object" class="b-0 text-black bg-transparent fa fa-external-link" title="Open Revision"/>
+                                </list>
+                            </field>
+                        </div>
+                        <div class="col-md-6">
+                            <group string="TOP DOWN ANALYSIS"/>
+                            <div string="Top Down">
+                                <field name="analysis_top_down" nolabel="1" widget="html" context="{'resolve_depth': 30}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <group string="BOTTOM UP ANALYSIS"/>
+                            <div string="Bottom Up">
+                                <field name="analysis_bottom_up" nolabel="1" widget="html" context="{'resolve_depth': 30}"/>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- 6. Action for Component Revisions -->
+    <record id="action_kojto_product_component_revision" model="ir.actions.act_window">
+        <field name="name">Kojto Product Component Revisions</field>
+        <field name="res_model">kojto.product.component.revision</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('component_revision_list_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('component_revision_form_view')})]"/>
+        <field name="search_view_id" ref="component_revision_search_view"/>
+    </record>
+</odoo>

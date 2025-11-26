@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_delivery_packages">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page" style="page-break-before: always;">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+
+                        <t t-set="formatted_date" t-value="doc.delivery_id.date_delivery and doc.delivery_id.date_delivery.strftime('%Y-%m-%d') or ''"/>
+                        <div t-att-style="'string-set: datetime_issue \'%s\';' % formatted_date">
+                            <h1 class="heading" style="margin-top: 10px;">
+                                <div style="font-size: 2em; font-weight: bold; margin-bottom: 10px;">Package Documentation</div>
+                            </h1>
+                        </div>
+
+                        <!-- Document Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <!-- Document Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Document Information</td>
+                                    <td style="padding: 4px; width: 30%; font-weight: bold;">Packing List #</td>
+                                    <td style="padding: 4px; width: 45%; font-weight: bold; font-size: 1.3em;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 30%;">Date Created</td>
+                                    <td style="padding: 4px; width: 45%;">
+                                        <span t-field="doc.delivery_id.date_delivery" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 30%;">Delivery</td>
+                                    <td style="padding: 4px; width: 45%;">
+                                        <span t-field="doc.delivery_id.name" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 30%;"></td>
+                                    <td style="padding: 6px; width: 45%;"></td>
+                                </tr>
+
+                                <!-- Package Summary -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Package Summary</td>
+                                    <td style="padding: 4px; width: 30%;">Net Weight</td>
+                                    <td style="padding: 4px; width: 45%;">
+                                        <span t-esc="'%.2f kg' % doc.net_weight" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 30%;">Packaging Weight</td>
+                                    <td style="padding: 4px; width: 45%;">
+                                        <span t-esc="'%.2f kg' % doc.tare_weight" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 30%;">Gross Weight</td>
+                                    <td style="padding: 4px; width: 45%; font-weight: bold;">
+                                        <span t-esc="'%.2f kg' % doc.gross_weight" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 30%;">Total Items</td>
+                                    <td style="padding: 4px; width: 45%;">
+                                        <span t-esc="len(doc.package_content_ids) + len(doc.packaging_material_item_ids)" />
+                                    </td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 30%;"></td>
+                                    <td style="padding: 6px; width: 45%;"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- Package Items Table -->
+                        <div style="margin-top: 30px; margin-bottom: 20px;">
+                            <h2 style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px; color: #2c3e50;">Package Contents</h2>
+                            <t t-if="doc.package_content_ids">
+                                <table class="content-table">
+                                    <thead>
+                                        <tr style="background-color: #B0C4DE;">
+                                            <th style="padding: 8px; text-align: center; width: 8%;">№</th>
+                                            <th style="padding: 8px; text-align: left; width: 45%;">Description</th>
+                                            <th style="padding: 8px; text-align: right; width: 15%;">Quantity</th>
+                                            <th style="padding: 8px; text-align: right; width: 16%;">Unit Weight (kg)</th>
+                                            <th style="padding: 8px; text-align: right; width: 16%;">Total Weight (kg)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.package_content_ids" t-as="line">
+                                            <tr>
+                                                <td style="padding: 6px; text-align: center;" t-esc="line.position if line.position else ''" />
+                                                <td style="padding: 6px; text-align: left;" t-esc="line.delivery_content_id.name if line.delivery_content_id else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.3f %s' % (line.quantity, line.delivery_content_id.unit_id.name) if line.quantity else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.2f' % line.unit_weight if line.unit_weight else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.2f' % line.total_weight if line.total_weight else ''" />
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <div style="text-align: center; padding: 40px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                    <h3 style="color: #6c757d; font-size: 1.2em; margin: 0;">NO PACKAGE CONTENTS FOUND</h3>
+                                </div>
+                            </t>
+                        </div>
+
+                        <!-- Material Items Table -->
+                        <div style="margin-top: 30px; margin-bottom: 20px;">
+                            <h2 style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px; color: #2c3e50;">Packing Materials</h2>
+                            <t t-if="doc.packaging_material_item_ids">
+                                <table class="content-table">
+                                    <thead>
+                                        <tr style="background-color: #B0C4DE;">
+                                            <th style="padding: 8px; text-align: center; width: 8%;">№</th>
+                                            <th style="padding: 8px; text-align: left; width: 45%;">Description</th>
+                                            <th style="padding: 8px; text-align: right; width: 15%;">Quantity</th>
+                                            <th style="padding: 8px; text-align: right; width: 16%;">Unit Weight (kg)</th>
+                                            <th style="padding: 8px; text-align: right; width: 16%;">Total Weight (kg)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.packaging_material_item_ids" t-as="line">
+                                            <tr>
+                                                <td style="padding: 6px; text-align: center;" t-esc="line.position if line.position else ''" />
+                                                <td style="padding: 6px; text-align: left;" t-esc="line.name if line.name else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.2f' % (line.quantity) if line.quantity else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.2f' % line.unit_weight if line.unit_weight else ''" />
+                                                <td style="padding: 6px; text-align: right;" t-esc="'%.2f' % (line.total_weight) if line.total_weight else ''" />
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <div style="text-align: center; padding: 40px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px;">
+                                    <h3 style="color: #6c757d; font-size: 1.2em; margin: 0;">NO PACKING MATERIALS FOUND</h3>
+                                </div>
+                            </t>
+                        </div>
+
+                        <!-- Declaration Section -->
+                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
+                            <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
+                                This packing list certifies that the items described above have been properly packaged and prepared for shipment.
+                                All weights and quantities have been verified and documented according to standard procedures.
+                                The package has been prepared in accordance with shipping requirements and safety standards.
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

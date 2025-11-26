@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record id="view_kojto_finance_time_tracking_dashboard_list" model="ir.ui.view">
+            <field name="name">kojto.finance.time.tracking.dashboard.list</field>
+            <field name="model">kojto.finance.time.tracking.dashboard</field>
+            <field name="arch" type="xml">
+                <list string="Finance Time Tracking Dashboard" class="ko-list-main">
+                    <field name="year"/>
+                    <field name="quarter"/>
+                    <field name="month"/>
+                    <field name="time_tracking_total" sum="Total"/>
+                    <field name="currency_id"/>
+                    <field name="time_tracking_hours" sum="Total"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_kojto_finance_time_tracking_dashboard" model="ir.actions.act_window">
+            <field name="name">Time Tracking Dashboard</field>
+            <field name="res_model">kojto.finance.time.tracking.dashboard</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="view_kojto_finance_time_tracking_dashboard_list"/>
+        </record>
+    </data>
+</odoo>

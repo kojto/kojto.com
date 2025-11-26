@@ -1,0 +1,1461 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:27+0000\n"
+"PO-Revision-Date: 2025-08-11 07:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_1_1
+msgid "1.1 - Unalloyed low carbon steels (ReH ≤ 275 N/mm², C ≤ 0.25%)"
+msgstr "1.1 - Нелегирани нисковъглеродни стомани (ReH ≤ 275 N/mm², C ≤ 0,25%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_1_2
+msgid "1.2 - Low carbon steels (275 < ReH ≤ 360 N/mm², C ≤ 0.25%)"
+msgstr ""
+"1.2 - Стомани с ниско съдържание на въглерод (275 < ReH ≤ 360 N/mm², C ≤ "
+"0,25%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_1_3
+msgid "1.3 - Normalized fine-grain steels (ReH > 360 N/mm², C ≤ 0.25%)"
+msgstr "1.3 - Нормализирани финозърнести стомани (ReH > 360 N/mm², C ≤ 0,25%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_1_4
+msgid "1.4 - Weathering steels"
+msgstr "1.4 - Изветряеми стомани"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_10_1
+msgid "10.1 - Duplex stainless steels (Cr ≤ 24%, Ni > 4%)"
+msgstr "10.1 - Дуплексни неръждаеми стомани (Cr ≤ 24%, Ni > 4%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_11_1
+msgid "11.1 - High carbon steels (0.30% < C ≤ 0.85%)"
+msgstr "11.1 - Високовъглеродни стомани (0,30% < C ≤ 0,85%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_2_1
+msgid ""
+"2.1 - Thermomechanically treated fine-grain steels (360 < ReH ≤ 460 N/mm²)"
+msgstr ""
+"2.1 - Термомеханично обработени дребнозърнести стомани (360 < ReH ≤ 460 "
+"N/mm²)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_2_2
+msgid "2.2 - Thermomechanically treated fine-grain steels (ReH > 460 N/mm²)"
+msgstr ""
+"2.2 - Термомеханично обработени дребнозърнести стомани (ReH > 460 N/mm²)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_21
+msgid "21 - Pure aluminium (≤ 1% impurities)"
+msgstr "21 - Чист алуминий (≤ 1% примеси)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_22_1
+msgid "22.1 - Non-heat-treatable Al-Mn alloys"
+msgstr "22.1 - Неподлежащи на термична обработка Al-Mn сплави"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_22_4
+msgid "22.4 - Non-heat-treatable Al-Mg alloys (Mg > 3.5%)"
+msgstr "22.4 - Неподлежащи на термична обработка Al-Mg сплави (Mg > 3,5%)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_23_1
+msgid "23.1 - Heat-treatable Al-Mg-Si alloys"
+msgstr "23.1 - Подлежащи на термична обработка Al-Mg-Si сплави"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_24
+msgid "24 - Cast aluminium alloys (Al-Si)"
+msgstr "24 - Лети алуминиеви сплави (Al-Si)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_25
+msgid "25 - Cast aluminium alloys (Al-Cu)"
+msgstr "25 - Лети алуминиеви сплави (Al-Cu)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_26
+msgid "26 - Other cast aluminium alloys"
+msgstr "26 - Други отлети алуминиеви сплави"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_3_1
+msgid "3.1 - Quenched and tempered steels"
+msgstr "3.1 - Закалени и темперирани стомани"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_5_1
+msgid "5.1 - Creep-resistant steels (1Cr ½Mo)"
+msgstr "5.1 - Стомани, устойчиви на пълзене (1Cr ½Mo)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_5_2
+msgid "5.2 - Creep-resistant steels (2¼Cr 1Mo)"
+msgstr "5.2 - Стомани, устойчиви на пълзене (2¼Cr 1Mo)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_6_4
+msgid "6.4 - High-temperature creep-resistant steels (Vanadium-alloyed)"
+msgstr ""
+"6.4 - Стомани, устойчиви на пълзене при висока температура (легирани с "
+"ванадий)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_7
+msgid "7 - Ferritic/martensitic and precipitation-hardened steels"
+msgstr "7 - Феритни/мартензитни и утаително закалени стомани"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_71
+msgid "71 - Grey cast irons"
+msgstr "71 - Сиви чугуни"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_72_1
+msgid "72.1 - Spheroidal graphite cast irons (ferritic)"
+msgstr "72.1 - Чугуни със сфероиден графит (феритен)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_72_2
+msgid "72.2 - Spheroidal graphite cast irons (ferritic-pearlitic)"
+msgstr "72.2 - Чугуни със сфероиден графит (феритно-перлитни)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_72_3
+msgid "72.3 - Spheroidal graphite cast irons (pearlitic)"
+msgstr "72.3 - Чугуни със сфероиден графит (перлитни)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_72_4
+msgid "72.4 - Spheroidal graphite cast irons (bainitic)"
+msgstr "72.4 - Чугуни със сферичен графит (бейнит)"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_73
+msgid "73 - Malleable cast irons"
+msgstr "73 - Ковък чугун"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_74
+msgid "74 - White cast irons"
+msgstr "74 - Бели чугуни"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_75
+msgid "75 - Compacted graphite cast irons"
+msgstr "75 - Чугуни с компактен графит"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_76
+msgid "76 - Other cast irons"
+msgstr "76 - Други чугуни"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__group_8_1
+msgid "8.1 - Austenitic stainless steels (Cr ≤ 19%, Ni ≤ 35%)"
+msgstr "8.1 - Аустенитни неръждаеми стомани (Cr ≤ 19%, Ni ≤ 35%)"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_renderer.js:0
+msgid ""
+"<div class=\"o_list_view\">\n"
+"                    <div class=\"o_view_nocontent\">\n"
+"                        <div class=\"o_nocontent_help\">\n"
+"                            <p class=\"o_view_nocontent_smiling_face\">No record found. Let's create a new Task!</p>\n"
+"                            <p>Click to add a new record.</p>\n"
+"                        </div>\n"
+"                    </div>\n"
+"                </div>"
+msgstr ""
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #343a40;\">Base</span>"
+msgstr "<span class=\"landing_page_text\" style=\"color: #343a40;\">Основа</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_bank_accounts_form
+msgid "<span>BANK ACCOUNT</span>"
+msgstr "<span>БАНКОВА СМЕТКА</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_banks_form
+msgid "<span>Bank</span>"
+msgstr "<span>Банка</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_images_form
+msgid "<span>Base Image</span>"
+msgstr "<span>Основно изображение</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_certificates_form
+msgid "<span>CERTIFICATE</span>"
+msgstr "<span>СЕРТИФИКАТ</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_material_grades_form
+msgid "<span>Grades</span>"
+msgstr "<span>Оценки</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_incoterms_form
+msgid "<span>Incoterm</span>"
+msgstr "<span>Инкотермс</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_payment_terms_form
+msgid "<span>Payment term</span>"
+msgstr "<span>Срок на плащане</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_tax_numbers_form
+msgid "<span>TAX NUMBER</span>"
+msgstr "<span>ДАНЪЧЕН НОМЕР</span>"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_form
+msgid "<span>Unit</span>"
+msgstr "<span>Единица</span>"
+
+#. module: kojto_base
+#. odoo-python
+#: code:addons/kojto_base/models/kojto_base_material_grades.py:0
+msgid "A material grade with name '%s' already exists."
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__abbreviation
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__abbreviation
+msgid "Abbreviation"
+msgstr "Съкращение"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__account_type
+msgid "Account Type"
+msgstr "Тип акаунт"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_bank_accounts_search
+msgid "Account type"
+msgstr "Тип акаунт"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr "Изглед на прозорец за действие"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_bank_accounts_search
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_tax_numbers_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_certificates
+msgid "Add Certificates"
+msgstr "Добавяне на сертификати"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_banks_form
+msgid "Additional Information"
+msgstr "Допълнителна информация"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__address
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__address
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__area
+msgid "Area"
+msgstr "Площ"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__attachments
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__attachments
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__BAE
+msgid "BAE Code"
+msgstr "BAE код"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__BIC
+msgid "BIC"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__BIC
+msgid "BIC Code"
+msgstr "BIC код"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_bank_accounts__account_type__bank
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_bank_accounts_search
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_banks_form
+msgid "Bank"
+msgstr "Банка"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_bank_accounts
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_bank_accounts
+msgid "Bank Accounts"
+msgstr "Банкови сметки"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__bank_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__name
+msgid "Bank Name"
+msgstr "Име на банката"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_banks
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_banks
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_banks_list
+msgid "Banks"
+msgstr "Банки"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base
+msgid "Base"
+msgstr "База"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__base_currency_id
+msgid "Base Currency"
+msgstr "Основна валута"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_images
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_images_search
+msgid "Base Images"
+msgstr "Основни изображения"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__base_text_id
+msgid "Base Text"
+msgstr "Основен текст"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_search
+msgid "Base Units"
+msgstr "Базови единици"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__batch_id
+msgid "Batch ID"
+msgstr "ID на партида"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__branch_bic
+msgid "Branch BIC"
+msgstr "BIC на клон"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__branch_name
+msgid "Branch Name"
+msgstr "Име на клон"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_bank_accounts__account_type__cash
+msgid "Cash"
+msgstr "Парични средства"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_certificates
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_certificates
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_certificates_search
+msgid "Certificates"
+msgstr "Сертификати"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__checksum
+msgid "Checksum SHA-1"
+msgstr "Контролна сума SHA-1"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__city
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__city
+msgid "City"
+msgstr "град"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__color
+msgid "Color"
+msgstr "Цвят"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_banks_form
+msgid "Contact Information"
+msgstr "Информация за контакт"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Contract"
+msgstr "Договор"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__contract_text
+msgid "Contract Text"
+msgstr "Текст на договора"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__conversion_factor
+msgid "Conversion Factor"
+msgstr "Фактор на преобразуване"
+
+#. module: kojto_base
+#: model:ir.model.fields,help:kojto_base.field_kojto_base_units__conversion_factor
+msgid ""
+"Conversion factor relative to the base unit of the same type (e.g., 1 for "
+"the base unit, 0.001 for milli-)."
+msgstr ""
+"Фактор на преобразуване спрямо базовата единица от същия тип (напр. 1 за "
+"основната единица, 0,001 за мили-)."
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__country_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__country
+msgid "Country"
+msgstr "държава"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Create"
+msgstr ""
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_bank_accounts
+msgid "Create and manage your bank account records here."
+msgstr "Създавайте и управлявайте банковите си сметки тук."
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_banks
+msgid "Create and manage your banks here."
+msgstr "Създавайте и управлявайте вашите банки тук."
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_stores
+msgid "Create your base store here"
+msgstr "Създайте своя склад тук"
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_predefined_texts
+msgid "Create your first predefined text"
+msgstr "Създайте първия си предварително дефиниран текст"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__create_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__create_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__currency_id
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__currency
+msgid "Currency"
+msgstr "Валута"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_currency_exchange
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_currency_exchange_list
+msgid "Currency Exchanges"
+msgstr "Обмяна на валута"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_currency_exchange_view
+msgid "Currency Rates"
+msgstr "Валутни курсове"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__datetime_start
+msgid "Date Added"
+msgstr "Дата на добавяне"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__datetime
+msgid "Date and Time"
+msgstr "Дата и час"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__datetime_taken
+msgid "DateTime Taken"
+msgstr "Дата и час на взимане"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Day"
+msgstr ""
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Delivery"
+msgstr "Доставка"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__delivery_text
+msgid "Delivery Text"
+msgstr "Текст за доставка"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__density
+msgid "Density"
+msgstr "Плътност"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__density
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_material_grades_form
+msgid "Density kg/m3"
+msgstr "Плътност"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__description
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__description
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_ir_actions_act_window_view__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_ir_ui_view__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_base.field_res_lang__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__email
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__name
+msgid "Email"
+msgstr "Имейл"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__energy
+msgid "Energy"
+msgstr "Енаргия"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__entity_guid
+msgid "Entity GUID"
+msgstr "GUID на обект"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__exchange_rate
+msgid "Exchange Rate"
+msgstr "Обменен курс"
+
+#. module: kojto_base
+#: model:ir.model.fields,help:kojto_base.field_kojto_base_currency_exchange__exchange_rate
+msgid "Exchange rate with 5 decimal places precision"
+msgstr "Валутен курс с точност до 5 знака след десетичната запетая"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__fin
+msgid "FIN"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__fax
+msgid "Fax"
+msgstr "факс"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__res_field
+msgid "Field"
+msgstr "Рез"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__file_size
+msgid "File Size"
+msgstr "размер на файла"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__force
+msgid "Force"
+msgstr "Сила"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__guid
+msgid "GUID"
+msgstr ""
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_view.js:0
+#: model:ir.model.fields.selection,name:kojto_base.selection__ir_actions_act_window_view__view_mode__gantt
+#: model:ir.model.fields.selection,name:kojto_base.selection__ir_ui_view__type__gantt
+msgid "Gantt View"
+msgstr "Изглед на Гант"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Half Day"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__IBAN
+msgid "IBAN"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_ir_actions_act_window_view__id
+#: model:ir.model.fields,field_description:kojto_base.field_ir_ui_view__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_base.field_res_lang__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__res_id
+msgid "Id in the module"
+msgstr "Id в модула"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__image
+msgid "Image File"
+msgstr "Файл с изображение"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_currency_exchange_90d
+msgid "Import 90-Day Rates"
+msgstr "Импортирайте 90-дневни тарифи"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_currency_exchange_daily
+msgid "Import Daily Rates"
+msgstr "Импортни дневни тарифи"
+
+#. module: kojto_base
+#: model:ir.actions.server,name:kojto_base.action_import_ecb_90d_rates
+msgid "Import ECB 90-Day Rates"
+msgstr "Импортирайте 90-дневни курсове на ЕЦБ"
+
+#. module: kojto_base
+#: model:ir.actions.server,name:kojto_base.action_import_ecb_daily_rates
+msgid "Import ECB Daily Rates"
+msgstr "Импортирайте дневните курсове на ЕЦБ"
+
+#. module: kojto_base
+#: model:ir.actions.server,name:kojto_base.ir_cron_import_ecb_rates_00_ir_actions_server
+msgid "Import ECB Daily Rates - 00:00 UTC"
+msgstr "Импортирайте дневните курсове на ЕЦБ - 00:00 UTC"
+
+#. module: kojto_base
+#: model:ir.actions.server,name:kojto_base.ir_cron_import_ecb_rates_12_ir_actions_server
+msgid "Import ECB Daily Rates - 12:00 UTC"
+msgstr "Импортирайте дневните курсове на ЕЦБ - 12:00 UTC"
+
+#. module: kojto_base
+#: model:ir.actions.server,name:kojto_base.action_import_ecb_historical_rates
+msgid "Import ECB Historical Rates"
+msgstr "Импортиране на исторически курсове на ЕЦБ"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_currency_exchange_historical
+msgid "Import Historical Rates"
+msgstr "Импортиране на исторически курсове"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_bank_accounts_search
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_tax_numbers_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_incoterms
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_incoterms
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_incoterms_search
+msgid "Incoterms"
+msgstr "Инкотермс"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Invoice"
+msgstr "Фактура"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__invoice_text
+msgid "Invoice Text"
+msgstr "Текст на фактурата"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__active
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_accountant
+msgid "Kojto Accountant"
+msgstr "Който счетоводител"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_addresses
+msgid "Kojto Addresses"
+msgstr "Kojto Адреси"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_administrator
+msgid "Kojto Administrator"
+msgstr "Kojto Администратор"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_assistant
+msgid "Kojto Assistant"
+msgstr "Kojto Помощник"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_banks
+msgid "Kojto Banks"
+msgstr "Kojto Банки"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_bank_accounts
+msgid "Kojto Base Bank Accounts"
+msgstr "Kojto Base Банкови сметки"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_currency_exchange
+msgid "Kojto Base Currency Exchange"
+msgstr "Kojto Base Обмяна на валута"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_entity_files
+msgid "Kojto Base Entity Files"
+msgstr "Kojto Base Entity Файлове"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_images
+msgid "Kojto Base Images"
+msgstr "Kojto Base Изображения"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_incoterms
+msgid "Kojto Base Incoterms"
+msgstr "Kojto Base Инкотермс"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_payment_terms
+msgid "Kojto Base Payment Terms"
+msgstr "Основни условия за плащане на Kojto"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_predefined_texts
+msgid "Kojto Base Predefined Texts"
+msgstr "Kojto Base Предварително дефинирани текстове"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_stores
+msgid "Kojto Base Stores"
+msgstr "Който Склад Магазини"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_text_translations
+msgid "Kojto Base Text Translations"
+msgstr "Kojto Base Текст Преводи"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_units_translation
+msgid "Kojto Base Units Translation"
+msgstr "Превод на базови единици Kojto"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_certificates
+msgid "Kojto Docs Certificates"
+msgstr "Kojto Docs Сертификати"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_insurances
+msgid "Kojto Docs Insurance"
+msgstr "Kojto Docs Застраховки"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_emails
+msgid "Kojto Emails"
+msgstr "Който имейли"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_employee
+msgid "Kojto Employee"
+msgstr "Който Служител"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_international_sales
+msgid "Kojto International Sales"
+msgstr "Kojto Международни Продажби"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_manager
+msgid "Kojto Manager"
+msgstr "Който Управител"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_manufacturing_assistant
+msgid "Kojto Manufacturing Assistant"
+msgstr "Kojto Асистент Производство"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_names
+msgid "Kojto Names"
+msgstr "Kojto Имена"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_phones
+msgid "Kojto Phones"
+msgstr "Kojto Телефони"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_tax_numbers
+msgid "Kojto Tax Numbers"
+msgstr "Който данъчни номера"
+
+#. module: kojto_base
+#: model:res.groups,name:kojto_base.kojto_terminal
+msgid "Kojto Terminal"
+msgstr "Kojto Терминал"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_kojto_base_units
+msgid "Kojto Units"
+msgstr "Който единици"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__language_id
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__language_id
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_certificates_search
+msgid "Language"
+msgstr "език"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_res_lang
+msgid "Languages"
+msgstr "Езици"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__write_uid
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_emails__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__write_date
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__length
+msgid "Length"
+msgstr "Дължина"
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_currency_exchange
+msgid "Manage currency exchange rates here."
+msgstr "Управлявайте валутните курсове тук."
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_tax_numbers
+msgid "Manage your tax number records here."
+msgstr "Управлявайте записите си с данъчни номера тук."
+
+#. module: kojto_base
+#: model_terms:ir.actions.act_window,help:kojto_base.action_kojto_base_units
+msgid "Manage your unit records here."
+msgstr "Управлявайте вашите записи на единици тук."
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__material_grade_type
+msgid "Material Grade Type (ISO 15608)"
+msgstr "Тип клас на материала (ISO 15608)"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_material_grades
+#: model:ir.model,name:kojto_base.model_kojto_base_material_grades
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_material_grades_search
+msgid "Material Grades"
+msgstr "Степени на материалите"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_material_grades
+msgid "Materials"
+msgstr "Степени на материалите"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__mimetype
+msgid "Mimetype"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__res_model
+msgid "Model"
+msgstr "Стандартен"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Month"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_images__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_incoterms__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_material_grades__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_payment_terms__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_names__company_id
+msgid "Names"
+msgstr "Имена"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Offer Post-Content"
+msgstr "Оферта пост-съдържание"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__offer_post_content_text
+msgid "Offer Post-Content Text"
+msgstr "Текст на офертата след съдържанието"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Offer Pre-Content"
+msgstr "Оферта пред-съдържание"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__offer_pre_content_text
+msgid "Offer Pre-Content Text"
+msgstr "Текст на офертата преди съдържанието"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__old_table_name
+msgid "Old Kojto Table Name"
+msgstr "Име на стара таблица Kojto"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__old_table_id
+msgid "Old Table Row Id"
+msgstr "Идентификационен номер на стария ред на таблицата"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__url
+msgid "Originates from URL"
+msgstr "Произхожда от URL"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_material_grades__material_grade_type__other
+msgid "Other"
+msgstr "Други"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_payment_terms
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_payment_terms
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_payment_terms_search
+msgid "Payment Terms"
+msgstr "Условия за плащане"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_payment_terms_form
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_payment_terms_list
+msgid "Payment terms"
+msgstr "Условия за плащане"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__phone
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_phones__name
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__postal_code
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__zip_code
+msgid "Postal Code"
+msgstr "Пощенски код"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__power
+msgid "Power"
+msgstr "Мощност"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_form
+msgid "Predefined Text"
+msgstr "Предварително дефиниран текст"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_predefined_texts
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_predefined_texts
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_list
+msgid "Predefined Texts"
+msgstr "Предварително дефинирани текстове"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__pressure
+msgid "Pressure"
+msgstr "Налягане"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__proportion
+msgid "Proportion"
+msgstr "Пропорция"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__quantity
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Quarter Day"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_bank_accounts__ref_number
+msgid "Reference Number"
+msgstr "Референтен номер"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_addresses__region
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__state
+msgid "Region"
+msgstr "Регион"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__score_fileact_real_time
+msgid "SCORE FileAct Real Time"
+msgstr "SCORE FileAct в реално време"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__score_fileact_store_forward
+msgid "SCORE FileAct Store & Forward"
+msgstr "Съхранение и пренасочване на SCORE FileAct"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_stores_form
+msgid "STORE"
+msgstr "МАГАЗИН"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Search Predefined Texts"
+msgstr "Търсете предварително дефинирани текстове"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__speed
+msgid "Speed"
+msgstr "Скорост"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__standard
+msgid "Standard"
+msgstr "Стандартен"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__stocking_id
+msgid "Stocking ID"
+msgstr "ID на склад"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__name
+msgid "Store Name"
+msgstr "Име на магазина"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_stores__name_short
+msgid "Store Name Short"
+msgstr "Кратко име на магазина"
+
+#. module: kojto_base
+#. odoo-python
+#: code:addons/kojto_base/models/kojto_base_stores.py:0
+msgid "Store name \"%s\" already exists."
+msgstr ""
+
+#. module: kojto_base
+#. odoo-python
+#: code:addons/kojto_base/models/kojto_base_stores.py:0
+msgid "Store short name \"%s\" already exists."
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_stores
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_stores
+msgid "Stores"
+msgstr "Складове"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_currency_exchange__target_currency_id
+msgid "Target Currency"
+msgstr "Целева валута"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_tax_numbers__tax_number
+msgid "Tax Number"
+msgstr "Данъчен номер"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_tax_numbers
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_tax_numbers
+msgid "Tax Numbers"
+msgstr "Данъчни номера"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__temperature
+msgid "Temperature"
+msgstr "Температура"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__text_type
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "Text Type"
+msgstr "Тип текст"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__time
+msgid "Time"
+msgstr "Време"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_text_translations__translated_text
+msgid "Translation"
+msgstr "Превод"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_predefined_texts__translation_ids
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__translation_ids
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_form
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_form
+msgid "Translations"
+msgstr "Преводи"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__type
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_search
+msgid "Type: Length"
+msgstr "Тип: Дълж"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_search
+msgid "Type: Time"
+msgstr "Тип: Време"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_search
+msgid "Type: Weight"
+msgstr "Тип: Тегло"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__url
+msgid "URL"
+msgstr "URL адрес"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_predefined_text_search
+msgid "UT Control"
+msgstr "УТ контрол"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_predefined_texts__text_type__ut_control_result
+msgid "UT Control Result"
+msgstr "UT контролен резултат"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__name
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units_translation__unit_id
+msgid "Unit"
+msgstr "единица"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_translation_form
+msgid "Unit Translation"
+msgstr "Превод на единици"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_units_translation
+msgid "Unit Translations"
+msgstr "Преводи на единици"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_units__unit_type
+msgid "Unit Type"
+msgstr "Тип единица"
+
+#. module: kojto_base
+#: model:ir.actions.act_window,name:kojto_base.action_kojto_base_units
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_units
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_form
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_units_search
+msgid "Units"
+msgstr "Мерни ед."
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__date_start
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__date_start
+msgid "Valid From"
+msgstr "Валиден от"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_certificates__date_end
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_insurances__date_end
+msgid "Valid To"
+msgstr "Валиден до"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_material_grades_form
+msgid "Vat treatment"
+msgstr "Обработка на ДДС"
+
+#. module: kojto_base
+#: model:ir.model,name:kojto_base.model_ir_ui_view
+msgid "View"
+msgstr "Преглед"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:kojto_base.field_ir_ui_view__type
+msgid "View Type"
+msgstr "Тип изглед"
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__volume
+msgid "Volume"
+msgstr "Обем"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__wpqr_id
+msgid "WPQR ID"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_banks__website
+msgid "Website"
+msgstr "уебсайт"
+
+#. module: kojto_base
+#. odoo-javascript
+#: code:addons/kojto_base/static/src/js/base_gantt_controller.xml:0
+#: code:addons/kojto_base/static/src/xml/gantt_template.xml:0
+msgid "Week"
+msgstr ""
+
+#. module: kojto_base
+#: model:ir.model.fields.selection,name:kojto_base.selection__kojto_base_units__unit_type__weight
+msgid "Weight"
+msgstr "Тегло"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__welder_certificate_id
+msgid "Welder Certificate ID"
+msgstr "ID на сертификат за заварчик"
+
+#. module: kojto_base
+#: model:ir.model.fields,field_description:kojto_base.field_kojto_base_entity_files__welding_package_id
+msgid "Welding Package ID"
+msgstr "ID на пакета за заваряване"
+
+#. module: kojto_base
+#: model:ir.ui.menu,name:kojto_base.menu_kojto_base_currency_exchange
+msgid "[+] Currency"
+msgstr "Валутни курсове"
+
+#. module: kojto_base
+#: model_terms:ir.ui.view,arch_db:kojto_base.view_kojto_base_stores_search
+msgid "base"
+msgstr "база"

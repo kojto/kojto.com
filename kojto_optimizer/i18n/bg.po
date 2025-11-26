@@ -1,0 +1,783 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_optimizer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:43+0000\n"
+"PO-Revision-Date: 2025-08-11 07:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_optimizer
+#: model:ir.ui.menu,name:kojto_optimizer.menu_kojto_optimizer_1d
+msgid "1D"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "1D Cutting Package"
+msgstr "1D пакет за рязане"
+
+#. module: kojto_optimizer
+#: model:ir.actions.report,name:kojto_optimizer.action_report_kojto_optimizer_1d
+msgid "1D Cutting Package Report"
+msgstr "1D доклад за пакет за рязане"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "1D OPTIMIZATION PACKAGE"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_list
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "1D Packages"
+msgstr "1D пакети"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "1D optimisation data"
+msgstr "1D данни за оптимизация"
+
+#. module: kojto_optimizer
+#: model:ir.ui.menu,name:kojto_optimizer.menu_kojto_optimizer_2dr
+msgid "2DR"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "2DR Cutting Package"
+msgstr "2DR пакет за рязане"
+
+#. module: kojto_optimizer
+#: model:ir.actions.report,name:kojto_optimizer.action_report_kojto_optimizer_2dr
+msgid "2DR Cutting Package Report"
+msgstr "2DR отчет за рязане на пакета"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "2DR OPTIMIZATION PACKAGE"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_list
+msgid "2DR Packages"
+msgstr "2DR пакети"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "2Dr optimisation data"
+msgstr "2Dr данни за оптимизация"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #6f1e51;\">OPTIMIZER</span>"
+msgstr ""
+"<span class=\"landing_page_text\" style=\"color: "
+"#6f1e51;\">ОПТИМИЗАТОР</span>"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "AVAILABLE STOCK:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Actions"
+msgstr "Действия"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__active
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__allocated_bar_pieces
+msgid "Allocated Pieces"
+msgstr "Разпределени парчета"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__pdf_attachment_id
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__autocad_dxf
+msgid "AutoCAD DXF"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "Avail. pcs."
+msgstr "Наличност. бр."
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__available_stock_pieces
+msgid "Available Pieces"
+msgstr "Налични бройки"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Available pcs."
+msgstr "Налични бр."
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__bar_description
+msgid "Bar Description"
+msgstr "Описание на лентата"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__bar_position
+msgid "Bar Position"
+msgstr "Позиция на лентата"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__bar_ids
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_1d_import_wizard__import_type__bars
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_list
+msgid "Bars"
+msgstr "Прътиове"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_1d_bars
+msgid "Bars for Kojto Optimizer 1D"
+msgstr "Пръти за Kojto Optimizer 1D"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_1d_packages__optimization_method__best-fit
+msgid "Best Fit"
+msgstr "Най-добро прилягане"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "CUTTING PLAN"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "CUTTING PLANS:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_import_wizard_form
+msgid "Cancel"
+msgstr "Отказ"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_list
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_list
+msgid "Copy Package"
+msgstr "Копирай пакет"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__create_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__create_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__cutted_rectangles_ids
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_2dr_import_wizard__import_type__cut_rectangles
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_list
+msgid "Cut Rectangles"
+msgstr "Изрежете правоъгълници"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__cutting_plan
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__cutting_plan
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Cutting Plan"
+msgstr "План за рязане"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__cutting_plan_json
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__cutting_plan_json
+msgid "Cutting Plan JSON"
+msgstr "План за рязане JSON"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__cutting_plan_svgs
+msgid "Cutting Plan SVGs"
+msgstr "План за рязане SVG"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__description
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__cut_description
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__description
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__stock_description
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_import_wizard_form
+msgid "Description;Length;Quantity (; , tab)"
+msgstr "Описание;Дължина;Количество (; , раздел)"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_import_wizard_form
+msgid "Description;Width;Height;Quantity (; , tab)"
+msgstr "Описание;Ширина;Височина;Количество (; , раздел)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_landingpage__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__display_name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Export Cutting Plans to DXF"
+msgstr "Експортирайте планове за рязане в DXF"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Export to Excel"
+msgstr "Експортиране в Excel"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__final_cut
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "Final Cut (mm)"
+msgstr "Краен разрез (mm)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_1d_packages__optimization_method__first-fit
+msgid "First Fit"
+msgstr "Първо прилягане"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_1d_packages__optimization_method__greedy
+msgid "Greedy"
+msgstr "Алчен"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_2dr_packages__optimization_method__guillotine_baf
+msgid "Guillotine - Best Area Fit"
+msgstr "Гилотина - най-добро прилягане на площта"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_landingpage__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_import_wizard_form
+msgid "Import"
+msgstr "Импортиране"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "Import Bars"
+msgstr "Импортни пръти"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Import Cut Rectangles"
+msgstr "Импортиране на изрязани правоъгълници"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__data
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__data
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_import_wizard_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_import_wizard_form
+msgid "Import Data"
+msgstr "Импортиране на данни"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "Import Stock"
+msgstr "Внос на склад"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Import Stock Rectangles"
+msgstr "Импортирайте стокови правоъгълници"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__import_type
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__import_type
+msgid "Import Type"
+msgstr "Тип импортиране"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_1d_import_wizard
+msgid "Import Wizard for Kojto Optimizer 1D"
+msgstr "Съветник за импортиране за Kojto Optimizer 1D"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__initial_cut
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "Initial Cut (mm)"
+msgstr "Първоначално рязане (mm)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__active
+msgid "Is Active"
+msgstr "Активен"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__date_issue
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__date_issue
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "Issue DateTime"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__issued_by
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Issued By"
+msgstr "Издадено от"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_optimizer
+#: model:ir.actions.act_window,name:kojto_optimizer.action_kojto_optimizer_1d
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_1d_packages
+msgid "Kojto Optimizer 1D Packages"
+msgstr "Kojto Optimizer 1D пакети"
+
+#. module: kojto_optimizer
+#: model:ir.actions.act_window,name:kojto_optimizer.action_kojto_optimizer_2dr
+msgid "Kojto Optimizer 2D Rectangular Packages"
+msgstr "Kojto Optimizer 2D правоъгълни пакети"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_2dr_cut_rectangles
+msgid "Kojto Profile Optimizer 2DR Cut Rectangles"
+msgstr "Kojto Оптимизатор на профили 2DR Изрязване на правоъгълници"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_2dr_import_wizard
+msgid "Kojto Profile Optimizer 2DR Import Wizard"
+msgstr "Импортиране на Kojto Profile Optimizer 2DR"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_2dr_packages
+msgid "Kojto Profile Optimizer 2DR Packages"
+msgstr "Kojto Profile Optimizer 2DR пакети"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_2dr_stock_rectangles
+msgid "Kojto Profile Optimizer 2DR Stock Rectangles"
+msgstr "Kojto Profile Optimizer 2DR Фондови правоъгълници"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "L(mm)"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__language_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__language_id
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__write_uid
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__write_date
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Length"
+msgstr "Дължина"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__bar_length
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__stock_length
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__cut_length
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__stock_length
+msgid "Length (mm)"
+msgstr "Дължина (mm)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_bottom
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Margin Bottom (mm)"
+msgstr "Долен марж (мм)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_left
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Margin Left (mm)"
+msgstr "Ляв марж (мм)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_right
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Margin Right (mm)"
+msgstr "Десен марж (мм)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_top
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Margin Top (mm)"
+msgstr "Горен марж (мм)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_bottom
+msgid ""
+"Margin bottom from the bottom edge of the stock rectangle (reduces the "
+"height of the stock rectangle)"
+msgstr ""
+"Долен марж от долния ръб на стоковия правоъгълник (намалява височината на "
+"стоковия правоъгълник)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_left
+msgid ""
+"Margin left from the left edge of the stock rectangle (reduces the width of "
+"the stock rectangle)"
+msgstr ""
+"Ляв марж от левия ръб на стоковия правоъгълник (намалява ширината на "
+"стоковия правоъгълник)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_right
+msgid ""
+"Margin right from the right edge of the stock rectangle (reduces the width "
+"of the stock rectangle)"
+msgstr ""
+"Десен марж от десния ръб на стоковия правоъгълник (намалява ширината на "
+"стоковия правоъгълник)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_2dr_packages__margin_top
+msgid ""
+"Margin top from the top edge of the stock rectangle (reduces the height of "
+"the stock rectangle)"
+msgstr ""
+"Горен марж от горния ръб на стоковия правоъгълник (намалява височината на "
+"стоковия правоъгълник)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__material_id
+msgid "Material"
+msgstr "Материал"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_2dr_packages__optimization_method__maxrects_bssf
+msgid "MaxRects - Best Short Side Fit"
+msgstr "MaxRects - Най-добро прилягане на късата страна"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Method"
+msgstr "Метод"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__name
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "No bars available"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "No cutting plan SVGs available"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "No stock items available"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_landingpage_form_inherit
+msgid "Open Optimizer 1D Packages"
+msgstr "Отворете Optimizer 1D Packages"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__optimization_method
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__optimization_method
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "Optimization Method"
+msgstr "Метод за оптимизация"
+
+#. module: kojto_optimizer
+#: model:ir.ui.menu,name:kojto_optimizer.menu_kojto_optimizer_parent
+msgid "Optimizer"
+msgstr "Оптимизатор"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__pdf_attachment_id
+msgid "PDF Attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__package_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_import_wizard__package_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__package_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__package_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_import_wizard__package_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__package_id
+msgid "Package"
+msgstr "Пакет"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Package Name"
+msgstr "Име на пакета"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_bars__required_bar_pieces
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__required_cut_rectangle_pieces
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__available_stock_rectangle_pieces
+msgid "Pieces"
+msgstr "Парчета"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Pos."
+msgstr "Поз."
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__cut_position
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__stock_position
+msgid "Position"
+msgstr "Позиция"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Print PDF"
+msgstr "Отпечатайте PDF"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "REQUIRED BARS"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "REQUIRED CUT RECTANGLES:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "REQUIRED STOCK:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Required pcs."
+msgstr "Необходими бр."
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "STOCK ITEMS"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_2dr_packages__optimization_method__skyline_bl
+msgid "Skyline - Bottom Left"
+msgstr "Силует - Долу вляво"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__stock_ids
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_1d_import_wizard__import_type__stock
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_list
+msgid "Stock"
+msgstr "Наличност"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__stock_description
+msgid "Stock Description"
+msgstr "Описание на запасите"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__stock_position
+msgid "Stock Position"
+msgstr "Позиция на акциите"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__stock_rectangles_ids
+#: model:ir.model.fields.selection,name:kojto_optimizer.selection__kojto_optimizer_2dr_import_wizard__import_type__stock_rectangles
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_list
+msgid "Stock Rectangles"
+msgstr "Фондови правоъгълници"
+
+#. module: kojto_optimizer
+#: model:ir.model,name:kojto_optimizer.model_kojto_optimizer_1d_stock
+msgid "Stock for Kojto Optimizer 1D"
+msgstr "Запас за Kojto Optimizer 1D"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__subcode_id
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_search
+msgid "Subcode"
+msgstr "Подкод"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__thickness
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Thickness (mm)"
+msgstr "дебелина (mm)"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "Total Bars:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+msgid "Total Stock Items:"
+msgstr ""
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__use_stock_priority
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__use_stock_priority
+msgid "Use Stock Priority"
+msgstr "Използване на приоритет на запасите"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_stock__used_stock_pieces
+msgid "Used Pieces"
+msgstr "Използвани части"
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_1d_form
+msgid "Used pcs."
+msgstr "Употребявани бр."
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_1d_packages__use_stock_priority
+msgid ""
+"When enabled, stock pieces will be used in order of their position field"
+msgstr ""
+"Когато е активирано, запасите ще се използват по реда на полето им за "
+"позиция"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,help:kojto_optimizer.field_kojto_optimizer_2dr_packages__use_stock_priority
+msgid ""
+"When enabled, stock rectangles will be used in order of their position field"
+msgstr ""
+"Когато е активирано, правоъгълниците на стоковите данни ще се използват по "
+"реда на полето им за позиция."
+
+#. module: kojto_optimizer
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.view_kojto_optimizer_2dr_form
+msgid "Width"
+msgstr "Ширина"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_cut_rectangles__cut_width
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_stock_rectangles__stock_width
+msgid "Width (mm)"
+msgstr "ширина (mm)"
+
+#. module: kojto_optimizer
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_1d_packages__width_of_cut
+#: model:ir.model.fields,field_description:kojto_optimizer.field_kojto_optimizer_2dr_packages__width_of_cut
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_1d
+#: model_terms:ir.ui.view,arch_db:kojto_optimizer.report_kojto_optimizer_2dr
+msgid "Width of Cut (mm)"
+msgstr "Ширина на рязане (mm)"

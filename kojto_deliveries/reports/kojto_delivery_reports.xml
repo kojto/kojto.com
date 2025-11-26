@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_kojto_delivery" model="ir.actions.report">
+        <field name="name">Delivery</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery</field>
+        <field name="print_report_name">'DELIVERY' + object.name</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_packages" model="ir.actions.report">
+        <field name="name">Delivery Packages</field>
+        <field name="model">kojto.delivery.packages</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_packages</field>
+        <field name="print_report_name">'DELIVERY Package'</field>
+        <field name="binding_model_id" ref="model_kojto_delivery_packages" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_consumed_materials" model="ir.actions.report">
+        <field name="name">Delivery Consumed Materials</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_consumed_materials</field>
+        <field name="print_report_name">'DELIVERY Consumed Materials'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_origin_declaration" model="ir.actions.report">
+        <field name="name">Delivery Origin Declaration</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_origin_declaration</field>
+        <field name="print_report_name">'DELIVERY Origin Declaration'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_export_declaration" model="ir.actions.report">
+        <field name="name">Delivery Export Declaration</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_export_declaration</field>
+        <field name="print_report_name">'DELIVERY Export Declaration'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_dual_use_declaration" model="ir.actions.report">
+        <field name="name">Delivery Dual Use Declaration</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_dual_use_declaration</field>
+        <field name="print_report_name">'DELIVERY Dual Use Declaration'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_package_label" model="ir.actions.report">
+        <field name="name">Delivery Package Label</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_package_label</field>
+        <field name="print_report_name">'DELIVERY Package Label'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
+    <record id="action_report_kojto_delivery_cmr" model="ir.actions.report">
+        <field name="name">Delivery CMR</field>
+        <field name="model">kojto.delivery.cmr</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_cmr</field>
+        <field name="print_report_name">'DELIVERY CMR'</field>
+        <field name="binding_model_id" ref="model_kojto_delivery_cmr" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+</odoo>

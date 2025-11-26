@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="kojto_modified_web_layout" inherit_id="web.layout" name="Kojto Modified Web Layout">
+        <xpath expr="//title" position="replace">
+            <title>Kojto</title>
+        </xpath>
+        <xpath expr="//link[@rel='shortcut icon']" position="attributes">
+            <attribute name="href">/kojto_file_assets/static/src/img/favicon.ico</attribute>
+        </xpath>
+    </template>
+    <template id="kojto_modified_login_layout" inherit_id="web.login_layout" name="Kojto Modified Login Layout">
+        <xpath expr="//t[@t-call='web.frontend_layout']" position="after">
+            <style>
+                body {
+                    margin: 0;
+                    padding: 0;
+                    height: 100vh;
+                    background-image: url('/kojto_file_assets/static/src/img/background.svg');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                }
+            </style>
+        </xpath>
+        <xpath expr="//div[@class='card-body']//div[last()]" position="replace">
+            <div class="text-center small mt-4 pt-3 login--footer d-none">
+            </div>
+        </xpath>
+    </template>
+</odoo>

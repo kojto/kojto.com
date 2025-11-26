@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Process List View -->
+    <record id="view_factory_process_list" model="ir.ui.view">
+        <field name="name">kojto.factory.processes.list</field>
+        <field name="model">kojto.factory.processes</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <list class="ko-list-main" editable="top">
+                <field name="name"/>
+                <field name="short_name"/>
+                <field name="description"/>
+                <field name="material_id_is_required" widget="boolean_toggle"/>
+                <field name="asset_id_is_required" widget="boolean_toggle"/>
+                <field name="thickness_is_required" widget="boolean_toggle"/>
+                <field name="process_unit_id" string="Unit" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Process Form View -->
+    <record id="view_factory_process_form" model="ir.ui.view">
+        <field name="name">kojto.factory.processes.form</field>
+        <field name="model">kojto.factory.processes</field>
+        <field name="priority" eval="10"/>
+        <field name="arch" type="xml">
+            <form string="%(context.get('form_view_title', 'Process'))">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="short_name"/>
+                        <field name="description"/>
+                        <field name="material_id_is_required" widget="boolean_toggle"/>
+                        <field name="asset_id_is_required" widget="boolean_toggle"/>
+                        <field name="thickness_is_required" widget="boolean_toggle"/>
+                        <field name="process_unit_id" string="Unit" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_factory_processes" model="ir.actions.act_window">
+        <field name="name">Processes</field>
+        <field name="res_model">kojto.factory.processes</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_factory_process_list"/>
+        <field name="context">{'form_view_title': 'Process'}</field>
+    </record>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="print_kojto_warehouses_receipt" model="ir.actions.report">
+            <field name="name">Receipt</field>
+            <field name="model">kojto.warehouses.receipts</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_warehouses.print_receipt</field>
+            <field name="report_file">kojto_warehouses.print_receipt</field>
+            <field name="print_report_name">'RECEIPT_' + object.name</field>
+            <field name="binding_model_id" ref="model_kojto_warehouses_receipts" />
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_kojto_inquiry_counterparty">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-if="doc.inquiry_id and len(doc.inquiry_id) >= doc.inquiry_id.print_number">
+                        <t t-set="inquiry" t-value="doc.inquiry_id[doc.inquiry_id.print_number - 1]" />
+                        <div class="page">
+                            <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                            <t t-if="company_contact and company_contact.company_logo">
+                                <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                                <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } } </style>
+                            </t>
+                            <div t-attf-style="string-set: date_issue '{{ inquiry.date_issue }}';" />
+                            <div class="heading">
+                                <span>INQUIRY # </span>
+                                <span t-field="inquiry.name" />
+                            </div>
+                            <div class="info-section">
+                                <div class="info-cell" t-if="inquiry.document_in_out_type == 'outgoing'">
+                                    <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">From:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_name_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_address_id" /></td>
+                                        </tr>
+                                        <tr t-if="inquiry.company_tax_number_id and inquiry.company_tax_number_id.name">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_tax_number_id.name" />
+                                        </tr>
+                                        <tr t-if="inquiry.company_registration_number">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_registration_number" />
+                                        </tr>
+                                        <tr t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.IBAN">
+                                            <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <span t-esc="inquiry.company_bank_account_id.IBAN or ''" />
+                                                <span t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.currency_id" t-esc="'(' + inquiry.company_bank_account_id.currency_id.name + ')'" />
+                                            </td>
+                                        </tr>
+                                        <tr t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.BIC">
+                                            <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_bank_account_id.BIC or ''" />
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_email_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_phone_id" /></td>
+                                        </tr>
+                                        <tr t-if="inquiry.issued_by_name_id">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Prepared by:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <t t-if="inquiry.issued_by_name_id and inquiry.language_id">
+                                                    <t t-set="employee_name" t-value="env['kojto.base.names'].search([('employee_id', '=', inquiry.issued_by_name_id.id), ('language_id', '=', inquiry.language_id.id), ('active', '=', True)], limit=1)" />
+                                                    <span t-esc="employee_name.name if employee_name else inquiry.issued_by_name_id.name" />
+                                                </t>
+                                                <t t-elif="inquiry.issued_by_name_id">
+                                                    <span t-esc="inquiry.issued_by_name_id.name" />
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="info-cell" t-if="inquiry.document_in_out_type == 'outgoing'">
+                                    <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">To:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_address_id" /></td>
+                                        </tr>
+                                        <tr t-if="doc.counterparty_tax_number_id and doc.counterparty_tax_number_id.name">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_tax_number_id.name" />
+                                        </tr>
+                                        <tr t-if="doc.counterparty_registration_number">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_registration_number" />
+                                        </tr>
+                                        <tr t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.IBAN">
+                                            <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <span t-esc="doc.counterparty_bank_account_id.IBAN or ''" />
+                                                <span t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.currency_id" t-esc="'(' + doc.counterparty_bank_account_id.currency_id.name + ')'" />
+                                            </td>
+                                        </tr>
+                                        <tr t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.BIC">
+                                            <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_bank_account_id.BIC or ''" />
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_email_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_phone_id" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="info-cell" t-if="inquiry.document_in_out_type == 'incoming'">
+                                    <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">From:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_address_id" /></td>
+                                        </tr>
+                                        <tr t-if="doc.counterparty_tax_number_id and doc.counterparty_tax_number_id.name">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_tax_number_id.name" />
+                                        </tr>
+                                        <tr t-if="doc.counterparty_registration_number">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_registration_number" />
+                                        </tr>
+                                        <tr t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.IBAN">
+                                            <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <span t-esc="doc.counterparty_bank_account_id.IBAN or ''" />
+                                                <span t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.currency_id" t-esc="'(' + doc.counterparty_bank_account_id.currency_id.name + ')'" />
+                                            </td>
+                                        </tr>
+                                        <tr t-if="doc.counterparty_bank_account_id and doc.counterparty_bank_account_id.BIC">
+                                            <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="doc.counterparty_bank_account_id.BIC or ''" />
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_email_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="doc.counterparty_phone_id" /></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="info-cell" t-if="inquiry.document_in_out_type == 'incoming'">
+                                    <table class="info-table" style="border-collapse: collapse; width: 100%;">
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">To:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_name_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Address:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_address_id" /></td>
+                                        </tr>
+                                        <tr t-if="inquiry.company_tax_number_id and inquiry.company_tax_number_id.name">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Tax ID:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_tax_number_id.name" />
+                                        </tr>
+                                        <tr t-if="inquiry.company_registration_number">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Reg. #:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_registration_number" />
+                                        </tr>
+                                        <tr t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.IBAN">
+                                            <td class="label" style="vertical-align: top; width: 25%;">IBAN:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <span t-esc="inquiry.company_bank_account_id.IBAN or ''" />
+                                                <span t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.currency_id" t-esc="'(' + inquiry.company_bank_account_id.currency_id.name + ')'" />
+                                            </td>
+                                        </tr>
+                                        <tr t-if="inquiry.company_bank_account_id and inquiry.company_bank_account_id.BIC">
+                                            <td class="label" style="vertical-align: top; width: 25%;">BIC:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;" t-esc="inquiry.company_bank_account_id.BIC or ''" />
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Email:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_email_id" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label" style="vertical-align: top; width: 25%;">Phone:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;"><span t-field="inquiry.company_phone_id" /></td>
+                                        </tr>
+                                        <tr t-if="inquiry.issued_by_name_id">
+                                            <td class="label" style="vertical-align: top; width: 25%;">Prepared by:</td>
+                                            <td class="content" style="vertical-align: top; width: 75%;">
+                                                <t t-if="inquiry.issued_by_name_id and inquiry.language_id">
+                                                    <t t-set="employee_name_2" t-value="env['kojto.base.names'].search([('employee_id', '=', inquiry.issued_by_name_id.id), ('language_id', '=', inquiry.language_id.id), ('active', '=', True)], limit=1)" />
+                                                    <span t-esc="employee_name_2.name if employee_name_2 else inquiry.issued_by_name_id.name" />
+                                                </t>
+                                                <t t-elif="inquiry.issued_by_name_id">
+                                                    <span t-esc="inquiry.issued_by_name_id.name" />
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- INQUIRY Contents -->
+                            <h1 class="section-heading">CONTENT</h1>
+
+                            <!-- Payment Terms and Incoterms Section -->
+                            <div class="terms-section" style="margin-bottom: 10px;">
+                                <table class="terms-table" style="width: 100%; border-collapse: collapse;">
+                                    <tr t-if="inquiry.payment_terms_id">
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Payment Terms:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.payment_terms_id.name if inquiry.payment_terms_id else ''" />
+                                    </tr>
+                                    <tr t-if="inquiry.incoterms_id">
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Incoterms:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.incoterms_id.name" />
+                                    </tr>
+                                    <tr t-if="inquiry.incoterms_address">
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Incoterms Location:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.incoterms_address" />
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Issue Date:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.date_issue" />
+                                    </tr>
+                                    <tr t-if="inquiry.date_end">
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Valid To:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.date_end" />
+                                    </tr>
+                                    <tr t-if="inquiry.program">
+                                        <td style="width: 150px; font-weight: bold; padding: 2px; vertical-align: top;">Program:</td>
+                                        <td style="padding: 2px; vertical-align: top;" t-esc="inquiry.program" />
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <div t-esc="inquiry.pre_content_text" style="white-space: pre-wrap;" />
+                            <div style="height: 10px;" />
+
+                            <table class="content-table" style="border-collapse: collapse;">
+                                <thead>
+                                    <tr>
+                                        <th style="vertical-align: top;">#</th>
+                                        <th style="vertical-align: top;">Description</th>
+                                        <th style="text-align: right; vertical-align: top;" class="ko-w-70">Quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="inquiry.content.sorted(lambda x: x.position or 0)" t-as="line">
+                                        <tr>
+                                            <td style="vertical-align: top;" t-esc="line.position if line.position else ''" />
+                                            <td style="vertical-align: top;" t-esc="line.name if line.name else ''" />
+                                            <td style="text-align: right; vertical-align: top;">
+                                                <t t-set="translated_unit_name"
+                                                    t-value="line.unit_id.translation_ids.filtered(lambda t: t.language_id.code == env.context.get('lang', 'en_US')).name or line.unit_id.name" />
+                                                <t t-esc="'%.2f %s' % (line.quantity, translated_unit_name) if line.quantity or line.quantity == 0 else ''" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            <div t-esc="inquiry.post_content_text" style="white-space: pre-wrap;" />
+
+                            <!-- Footer -->
+                            <div class="footer-section">
+                                <p>---- END OF INQUIRY ----</p>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="print_receipt">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 20px; height: 100%; } }</style>
+                        </t>
+                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';" />
+                        <div class="heading" style="margin-bottom: 20px;">
+                            <span>WAREHOUSE RECEIPT # </span>
+                            <span t-field="doc.name" />
+                        </div>
+                        <div class="info-section">
+                            <div class="info-cell">
+                                <div style="margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 12px;">RECEIPT DETAILS</div>
+                                <div t-esc="'Issued on: %s' % doc.date_issue if doc.date_issue else ''" />
+                                <div t-esc="'Direction: %s' % ('To Store' if doc.to_from_store == 'to_store' else 'From Store')" />
+                                <div t-esc="'Store: %s' % doc.store_id.display_name if doc.store_id else ''" />
+                                <div t-esc="'Issued To: %s' % doc.issued_to if doc.issued_to else ''" />
+                            </div>
+                            <div class="info-cell">
+                                <div style="margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 12px;">ISSUED BY</div>
+                                <div t-esc="doc.company_name_id.name if doc.company_name_id else ''" />
+                                <div t-esc="doc.company_address_id.name if doc.company_address_id else ''" />
+                                <div t-esc="', '.join(doc.company_phone_id.mapped('name')) if doc.company_phone_id else ''" />
+                                <div t-esc="', '.join(doc.company_email_id.mapped('name')) if doc.company_email_id else ''" />
+                                <div t-esc="'Issued By: %s' % doc.issued_by.display_name if doc.issued_by else ''" />
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 12px;">
+                            <span>TRANSACTIONS</span>
+                        </div>
+                        <table class="content-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Item</th>
+                                    <th>Batch</th>
+                                    <th style="text-align: right">Quantity</th>
+                                    <th>Unit</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.transaction_ids" t-as="line">
+                                    <tr>
+                                        <td><t t-esc="line_index + 1"/></td>
+                                        <td><span t-field="line.item_id.name"/></td>
+                                        <td><span t-field="line.batch_id.name"/></td>
+                                        <td style="text-align: right">
+                                            <t t-esc="'%.2f' % line.transaction_quantity if line.transaction_quantity or line.transaction_quantity == 0 else ''"/>
+                                        </td>
+                                        <td><span t-field="line.transaction_unit_id.name"/></td>
+                                        <td><span t-field="line.item_summary"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <t t-if="doc.description">
+                            <div style="margin-top: 40px; margin-bottom: 20px; font-weight: bold; font-size: 12px;">
+                                <span>DESCRIPTION</span>
+                            </div>
+                            <div><span t-field="doc.description"/></div>
+                        </t>
+
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 40px;">
+                            <tr>
+                                <th style="width: 50%; text-align: left;">Issued by:</th>
+                                <th style="width: 50%; text-align: left;">Signature</th>
+                            </tr>
+                            <tr>
+                                <td style="border-top: 1px solid #ddd; padding-top: 5px;">
+                                    <span t-field="doc.issued_by.name"/>
+                                </td>
+                                <td style="border-top: 1px solid #ddd; padding-top: 5px;">
+                                </td>
+                            </tr>
+                        </table>
+
+                        <div style="margin-top: 20px; text-align: center;">
+                            <p>---- END OF RECEIPT ----</p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

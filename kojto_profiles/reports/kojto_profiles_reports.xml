@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="print_kojto_profile_batches" model="ir.actions.report">
+            <field name="name">Profile Batches</field>
+            <field name="model">kojto.profile.batches</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_profiles.print_profile_batches</field>
+            <field name="report_file">kojto_profiles.print_profile_batches</field>
+            <field name="print_report_name">'PROFILE_BATCH_' + object.name</field>
+            <field name="binding_model_id" ref="model_kojto_profile_batches" />
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+        </record>
+    </data>
+</odoo>

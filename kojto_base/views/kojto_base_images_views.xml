@@ -1,0 +1,86 @@
+<odoo>
+    <data>
+        <!-- Views for Kojto Base Images -->
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_base_images_list">
+            <field name="name">kojto.base.images.list</field>
+            <field name="model">kojto.base.images</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main">
+                    <field name="name" optional="show" />
+                    <field name="image" widget="image" optional="show" />
+                    <field name="datetime_taken" optional="show" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Kanban View -->
+        <record model="ir.ui.view" id="view_kojto_base_images_kanban">
+            <field name="name">kojto.base.images.kanban</field>
+            <field name="model">kojto.base.images</field>
+            <field name="arch" type="xml">
+                <kanban class="ko-kanban-main view_kojto_base_images_kanban" create="1" edit="1">
+                    <field name="name" />
+                    <field name="image" />
+                    <field name="datetime_taken" />
+                    <templates>
+                        <t t-name="card">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_image_wrapper">
+                                    <field name="image" widget="image" options="{'height': 150, 'crop': False}" />
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_base_images_form">
+            <field name="name">kojto.base.images.form</field>
+            <field name="model">kojto.base.images</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_images_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Base Image</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="image" widget="image" accept="image/*" />
+                            <field name="datetime_taken" />
+                            <field name="face_encoding"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_base_images_search">
+            <field name="name">kojto.base.images.search</field>
+            <field name="model">kojto.base.images</field>
+            <field name="arch" type="xml">
+                <search string="Base Images">
+                    <field name="name" />
+                    <field name="datetime_taken" />
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_base_images">
+            <field name="name">Base Images</field>
+            <field name="res_model">kojto.base.images</field>
+            <field name="view_mode">kanban,list,form</field>
+        </record>
+    </data>
+</odoo>

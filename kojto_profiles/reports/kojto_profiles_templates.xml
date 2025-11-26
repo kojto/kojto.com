@@ -1,0 +1,274 @@
+<odoo>
+    <data>
+        <template id="print_profile_batches">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 100px; font-size: 2em;">PROFILE BATCH</div>
+                            </h1>
+                        </div>
+
+                        <div style="margin-top: 50px;"/>
+
+                        <!-- SECTION 1 - PROFILE BATCH SUMMARY START -->
+                        <div>
+                            <div style="display: flex; gap: 20px;">
+                                <div style="flex: 1; width: 50%; margin-right: 10px;">
+                                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                        <tr>
+                                            <th style="text-align: left; heading;">Profile Batch Name</th>
+                                            <td style="text-align: right;" t-esc="doc.name if doc.name else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Subcode Description</th>
+                                            <td style="text-align: right;" t-esc="doc.subcode_description if doc.subcode_description else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Issue DateTime</th>
+                                            <td style="text-align: right;" t-esc="doc.date_issue if doc.date_issue else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Issued By</th>
+                                            <td style="text-align: right;" t-esc="doc.issued_by.display_name if doc.issued_by else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Total Weight Gross (t)</th>
+                                            <td style="text-align: right;" t-esc="'%.2f' % doc.total_batch_weight_gross if doc.total_batch_weight_gross or doc.total_batch_weight_gross == 0 else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Total Weight Net (t)</th>
+                                            <td style="text-align: right;" t-esc="'%.2f' % doc.total_batch_weight_net if doc.total_batch_weight_net or doc.total_batch_weight_net == 0 else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Total External Edges (m)</th>
+                                            <td style="text-align: right;" t-esc="'%.2f' % doc.total_batch_external_edges if doc.total_batch_external_edges or doc.total_batch_external_edges == 0 else ''" />
+                                        </tr>
+                                        <tr>
+                                            <th style="text-align: left;">Total Coating Area (m²)</th>
+                                            <td style="text-align: right;" t-esc="'%.2f' % doc.total_batch_coating_area if doc.total_batch_coating_area or doc.total_batch_coating_area == 0 else ''" />
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="table_50_percent" style="flex: 1; display: flex; flex-direction: column;">
+                                    <div style="flex: 1; display: flex; flex-direction: column;">
+                                        <strong style="margin: 0; padding: 0;">Batch Description:</strong>
+                                        <div style="white-space: pre-line; margin: 0; padding: 0; flex: 1;">
+                                            <t t-esc="doc.description"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 50px;"/>
+
+                            <div>
+                                <div style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                        <thead>
+                                            <tr class="heading;">
+                                                <th style="text-align: left;">Pos.</th>
+                                                <th style="text-align: left;">Profile Name</th>
+                                                <th style="text-align: left;">Material</th>
+                                                <th style="text-align: right;" >G (kg/m)</th>
+                                                <th style="text-align: right;" >L (mm)</th>
+                                                <th style="text-align: right;" >Quantity</th>
+                                                <th style="text-align: right;" >Net (m)</th>
+                                                <th style="text-align: right;" >Net (kg)</th>
+                                                <th style="text-align: right;" >Gross (kg)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="doc.batch_content_ids" t-as="line">
+                                                <tr>
+                                                    <td style="text-align: left;" t-esc="line.position if line.position else '-'" />
+                                                    <td style="text-align: left;" t-esc="line.profile_id.display_name if line.profile_id.display_name else '-'" />
+                                                    <td style="text-align: left;" t-esc="line.material_id.display_name if line.material_id.display_name else '-'" />
+                                                    <td style="text-align: right;" t-esc="'%.2f' % line.profile_weight if line.profile_weight else '-'" />
+                                                    <td style="text-align: right;" t-esc="'%.2f' % line.length if line.length else '-'" />
+                                                    <td style="text-align: right;" t-esc="int(line.quantity) if line.quantity else '-'" />
+                                                    <td style="text-align: right;" t-esc="'%.2f' % line.total_profile_length_net if line.total_profile_length_net else '-'" />
+                                                    <td style="text-align: right;" t-esc="'%.2f' % line.total_profile_weight_net if line.total_profile_weight_net else '-'" />
+                                                    <td style="text-align: right;" t-esc="'%.2f' % line.total_profile_weight_gross if line.total_profile_weight_gross else '-'" />
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION 2 - PROFILE PAGES START -->
+                        <div class="unique-profiles-section">
+                            <t t-set="seen_profile_ids" t-value="set()" />
+                            <t t-set="profile_lengths" t-value="{}" />
+                            <t t-set="profile_weights" t-value="{}" />
+                            <t t-foreach="doc.batch_content_ids" t-as="line">
+                                <t t-if="line.profile_id">
+                                    <t t-set="pid" t-value="str(line.profile_id.id)" />
+                                    <t t-set="current_lengths" t-value="profile_lengths.get(pid, [])" />
+                                    <t t-set="new_lengths" t-value="current_lengths + [line.length]" />
+                                    <t t-set="profile_lengths" t-value="dict(profile_lengths, **{pid: new_lengths})" />
+                                    <t t-set="current_weights" t-value="profile_weights.get(pid, [])" />
+                                    <t t-set="new_weights" t-value="current_weights + [line.total_profile_weight_net]" />
+                                    <t t-set="profile_weights" t-value="dict(profile_weights, **{pid: new_weights})" />
+                                </t>
+                            </t>
+                            <t t-foreach="doc.batch_content_ids" t-as="line">
+                                <t t-if="line.profile_id and line.profile_id.id not in seen_profile_ids">
+                                    <t t-set="seen_profile_ids" t-value="seen_profile_ids | {line.profile_id.id}" />
+                                    <div class="new_page">
+                                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                                            <div style="margin-bottom: 20px; margin-top: 25px; font-size: 1.5em; font-weight: bold;">
+                                                Profile name: <t t-esc="line.profile_id.name if line.profile_id.name else ''"/>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 25px;"/>
+                                        <div style="display: flex; gap: 20px;">
+                                            <div style="flex: 1; width: 40%; margin-right: 10px;">
+                                                <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                                                    <tr>
+                                                        <th style="text-align: left;">Material</th>
+                                                        <td style="text-align: right;" t-esc="line.profile_id.material_id.name if line.profile_id.material_id else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Total Area (cm²)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.profile_cross_sectional_area if line.profile_id.profile_cross_sectional_area or line.profile_id.profile_cross_sectional_area == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Weight (kg/m)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.profile_weight if line.profile_id.profile_weight or line.profile_id.profile_weight == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Jx (cm⁴)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.jx if line.profile_id.jx or line.profile_id.jx == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Jy (cm⁴)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.jy if line.profile_id.jy or line.profile_id.jy == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Wx (cm³)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.wx if line.profile_id.wx or line.profile_id.wx == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Wy (cm³)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.wy if line.profile_id.wy or line.profile_id.wy == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Center of Mass X (mm)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.center_of_mass_x if line.profile_id.center_of_mass_x or line.profile_id.center_of_mass_x == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Center of Mass Y (mm)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.center_of_mass_y if line.profile_id.center_of_mass_y or line.profile_id.center_of_mass_y == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Max Height (mm)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.max_height if line.profile_id.max_height or line.profile_id.max_height == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Max Width (mm)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.max_width if line.profile_id.max_width or line.profile_id.max_width == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Coating Perimeter (mm)</th>
+                                                        <td style="text-align: right;" t-esc="'%.2f' % line.profile_id.coating_perimeter if line.profile_id.coating_perimeter or line.profile_id.coating_perimeter == 0 else ''" />
+                                                    </tr>
+                                                    <tr>
+                                                        <th style="text-align: left;">Number of External Corners</th>
+                                                        <td style="text-align: right;" t-esc="line.profile_id.number_ext_corners if line.profile_id.number_ext_corners or line.profile_id.number_ext_corners == 0 else ''" />
+                                                    </tr>
+                                                </table>
+                                            </div>
+
+                                            <div style="flex: 1; width: 40%; margin-right: 10px;">
+                                                <img t-if="line.profile_id.drawing" t-att-src="'data:image/svg+xml;base64,' + (line.profile_id.drawing or '').decode('utf-8')" class="profile-img" style="width: 100%; height: auto;" />
+                                            </div>
+
+                                            <div style="flex: 1; width: 20%; margin-right: 10px;">
+                                                <div style="width: 100%; text-align: right; margin-bottom: 5px;">
+                                                    <strong>Perimeter Coordinates:</strong>
+                                                </div>
+                                                <t t-foreach="line.profile_id.profile_perimeter_coordinates" t-as="point" t-key="point_index">
+                                                    <div style="text-align: right;">
+                                                        <strong>P_<t t-esc="point_index + 1"/></strong>: x: <t t-esc="point[0]"/> mm, y: <t t-esc="point[1]"/> mm
+                                                    </div>
+                                                </t>
+                                            </div>
+                                        </div>
+
+
+                                        <div>
+                                            <strong style="margin: 0; padding: 0;">Profile Description:</strong>
+                                            <div style="white-space: pre-line; margin: 0; padding: 0; flex: 1;">
+                                                <t t-esc="line.profile_id.profile_description"/>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <table class="summary-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="text-align: left;">Pos.</th>
+                                                        <th style="text-align: left;">Pcs</th>
+                                                        <th>Length</th>
+                                                        <th>Length Extension</th>
+                                                        <th>Profile Weight</th>
+                                                        <th>Tot. Weight Net</th>
+                                                        <th>Tot. Weight Gross</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <t t-set="sum_lengths_net" t-value="0" />
+                                                    <t t-set="sum_lengths_gross" t-value="0" />
+                                                    <t t-set="sum_weights_net" t-value="0" />
+                                                    <t t-set="sum_weights_gross" t-value="0" />
+                                                    <t t-foreach="doc.batch_content_ids" t-as="content_line">
+                                                        <t t-if="content_line.profile_id.id == line.profile_id.id">
+                                                            <tr>
+                                                                <td class="position" t-esc="content_line.position if content_line.position else '-'" />
+                                                                <td style="text-align: left;" t-esc="int(content_line.quantity) if content_line.quantity else '-'" />
+                                                                <td t-esc="'%.2f mm' % content_line.length if content_line.length else '-'" />
+                                                                <td t-esc="'%.2f mm' % content_line.length_extension if content_line.length_extension else '-'" />
+                                                                <td t-esc="'%.2f kg/m' % content_line.profile_weight if content_line.profile_weight else '-'" />
+                                                                <td t-esc="'%.2f kg' % content_line.total_profile_weight_net if content_line.total_profile_weight_net else '-'" />
+                                                                <td t-esc="'%.2f kg' % content_line.total_profile_weight_gross if content_line.total_profile_weight_gross else '-'" />
+                                                            </tr>
+                                                            <t t-set="sum_lengths_net" t-value="sum_lengths_net + (content_line.length * content_line.quantity / 1000)" />
+                                                            <t t-set="sum_lengths_gross" t-value="sum_lengths_gross + ((content_line.length + content_line.length_extension) * content_line.quantity / 1000)" />
+                                                            <t t-set="sum_weights_net" t-value="sum_weights_net + (content_line.total_profile_weight_net / 1000)" />
+                                                            <t t-set="sum_weights_gross" t-value="sum_weights_gross + (content_line.total_profile_weight_gross / 1000)" />
+                                                        </t>
+                                                    </t>
+                                                    <tr class="total-row">
+                                                        <td class="position">
+                                                            <strong>Sum</strong>
+                                                        </td>
+                                                        <td></td>
+                                                        <td t-esc="'%.2f m' % sum_lengths_net" />
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td t-esc="'%.2f t' % sum_weights_net" />
+                                                        <td t-esc="'%.2f t' % sum_weights_gross" />
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

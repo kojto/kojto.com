@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+
+        <!-- List View -->
+        <record model="ir.ui.view" id="view_kojto_base_incoterms_list">
+            <field name="name">kojto.base.incoterms.list</field>
+            <field name="model">kojto.base.incoterms</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" editable="top">
+                    <field name="name"/>
+                    <field name="abbreviation"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record model="ir.ui.view" id="view_kojto_base_incoterms_form">
+            <field name="name">kojto.base.incoterms.form</field>
+            <field name="model">kojto.base.incoterms</field>
+            <field name="arch" type="xml">
+                <form class="ko-form-main view_kojto_base_incoterms_form">
+                    <sheet class="ko-form-body">
+                        <!-- Custom Header -->
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <!-- Left Section -->
+                            <div class="d-flex align-items-center">
+                                <div class="ko-form-view-title">
+                                    <span>Incoterm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Custom Header End -->
+                        <group class="col-lg-6">
+                            <field name="name" />
+                            <field name="abbreviation" />
+                            <field name="description" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Search View -->
+        <record model="ir.ui.view" id="view_kojto_base_incoterms_search">
+            <field name="name">kojto.base.incoterms.search</field>
+            <field name="model">kojto.base.incoterms</field>
+            <field name="arch" type="xml">
+                <search string="Incoterms">
+                    <field name="name" />
+                    <field name="abbreviation" />
+                </search>
+            </field>
+        </record>
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_kojto_base_incoterms">
+            <field name="name">Incoterms</field>
+            <field name="res_model">kojto.base.incoterms</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

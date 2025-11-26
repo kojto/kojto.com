@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem name="Sales" id="menu_kojto_sale_leads_parent" sequence="60"/>
+        <menuitem name="All Sale Leads" id="menu_kojto_sale_leads" parent="menu_kojto_sale_leads_parent" sequence="10" action="action_kojto_sale_leads"/>
+    </data>
+</odoo>

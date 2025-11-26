@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Package List View -->
+    <record id="view_factory_package_list" model="ir.ui.view">
+        <field name="name">kojto.factory.packages.list</field>
+        <field name="model">kojto.factory.packages</field>
+        <field name="priority" eval="10" />
+        <field name="arch" type="xml">
+            <list class="ko-list-main">
+                <field name="active" widget="boolean_toggle" />
+                <field name="status" />
+                <field name="name" />
+                <field name="description" />
+                <field name="counterparty_id"/>
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                <field name="total_planned_work_hours" />
+                <field name="total_actual_work_hours" />
+                <button name="copy_package_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Package" />
+                <button name="create_invoice" type="object" class="b-0 text-black bg-transparent fa fa-file-text-o" title="Create Invoice" />
+                <button name="create_delivery" type="object" class="b-0 text-black bg-transparent fa fa-truck" title="Create Delivery" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_kojto_factory_package_form" model="ir.ui.view">
+        <field name="name">kojto.factory.packages.form</field>
+        <field name="model">kojto.factory.packages</field>
+        <field name="priority" eval="10" />
+        <field name="arch" type="xml">
+            <form string="%(context.get('form_view_title', 'Factory Package'))" class="ko-form-main view_kojto_factory_packages_form">
+                <sheet class="ko-form-body">
+
+                    <!-- Header Section -->
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <field name="name" class="ko-form-view-title" force_save="1" readonly="1" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <field name="contract_id" class="mx-auto" string="Contract" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" placeholder="Select Contract"/>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <button name="copy_all_contract_contents" type="object" class="b-0 text-black bg-transparent fa fa-download" title="Copy All Contract Contents" />
+                                    <button name="copy_package_row" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Package" />
+                                    <button name="create_invoice" type="object" class="b-0 text-black bg-transparent fa fa-file-text-o" title="Create Invoice" />
+                                    <button name="create_delivery" type="object" class="b-0 text-black bg-transparent fa fa-truck" title="Create Delivery" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <separator class="separator-slim-top" />
+
+                    <!-- Existing Form Content -->
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <group>
+                                <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" placeholder="Select Issued By" />
+                                <field name="active" widget="boolean_toggle" string="Is Active" />
+                                <field name="status" />
+                            </group>
+                        </div>
+                        <div class="col-lg-3">
+                            <field name="description" nolabel="1" placeholder="Enter Description" />
+                        </div>
+                        <div class="col-lg-3">
+                            <group>
+                                <field name="date_start" />
+                                <field name="date_end" />
+                            </group>
+                        </div>
+                        <div class="col-lg-3">
+                            <group>
+                                <field name="total_planned_work_hours" />
+                                <field name="total_actual_work_hours" />
+                            </group>
+                        </div>
+                        <div class="col-lg-12">
+                            <notebook>
+                                <page string="Contents">
+                                    <field name="package_content_ids" mode="list,form">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="contract_content_position" string="№" />
+                                            <field name="contract_content_id" string="Contract Content" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                            <field name="package_content_quantity" string="Quantity" />
+                                            <field name="contract_content_unit_id" string="Unit" />
+                                            <field name="package_content_status" string="Status" />
+                                        </list>
+                                    </field>
+                                </page>
+                                <page string="Tasks">
+                                    <field name="task_ids" mode="list,form">
+                                        <list editable="bottom" class="ko-list-main">
+                                            <field name="active" widget="boolean_toggle" string="Is Active" nolabel="1" />
+                                            <field name="name" string="№" readonly="1" force_save="1" />
+                                            <field name="process_id" string="Process" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" placeholder="Select Process" />
+                                            <field name="part_name" string="Part Name" placeholder="Enter Part Name" />
+                                            <field name="task_priority" string="Priority" />
+                                            <field name="planned_work_hours" string="Planned HRS" />
+                                            <field name="actual_work_hours" string="Actual HRS" readonly="1" />
+                                            <field name="required_task_quantity" string="Required Qty" />
+                                            <field name="produced_task_quantity" string="Produced Qty" readonly="1" />
+                                            <field name="task_unit_id" string=" " options="{'no_create_edit': True}" />
+                                            <field name="task_weight" string="G (kg)" optional="hide" readonly="1" />
+                                            <field name="task_length" string="L(m)" optional="hide" readonly="1" />
+                                            <field name="task_area" string="A (m²)" optional="hide" readonly="1" />
+                                            <field name="task_volume" string="V (m³)" optional="hide" readonly="1" />
+                                            <field name="progress_percent" string="Progress" widget="percentage" />
+                                            <field name="attachments" widget="many2many" nolabel="1" options="{'no_create_edit': True}" readonly="1" />
+                                            <button name="open_task_window" type="object" icon="fa-external-link" class="btn" />
+                                        </list>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Package Search View -->
+    <record id="view_factory_package_search" model="ir.ui.view">
+        <field name="name">kojto.factory.packages.search</field>
+        <field name="model">kojto.factory.packages</field>
+        <field name="arch" type="xml">
+            <search string="Factory Packages">
+                <field name="name" string="Package Name"/>
+                <field name="description" string="Description"/>
+                <field name="issued_by" string="Issued By"/>
+                <field name="date_start" string="Start Date"/>
+                <field name="date_end" string="End Date"/>
+                <field name="contract_id" string="Contract"/>
+                <!-- Additional fields -->
+                <field name="subcode_id" string="Subcode"/>
+                <field name="counterparty_id" string="Counterparty"/>
+                <field name="total_planned_work_hours" string="Planned HRS"/>
+                <field name="total_actual_work_hours" string="Actual HRS"/>
+                <field name="active" string="Is Active"/>
+                <field name="status" string="Status"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <separator/>
+                <filter name="today_packages" string="Today" domain="[('date_start', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter name="this_week_packages" string="This Week" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter name="this_month_packages" string="This Month" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
+                <filter name="last_month_packages" string="Last Month" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Issued By" name="group_by_issued_by" context="{'group_by': 'issued_by'}"/>
+                    <filter string="Contract" name="group_by_contract" context="{'group_by': 'contract_id'}"/>
+                    <filter string="Start Date" name="group_by_start_date" context="{'group_by': 'date_start'}"/>
+                    <filter string="End Date" name="group_by_end_date" context="{'group_by': 'date_end'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_factory_packages" model="ir.actions.act_window">
+        <field name="name">Factory Package</field>
+        <field name="res_model">kojto.factory.packages</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_factory_package_list" />
+        <field name="search_view_id" ref="view_factory_package_search" />
+        <field name="context">{'form_view_title': 'Factory Package'}</field>
+    </record>
+
+</odoo>

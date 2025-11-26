@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Root Menu -->
+        <menuitem name="Deliveries" id="menu_kojto_delivery_managment" sequence="90" web_icon="kojto_deliveries,static/description/icon.png"/>
+
+        <menuitem name="Deliveries" id="menu_kojto_deliveries" parent="menu_kojto_delivery_managment" sequence="10" action="action_kojto_deliveries"/>
+        <menuitem name="CMR" id="menu_kojto_delivery_cmr" parent="menu_kojto_delivery_managment" action="action_kojto_delivery_cmr" sequence="15"/>
+        <menuitem name="Inspection Certificates" id="menu_kojto_delivery_inspection_certificates" parent="menu_kojto_delivery_managment" action="action_kojto_delivery_inspection_certificates" sequence="30"/>
+        <menuitem name="Packaging Materials" id="menu_kojto_delivery_packaging_materials" parent="menu_kojto_delivery_managment" action="action_kojto_delivery_packaging_materials" sequence="80"/>
+    </data>
+</odoo>
