@@ -1,7 +1,7 @@
 # kojto_finance/models/kojto_finance_invoice.py
 from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError, UserError
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date as date_type, time as time_type
 from deep_translator import GoogleTranslator
 import calendar
 from weasyprint import HTML
@@ -59,7 +59,7 @@ class KojtoFinanceInvoice(models.Model):
     name = fields.Char(string="Number", compute="_generate_invoice_name", store=True)
     active = fields.Boolean(string="Is Active", default=True)
     subject = fields.Char(string="Subject")
-    consecutive_number = fields.Char(string="Consecutive Number", default=lambda self: self.pick_next_consecutive_number(), required=True)
+    consecutive_number = fields.Char(string="Consecutive Number", default=lambda self: self.pick_next_consecutive_number(), required=True, copy=False)
     consecutive_number_selection = fields.Selection(selection=lambda self: self.get_next_consecutive_numbers(), store=False)
 
     invoice_has_invalid_redistribution = fields.Boolean(string="Invoice has invalid redistribution", compute="_compute_invoice_has_invalid_redistribution")
@@ -457,6 +457,11 @@ class KojtoFinanceInvoice(models.Model):
                     "\n".join(f"• {error}" for error in errors)
                 )
 
+    @api.onchange("subcode_id")
+    def _onchange_subcode_id(self):
+        for line in self.content:
+            line.subcode_id = self.subcode_id
+
     @api.onchange("invoice_vat_rate")
     def _onchange_invoice_vat_rate(self):
         for line in self.content:
@@ -500,6 +505,7 @@ class KojtoFinanceInvoice(models.Model):
         self.currency_id = parent.currency_id
         self.exchange_rate_to_bgn = parent.exchange_rate_to_bgn
         self.exchange_rate_to_eur = parent.exchange_rate_to_eur
+        self.company_bank_account_id = parent.company_bank_account_id
 
         # Copy counterparty data
         self.counterparty_id = parent.counterparty_id
@@ -673,12 +679,26 @@ class KojtoFinanceInvoice(models.Model):
         if not date or not from_currency or not to_currency:
             return 0.0
 
+        # Convert date to datetime if it's a date object or string
+        if isinstance(date, str):
+            date = fields.Date.from_string(date)
+
+        # Convert date to datetime for comparison
+        if isinstance(date, date_type) and not isinstance(date, datetime):
+            date_start = datetime.combine(date, time_type.min)
+            date_end = datetime.combine(date, time_type.max)
+        elif isinstance(date, datetime):
+            date_start = date.replace(hour=0, minute=0, second=0, microsecond=0)
+            date_end = date.replace(hour=23, minute=59, second=59, microsecond=999999)
+        else:
+            return 0.0
+
         exchange_rate = self.env["kojto.base.currency.exchange"].search(
             [
                 ("base_currency_id", "=", from_currency.id),
                 ("target_currency_id", "=", to_currency.id),
-                ("datetime", ">=", date.replace(hour=0, minute=0, second=0, microsecond=0)),
-                ("datetime", "<=", date.replace(hour=23, minute=59, second=59, microsecond=999999)),
+                ("datetime", ">=", date_start),
+                ("datetime", "<=", date_end),
             ],
             order="datetime DESC",
             limit=1,
@@ -758,7 +778,6 @@ class KojtoFinanceInvoice(models.Model):
             for model, field in [
                 ("kojto.base.names", "company_name_id"),
                 ("kojto.base.addresses", "company_address_id"),
-                ("kojto.base.bank.accounts", "company_bank_account_id"),
                 ("kojto.base.tax.numbers", "company_tax_number_id"),
                 ("kojto.base.phones", "company_phone_id"),
                 ("kojto.base.emails", "company_email_id"),
@@ -785,6 +804,10 @@ class KojtoFinanceInvoice(models.Model):
         if self.document_in_out_type not in ["incoming", "outgoing"]:
             self.consecutive_number = ""
             return
+
+        if self._origin and self._origin.document_in_out_type == self.document_in_out_type:
+            if self.consecutive_number:
+                return
 
         nextnums = self.get_next_consecutive_numbers()
         self.consecutive_number = nextnums[0][0] if nextnums else ""
@@ -1521,12 +1544,24 @@ class KojtoFinanceInvoice(models.Model):
 
     def action_import_invoice_content(self):
         self.ensure_one()
-        header = "Position\tName\tQuantity\tUnit\tUnit Price\tVAT Rate\n"
+        header = "Position\tName\tQuantity\tUnit\tUnit Price\tVAT Rate\tSubcode\n"
         if self.content:
-            lines = [
-                f"{content.position or ''}\t{content.name or ''}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}"
-                for content in self.content
-            ]
+            lines = []
+            for content in self.content:
+                # Replace newlines and multiple whitespace in name with single space
+                name = content.name or ''
+                if name:
+                    name = ' '.join(name.split())  # Replace all whitespace (including newlines) with single space
+
+                position = content.position or ''
+                if position:
+                    position = ' '.join(position.split())  # Also clean position field
+
+                subcode_name = content.subcode_id.name or '' if content.subcode_id else ''
+
+                lines.append(
+                    f"{position}\t{name}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}\t{subcode_name}"
+                )
             first_line = lines[0].split("\t") if lines else []
             is_header = (
                 len(first_line) >= 5 and
@@ -1556,15 +1591,22 @@ class KojtoFinanceInvoice(models.Model):
 
     def generate_cash_transaction(self):
         for invoice in self:
+            if invoice.invoice_type != 'invoice':
+                continue
+
             if not invoice.company_bank_account_id or invoice.company_bank_account_id.account_type.lower() != 'cash':
                 continue
 
             transaction_direction = 'incoming' if invoice.document_in_out_type == 'outgoing' else 'outgoing'
 
+            if invoice.document_in_out_type == 'outgoing':
+                description = _("Payment received in cash account for invoice No. %s") % invoice.consecutive_number
+
             if invoice.document_in_out_type == 'incoming':
-                description = f"Получено плащане в каса за фактура № {invoice.consecutive_number}"
+                description = _("Paid from cash account for invoice No. %s") % invoice.consecutive_number
+
             else:
-                description = f"Платена на каса фактура № {invoice.consecutive_number}"
+                description = _("Payment received in cash account for invoice No. %s") % invoice.consecutive_number
 
             cashflow = self.env['kojto.finance.cashflow'].create({
                 'bank_account_id': invoice.company_bank_account_id.id,

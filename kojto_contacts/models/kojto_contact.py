@@ -183,3 +183,112 @@ class KojtoContacts(models.Model):
             'api_url': "https://ai.prototyp.bg:443/v1",
             'api_key': "ollama"
         }
+
+    @api.model
+    def ensure_contact_1_exists(self):
+        """
+        Ensure contact with id=1 exists. Creates "Our Company" contact if it doesn't exist.
+        This method is called during module installation and upgrade.
+        """
+        # Fixed date for create_date and write_date
+        fixed_date = '2000-01-01 00:00:00'
+
+        # Check if contact with id=1 exists
+        self.env.cr.execute("SELECT id, res_company_id FROM kojto_contacts WHERE id = 1")
+        existing = self.env.cr.fetchone()
+
+        if existing:
+            # Contact exists, check if res_company_id is set to anything
+            res_company_id = existing[1] if existing and len(existing) > 1 else None
+            if res_company_id is not None:
+                # res_company_id is already set to something, do nothing
+                return
+
+            # Update the dates and res_company_id
+            self.env.cr.execute("""
+                UPDATE kojto_contacts
+                SET create_date = %s, write_date = %s, res_company_id = 1
+                WHERE id = 1
+            """, (fixed_date, fixed_date))
+            self.env.cr.commit()
+            self.env.clear()
+            return
+
+        # Check if client_number 0 is already taken by another contact
+        self.env.cr.execute("SELECT id FROM kojto_contacts WHERE client_number = 0 AND id != 1 LIMIT 1")
+        conflicting = self.env.cr.fetchone()
+        if conflicting:
+            # Temporarily change the conflicting contact's client_number to allow us to create id=1
+            # We'll use a negative number temporarily, then the admin can fix it
+            temp_number = -1
+            self.env.cr.execute("""
+                SELECT id FROM kojto_contacts WHERE client_number = %s LIMIT 1
+            """, (temp_number,))
+            while self.env.cr.fetchone():
+                temp_number -= 1
+                self.env.cr.execute("""
+                    SELECT id FROM kojto_contacts WHERE client_number = %s LIMIT 1
+                """, (temp_number,))
+
+            self.env.cr.execute("""
+                UPDATE kojto_contacts
+                SET client_number = %s
+                WHERE id = %s
+            """, (temp_number, conflicting[0]))
+
+        # Get admin user
+        admin_user = self.env.ref('base.user_admin', raise_if_not_found=False)
+        user_id = admin_user.id if admin_user else 1
+
+        # Get default language
+        lang = self.env.ref('base.lang_en', raise_if_not_found=False)
+        language_id = lang.id if lang else None
+
+        # Insert contact with id=1 using SQL with fixed dates
+        if language_id:
+            self.env.cr.execute("""
+                INSERT INTO kojto_contacts (
+                    id, contact_type, name, client_number, active, language_id, res_company_id,
+                    create_uid, create_date, write_uid, write_date
+                ) VALUES (
+                    1, 'company', 'Our Company', 0, true, %s, 1,
+                    %s, %s, %s, %s
+                )
+            """, (language_id, user_id, fixed_date, user_id, fixed_date))
+        else:
+            self.env.cr.execute("""
+                INSERT INTO kojto_contacts (
+                    id, contact_type, name, client_number, active, res_company_id,
+                    create_uid, create_date, write_uid, write_date
+                ) VALUES (
+                    1, 'company', 'Our Company', 0, true, 1,
+                    %s, %s, %s, %s
+                )
+            """, (user_id, fixed_date, user_id, fixed_date))
+
+        # Create the name record using ORM (which will handle all relationships)
+        try:
+            if 'kojto.base.names' in self.env.registry:
+                self.env['kojto.base.names'].create({
+                    'name': 'Our Company',
+                    'contact_id': 1,
+                    'active': True,
+                })
+        except Exception:
+            # If creating the name fails, we still have the contact
+            pass
+
+        # Update sequence to ensure it's at least at 2
+        try:
+            self.env.cr.execute("""
+                SELECT setval(
+                    pg_get_serial_sequence('kojto_contacts', 'id'),
+                    GREATEST(1, COALESCE((SELECT MAX(id) FROM kojto_contacts), 0))
+                )
+            """)
+        except Exception:
+            # Sequence might not exist or table might use a different sequence name
+            pass
+
+        self.env.cr.commit()
+        self.env.clear()  # Clear cache so the new record is available

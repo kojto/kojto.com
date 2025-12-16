@@ -1,0 +1,9 @@
+add a user energy_manager in  nano /etc/odoo18.conf
+
+
+xml_rpc_user = energy_meter
+xml_rpc_password = energy_meter@1
+
+allow 502 port in the firewall
+
+make sure no one uses the modbus unit

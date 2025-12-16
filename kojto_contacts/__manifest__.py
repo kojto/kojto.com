@@ -1,7 +1,7 @@
 # kojto_contacts/__manifest__.py
 {
     "name": "Kojto Contacts",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Contact management module with AI configuration settings for finance automation",
     "author": "KOJTO",
@@ -12,6 +12,7 @@
     ],
     "data": [
         "security/ir.model.access.csv",
+        "data/ensure_contact_1.xml",
         "views/kojto_contacts_views.xml",
         "views/kojto_contacts_base_views.xml",
         "views/kojto_contacts_menu_view.xml",

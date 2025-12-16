@@ -6,7 +6,7 @@
         <field name="model">kojto.commission.subcodes</field>
         <field name="arch" type="xml">
             <list class="ko-list-main" editable="top">
-                <field name="active" string="is Active" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="active" string="is Active" optional="show" widget="boolean_toggle" />
                 <field name="code_id" />
                 <field name="subcode" />
                 <field name="name" />

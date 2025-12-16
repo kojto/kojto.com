@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Document Bundle Report -->
+        <record id="action_report_kojto_en1090_document_bundles" model="ir.actions.report">
+            <field name="name">Document Bundle</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_document_bundles</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_document_bundles</field>
+            <field name="print_report_name">'Document Bundle - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_document_bundles"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+
+        <!-- Control Documents Reports -->
+        <record id="action_report_kojto_en1090_doc_control" model="ir.actions.report">
+            <field name="name">Control Document</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_control_templates</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_control_templates</field>
+            <field name="print_report_name">'Control Document - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_vt_control" model="ir.actions.report">
+            <field name="name">Visual Testing Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_vt_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_vt_control</field>
+            <field name="print_report_name">'VT Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'vt')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_ut_control" model="ir.actions.report">
+            <field name="name">Ultrasonic Testing Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_ut_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_ut_control</field>
+            <field name="print_report_name">'UT Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'ut')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_mt_control" model="ir.actions.report">
+            <field name="name">Magnetic Particle Testing Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_mt_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_mt_control</field>
+            <field name="print_report_name">'MT Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'mt')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_pt_control" model="ir.actions.report">
+            <field name="name">Penetrant Testing Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_pt_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_pt_control</field>
+            <field name="print_report_name">'PT Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'pt')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_rt_control" model="ir.actions.report">
+            <field name="name">Radiographic Testing Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_rt_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_rt_control</field>
+            <field name="print_report_name">'RT Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'rt')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_cl_control" model="ir.actions.report">
+            <field name="name">Check List Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_cl_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_cl_control</field>
+            <field name="print_report_name">'CL Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'cl')]</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_doc_other_control" model="ir.actions.report">
+            <field name="name">Other Control</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_other_control</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_other_control</field>
+            <field name="print_report_name">'Other Control - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_control"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('control_type', '=', 'other')]</field>
+        </record>
+
+        <!-- Welding Documents Reports -->
+        <record id="action_report_kojto_en1090_doc_welding_tasks" model="ir.actions.report">
+            <field name="name">Welding Job</field>
+            <field name="model">kojto.en1090.doc.welding.tasks</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_welding_tasks</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_welding_tasks</field>
+            <field name="print_report_name">'Welding Job - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_doc_welding_tasks"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_report_kojto_en1090_wps" model="ir.actions.report">
+            <field name="name">WPS Report</field>
+            <field name="model">kojto.en1090.wps</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_wps</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_wps</field>
+            <field name="print_report_name">'WPS - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_wps"/>
+            <field name="binding_type">report</field>
+            <field name="binding_view_types">form</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+
+        <!-- Performance Declaration Report -->
+        <record id="action_report_kojto_en1090_doc_performance" model="ir.actions.report">
+            <field name="name">Performance Declaration</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_doc_performance</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_doc_performance</field>
+            <field name="print_report_name">'Performance Declaration - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_document_bundles"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+
+        <record id="action_report_kojto_en1090_ce_label" model="ir.actions.report">
+            <field name="name">CE LABEL</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_en1090.report_kojto_en1090_ce_label</field>
+            <field name="report_file">kojto_en1090.report_kojto_en1090_ce_label</field>
+            <field name="print_report_name">'CE LABEL - %s' % (object.name)</field>
+            <field name="attachment">False</field>
+            <field name="binding_model_id" ref="model_kojto_en1090_document_bundles"/>
+            <field name="binding_type">report</field>
+            <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4"/>
+        </record>
+    </data>
+</odoo>

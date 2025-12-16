@@ -1,6 +1,6 @@
 {
     "name": "Kojto Inquiries",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "description": "Inquiry management module for creating and managing customer inquiries with content import functionality and reporting",
     "author": "KOJTO",
     "website": "https://www.kojto.com",

@@ -1,6 +1,6 @@
 {
     "name": "Kojto Technical Docs",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Technical documentation management module for managing technical documents and their revisions",
     "author": "KOJTO",

@@ -1,7 +1,7 @@
 # kojto_products/__manifest__.py
 {
     'name': 'Kojto Products',
-    'version': '18.04.07',
+    'version': '18.04.08',
     'author': 'KOJTO',
     'category': 'KOJTO',
     'website': 'https://www.kojto.com',

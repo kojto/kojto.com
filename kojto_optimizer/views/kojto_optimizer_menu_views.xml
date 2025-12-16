@@ -5,6 +5,7 @@
         <!-- Main Menu Items -->
         <menuitem name="Optimizer" id="menu_kojto_optimizer_parent" sequence="210"/>
         <menuitem name="1D" id="menu_kojto_optimizer_1d" parent="menu_kojto_optimizer_parent" sequence="40" action="action_kojto_optimizer_1d"/>
+        <menuitem name="2D" id="menu_kojto_optimizer_2d" parent="menu_kojto_optimizer_parent" sequence="45" action="action_kojto_optimizer_2d"/>
         <menuitem name="2DR" id="menu_kojto_optimizer_2dr" parent="menu_kojto_optimizer_parent" sequence="50" action="action_kojto_optimizer_2dr"/>
     </data>
 </odoo>

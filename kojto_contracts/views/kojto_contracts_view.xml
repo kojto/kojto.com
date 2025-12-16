@@ -260,7 +260,7 @@
                     <filter name="today_contracts" string="Today" domain="[('date_start', '=', context_today().strftime('%Y-%m-%d'))]"/>
                     <filter name="this_week_contracts" string="This Week" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
                     <filter name="this_month_contracts" string="This Month" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
-                    <filter name="last_month_contracts" string="Last Month" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                    <filter name="last_month_contracts" string="Last Month" domain="[('date_start', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
                     <filter name="next_week_contracts" string="Next Week" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-%d')), ('date_start', '&lt;=', (context_today() + datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
                     <filter name="next_month_contracts" string="Next Month" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-%d')), ('date_start', '&lt;', (context_today() + datetime.timedelta(days=30)).strftime('%Y-%m-%d'))]"/>
 

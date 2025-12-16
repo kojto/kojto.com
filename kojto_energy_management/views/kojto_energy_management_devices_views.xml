@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_energy_management_devices_list" model="ir.ui.view">
+        <field name="name">kojto.energy.management.devices.list</field>
+        <field name="model">kojto.energy.management.devices</field>
+        <field name="arch" type="xml">
+            <list string="Devices" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="description" optional="show"/>
+                <field name="device_type"/>
+                <field name="protocol"/>
+                <field name="domain_ip"/>
+                <field name="port"/>
+                <field name="unit"/>
+                <field name="exchange" optional="show"/>
+                <field name="current_import_base_price_eur" optional="show"/>
+                <field name="current_export_base_price_eur" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_energy_management_devices_form" model="ir.ui.view">
+        <field name="name">kojto.energy.management.devices.form</field>
+        <field name="model">kojto.energy.management.devices</field>
+        <field name="arch" type="xml">
+            <form string="Device">
+                <sheet>
+                    <group>
+                        <group string="Device Information">
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="name"/>
+                            <field name="device_type"/>
+                            <field name="protocol"/>
+                            <field name="model"/>
+                            <field name="serial_number"/>
+                            <field name="description" placeholder="Brief description of the device and its purpose..."/>
+                        </group>
+                        <group string="Counters and Prices" invisible="device_type != 'power_meter'">
+                            <field name="max_imported_kwh_counter_value"/>
+                            <field name="max_exported_kwh_counter_value"/>
+                            <field name="exchange"/>
+                            <field name="base_price_ids" string="Base Prices" context="{'default_device_id': id}">
+                                <list editable="top" class="ko-list-main">
+                                    <field name="price_type"/>
+                                    <field name="start_date"/>
+                                    <field name="valid_until" optional="hide"/>
+                                    <field name="base_price_eur_per_mwh"/>
+                                    <field name="notes" optional="hide"/>
+                                </list>
+                            </field>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Modbus TCP Connection Settings" invisible="protocol not in ('modbus_tcp', 'modbus_rtu')">
+                            <field name="domain_ip" invisible="protocol not in ('modbus_tcp')"/>
+                            <field name="port" invisible="protocol not in ('modbus_tcp')"/>
+                            <field name="unit" invisible="protocol not in ('modbus_tcp', 'modbus_rtu')"/>
+                        </group>
+                    </group>
+                    <group invisible="protocol != 'mqtt'">
+                        <group string="MQTT Broker Configuration">
+                            <field name="mqtt_broker_host"/>
+                            <field name="mqtt_broker_port"/>
+                            <field name="mqtt_client_id"/>
+                            <field name="mqtt_username"/>
+                            <field name="mqtt_password" password="True"/>
+                        </group>
+                        <group string="MQTT Connection Settings">
+                            <field name="mqtt_use_tls" widget="boolean_toggle"/>
+                            <field name="mqtt_qos"/>
+                            <field name="mqtt_keepalive"/>
+                            <field name="mqtt_clean_session" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <group invisible="protocol != 'mqtt'">
+                        <group string="MQTT Topics">
+                            <field name="mqtt_subscribe_topic" placeholder="e.g., devices/powermeter1/data"/>
+                            <field name="mqtt_publish_topic" placeholder="e.g., devices/powermeter1/commands (optional)"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_energy_management_devices_search" model="ir.ui.view">
+        <field name="name">kojto.energy.management.devices.search</field>
+        <field name="model">kojto.energy.management.devices</field>
+        <field name="arch" type="xml">
+            <search string="Search Devices">
+                <field name="name"/>
+                <field name="device_type"/>
+                <field name="protocol"/>
+                <field name="domain_ip"/>
+                <field name="exchange"/>
+                <field name="model"/>
+                <filter string="Active" name="filter_active" domain="[('active', '=', True)]"/>
+                <filter string="Inactive" name="filter_inactive" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Power Meters" name="filter_power_meter" domain="[('device_type', '=', 'power_meter')]"/>
+                <filter string="Inverters" name="filter_inverter" domain="[('device_type', '=', 'inverter')]"/>
+                <filter string="Sensors" name="filter_sensor" domain="[('device_type', '=', 'sensor')]"/>
+                <separator/>
+                <filter string="Modbus TCP" name="filter_modbus_tcp" domain="[('protocol', '=', 'modbus_tcp')]"/>
+                <filter string="Modbus RTU" name="filter_modbus_rtu" domain="[('protocol', '=', 'modbus_rtu')]"/>
+                <filter string="MQTT" name="filter_mqtt" domain="[('protocol', '=', 'mqtt')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Device Type" name="group_device_type" context="{'group_by': 'device_type'}"/>
+                    <filter string="Protocol" name="group_protocol" context="{'group_by': 'protocol'}"/>
+                    <filter string="Exchange" name="group_exchange" context="{'group_by': 'exchange'}"/>
+                    <filter string="Model" name="group_model" context="{'group_by': 'model'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_energy_management_devices" model="ir.actions.act_window">
+        <field name="name">Devices</field>
+        <field name="res_model">kojto.energy.management.devices</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Device
+            </p>
+            <p>
+                Configure devices such as power meters, inverters, sensors with communication settings and register configurations.
+            </p>
+        </field>
+    </record>
+
+
+</odoo>
+

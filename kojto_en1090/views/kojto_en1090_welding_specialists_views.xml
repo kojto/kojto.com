@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- list/List View -->
+    <record id="view_kojto_en1090_welding_specialists_list" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.specialists.list</field>
+        <field name="model">kojto.en1090.welding.specialists</field>
+        <field name="arch" type="xml">
+            <list string="Welding Specialists" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="contact_id"/>
+                <field name="title"/>
+                <field name="personal_stamp_number" widget="char"/>
+                <field name="is_welding_engineer" widget="boolean_toggle"/>
+                <field name="is_ut_inspector" widget="boolean_toggle"/>
+                <field name="is_vt_inspector" widget="boolean_toggle"/>
+                <field name="is_pt_inspector" widget="boolean_toggle"/>
+                <field name="is_rt_inspector" widget="boolean_toggle"/>
+                <field name="is_mt_inspector" widget="boolean_toggle"/>
+                <field name="is_certified_welder" widget="boolean_toggle"/>
+                <field name="welding_certificates_ids" widget="many2many_tags"/>
+                <field name="translation_ids" widget="many2many_tags"/>
+                <field name="equipment_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_en1090_welding_specialists_form" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.specialists.form</field>
+        <field name="model">kojto.en1090.welding.specialists</field>
+        <field name="arch" type="xml">
+            <form string="Welding Specialist">
+                <sheet>
+                    <div class="row">
+                        <div class="col-4">
+                            <group>
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="title"/>
+                                <field name="name"/>
+                                <field name="contact_id"/>
+                            </group>
+                        </div>
+                        <div class="col-4">
+                            <group>
+                                <field name="is_welding_engineer" widget="boolean_toggle"/>
+                                <field name="is_certified_welder" widget="boolean_toggle"/>
+                                <field name="personal_stamp_number" widget="char"/>
+                            </group>
+                        </div>
+                        <div class="col-4">
+                            <group>
+                                <field name="is_ut_inspector" widget="boolean_toggle"/>
+                                <field name="is_vt_inspector" widget="boolean_toggle"/>
+                                <field name="is_pt_inspector" widget="boolean_toggle"/>
+                                <field name="is_rt_inspector" widget="boolean_toggle"/>
+                                <field name="is_mt_inspector" widget="boolean_toggle"/>
+                            </group>
+                        </div>
+                    </div>
+                    <group>
+                        <field name="translation_ids" context="{'default_reference_model': 'kojto.en1090.welding.specialists', 'default_reference_id': id, 'default_specialist_id': id}">
+                            <list name="translation_list" string="Translations" editable="bottom" class="ko-list-main">
+                                <field name="language_id" options="{'no_create': True, 'no_quick_create': True, 'no_open': True, 'no_create_edit': True}"/>
+                                <field name="translated_name"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group string="Welding Certificates" name="welding_certificates">
+                        <field name="welding_certificates_ids" context="{'default_specialist_id': id}">
+                            <list editable="bottom" class="ko-list-main">
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="name"/>
+                                <field name="certificate_type"/>
+                                <field name="certificate_number"/>
+                                <field name="date_start"/>
+                                <field name="date_end"/>
+                                <field name="issuing_authority_id"/>
+                            </list>
+                        </field>
+                    </group>
+                    <group string="Equipment" name="equipment">
+                        <field name="equipment_ids" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                            <list name="equipment_list" string="Equipment" editable="bottom" class="ko-list-main">
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="name"/>
+                                <field name="serial_number"/>
+                                <field name="manufacturer"/>
+                                <field name="model"/>
+                            </list>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_en1090_welding_specialists_search" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.specialists.search</field>
+        <field name="model">kojto.en1090.welding.specialists</field>
+        <field name="arch" type="xml">
+            <search string="Search Welding Specialists">
+                <field name="name"/>
+                <field name="contact_id"/>
+                <field name="title"/>
+                <separator/>
+                <filter string="Welding Engineers" name="welding_engineers" domain="[('is_welding_engineer', '=', True)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Contact" name="group_by_contact" context="{'group_by': 'contact_id'}"/>
+                    <filter string="Title" name="group_by_title" context="{'group_by': 'title'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_en1090_welding_specialists" model="ir.actions.act_window">
+        <field name="name">Welding Specialists</field>
+        <field name="res_model">kojto.en1090.welding.specialists</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_en1090_welding_specialists_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first welding specialist
+            </p>
+            <p>
+                Create welding specialists to manage welders, welding supervisors, and defectoscopists.
+            </p>
+        </field>
+    </record>
+</odoo>

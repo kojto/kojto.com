@@ -9,7 +9,7 @@
                     <style>.modal-dialog {max-width: 1000px !important; min-width: 1000px !important;}</style>
                     <group>
                         <field name="invoice_id" readonly="1" string="Invoice"/>
-                        <field name="data" widget="text" placeholder="Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate)" string="Content Data"/>
+                        <field name="data" widget="text" placeholder="Paste data here (Position;Name;Quantity;Unit;Unit Price;VAT Rate;Subcode)" string="Content Data"/>
                     </group>
                     <footer>
                         <button name="action_import" string="Import" type="object" class="btn-primary"/>

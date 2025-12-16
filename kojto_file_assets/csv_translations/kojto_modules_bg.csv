@@ -12227,7 +12227,7 @@ kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_accounts_
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_asset_works_dashboard,Asset Works,,
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_bank_statements,Bank Statements,Банкови извлечения,
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_bank_statements_import,Bank Statement Upload,Качване на банкови извлечения,
-kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_cashflow,[+] Cash Flow,Паричен поток,
+kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_cashflow,[+] Cash Flow,[+] Паричен поток,
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_cashflow_dashboard,Cash Flow,Паричен поток,
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_cashflow_transactions,Transactions,Транзакции,
 kojto_finance,model,"ir.ui.menu,name",kojto_finance.menu_kojto_finance_dashboard_revenue_expense,Revenue Expense,Приходи Разходи,

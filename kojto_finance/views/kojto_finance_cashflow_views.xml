@@ -94,6 +94,7 @@
                                 <field name="counterparty_bank_account_owner_id" options="{'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
                                 <field name="exchange_rate_to_bgn"/>
                                 <field name="exchange_rate_to_eur"/>
+                                <field name="allocation_summary" nolabel="1" readonly="1" />
                             </group>
                         </div>
                         <group class="col-lg-12" string="Transaction Allocation" />
@@ -167,7 +168,7 @@
                     <filter name="fully_allocated" string="Fully allocated" domain="[('unallocated_amount', '=', 0)]" />
                     <filter name="over_allocated" string="Over allocated" domain="[('unallocated_amount', '&lt;', 0)]" />
                     <filter name="date_value_this_month" string="This Month" domain="[('date_value', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_value', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]" />
-                    <filter name="date_value_last_month" string="Last Month" domain="[('date_value', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_value', '&lt;', context_today().strftime('%Y-%m-01'))]" />
+                    <filter name="date_value_last_month" string="Last Month" domain="[('date_value', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_value', '&lt;', context_today().strftime('%Y-%m-01'))]" />
                     <filter name="active" string="Active" domain="[('active', '=', True)]" />
                     <filter name="inactive" string="Inactive" domain="[('active', '=', False)]" />
 
@@ -219,6 +220,35 @@
             <field name="code">
                 if records:
                 records.compute_unallocated_amount()
+            </field>
+        </record>
+
+        <record id="action_recompute_allocation_summary" model="ir.actions.server">
+            <field name="name">Recompute All Allocation Summaries</field>
+            <field name="model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_model_id" ref="model_kojto_finance_cashflow" />
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">
+# Recompute allocation summary for ALL cashflow transactions
+# Search for all cashflow records and process them in batches
+# Use _search to get all IDs without limit, then browse them
+Cashflow = env['kojto.finance.cashflow']
+all_cashflow_ids = Cashflow._search([], order='id')
+if all_cashflow_ids:
+    all_records = Cashflow.browse(all_cashflow_ids)
+    action = all_records.recompute_allocation_summary()
+else:
+    action = {
+        'type': 'ir.actions.client',
+        'tag': 'display_notification',
+        'params': {
+            'title': 'Warning',
+            'message': 'No cashflow transactions found.',
+            'type': 'warning',
+            'sticky': False,
+        }
+    }
             </field>
         </record>
 

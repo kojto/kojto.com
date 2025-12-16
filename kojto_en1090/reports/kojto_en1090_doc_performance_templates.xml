@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Performance Document Template -->
+        <template id="report_kojto_en1090_doc_performance">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <!-- CE Mark -->
+                        <div style="text-align: left; margin-bottom: 20px;">
+                            <svg width="100" height="100" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 340,201.0025 L 340,261.4359 A 140,140 0 1 0 340,538.5641 L 340,598.9975 A 200,200 0 1 1 340,201.0025 Z" stroke="black" stroke-width="1" fill="black"/>
+                                <path d="M 680,538.5641 L 680,598.9975 A 200,200 0 1 1 680,201.0025 L 680,261.4359 A 140,140 0 0 0 523.2521,370 L 640,370 L 640,430 L 523.2521,430 A 140,140 0 0 0 680,538.5641 Z" stroke="black" stroke-width="1" fill="black"/>
+                            </svg>
+                        </div>
+
+                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Performance Declaration</div>
+                            </h1>
+                        </div>
+
+                        <!-- Performance Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <tbody>
+                                <!-- Issued By/To Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                    <td style="padding: 4px; width: 35%;">Performance Declaration #</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Issued By</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.company_name_id" /><br/>
+                                        <span t-field="doc.company_address_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Issued To</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.counterparty_name_id" /><br/>
+                                        <span t-field="doc.counterparty_address_id" /><br/>
+                                        <span t-field="doc.counterpartys_reference" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Issued On</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.date_issue" /></td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- General Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="8">General Information</td>
+                                    <td style="padding: 4px; width: 35%;">Standard Reference</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_standard_reference" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Content Description</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_content_description" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Intended Use</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_intended_use" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Language</td>
+                                    <td style="padding: 4px; width: 40%;"><t t-esc="doc.language_id.name or 'N/A'" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Description</td>
+                                    <td style="padding: 4px; width: 40%;"><t t-esc="doc.description or 'N/A'" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Execution Class</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.execution_class" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Assessment System</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.avcp_system" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Notifying Body</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.notified_body_name_id" /><br/>
+                                        <span t-field="doc.notified_body_address_id" />
+                                    </td>
+                                </tr>
+
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Structural Performance -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Structural Performance</td>
+                                    <td style="padding: 4px; width: 35%;">Dimension Tolerances (EN1090-2)</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_dimension_tolerances" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Load Bearing Capacity</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_load_bearing_capacity" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Serviceability Limit State Deformation</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_serviceability_limit_state_deformation" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Fatigue Strength</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_fatigue_strength" /></td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Material Performance -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Material Performance</td>
+                                    <td style="padding: 4px; width: 35%;">Weldability</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_weldability" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Fracture Toughness</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_fracture_toughness" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Durability</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_durability" /></td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Safety Performance -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Safety Performance</td>
+                                    <td style="padding: 4px; width: 35%;">Resistance to Fire</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_resistance_to_fire" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Reaction to Fire</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_reaction_to_fire" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Release of Cadmium &amp; Its Compounds</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_cadmium_release" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Radioactivity Emission</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.dop_radioactivity_emission" /></td>
+                                </tr>
+
+                                <!-- Empty row for spacing -->
+                                <tr>
+                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 35%;"></td>
+                                    <td style="padding: 6px; width: 40%;"></td>
+                                </tr>
+
+                                <!-- Declaration -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;">Declaration</td>
+                                    <td style="padding: 4px; width: 35%;" colspan="2">
+                                        <div style="margin-bottom: 10px;">
+                                            The performance of this product according to the declared performance.
+                                        </div>
+                                        <div style="margin-bottom: 10px;">
+                                            The system or systems of assessment and verification of constancy of performance of the construction product in accordance with system 2+ as set out in Annex V of the Construction Products' Regulations.
+                                        </div>
+                                        <div>
+                                            Solely responsible for the preparation of this declaration of performance is the producer acc. #4.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Kojto Finance",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Finance management module with invoices, cashflow, accounting, and AI-powered auto-accounting features",
     "author": "KOJTO",

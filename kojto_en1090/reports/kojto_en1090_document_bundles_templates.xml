@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Document Bundle Template -->
+        <template id="report_kojto_en1090_document_bundles">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                            <h1 class="heading">
+                                <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">EN1090 Document Bundle</div>
+                                <div style="margin-bottom: 20px;">
+                                    <span t-field="doc.name" /> - <span t-field="doc.execution_class"/>
+                                </div>
+                            </h1>
+                        </div>
+
+                        <!-- Performance Information Table -->
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-top: 20px; margin-bottom: 0; padding-bottom: 0;">
+                            <tbody>
+                                <!-- Issued By/To Information -->
+                                <tr>
+                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="7">Document Information</td>
+                                    <td style="padding: 4px; width: 35%;">Document bundle #</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.name" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Issued By</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.company_name_id" /><br/>
+                                        <span t-field="doc.company_address_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Issued To</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.counterparty_name_id" /><br/>
+                                        <span t-field="doc.counterparty_address_id" /><br/>
+                                        <span t-field="doc.counterpartys_reference" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%; vertical-align: top;">Notifying Body</td>
+                                    <td style="padding: 4px; width: 40%;">
+                                        <span t-field="doc.notified_body_name_id" /><br/>
+                                        <span t-field="doc.notified_body_address_id" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Issued On</td>
+                                    <td style="padding: 4px; width: 40%;"><span t-field="doc.date_issue" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Language</td>
+                                    <td style="padding: 4px; width: 40%;"><t t-esc="doc.language_id.name or 'N/A'" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; width: 35%;">Description</td>
+                                    <td style="padding: 4px; width: 40%;"><t t-esc="doc.description or 'N/A'" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div t-field="doc.document_bundle_content" />
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,7 +1,6 @@
 h2 {
     font-size: 18px;
     padding-bottom: 10px;
-    /*color:  var(--o-cc4-bg);*/
 }
 
 select {
@@ -79,7 +78,6 @@ textarea {
 }
 
 .o_field_widget {
-    /*padding-right: 5px;*/
     font-size: 12px;
     color: black;
 }
@@ -365,7 +363,6 @@ select#invoice_type_0 option {
     margin-right: auto;
 }
 
-/* incoming / outgoing start */
 .o_list_view .o_data_cell[name="transaction_direction"] .o_field_badge .badge,
 .o_list_view .o_data_cell[name="document_in_out_type"] .o_field_badge .badge {
     visibility: hidden;
@@ -377,18 +374,10 @@ select#invoice_type_0 option {
     visibility: visible;
     position: absolute;
     left: 5%;
-    /* margin-left: 5px;
-    transform: translateX(-10%);
-    font-weight: bold; */
     content: "\f061";
     font-family: FontAwesome;
     font-size: 14px;
-    /* width: 18px;
-    height: 18px; */
     color: #f09595 !important;
-    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"%3E%3C/path%3E%3Cpath fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"%3E%3C/path%3E%3C/svg%3E'); */
-    /* background-size: contain;
-    background-repeat: no-repeat; */
 }
 
 .o_list_view .o_data_cell[name="document_in_out_type"] .o_field_badge .badge.text-bg-primary:after,
@@ -396,7 +385,6 @@ select#invoice_type_0 option {
     content: "\f0a8";
     font-family: FontAwesome;
     color: green !important;
-    /* background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-box-arrow-right" viewBox="0 0 16 16"%3E%3Cpath fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"%3E%3C/path%3E%3Cpath fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"%3E%3C/path%3E%3C/svg%3E'); */
 }
 
 
@@ -497,4 +485,62 @@ select#invoice_type_0 option {
 
 .ko-fa:hover {
     opacity: 0.7;
+}
+
+.o_form_renderer.o_form_nosheet,
+.o_dialog .o_form_view.o_form_nosheet {
+    padding: 16px !important;
+    box-sizing: border-box !important;
+}
+
+.o_dialog .o_notebook_content .tab-pane.active {
+    border: 1px solid var(--notebook-link-border-color-active) !important;
+    border-top: none !important;
+    border-radius: var(--nav-tabs-border-radius) !important;
+    padding: 14px 10px 10px 10px !important;
+}
+
+.o_dialog .modal-body h1 .o_field_widget span,
+.o_dialog .modal-body h1 .o_field_char span {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: normal !important;
+    font-family: Arial, sans-serif !important;
+}
+
+.o_dialog .modal-body.o_act_window {
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+
+.o_dialog .modal-body .o_content {
+    max-height: 70vh;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding-right: 8px;
+}
+
+.o_dialog .o_field_timezone_mismatch select,
+.o_dialog .o_field_selection select {
+    max-height: 300px;
+    overflow-y: auto !important;
+}
+
+.o_dialog .modal-content {
+    border-radius: 0px !important;
+}
+
+.o_dialog .modal-header {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.o_dialog .modal-footer {
+    border-top: none !important;
+    padding-top: 12px !important;
+}
+
+.o_dialog .oe_avatar img {
+    max-width: 80px !important;
+    max-height: 80px !important;
 }

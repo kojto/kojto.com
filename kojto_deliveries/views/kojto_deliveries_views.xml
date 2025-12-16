@@ -64,6 +64,7 @@
                                                 <button name="print_delivery_consumed_materials" string="Consumed Materials" type="object" class="dropdown-item"/>
                                                 <button name="print_delivery_origin_declaration" string="Origin Declaration" type="object" class="dropdown-item"/>
                                                 <button name="print_delivery_export_declaration" string="Export Declaration" type="object" class="dropdown-item"/>
+                                                <button name="print_delivery_certification_of_entry" string="Certification of Entry" type="object" class="dropdown-item"/>
                                                 <button name="print_delivery_dual_use_declaration" string="Dual Use Declaration" type="object" class="dropdown-item"/>
                                                 <button name="print_delivery_package_label" string="Package Label" type="object" class="dropdown-item"/>
                                                 <button name="action_import_delivery_content" string="Import Content" type="object" class="dropdown-item"/>

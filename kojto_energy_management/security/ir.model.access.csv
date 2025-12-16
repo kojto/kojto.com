@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_kojto_energy_management_prices_user,kojto.energy.management.prices.user,model_kojto_energy_management_prices,base.group_user,1,1,1,1
+access_kojto_energy_management_prices_manager,kojto.energy.management.prices.manager,model_kojto_energy_management_prices,base.group_system,1,1,1,1
+access_kojto_energy_management_prices_public,kojto.energy.management.prices.public,model_kojto_energy_management_prices,,1,1,1,0
+access_kojto_energy_management_base_prices_user,kojto.energy.management.base.prices.user,model_kojto_energy_management_base_prices,base.group_user,1,1,1,1
+access_kojto_energy_management_base_prices_manager,kojto.energy.management.base.prices.manager,model_kojto_energy_management_base_prices,base.group_system,1,1,1,1
+access_kojto_energy_management_devices_user,kojto.energy.management.devices.user,model_kojto_energy_management_devices,base.group_user,1,1,1,1
+access_kojto_energy_management_devices_manager,kojto.energy.management.devices.manager,model_kojto_energy_management_devices,base.group_system,1,1,1,1
+access_kojto_energy_management_power_meter_readings_user,kojto.energy.management.power.meter.readings.user,model_kojto_energy_management_power_meter_readings,base.group_user,1,1,1,0
+access_kojto_energy_management_power_meter_readings_manager,kojto.energy.management.power.meter.readings.manager,model_kojto_energy_management_power_meter_readings,base.group_system,1,1,1,1
+access_kojto_energy_management_monthly_summary_user,kojto.energy.management.monthly.summary.user,model_kojto_energy_management_monthly_summary,base.group_user,1,1,1,1
+access_kojto_energy_management_monthly_summary_manager,kojto.energy.management.monthly.summary.manager,model_kojto_energy_management_monthly_summary,base.group_system,1,1,1,1
+

@@ -34,5 +34,6 @@
                 <p class="o_view_nocontent_smiling_face">Create a Cashflow Allocation record</p>
             </field>
         </record>
+
     </data>
 </odoo>

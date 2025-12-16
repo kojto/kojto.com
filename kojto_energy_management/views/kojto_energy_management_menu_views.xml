@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Root Menu Item -->
+    <menuitem id="menu_kojto_energy_management_root" name="Energy Management" sequence="100"/>
+
+    <!-- Devices -->
+    <menuitem id="menu_kojto_energy_management_devices" name="Devices" parent="menu_kojto_energy_management_root" action="action_kojto_energy_management_devices" sequence="5"/>
+
+    <!-- Prices -->
+    <menuitem id="menu_kojto_energy_management_prices" name="Prices" parent="menu_kojto_energy_management_root" action="action_kojto_energy_management_prices" sequence="15"/>
+
+    <!-- Base Prices -->
+    <menuitem id="menu_kojto_energy_management_base_prices" name="Base Prices" parent="menu_kojto_energy_management_root" action="action_kojto_energy_management_base_prices" sequence="16"/>
+
+    <!-- Power Meter Readings -->
+    <menuitem id="menu_kojto_energy_management_power_meter_readings" name="Power Meter Readings" parent="menu_kojto_energy_management_root" action="action_kojto_energy_management_power_meter_readings" sequence="20"/>
+
+    <!-- Monthly Summary -->
+    <menuitem id="menu_kojto_energy_management_monthly_summary" name="Monthly Summary" parent="menu_kojto_energy_management_root" action="action_kojto_energy_management_monthly_summary" sequence="25"/>
+</odoo>

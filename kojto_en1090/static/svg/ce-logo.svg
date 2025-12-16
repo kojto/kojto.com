@@ -1,0 +1,7 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="800" height="800" fill="white"/>
+  <!-- Path 1: First Inner Shape (Unchanged) -->
+  <path d="M 340,201.0025 L 340,261.4359 A 140,140 0 1 0 340,538.5641 L 340,598.9975 A 200,200 0 1 1 340,201.0025 Z" stroke="black" stroke-width="1" fill="black"/>
+  <!-- Path 2: Second Inner Shape (Matching LWPOLYLINE E9 Sequence) -->
+  <path d="M 680,538.5641 L 680,598.9975 A 200,200 0 1 1 680,201.0025 L 680,261.4359 A 140,140 0 0 0 523.2521,370 L 640,370 L 640,430 L 523.2521,430 A 140,140 0 0 0 680,538.5641 Z" stroke="black" stroke-width="1" fill="black"/>
+</svg>

@@ -11,6 +11,7 @@ def compute_2dr_cutting_plan(self):
                 method=record.optimization_method,
                 width_of_cut=record.width_of_cut,
                 use_stock_priority=record.use_stock_priority,
+                allow_cut_rotation=record.allow_cut_rotation,
                 package=record,
                 margin_left=record.margin_left or 0.0,
                 margin_right=record.margin_right or 0.0,

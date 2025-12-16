@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 355 10 L 355 520 L 445 520 L 445 10" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 700 520 355 520 355 610 700 610 " fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <text x="543.17" y="540" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">2</text>
+  <text x="390" y="350" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">1</text>
+
+<path d="M412.63,188.38 L419.01,188.21 L425.4,187.96 L431.78,187.64 L438.15,187.23 L444.52,186.75 L450.18,188.8 L450.91,195.01 L450.14,201.35 L448.76,207.58 L446.78,213.65 L443.93,219.32 L437.93,220.25 L431.65,219.09 L425.33,218.14 L418.98,217.4 L412.62,216.87 L406.24,216.55 L393.46,216.55 L387.08,216.87 L380.72,217.4 L374.37,218.14 L368.05,219.09 L361.77,220.25 L355.77,219.32 L352.92,213.65 L350.94,207.58 L349.56,201.35 L348.79,195.01 L349.52,188.8 L355.18,186.75 L361.55,187.23 L367.92,187.64 L374.3,187.96 L380.69,188.21 L387.07,188.38 L393.46,188.47 L406.24,188.47 Z" fill="#e0e0e0" stroke="black" stroke-width="2" fill-opacity="0.8"  transform="translate(0,720) scale(1,-1)"/>
+</svg>

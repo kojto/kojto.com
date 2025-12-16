@@ -86,7 +86,7 @@ class KojtoHrEmployees(models.Model):
             self.env["kojto.hr.employee.subcode.rates"].create({
                 "employee_id": employee.id,
                 "subcode_id": default_subcode.id,
-                "datetime_start": fields.Datetime.now(),
+                "date_start": fields.Date.context_today(self),
                 "hour_rate": 1,
             })
 

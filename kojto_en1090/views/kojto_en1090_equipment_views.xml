@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_en1090_equipment_list" model="ir.ui.view">
+        <field name="name">kojto.en1090.equipment.list</field>
+        <field name="model">kojto.en1090.equipment</field>
+        <field name="arch" type="xml">
+            <list string="Equipment" editable="bottom" class="ko-list-main">
+                <field name="active" widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="equipment_type"/>
+                <field name="serial_number"/>
+                <field name="manufacturer"/>
+                <field name="model"/>
+                <field name="calibration_date" string="Calibrated On"/>
+                <field name="next_calibration_date" string="Next Calibration"/>
+                <field name="description"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_en1090_equipment_form" model="ir.ui.view">
+        <field name="name">kojto.en1090.equipment.form</field>
+        <field name="model">kojto.en1090.equipment</field>
+        <field name="arch" type="xml">
+            <form string="Equipment">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="equipment_type"/>
+                            <field name="manufacturer"/>
+                            <field name="model"/>
+                            <field name="serial_number"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                        <group>
+                            <field name="calibration_date"/>
+                            <field name="next_calibration_date"/>
+                            <field name="description" placeholder="Detailed description of the equipment..."/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" placeholder="Detailed description of the equipment..."/>
+                        </page>
+                        <page string="Certificates" name="certificates">
+                            <field name="welding_certificates_ids" context="{'default_equipment_id': id}">
+                                <list editable="bottom" class="ko-list-main">
+                                    <field name="name"/>
+                                    <field name="certificate_type"/>
+                                    <field name="certificate_number"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="issuing_authority_id"/>
+                                    <field name="active" widget="boolean_toggle"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_en1090_equipment_search" model="ir.ui.view">
+        <field name="name">kojto.en1090.equipment.search</field>
+        <field name="model">kojto.en1090.equipment</field>
+        <field name="arch" type="xml">
+            <search string="Search Equipment">
+                <field name="name"/>
+                <field name="equipment_type"/>
+                <field name="manufacturer"/>
+                <field name="model"/>
+                <field name="serial_number"/>
+                <separator/>
+                <filter string="Needs Calibration" name="needs_calibration" domain="[('next_calibration_date', '&lt;=', (context_today() + relativedelta(months=1)).strftime('%Y-%m-%d'))]"/>
+                <filter string="Expired Calibration" name="expired_calibration" domain="[('next_calibration_date', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Equipment Type" name="group_by_type" context="{'group_by': 'equipment_type'}"/>
+                    <filter string="Manufacturer" name="group_by_manufacturer" context="{'group_by': 'manufacturer'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_en1090_equipment" model="ir.actions.act_window">
+        <field name="name">Equipment</field>
+        <field name="res_model">kojto.en1090.equipment</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_en1090_equipment_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first equipment
+            </p>
+            <p>
+                Create equipment records to manage welding equipment, testing devices, and other tools.
+            </p>
+        </field>
+    </record>
+</odoo>

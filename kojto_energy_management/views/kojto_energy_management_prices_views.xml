@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_energy_management_prices_list" model="ir.ui.view">
+        <field name="name">kojto.energy.management.prices.list</field>
+        <field name="model">kojto.energy.management.prices</field>
+        <field name="arch" type="xml">
+            <list string="Energy Prices" class="ko-list-main" editable="bottom" create="false" delete="false">
+                <field name="period_start_cet" width="100" readonly="1"/>
+                <field name="period_end_cet" width="100" readonly="1"/>
+                <field name="period_start_utc" width="100" readonly="1"/>
+                <field name="period_end_utc" width="100" readonly="1"/>
+                <field name="exchange" width="50" readonly="1"/>
+                <field name="price_bgn_per_mwh" width="100" readonly="1"/>
+                <field name="price_eur_per_mwh" width="100" readonly="1"/>
+                <field name="volume_mwh" width="100" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_energy_management_prices_form" model="ir.ui.view">
+        <field name="name">kojto.energy.management.prices.form</field>
+        <field name="model">kojto.energy.management.prices</field>
+        <field name="arch" type="xml">
+            <form string="Energy Price">
+                <sheet>
+                    <group>
+                        <group string="Exchange Information">
+                            <field name="exchange"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Period (CET)">
+                            <field name="period_start_cet"/>
+                            <field name="period_end_cet"/>
+                        </group>
+                        <group string="Period saved as UTC shown in local time zone by odoo">
+                            <field name="period_start_utc"/>
+                            <field name="period_end_utc"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Prices">
+                            <field name="price_bgn_per_mwh"/>
+                            <field name="price_eur_per_mwh"/>
+                        </group>
+                        <group string="Volume">
+                            <field name="volume_mwh"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_energy_management_prices_search" model="ir.ui.view">
+        <field name="name">kojto.energy.management.prices.search</field>
+        <field name="model">kojto.energy.management.prices</field>
+        <field name="arch" type="xml">
+            <search string="Search Energy Prices">
+                <field name="exchange"/>
+                <field name="period_start_cet"/>
+                <field name="period_end_cet"/>
+                <filter string="IBEX" name="filter_ibex" domain="[('exchange', '=', 'IBEX')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Exchange" name="group_exchange" context="{'group_by': 'exchange'}"/>
+                    <filter string="Period Start (CET)" name="group_period_start_cet" context="{'group_by': 'period_start_cet'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_energy_management_prices" model="ir.actions.act_window">
+        <field name="name">Energy Prices</field>
+        <field name="res_model">kojto.energy.management.prices</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Energy Price record
+            </p>
+            <p>
+                Track energy prices from various exchanges and monitor volume data.
+            </p>
+        </field>
+    </record>
+
+    <!--
+    Note: IBEX price import is now handled by a Linux cron job.
+    See: management_machine_scripts/cron_import_ibex_prices.sh
+    To set up the cron job, run:
+    crontab -e -u odoo18
+    Add: 0 13,14 * * * /path/to/management_machine_scripts/cron_import_ibex_prices.sh >> /tmp/ibex_cron.log 2>&1
+    -->
+</odoo>
+

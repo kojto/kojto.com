@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List Views -->
+        <record id="view_kojto_en1090_doc_control_list" model="ir.ui.view">
+            <field name="name">kojto.en1090.doc.control.list</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" string="Control Documents">
+                    <field name="name" width="200"/>
+                    <field name="document_bundle_id" width="150"/>
+                    <field name="date_issue" width="120" />
+                    <field name="control_type" width="120"/>
+                    <field name="stage_of_production" width="120"/>
+                    <field name="control_performeted_by" width="150"/>
+                    <field name="evaluation" width="100"/>
+                    <field name="temperature" width="100"/>
+                    <field name="percent_of_testing" width="120"/>
+                    <field name="include_document_in_bundle" string="Include in Bundles" widget="boolean_toggle"/>
+                    <button name="print_document" type="object" class="btn-link" icon="fa-print" title="Print Control Document"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form Views -->
+        <record id="view_kojto_en1090_doc_control_form" model="ir.ui.view">
+            <field name="name">kojto.en1090.doc.control.form</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="arch" type="xml">
+                <form string="Control Document">
+                    <sheet class="ko-form-body ko-form-main">
+                        <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                            <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <field name="control_type" widget="selection" class="ko-form-view-title" style="margin-bottom: 10px!important"/>
+                                            <div class="border-start border-4 mx-2" style="height: 24px; margin-bottom: 10px!important" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 10px!important"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                        <button name="print_document" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Print Control Document">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top"/>
+                        <div class="row">
+                            <group class="col-lg-4">
+                                <field name="include_document_in_bundle" string="Include in Bundles" widget="boolean_toggle"/>
+                                <field name="document_bundle_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="date_issue" />
+                                <field name="technical_document_revision_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="control_performeted_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="stage_of_production" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="temperature" />
+                                <field name="percent_of_testing" />
+                                <field name="illuminance" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="defect_indications" />
+                                <field name="results_statement" />
+                                <field name="evaluation" />
+                            </group>
+                        </div>
+
+                        <!-- VT Mixin Fields -->
+                        <div class="row" invisible="not is_vt">
+                            <group string="Visual Testing Details"/>
+                            <group class="col-lg-4">
+                                <field name="observation_angle" />
+                                <field name="distance" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="vt_procedure_standard" />
+                                <field name="vt_methods_of_testing" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="vt_acceptance_standard" />
+                                <field name="vt_acceptance_level" />
+                            </group>
+                        </div>
+
+                        <!-- RT Mixin Fields -->
+                        <div class="row" invisible="not is_rt">
+                            <group string="Radiographic Testing Details"/>
+                            <group class="col-lg-4">
+                                <field name="radiation_source_type" />
+                                <field name="radiation_source_activity" />
+                                <field name="radiation_source_energy" />
+                                <field name="exposure_time" />
+                                <field name="kv_value" />
+                                <field name="ma_value" />
+                                <field name="focal_spot_size" />
+                                <field name="source_to_film_distance" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="film_to_object_distance" />
+                                <field name="film_type" />
+                                <field name="film_grade" />
+                                <field name="film_size" />
+                                <field name="intensifying_screens" />
+                                <field name="film_processing" />
+                                <field name="image_quality_indicator" />
+                                <field name="sensitivity" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="density" />
+                                <field name="contrast" />
+                                <field name="unsharpness" />
+                                <field name="geometric_magnification" />
+                                <field name="radiation_angle" />
+                                <field name="radiation_direction" />
+                                <field name="rt_acceptance_level" />
+                                <field name="rt_acceptance_standard" />
+                                <field name="rt_procedure_standard" />
+                                <field name="rt_methods_of_testing" />
+                            </group>
+                        </div>
+
+                        <!-- MT Mixin Fields -->
+                        <div class="row" invisible="not is_mt">
+                            <group string="Magnetic Particle Testing Details"/>
+                            <group class="col-lg-4">
+                                <field name="mt_procedure_standard" />
+                                <field name="mt_methods_of_testing" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="mt_acceptance_standard" />
+                                <field name="mt_acceptance_level" />
+                            </group>
+
+                        </div>
+
+                        <!-- PT Mixin Fields -->
+                        <div class="row" invisible="not is_pt">
+                            <group string="Penetrant Testing Details"/>
+                            <group class="col-lg-4">
+                                <field name="pt_procedure_standard" />
+                                <field name="pt_methods_of_testing" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="pt_acceptance_standard" />
+                                <field name="pt_acceptance_level" />
+                            </group>
+                        </div>
+
+                        <!-- UT Mixin Fields -->
+                        <div class="row" invisible="not is_ut">
+                            <group string="Ultrasonic Testing Details"/>
+                            <group class="col-lg-4">
+                                <field name="sector" />
+                                <field name="diameter" />
+                                <field name="wall_thickness" />
+                                <field name="scheme" />
+                                <field name="position" />
+                                <field name="probe" />
+                                <field name="area_of_scanning_from" />
+                                <field name="area_of_scanning_to" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="type_of_defect" />
+                                <field name="amplitude" />
+                                <field name="axis_x" />
+                                <field name="axis_lx" />
+                                <field name="axis_y" />
+                                <field name="axis_ly" />
+                                <field name="axis_z" />
+                                <field name="axis_lz" />
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="ut_procedure_standard" />
+                                <field name="ut_methods_of_testing" />
+                                <field name="ut_acceptance_standard" />
+                                <field name="ut_acceptance_level" />
+                            </group>
+                        </div>
+
+                        <!-- CL Mixin Fields -->
+                        <div class="row" invisible="not is_cl">
+                            <group string="Check List Details"/>
+                            <group class="col-lg-4">
+                                <field name="cl_acceptance_level" />
+                            </group>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12" string="Welding Seams">
+                                <group string="Welding seams"/>
+                                <field name="welding_seam_ids" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                                    <list>
+                                        <field name="consequtive_number" />
+                                        <field name="name" />
+                                        <field name="seam_length" />
+                                        <field name="seam_thickness" />
+                                        <field name="applicable_wps_id" />
+                                        <field name="welding_task_id" />
+                                    </list>
+                                </field>
+                            </div>
+                            <div class="col-lg-12" string="Equipment">
+                                <group string="Equipment"/>
+                                <field name="equipment_ids" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                                    <list>
+                                        <field name="name" />
+                                        <field name="equipment_type" />
+                                        <field name="model" />
+                                        <field name="serial_number" />
+                                        <field name="calibration_date" widget="date"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search Views -->
+        <record id="view_kojto_en1090_doc_control_search" model="ir.ui.view">
+            <field name="name">kojto.en1090.doc.control.search</field>
+            <field name="model">kojto.en1090.doc.control</field>
+            <field name="arch" type="xml">
+                <search string="Control Documents">
+                    <field name="name" />
+                    <field name="document_bundle_id" />
+                    <field name="date_issue" />
+                    <field name="control_type" />
+                    <field name="control_performeted_by" />
+                    <field name="evaluation" />
+                    <separator />
+                    <filter string="This Month" name="this_month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]" />
+                    <group expand="0" string="Group By">
+                        <filter string="Document Bundle" name="group_by_bundle" context="{'group_by': 'document_bundle_id'}" />
+                        <filter string="Control Type" name="group_by_type" context="{'group_by': 'control_type'}" />
+                        <filter name="group_by_control_performed" string="Control Performed By" context="{'group_by': 'control_performeted_by'}" />
+                        <filter string="Month" name="group_by_month" context="{'group_by': 'date_issue:month'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="action_kojto_en1090_doc_control" model="ir.actions.act_window">
+            <field name="name">Control Documents</field>
+            <field name="res_model">kojto.en1090.doc.control</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Control Document
+                </p>
+                <p>
+                    Create a new Control Document to record your quality control activities.
+                    This document provides essential information about the control process,
+                    including the type of control, methods used, and results obtained.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

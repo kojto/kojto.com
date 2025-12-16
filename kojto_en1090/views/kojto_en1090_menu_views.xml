@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Main Menu -->
+		<menuitem name="EN1090" id="menu_kojto_en1090_parent" sequence="10" web_icon="kojto_en1090,static/description/icon.png"/>
+
+		<!-- Document Management -->
+		<menuitem name="Document Bundles" id="menu_kojto_en1090_document_bundles" sequence="10" parent="menu_kojto_en1090_parent" action="action_kojto_en1090_document_bundles"/>
+        <menuitem name="Tasks" id="menu_kojto_en1090_doc_welding_tasks" sequence="40" parent="menu_kojto_en1090_parent" action="action_kojto_en1090_doc_welding_tasks" />
+		<menuitem name="Control" id="menu_kojto_en1090_doc_control" sequence="50" parent="menu_kojto_en1090_parent" action="action_kojto_en1090_doc_control" />
+
+		<!-- General Menu -->
+		<menuitem name="[+] General Documents" id="menu_kojto_en1090_general" sequence="200" parent="menu_kojto_en1090_parent" />
+		<menuitem name="WPQRs" id="menu_kojto_en1090_wpqr" sequence="80" parent="menu_kojto_en1090_general" action="action_kojto_en1090_wpqr" />
+		<menuitem name="WPS" id="menu_kojto_en1090_wps" sequence="90" parent="menu_kojto_en1090_general" action="action_kojto_en1090_wps"/>
+
+		<!-- General Menu -->
+		<menuitem name="[+] Settings" id="menu_kojto_en1090_settings" sequence="300" parent="menu_kojto_en1090_parent" />
+		<menuitem name="Welding Certificates" id="menu_kojto_en1090_welding_certificates" sequence="10" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_welding_certificates" />
+		<menuitem name="Weld Geometries" id="menu_kojto_en1090_weld_geometries" sequence="30" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_weld_geometries" />
+		<menuitem name="Welding Specialists" id="menu_kojto_en1090_welding_specialists" sequence="40" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_welding_specialists" />
+		<menuitem name="Welding Processes" id="menu_kojto_en1090_welding_processes" sequence="50" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_welding_processes" />
+		<menuitem name="Welding Parameters" id="menu_kojto_en1090_welding_parameters" sequence="60" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_welding_parameters" />
+		<menuitem name="Equipment" id="menu_kojto_en1090_equipment" sequence="100" parent="menu_kojto_en1090_settings" action="action_kojto_en1090_equipment" />
+	</data>
+</odoo>

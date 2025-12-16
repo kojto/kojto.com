@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <!-- Ensure contact with id=1 exists on install and upgrade -->
+        <function model="kojto.contacts" name="ensure_contact_1_exists"/>
+    </data>
+</odoo>

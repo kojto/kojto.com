@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 574.91 172.28 L 574.91 368.41" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 529.94 231.6 L 529.94 427.73" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 519.94 231.6 L 529.94 181.6 L 539.94 231.6 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 564.91 368.41 L 574.91 418.41 L 584.91 368.41 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 390 90 L 400 40 L 410 90 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 229.53 159.13 L 201.25 116.71 L 243.67 144.99 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 390 530 L 400 580 L 410 530 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 229.53 460.87 L 201.25 503.29 L 243.67 475.01 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 185 300 L 135 310 L 185 320 Z" fill="" stroke="black" stroke-width="2"/>
+  <path d="M 625 85 L 625 535 L 700 535 L 700 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 625 85 L 700 85 L 700 10 L 400 10 L 475 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 325 85 L 400 10 L 100 10 L 100 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 175 235 L 100 310 L 100 85 L 175 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 175 385 L 100 310 L 100 535 L 175 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 175 535 L 100 535 L 100 610 L 400 610 L 325 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 700 610 L 700 535 L 475 535 L 400 610 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <text x="380" y="100.0" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PE</text>
+  <text x="241.25" y="150" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PD</text>
+  <text x="201.38" y="290" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PC</text>
+  <text x="241.25" y="420" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PB</text>
+  <text x="380" y="480" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PA</text>
+  <text x="510" y="450" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PF</text>
+  <text x="550" y="120" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PG</text>
+</svg>

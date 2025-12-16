@@ -17,24 +17,24 @@ class KojtoWarehousesTransactions(models.Model):
 
     name = fields.Char("Name", required=True, copy=False, default=lambda self: get_temp_name(self._context.get('to_from_store', 'from_store'), TRANSACTION_PREFIXES, DEFAULT_PREFIX))
 
-    item_id = fields.Many2one("kojto.warehouses.items", string="Item", required=True, ondelete="cascade")
-    batch_id = fields.Many2one("kojto.warehouses.batches", string="Batch", related="item_id.batch_id", readonly=True)
-    identifier_id = fields.Char(string="Identifier ID", related="batch_id.invoice_content_id.identifier_id.identifier", readonly=True, store=True)
+    item_id = fields.Many2one("kojto.warehouses.items", string="Item", required=True, ondelete="cascade", index=True)
+    batch_id = fields.Many2one("kojto.warehouses.batches", string="Batch", related="item_id.batch_id", readonly=True, store=True, index=True)
+    identifier_id = fields.Char(string="Identifier ID", related="batch_id.invoice_content_id.identifier_id.identifier", readonly=True, store=True, index=True)
 
-    subcode_id = fields.Many2one("kojto.commission.subcodes", string="Subcode", required=True)
+    subcode_id = fields.Many2one("kojto.commission.subcodes", string="Subcode", required=True, index=True)
 
     parent_item_id = fields.Many2one("kojto.warehouses.items", string="Parent Item", related="item_id.parent_item_id", readonly=True)
-    date_issue = fields.Date(string="Issue Date", default=fields.Date.today)
+    date_issue = fields.Date(string="Issue Date", default=fields.Date.today, index=True)
     issued_by = fields.Many2one("kojto.hr.employees", string="Issued By", default=lambda self: self.env.user.employee, readonly=True)
     transaction_unit_id = fields.Many2one("kojto.base.units", string="Unit", related="item_id.unit_id")
-    transaction_quantity = fields.Float(string="Quantity", compute="compute_transaction_quantity")
+    transaction_quantity = fields.Float(string="Quantity", compute="compute_transaction_quantity", store=True)
     transaction_quantity_override = fields.Float(string="Quantity", default=1.0)
-    to_from_store = fields.Selection([('to_store', 'To Store'), ('from_store', 'From Store')], string="In / Out", required=True, default='from_store')
+    to_from_store = fields.Selection([('to_store', 'To Store'), ('from_store', 'From Store')], string="In / Out", required=True, default='from_store', index=True)
     item_summary = fields.Text(string="Item Summary", related="item_id.item_summary")
     is_part_type = fields.Boolean(string="Is Part Type", compute="_compute_is_part_type")
 
     # Pre-VAT transaction values (computed for performance)
-    transaction_value_pre_vat_eur = fields.Float(string="Transaction Value", digits=(16, 2), compute="_compute_transaction_value_pre_vat", store=True, help="Transaction value in EUR before VAT, calculated using exchange rate at transaction date")
+    transaction_value_pre_vat_eur = fields.Float(string="Transaction Value", digits=(16, 2), compute="_compute_transaction_value_pre_vat", store=True, index=True, help="Transaction value in EUR before VAT, calculated using exchange rate at transaction date")
     currency_id = fields.Many2one("res.currency", string="Currency", compute="_compute_currency_id", readonly=True, help="Currency for monetary widget (always EUR)")
 
     receipt_id = fields.Many2one("kojto.warehouses.receipts", string="Receipt", ondelete='cascade')

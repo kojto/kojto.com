@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_kojto_optimizer_2d" model="ir.actions.report">
+            <field name="name">2D Cutting Package Report</field>
+            <field name="model">kojto.optimizer.2d.packages</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">kojto_optimizer.print_kojto_optimizer_2d_packages</field>
+        </record>
+    </data>
+</odoo>
+

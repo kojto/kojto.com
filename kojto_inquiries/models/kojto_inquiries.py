@@ -150,10 +150,20 @@ class KojtoInquiries(models.Model):
         self.ensure_one()
         header = "Position\tName\tQuantity\tUnit\n"
         if self.content:
-            lines = [
-                f"{content.position or ''}\t{content.name or ''}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}"
-                for content in self.content
-            ]
+            lines = []
+            for content in self.content:
+                # Replace newlines and multiple whitespace in name with single space
+                name = content.name or ''
+                if name:
+                    name = ' '.join(name.split())  # Replace all whitespace (including newlines) with single space
+
+                position = content.position or ''
+                if position:
+                    position = ' '.join(position.split())  # Also clean position field
+
+                lines.append(
+                    f"{position}\t{name}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}"
+                )
             first_line = lines[0].split("\t") if lines else []
             is_header = (
                 len(first_line) >= 4 and

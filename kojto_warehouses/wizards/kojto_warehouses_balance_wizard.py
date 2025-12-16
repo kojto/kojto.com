@@ -13,6 +13,7 @@ from odoo import models, fields, api
 from odoo.exceptions import UserError
 from datetime import datetime
 from .utils.kojto_warehouses_balance_wizard_calculations import calculate_warehouse_balance
+import json
 
 
 class KojtoWarehousesBalanceWizard(models.TransientModel):
@@ -43,6 +44,9 @@ class KojtoWarehousesBalanceWizard(models.TransientModel):
     beginning_value = fields.Float(string="Beginning Value (EUR)", digits=(16, 2), compute="_compute_summary_values", readonly=True)
     ending_value = fields.Float(string="Ending Value (EUR)", digits=(16, 2), compute="_compute_summary_values", readonly=True)
     total_transactions_value = fields.Float(string="Total Transactions Value (EUR)", digits=(16, 2), compute="_compute_summary_values", readonly=True)
+
+    # Cache field for transaction data (to avoid creating thousands of records)
+    transaction_lines_cache = fields.Text(string="Transaction Lines Cache", readonly=True)
 
     # Currency field for monetary widget (always EUR)
     currency_id = fields.Many2one("res.currency", string="Currency", compute="_compute_currency_id", readonly=True)
@@ -128,15 +132,17 @@ class KojtoWarehousesBalanceWizard(models.TransientModel):
             (0, 0, dict(line_data, wizard_id=self.id))
             for line_data in calculated_data['warehouse_balance_lines']
         ]
-        transaction_lines = [
-            (0, 0, dict(line_data, wizard_id=self.id))
-            for line_data in calculated_data['transaction_lines']
-        ]
+
+        # DON'T create transaction_lines here - only create them when needed (Excel export)
+        # This dramatically improves performance by avoiding creation of thousands of records
+        # Store the transaction data as JSON in a text field for later use
+        transaction_lines_json = json.dumps(calculated_data['transaction_lines'], default=str)
 
         # Update wizard with results (consolidated line first, then individual warehouses)
         self.write({
             'warehouse_balance_line_ids': [(5, 0, 0)] + consolidated_line + warehouse_lines,
-            'transaction_line_ids': [(5, 0, 0)] + transaction_lines,
+            'transaction_line_ids': [(5, 0, 0)],  # Clear transaction lines
+            'transaction_lines_cache': transaction_lines_json,  # Cache data as JSON
         })
 
     @api.depends("date_from", "date_to")
@@ -342,7 +348,7 @@ class KojtoWarehousesBalanceWizard(models.TransientModel):
 
             record.subcode_identifier_line_ids = subcode_identifier_lines
 
-    @api.depends("warehouse_balance_line_ids", "transaction_line_ids")
+    @api.depends("warehouse_balance_line_ids", "transaction_lines_cache")
     def _compute_summary_values(self):
         """Compute summary values"""
         for record in self:
@@ -352,9 +358,15 @@ class KojtoWarehousesBalanceWizard(models.TransientModel):
             record.ending_value = sum(
                 record.warehouse_balance_line_ids.mapped("ending_value")
             )
-            record.total_transactions_value = sum(
-                record.transaction_line_ids.mapped("transaction_value_eur")
-            )
+            # Calculate from cached JSON data if available
+            total_tx_value = 0.0
+            if record.transaction_lines_cache:
+                try:
+                    transaction_data = json.loads(record.transaction_lines_cache)
+                    total_tx_value = sum(tx.get('transaction_value_eur', 0.0) for tx in transaction_data)
+                except:
+                    pass
+            record.total_transactions_value = total_tx_value
 
     def action_export_balance_to_excel(self):
         """Export all balance data to Excel"""

@@ -12,6 +12,7 @@
                 <field name="description" />
                 <field name="date_issue" />
                 <field name="optimization_method" />
+                <field name="allow_cut_rotation" widget="boolean_toggle"/>
                 <field name="stock_rectangles_ids" string="Stock Rectangles" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
                 <field name="cutted_rectangles_ids" string="Cut Rectangles" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
                 <field name="issued_by" />
@@ -78,6 +79,7 @@
                                         <field name="material_id"/>
                                         <field name="thickness" string="Thickness (mm)"/>
                                         <field name="use_stock_priority"/>
+                                        <field name="allow_cut_rotation" widget="boolean_toggle"/>
                                     </group>
                                 </div>
                                 <div class="col-lg-4">

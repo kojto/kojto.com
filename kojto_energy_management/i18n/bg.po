@@ -1,0 +1,710 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_energy_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-13 12:00:00\n"
+"PO-Revision-Date: 2025-10-13 12:00:00\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: bg\n"
+
+#. module: kojto_energy_management
+#: model:ir.model,name:kojto_energy_management.model_kojto_energy_management_prices
+msgid "Energy Management Prices"
+msgstr "Цени на Електроенергия"
+
+#. module: kojto_energy_management
+#: model:ir.actions.act_window,name:kojto_energy_management.action_kojto_energy_management_prices
+#: model:ir.ui.menu,name:kojto_energy_management.menu_kojto_energy_management_prices
+msgid "Energy Prices"
+msgstr "Цени на Електроенергия"
+
+#. module: kojto_energy_management
+#: model:ir.ui.menu,name:kojto_energy_management.menu_kojto_energy_management_root
+msgid "Energy Management"
+msgstr "Управление на Електроенергия"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__period_start_cet
+msgid "Period Start (CET)"
+msgstr "Начало на Период (CET)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__period_end_cet
+msgid "Period End (CET)"
+msgstr "Край на Период (CET)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__period_start_utc
+msgid "Period Start (UTC)"
+msgstr "Начало на Период (UTC)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__period_end_utc
+msgid "Period End (UTC)"
+msgstr "Край на Период (UTC)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__price_bgn_per_mwh
+msgid "Price BGN per MWh"
+msgstr "Цена BGN за MWh"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__price_eur_per_mwh
+msgid "Price EUR per MWh"
+msgstr "Цена EUR за MWh"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__volume_mwh
+msgid "Volume (MWh)"
+msgstr "Обем (MWh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__exchange
+msgid "Exchange"
+msgstr "Борса"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_prices__display_name
+msgid "Display Name"
+msgstr "Показвано Име"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__period_start_cet
+msgid "Start of the period in Central European Time"
+msgstr "Начало на периода в Централноевропейско време"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__period_end_cet
+msgid "End of the period in Central European Time"
+msgstr "Край на периода в Централноевропейско време"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__period_start_utc
+msgid "Start of the period in UTC"
+msgstr "Начало на периода в UTC"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__period_end_utc
+msgid "End of the period in UTC"
+msgstr "Край на периода в UTC"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__price_bgn_per_mwh
+msgid "Energy price in Bulgarian Lev per MWh"
+msgstr "Цена на електроенергия в Български лев за MWh"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__price_eur_per_mwh
+msgid "Energy price in Euro per MWh"
+msgstr "Цена на електроенергия в Евро за MWh"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__volume_mwh
+msgid "Energy volume in Megawatt-hours"
+msgstr "Обем на електроенергия в Мегават-часове"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_prices__exchange
+msgid "Energy exchange name (e.g., IBEX)"
+msgstr "Име на енергийна борса (напр. IBEX)"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Period Start (CET) must be before Period End (CET)"
+msgstr "Начало на период (CET) трябва да е преди Край на период (CET)"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Period Start (UTC) must be before Period End (UTC)"
+msgstr "Начало на период (UTC) трябва да е преди Край на период (UTC)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_form
+msgid "Exchange Information"
+msgstr "Информация за Борсата"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_form
+msgid "Period (CET)"
+msgstr "Период (CET)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_form
+msgid "Period (UTC)"
+msgstr "Период (UTC)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_form
+msgid "Prices"
+msgstr "Цени"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_form
+msgid "Volume"
+msgstr "Обем"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_search
+msgid "Search Energy Prices"
+msgstr "Търсене на Цени на Електроенергия"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_search
+msgid "IBEX"
+msgstr "IBEX"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_search
+msgid "Group By"
+msgstr "Групирай по"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_prices
+msgid "Create your first Energy Price record"
+msgstr "Създайте първия си запис за цена на електроенергия"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_prices
+msgid "Track energy prices from various exchanges and monitor volume data."
+msgstr "Следете цените на електроенергията от различни борси и наблюдавайте данните за обема."
+
+#. module: kojto_energy_management
+#: model:ir.model,name:kojto_energy_management.model_kojto_energy_management_power_meters
+msgid "Energy Management Power Meters"
+msgstr "Електромери за Управление на Електроенергия"
+
+#. module: kojto_energy_management
+#: model:ir.actions.act_window,name:kojto_energy_management.action_kojto_energy_management_power_meters
+#: model:ir.ui.menu,name:kojto_energy_management.menu_kojto_energy_management_power_meters
+msgid "Power Meters"
+msgstr "Електромери"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__name
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__domain_ip
+msgid "Domain / IP"
+msgstr "Домейн / IP"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__port
+msgid "Port"
+msgstr "Порт"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__unit
+msgid "Unit ID"
+msgstr "ID на Устройство"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__active
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_a
+msgid "L1 Current Registry"
+msgstr "Регистър Ток L1"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_a
+msgid "L2 Current Registry"
+msgstr "Регистър Ток L2"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_a
+msgid "L3 Current Registry"
+msgstr "Регистър Ток L3"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_v
+msgid "L1 Voltage Registry"
+msgstr "Регистър Напрежение L1"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_v
+msgid "L2 Voltage Registry"
+msgstr "Регистър Напрежение L2"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_v
+msgid "L3 Voltage Registry"
+msgstr "Регистър Напрежение L3"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_l2_v
+msgid "L1-L2 Line Voltage Registry"
+msgstr "Регистър Линейно Напрежение L1-L2"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_l3_v
+msgid "L2-L3 Line Voltage Registry"
+msgstr "Регистър Линейно Напрежение L2-L3"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_l1_v
+msgid "L3-L1 Line Voltage Registry"
+msgstr "Регистър Линейно Напрежение L3-L1"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_p_kw
+msgid "Active Power Registry"
+msgstr "Регистър Активна Мощност"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_phi
+msgid "Power Factor Registry"
+msgstr "Регистър Коефициент на Мощност"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_f_hz
+msgid "Frequency Registry"
+msgstr "Регистър Честота"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_exp_kwh
+msgid "Exported Energy Registry"
+msgstr "Регистър Износ на Енергия"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_imp_kwh
+msgid "Imported Energy Registry"
+msgstr "Регистър Внос на Енергия"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_tot_react_exp
+msgid "Exported Reactive Energy Registry"
+msgstr "Регистър Износ на Реактивна Енергия"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__reg_tot_react_imp
+msgid "Imported Reactive Energy Registry"
+msgstr "Регистър Внос на Реактивна Енергия"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meters__notes
+msgid "Notes"
+msgstr "Бележки"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__name
+msgid "Unique name for the power meter"
+msgstr "Уникално име на електромера"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__domain_ip
+msgid "IP address or domain name of the power meter"
+msgstr "IP адрес или домейн име на електромера"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__port
+msgid "Modbus TCP port (default: 502)"
+msgstr "Modbus TCP порт (по подразбиране: 502)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__unit
+msgid "Modbus unit identifier"
+msgstr "Modbus идентификатор на устройство"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__active
+msgid "Set to false to disable this power meter"
+msgstr "Задайте на неактивен, за да деактивирате този електромер"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_a
+msgid "Registry address for L1 phase current (A)"
+msgstr "Адрес на регистър за фазен ток L1 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_a
+msgid "Registry address for L2 phase current (A)"
+msgstr "Адрес на регистър за фазен ток L2 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_a
+msgid "Registry address for L3 phase current (A)"
+msgstr "Адрес на регистър за фазен ток L3 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_v
+msgid "Registry address for L1 phase voltage (V)"
+msgstr "Адрес на регистър за фазно напрежение L1 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_v
+msgid "Registry address for L2 phase voltage (V)"
+msgstr "Адрес на регистър за фазно напрежение L2 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_v
+msgid "Registry address for L3 phase voltage (V)"
+msgstr "Адрес на регистър за фазно напрежение L3 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l1_l2_v
+msgid "Registry address for L1-L2 line voltage (V)"
+msgstr "Адрес на регистър за линейно напрежение L1-L2 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l2_l3_v
+msgid "Registry address for L2-L3 line voltage (V)"
+msgstr "Адрес на регистър за линейно напрежение L2-L3 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_l3_l1_v
+msgid "Registry address for L3-L1 line voltage (V)"
+msgstr "Адрес на регистър за линейно напрежение L3-L1 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_p_kw
+msgid "Registry address for active power (W, will be converted to kW)"
+msgstr "Адрес на регистър за активна мощност (W, ще бъде преобразуван в kW)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_phi
+msgid "Registry address for power factor (Phi/Cos φ)"
+msgstr "Адрес на регистър за коефициент на мощност (Phi/Cos φ)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_f_hz
+msgid "Registry address for frequency (Hz)"
+msgstr "Адрес на регистър за честота (Hz)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_exp_kwh
+msgid "Registry address for exported active energy (kWh)"
+msgstr "Адрес на регистър за износ на активна енергия (kWh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_imp_kwh
+msgid "Registry address for imported active energy (kWh)"
+msgstr "Адрес на регистър за внос на активна енергия (kWh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_tot_react_exp
+msgid "Registry address for total exported reactive energy (kVArh)"
+msgstr "Адрес на регистър за общ износ на реактивна енергия (kVArh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__reg_tot_react_imp
+msgid "Registry address for total imported reactive energy (kVArh)"
+msgstr "Адрес на регистър за общ внос на реактивна енергия (kVArh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,help:kojto_energy_management.field_kojto_energy_management_power_meters__notes
+msgid "Additional notes about this power meter"
+msgstr "Допълнителни бележки за този електромер"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_power_meters.py:0
+msgid "The power meter name must be unique!"
+msgstr "Името на електромера трябва да е уникално!"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_power_meters.py:0
+msgid "Port must be between 1 and 65535"
+msgstr "Портът трябва да е между 1 и 65535"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_power_meters.py:0
+msgid "Modbus Unit ID must be between 1 and 247"
+msgstr "Modbus ID на устройство трябва да е между 1 и 247"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Archived"
+msgstr "Архивиран"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Connection Information"
+msgstr "Информация за Връзка"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Current Registers"
+msgstr "Регистри за Ток"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Phase Current (A)"
+msgstr "Фазен Ток (A)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Voltage Registers"
+msgstr "Регистри за Напрежение"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Phase Voltage (V)"
+msgstr "Фазно Напрежение (V)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Line Voltage (V)"
+msgstr "Линейно Напрежение (V)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Power &amp; Frequency Registers"
+msgstr "Регистри за Мощност &amp; Честота"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Power Measurements"
+msgstr "Измервания на Мощност"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Energy Counter Registers"
+msgstr "Регистри за Броячи на Енергия"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Active Energy (kWh)"
+msgstr "Активна Енергия (kWh)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_form
+msgid "Reactive Energy (kVArh)"
+msgstr "Реактивна Енергия (kVArh)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_search
+msgid "Search Power Meters"
+msgstr "Търсене на Електромери"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meters_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_power_meters
+msgid "Create your first Power Meter"
+msgstr "Създайте първия си Електромер"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_power_meters
+msgid "Configure power meters with Modbus TCP connection settings and registry addresses for monitoring electrical parameters."
+msgstr "Конфигурирайте електромери с настройки за Modbus TCP връзка и адреси на регистри за наблюдение на електрически параметри."
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_landingpage_form_inherit
+msgid "Energy"
+msgstr "Енергия"
+
+#. module: kojto_energy_management
+#: model:ir.model,name:kojto_energy_management.model_kojto_energy_management_power_meter_readings
+msgid "Energy Management Power Meter Readings"
+msgstr "Отчети от Електромери"
+
+#. module: kojto_energy_management
+#: model:ir.actions.act_window,name:kojto_energy_management.action_kojto_energy_management_power_meter_readings
+#: model:ir.ui.menu,name:kojto_energy_management.menu_kojto_energy_management_power_meter_readings
+msgid "Readings"
+msgstr "Отчети"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__power_meter_id
+msgid "Power Meter"
+msgstr "Електромер"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__datetime_utc
+msgid "DateTime (UTC)"
+msgstr "Дата и Час (UTC)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l1_a
+msgid "L1 Current (A)"
+msgstr "Ток L1 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l2_a
+msgid "L2 Current (A)"
+msgstr "Ток L2 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l3_a
+msgid "L3 Current (A)"
+msgstr "Ток L3 (A)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l1_v
+msgid "L1 Voltage (V)"
+msgstr "Напрежение L1 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l2_v
+msgid "L2 Voltage (V)"
+msgstr "Напрежение L2 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l3_v
+msgid "L3 Voltage (V)"
+msgstr "Напрежение L3 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l1_l2_v
+msgid "L1-L2 Voltage (V)"
+msgstr "Напрежение L1-L2 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l2_l3_v
+msgid "L2-L3 Voltage (V)"
+msgstr "Напрежение L2-L3 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__l3_l1_v
+msgid "L3-L1 Voltage (V)"
+msgstr "Напрежение L3-L1 (V)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__p_kw
+msgid "Active Power (kW)"
+msgstr "Активна Мощност (kW)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__phi
+msgid "Power Factor (Phi)"
+msgstr "Коефициент на Мощност (Phi)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__f_hz
+msgid "Frequency (Hz)"
+msgstr "Честота (Hz)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__exp_kwh
+msgid "Exported Energy (kWh)"
+msgstr "Износ на Енергия (kWh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__imp_kwh
+msgid "Imported Energy (kWh)"
+msgstr "Внос на Енергия (kWh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__tot_react_exp_kvarh
+msgid "Exported Reactive Energy (kVArh)"
+msgstr "Износ на Реактивна Енергия (kVArh)"
+
+#. module: kojto_energy_management
+#: model:ir.model.fields,field_description:kojto_energy_management.field_kojto_energy_management_power_meter_readings__tot_react_imp_kvarh
+msgid "Imported Reactive Energy (kVArh)"
+msgstr "Внос на Реактивна Енергия (kVArh)"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_list
+msgid "Power Meter Readings"
+msgstr "Отчети от Електромери"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_form
+msgid "Power Meter Reading"
+msgstr "Отчет от Електромер"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_form
+msgid "Reading Information"
+msgstr "Информация за Отчета"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_form
+msgid "Current &amp; Voltage"
+msgstr "Ток &amp; Напрежение"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_search
+msgid "Search Power Meter Readings"
+msgstr "Търсене на Отчети от Електромери"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_search
+msgid "Today"
+msgstr "Днес"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_search
+msgid "Last 7 Days"
+msgstr "Последните 7 Дни"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_search
+msgid "This Month"
+msgstr "Този Месец"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_power_meter_readings_search
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_power_meter_readings
+msgid "No readings recorded yet"
+msgstr "Все още няма записани отчети"
+
+#. module: kojto_energy_management
+#: model_terms:ir.actions.act_window,help:kojto_energy_management.action_kojto_energy_management_power_meter_readings
+msgid "Power meter readings will appear here automatically as they are collected from the devices."
+msgstr "Отчетите от електромерите ще се появят тук автоматично, когато бъдат събрани от устройствата."
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_power_meter_readings.py:0
+msgid "A reading for this power meter at this time already exists!"
+msgstr "Вече съществува отчет за този електромер в този момент!"
+
+#. module: kojto_energy_management
+#: model_terms:ir.ui.view,arch_db:kojto_energy_management.view_kojto_energy_management_prices_list
+msgid "Import IBEX Prices"
+msgstr "Импортирай Цени от IBEX"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Success"
+msgstr "Успех"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Imported %s new price records. Refresh the list to see new data."
+msgstr "Импортирани %s нови ценови записа. Опреснете списъка, за да видите новите данни."
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Scraper script not found at: %s"
+msgstr "Скриптът за импорт не е намерен на: %s"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Import failed: %s"
+msgstr "Импортът е неуспешен: %s"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Import timeout (5 minutes). Please try again later."
+msgstr "Времето на импорта изтече (5 минути). Моля, опитайте отново по-късно."
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Failed to parse scraper output"
+msgstr "Неуспешно обработване на изхода от скрипта"
+
+#. module: kojto_energy_management
+#: code:addons/kojto_energy_management/models/kojto_energy_management_prices.py:0
+msgid "Failed to run price import: %s"
+msgstr "Неуспешно стартиране на импорта на цени: %s"
+

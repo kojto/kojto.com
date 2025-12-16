@@ -7,7 +7,7 @@
     "website": "https://www.kojto.com",
     "category": "KOJTO",
     "sequence": 9,
-    "version": "18.04.07",
+    "version": "18.04.08",
     "depends": ["kojto_file_assets"],
     "data": [
         "security/ir.model.access.csv",

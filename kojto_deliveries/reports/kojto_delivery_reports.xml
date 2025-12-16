@@ -50,6 +50,16 @@
         <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
     </record>
 
+    <record id="action_report_kojto_delivery_certification_of_entry" model="ir.actions.report">
+        <field name="name">Delivery Certification of Entry</field>
+        <field name="model">kojto.deliveries</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">kojto_deliveries.report_kojto_delivery_certification_of_entry</field>
+        <field name="print_report_name">'DELIVERY Certification of Entry'</field>
+        <field name="binding_model_id" ref="model_kojto_deliveries" />
+        <field name="paperformat_id" ref="kojto_file_assets.kojto_paperformat_A4" />
+    </record>
+
     <record id="action_report_kojto_delivery_dual_use_declaration" model="ir.actions.report">
         <field name="name">Delivery Dual Use Declaration</field>
         <field name="model">kojto.deliveries</field>

@@ -12,21 +12,26 @@
                             <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
                             <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
                         </t>
+                        <style>
+                            table td[rowspan] {
+                                font-weight: bold !important;
+                            }
+                        </style>
 
                         <t t-set="formatted_date" t-value="doc.date_issue and doc.date_issue.strftime('%Y-%m-%d') or ''"/>
                         <div t-att-style="'string-set: date_issue \'%s\';' % formatted_date">
                             <h1 class="heading" style="margin-top: 10px;">
-                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;"> <t t-esc="doc.certificate_type"/> </div>
-                                <div style="margin-bottom: 20px; font-size: 2em;">Inspection Certificate</div>
+                                <div style="margin-bottom: 10px; font-weight: bold;"><t t-esc="doc.certificate_type"/></div>
+                                <div style="margin-bottom: 20px; font-weight: bold;">Inspection Certificate</div>
                             </h1>
                         </div>
 
                         <!-- Document Information Table -->
-                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
                             <tbody>
                                 <!-- Document Information -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="5">Document Information</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="5">Document Information</td>
                                     <td style="padding: 4px; width: 35%;">Inspection Certificate #</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="doc.name" />
@@ -59,14 +64,14 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
 
                                 <!-- Company Information -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Company Information</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="2">Company Information</td>
                                     <td style="padding: 4px; width: 35%; vertical-align: top;">Manufacturer</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="doc.company_name_id" /><br/>
@@ -87,14 +92,14 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
 
                                 <!-- Product Information -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="6">Product Information</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="6">Product Information</td>
                                     <td style="padding: 4px; width: 35%;">Product Name</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="doc.product_name" />
@@ -133,14 +138,14 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
 
                                 <!-- Inspection Details -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Inspection Details</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="3">Inspection Details</td>
                                     <td style="padding: 4px; width: 35%;">Subcode</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="doc.subcode_id" />
@@ -163,7 +168,7 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
@@ -174,13 +179,11 @@
                         <div t-field="doc.material_properties_table" t-options='{"widget": "html"}' />
 
                         <!-- Declaration - Separate Text Section -->
-                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
                             <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
                                 This delivery inspection certificate certifies that the products described above have been inspected and meet the specified requirements.
                                 The inspection was performed in accordance with the applicable standards and specifications.
                                 The chemical analysis and mechanical properties are provided by the manufacturer of the raw material.
                             </p>
-                        </div>
                     </div>
                 </t>
             </t>

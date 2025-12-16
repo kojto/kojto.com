@@ -326,6 +326,15 @@ class KojtoDeliveries(models.Model):
         attachment = self.create_pdf_attachment(html, filename)
         return {"type": "ir.actions.act_url", "url": f"/web/content/{attachment.id}?download=true", "target": "new"}
 
+    def print_delivery_certification_of_entry(self):
+        report_name = "kojto_deliveries.report_kojto_delivery_certification_of_entry"
+        print_objects = self.ids
+        html = self.generate_delivery_report_html(report_name, print_objects)
+        html = self.inject_report_css(html)
+        filename = f"{self.name}_certification_of_entry" if self.name else "delivery_certification_of_entry"
+        attachment = self.create_pdf_attachment(html, filename)
+        return {"type": "ir.actions.act_url", "url": f"/web/content/{attachment.id}?download=true", "target": "new"}
+
     def print_delivery_dual_use_declaration(self):
         report_name = "kojto_deliveries.report_kojto_delivery_dual_use_declaration"
         print_objects = self.ids
@@ -382,10 +391,10 @@ class KojtoDeliveries(models.Model):
 
             html = """
             <div style="margin-top: 30px; margin-bottom: 20px;">
-                <h2 style="font-size: 1.5em; font-weight: bold; margin-bottom: 15px; color: #2c3e50;">Consumed Materials</h2>
+                <h2 style="font-weight: bold; margin-bottom: 15px;">Consumed Materials</h2>
                 <table class="content-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                     <thead>
-                        <tr style="background-color: #B0C4DE;">
+                        <tr style="background-color: #f5f5f5;">
                             <th style="padding: 8px; text-align: left; width: 2%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; vertical-align: middle;">Pos.</th>
                             <th style="padding: 8px; text-align: left; width: 12%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; vertical-align: middle;">Content</th>
                             <th style="padding: 8px; text-align: left; width: 12%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; vertical-align: middle;">Description</th>
@@ -614,10 +623,20 @@ class KojtoDeliveries(models.Model):
         self.ensure_one()
         header = "Position\tName\tQuantity\tUnit\tUnit Weight\n"
         if self.content:
-            lines = [
-                f"{content.position or ''}\t{content.name or ''}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_weight or 0.0}"
-                for content in self.content
-            ]
+            lines = []
+            for content in self.content:
+                # Replace newlines and multiple whitespace in name with single space
+                name = content.name or ''
+                if name:
+                    name = ' '.join(name.split())  # Replace all whitespace (including newlines) with single space
+
+                position = content.position or ''
+                if position:
+                    position = ' '.join(position.split())  # Also clean position field
+
+                lines.append(
+                    f"{position}\t{name}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_weight or 0.0}"
+                )
             first_line = lines[0].split("\t") if lines else []
             is_header = (
                 len(first_line) >= 5 and

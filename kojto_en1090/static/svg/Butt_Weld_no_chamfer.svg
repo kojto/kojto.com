@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <path d="M 705 355 L 405 355 L 405 285 L 705 285" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <path d="M 95 355 L 395 355 L 395 265 L 95 265   " fill="#e0e0e0" stroke="black" stroke-width="5"/>
+  <text x="543.17" y="300" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">2</text>
+  <text x="224.56" y="300" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">1</text>
+    <path d="M 356.21 282.58 L 357.79 288.15 L 359.52 293.68 L 361.39 299.17 L 363.4 304.6 L 365.56 309.97 L 367.86 315.29 L 370.3 320.55 L 372.87 325.73 L 375.58 330.85 L 378.43 335.9 L 381.41 340.87 L 384.52 345.75 L 387.76 350.56 L 391.12 355.27 L 395.29 359.2 L 400.9 360.27 L 406.18 358.09 L 409.78 353.58 L 412.94 348.73 L 415.96 343.78 L 418.84 338.76 L 421.57 333.65 L 424.14 328.46 L 426.57 323.2 L 428.85 317.87 L 430.96 312.48 L 432.92 307.03 L 434.73 301.52 L 436.37 295.97 L 437.85 290.37 L 437.62 284.66 L 434.43 279.88 L 430.36 275.76 L 425.95 272.01 L 421.23 268.65 L 416.25 265.7 L 411.03 263.2 L 405.61 261.15 L 400.03 259.58 L 394.35 258.49 L 388.58 257.9 L 382.79 257.81 L 377.02 258.21 L 371.3 259.11 L 365.67 260.5 L 360.19 262.36 L 355.68 265.87 L 353.83 271.27 L 354.78 276.97 Z" fill="#e0e0e0" stroke="black" stroke-width="2" fill-opacity="0.8"/>
+</svg>

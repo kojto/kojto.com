@@ -7,35 +7,54 @@
             <field name="arch" type="xml">
                 <form class="ko-form-main view_kojto_finance_accounts_balance_report_form" readonly="1">
                     <sheet>
+                        <style>
+                            .ko-list-main tr> :first-child {
+                            text-align: left !important;
+                            }
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="start_amount_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="start_amount_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="amount_in_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="amount_in_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="amount_out_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="amount_out_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="amount_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="amount_preview"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table th[data-name="exchange_rate_to_bgn"],
+                            .o_list_renderer.o_renderer.table-responsive .o_list_table td[name="exchange_rate_to_bgn"] {
+                                text-align: right !important;
+                            }
+                            .ko-form-main .o_field_widget[name="start_amount_preview"],
+                            .ko-form-main .o_field_widget[name="period_amount_in_preview"],
+                            .ko-form-main .o_field_widget[name="period_amount_out_preview"],
+                            .ko-form-main .o_field_widget[name="period_amount_preview"] {
+                                text-align: right !important;
+                            }
+                        </style>
                         <group style="max-width: 400px;">
                             <field name="from_date" />
                             <field name="to_date" />
-                            <field name="start_amount_preview" />
-                            <field name="period_amount_in_preview" />
-                            <field name="period_amount_out_preview" decoration-danger="1" />
-                            <field name="period_amount_preview" decoration-danger="period_amount_is_negative" />
+                            <field name="report_currency_id" invisible="1" />
+                            <field name="start_amount" widget="monetary" options="{'currency_field': 'report_currency_id'}" />
+                            <field name="period_amount_in" widget="monetary" options="{'currency_field': 'report_currency_id'}" />
+                            <field name="period_amount_out" widget="monetary" options="{'currency_field': 'report_currency_id'}" decoration-danger="1" />
+                            <field name="period_amount" widget="monetary" options="{'currency_field': 'report_currency_id'}" decoration-danger="period_amount_is_negative" />
                         </group>
-
                         <separator class="col-lg-12 separator" />
-
-
                         <group>
-                            <style>
-                                .ko-list-main tr> :first-child {
-                                text-align: left !important;
-                                }
-                            </style>
                             <field name="bank_account_balance_id" nolabel="1" no_open="1">
                                 <list class="ko-list-main" create="false" edit="false" no_open="1">
                                     <field name="bank_account_description" />
                                     <field name="bank_account_iban" optional="hide" />
                                     <field name="bank_name" optional="show" />
-                                    <field name="bank_currency" optional="show" />
-                                    <field name="start_amount_preview" optional="show" />
-                                    <field name="amount_in_preview" optional="show" />
-                                    <field name="amount_out_preview" decoration-danger="1" optional="show" />
-                                    <field name="amount_preview" optional="show" decoration-danger="amount_is_negative" />
-                                    <field name="exchange_rate_to_bgn" optional="hide" />
+                                    <field name="account_currency_id" optional="hide" />
+                                    <field name="report_currency_id" column_invisible="1" />
+                                    <field name="last_transaction_date" optional="show" />
+                                    <field name="start_amount" string="Starting Balance" widget="monetary" options="{'currency_field': 'account_currency_id'}" optional="show" />
+                                    <field name="amount_in" string="Received" widget="monetary" options="{'currency_field': 'account_currency_id'}" optional="show" />
+                                    <field name="amount_out" string="Sent" widget="monetary" options="{'currency_field': 'account_currency_id'}" decoration-danger="1" optional="show" />
+                                    <field name="amount" string="Ending Balance" widget="monetary" options="{'currency_field': 'account_currency_id'}" optional="show" decoration-danger="amount_is_negative" />
+                                    <field name="amount_contact_currency" string="in Report Currency" widget="monetary" options="{'currency_field': 'report_currency_id'}" optional="show" />
+                                    <field name="exchange_rate" optional="hide" />
                                 </list>
                             </field>
                         </group>

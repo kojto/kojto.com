@@ -2943,3 +2943,15 @@ msgstr ""
 "                                {trx_allocation_amount_bgn}: Сума за разпределение на транзакция на паричен поток в лева\n"
 "                                {trx_allocation_currency_code}: Код на валутата за разпределение на транзакциите на паричните потоци\n"
 "                                {trx_allocation_currency_name}: Име на валутата на разпределението на транзакцията на паричните потоци"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice.py:0
+msgid "Paid from cash account for invoice No. %s"
+msgstr "Платена от каса фактура № %s"
+
+#. module: kojto_finance
+#. odoo-python
+#: code:addons/kojto_finance/models/kojto_finance_invoice.py:0
+msgid "Payment received in cash account for invoice No. %s"
+msgstr "Получено плащане в каса за фактура № %s"

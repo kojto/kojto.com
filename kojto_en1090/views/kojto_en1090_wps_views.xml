@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- WPS -->
+        <!-- List Views -->
+        <record id="view_kojto_en1090_wps_list" model="ir.ui.view">
+            <field name="name">kojto.en1090.wps.list</field>
+            <field name="model">kojto.en1090.wps</field>
+            <field name="arch" type="xml">
+                <list class="ko-list-main" decoration-danger="wps_type == 'preliminary'">
+                    <field name="active" widget="boolean_toggle" string=" "/>
+                    <field name="name_summary" string="Name"/>
+                    <field name="wpqr_id" string="WPQR"/>
+                    <field name="date_issue" string="Issued On"/>
+                    <field name="wps_type"/>
+                    <field name="welding_position" />
+                    <field name="welding_joint_geometry_id" string="Joint" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                    <field name="degree_of_mechanisation"/>
+                    <field name="wpqr_range_of_approval"/>
+                    <field name="material_summary"/>
+                    <field name="include_document_in_bundle" string="Include in Bundles" widget="boolean_toggle"/>
+                    <button name="print_document" type="object" class="btn-link" icon="fa-print" title="Print WPS Document"/>
+                    <button name="copy_wps" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy WPS" />
+                </list>
+            </field>
+        </record>
+
+        <!-- Form Views -->
+        <record id="view_kojto_en1090_wps_form" model="ir.ui.view">
+            <field name="name">kojto.en1090.wps.form</field>
+            <field name="model">kojto.en1090.wps</field>
+            <field name="arch" type="xml">
+                <form string="Welding Procedure Specification">
+                    <sheet class="ko-form-body ko-form-main">
+                        <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-3 me-0">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                            <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 d-flex align-items-center py-2 py-md-0">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <field name="wps_type" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 10px!important"/>
+                                            <div class="border-start border-4 mx-2" style="height: 24px; margin-bottom: 10px!important" />
+                                            <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 10px!important"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                        <button name="print_document" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Print Control Document">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top"/>
+                        <div class="row">
+                            <group class="col-lg-4">
+                                <field name="include_document_in_bundle" string="Include" widget="boolean_toggle"/>
+                                <field name="degree_of_mechanisation"/>
+                                <field name="date_issue" />
+                                <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="wpqr_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="welder_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="welding_engineer_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="degree_of_mechanisation" />
+
+                            </group>
+                            <group class="col-lg-4">
+                                <field name="name_secondary" />
+                                <field name="name_summary" string="Name" />
+                                <field name="welding_position" />
+                                <field name="surface_preparation_description" />
+                                <field name="interpass_cleaning_description" />
+                                <field name="post_weld_finishing_description" />
+                                <field name="welding_joint_geometry_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" />
+                                <field name="wall_thickness" />
+                                <field name="depth_of_penetration" />
+                                <field name="tube_diameter"/>
+                                <field name="description" />
+                            </group>
+
+                            <group class="col-lg-2">
+                                <div class="d-flex justify-content-center" style="width: 100%; height: 200px;">
+                                    <field name="welding_joint_svg" widget="image" />
+                                </div>
+                            </group>
+
+                            <group class="col-lg-2">
+                                <div class="d-flex justify-content-center" style="width: 100%; height: 200px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 800 800"
+                                            preserveAspectRatio="xMidYMid meet"
+                                            style="width: 100%; height: 100%; max-width: 200px;">
+                                        <path d="M 574.91 172.28 L 574.91 368.41" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 529.94 231.6 L 529.94 427.73" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 519.94 231.6 L 529.94 181.6 L 539.94 231.6 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 564.91 368.41 L 574.91 418.41 L 584.91 368.41 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 390 90 L 400 40 L 410 90 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 229.53 159.13 L 201.25 116.71 L 243.67 144.99 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 390 530 L 400 580 L 410 530 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 229.53 460.87 L 201.25 503.29 L 243.67 475.01 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 185 300 L 135 310 L 185 320 Z" fill="" stroke="black" stroke-width="2"/>
+                                        <path d="M 625 85 L 625 535 L 700 535 L 700 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 625 85 L 700 85 L 700 10 L 400 10 L 475 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 325 85 L 400 10 L 100 10 L 100 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 175 235 L 100 310 L 100 85 L 175 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 175 385 L 100 310 L 100 535 L 175 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 175 535 L 100 535 L 100 610 L 400 610 L 325 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <path d="M 700 610 L 700 535 L 475 535 L 400 610 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                        <text x="380" y="100.0" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PE</text>
+                                        <text x="241.25" y="150" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PD</text>
+                                        <text x="201.38" y="290" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PC</text>
+                                        <text x="241.25" y="420" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PB</text>
+                                        <text x="380" y="480" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PA</text>
+                                        <text x="510" y="450" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PF</text>
+                                        <text x="550" y="120" font-family="Arial" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PG</text>
+                                    </svg>
+                                </div>
+                            </group>
+                        </div>
+
+                        <notebook>
+                            <page string="Welding Depositions">
+                                <field name="weld_deposition_ids">
+                                    <list class="ko-list-main">
+                                        <field name="sequence_in_wps" width="50"/>
+                                        <field name="number_of_passes" width="50"/>
+                                        <field name="name" />
+                                        <field name="welding_process_id" width="200"/>
+                                        <field name="deposition_summary" width="600"/>
+                                        <button name="copy_deposition" type="object" class="btn-link" icon="fa-copy" title="Copy Deposition"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Materials">
+                                <field name="material_ids" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                                    <list editable="bottom" class="ko-list-main">
+                                        <field name="density" />
+                                        <field name="material_grade_type"/>
+                                        <field name="name" />
+                                        <field name="description"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Equipment">
+                                <field name="equipment_ids" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                                    <list>
+                                        <field name="name" />
+                                        <field name="equipment_type" />
+                                        <field name="model" />
+                                        <field name="serial_number" />
+                                        <field name="calibration_date" />
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Attachment">
+                                <div class="row">
+                                    <group class="col-lg-6">
+                                        <field name="attachment_id" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False" />
+                                    </group>
+                                </div>
+                            </page>
+
+                            <page string="WPS used with following Warehouse Batches">
+                                <field name="wps_used_on_batch_ids">
+                                    <list editable="bottom">
+                                        <field name="name" />
+                                        <field name="date_issue" />
+                                        <field name="batch_type" />
+                                        <field name="batch_summary" />
+                                    </list>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search Views -->
+        <record id="view_kojto_en1090_wps_search" model="ir.ui.view">
+            <field name="name">kojto.en1090.wps.search</field>
+            <field name="model">kojto.en1090.wps</field>
+            <field name="arch" type="xml">
+                <search string="Welding Procedure Specifications">
+                    <field name="name" />
+                    <field name="name_secondary" />
+                    <field name="wps_type" />
+                    <field name="date_issue" />
+                    <field name="welder_id" />
+                    <separator />
+                    <filter string="Preliminary WPS" name="preliminary" domain="[('wps_type', '=', 'preliminary')]" />
+                    <filter string="Production WPS" name="production" domain="[('wps_type', '=', 'production')]" />
+                    <filter string="This Month" name="this_month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]" />
+                    <filter string="Has Welding Processes" name="has_welding_processes" domain="[('weld_deposition_ids', '!=', False)]" />
+                    <group expand="0" string="Group By">
+                        <filter string="WPS Type" name="group_by_type" context="{'group_by': 'wps_type'}" />
+                        <filter string="Welder" name="group_by_welder" context="{'group_by': 'welder_id'}" />
+                        <filter string="Month" name="group_by_month" context="{'group_by': 'date_issue:month'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="action_kojto_en1090_wps" model="ir.actions.act_window">
+            <field name="name">Welding Procedure Specifications</field>
+            <field name="res_model">kojto.en1090.wps</field>
+            <field name="view_mode">list,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a new Welding Procedure Specification
+                </p>
+                <p>
+                    Create a new Welding Procedure Specification (WPS) to document your welding procedures.
+                    A WPS provides detailed instructions for producing consistent welds and meeting code requirements.
+                    It includes information about materials, welding processes, joint design, and other essential parameters.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

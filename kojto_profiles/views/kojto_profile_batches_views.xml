@@ -153,7 +153,7 @@
                     <filter name="today_batches" string="Today" domain="[('date_issue', '=', context_today().strftime('%Y-%m-%d'))]"/>
                     <filter name="this_week_batches" string="This Week" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
                     <filter name="this_month_batches" string="This Month" domain="[('date_issue', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_issue', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
-                    <filter name="last_month_batches" string="Last Month" domain="[('date_issue', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_issue', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                    <filter name="last_month_batches" string="Last Month" domain="[('date_issue', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_issue', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
                     <group expand="0" string="Group By">
                         <filter string="Batch Name" name="group_by_name" context="{'group_by': 'name'}"/>
                         <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>

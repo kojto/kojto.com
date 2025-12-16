@@ -6,65 +6,118 @@
                 <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
                 <t t-foreach="docs" t-as="doc">
                     <t t-if="doc.packages">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { size: A4; @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <t t-else="">
+                            <style> @page { size: A4; } </style>
+                        </t>
+
                         <t t-foreach="enumerate(doc.packages)" t-as="pack_data">
                             <t t-set="pack_index" t-value="pack_data[0]" />
                             <t t-set="pack" t-value="pack_data[1]" />
-                            <div class="page">
-                                <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
-                                <t t-if="company_contact and company_contact.company_logo">
-                                    <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
-                                    <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
-                                </t>
 
-                                <!-- Simple Package Label -->
-                                <div style="margin: 50px; padding: 40px; border: 3px solid #000; background-color: white; text-align: center;">
-                                    <!-- Package Number -->
-                                    <div t-attf-style="string-set: timestamp '{{ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}';">
-                                        <h1 class="heading">
-                                            <span>Delivery </span>
-                                            <span t-field="doc.name" />
-                                        </h1>
-                                    </div>
+                            <!-- Package Label - All content in first half of A4 -->
+                            <div style="padding: 10px; max-height: 148.5mm;">
+                                <!-- Header Section -->
+                                <div style="margin-bottom: 8px;" t-attf-style="string-set: timestamp '{{ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S') }}';">
+                                    <table style="width: 100%; border-collapse: collapse;">
+                                        <tr>
+                                            <!-- Left Column: Delivery and Name -->
+                                            <td style="width: 60%; vertical-align: top; text-align: left;">
+                                                <div style="font-size: 2em; margin: 3px 0; font-weight: bold;">
+                                                    DELIVERY
+                                                </div>
+                                                <div style="font-size: 2em; margin: 3px 0; font-weight: bold;">
+                                                    <span t-field="doc.name" />
+                                                </div>
+                                            </td>
+                                            <!-- Right Column: Package Code -->
+                                            <td style="width: 40%; vertical-align: top; text-align: right;">
+                                                <t t-set="delivery_last_part" t-value="doc.name.split('.')[-1]" />
+                                                <t t-set="direction_prefix" t-value="'DO' if doc.document_in_out_type == 'outgoing' else 'DI'" />
+                                                <div style="font-size: 3.75em; font-weight: bold; margin: 5px 0;">
+                                                    <span t-esc="pack_index + 1" /> / <span t-esc="len(doc.packages)" />
+                                                </div>
+                                                <div style="font-size: 3.75em; font-weight: bold; margin: 5px 0;">
+                                                    <span t-esc="direction_prefix" />.<span t-esc="delivery_last_part" />.<span t-esc="str(pack_index + 1).zfill(2)" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
 
-                                    <div style="font-size: 4em; font-weight: 900; margin-bottom: 20px;">
-                                        <span t-esc="pack_index + 1" /> / <span t-esc="len(doc.packages)" />
-                                    </div>
+                                <!-- 2 Column Table -->
+                                <table style="width: 100%; border-collapse: collapse; margin-top: 30px;">
+                                    <tr>
+                                        <!-- Left Column: Ship To -->
+                                        <td style="width: 60%; vertical-align: top; text-align: left;">
+                                            <div style="font-size: 1.8em; font-weight: bold; margin-bottom: 5px;">
+                                                SHIP TO:
+                                            </div>
+                                            <div style="font-size: 1.32em; margin-top: 8px; margin-bottom: 3px; font-weight: bold;">
+                                                <span t-field="doc.counterparty_name_id" />
+                                            </div>
+                                            <div style="font-size: 1.32em; margin-top: 5px; margin-bottom: 5px; line-height: 1.3;">
+                                                <span t-field="doc.delivery_address" />
+                                            </div>
+                                            <div style="font-size: 1.32em; font-weight: bold; margin-top: 10px;">
+                                                REFERENCE:
+                                            </div>
+                                            <div style="font-size: 1.32em; margin-top: 5px;">
+                                                <span t-field="doc.counterpartys_reference" />
+                                            </div>
+                                        </td>
 
-                                    <!-- Package Code -->
-                                    <div style="font-size: 3em; font-weight: bold; margin-bottom: 30px;">
-                                        <t t-set="delivery_num" t-value="doc.name.split('.')[-1]" />
-                                        <t t-set="delivery_part" t-value="delivery_num[-2:] if len(delivery_num) >= 2 else delivery_num.zfill(2)" />
-                                        <t t-set="package_num" t-value="pack_index + 1" />
-                                        <span t-esc="'D' + delivery_part + str(package_num).zfill(2)" />
-                                    </div>
+                                        <!-- Right Column: Weights and Dimensions -->
+                                        <td style="width: 40%; vertical-align: top;">
+                                            <div style="margin-bottom: 10px; text-align: right;">
+                                                <div style="font-size: 1.8em; font-weight: bold; margin-bottom: 5px; text-align: right;">
+                                                    WEIGHTS:
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 8px; margin-bottom: 3px; text-align: right;">
+                                                    GROSS: <span t-esc="'%.1f kg' % pack.gross_weight" />
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 5px; margin-bottom: 3px; text-align: right;">
+                                                    NET: <span t-esc="'%.1f kg' % pack.net_weight" />
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 5px; text-align: right;">
+                                                    TARE: <span t-esc="'%.1f kg' % pack.tare_weight" />
+                                                </div>
+                                            </div>
 
-                                    <!-- Weight -->
-                                    <div style="font-size: 1.5em; font-weight: bold; margin-bottom: 30px;">
-                                        WEIGHTS: GROSS <span t-esc="'%.1f kg' % pack.gross_weight" /> / NET <span t-esc="'%.1f kg' % pack.net_weight" /> / TARE <span t-esc="'%.1f kg' % pack.tare_weight" />
-                                    </div>
+                                            <div style="text-align: right;">
+                                                <div style="font-size: 1.8em; font-weight: bold; margin-bottom: 5px; text-align: right;">
+                                                    DIMENSIONS:
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 8px; margin-bottom: 3px; text-align: right;">
+                                                    WIDTH: <span t-esc="'%.0f mm' % pack.width" />
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 5px; margin-bottom: 3px; text-align: right;">
+                                                    LENGTH: <span t-esc="'%.0f mm' % pack.length" />
+                                                </div>
+                                                <div style="font-size: 1.32em; margin-top: 5px; text-align: right;">
+                                                    HEIGHT: <span t-esc="'%.0f mm' % pack.height" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
 
-                                    <!-- Dimensions -->
-                                    <div style="font-size: 1.5em; font-weight: bold; margin-bottom: 30px;">
-                                        DIMENSIONS: W <span t-esc="'%.0f mm' % pack.width" /> / L <span t-esc="'%.0f mm' % pack.length" /> / H <span t-esc="'%.0f mm' % pack.height" />
-                                    </div>
-
-                                    <!-- Ship To -->
-                                    <div style="font-size: 2em; font-weight: bold; margin-bottom: 15px;">
-                                        SHIP TO:
-                                    </div>
-                                    <div style="font-size: 1.8em; margin-bottom: 10px;">
-                                        <span t-field="doc.counterparty_name_id" />
-                                    </div>
-                                    <div style="font-size: 1.6em; margin-bottom: 20px;">
-                                        <span t-field="doc.delivery_address" />
-                                    </div>
-
-                                    <!-- Reference -->
-                                    <div style="font-size: 1.4em; font-weight: bold;">
-                                        <span t-field="doc.counterpartys_reference" />
+                                <!-- Shipped By Section -->
+                                <div style="margin-top: 20px; padding-top: 8px; border-top: 1px solid #000;">
+                                    <div style="font-size: 1em; text-align: center;">
+                                        <strong>SHIPPED BY:</strong>
+                                        <span t-if="doc.company_name_id" t-field="doc.company_name_id.name" /> -
+                                        <span t-if="doc.company_address_id" t-field="doc.company_address_id.name" /> -
+                                        <span t-if="doc.company_phone_id" t-field="doc.company_phone_id.name" /> -
+                                        <span t-if="doc.company_email_id" t-field="doc.company_email_id.name" />
                                     </div>
                                 </div>
                             </div>
+
                             <!-- Page break after each label -->
                             <div style="page-break-after: always;"></div>
                         </t>
@@ -74,11 +127,14 @@
                             <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
                             <t t-if="company_contact and company_contact.company_logo">
                                 <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
-                                <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                                <style> @page { size: A4; @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                            </t>
+                            <t t-else="">
+                                <style> @page { size: A4; } </style>
                             </t>
 
-                            <div style="margin: 50px; padding: 40px; border: 3px solid #000; background-color: white; text-align: center;">
-                                <div style="font-size: 3em; font-weight: bold; margin-bottom: 30px; color: #6c757d;">
+                            <div style="margin: 15px; padding: 40px; text-align: center;">
+                                <div style="font-size: 2.4em; font-weight: bold; margin-bottom: 30px; color: #6c757d;">
                                     NO PACKAGES FOUND
                                 </div>
                                 <div style="font-size: 1.5em; color: #6c757d;">

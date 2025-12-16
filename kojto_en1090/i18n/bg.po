@@ -1,0 +1,3850 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* kojto_en1090
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~18.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-11 07:31+0000\n"
+"PO-Revision-Date: 2025-08-11 07:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_ce_label
+msgid "'CE LABEL - %s' % (object.name)"
+msgstr "'CE ЕТИКЕТ - %s' % (име.на.обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_cl_control
+msgid "'CL Control - %s' % (object.name)"
+msgstr "CL Control - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_control
+msgid "'Control Document - %s' % (object.name)"
+msgstr "Контролен документ - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_document_bundles
+msgid "'Document Bundle - %s' % (object.name)"
+msgstr "Пакет документи - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_mt_control
+msgid "'MT Control - %s' % (object.name)"
+msgstr "MT Control - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_other_control
+msgid "'Other Control - %s' % (object.name)"
+msgstr "Друг контрол - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_pt_control
+msgid "'PT Control - %s' % (object.name)"
+msgstr "PT контрол - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_performance
+msgid "'Performance Declaration - %s' % (object.name)"
+msgstr "Декларация за ефективност - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_rt_control
+msgid "'RT Control - %s' % (object.name)"
+msgstr "RT контрол - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_ut_control
+msgid "'UT Control - %s' % (object.name)"
+msgstr "UT контрол - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_vt_control
+msgid "'VT Control - %s' % (object.name)"
+msgstr "VT Control - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_wps
+msgid "'WPS - %s' % (object.name)"
+msgstr "WPS - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,print_report_name:kojto_en1090.action_report_kojto_en1090_doc_welding_tasks
+msgid "'Welding Job - %s' % (object.name)"
+msgstr "Заваръчна работа - %s' % (име на обект)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+msgid ""
+"0035<br/>\n"
+"                                        0035-CPR-1090-1.01443.TUVRh.2020.005<br/>\n"
+"                                        0035-CPR-1090-1.02678.TUVRh.2020.002<br/>\n"
+"                                        24"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_landingpage_form_inherit
+msgid "<span class=\"landing_page_text\" style=\"color: #0d6efd;\">EN 1090</span>"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid ""
+"<span style=\"font-weight: bold; vertical-align: top; font-size: "
+"110%;\">Welding Seam Type</span><br/>"
+msgstr ""
+"<span style=\"font-weight: bold; vertical-align: top; font-size: 110%;\">Тип"
+" заваръчен шев</span><br/>"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/general_models/kojto_en1090_wps.py:0
+msgid ""
+"A preliminary WPS cannot have a WPQR Reference. Please clear the WPQR "
+"Reference field."
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_welding_seams.py:0
+msgid "A seam with name '%s' already exists."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__avcp_system
+msgid "AVCP System"
+msgstr "AVCP система"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__parameter_abbreviation
+msgid "Abbr."
+msgstr "съкр."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__abbreviation
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_form
+msgid "Abbreviation"
+msgstr "Съкращение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__iso_15614_acceptance_level
+msgid "Acc. lv"
+msgstr "Acc. лв"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wpqrs__iso_15614_acceptance_level
+msgid "Acceptance level according to ISO 15614:2023"
+msgstr "Ниво на приемливост съгласно ISO 15614:2023"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__evaluation__accepted
+msgid "Accepted"
+msgstr "Прието"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__active
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__active
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_search
+msgid "Active"
+msgstr "Активен"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__attachments
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_welding_tasks__attachments
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_pdf_generator__attachments
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__attachments
+msgid "Additional attachments for this document"
+msgstr "Допълнителни прикачени файлове към този документ"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__company_address_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__counterparty_address_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__notified_body_address_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__certification_body_address_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__company_address_id
+msgid "Address"
+msgstr "Адрес"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__vt_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_acceptance_standard__iso_10042
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_vt_mixin__vt_acceptance_standard__iso_10042
+msgid "Aluminium - EN ISO 10042"
+msgstr "Алуминий - EN ISO 10042"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__amplitude
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__amplitude
+msgid "Amplitude"
+msgstr "Амплитуда"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__applicable_wps_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Applicable WPS"
+msgstr "Приложим WPS"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_search
+msgid "Archived"
+msgstr "Архивирано"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__area_of_scanning_from
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__area_of_scanning_from
+msgid "Area of Scanning From"
+msgstr "Област на сканиране от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__area_of_scanning_to
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__area_of_scanning_to
+msgid "Area of Scanning To"
+msgstr "Област на сканиране към"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__assembly
+msgid "Assembly"
+msgstr "Сглобяване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Assessment System"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__welding_specialists_ids
+msgid "Assigned Specialists"
+msgstr "Назначени специалисти"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__attachment_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Attachment"
+msgstr "Прикачен файл"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__attachments
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__attachments
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__attachment_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_pdf_generator__attachments
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__attachments
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Attachments"
+msgstr "Прикачени файлове"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__degree_of_mechanisation__automated_welding
+msgid "Automated Welding"
+msgstr "Автоматизирано заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_lx
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_lx
+msgid "Axis Lx"
+msgstr "Ос Lx"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_ly
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_ly
+msgid "Axis Ly"
+msgstr "Ос Ly"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_lz
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_lz
+msgid "Axis Lz"
+msgstr "Ос Lz"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_x
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_x
+msgid "Axis X"
+msgstr "Ос X"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_y
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_y
+msgid "Axis Y"
+msgstr "Ос Y"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__axis_z
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__axis_z
+msgid "Axis Z"
+msgstr "Ос Z"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_acceptance_level__b
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_acceptance_level__b
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_acceptance_level__b
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_acceptance_level__b
+msgid "B (Stringent)"
+msgstr "B (строг)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__backing_run
+msgid "Backing Run/Back Weld (∩)"
+msgstr "Подложка/заварка (∩)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_intended_use__both
+msgid "Both Structural and Non-Structural"
+msgstr "Както структурни, така и неструктурни"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__weld_type__butt
+msgid "Butt Weld"
+msgstr "Челно заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_acceptance_level__c
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_acceptance_level__c
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_acceptance_level__c
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_acceptance_level__c
+msgid "C (Intermediate)"
+msgstr "C (средно ниво)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_ce_label
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+msgid "CE LABEL"
+msgstr "CE ЕТИКЕТ"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__cl_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_cl_mixin__cl_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "CL Acceptance Level"
+msgstr "Ниво на приемане на CL"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "CL Parameter"
+msgstr "CL параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_cadmium_release
+msgid "Cadmium Release"
+msgstr "Освобождаване на кадмий"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_list
+msgid "Calibrated On"
+msgstr "Калибриран Вкл"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Calibration Date"
+msgstr "Дата на калибриране"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__certificate_number
+msgid "Certificate Number"
+msgstr "Номер на сертификата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__certificate_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Certificate Type"
+msgstr "Тип сертификат"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__welding_certificates_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_form
+msgid "Certificates"
+msgstr "Сертификати"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_specialists__welding_certificates_ids
+msgid "Certificates held by this specialist"
+msgstr "Сертификати, притежавани от този специалист"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__certification_body_id
+msgid "Certification Body"
+msgstr "Сертифициращ орган"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__cl
+msgid "Check List"
+msgstr "Списък за проверка"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_cl_control
+msgid "Check List Control"
+msgstr "Контролен списък за проверка"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_cl_mixin
+msgid "Check List Control Mixin"
+msgstr "Списък за проверка на контролния микс"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Check List Details"
+msgstr "Подробности за контролния списък"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__checked_by_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Checked By"
+msgstr "Проверен от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_reaction_to_fire__class_a1
+msgid "Class A1 (Steel Only)"
+msgstr "Клас A1 (само стомана)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__code
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__code
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__code
+msgid "Code"
+msgstr "Код"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__company_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__company_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__company_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Company"
+msgstr "Компания"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__complete_pdf_attachment_id
+msgid "Complete PDF Attachment"
+msgstr "Пълен PDF прикачен файл"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_cadmium_release__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_durability__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fatigue_strength__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fracture_toughness__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_load_bearing_capacity__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_radioactivity_emission__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_reaction_to_fire__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_resistance_to_fire__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_serviceability_limit_state_deformation__compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_weldability__compliant
+msgid "Compliant"
+msgstr "Съвместим"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_dimension_tolerances__compliant
+msgid "Compliant with EN1090-2"
+msgstr "Съвместим с EN1090-2"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__contact_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_content_description
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Content Description"
+msgstr "Описание на съдържанието"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__contrast
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__contrast
+msgid "Contrast"
+msgstr "Контраст"
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_doc_control
+msgid "Control"
+msgstr "контрол"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Control Details"
+msgstr "Подробности за управление"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_control
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Control Document"
+msgstr "Контролен документ"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_doc_control
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Control Documents"
+msgstr "Контролни документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Control Information"
+msgstr "Контролна информация"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+msgid "Control Performed By"
+msgstr "Контролът се извършва от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__control_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+msgid "Control Type"
+msgstr "Тип контрол"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__control_document_ids
+msgid "Controls"
+msgstr "Контроли"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_document_bundles.py:0
+msgid "Copied Document Bundle"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Copy Control Document"
+msgstr "Документ за контрол на копирането"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Copy Deposition"
+msgstr "Депозиране на копие"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_list
+msgid "Copy Document Bundle"
+msgstr "Копиране на пакет документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_list
+msgid "Copy WPQR"
+msgstr "Копирайте WPQR"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Copy WPS"
+msgstr "Копирайте WPS"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Copy Welding Task"
+msgstr "Копиране на задача за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__counterparty_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Counterparty"
+msgstr "Контрагент"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_doc_control
+msgid "Create a new Control Document"
+msgstr "Създайте нов контролен документ"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_doc_control
+msgid ""
+"Create a new Control Document to record your quality control activities.\n"
+"                    This document provides essential information about the control process,\n"
+"                    including the type of control, methods used, and results obtained."
+msgstr ""
+"Създайте нов контролен документ, за да запишете вашите дейности за контрол на качеството.\n"
+"                    Този документ предоставя важна информация за контролния процес,\n"
+"                    включително вида на контрола, използваните методи и получените резултати."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_wps
+msgid "Create a new Welding Procedure Specification"
+msgstr "Създайте нова спецификация на процедурата за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_wps
+msgid ""
+"Create a new Welding Procedure Specification (WPS) to document your welding procedures.\n"
+"                    A WPS provides detailed instructions for producing consistent welds and meeting code requirements.\n"
+"                    It includes information about materials, welding processes, joint design, and other essential parameters."
+msgstr ""
+"Създайте нова спецификация на заваръчната процедура (WPS), за да документирате вашите заваръчни процедури.\n"
+"                    WPS предоставя подробни инструкции за производство на последователни заварки и спазване на изискванията на кода.\n"
+"                    Той включва информация за материалите, процесите на заваряване, дизайна на съединенията и други основни параметри."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_document_bundles
+msgid "Create document bundles to organize your EN1090 documentation."
+msgstr ""
+"Създавайте пакети документи, за да организирате своята документация по "
+"EN1090."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_equipment
+msgid ""
+"Create equipment records to manage welding equipment, testing devices, and "
+"other tools."
+msgstr ""
+"Създавайте записи на оборудването, за да управлявате заваръчно оборудване, "
+"устройства за тестване и други инструменти."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_certificates
+msgid ""
+"Create welding certificates to manage welder certifications, inspection "
+"certificates, and equipment certifications."
+msgstr ""
+"Създайте сертификати за заваряване, за да управлявате сертификати за "
+"заварчици, сертификати за проверка и сертификати за оборудване."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_weld_depositions
+msgid ""
+"Create welding depositions to specify welding processes and parameters for "
+"your WPS."
+msgstr ""
+"Създайте заваръчни отлагания, за да укажете заваръчни процеси и параметри за"
+" вашия WPS."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_specialists
+msgid ""
+"Create welding specialists to manage welders, welding supervisors, and "
+"defectoscopists."
+msgstr ""
+"Създайте специалисти по заваряване, които да управляват заварчици, "
+"ръководители на заваряване и дефектоскописти."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_wpqr
+msgid "Create your first WPQR!"
+msgstr "Създайте своя първи WPQR!"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_document_bundles
+msgid "Create your first document bundle"
+msgstr "Създайте първия си пакет документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_equipment
+msgid "Create your first equipment"
+msgstr "Създайте първото си оборудване"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_translations
+msgid "Create your first translation!"
+msgstr "Създайте своя първи превод!"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_weld_geometries
+msgid "Create your first weld geometry!"
+msgstr "Създайте първата си геометрия на заваръчния шев!"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_certificates
+msgid "Create your first welding certificate"
+msgstr "Създайте първия си сертификат за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_weld_depositions
+msgid "Create your first welding deposition"
+msgstr "Създайте първото си отлагане при заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_parameters
+msgid "Create your first welding parameter!"
+msgstr "Създайте първия си параметър за заваряване!"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_processes
+msgid "Create your first welding process!"
+msgstr "Създайте своя първи процес на заваряване!"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_specialists
+msgid "Create your first welding specialist"
+msgstr "Създайте своя първи специалист по заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_doc_welding_tasks
+msgid "Create your first welding task!"
+msgstr "Създайте първата си задача за заваряване!"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__create_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__create_uid
+msgid "Created by"
+msgstr "Създаден от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__create_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__create_date
+msgid "Created on"
+msgstr "Създаден на"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_acceptance_level__d
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_acceptance_level__d
+msgid "D (Moderate)"
+msgstr "D (умерено)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Date"
+msgstr "Дата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__date_issue
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__date_issue
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__date_issue
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__date_issue
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Declaration"
+msgstr "Декларация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__default_parameter_value
+msgid "Default Value"
+msgstr "Стойност по подразбиране"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__defect_indications
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Defect Indications"
+msgstr "Индикации за дефекти"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_wpqr
+msgid ""
+"Define Welding Procedure Qualification Records (WPQR) for your welding "
+"operations."
+msgstr ""
+"Дефинирайте записи за квалификация на заваръчни процедури (WPQR) за вашите "
+"заваръчни операции."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_weld_geometries
+msgid "Define weld geometries with their corresponding SVG images."
+msgstr ""
+"Дефинирайте геометрията на заваръчните шевове със съответните им SVG "
+"изображения."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_parameters
+msgid "Define welding parameters for different welding processes."
+msgstr ""
+"Определете параметрите на заваряване за различни процеси на заваряване."
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_welding_processes
+msgid "Define welding processes used in your operations."
+msgstr "Определете процесите на заваряване, използвани във вашите операции."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__degree_of_mechanisation
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__degree_of_mechanisation
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Degree of Mechanisation"
+msgstr "Степен на механизация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__delivery_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Deliveries"
+msgstr "Доставки"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__density
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__density
+msgid "Density"
+msgstr "Плътност"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Density (kg/m³)"
+msgstr "Плътност (kg/m³)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Depth of Penetration"
+msgstr "Дълбочина на проникване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__depth_of_penetration
+msgid "Depth of penetration of the weld"
+msgstr "Дълбочина на проникване на заваръчния шев"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__description
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__description
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_form
+msgid "Description"
+msgstr "Описание"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_welding_tasks__journal_description
+msgid "Description of the executed welding work"
+msgstr "Описание на извършените заваръчни работи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_welding_tasks__plan_description
+msgid "Description of the planned welding work"
+msgstr "Описание на планираните заваръчни работи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__description
+msgid "Description of the weld geometry, including typical applications"
+msgstr ""
+"Описание на геометрията на заваръчния шев, включително типични приложения"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_form
+msgid "Detailed description of the certificate..."
+msgstr "Подробно описание на сертификата..."
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_form
+msgid "Detailed description of the equipment..."
+msgstr "Подробно описание на оборудването..."
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Diameter"
+msgstr "Диаметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__diameter
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__diameter
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__tube_diameter
+msgid "Diameter (mm)"
+msgstr "Диаметър (mm)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__tube_diameter
+msgid "Diameter of the tube"
+msgstr "Диаметър на тръбата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_dimension_tolerances
+msgid "Dimension Tolerances"
+msgstr "Допустими отклонения на размерите"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Dimension Tolerances (EN1090-2)"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_cl_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_pdf_generator__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__display_name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_landingpage__display_name
+msgid "Display Name"
+msgstr "Екранно име"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Distance"
+msgstr "Разстояние"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__distance
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__distance
+msgid "Distance (mm)"
+msgstr "Разстояние (mm)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_document_bundles
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__document_bundle_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Document Bundle"
+msgstr "Пакет документи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__document_bundle_content
+msgid "Document Bundle Content"
+msgstr "Съдържание на пакета документи"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_document_bundles
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_list
+msgid "Document Bundles"
+msgstr "EN1090 документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Document Information"
+msgstr "Информация за документа"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__document_bundle_id
+msgid "Document bundle"
+msgstr "Пакет документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+msgid "Document bundle #"
+msgstr "Пакет документи №"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__double_bevel
+msgid "Double Bevel Groove (K)"
+msgstr "Двойна скосен жлеб (K)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__double_v
+msgid "Double V Groove (X)"
+msgstr "Двоен V канал (X)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__technical_document_revision_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__technical_document_revision_id
+msgid "Drawing"
+msgstr "рисуване"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_weld_depositions.py:0
+msgid ""
+"Duplicate parameter '%s' found in deposition '%s'. Each parameter can only "
+"be used once per deposition."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_durability
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Durability"
+msgstr "Издръжливост"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_standard_reference__en1090-1
+msgid "EN 1090-1"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_standard_reference__en1090-2
+msgid "EN 1090-2"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_standard_reference__en1090-3
+msgid "EN 1090-3"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_standard_reference__en1090-4
+msgid "EN 1090-4"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__standard__en_iso_14555
+msgid "EN ISO 14555"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_procedure_standard__iso_17636_1
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_procedure_standard__iso_17636_1
+msgid "EN ISO 17636-1"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_procedure_standard__iso_17636_2
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_procedure_standard__iso_17636_2
+msgid "EN ISO 17636-2"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__vt_procedure_standard__iso_17637
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_vt_mixin__vt_procedure_standard__iso_17637
+msgid "EN ISO 17637"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_procedure_standard__iso_17640
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_procedure_standard__iso_17640
+msgid "EN ISO 17640"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_procedure_standard__iso_23277
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_procedure_standard__iso_23277
+msgid "EN ISO 23277"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_procedure_standard__iso_23278
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_procedure_standard__iso_23278
+msgid "EN ISO 23278"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__standard__en_iso_9692_1
+msgid "EN ISO 9692-1"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_parent
+msgid "EN1090"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__en1090_certificate
+msgid "EN1090 Certificate"
+msgstr "Сертификат EN1090"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+msgid "EN1090 Document Bundle"
+msgstr "Пакет документи EN1090"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_pdf_generator
+msgid "EN1090 PDF Generator Mixin"
+msgstr "EN1090 PDF генератор Mixin"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_translations
+msgid "EN1090 Translations"
+msgstr "EN1090 Преводи"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_certificates
+msgid "EN1090 Welding Certificates"
+msgstr "EN1090 Сертификати за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__execution_class__exc1
+msgid "EXC 1"
+msgstr "ОТЛИЧНО 1"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__execution_class__exc2
+msgid "EXC 2"
+msgstr "ОТЛИЧНО 2"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__execution_class__exc3
+msgid "EXC 3"
+msgstr "ОТЛИЧНО 3"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__execution_class__exc4
+msgid "EXC 4"
+msgstr "ОТЛИЧНО 4"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__edge
+msgid "Edge Weld (⊥)"
+msgstr "Заваръчен шев (⊥)"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_document_bundles
+msgid "En1090 Document Bundles"
+msgstr "Пакети документи En1090"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_equipment
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__equipment_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__equipment_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__equipment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__equipment_ids
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__wps_type__equipment
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_equipment
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Equipment"
+msgstr "Оборудване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__equipment_certificate
+msgid "Equipment Certificate"
+msgstr "Сертификат за оборудване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Equipment Name"
+msgstr "Име на оборудването"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+msgid "Equipment Type"
+msgstr "Тип оборудване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_specialists__equipment_ids
+msgid "Equipment assigned to this specialist"
+msgstr "Оборудване, назначено на този специалист"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_equipment
+msgid "Equipment for EN1090 Controls"
+msgstr "Оборудване за контроли EN1090"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/general_models/kojto_en1090_equipment.py:0
+msgid "Equipment type is required."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__equipment_ids
+msgid "Equipment used for the WPS"
+msgstr "Оборудване, използвано за WPS"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__evaluation
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Evaluation"
+msgstr "Оценка"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+msgid "Executed"
+msgstr "Екзекутиран"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__execution_class
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Execution Class"
+msgstr "Клас на изпълнение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__date_executed
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Execution Start Date"
+msgstr "Начална дата на изпълнение"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Expired"
+msgstr "Изтекъл"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+msgid "Expired Calibration"
+msgstr "Изтекло калибриране"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Expiring Soon"
+msgstr "Изтича скоро"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__date_end
+msgid "Expiry Date"
+msgstr "Крайна дата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__exposure_time
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__exposure_time
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Exposure Time"
+msgstr "Време на излагане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__factory_task_id
+msgid "Factory Task"
+msgstr "Фабрична задача"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid ""
+"Failed to generate PDF from document bundle content. Please check the "
+"document content and try again."
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid "Failed to generate complete document bundle: %s"
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid ""
+"Failed to generate document bundle content. Please check that all required "
+"fields are filled: company name and address, counterparty name and address, "
+"and notified body name and address."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_fatigue_strength
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Fatigue Strength"
+msgstr "Сила на умора"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__weld_type__fillet
+msgid "Fillet Weld"
+msgstr "Филетна заварка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__fillet
+msgid "Fillet Weld (△)"
+msgstr "Заваръчен шев (△)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__film_grade
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__film_grade
+msgid "Film Grade"
+msgstr "Клас на филма"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__film_processing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__film_processing
+msgid "Film Processing"
+msgstr "Обработка на филми"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__film_size
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__film_size
+msgid "Film Size"
+msgstr "Размер на филма"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__film_type
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__film_type
+msgid "Film Type"
+msgstr "Тип филм"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__film_to_object_distance
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__film_to_object_distance
+msgid "Film to Object Distance"
+msgstr "Разстояние филм до обект"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__final_inspection
+msgid "Final Inspection"
+msgstr "Окончателна проверка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__flare_bevel
+msgid "Flare Bevel Groove (⊃)"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__flare_v
+msgid "Flare V Groove (∩)"
+msgstr "Flare V жлеб (∩)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__focal_spot_size
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__focal_spot_size
+msgid "Focal Spot Size"
+msgstr "Размер на фокусното петно"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_parameter_contents__value
+msgid "Formatted display value based on parameter type"
+msgstr "Форматирана показвана стойност въз основа на типа параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_fracture_toughness
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Fracture Toughness"
+msgstr "Издръжливост на счупване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_general_equipment
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__general
+msgid "General Equipment"
+msgstr "Общо оборудване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "General Information"
+msgstr "Обща информация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__weld_drawing_svg
+msgid "Generic SVG representation of the weld geometry"
+msgstr "Генерично SVG представяне на геометрията на заваръчния шев"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__geometric_magnification
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__geometric_magnification
+msgid "Geometric Magnification"
+msgstr "Геометрично увеличение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__geometry_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Geometry"
+msgstr "Геометрия"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_form
+msgid "Geometry Name"
+msgstr "Име на геометрията"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Geometry Translations"
+msgstr "Преводи на геометрия"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wpqrs__welding_joint_geometry_id
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__welding_joint_geometry_id
+msgid ""
+"Geometry types of welding joints used in this WPS (e.g. V-groove, fillet, "
+"etc.)"
+msgstr ""
+"Геометрични типове заваръчни съединения, използвани в този WPS (напр. "
+"V-образен жлеб, филе и др.)"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid ""
+"Ghostscript is not installed or not available on this system. Please install"
+" Ghostscript to merge PDF documents. You can download it from: "
+"https://www.ghostscript.com/"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Group By"
+msgstr "Групиране по"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Has Welding Processes"
+msgstr "Има заваръчни процеси"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_cl_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_pdf_generator__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_landingpage__id
+msgid "ID"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__iso_2553_symbol
+msgid "ISO 2553 Weld Symbol"
+msgstr "ISO 2553 Символ за заваръчен шев"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_welding_engineer
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__welding_engineer_id
+msgid "IWE"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_parameter_contents__parameter_is_required
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_parameters__is_required
+msgid "If checked, this parameter must be filled in when used in WPS or WPQR"
+msgstr ""
+"Ако е маркиран, този параметър трябва да бъде попълнен, когато се използва в"
+" WPS или WPQR"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__illuminance
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Illuminance (lux)"
+msgstr "Осветеност (лукс)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__image_quality_indicator
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__image_quality_indicator
+msgid "Image Quality Indicator"
+msgstr "Индикатор за качество на изображението"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Inactive"
+msgstr "Неактивен"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Include"
+msgstr "Включете"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__include_document_in_bundle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__include_document_in_bundle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__include_document_in_bundle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__include_document_in_bundle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__include_document_in_bundle
+msgid "Include Document in Bundle"
+msgstr "Включете документ в пакет"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Include in Bundles"
+msgstr "Включете в пакети"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__active
+msgid "Indicates if the weld geometry is active"
+msgstr "Показва дали геометрията на заваръчния шев е активна"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__inspection
+msgid "Inspection Certificate"
+msgstr "Сертификат за проверка"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Inspection Reports"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_intended_use
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Intended Use"
+msgstr "Употреба по предназначение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__intensifying_screens
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__intensifying_screens
+msgid "Intensifying Screens"
+msgstr "Усилващи екрани"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__interpass_cleaning_description
+msgid "Interpass Cleaning"
+msgstr "Междупроходно почистване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_cl
+msgid "Is Cl"
+msgstr "Е Cl"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_mt
+msgid "Is Mt"
+msgstr "Е Mt"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_pt
+msgid "Is Pt"
+msgstr "Е Pt"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_rt
+msgid "Is Rt"
+msgstr "Е Rt"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_ut
+msgid "Is Ut"
+msgstr "Е Ут"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__is_vt
+msgid "Is Vt"
+msgstr "Вт"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__date_start
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__date_issued
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Issue Date"
+msgstr "Дата на издаване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Issued By"
+msgstr "Издадено от"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Issued On"
+msgstr "Издадена на"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+msgid "Issued To"
+msgstr "Издадено на"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__issuing_authority_id
+msgid "Issuing Authority"
+msgstr "Издаващ орган"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__welding_joint_geometry_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Joint"
+msgstr "Съвместно"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__welding_joint_geometry_id
+msgid "Joint Geometry"
+msgstr "Геометрия на ставите"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__journal_description
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Journal Description"
+msgstr "Описание на журнала"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__journal_signed_by
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+msgid "Journal Signed By"
+msgstr "Журналът е подписан от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__kv_value
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__kv_value
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "KV Value"
+msgstr "KV стойност"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_landingpage
+msgid "Kojto Landing Page"
+msgstr "Целева страница Kojto"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "L (mm)"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__language_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__language_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__language_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__language_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__language_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__language_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Language"
+msgstr "Език"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__calibration_date
+msgid "Last Calibration Date"
+msgstr "Последна дата на калибриране"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__write_uid
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__write_uid
+msgid "Last Updated by"
+msgstr "Последна актуализация от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__write_date
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__write_date
+msgid "Last Updated on"
+msgstr "Последна актуализация на"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__seam_length
+msgid "Length (mm)"
+msgstr "Дължина (mm)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_acceptance_level__1
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_acceptance_level__1
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_acceptance_level__1
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_acceptance_level__1
+msgid "Level 1 (Stringent)"
+msgstr "Ниво 1 (строго)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_acceptance_level__2
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_acceptance_level__2
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_acceptance_level__2
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_acceptance_level__2
+msgid "Level 2 (Less Stringent)"
+msgstr "Ниво 2 (по-малко строго)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_load_bearing_capacity
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Load Bearing Capacity"
+msgstr "Товароносимост"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__ma_value
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__ma_value
+msgid "MA Value"
+msgstr "MA Стойност"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_mt_inspector
+msgid "MT"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_methods_of_testing__contrast
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_methods_of_testing__contrast
+msgid "MT - Contrast Base"
+msgstr "MT - Контрастна основа"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_methods_of_testing__uv
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_methods_of_testing__uv
+msgid "MT - UV Lamp"
+msgstr "MT - UV лампа"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__mt_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__mt_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "MT Acceptance Level"
+msgstr "MT ниво на приемане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__mt_acceptance_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__mt_acceptance_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "MT Acceptance Standard"
+msgstr "Стандарт за приемане на MT"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_mt_device
+msgid "MT Device"
+msgstr "МТ устройство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__mt_methods_of_testing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__mt_methods_of_testing
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "MT Methods of Testing"
+msgstr "МТ методи за изпитване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "MT Parameter"
+msgstr "МТ параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__mt_procedure_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__mt_procedure_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "MT Procedure Standard"
+msgstr "MT Процедурен стандарт"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__mt
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__mt
+msgid "Magnetic Particle Testing"
+msgstr "Изпитване с магнитни частици"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_mt_control
+msgid "Magnetic Particle Testing Control"
+msgstr "МТ контрол"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_mt_mixin
+msgid "Magnetic Particle Testing Control Mixin"
+msgstr "Контролен миксин за тестване на магнитни частици"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Magnetic Particle Testing Details"
+msgstr "Подробности за тестване на магнитни частици"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__degree_of_mechanisation__manual_welding
+msgid "Manual Welding"
+msgstr "Ръчно заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__manufacturer
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+msgid "Manufacturer"
+msgstr "Производител"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Material Grade"
+msgstr "Клас на материала"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Material Grade Type"
+msgstr "Тип клас на материала"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Material Performance"
+msgstr "Производителност на материала"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__materials_summary
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__materials_summary
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__material_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__material_summary
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Materials"
+msgstr "Материали"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__degree_of_mechanisation__mechanized_welding
+msgid "Mechanized Welding"
+msgstr "Механизирано заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__interpass_cleaning_description
+msgid "Method used for cleaning between weld passes"
+msgstr "Метод, използван за почистване между заваръчните проходи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__post_weld_finishing_description
+msgid "Method used for finishing the weld surface after completion"
+msgstr ""
+"Метод, използван за довършване на заваръчната повърхност след завършване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__surface_preparation_description
+msgid "Method used for preparing the base metal surface before welding"
+msgstr ""
+"Метод, използван за подготовка на повърхността на основния метал преди "
+"заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__model
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Model"
+msgstr "Модел"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Month"
+msgstr "Месец"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_cadmium_release__npd
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fatigue_strength__npd
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_load_bearing_capacity__npd
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_radioactivity_emission__npd
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_resistance_to_fire__npd
+msgid "NPD"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__name
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__name
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Name"
+msgstr "Име"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__name_summary
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__name_summary
+msgid "Name Summary"
+msgstr "Име Резюме"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__name
+msgid "Name of the weld geometry, e.g., Single V Butt Weld"
+msgstr ""
+"Име на геометрията на заваръчния шев, напр. Единична V-образна челна заварка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__company_name_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__counterparty_name_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__notified_body_name_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__certification_body_name_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__company_name_id
+msgid "Name on document"
+msgstr "Име в документа"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+msgid "Needs Calibration"
+msgstr "Нуждае се от калибриране"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_list
+msgid "Next Calibration"
+msgstr "Следващо калибриране"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__next_calibration_date
+msgid "Next Calibration Date"
+msgstr "Следваща дата на калибриране"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_intended_use__non_structural
+msgid "Non-Structural"
+msgstr "Неструктурни"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_cadmium_release__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_dimension_tolerances__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_durability__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fatigue_strength__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fracture_toughness__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_load_bearing_capacity__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_radioactivity_emission__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_reaction_to_fire__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_resistance_to_fire__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_serviceability_limit_state_deformation__not_applicable
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_weldability__not_applicable
+msgid "Not Applicable"
+msgstr "Не е приложимо"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_cadmium_release__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_durability__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fatigue_strength__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_fracture_toughness__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_load_bearing_capacity__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_radioactivity_emission__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_reaction_to_fire__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_resistance_to_fire__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_serviceability_limit_state_deformation__not_compliant
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_weldability__not_compliant
+msgid "Not Compliant"
+msgstr "Не е съвместим"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_dimension_tolerances__not_compliant
+msgid "Not Compliant with EN1090-2"
+msgstr "Не е в съответствие с EN1090-2"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__notified_body_id
+msgid "Notified Body"
+msgstr "Нотифициран орган"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_document_bundles
+msgid "Notifying Body"
+msgstr "Нотифициращ орган"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__consequtive_number
+msgid "Nr."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__name_secondary
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__name_secondary
+msgid "Number"
+msgstr "Номер"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_weld_depositions.py:0
+msgid "Number of passes must be positive."
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Observation Angle"
+msgstr "Ъгъл на наблюдение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__observation_angle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__observation_angle
+msgid "Observation Angle (°)"
+msgstr "Ъгъл на наблюдение (°)"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/general_models/kojto_en1090_wps.py:0
+msgid "Only one PDF attachment is allowed per WPS."
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/general_models/kojto_en1090_welding_certificates.py:0
+msgid "Only one PDF attachment is allowed per certificate."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__other
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__other
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__standard__other
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__weld_type__other
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__other
+msgid "Other"
+msgstr "Други"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_other_control
+msgid "Other Control"
+msgstr "Друг контрол"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__other
+msgid "Other Weld Symbol"
+msgstr "Друг символ за заварка"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Our Company"
+msgstr "Нашата компания"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PA"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pa
+msgid "PA - Flat"
+msgstr "PA - Плосък"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PB"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pb
+msgid "PB - Horizontal Fillet"
+msgstr "PB - Хоризонтално филе"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PC"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pc
+msgid "PC - Horizontal Groove"
+msgstr "PC - Хоризонтална бразда"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PD"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pd
+msgid "PD - Horizontal Overhead"
+msgstr "PD - Хоризонтални режийни"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_pdf_generator__pdf_attachment_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__pdf_attachment_id
+msgid "PDF Attachment"
+msgstr "PDF прикачен файл"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid "PDF merging failed with unexpected error: %s"
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid "PDF merging failed: %s"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PE"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pe
+msgid "PE - Overhead Groove"
+msgstr "PE - Горен канал"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PF"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pf
+msgid "PF - Vertical Up"
+msgstr "PF - Вертикално нагоре"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "PG"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__pg
+msgid "PG - Vertical Down"
+msgstr "PG - Вертикално надолу"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__welding_position__ph
+msgid "PH - Pipe Horizontal"
+msgstr "PH - Хоризонтална тръба"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_pt_inspector
+msgid "PT"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_a
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_a
+msgid "PT - Method A (Visible Penetrant)"
+msgstr "PT - Метод A (Видим пенетрант)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_b
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_b
+msgid "PT - Method B (Fluorescent Penetrant)"
+msgstr "PT - Метод B (флуоресцентен пенетрант)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_c
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_c
+msgid "PT - Method C (Water Washable)"
+msgstr "PT - Метод C (миещ се с вода)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_d
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_d
+msgid "PT - Method D (Post-Emulsifiable, Lipophilic)"
+msgstr "PT - Метод D (постемулгируем, липофилен)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_e
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_e
+msgid "PT - Method E (Solvent Removable)"
+msgstr "PT - Метод E (отстраним с разтворител)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_methods_of_testing__method_f
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing__method_f
+msgid "PT - Method F (Post-Emulsifiable, Hydrophilic)"
+msgstr "PT - Метод F (постемулгируем, хидрофилен)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__pt_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__pt_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "PT Acceptance Level"
+msgstr "PT ниво на приемане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__pt_acceptance_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__pt_acceptance_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "PT Acceptance Standard"
+msgstr "PT стандарт за приемане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_pt_device
+msgid "PT Device"
+msgstr "PT устройство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__pt_methods_of_testing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__pt_methods_of_testing
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "PT Methods of Testing"
+msgstr "PT Методи за изпитване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "PT Parameter"
+msgstr "PT параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__pt_procedure_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__pt_procedure_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "PT Procedure Standard"
+msgstr "PT стандартна процедура"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__packaging
+msgid "Packaging"
+msgstr "Опаковка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__parameter_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Parameter"
+msgstr "Параметър"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_welding_parameter_contents.py:0
+msgid ""
+"Parameter '%s' already exists in this deposition. Each parameter can only be"
+" used once per deposition."
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_form
+msgid "Parameter Name"
+msgstr "Име на параметър"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Parameter Translations"
+msgstr "Преводи на параметри"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__parameter_content_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_form
+msgid "Parameters"
+msgstr "Параметри"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__number_of_passes
+msgid "Passes"
+msgstr "Пасове"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__pt
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__pt
+msgid "Penetrant Testing"
+msgstr "Изпитване на пенетрант"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_pt_control
+msgid "Penetrant Testing Control"
+msgstr "PT контрол"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_pt_mixin
+msgid "Penetrant Testing Control Mixin"
+msgstr "Контролна смес за изпитване на пенетрант"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Penetrant Testing Details"
+msgstr "Подробности за изпитването на пенетрант"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__depth_of_penetration
+msgid "Penetration (mm)"
+msgstr "Проникване (mm)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Percent of Testing"
+msgstr "Процент тестване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__percent_of_testing
+msgid "Percent of Testing (%)"
+msgstr "Процент на тестване (%)"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_performance
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Performance Declaration"
+msgstr "Декларация за експлоатационни характеристики"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Performance Declaration #"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Performed By"
+msgstr "Изпълнява се от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__control_performeted_by
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Performed Control"
+msgstr "Извършен контрол"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__backing_strip
+msgid "Permanent Backing Strip (M)"
+msgstr "Постоянна опорна лента (M)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__plan_description
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Plan Description"
+msgstr "Описание на плана"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__plan_issued_by
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+msgid "Plan Issued By"
+msgstr "План, издаден от"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+msgid "Planned"
+msgstr "Планирано"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__date_planned
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Planned Start Date"
+msgstr "Планирана начална дата"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_document_bundles.py:0
+msgid "Please fill in all required fields before printing: %s"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__plug
+msgid "Plug Weld (☐)"
+msgstr "Заваръчен шев (☐)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__position
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__position
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__welding_position
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Position"
+msgstr "Позиция"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__post_welding
+msgid "Post-Welding"
+msgstr "След заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__post_weld_finishing_description
+msgid "Post-weld Finishing"
+msgstr "Довършителни работи след заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__pre_welding
+msgid "Pre-Welding"
+msgstr "Предварително заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__wps_type__preliminary
+msgid "Preliminary"
+msgstr "Предварителен"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__preliminary_wps_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Preliminary WPS"
+msgstr "Предварителен WPS"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_list
+msgid "Print Complete Document Bundle"
+msgstr "Отпечатайте пълен пакет документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Print Control Document"
+msgstr "Контролен документ за печат"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "Print WPS Document"
+msgstr "Отпечатайте WPS документ"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_list
+msgid "Print Welding Task"
+msgstr "Разпечатайте Задача за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__probe
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__probe
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Probe"
+msgstr "Сонда"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__process_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Process"
+msgstr "Процес"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_form
+msgid "Process Name"
+msgstr "Име на процеса"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Process Translations"
+msgstr "Обработвайте преводи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_wps__wps_type__production
+msgid "Production"
+msgstr "производство"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Production WPS"
+msgstr "Производство WPS"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__json_properties_of_batch_materials
+msgid "Properties of Batch Materials"
+msgstr "Свойства на партидните материали"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__cl_acceptance_level__2
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_cl_mixin__cl_acceptance_level__2
+msgid "Quality"
+msgstr "Качество"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__cl_acceptance_level__3
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_cl_mixin__cl_acceptance_level__3
+msgid "Quality and Quantity"
+msgstr "Качество и количество"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__cl_acceptance_level__1
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_cl_mixin__cl_acceptance_level__1
+msgid "Quantity"
+msgstr "Количество"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_rt_inspector
+msgid "RT"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_methods_of_testing__gamma
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_methods_of_testing__gamma
+msgid "RT - Gamma"
+msgstr "RT - Гама"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_methods_of_testing__xray
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_methods_of_testing__xray
+msgid "RT - X-ray"
+msgstr "RT - рентгенова снимка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__rt_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__rt_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "RT Acceptance Level"
+msgstr "RT ниво на приемане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__rt_acceptance_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__rt_acceptance_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "RT Acceptance Standard"
+msgstr "Стандарт за приемане на RT"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_rt_device
+msgid "RT Device"
+msgstr "RT устройство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__rt_methods_of_testing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__rt_methods_of_testing
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "RT Methods of Testing"
+msgstr "RT методи за изпитване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "RT Parameter"
+msgstr "RT параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__rt_procedure_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__rt_procedure_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "RT Procedure Standard"
+msgstr "Стандарт за RT процедура"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__radiation_angle
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__radiation_angle
+msgid "Radiation Angle"
+msgstr "Ъгъл на излъчване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__radiation_direction
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__radiation_direction
+msgid "Radiation Direction"
+msgstr "Посока на радиация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__radiation_source_activity
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__radiation_source_activity
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Radiation Source Activity"
+msgstr "Активен на източника на радиация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__radiation_source_energy
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__radiation_source_energy
+msgid "Radiation Source Energy"
+msgstr "Енергия на източник на радиация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__radiation_source_type
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__radiation_source_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Radiation Source Type"
+msgstr "Тип източник на радиация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_radioactivity_emission
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Radioactivity Emission"
+msgstr "Излъчване на радиоактивност"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__rt
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__rt
+msgid "Radiographic Testing"
+msgstr "Радиографско изследване"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_rt_control
+msgid "Radiographic Testing Control"
+msgstr "Контрол на радиографските изследвания"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_rt_mixin
+msgid "Radiographic Testing Control Mixin"
+msgstr "Контролен миксин за радиографско изследване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Radiographic Testing Details"
+msgstr "Подробности за радиографско изследване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__range_of_approval
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__wpqr_range_of_approval
+msgid "Range of Approval"
+msgstr "Обхват на одобрение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_reaction_to_fire
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Reaction to Fire"
+msgstr "Реакция на огън"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__evaluation__rejected
+msgid "Rejected"
+msgstr "Отхвърлено"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Release of Cadmium &amp; Its Compounds"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__removable_backing
+msgid "Removable Backing Strip (MR)"
+msgstr "Подвижна опорна лента (MR)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__parameter_is_required
+msgid "Req."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__is_required
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+msgid "Required"
+msgstr "Задължително"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+msgid "Required Parameters"
+msgstr "Задължителни параметри"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_resistance_to_fire
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Resistance to Fire"
+msgstr "Устойчивост на огън"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Result Type"
+msgstr "Тип резултат"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__results_statement
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Results Statement"
+msgstr "Изявление за резултатите"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wpqrs__date_change
+msgid "Revision Date"
+msgstr "Дата на преразглеждане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_serviceability_limit_state_deformation
+msgid "SLS Deformation"
+msgstr "SLS деформация"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__weld_drawing_svg
+msgid "SVG Drawing"
+msgstr "SVG чертеж"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__weld_drawing_filename
+msgid "SVG Filename"
+msgstr "SVG име на файл"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__welding_joint_svg
+msgid "SVG representation of the welding joint geometry"
+msgstr "SVG представяне на геометрията на заваръчната връзка"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Safety Performance"
+msgstr "Безопасност"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__scheme
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__scheme
+msgid "Scheme"
+msgstr "Схема"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Seam Name"
+msgstr "Име на шева"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Seam Number"
+msgstr "Номер на шева"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__seam
+msgid "Seam Weld (≈)"
+msgstr "Заваръчен шев (≈)"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_welding_seams.py:0
+msgid "Seam length must be greater than zero."
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_welding_seams.py:0
+msgid "Seam thickness must be greater than zero."
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Search Document Bundles"
+msgstr "Търсете пакети документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_equipment_search
+msgid "Search Equipment"
+msgstr "Оборудване за търсене"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Search Translations"
+msgstr "Търсене на преводи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_search
+msgid "Search WPQRs"
+msgstr "Търсете WPQR"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_search
+msgid "Search Weld Geometries"
+msgstr "Търсете Геометрии на заваръчните шевове"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Search Welding Certificates"
+msgstr "Търсене на сертификати за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_search
+msgid "Search Welding Depositions"
+msgstr "Търсене на заваръчни отлагания"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_search
+msgid "Search Welding Jobs"
+msgstr "Търсене на работни места за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+msgid "Search Welding Parameters"
+msgstr "Търсене на параметри на заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_search
+msgid "Search Welding Processes"
+msgstr "Търсене на заваръчни процеси"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+msgid "Search Welding Specialists"
+msgstr "Търсете специалисти по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__sector
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__sector
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Sector"
+msgstr "Сектор"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__iso_2553_symbol
+msgid ""
+"Select a weld symbol per ISO 2553:2019 standard. Examples: 'V' for Single V "
+"Groove, '△' for Fillet Weld. Use 'Other' for non-standard or custom symbols."
+msgstr ""
+"Изберете символ за заваръчен шев според стандарта ISO 2553:2019. Примери: "
+"„V“ за единичен V жлеб, „△“ за заваръчен шев. Използвайте „Други“ за "
+"нестандартни или персонализирани символи."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__sensitivity
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__sensitivity
+msgid "Sensitivity"
+msgstr "Чувствителност"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__serial_number
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Serial Number"
+msgstr "Сериен номер"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Serviceability Limit State Deformation"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__shipping
+msgid "Shipping"
+msgstr "Доставка"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Signature"
+msgstr "Подпис"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_signed_by
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Signed By"
+msgstr "Подписано от"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_bevel
+msgid "Single Bevel Groove (⌋)"
+msgstr "Единичен скосен жлеб (⌋)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_bevel_broad
+msgid "Single Bevel Groove with Broad Root Face (⅄)"
+msgstr "Единичен скосен жлеб с широк корен (⅄)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_j
+msgid "Single J Groove (J)"
+msgstr "Единичен J канал (J)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_u
+msgid "Single U Groove (U)"
+msgstr "Единичен U канал (U)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_v
+msgid "Single V Groove (V)"
+msgstr "Единичен V канал (V)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__single_v_broad
+msgid "Single V Groove with Broad Root Face (Y)"
+msgstr "Единичен V жлеб с широк корен (Y)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__slot
+msgid "Slot Weld (☐)"
+msgstr "Заваръчен шев (☐)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid ""
+"Solely responsible for the preparation of this declaration of performance is"
+" the producer acc. #4."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__source_to_film_distance
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__source_to_film_distance
+msgid "Source to Film Distance"
+msgstr "Разстояние от източник до филм"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__specialist_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_certificates__specialist_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_search
+msgid "Specialist"
+msgstr "специалист"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_search
+msgid "Specialist Translations"
+msgstr "Специализирани преводи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__spot
+msgid "Spot Weld (○)"
+msgstr "Точкова заварка (○)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__square
+msgid "Square Groove (‖)"
+msgstr "Квадратен жлеб (‖)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__stage_of_production
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Stage of Production"
+msgstr "Етап на производство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__personal_stamp_number
+msgid "Stamp Nr."
+msgstr "Печат Nr."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_standard_reference
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Standard Reference"
+msgstr "Стандартна справка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__standard
+msgid ""
+"Standard defining the weld geometry, typically EN ISO 9692-1 for butt/fillet"
+" welds or EN ISO 14555 for stud welds"
+msgstr ""
+"Стандарт, определящ геометрията на заваръчния шев, обикновено EN ISO 9692-1 "
+"за челни/филетни заварки или EN ISO 14555 за шпилкови заварки"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__mt_procedure_standard
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control_mt_mixin__mt_procedure_standard
+msgid "Standard for magnetic particle testing procedures."
+msgstr "Стандарт за процедури за изпитване на магнитни частици."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__pt_procedure_standard
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control_pt_mixin__pt_procedure_standard
+msgid "Standard for penetrant testing procedures."
+msgstr "Стандарт за процедури за изпитване с проникване."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__ut_procedure_standard
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__ut_procedure_standard
+msgid "Standard for ultrasonic testing procedures."
+msgstr "Стандарт за процедури за ултразвуково изследване."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__vt_procedure_standard
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__vt_procedure_standard
+msgid "Standard for visual testing procedures."
+msgstr "Стандарт за процедури за визуално изпитване."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__rt_procedure_standard
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__rt_procedure_standard
+msgid "Standards for radiographic testing procedures (film-based or digital)."
+msgstr "Стандарти за процедури за радиографски тестове (филмови или цифрови)."
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__mt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__pt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__rt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__vt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_mt_mixin__mt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_pt_mixin__pt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_rt_mixin__rt_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_acceptance_standard__iso_5817
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_vt_mixin__vt_acceptance_standard__iso_5817
+msgid "Steel - EN ISO 5817"
+msgstr "Стомана - EN ISO 5817"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__dop_intended_use__structural
+msgid "Structural"
+msgstr "Структурни"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Structural Performance"
+msgstr "Структурно изпълнение"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__weld_type__stud
+msgid "Stud Weld"
+msgstr "Заваръчен шев"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__subcode_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_search
+msgid "Subcode"
+msgstr "ID на подкод"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__deposition_summary
+msgid "Summary"
+msgstr "Резюме"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__surface_preparation_description
+msgid "Surface Preparation"
+msgstr "Подготовка на повърхността"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_weld_geometries__iso_2553_symbol__surfacing
+msgid "Surfacing Weld (~~~)"
+msgstr "Заваръчен шев (~~~)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__avcp_system__system_1
+msgid "System 1"
+msgstr "Система 1"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__avcp_system__system_1_plus
+msgid "System 1+"
+msgstr "Система 1+"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__avcp_system__system_2_plus
+msgid "System 2+"
+msgstr "Система 2+"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__avcp_system__system_3
+msgid "System 3"
+msgstr "Система 3"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_document_bundles__avcp_system__system_4
+msgid "System 4"
+msgstr "Система 4"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_document_bundles__avcp_system
+msgid ""
+"System of Assessment and Verification of Constancy of Performance per CPR"
+msgstr "Система за оценка и проверка на постоянството на ефективността на CPR"
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_doc_welding_tasks
+msgid "Tasks"
+msgstr "Задачи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Technical Document"
+msgstr "Технически документ"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__technical_document_revision_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Technical Documents"
+msgstr "Технически документи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Temperature"
+msgstr "температура"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__temperature
+msgid "Temperature (°C)"
+msgstr "Температура (°C)"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/utils/print_complete_document_bundle.py:0
+msgid "Test function failed: %s"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_control__pdf_attachment_id
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_doc_welding_tasks__pdf_attachment_id
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_pdf_generator__pdf_attachment_id
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__pdf_attachment_id
+msgid "The PDF attachment for this document"
+msgstr "PDF прикачения файл за този документ"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "The performance of this product according to the declared performance."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_depositions__sequence_in_wps
+msgid "The sequence number of the deposition in the WPS"
+msgstr "Поредният номер на депозирането в WPS"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_welding_seams__applicable_wps_id
+msgid "The specific welding procedure specification to be used"
+msgstr ""
+"Конкретната спецификация на заваръчната процедура, която трябва да се "
+"използва"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid ""
+"The system or systems of assessment and verification of constancy of "
+"performance of the construction product in accordance with system 2+ as set "
+"out in Annex V of the Construction Products' Regulations."
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_depositions__wps_id
+msgid "The welding procedure specification to be used"
+msgstr ""
+"Спецификацията на процедурата за заваряване, която трябва да се използва"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_depositions__welding_process_id
+msgid "The welding process to be used"
+msgstr "Процесът на заваряване, който ще се използва"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Thickness"
+msgstr "Дебелина"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__seam_thickness
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__wall_thickness
+msgid "Thickness (mm)"
+msgstr "дебелина (mm)"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "This Month"
+msgstr "Този месец"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_translations
+msgid ""
+"This module allows you to manage translations for welding parameters,\n"
+"                    weld geometries, welding processes, and welding specialists."
+msgstr ""
+"Този модул ви позволява да управлявате преводи за параметри на заваряване,\n"
+"                    геометрии на заваръчни шевове, заваръчни процеси и специалисти по заваряване."
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Thk. (mm)"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__title
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+msgid "Title"
+msgstr "Заглавие"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_translations__translated_name
+msgid "Translated Name"
+msgstr "Преведено име"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_form
+msgid "Translation"
+msgstr "Превод"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_translations
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__translation_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__translation_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__translation_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__translation_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_translations_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_form
+msgid "Translations"
+msgstr "Преводи"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Tube Diameter"
+msgstr "Диаметър на тръбата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__equipment_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Type"
+msgstr "Тип"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__type_of_defect
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__type_of_defect
+msgid "Type of Defect"
+msgstr "Тип на дефекта"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__weld_type
+msgid "Type of weld, either butt, fillet, stud, or other"
+msgstr "Тип заваръчен шев, или челен, ъглов, шпилка или друг"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_ut_inspector
+msgid "UT"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_methods_of_testing__contact
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_methods_of_testing__contact
+msgid "UT - Contact Method"
+msgstr "UT - Контактен метод"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_methods_of_testing__immersion
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_methods_of_testing__immersion
+msgid "UT - Immersion Method"
+msgstr "UT - Метод на потапяне"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__ut_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__ut_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "UT Acceptance Level"
+msgstr "UT ниво на приемане"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__ut_acceptance_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__ut_acceptance_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "UT Acceptance Standard"
+msgstr "Стандарт за приемане на UT"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_ut_device
+msgid "UT Device"
+msgstr "UT устройство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__ut_acceptance_standard__iso_11666
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_ut_mixin__ut_acceptance_standard__iso_11666
+msgid "UT Levels - EN ISO 11666"
+msgstr "UT нива - EN ISO 11666"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__ut_methods_of_testing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__ut_methods_of_testing
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "UT Methods of Testing"
+msgstr "UT методи за изпитване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "UT Parameter"
+msgstr "UT параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__ut_procedure_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__ut_procedure_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "UT Procedure Standard"
+msgstr "UT стандартна процедура"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__ut
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__ut
+msgid "Ultrasonic Testing"
+msgstr "Ултразвуково изследване"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_ut_control
+msgid "Ultrasonic Testing Control"
+msgstr "УТ контрол"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_ut_mixin
+msgid "Ultrasonic Testing Control Mixin"
+msgstr "Ултразвуково тестване Control Mixin"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Ultrasonic Testing Details"
+msgstr "Подробности за ултразвуково изследване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_weld_geometries__code
+msgid "Unique code for the weld geometry, e.g., BW-V for Single V Butt Weld"
+msgstr ""
+"Уникален код за геометрията на заваръчния шев, напр. BW-V за единичен V "
+"челен шев"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__parameter_unit
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__unit
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+msgid "Unit"
+msgstr "Мерна ед."
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_weld_geometries
+msgid "Universal Weld Geometries for EN 1090 Compliance"
+msgstr "Универсална геометрия на заваръчните шевове за съответствие с EN 1090"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__unsharpness
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_rt_mixin__unsharpness
+msgid "Unsharpness"
+msgstr "Неострота"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_vt_inspector
+msgid "VT"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__vt_methods_of_testing__direct
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_vt_mixin__vt_methods_of_testing__direct
+msgid "VT - Direct Method"
+msgstr "VT - Директен метод"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__vt_methods_of_testing__indirect
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control_vt_mixin__vt_methods_of_testing__indirect
+msgid "VT - Indirect Method"
+msgstr "VT - Косвен метод"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__vt_acceptance_level
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__vt_acceptance_level
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "VT Acceptance Level"
+msgstr "Ниво на приемане на VT"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__vt_acceptance_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__vt_acceptance_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "VT Acceptance Standard"
+msgstr "Стандарт за приемане на VT"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_vt_device
+msgid "VT Device"
+msgstr "VT устройство"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__vt_methods_of_testing
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__vt_methods_of_testing
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "VT Methods of Testing"
+msgstr "VT методи за изпитване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "VT Parameter"
+msgstr "VT параметър"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__vt_procedure_standard
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_vt_mixin__vt_procedure_standard
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "VT Procedure Standard"
+msgstr "Стандарт за VT процедура"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__value
+msgid "Value"
+msgstr "Стойност"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__control_type__vt
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__vt
+msgid "Visual Testing"
+msgstr "Визуално тестване"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_vt_control
+msgid "Visual Testing Control"
+msgstr "VT контрол"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_control_vt_mixin
+msgid "Visual Testing Control Mixin"
+msgstr "Визуално тестване Control Mixin"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+msgid "Visual Testing Details"
+msgstr "Подробности за визуално тестване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_wpqr
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_list
+msgid "WPQR"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__wpqr_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "WPQR Reference"
+msgstr "Справка за WPQR"
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_wpqr
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_list
+msgid "WPQRs"
+msgstr "WPQR"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_wps
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__wps_id
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_search
+msgid "WPS"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__wps_record_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "WPS Records"
+msgstr "WPS записи"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_wps
+msgid "WPS Report"
+msgstr "WPS отчет"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__wps_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "WPS Type"
+msgstr "Тип WPS"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__wps_used_on_batch_ids
+msgid "WPS Used On Batch"
+msgstr "WPS се използва на партида"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "WPS used with following Warehouse Batches"
+msgstr "WPS се използва със следните складови партиди"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+msgid "Wall Thickness"
+msgstr "Дебелина на стената"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__wall_thickness
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control_ut_mixin__wall_thickness
+msgid "Wall Thickness (mm)"
+msgstr "Дебелина на стената (mm)"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,help:kojto_en1090.field_kojto_en1090_wps__wall_thickness
+msgid "Wall thickness of the tube"
+msgstr "Дебелина на стената на тръбата"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__warehouse_certificate_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Warehouse Certificates"
+msgstr "Складови сертификати"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__warehouse_inspection_report_ids
+msgid "Warehouse Inspection Reports"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__weld_deposition_id
+msgid "Weld Deposition"
+msgstr "Отлагане на заварки"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__weld_deposition_summary
+msgid "Weld Deposition Summary"
+msgstr "Резюме на отлагането на заваръчните шевове"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_weld_geometries
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_weld_geometries
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_list
+msgid "Weld Geometries"
+msgstr "Геометрии на заваръчните шевове"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Weld Information"
+msgstr "Информация за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_geometries__weld_type
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_geometries_search
+msgid "Weld Type"
+msgstr "Тип заварка"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__dop_weldability
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_ce_label_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_performance_templates
+msgid "Weldability"
+msgstr "Заваряемост"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__welder_id
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__is_certified_welder
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__welder_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Welder"
+msgstr "Заварчик"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_doc_control__stage_of_production__welding
+msgid "Welding"
+msgstr "Заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__welding
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_form
+msgid "Welding Certificate"
+msgstr "Сертификат за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_welding_certificates
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__welding_certificates_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_specialists__welding_certificates_ids
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_welding_certificates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_certificates_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_form
+msgid "Welding Certificates"
+msgstr "Сертификати за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_form
+msgid "Welding Deposition"
+msgstr "Отлагане на заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_weld_depositions
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_weld_depositions
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__weld_deposition_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Welding Depositions"
+msgstr "Заваръчни отлагания"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+msgid "Welding Engineer"
+msgstr "Инженер по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_welding_certificates__certificate_type__welding_engineer
+msgid "Welding Engineer Certificate"
+msgstr "Сертификат инженер по заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_search
+msgid "Welding Engineers"
+msgstr "Инженери по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_equipment__is_welding_equipment
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__welding
+msgid "Welding Equipment"
+msgstr "Заваръчно оборудване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Welding Information"
+msgstr "Информация за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.report,name:kojto_en1090.action_report_kojto_en1090_doc_welding_tasks
+msgid "Welding Job"
+msgstr "Заваръчна работа"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__welding_task_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_list
+msgid "Welding Jobs"
+msgstr "Заваръчни работи"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_wps__welding_joint_svg
+msgid "Welding Joint SVG"
+msgstr "Заваръчна връзка SVG"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_doc_welding_tasks.py:0
+msgid "Welding Journal Report"
+msgstr ""
+
+#. module: kojto_en1090
+#: model:ir.model.fields.selection,name:kojto_en1090.selection__kojto_en1090_equipment__equipment_type__welding_material
+msgid "Welding Material"
+msgstr "Заваръчен материал"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameter_contents__welding_parameter_id
+msgid "Welding Parameter"
+msgstr "Параметър на заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_parameter_contents
+msgid "Welding Parameter Contents"
+msgstr "Съдържание на заваръчните параметри"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_welding_parameters
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_parameters
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_processes__welding_parameter_ids
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_welding_parameters
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_list
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_form
+msgid "Welding Parameters"
+msgstr "Параметри на заваряване"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_doc_welding_tasks.py:0
+msgid "Welding Plan Report"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wpqr_form
+msgid "Welding Procedure Qualification Record"
+msgstr "Запис за квалификация на процедурата по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_wpqrs
+msgid "Welding Procedure Qualification Record (WPQR)"
+msgstr "WPQR"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_form
+msgid "Welding Procedure Specification"
+msgstr "Спецификация на процедурата за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_wps
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_wps_search
+msgid "Welding Procedure Specifications"
+msgstr "Спецификации на процедурата за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_weld_depositions__welding_process_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_weld_depositions_search
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_parameters_search
+msgid "Welding Process"
+msgstr "Процес на заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_welding_processes
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_processes
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__welding_processes_summary
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_parameters__welding_process_ids
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_welding_processes
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_processes_list
+msgid "Welding Processes"
+msgstr "Заваръчни процеси"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_doc_welding_tasks.py:0
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_seams
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_control__welding_seam_ids
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_doc_welding_tasks__welding_seam_ids
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+msgid "Welding Seams"
+msgstr "Заваръчни шевове"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_form
+msgid "Welding Specialist"
+msgstr "Специалист по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_welding_specialists
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_welding_specialists
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_welding_specialists
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_welding_specialists_list
+msgid "Welding Specialists"
+msgstr "Специалисти по заваряване"
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_welding_seams__welding_task_id
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+msgid "Welding Task"
+msgstr "Задача за заваряване"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Welding Task / Journal"
+msgstr "Заваръчна задача / Журнал"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "Welding Task / Plan"
+msgstr "Задача / План за заваряване"
+
+#. module: kojto_en1090
+#: model:ir.actions.act_window,name:kojto_en1090.action_kojto_en1090_doc_welding_tasks
+#: model:ir.model,name:kojto_en1090.model_kojto_en1090_doc_welding_tasks
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_document_bundles_form
+msgid "Welding Tasks"
+msgstr "Заваръчни задачи"
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/general_models/kojto_en1090_welding_processes.py:0
+msgid "Welding process code must be unique!"
+msgstr ""
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_control_form
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.view_kojto_en1090_doc_welding_tasks_form
+msgid "Welding seams"
+msgstr "Заваръчни шевове"
+
+#. module: kojto_en1090
+#: model_terms:ir.actions.act_window,help:kojto_en1090.action_kojto_en1090_doc_welding_tasks
+msgid "Welding tasks are used to plan and track welding operations."
+msgstr ""
+"Задачите по заваряване се използват за планиране и проследяване на "
+"заваръчните операции."
+
+#. module: kojto_en1090
+#: model:ir.model.fields,field_description:kojto_en1090.field_kojto_en1090_document_bundles__counterpartys_reference
+msgid "Your Reference"
+msgstr "Ваш реф. №"
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_general
+msgid "[+] General Documents"
+msgstr "[+] Общи документи"
+
+#. module: kojto_en1090
+#: model:ir.ui.menu,name:kojto_en1090.menu_kojto_en1090_settings
+msgid "[+] Settings"
+msgstr "[+] Настройки"
+
+#. module: kojto_en1090
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_control_templates
+#: model_terms:ir.ui.view,arch_db:kojto_en1090.report_kojto_en1090_doc_welding_tasks
+msgid "_______________________"
+msgstr ""
+
+#. module: kojto_en1090
+#. odoo-python
+#: code:addons/kojto_en1090/models/kojto_en1090_doc_welding_tasks.py:0
+msgid "id"
+msgstr ""

@@ -131,7 +131,7 @@
                 <filter name="today_jobs" string="Today" domain="[('date_start', '=', context_today().strftime('%Y-%m-%d'))]"/>
                 <filter name="this_week_jobs" string="This Week" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
                 <filter name="this_month_jobs" string="This Month" domain="[('date_start', '&gt;=', context_today().strftime('%Y-%m-01')), ('date_start', '&lt;', (context_today() + datetime.timedelta(days=32)).strftime('%Y-%m-01'))]"/>
-                <filter name="last_month_jobs" string="Last Month" domain="[('date_start', '&gt;=', (context_today() - datetime.timedelta(days=32)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-01'))]"/>
+                <filter name="last_month_jobs" string="Last Month" domain="[('date_start', '&gt;=', (context_today() + relativedelta(months=-1, day=1)).strftime('%Y-%m-01')), ('date_start', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
                 <group expand="0" string="Group By">
                     <filter string="Process" name="group_by_process" context="{'group_by': 'process_id'}"/>
                     <filter string="Consolidation Field" name="group_by_consolidation" context="{'group_by': 'consolidation_field'}"/>

@@ -482,10 +482,20 @@ class KojtoOffers(models.Model):
         self.ensure_one()
         header = "Position\tName\tQuantity\tUnit\tUnit Price\tVAT Rate\n"
         if self.content:
-            lines = [
-                f"{content.position or ''}\t{content.name or ''}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}"
-                for content in self.content
-            ]
+            lines = []
+            for content in self.content:
+                # Replace newlines and multiple whitespace in name with single space
+                name = content.name or ''
+                if name:
+                    name = ' '.join(name.split())  # Replace all whitespace (including newlines) with single space
+
+                position = content.position or ''
+                if position:
+                    position = ' '.join(position.split())  # Also clean position field
+
+                lines.append(
+                    f"{position}\t{name}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}"
+                )
             first_line = lines[0].split("\t") if lines else []
             is_header = (
                 len(first_line) >= 5 and
@@ -673,8 +683,21 @@ class KojtoOffers(models.Model):
         elements_data = []
         for content in self.content.sorted(key=lambda c: c.position or ''):
             for element in content.content_elements.sorted(key=lambda e: e.position or ''):
+                # Replace newlines and multiple whitespace with single space
+                element_name = element.name or ''
+                if element_name:
+                    element_name = ' '.join(element_name.split())
+
+                content_position = content.position or ''
+                if content_position:
+                    content_position = ' '.join(content_position.split())
+
+                element_position = element.position or ''
+                if element_position:
+                    element_position = ' '.join(element_position.split())
+
                 elements_data.append(
-                    f"{content.position or ''}\t{element.position or ''}\t{element.name or ''}\t{element.consolidation_id.name or ''}\t{element.quantity or 0.0}\t{element.unit_price or 0.0}"
+                    f"{content_position}\t{element_position}\t{element_name}\t{element.consolidation_id.name or ''}\t{element.quantity or 0.0}\t{element.unit_price or 0.0}"
                 )
 
         data = header + "\n".join(elements_data) + "\n" if elements_data else header

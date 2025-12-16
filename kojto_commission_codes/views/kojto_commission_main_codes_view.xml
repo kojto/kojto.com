@@ -6,7 +6,7 @@
         <field name="model">kojto.commission.main.codes</field>
         <field name="arch" type="xml">
             <list class="ko-list-main" editable="top">
-                <field name="active" string="Is Active" optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="active" string="Is Active" optional="show" widget="boolean_toggle" />
                 <field name="maincode" />
                 <field name="description" />
                 <field name="cash_flow_only" string="Cash Flow only" widget="boolean_toggle" class="w-100 d-flex justify-content-left" />

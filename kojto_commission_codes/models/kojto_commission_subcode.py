@@ -5,7 +5,7 @@ class KojtoCommissionSubcodes(models.Model):
     _name = "kojto.commission.subcodes"
     _description = "Kojto Subcodes"
     _rec_name = "name"
-    _order = "subcode desc"
+    _order = "name asc, description asc"
 
     _sql_constraints = [('unique_name', 'unique(name)', 'The combination of Main Code, Code, and Subcode must be unique.')]
 

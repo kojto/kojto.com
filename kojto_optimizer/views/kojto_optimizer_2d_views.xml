@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- kojto_optimizer/views/kojto_optimizer_2d_views.xml -->
+<odoo>
+    <!-- List View for Packages -->
+    <record id="view_kojto_optimizer_2d_list" model="ir.ui.view">
+        <field name="name">Kojto Optimizer 2D Packages List</field>
+        <field name="model">kojto.optimizer.2d.packages</field>
+        <field name="arch" type="xml">
+            <list string="2D Packages" default_order="name desc" class="ko-list-main" duplicate="false">
+                <field name="active" string=" " optional="show" widget="boolean_toggle" class="w-100 d-flex justify-content-center" />
+                <field name="name" />
+                <field name="description" />
+                <field name="date_issue" />
+                <field name="optimization_method" />
+                <field name="stock_rectangles_ids" string="Stock Rectangles" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
+                <field name="shapes_to_cut_ids" string="Shapes to Cut" widget="one2many" options="{'no_create': True, 'no_open': False, 'no_quick_create': True}" />
+                <field name="issued_by" />
+                <field name="width_of_cut" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View for Packages -->
+    <record id="view_kojto_optimizer_2d_form" model="ir.ui.view">
+        <field name="name">Kojto Optimizer 2D Packages Form</field>
+        <field name="model">kojto.optimizer.2d.packages</field>
+        <field name="arch" type="xml">
+            <form string="2D Cutting Package">
+                <sheet class="ko-form-body ko-form-main">
+                    <div class="d-flex justify-content-between align-items-center mb-3 ko-form-main-header-line">
+                        <div class="w-100 px-0">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 me-0">
+                                    <div class="ko-form-view-title">
+                                        <field name="name" class="ko-form-view-title" />
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center">
+                                    <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge mx-auto" />
+                                </div>
+                                <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0">
+                                    <div class="dropdown ms-2">
+                                        <button class="bg-transparent border-0 d-flex align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions" title="Actions">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder-plus" viewBox="0 0 16 16">
+                                                    <path d="m.5 3 .04.87a2 2 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14H9v-1H2.826a1 1 0 0 1-.995-.91l-.637-7A1 1 0 0 1 2.19 4h11.62a1 1 0 0 1 .996 1.09L14.54 8h1.005l.256-2.819A2 2 0 0 0 13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2m5.672-1a1 1 0 0 1 .707.293L7.586 3H2.19q-.362.002-.683.12L1.5 2.98a1 1 0 0 1 1-.98z" />
+                                                    <path d="M13.5 9a.5.5 0 0 1 .5.5V11h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V12h-1.5a.5.5 0 0 1 0-1H13V9.5a.5.5 0 0 1 .5-.5" />
+                                                </svg>
+                                            </i>
+                                        </button>
+                                        <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton" style="overflow-x: hidden;">
+                                            <button name="action_import_stock_rectangles" string="Import Stock Rectangles" type="object" class="dropdown-item"/>
+                                            <button name="action_import_shapes_to_cut" string="Import DXF Shapes" type="object" class="dropdown-item"/>
+                                            <button name="action_export_to_dxf" string="Export DXF" type="object" class="dropdown-item"/>
+                                            <button name="print_document_as_pdf" string="Print PDF" type="object" class="dropdown-item"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="height: 20px;"></div>
+                            <separator class="separator-slim-top"/>
+                            <div class="row no-gutters align-items-start">
+                                <div class="col-lg-4">
+                                    <group string="2D optimisation data"></group>
+                                    <group>
+                                        <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="date_issue"/>
+                                        <field name="issued_by" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="description"/>
+                                        <field name="optimization_method" string="Method"/>
+                                        <field name="width_of_cut"/>
+                                        <field name="thickness" string="Thickness (mm)"/>
+                                        <field name="material_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                        <field name="margin_left" string="Margin Left (mm)"/>
+                                        <field name="margin_right" string="Margin Right (mm)"/>
+                                        <field name="margin_top" string="Margin Top (mm)"/>
+                                        <field name="margin_bottom" string="Margin Bottom (mm)"/>
+                                        <field name="use_stock_priority"/>
+                                    </group>
+                                </div>
+                                <div class="col-lg-4">
+                                    <group string="Stock Rectangles"></group>
+                                    <div style="height: 200px; overflow-y: auto;">
+                                        <group>
+                                            <field name="stock_rectangles_ids" nolabel="1">
+                                                <list editable="bottom" class="ko-list-main" limit="100" style="height: 100px; overflow-y: auto;">
+                                                    <field name="stock_position" string="Pos." />
+                                                    <field name="stock_description" />
+                                                    <field name="stock_width" string="Width" />
+                                                    <field name="stock_length" string="Length" />
+                                                    <field name="available_stock_rectangle_pieces" string="Available pcs." />
+                                                </list>
+                                            </field>
+                                        </group>
+                                    </div>
+                                    <separator/>
+                                    <group string="Shapes to Cut"></group>
+                                    <div style="height: 450px; overflow-y: auto;">
+                                        <group>
+                                            <field name="shapes_to_cut_ids" nolabel="1" widget="one2many">
+                                                <list editable="bottom" class="ko-list-main" limit="1000" style="height: 500px; overflow-y: auto;">
+                                                    <field name="cut_position" string="Pos."/>
+                                                    <field name="drawing" string="Drawing" widget="image" optional="show"/>
+                                                    <field name="cut_description"/>
+                                                    <field name="dxf_filename" string="DXF File"/>
+                                                    <field name="required_cut_shape_pieces" string="Required pcs."/>
+                                                    <button name="open_o2m_record" type="object" class="btn-link" icon="fa-external-link" title="View Details"/>
+                                                </list>
+                                            </field>
+                                        </group>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <group string="Cutting Plan"></group>
+                                    <div class="row align-items-start" style="height: 650px; overflow-y: auto;">
+                                        <group>
+                                            <field name="cutting_plan" nolabel="1" widget="text" readonly="1" />
+                                        </group>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard Form View for DXF Import -->
+    <record id="view_kojto_optimizer_2d_import_wizard_form" model="ir.ui.view">
+        <field name="name">kojto.optimizer.2d.import.wizard.form</field>
+        <field name="model">kojto.optimizer.2d.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import DXF Shapes">
+                <style>.modal-dialog {max-width: 600px !important; min-width: 600px !important;}</style>
+                <group>
+                    <field name="package_id" invisible="1" />
+                    <field name="dxf_files" filename="dxf_filenames" widget="binary" string="DXF File" required="1" />
+                    <field name="dxf_filenames" invisible="1" />
+                </group>
+                <footer>
+                    <button name="action_import" type="object" string="Import" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" class="oe_link" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View for 2D Packages -->
+    <record id="view_kojto_optimizer_2d_search" model="ir.ui.view">
+        <field name="name">kojto.optimizer.2d.packages.search</field>
+        <field name="model">kojto.optimizer.2d.packages</field>
+        <field name="arch" type="xml">
+            <search string="2D Packages">
+                <field name="name" string="Package Name"/>
+                <field name="description" string="Description"/>
+                <field name="subcode_id" string="Subcode"/>
+                <field name="date_issue" string="Issue Date"/>
+                <field name="issued_by" string="Issued By"/>
+                <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                <filter string="Inactive" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                    <filter string="Issue Date" name="group_by_date" context="{'group_by': 'date_issue'}"/>
+                    <filter string="Issued By" name="group_by_issued_by" context="{'group_by': 'issued_by'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Form View for Shapes to Cut Details -->
+    <record id="view_kojto_optimizer_2d_shapes_to_cut_form" model="ir.ui.view">
+        <field name="name">Kojto Optimizer 2D Shapes to Cut Form</field>
+        <field name="model">kojto.optimizer.2d.shapes.to.cut</field>
+        <field name="arch" type="xml">
+            <form string="Shape to Cut Details">
+                <sheet class="ko-form-body ko-form-main">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <group string="Shape Information">
+                                <field name="cut_position"/>
+                                <field name="cut_description"/>
+                                <field name="dxf_filename" readonly="1"/>
+                                <field name="required_cut_shape_pieces"/>
+                                <field name="package_id" readonly="1" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <!-- Hidden fields to ensure polygon data is saved -->
+                                <field name="outer_polygon_json" invisible="1"/>
+                                <field name="inner_polygons_json" invisible="1"/>
+                                <field name="normalized_dxf_entities_json" invisible="1"/>
+                                <field name="normalization_matrix_json" invisible="1"/>
+                            </group>
+                            <group string="DXF Upload">
+                                <field name="dxf_file" filename="dxf_file_name" widget="binary" string="Upload DXF File (mm)" help="Upload a DXF file to update the shape. All dimensions must be in mm."/>
+                                <field name="dxf_file_name" invisible="1"/>
+                            </group>
+                            <group string="Bounding Box">
+                                <field name="bbox_min_x" readonly="1"/>
+                                <field name="bbox_min_y" readonly="1"/>
+                                <field name="bbox_max_x" readonly="1"/>
+                                <field name="bbox_max_y" readonly="1"/>
+                                <field name="bbox_width" readonly="1"/>
+                                <field name="bbox_height" readonly="1"/>
+                            </group>
+                            <group string="Shape Properties">
+                                <field name="shape_area" readonly="1"/>
+                                <field name="shape_weight" readonly="1"/>
+                            </group>
+                        </div>
+                        <div class="col-lg-4">
+                            <group string="Drawing">
+                                <field name="drawing" widget="image" nolabel="1" class="oe_image_full"/>
+                            </group>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action for the List View -->
+    <record id="action_kojto_optimizer_2d" model="ir.actions.act_window">
+        <field name="name">Kojto Optimizer 2D Packages</field>
+        <field name="res_model">kojto.optimizer.2d.packages</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_kojto_optimizer_2d_list" />
+    </record>
+</odoo>
+

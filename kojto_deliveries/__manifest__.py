@@ -1,6 +1,6 @@
 {
     "name": "Kojto Deliveries",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Delivery management module for managing deliveries, packages, CMR documents, packaging materials, inspection certificates, and delivery reports",
     "author": "KOJTO",
@@ -25,6 +25,7 @@
         'reports/kojto_delivery_packages_templates.xml',
         'reports/kojto_delivery_origin_declaration_templates.xml',
         'reports/kojto_delivery_export_declaration_templates.xml',
+        'reports/kojto_delivery_certification_of_entry_templates.xml',
         'reports/kojto_delivery_dual_use_declaration_templates.xml',
         'reports/kojto_delivery_package_label_templates.xml',
         'reports/kojto_delivery_cmr_templates.xml',

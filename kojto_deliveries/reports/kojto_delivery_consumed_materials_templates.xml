@@ -12,20 +12,25 @@
                             <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
                             <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
                         </t>
+                        <style>
+                            table td[rowspan] {
+                                font-weight: bold !important;
+                            }
+                        </style>
 
                         <t t-set="formatted_date" t-value="delivery.date_delivery and delivery.date_delivery.strftime('%Y-%m-%d') or ''"/>
                         <div t-att-style="'string-set: datetime_issue \'%s\';' % formatted_date">
                             <h1 class="heading" style="margin-top: 10px;">
-                                <div style="margin-bottom: 20px; font-size: 2em;">Material Consumption Report</div>
+                                <div style="margin-bottom: 20px; font-weight: bold;">Material Consumption Report</div>
                             </h1>
                         </div>
 
                         <!-- Document Information Table -->
-                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
                             <tbody>
                                 <!-- Document Information -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="4">Document Information</td>
                                     <td style="padding: 4px; width: 35%;">Delivery Number</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="delivery.name" />
@@ -54,14 +59,14 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
 
                                 <!-- Company Information -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Company Information</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="2">Company Information</td>
                                     <td style="padding: 4px; width: 35%; vertical-align: top;">Manufacturer</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="delivery.company_name_id" /><br/>
@@ -82,14 +87,14 @@
 
                                 <!-- Empty row for spacing -->
                                 <tr>
-                                    <td style="padding: 6px; width: 25%; background-color: #B0C4DE;"></td>
+                                    <td style="padding: 6px; width: 25%;"></td>
                                     <td style="padding: 6px; width: 35%;"></td>
                                     <td style="padding: 6px; width: 40%;"></td>
                                 </tr>
 
                                 <!-- Delivery Details -->
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Delivery Details</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;" rowspan="3">Delivery Details</td>
                                     <td style="padding: 4px; width: 35%;">Total Weight</td>
                                     <td style="padding: 4px; width: 40%;">
                                         <span t-field="delivery.net_weight" /> kg
@@ -114,13 +119,11 @@
                         <div t-field="delivery.consumed_materials_table_html" t-options='{"widget": "html"}' />
 
                         <!-- Declaration - Separate Text Section -->
-                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa;">
                             <p style="margin-bottom: 10px; line-height: 1.6; text-align: justify;">
                                 This consumed materials report certifies that the materials listed above have been consumed in the production of the delivered products.
                                 All materials have been properly tracked and documented according to the applicable standards and specifications.
                                 The material consumption data is provided for quality control and traceability purposes.
                             </p>
-                        </div>
                     </div>
                 </t>
             </t>

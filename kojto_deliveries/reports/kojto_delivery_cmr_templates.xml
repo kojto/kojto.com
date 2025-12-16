@@ -229,7 +229,7 @@
                                     <tr>
                                         <td colspan="2">
                                             <div style="display: flex; height: 100%;">
-                                                <div style="width:70%;border-right:1px solid">
+                                                <div style="width:70%;">
                                                     <div class="div-justify small-font">
                                                         <div>10. Знаци и номера<br /> Marks and Nos</div>
                                                         <div>11. Брой колети<br /> Number of packages</div>
@@ -255,7 +255,7 @@
                                                     </div>
                                                 </div>
 
-                                                <div style="width:15%;border-right:1px solid">
+                                                <div style="width:15%;">
                                                     <div class="div-justify small-font">
                                                         <div>14.Тежина бруто, кг<br />Gross weight in kg</div>
                                                     </div>
@@ -327,8 +327,8 @@
                                     <tr rowspan="2">
                                         <td>
                                             <div style="display: flex">
-                                                <div style="width:50%;border-right:1px solid"> 22. Подпис или печат на отправителя <br /> Signature or stamp of the sender </div>
-                                                <div style="width:50%;border-right:1px solid"> 25. Подпис или печат на превозвача <br /> Signature or stamp of the carrier </div>
+                                                <div style="width:50%;"> 22. Подпис или печат на отправителя <br /> Signature or stamp of the sender </div>
+                                                <div style="width:50%;"> 25. Подпис или печат на превозвача <br /> Signature or stamp of the carrier </div>
                                             </div>
                                         </td>
                                         <td> 23. Подпис или печат на превозвача<br />Signature or stamp of the carrier </td>

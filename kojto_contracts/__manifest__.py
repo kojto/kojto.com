@@ -1,6 +1,6 @@
 {
     "name": "Kojto Contracts",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Contract management module for creating and managing contracts with content import functionality",
     "author": "KOJTO",

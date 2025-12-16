@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_en1090_welding_seams_list" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.seams.list</field>
+            <field name="model">kojto.en1090.welding.seams</field>
+            <field name="arch" type="xml">
+                <list string="Welding Seams">
+                    <field name="name"/>
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="consequtive_number"/>
+                    <field name="seam_length"/>
+                    <field name="seam_thickness"/>
+                    <field name="welder_id"/>
+                    <field name="checked_by_id"/>
+                    <field name="applicable_wps_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    <field name="welding_task_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_kojto_en1090_welding_seams_form" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.seams.form</field>
+            <field name="model">kojto.en1090.welding.seams</field>
+            <field name="arch" type="xml">
+                <form string="Welding Seams">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="name"/>
+                    <field name="consequtive_number"/>
+                    <field name="seam_length"/>
+                    <field name="seam_thickness"/>
+                    <field name="welder_id"/>
+                    <field name="checked_by_id"/>
+                    <field name="applicable_wps_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    <field name="welding_task_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                    <field name="description"/>
+                    <field name="welding_seam_ids"
+                           domain="[('document_bundle_id', '=', document_bundle_id)]"
+                           options="{'no_create_edit': True, 'no_open': True, 'no_create': True}">
+                        <list>
+                            <field name="name" />
+                            <field name="seam_length" />
+                            <field name="seam_thickness" />
+                            <field name="applicable_wps_id" />
+                            <field name="welding_task_id" />
+                        </list>
+                    </field>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_kojto_en1090_welding_seams_search" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.seams.search</field>
+            <field name="model">kojto.en1090.welding.seams</field>
+            <field name="arch" type="xml">
+                <search string="Search Welding Seams">
+                    <field name="name"/>
+                    <field name="consequtive_number"/>
+                    <field name="applicable_wps_id"/>
+                    <field name="welding_task_id"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="WPS" name="group_by_wps" context="{'group_by': 'applicable_wps_id'}"/>
+                        <filter string="Welding Task" name="group_by_task" context="{'group_by': 'welding_task_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

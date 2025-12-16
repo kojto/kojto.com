@@ -532,10 +532,20 @@ class KojtoContracts(models.Model):
         self.ensure_one()
         header = "Position\tName\tQuantity\tUnit\tUnit Price\tVAT Rate\n"
         if self.content:
-            lines = [
-                f"{content.position or ''}\t{content.name or ''}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}"
-                for content in self.content
-            ]
+            lines = []
+            for content in self.content:
+                # Replace newlines and multiple whitespace in name with single space
+                name = content.name or ''
+                if name:
+                    name = ' '.join(name.split())  # Replace all whitespace (including newlines) with single space
+
+                position = content.position or ''
+                if position:
+                    position = ' '.join(position.split())  # Also clean position field
+
+                lines.append(
+                    f"{position}\t{name}\t{content.quantity or 0.0}\t{content.unit_id.name or ''}\t{content.unit_price or 0.0}\t{content.vat_rate or 0.0}"
+                )
             first_line = lines[0].split("\t") if lines else []
             is_header = (
                 len(first_line) >= 5 and

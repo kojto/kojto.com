@@ -1,7 +1,7 @@
 # kojto_factory/__manifest__.py
 {
     "name": "Kojto Factory",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Factory management module for managing factory jobs, tasks, processes, packages, and item dimensions",
     "author": "KOJTO",

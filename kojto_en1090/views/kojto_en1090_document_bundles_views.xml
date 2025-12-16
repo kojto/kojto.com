@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_en1090_document_bundles_list" model="ir.ui.view">
+            <field name="name">kojto.en1090.document.bundles.list</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="arch" type="xml">
+                <list string="Document Bundles" class="ko-list-main" duplicate="false">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="language_id"/>
+                    <field name="name"/>
+                    <field name="date_issue" />
+                    <field name="counterparty_id"/>
+                    <field name="execution_class"/>
+                    <field name="avcp_system"/>
+                    <button name="print_complete_document_bundle" type="object" class="btn-link" icon="fa-print" title="Print Complete Document Bundle"/>
+                    <button name="action_copy_document_bundle" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Document Bundle"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_kojto_en1090_document_bundles_form" model="ir.ui.view">
+            <field name="name">kojto.en1090.document.bundles.form</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="arch" type="xml">
+                <form string="Document Bundle">
+                    <sheet class="ko-form-body ko-form-main">
+                        <div class="d-flex justify-content-between align-items-center ko-form-main-header-line">
+                            <div class="w-100 px-0">
+                                <div class="row no-gutters">
+                                    <div class="col-lg-4 me-0">
+                                        <div class="ko-form-view-title" style="padding-top: 1px;">
+                                            <field name="name" class="ko-form-view-title" readonly="1" force_save="1"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 d-flex justify-content-center">
+                                        <field name="language_id" widget="selection_badge" class="ko-offer-wselection-badge" style="margin-bottom: 5px!important"/>
+                                    </div>
+                                    <div class="col-lg-4 d-flex align-items-center justify-content-end py-2 py-md-0" style="margin-bottom: 5px;">
+                                        <button name="import_warehouse_certificates" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Import Warehouse Certificates">
+                                            <i class="fa fa-download"/>
+                                            <span style="margin-left: 5px;">Import Warehouse Certificates</span>
+                                        </button>
+                                        <button name="print_complete_document_bundle" class="bg-transparent border-0 d-flex align-items-center me-2" type="object" title="Print Complete Document Bundle">
+                                            <i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                                    <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1"/>
+                                                    <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1"/>
+                                                </svg>
+                                            </i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <separator class="separator-slim-top"/>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="active" widget="boolean_toggle"/>
+                                <field name="subcode_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <field name="execution_class"/>
+                                <field name="dop_standard_reference"/>
+                                <field name="date_issue" />
+                                <field name="description"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="notified_body_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <field name="notified_body_name_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', notified_body_id)]"/>
+                                <field name="notified_body_address_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', notified_body_id)]"/>
+                            </group>
+
+                        </div>
+                        <separator/>
+                        <div class="row">
+                            <group class="col-lg-6">
+                                <field name="company_id" invisible="1"/>
+                                <field name="company_name_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', company_id)]"/>
+                                <field name="company_address_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', company_id)]"/>
+                            </group>
+                            <group class="col-lg-6">
+                                <field name="counterparty_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}"/>
+                                <field name="counterparty_name_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', counterparty_id)]"/>
+                                <field name="counterparty_address_id" options="{'no_create_edit': True, 'no_open': True, 'no_create': True}" domain="[('contact_id', '=', counterparty_id)]"/>
+                                <field name="counterpartys_reference"/>
+                            </group>
+                        </div>
+                        <separator/>
+                        <notebook>
+                            <page string="Performance Declaration" name="performance_declaration">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <group string="General Information">
+                                            <field name="dop_standard_reference"/>
+                                            <field name="dop_content_description"/>
+                                            <field name="dop_intended_use"/>
+                                        </group>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <group string="Structural Performance">
+                                            <field name="dop_dimension_tolerances"/>
+                                            <field name="dop_load_bearing_capacity"/>
+                                            <field name="dop_serviceability_limit_state_deformation"/>
+                                            <field name="dop_fatigue_strength"/>
+                                        </group>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <group string="Material Performance">
+                                            <field name="dop_weldability"/>
+                                            <field name="dop_fracture_toughness"/>
+                                            <field name="dop_durability"/>
+                                        </group>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <group string="Safety Performance">
+                                            <field name="dop_resistance_to_fire"/>
+                                            <field name="dop_reaction_to_fire"/>
+                                            <field name="dop_cadmium_release"/>
+                                            <field name="dop_radioactivity_emission"/>
+                                            <field name="dop_durability"/>
+                                        </group>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <group string="Safety Performance">
+                                            <field name="dop_resistance_to_fire"/>
+                                            <field name="dop_reaction_to_fire"/>
+                                            <field name="dop_cadmium_release"/>
+                                            <field name="dop_radioactivity_emission"/>
+                                        </group>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <group string="Declaration">
+                                            <field name="dop_signed_by"/>
+                                        </group>
+                                    </div>
+                                </div>
+                            </page>
+
+                            <page string="Welding Certificates" name="welding_certificates">
+                                <field name="welding_certificates_ids">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="active" string=" " widget="boolean_toggle" readonly="1"/>
+                                        <field name="name" readonly="1"/>
+                                        <field name="certificate_type" readonly="1"/>
+                                        <field name="date_start" readonly="1" />
+                                        <field name="date_end" readonly="1" />
+                                        <field name="description" readonly="1"/>
+                                        <field name="specialist_id" readonly="1"/>
+                                        <field name="equipment_id" readonly="1"/>
+                                        <field name="company_id" readonly="1"/>
+                                        <field name="issuing_authority_id" readonly="1"/>
+                                        <field name="certificate_number" readonly="1"/>
+                                        <field name="attachment_id" readonly="1" widget="many2many_binary" invisible="id == False"/>
+                                        <field name="include_document_in_bundle" string="Include" widget="boolean_toggle" readonly="1"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Deliveries" name="deliveries">
+                                <field name="delivery_ids">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="name"/>
+                                        <field name="date_delivery"/>
+                                        <field name="subject"/>
+                                        <field name="signed_by"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="WPS Records" name="wps_records">
+                                <field name="wps_record_ids">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="wps_type" string="Type"/>
+                                        <field name="name"/>
+                                        <field name="date_issue" string="Issue Date" />
+                                        <field name="welding_position" string="Position"/>
+                                        <field name="welding_joint_geometry_id" string="Joint"/>
+                                        <button name="open_o2m_record" type="object" class="btn-link" icon="fa-external-link"/>
+                                        <button name="copy_wps" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy WPS"/>
+                                        <field name="include_document_in_bundle" string="Include" widget="boolean_toggle" readonly="1"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Control Documents" name="control_documents">
+                                <field name="control_document_ids">
+                                    <list class="ko-list-main">
+                                        <field name="date_issue" />
+                                        <field name="name"/>
+                                        <field name="control_type"/>
+                                        <field name="stage_of_production"/>
+                                        <field name="evaluation"/>
+                                        <field name="control_performeted_by"/>
+                                        <field name="include_document_in_bundle" string="Include" widget="boolean_toggle" readonly="1"/>
+                                        <button name="copy_control" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Control Document"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Welding Tasks" name="welding_tasks">
+                                <field name="welding_task_ids">
+                                    <list class="ko-list-main">
+                                        <field name="name"/>
+                                        <field name="date_issue" />
+                                        <field name="date_planned" />
+                                        <field name="date_executed" />
+                                        <field name="welding_processes_summary"/>
+                                        <field name="materials_summary"/>
+                                        <field name="include_document_in_bundle" string="Include" widget="boolean_toggle" readonly="1"/>
+                                        <button name="open_o2m_record" type="object" class="btn-link" icon="fa-external-link"/>
+                                        <button name="copy_welding_task" type="object" class="b-0 text-black bg-transparent fa fa-copy" title="Copy Welding Task"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Warehouse Certificates" name="warehouse_certificates">
+                                <field name="warehouse_certificate_ids">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="name"/>
+                                        <field name="certificate_type"/>
+                                        <field name="date_issued" />
+                                        <field name="attachment_id" widget="many2many_binary" invisible="id == False"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Inspection Reports" name="warehouse_inspection_reports">
+                                <field name="warehouse_inspection_report_ids" readonly="1">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="name"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Technical Documents" name="technical_documents">
+                                <field name="technical_document_revision_ids">
+                                    <list class="ko-list-main" editable="top">
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                        <field name="attachment_ids" widget="many2many_binary" readonly="1"/>
+                                    </list>
+                                </field>
+                            </page>
+
+                            <page string="Attachments" name="attachments">
+                                <div class="row">
+                                    <group class="col-lg-6">
+                                        <field name="attachment_ids" widget="many2many_binary" nolabel="1" class="mt-2" invisible="id == False" />
+                                    </group>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search Views -->
+        <record id="view_kojto_en1090_document_bundles_search" model="ir.ui.view">
+            <field name="name">kojto.en1090.document.bundles.search</field>
+            <field name="model">kojto.en1090.document.bundles</field>
+            <field name="arch" type="xml">
+                <search string="Search Document Bundles">
+                    <field name="name"/>
+                    <field name="subcode_id"/>
+                    <field name="company_id"/>
+                    <field name="counterparty_id"/>
+                    <field name="execution_class"/>
+                    <field name="date_issue"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Subcode" name="group_by_subcode" context="{'group_by': 'subcode_id'}"/>
+                        <filter string="Company" name="group_by_company" context="{'group_by': 'company_id'}"/>
+                        <filter string="Counterparty" name="group_by_counterparty" context="{'group_by': 'counterparty_id'}"/>
+                        <filter string="Execution Class" name="group_by_execution_class" context="{'group_by': 'execution_class'}"/>
+                        <filter string="Date Issued" name="group_by_date_issue" context="{'group_by': 'date_issue'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action for Documents -->
+        <record id="action_kojto_en1090_document_bundles" model="ir.actions.act_window">
+            <field name="name">Document Bundles</field>
+            <field name="res_model">kojto.en1090.document.bundles</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_kojto_en1090_document_bundles_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first document bundle
+                </p>
+                <p>
+                    Create document bundles to organize your EN1090 documentation.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

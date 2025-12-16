@@ -30,11 +30,19 @@ class KojtoHrLeaveTypes(models.Model):
     ]
 
     @api.model
-    def create(self, vals):
-        # Ensure leave_group field has a valid value
-        if 'leave_group' not in vals or not vals['leave_group']:
+    def _apply_default_leave_group(self, vals):
+        """Ensure leave_group has a valid value before create/write."""
+        if not vals.get('leave_group'):
             vals['leave_group'] = 'paid'
-        return super().create(vals)
+
+    def create(self, vals_list):
+        # Handle both single dict and list of dicts
+        if isinstance(vals_list, list):
+            for vals in vals_list:
+                self._apply_default_leave_group(vals)
+        else:
+            self._apply_default_leave_group(vals_list)
+        return super().create(vals_list)
 
     def write(self, vals):
         # Ensure leave_group field has a valid value when updating

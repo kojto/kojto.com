@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_energy_management_power_meter_readings_list" model="ir.ui.view">
+        <field name="name">kojto.energy.management.power.meter.readings.list</field>
+        <field name="model">kojto.energy.management.power.meter.readings</field>
+        <field name="arch" type="xml">
+            <list string="Power Meter Readings" create="0" class="ko-list-main">
+                <field name="currency_id" column_invisible="1"/>
+                <field name="power_meter_id" width="250"/>
+                <field name="datetime_utc"  width="150"/>
+                <field name="datetime_utc_char" optional="show" width="150"/>
+                <field name="l1_a" optional="hide"/>
+                <field name="l2_a" optional="hide"/>
+                <field name="l3_a" optional="hide"/>
+                <field name="l1_v" optional="show"/>
+                <field name="l2_v" optional="show"/>
+                <field name="l3_v" optional="show"/>
+                <field name="l1_l2_v" optional="hide"/>
+                <field name="l2_l3_v" optional="hide"/>
+                <field name="l3_l1_v" optional="hide"/>
+                <field name="p_kw" optional="hide"/>
+                <field name="phi" optional="hide"/>
+                <field name="f_hz" optional="hide"/>
+                <field name="imported_kwh" optional="show"/>
+                <field name="exported_kwh" optional="show"/>
+                <field name="imported_kwh_value" widget="monetary" optional="show"/>
+                <field name="exported_kwh_value" widget="monetary" optional="show"/>
+                <field name="price_per_mwh_eur" widget="monetary" optional="hide" sum="0"/>
+                <field name="base_price_per_mwh_import_eur" widget="monetary" optional="hide" sum="0"/>
+                <field name="base_price_per_mwh_export_eur" widget="monetary" optional="hide" sum="0"/>
+                <field name="imported_kwh_counter" optional="show"/>
+                <field name="exported_kwh_counter" optional="show"/>
+                <field name="tot_react_imp_kvarh" optional="hide"/>
+                <field name="tot_react_exp_kvarh" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_energy_management_power_meter_readings_form" model="ir.ui.view">
+        <field name="name">kojto.energy.management.power.meter.readings.form</field>
+        <field name="model">kojto.energy.management.power.meter.readings</field>
+        <field name="arch" type="xml">
+            <form string="Power Meter Reading" create="0">
+                <sheet>
+                    <field name="currency_id" invisible="1"/>
+                    <group>
+                        <group string="Reading Information">
+                            <field name="power_meter_id"/>
+                            <field name="datetime_utc"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Current &amp; Voltage" name="current_voltage">
+                            <group>
+                                <group string="Phase Current (A)">
+                                    <field name="l1_a"/>
+                                    <field name="l2_a"/>
+                                    <field name="l3_a"/>
+                                </group>
+                                <group string="Phase Voltage (V)">
+                                    <field name="l1_v"/>
+                                    <field name="l2_v"/>
+                                    <field name="l3_v"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Line Voltage (V)">
+                                    <field name="l1_l2_v"/>
+                                    <field name="l2_l3_v"/>
+                                    <field name="l3_l1_v"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Power &amp; Frequency" name="power_frequency">
+                            <group>
+                                <group string="Power Measurements">
+                                    <field name="p_kw"/>
+                                    <field name="phi"/>
+                                    <field name="f_hz"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Energy Counters" name="energy_counters">
+                            <group>
+                                <group string="Active Energy (kWh)">
+                                    <field name="imported_kwh"/>
+                                    <field name="exported_kwh"/>
+                                    <field name="imported_kwh_counter"/>
+                                    <field name="exported_kwh_counter"/>
+                                </group>
+                                <group string="Active Energy Value (EUR)">
+                                    <field name="imported_kwh_value" widget="monetary"/>
+                                    <field name="exported_kwh_value" widget="monetary"/>
+                                </group>
+                            </group>
+                            <group>
+                                <group string="Price Components (EUR/MWh)">
+                                    <field name="price_per_mwh_eur" widget="monetary"/>
+                                    <field name="base_price_per_mwh_import_eur" widget="monetary"/>
+                                    <field name="base_price_per_mwh_export_eur" widget="monetary"/>
+                                </group>
+                                <group string="Reactive Energy (kVArh)">
+                                    <field name="tot_react_imp_kvarh"/>
+                                    <field name="tot_react_exp_kvarh"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_energy_management_power_meter_readings_search" model="ir.ui.view">
+        <field name="name">kojto.energy.management.power.meter.readings.search</field>
+        <field name="model">kojto.energy.management.power.meter.readings</field>
+        <field name="arch" type="xml">
+            <search string="Search Power Meter Readings">
+                <field name="power_meter_id"/>
+                <field name="datetime_utc"/>
+                <filter string="Today" name="filter_today"
+                        domain="[('datetime_utc', '&gt;=', (context_today()).strftime('%Y-%m-%d 00:00:00')),
+                                ('datetime_utc', '&lt;=', (context_today()).strftime('%Y-%m-%d 23:59:59'))]"/>
+                <filter string="Last 7 Days" name="filter_last_7_days"
+                        domain="[('datetime_utc', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <filter string="This Month" name="filter_this_month"
+                        domain="[('datetime_utc', '&gt;=', (context_today().replace(day=1)).strftime('%Y-%m-%d 00:00:00'))]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Power Meter" name="group_power_meter" context="{'group_by': 'power_meter_id'}"/>
+                    <filter string="Date" name="group_date" context="{'group_by': 'datetime_utc:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_energy_management_power_meter_readings" model="ir.actions.act_window">
+        <field name="name">Power Meter Readings</field>
+        <field name="res_model">kojto.energy.management.power.meter.readings</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_filter_last_7_days': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No readings recorded yet
+            </p>
+            <p>
+                Power meter readings will appear here automatically as they are collected from the devices.
+            </p>
+        </field>
+    </record>
+
+    <!-- Server Action for Recalculate All (appears in Actions menu) -->
+    <record id="action_server_recalculate_all" model="ir.actions.server">
+        <field name="name">Recalculate All (Consumption + Values)</field>
+        <field name="model_id" ref="model_kojto_energy_management_power_meter_readings"/>
+        <field name="binding_model_id" ref="model_kojto_energy_management_power_meter_readings"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+if records:
+    action = records.action_recalculate_all()
+        </field>
+    </record>
+
+
+</odoo>
+

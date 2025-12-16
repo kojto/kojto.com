@@ -9,6 +9,7 @@
 .ko-list-main tr.text-muted { opacity: 0.5; color: #6c757d !important; }
 .ko-list-main .o_data_row.text-success>td { background-color: #d4edda !important; }
 .ko-list-main .o_boolean_toggle_cell { max-width: 66px !important; }
+
 .view_kojto_finance_vat_treatment_list tr th[data-name="code"] { max-width: 50px !important; }
 .view_kojto_finance_vat_treatment_list tr th[data-name="language_id"] { max-width: 50px !important; }
 .view_kojto_finance_vat_treatment_list tr th[data-name="vat_in_out_type"] { max-width: 50px !important; }
@@ -276,9 +277,52 @@
 .ko-list-main tr th[data-name="incoming_pre_vat_total"] { max-width: 100px !important; }
 .ko-list-main tr th[data-name="employee_id"] { max-width: 200px !important; text-align: left !important;}
 
+.ko-list-main tr th[data-name="athlete_full_name"] { min-width: 250px !important; width: 250px !important; max-width: 250px !important;}
+.ko-list-main tr th[data-name="athlete_birth_date"] {min-width: 80px !important; width: 80px !important; max-width: 80px !important;}
+.ko-list-main tr th[data-name="athlete_gender"] {max-width: 60px !important}
+.ko-list-main tr th[data-name="athlete_registry_number"] {}
+.ko-list-main tr th[data-name="athlete_recent_medical_exam_date"] {min-width: 80px !important; width: 80px !important; max-width: 80px !important;}
+.ko-list-main tr th[data-name="athlete_email"] {}
+.ko-list-main tr th[data-name="training_group_id"] {}
+.ko-list-main tr th[data-name="session_of_day"] { max-width: 60px !important}
+.ko-list-main tr th[data-name="athlete_count"] { max-width: 60px !important}
+.ko-list-main tr th[data-name="athlete_ids"] { min-width: 250px !important; width: 250px !important; max-width: 250px !important;}
+.ko-list-main tr th[data-name="note"] { min-width: 250px !important; width: 250px !important; max-width: 250px !important;}
+.ko-list-main tr th[data-name="date_start"] { width: 40px !important;}
+.ko-list-main tr th[data-name="date_end"] { width: 40px !important;}
+.ko-list-main tr th[data-name="participation_planned"] { width: 30px !important;}
+.ko-list-main tr th[data-name="participation_applied"] { width: 30px !important;}
+.ko-list-main tr th[data-name="participation_confirmed"] { width: 30px !important;}
+
+th.o_list_actions_header,
+td.o_list_actions_header,
+th:has(.o_optional_columns_dropdown),
+td:has(.o_optional_columns_dropdown) {
+    min-width: 30px !important;
+    width: 30px !important;
+    max-width: 30px !important;
+    padding: 0 4px !important;
+    text-align: center !important;
+}
+
 .ko-list-main.balance-table tr> :first-child { text-align: left !important; }
 
 .view_kojto_list_invoices_accounting .o_data_row.text-warning > td,
 .ko-form-view-title.text-warning { background-color: #efedce !important; }
 
+.ko-white-pre-wrap {white-space: pre-wrap;}
 
+.ko-list-readonly-no-hover table.table,
+.ko-list-readonly-no-hover .o_list_table.table {
+    --table-bg: transparent;
+    --table-border-color: #dee2e6;
+    --table-accent-bg: transparent !important;
+    --table-striped-bg: transparent !important;
+    --table-active-bg: transparent !important;
+    --table-hover-bg: transparent !important;
+}
+
+.ko-list-readonly-no-hover .o_data_row,
+.ko-list-readonly-no-hover .o_data_row * {
+    cursor: default !important;
+}

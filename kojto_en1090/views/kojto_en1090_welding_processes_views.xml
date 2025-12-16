@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- List View -->
+        <record id="view_kojto_en1090_welding_processes_list" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.processes.list</field>
+            <field name="model">kojto.en1090.welding.processes</field>
+            <field name="arch" type="xml">
+                <list string="Welding Processes" class="ko-list-main" editable="top">
+                    <field name="active" widget="boolean_toggle"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="name"/>
+                    <field name="translation_ids" widget="many2many_tags"/>
+                    <field name="welding_parameter_ids" widget="many2many_tags"/>
+                </list>
+            </field>
+        </record>
+
+
+
+        <!-- Form View -->
+        <record id="view_kojto_en1090_welding_processes_form" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.processes.form</field>
+            <field name="model">kojto.en1090.welding.processes</field>
+            <field name="arch" type="xml">
+                <form string="Welding Processes">
+                    <sheet>
+                        <group>
+                            <field name="name" placeholder="Process Name"/>
+                            <field name="code"/>
+                            <field name="description"/>
+                            <field name="translation_ids" context="{'default_reference_model': 'kojto.en1090.welding.processes', 'default_reference_id': id, 'default_process_id': id}">
+                                <list name="translation_list" string="Translations" editable="bottom" class="ko-list-main">
+                                    <field name="language_id" options="{'no_create': True, 'no_quick_create': True, 'no_open': True, 'no_create_edit': True}"/>
+                                    <field name="translated_name"/>
+                                </list>
+                            </field>
+                            <field name="welding_parameter_ids">
+                                <list name="welding_parameter_list" string="Welding Parameters" editable="bottom" class="ko-list-main">
+                                    <field name="active" widget="boolean_toggle"/>
+                                    <field name="name"/>
+                                    <field name="abbreviation"/>
+                                    <field name="description"/>
+                                    <field name="is_required" widget="boolean_toggle"/>
+                                    <field name="default_parameter_value"/>
+                                    <field name="unit"/>
+                                </list>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_kojto_en1090_welding_processes_search" model="ir.ui.view">
+            <field name="name">kojto.en1090.welding.processes.search</field>
+            <field name="model">kojto.en1090.welding.processes</field>
+            <field name="arch" type="xml">
+                <search string="Search Welding Processes">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <filter string="Active" name="active" domain="[('active', '=', True)]"/>
+                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_kojto_en1090_welding_processes" model="ir.actions.act_window">
+            <field name="name">Welding Processes</field>
+            <field name="res_model">kojto.en1090.welding.processes</field>
+            <field name="view_mode">list,form</field>
+            <field name="search_view_id" ref="view_kojto_en1090_welding_processes_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create your first welding process!
+                </p>
+                <p>
+                    Define welding processes used in your operations.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

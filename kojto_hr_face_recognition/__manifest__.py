@@ -1,6 +1,6 @@
 {
     "name": "Kojto HR Face Recognition",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Face recognition module for HR time tracking with camera integration and terminal interface",
     "author": "KOJTO",

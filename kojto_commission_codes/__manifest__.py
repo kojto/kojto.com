@@ -6,7 +6,7 @@
     "author": "KOJTO",
     "website": "https://www.kojto.com",
     "category": "KOJTO",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "depends": ["kojto_landingpage", "kojto_base"],
     "data": [
         "security/ir.model.access.csv",

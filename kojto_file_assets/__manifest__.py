@@ -4,7 +4,7 @@
     "name": "Kojto File Assets",
     "summary": "Shared file assets and styling for KOJTO modules",
     "description": "Module providing shared CSS, JavaScript, XML templates, and styling assets used across all KOJTO modules",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "author": "KOJTO",
     "website": "https://www.kojto.com",
     "category": "KOJTO",

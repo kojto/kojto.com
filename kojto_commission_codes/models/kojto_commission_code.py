@@ -17,21 +17,12 @@ class KojtoCommissionCodes(models.Model):
 
 
     @api.depends("maincode_id.maincode", "code")
-    def compute_name(self, multi=False):
-        if multi:
-            # Handle multiple records
-            for record in self:
-                if record.maincode_id and record.code:
-                    record.name = f"{record.maincode_id.maincode}.{record.code}"
-                else:
-                    record.name = False
-        else:
-            # Handle single record (original behavior)
-            if self.maincode_id and self.code:
-                self.name = f"{self.maincode_id.maincode}.{self.code}"
+    def compute_name(self):
+        for record in self:
+            if record.maincode_id and record.code:
+                record.name = f"{record.maincode_id.maincode}.{record.code}"
             else:
-                self.name = False
-        return {}
+                record.name = False
 
     @api.constrains('code')
     def _check_code_uniqueness(self):

@@ -35,7 +35,9 @@ class KojtoWarehousesBatches(models.Model):
     subcode_id = fields.Many2one("kojto.commission.subcodes", related="invoice_content_id.subcode_id", string="Subcode")
     accounting_identifier_id = fields.Many2one("kojto.finance.accounting.identifiers", string="Accounting Identifier")
     accounting_identifier_domain = fields.Char(string="Accounting Identifier Domain", compute="_compute_accounting_identifier_domain", store=False)
+
     unit_id = fields.Many2one("kojto.base.units", string="Unit", related="accounting_identifier_id.unit_id")
+    invoice_content_quantity = fields.Float(string="Invoice Content Quantity", related="invoice_content_id.quantity")
 
     current_batch_quantity = fields.Float(string="Current Quantity", compute="_compute_current_batch_quantity")
     current_batch_value = fields.Float(string="Current Value (BGN)", compute="_compute_current_batch_value", store=True)

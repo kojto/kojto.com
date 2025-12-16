@@ -11,20 +11,25 @@
                             <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
                             <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
                         </t>
+                        <style>
+                            table td[rowspan] {
+                                font-weight: bold !important;
+                            }
+                        </style>
 
                         <t t-set="formatted_date" t-value="doc.date_delivery and doc.date_delivery.strftime('%Y-%m-%d') or ''"/>
                         <div t-att-style="'string-set: date_delivery \'%s\';' % formatted_date">
                             <h1 class="heading" style="margin-top: 10px;">
-                                <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;"></div>
-                                <div style="margin-bottom: 20px; font-size: 2em;">EURO 1 EXPORT DECLARATION</div>
+                                <div style="font-weight: bold; margin-bottom: 10px;"></div>
+                                <div style="margin-bottom: 20px; font-weight: bold;">EURO 1 EXPORT DECLARATION</div>
                             </h1>
                         </div>
 
                         <!-- FROM Section -->
-                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
                             <tbody>
                                 <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;"  rowspan="6">Issued by</td>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;"  rowspan="6">Issued by</td>
                                     <td style="padding: 4px; width: 25%;">
                                         Company name:
                                     </td>
@@ -64,28 +69,10 @@
                                         </t>
                                     </td>
                                 </tr>
-                                <tr><td style="padding: 4px; width: 25%;"></td></tr>
-
-                                <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;">Date</td>
-                                    <td style="padding: 4px; width: 25%;">
-                                        <span t-field="doc.date_delivery" t-options='{"format": "dd.MM.yyyy"}' />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="1">Signed by</td>
-                                    <td style="padding: 4px; width: 25%;">
-                                        <span t-field="doc.signed_by" />
-                                    </td>
-                                    <td style="padding: 4px; width: 50%;">
-                                        As authorized company representative ______________________
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
 
                         <!-- Declaration - Styled Section -->
-                        <div style="margin-top: 30px; margin-bottom: 20px; padding: 20px; border: 1px solid #B0C4DE; background-color: #f8f9fa; font-size: 10px;">
                             <p style="margin-bottom: 10px; text-align: justify;">
                                 With this declaration, we as an exporter declare that exported for <span t-field="doc.exported_material" /> on invoice(s):
                             </p>
@@ -100,7 +87,7 @@
                             <t t-set="suppliers" t-value="set([inv.counterparty_name_id.name for inv in doc.content.content_compositions.invoice_id if inv.counterparty_name_id])" />
                                 <table class="content-table">
                                     <thead>
-                                        <tr style="background-color: #B0C4DE;">
+                                        <tr>
                                             <th style="padding: 8px; text-align: left; width: 40%;">Supplier Name</th>
                                             <th style="padding: 8px; text-align: left; width: 60%;">Supplier Invoices</th>
                                         </tr>
@@ -108,7 +95,7 @@
                                     <tbody>
                                         <t t-foreach="suppliers" t-as="supplier_name">
                                             <tr>
-                                                <td style="padding: 6px; text-align: left; font-weight: bold;">
+                                                <td style="padding: 6px; text-align: left;">
                                                     <span t-esc="supplier_name" />
                                                 </td>
                                                 <td style="padding: 6px; text-align: left;">
@@ -133,7 +120,7 @@
                                 The materials used are of EU origin and are classified in a different position from that of the exported products. No non-originating materials of heading <span t-esc="doc.customs_number" /> were used in the production.
                             </p>
                             <p style="margin-bottom: 10px; text-align: justify;">
-                                I, the undersigned, declare that the goods described in the attached invoice document(s):
+                                I, the undersigned <span t-esc="env['kojto.base.names'].search([('employee_id.name', '=', doc.signed_by), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name if doc.language_id and doc.signed_by else doc.signed_by" />, in my capacity as authorized representative of <span t-esc="env['kojto.base.names'].search([('contact_id', '=', doc.company_id.id), ('language_id', '=', doc.language_id.id), ('active', '=', True)], limit=1).name if doc.language_id and doc.company_id else doc.company_name_id.name" />, declare that the goods described in the attached invoice document(s):
                             </p>
                             <p style="margin-bottom: 10px;">
                                 <t t-foreach="doc.invoices_ids" t-as="inv">
@@ -146,7 +133,24 @@
                             <p style="margin-bottom: 10px; text-align: justify;">
                                 I declare that I am responsible for incorrect data under Article 313 of the Penal Code.
                             </p>
-                        </div>
+
+                        <!-- Signature Section -->
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 40px;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;">Date</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.date_delivery" t-options='{"format": "dd.MM.yyyy"}' />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 4px; vertical-align: top; width: 25%; background-color: transparent;">Signed by __________________________</td>
+                                    <td style="padding: 4px; width: 25%;">
+                                        <span t-field="doc.signed_by" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </t>
             </t>

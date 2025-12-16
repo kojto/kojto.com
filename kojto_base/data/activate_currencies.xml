@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="0">
+        <!-- Activate BGN currency -->
+        <record id="base.BGN" model="res.currency">
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Activate EUR currency -->
+        <record id="base.EUR" model="res.currency">
+            <field name="active" eval="True"/>
+        </record>
+
+        <!-- Activate USD currency -->
+        <record id="base.USD" model="res.currency">
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

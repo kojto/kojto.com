@@ -1,6 +1,6 @@
 {
     "name": "Kojto Offers",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Offer management module for creating and managing offers, surcharges, consolidations, and content elements",
     "author": "KOJTO",

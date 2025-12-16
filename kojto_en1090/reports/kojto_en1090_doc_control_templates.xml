@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- General Control Template -->
+        <template id="report_kojto_en1090_doc_control_templates">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <t t-if="doc.control_type == 'vt'">
+                            <t t-set="title" t-value="'Visual Testing Report'"/>
+                        </t>
+                        <t t-elif="doc.control_type == 'ut'">
+                            <t t-set="title" t-value="'Ultrasonic Testing Report'"/>
+                        </t>
+                        <t t-elif="doc.control_type == 'rt'">
+                            <t t-set="title" t-value="'Radiographic Testing Report'"/>
+                        </t>
+                        <t t-elif="doc.control_type == 'mt'">
+                            <t t-set="title" t-value="'Magnetic Particle Testing Report'"/>
+                        </t>
+                        <t t-elif="doc.control_type == 'pt'">
+                            <t t-set="title" t-value="'Penetrant Testing Report'"/>
+                        </t>
+                        <t t-elif="doc.control_type == 'cl'">
+                            <t t-set="title" t-value="'Check List Report'"/>
+                        </t>
+                        <t t-else="">
+                            <t t-set="title" t-value="'Control Report'"/>
+                        </t>
+
+                        <!-- HEADER -->
+                        <div>
+                            <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                                <h1 class="heading">
+                                    <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;"><t t-esc="title"/></div>
+                                    <div style="margin-bottom: 20px;">
+                                        <span t-field="doc.name" style="text-transform: none;" />
+                                    </div>
+                                </h1>
+                            </div>
+
+                            <div class="section">
+                                <!-- Document Information Table -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <tbody>
+                                        <!-- Document Information -->
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                            <td style="padding: 4px; width: 25%;">Document bundle #</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Issued By</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.company_name_id" /><br />
+                                                <span t-field="doc.document_bundle_id.company_address_id" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Date Issued</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.date_issue or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Technical Document</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.technical_document_revision_id.name or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; background-color: #B0C4DE;"></td>
+                                            <td style="padding: 4px; width: 25%;"></td>
+                                            <td style="padding: 4px; width: 50%;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="2">Control Information</td>
+                                            <td style="padding: 4px; width: 25%;">Stage of Production</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="dict(doc._fields['stage_of_production'].selection).get(doc.stage_of_production, 'N/A')" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Performed By</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.control_performeted_by.name or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; background-color: #B0C4DE;"></td>
+                                            <td style="padding: 4px; width: 25%;"></td>
+                                            <td style="padding: 4px; width: 50%;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Control Details</td>
+                                            <td style="padding: 4px; width: 25%;">Temperature</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.temperature or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Percent of Testing</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.percent_of_testing or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Illuminance (lux)</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.illuminance or 'N/A'" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Control Type Specific Details -->
+                                <t t-if="doc.control_type == 'vt'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">VT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;">VT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">Observation Angle</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.observation_angle or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;">Distance</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.distance or 'N/A'" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">VT Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['vt_acceptance_level'].selection).get(doc.vt_acceptance_level, 'N/A')" /></td>
+                                                <td style="padding: 4px; text-align: left;">VT Methods of Testing</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['vt_methods_of_testing'].selection).get(doc.vt_methods_of_testing, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">VT Acceptance Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['vt_acceptance_standard'].selection).get(doc.vt_acceptance_standard, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">VT Procedure Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['vt_procedure_standard'].selection).get(doc.vt_procedure_standard, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <t t-if="doc.control_type == 'rt'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">RT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;">RT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">Radiation Source Type</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.radiation_source_type or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;">Radiation Source Activity</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.radiation_source_activity or 'N/A'" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">Exposure Time</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.exposure_time or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;">KV Value</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.kv_value or 'N/A'" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">RT Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['rt_acceptance_level'].selection).get(doc.rt_acceptance_level, 'N/A')" /></td>
+                                                <td style="padding: 4px; text-align: left;">RT Methods of Testing</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['rt_methods_of_testing'].selection).get(doc.rt_methods_of_testing, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">RT Acceptance Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['rt_acceptance_standard'].selection).get(doc.rt_acceptance_standard, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">RT Procedure Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['rt_procedure_standard'].selection).get(doc.rt_procedure_standard, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <t t-if="doc.control_type == 'ut'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">UT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;">UT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">Sector</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.sector or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;">Diameter</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.diameter or 'N/A'" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">Wall Thickness</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.wall_thickness or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;">Probe</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="doc.probe or 'N/A'" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">UT Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['ut_acceptance_level'].selection).get(doc.ut_acceptance_level, 'N/A')" /></td>
+                                                <td style="padding: 4px; text-align: left;">UT Methods of Testing</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['ut_methods_of_testing'].selection).get(doc.ut_methods_of_testing, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">UT Acceptance Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['ut_acceptance_standard'].selection).get(doc.ut_acceptance_standard, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">UT Procedure Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['ut_procedure_standard'].selection).get(doc.ut_procedure_standard, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <t t-if="doc.control_type == 'mt'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">MT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;">MT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">MT Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['mt_acceptance_level'].selection).get(doc.mt_acceptance_level, 'N/A')" /></td>
+                                                <td style="padding: 4px; text-align: left;">MT Methods of Testing</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['mt_methods_of_testing'].selection).get(doc.mt_methods_of_testing, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">MT Acceptance Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['mt_acceptance_standard'].selection).get(doc.mt_acceptance_standard, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">MT Procedure Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['mt_procedure_standard'].selection).get(doc.mt_procedure_standard, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <t t-if="doc.control_type == 'pt'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">PT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;">PT Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 25%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">PT Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['pt_acceptance_level'].selection).get(doc.pt_acceptance_level, 'N/A')" /></td>
+                                                <td style="padding: 4px; text-align: left;">PT Methods of Testing</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['pt_methods_of_testing'].selection).get(doc.pt_methods_of_testing, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">PT Acceptance Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['pt_acceptance_standard'].selection).get(doc.pt_acceptance_standard, 'N/A')" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">PT Procedure Standard</td>
+                                                <td style="padding: 4px; text-align: left;" colspan="3"><t t-esc="dict(doc._fields['pt_procedure_standard'].selection).get(doc.pt_procedure_standard, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <t t-if="doc.control_type == 'cl'">
+                                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                        <thead>
+                                            <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                                <th style="padding: 4px; text-align: left; width: 25%;">CL Parameter</th>
+                                                <th style="padding: 4px; text-align: left; width: 75%;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;">CL Acceptance Level</td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['cl_acceptance_level'].selection).get(doc.cl_acceptance_level, 'N/A')" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </t>
+
+                                <!-- Welding Seams -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 5%;">#</th>
+                                            <th style="padding: 4px; text-align: left; width: 30%;">Seam Number</th>
+                                            <th style="padding: 4px; text-align: left; width: 10%;">L (mm)</th>
+                                            <th style="padding: 4px; text-align: left; width: 10%;">Thk. (mm)</th>
+                                            <th style="padding: 4px; text-align: left; width: 30%;">WPS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.welding_seam_ids" t-as="seam">
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="seam.consequtive_number or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="seam.name or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="seam.seam_length or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="seam.seam_thickness or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="seam.applicable_wps_id.name_summary or 'N/A'" /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+
+                                <!-- Equipment -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Equipment Name</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Serial Number</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Calibration Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Manufacturer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.equipment_ids" t-as="equipment">
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.name or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.serial_number or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.calibration_date or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.manufacturer or 'N/A'" /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+
+                                <!-- Results -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Result Type</th>
+                                            <th style="padding: 4px; text-align: left; width: 75%;">Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;">Defect Indications</td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.defect_indications or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;">Results Statement</td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.results_statement or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;">Evaluation</td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="dict(doc._fields['evaluation'].selection).get(doc.evaluation, 'N/A')" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Signatures -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Performed Control</th>
+                                            <th style="padding: 4px; text-align: left; width: 50%;">Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Signature</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.get_translated_specialist_name(doc.control_performeted_by) or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.date_issue or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;">_______________________</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

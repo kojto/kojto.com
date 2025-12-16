@@ -10,17 +10,11 @@ class KojtoFinanceInvoiceContents(models.Model):
     _name = "kojto.finance.invoice.contents"
     _description = "Kojto Finance Invoice Contents"
     _rec_name = "name"
-    _order = "position_numeric asc, id asc"
+    _order = "position asc, id asc"
 
     name = fields.Text(string="Description", size=200)
     name_translation = fields.Text(string="Description Translation", size=200)
     position = fields.Char(string="№", size=5, required=True)
-    position_numeric = fields.Integer(
-        string="№ Order Helper",
-        compute="_compute_position_numeric",
-        store=True,
-        index=True,
-    )
 
 
 
@@ -309,10 +303,3 @@ class KojtoFinanceInvoiceContents(models.Model):
         return True
 
 
-    @api.depends("position")
-    def _compute_position_numeric(self):
-        """Normalize textual positions so default ordering remains numeric."""
-        for record in self:
-            pos_value = record.position or ""
-            match = re.match(r"\d+", pos_value)
-            record.position_numeric = int(match.group()) if match else 999999

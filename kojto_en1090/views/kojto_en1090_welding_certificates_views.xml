@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_en1090_welding_certificates_list" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.certificates.list</field>
+        <field name="model">kojto.en1090.welding.certificates</field>
+        <field name="arch" type="xml">
+            <list string="Welding Certificates" class="ko-list-main" editable="top">
+                <field name="active" string=" " widget="boolean_toggle"/>
+                <field name="name"/>
+                <field name="certificate_type"/>
+                <field name="certificate_number"/>
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="description"/>
+                <field name="issuing_authority_id"/>
+                <field name="specialist_id"/>
+                <field name="equipment_id"/>
+                <field name="company_id"/>
+                <field name="include_document_in_bundle" string="Include in Bundles" widget="boolean_toggle"/>
+                <field name="attachment_id" widget="many2many_binary" optional="show" invisible="id == False"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_en1090_welding_certificates_form" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.certificates.form</field>
+        <field name="model">kojto.en1090.welding.certificates</field>
+        <field name="arch" type="xml">
+            <form string="Welding Certificate">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            <field name="include_document_in_bundle" string="Include in Bundles" widget="boolean_toggle"/>
+                            <field name="certificate_type"/>
+                            <field name="certificate_number"/>
+                            <field name="date_start" />
+                            <field name="date_end" />
+                        </group>
+                        <group>
+                            <field name="issuing_authority_id"/>
+                            <field name="specialist_id"/>
+                            <field name="equipment_id"/>
+                            <field name="company_id"/>
+                            <field name="description" placeholder="Detailed description of the certificate..."/>
+                        </group>
+                    </group>
+                    <field name="attachment_id" widget="attachment" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_en1090_welding_certificates_search" model="ir.ui.view">
+        <field name="name">kojto.en1090.welding.certificates.search</field>
+        <field name="model">kojto.en1090.welding.certificates</field>
+        <field name="arch" type="xml">
+            <search string="Search Welding Certificates">
+                <field name="name"/>
+                <field name="certificate_type"/>
+                <field name="certificate_number"/>
+                <field name="specialist_id"/>
+                <field name="equipment_id"/>
+                <field name="company_id"/>
+                <separator/>
+                <filter string="Expired" name="expired" domain="[('date_end', '&lt;', context_today().strftime('%Y-%m-%d'))]"/>
+                <filter string="Expiring Soon" name="expiring_soon" domain="[('date_end', '&gt;=', context_today().strftime('%Y-%m-%d')), ('date_end', '&lt;=', (context_today() + relativedelta(months=3)).strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Certificate Type" name="group_by_certificate_type" context="{'group_by': 'certificate_type'}"/>
+                    <filter string="Specialist" name="group_by_specialist" context="{'group_by': 'specialist_id'}"/>
+                    <filter string="Equipment" name="group_by_equipment" context="{'group_by': 'equipment_id'}"/>
+                    <filter string="Our Company" name="group_by_company" context="{'group_by': 'company_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_en1090_welding_certificates" model="ir.actions.act_window">
+        <field name="name">Welding Certificates</field>
+        <field name="res_model">kojto.en1090.welding.certificates</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_kojto_en1090_welding_certificates_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first welding certificate
+            </p>
+            <p>
+                Create welding certificates to manage welder certifications, inspection certificates, and equipment certifications.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -69,7 +69,16 @@ def action_export_balance_to_excel(wizard):
     worksheet.set_column(1, 3, 18)  # Financial columns
 
     # Sheet 2: Transactions
-    if wizard.transaction_line_ids:
+    # Use cached transaction data (no need to create thousands of records)
+    import json
+    transaction_lines_data = []
+    if wizard.transaction_lines_cache:
+        try:
+            transaction_lines_data = json.loads(wizard.transaction_lines_cache)
+        except:
+            pass
+
+    if transaction_lines_data:
         worksheet = workbook.add_worksheet('Transactions')
 
         # Write headers
@@ -80,34 +89,34 @@ def action_export_balance_to_excel(wizard):
         for col, header in enumerate(headers):
             worksheet.write(0, col, header, header_format)
 
-        # Write data
-        for row, line in enumerate(wizard.transaction_line_ids, start=1):
+        # Write data directly from cached dictionary data
+        for row, line_data in enumerate(transaction_lines_data, start=1):
             col = 0
-            worksheet.write(row, col, line.date_issue or '', date_format)
+            worksheet.write(row, col, line_data.get('date_issue') or '', date_format)
             col += 1
-            worksheet.write(row, col, line.warehouse_name or '')
+            worksheet.write(row, col, line_data.get('warehouse_name') or '')
             col += 1
-            worksheet.write(row, col, line.transaction_name or '')
+            worksheet.write(row, col, line_data.get('transaction_name') or '')
             col += 1
-            worksheet.write(row, col, line.item_name or '')
+            worksheet.write(row, col, line_data.get('item_name') or '')
             col += 1
-            worksheet.write(row, col, line.batch_name or '')
+            worksheet.write(row, col, line_data.get('batch_name') or '')
             col += 1
 
             # Transaction type
-            type_label = 'To Store' if line.transaction_type == 'to_store' else 'From Store'
+            type_label = 'To Store' if line_data.get('transaction_type') == 'to_store' else 'From Store'
             worksheet.write(row, col, type_label)
             col += 1
 
-            worksheet.write(row, col, line.quantity or 0.0, currency_format)
+            worksheet.write(row, col, line_data.get('quantity') or 0.0, currency_format)
             col += 1
-            worksheet.write(row, col, line.unit_price_eur or 0.0, currency_format)
+            worksheet.write(row, col, line_data.get('unit_price_eur') or 0.0, currency_format)
             col += 1
-            worksheet.write(row, col, line.transaction_value_eur or 0.0, currency_format)
+            worksheet.write(row, col, line_data.get('transaction_value_eur') or 0.0, currency_format)
 
         # Write totals row
-        if wizard.transaction_line_ids:
-            total_row = len(wizard.transaction_line_ids) + 1
+        if transaction_lines_data:
+            total_row = len(transaction_lines_data) + 1
             worksheet.write(total_row, 7, 'TOTAL', bold_format)
             worksheet.write(total_row, 8, wizard.total_transactions_value or 0.0, currency_format)
 

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Welding Tasks Template -->
+        <template id="report_kojto_en1090_doc_welding_tasks">
+            <t t-call="web.html_container">
+                <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                        <t t-if="company_contact and company_contact.company_logo">
+                            <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                            <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                        </t>
+                        <!-- PLAN DATA -->
+                        <div>
+                            <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                                <h1 class="heading">
+                                    <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Welding Task / Plan</div>
+                                    <div style="margin-bottom: 20px;">
+                                        <span t-field="doc.name" style="text-transform: none;" />
+                                    </div>
+                                </h1>
+                            </div>
+
+                            <div class="section">
+                                <!-- Document Information Table -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <tbody>
+                                        <!-- Document Information -->
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Document bundle #</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Issued By</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.company_name_id" /><br />
+                                                <span t-field="doc.document_bundle_id.company_address_id" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Planned Start Date</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.date_planned or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Technical Document</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.technical_document_revision_id.name or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; background-color: #B0C4DE;"></td>
+                                            <td style="padding: 4px; width: 25%;"></td>
+                                            <td style="padding: 4px; width: 50%;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Welding Information</td>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Welding Processes</td>
+                                            <td style="padding: 4px; width: 50%; vertical-align: top;"><t t-esc="doc.welding_processes_summary or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%;">Materials</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.materials_summary or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; vertical-align: top; width: 25%;">Plan Description</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.plan_description or 'N/A'" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Equipment -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Equipment Name</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Serial Number</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Calibration Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Manufacturer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.equipment_ids" t-as="equipment">
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.name or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.serial_number or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.calibration_date or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.manufacturer or 'N/A'" /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Plan Welding Seams -->
+                            <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                <thead>
+                                    <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                        <th style="padding: 4px; text-align: left; width: 5%;">#</th>
+                                        <th style="padding: 4px; text-align: left; width: 30%;">Seam Number</th>
+                                        <th style="padding: 4px; text-align: left; width: 10%;">L (mm)</th>
+                                        <th style="padding: 4px; text-align: left; width: 10%;">Thk. (mm)</th>
+                                        <th style="padding: 4px; text-align: left; width: 30%;">Applicable WPS</th>
+                                        <th style="padding: 4px; text-align: left; width: 15%;">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.welding_seam_ids" t-as="seam">
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.consequtive_number or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.name or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.seam_length or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.seam_thickness or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.applicable_wps_id.name_summary or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.description or 'N/A'" /></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            <div class="section">
+                            <!-- Signatures -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Issued By</th>
+                                            <th style="padding: 4px; text-align: left; width: 50%;">Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Signature</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.get_translated_specialist_name(doc.plan_issued_by) or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.date_issue or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;">_______________________</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <!-- JOURNAL DATA -->
+                        <div style="page-break-before: always;">
+
+                            <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                                <h1 class="heading">
+                                    <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Welding Task / Journal</div>
+                                    <div style="margin-bottom: 20px;">
+                                        <span t-field="doc.name" style="text-transform: none;" />
+                                    </div>
+                                </h1>
+                            </div>
+
+                            <div class="section">
+                                <!-- Document Information Table -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <tbody>
+                                        <!-- Document Information -->
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Document Information</td>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Document bundle #</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Issued By</td>
+                                            <td style="padding: 4px; width: 50%;">
+                                                <span t-field="doc.document_bundle_id.company_name_id" /><br />
+                                                <span t-field="doc.document_bundle_id.company_address_id" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Execution Start Date</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.date_executed or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Technical Document</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.technical_document_revision_id.name or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; background-color: #B0C4DE;"></td>
+                                            <td style="padding: 4px; width: 25%;"></td>
+                                            <td style="padding: 4px; width: 50%;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="3">Welding Information</td>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Welding Processes</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.welding_processes_summary or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; width: 25%; vertical-align: top;">Materials</td>
+                                            <td style="padding: 4px; width: 50%;"><t t-esc="doc.materials_summary or 'N/A'" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 4px; vertical-align: top; width: 25%;">Journal Description</td>
+                                            <td style="padding: 4px; width: 75%;"><t t-esc="doc.journal_description or 'N/A'" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- Equipment -->
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Equipment Name</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Serial Number</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Calibration Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Manufacturer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="doc.equipment_ids" t-as="equipment">
+                                            <tr>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.name or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.serial_number or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.calibration_date or 'N/A'" /></td>
+                                                <td style="padding: 4px; text-align: left;"><t t-esc="equipment.manufacturer or 'N/A'" /></td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <!-- Journal Welding Seams -->
+                            <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                <thead>
+                                    <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                        <th style="padding: 4px; text-align: left; width: 5%;">#</th>
+                                        <th style="padding: 4px; text-align: left; width: 30%;">Seam Name</th>
+                                        <th style="padding: 4px; text-align: left; width: 10%;">L (mm)</th>
+                                        <th style="padding: 4px; text-align: left; width: 30%;">WPS</th>
+                                        <th style="padding: 4px; text-align: left; width: 12.5%;">Welder</th>
+                                        <th style="padding: 4px; text-align: left; width: 12.5%;">Checked By</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.welding_seam_ids" t-as="seam">
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.consequtive_number or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.name or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.seam_length or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="seam.applicable_wps_id.name_summary or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.get_translated_specialist_name(seam.welder_id) or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.get_translated_specialist_name(seam.checked_by_id) or 'N/A'" /></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                            <!-- Signatures -->
+                            <div class="section">
+                                <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                                    <thead>
+                                        <tr style="font-weight: bold; background-color: #B0C4DE;">
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Signed By</th>
+                                            <th style="padding: 4px; text-align: left; width: 50%;">Date</th>
+                                            <th style="padding: 4px; text-align: left; width: 25%;">Signature</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.get_translated_specialist_name(doc.journal_signed_by) or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;"><t t-esc="doc.date_issue or 'N/A'" /></td>
+                                            <td style="padding: 4px; text-align: left;">_______________________</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

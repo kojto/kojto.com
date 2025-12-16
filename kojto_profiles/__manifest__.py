@@ -1,7 +1,7 @@
 # kojto_profiles/__manifest__.py
 {
     "name": "Kojto Profiles",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "images": ["static/description/icon.png"],
     "category": "KOJTO",
     "description": "Profile management module for managing profiles, configurators, batches, strips, shapes, and profile optimization",

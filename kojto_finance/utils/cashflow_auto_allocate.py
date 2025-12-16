@@ -37,6 +37,43 @@ def _get_ai_config(env):
         'api_key': config['api_key'].strip()
     }
 
+def _validate_accounting_template_for_transaction(template_id, transaction_direction, env):
+    """
+    Validate that an accounting_template_id matches the domain for the given transaction direction.
+
+    Args:
+        template_id: ID of the accounting template to validate (or False/None)
+        transaction_direction: 'incoming' or 'outgoing'
+        env: Odoo environment
+
+    Returns:
+        Valid template_id if it matches the domain, False otherwise
+    """
+    if not template_id:
+        return False
+
+    if not transaction_direction:
+        return False
+
+    # Get the expected primary_type based on transaction direction
+    expected_ptype = "cashflow_in" if transaction_direction == "incoming" else "cashflow_out"
+
+    # Check if the template exists and matches the domain
+    template = env['kojto.finance.accounting.templates'].browse(template_id)
+    if not template.exists():
+        _logger.warning("Accounting template %s does not exist, filtering it out", template_id)
+        return False
+
+    # Check if the template's primary_type matches the expected type
+    actual_ptype = template.template_type_id.primary_type if template.template_type_id else None
+    if actual_ptype == expected_ptype:
+        return template_id
+
+    # Template doesn't match the domain
+    _logger.info("Accounting template %s (primary_type: %s) does not match transaction direction %s (expected: %s), filtering it out",
+                template_id, actual_ptype, transaction_direction, expected_ptype)
+    return False
+
 def _build_transaction_data(record, include_descriptions=False):
     """Helper function to build transaction data dictionary with all relevant fields."""
     data = {
@@ -204,13 +241,18 @@ def auto_allocate_for_transaction(self):
             generated_description = ai_descriptions[0] if ai_descriptions else transaction_description
 
             # Allocate to same subcode with all accounting fields
-            # Template is already validated to have correct primary_type during transaction filtering
+            # Validate accounting_template_id against the domain for the current transaction
+            valid_template_id = _validate_accounting_template_for_transaction(
+                alloc.accounting_template_id.id if alloc.accounting_template_id else False,
+                record.transaction_direction,
+                record.env
+            )
             alloc_vals = {
                 'amount': record.unallocated_amount,
                 'subcode_id': alloc.subcode_id.id,
                 'description': generated_description,
                 'auto_allocated': True,
-                'accounting_template_id': alloc.accounting_template_id.id if alloc.accounting_template_id else False,
+                'accounting_template_id': valid_template_id,
                 'accounting_ref_number': alloc.accounting_ref_number if alloc.accounting_ref_number else False,
                 'subtype_id': alloc.subtype_id.id if alloc.subtype_id else False,
                 'cash_flow_only': alloc.cash_flow_only,
@@ -292,7 +334,12 @@ def auto_allocate_for_transaction(self):
             transaction_description = getattr(record, 'transaction_data_raw', None) or getattr(record, 'description', '') or ''
 
             # Second pass: create allocations with AI-generated descriptions
-            # Template is already validated to have correct primary_type during transaction filtering
+            # Validate accounting_template_id against the domain for the current transaction
+            valid_template_id = _validate_accounting_template_for_transaction(
+                alloc.accounting_template_id.id if alloc.accounting_template_id else False,
+                record.transaction_direction,
+                record.env
+            )
             allocations = []
             for idx, (inv, alloc_amount, new_alloc_data) in enumerate(new_allocations_data):
                 # Use AI-generated description if available, otherwise fallback to transaction description
@@ -304,7 +351,7 @@ def auto_allocate_for_transaction(self):
                     'subcode_id': inv.subcode_id.id if inv.subcode_id else False,
                     'description': generated_description,
                     'auto_allocated': True,
-                    'accounting_template_id': alloc.accounting_template_id.id if alloc.accounting_template_id else False,
+                    'accounting_template_id': valid_template_id,
                     'accounting_ref_number': alloc.accounting_ref_number if alloc.accounting_ref_number else False,
                     'subtype_id': alloc.subtype_id.id if alloc.subtype_id else False,
                     'cash_flow_only': alloc.cash_flow_only,

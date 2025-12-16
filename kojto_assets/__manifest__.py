@@ -1,6 +1,6 @@
 {
     "name": "Kojto Assets",
-    "version": "18.04.07",
+    "version": "18.04.08",
     "category": "KOJTO",
     "description": "Asset management module for tracking assets, asset works, bookings, maintenance, values, and subcode rates",
     "author": "KOJTO",

@@ -7,5 +7,6 @@ from . import export_2dr_cutting_plan_to_excel
 from . import compute_2dr_cutting_plan
 from . import export_2dr_cutting_plan_to_dxf
 from . import compute_cutting_plan_2dr_svg
+from . import compute_cutting_plan_2d_svg
 
 

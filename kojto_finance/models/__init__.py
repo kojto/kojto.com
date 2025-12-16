@@ -18,6 +18,7 @@ from . import kojto_finance_accounting_subtypes
 from . import kojto_finance_accounting_identifiers
 from . import kojto_finance_accounting_accounts
 from . import kojto_finance_accounts_balance
+from . import kojto_finance_single_account_balance
 from . import kojto_finance_vat_treatment
 from . import kojto_finance_vat_treatment_translation
 

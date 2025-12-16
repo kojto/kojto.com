@@ -5,7 +5,7 @@ from datetime import datetime
 from rectpack import newPacker, PackingMode
 from rectpack import GuillotineBafLas, MaxRectsBssf, SkylineBl
 
-def generate_2dr_cutting_plan(stock_rectangles_ids, cutted_rectangles_ids, method="maxrects_bssf", width_of_cut=0.0, use_stock_priority=False, package=None, margin_left=0.0, margin_right=0.0, margin_top=0.0, margin_bottom=0.0):
+def generate_2dr_cutting_plan(stock_rectangles_ids, cutted_rectangles_ids, method="maxrects_bssf", width_of_cut=0.0, use_stock_priority=False, allow_cut_rotation=True, package=None, margin_left=0.0, margin_right=0.0, margin_top=0.0, margin_bottom=0.0):
     result = {}
 
     def error_result(message, error_details=None):
@@ -220,11 +220,11 @@ def generate_2dr_cutting_plan(stock_rectangles_ids, cutted_rectangles_ids, metho
 
             # Create packer for current position
             if method == "maxrects_bssf":
-                packer = newPacker(mode=PackingMode.Offline, pack_algo=MaxRectsBssf, rotation=True)
+                packer = newPacker(mode=PackingMode.Offline, pack_algo=MaxRectsBssf, rotation=allow_cut_rotation)
             elif method == "guillotine_baf":
-                packer = newPacker(mode=PackingMode.Offline, pack_algo=GuillotineBafLas, rotation=True)
+                packer = newPacker(mode=PackingMode.Offline, pack_algo=GuillotineBafLas, rotation=allow_cut_rotation)
             elif method == "skyline_bl":
-                packer = newPacker(mode=PackingMode.Offline, pack_algo=SkylineBl, rotation=True)
+                packer = newPacker(mode=PackingMode.Offline, pack_algo=SkylineBl, rotation=allow_cut_rotation)
 
             # Add bins for current position
             for bin_idx, (stock_pos_current, stock_width, stock_length, stock_desc) in stock_map.items():
@@ -320,11 +320,11 @@ def generate_2dr_cutting_plan(stock_rectangles_ids, cutted_rectangles_ids, metho
             )
 
         if method == "maxrects_bssf":
-            packer = newPacker(mode=PackingMode.Offline, pack_algo=MaxRectsBssf, rotation=True)
+            packer = newPacker(mode=PackingMode.Offline, pack_algo=MaxRectsBssf, rotation=allow_cut_rotation)
         elif method == "guillotine_baf":
-            packer = newPacker(mode=PackingMode.Offline, pack_algo=GuillotineBafLas, rotation=True)
+            packer = newPacker(mode=PackingMode.Offline, pack_algo=GuillotineBafLas, rotation=allow_cut_rotation)
         elif method == "skyline_bl":
-            packer = newPacker(mode=PackingMode.Offline, pack_algo=SkylineBl, rotation=True)
+            packer = newPacker(mode=PackingMode.Offline, pack_algo=SkylineBl, rotation=allow_cut_rotation)
 
         for bin_idx, (stock_pos, stock_width, stock_length, stock_desc) in stock_map.items():
             packer.add_bin(stock_width, stock_length, bid=(bin_idx, stock_pos, stock_desc))

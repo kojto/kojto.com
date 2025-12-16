@@ -1,0 +1,44 @@
+Unit,Unit Type,Description,Conversion Factor
+‰,Proportion,Permille,0.00
+°F,Temperature,Fahrenheit,
+°C,Temperature,Celsius (base),1.00
+week,Time,Week,"604,800.00"
+unit,Quantity,Unit (base),1.00
+t,Weight,Ton,"1,000.00"
+shift,Time,Shift,"28,800.00"
+sec,Time,Second (base),1.00
+mo,Time,Month,"2,592,000.00"
+mm2,Area,Square Millimeter,0.00
+mm/s,Speed,Millimeter per Second,0.00
+mm,Length,Millimeter,0.00
+ml,Volume,Milliliter,0.00
+min,Time,Minute,60.00
+man hr,Time,Man Hour,"3,600.00"
+m3,Volume,Cubic Meter (base),1.00
+m2,Area,Square Meter (base),1.00
+m/s,Speed,Meter per Second (base),1.00
+m/min,Speed,Meter per Minute,0.02
+m,Length,Meter (base),1.00
+l,Volume,Liter,0.00
+km,Length,Kilometer,"1,000.00"
+kg/m3,Density,Kilogram per Cubic Meter (base),1.00
+kg,Weight,Kilogram (base),1.00
+kWh,Energy,Kilowatt-hour,"3,600,000.00"
+kW,Power,Kilowatt,"1,000.00"
+kN,Force,Kilonewton,"1,000.00"
+ha,Area,Hectare,"10,000.00"
+g/cm3,Density,Gram per Cubic Centimeter,"1,000.00"
+g,Weight,Gram,0.00
+dm3,Volume,Cubic Decimeter,0.00
+dm2,Area,Square Decimeter,0.01
+dm,Length,Decimeter,0.10
+day,Time,Day,"86,400.00"
+cm3,Volume,Cubic Centimeter,0.00
+cm2,Area,Square Centimeter,0.00
+cm,Length,Centimeter,0.01
+W,Power,Watt (base),1.00
+Pa,Pressure,Pascal (base),1.00
+N,Force,Newton (base),1.00
+MWh,Energy,Megawatt-hour,"3,600,000,000.00"
+J,Energy,Joule (base),1.00
+%,Proportion,Percent (base),1.00

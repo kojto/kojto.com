@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- List View -->
+    <record id="view_kojto_energy_management_base_prices_list" model="ir.ui.view">
+        <field name="name">kojto.energy.management.base.prices.list</field>
+        <field name="model">kojto.energy.management.base.prices</field>
+        <field name="arch" type="xml">
+            <list string="Base Prices" editable="top" class="ko-list-main">
+                <field name="device_id"/>
+                <field name="price_type"/>
+                <field name="start_date"/>
+                <field name="valid_until" optional="show"/>
+                <field name="base_price_eur_per_mwh"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_kojto_energy_management_base_prices_form" model="ir.ui.view">
+        <field name="name">kojto.energy.management.base.prices.form</field>
+        <field name="model">kojto.energy.management.base.prices</field>
+        <field name="arch" type="xml">
+            <form string="Base Price">
+                <sheet>
+                    <group>
+                        <group string="Basic Information">
+                            <field name="device_id"/>
+                            <field name="price_type"/>
+                        </group>
+                        <group string="Validity Period">
+                            <field name="start_date"/>
+                            <field name="valid_until"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Price">
+                            <field name="base_price_eur_per_mwh"/>
+                        </group>
+                        <group string="Additional Information">
+                            <field name="notes"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_kojto_energy_management_base_prices_search" model="ir.ui.view">
+        <field name="name">kojto.energy.management.base.prices.search</field>
+        <field name="model">kojto.energy.management.base.prices</field>
+        <field name="arch" type="xml">
+            <search string="Search Base Prices">
+                <field name="device_id"/>
+                <field name="price_type"/>
+                <field name="start_date"/>
+                <filter string="Import Prices" name="filter_import"
+                        domain="[('price_type', '=', 'import')]"/>
+                <filter string="Export Prices" name="filter_export"
+                        domain="[('price_type', '=', 'export')]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Device" name="group_device" context="{'group_by': 'device_id'}"/>
+                    <filter string="Price Type" name="group_price_type" context="{'group_by': 'price_type'}"/>
+                    <filter string="Start Date" name="group_start_date" context="{'group_by': 'start_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_kojto_energy_management_base_prices" model="ir.actions.act_window">
+        <field name="name">Base Prices</field>
+        <field name="res_model">kojto.energy.management.base.prices</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No base prices configured yet
+            </p>
+            <p>
+                Click the Create button to add a new base price for a device.
+                Base prices are time-based and valid from their start date until the next base price starts.
+            </p>
+        </field>
+    </record>
+
+</odoo>
+

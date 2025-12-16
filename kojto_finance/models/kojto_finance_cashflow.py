@@ -80,7 +80,47 @@ class KojtoFinanceCashflow(models.Model):
         self._compute_unallocated_amount()
         return {}
 
-    @api.depends("transaction_allocation_ids", "transaction_allocation_ids.amount", "transaction_allocation_ids.subcode_id", "transaction_allocation_ids.invoice_id", "transaction_allocation_ids.accounting_template_id", "transaction_allocation_ids.accounting_ref_number", "transaction_allocation_ids.subtype_id")
+    def recompute_allocation_summary(self):
+        """Recompute allocation summary for selected cashflow transactions"""
+        if not self:
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'Warning',
+                    'message': 'Please select one or more cashflow transactions to recompute their summaries.',
+                    'type': 'warning',
+                    'sticky': False,
+                }
+            }
+
+        # Process in batches to handle large selections (Odoo has default limits)
+        batch_size = 1000
+        processed_count = 0
+        record_ids = self.ids
+
+        # Process in batches
+        for i in range(0, len(record_ids), batch_size):
+            batch_ids = record_ids[i:i+batch_size]
+            batch_records = self.env['kojto.finance.cashflow'].browse(batch_ids)
+            # Invalidate cache to force recomputation
+            batch_records.invalidate_recordset(['allocation_summary'])
+            # Recompute the allocation summary
+            batch_records._compute_allocation_summary()
+            processed_count += len(batch_records)
+
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Success',
+                'message': f'Recomputed allocation summary for {processed_count} cashflow transaction(s).',
+                'type': 'success',
+                'sticky': False,
+            }
+        }
+
+    @api.depends("transaction_allocation_ids", "transaction_allocation_ids.amount", "transaction_allocation_ids.subcode_id", "transaction_allocation_ids.invoice_id", "transaction_allocation_ids.accounting_template_id", "transaction_allocation_ids.accounting_ref_number", "transaction_allocation_ids.subtype_id", "transaction_allocation_ids.cash_flow_only", "transaction_allocation_ids.cash_flow_only_inherited")
     def _compute_allocation_summary(self):
         for record in self:
             if not record.transaction_allocation_ids:
@@ -110,6 +150,12 @@ class KojtoFinanceCashflow(models.Model):
 
                 if allocation.subtype_id:
                     line_parts.append(f"<{allocation.subtype_id.name}>")
+
+                # Add CFO for cash flow only allocations (either direct or inherited from subcode)
+                # Check both the direct field and the subcode's cash_flow_only field
+                is_cfo = allocation.cash_flow_only or (allocation.subcode_id and allocation.subcode_id.cash_flow_only)
+                if is_cfo:
+                    line_parts.append('<span style="color: blue; font-weight: bold;">CFO</span>')
 
                 summary_lines.append(" ".join(line_parts))
 

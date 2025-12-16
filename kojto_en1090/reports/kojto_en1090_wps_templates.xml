@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_kojto_en1090_wps">
+        <t t-call="web.html_container">
+            <t t-call="kojto_file_assets.kojto_pdf_header_css_assets" />
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <t t-set="company_contact" t-value="env['kojto.contacts'].search([('res_company_id', '=', env.company.id)], limit=1)" />
+                    <t t-if="company_contact and company_contact.company_logo">
+                        <t t-set="company_logo" t-value="'data:image/svg;base64,' + company_contact.company_logo.decode('utf-8')" />
+                        <style> @page { @top-right { content: url("<t t-esc='company_logo' />"); width: 80px; vertical-align: bottom; padding-top: 25px; height: 100%; } } </style>
+                    </t>
+                    <div t-attf-style="string-set: date_issue '{{ doc.date_issue.strftime('%Y-%m-%d') if doc.date_issue else '' }}';">
+                        <h1 class="heading">
+                            <div style="margin-bottom: 20px; margin-top: 30px; font-size: 2em;">Welding Procedure Specification</div>
+                            <div style="margin-bottom: 20px;">
+                                <span t-field="doc.name" style="text-transform: none;" /> - <span t-attf-style="color: {{ 'red' if doc.wps_type == 'preliminary' else 'inherit' }};"><t t-esc="dict(doc._fields['wps_type'].selection).get(doc.wps_type, 'N/A')" /></span>
+                            </div>
+                        </h1>
+                    </div>
+
+                    <!-- Document Information Table -->
+                    <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                        <tbody>
+                            <!-- Document Information -->
+                            <tr>
+                                <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="7">Document Information</td>
+                                <td style="padding: 4px; width: 35%;">Issued On</td>
+                                <td style="padding: 4px; width: 40%;"><span t-field="doc.date_issue" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Issued By</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.issued_by.name or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Language</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.language_id.name or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Degree of Mechanisation</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="dict(doc._fields['degree_of_mechanisation'].selection).get(doc.degree_of_mechanisation, 'N/A')" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Welder</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.get_translated_specialist_name(doc.welder_id) or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Welding Engineer</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.get_translated_specialist_name(doc.welding_engineer_id) or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Description</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.description or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; font-weight: bold; vertical-align: top; font-size: 110%; width: 25%; background-color: #B0C4DE;" rowspan="4">Weld Information</td>
+                                <td style="padding: 4px; width: 35%;">WPQR Reference</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.wpqr_id.name_summary or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Thickness</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.wall_thickness or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Tube Diameter</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.tube_diameter or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; width: 35%;">Depth of Penetration</td>
+                                <td style="padding: 4px; width: 40%;"><t t-esc="doc.depth_of_penetration or 'N/A'" /></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 4px; vertical-align: top; width: 25%; background-color: #B0C4DE;">
+                                    <span style="font-weight: bold; vertical-align: top; font-size: 110%;">Welding Seam Type</span><br/>
+                                    <t t-esc="doc.get_translated_weld_geometry_name(doc.welding_joint_geometry_id) or 'N/A'" /><br/>
+                                    <t t-esc="dict(doc._fields['welding_position'].selection).get(doc.welding_position, 'N/A')" />
+                                </td>
+                                <td style="padding: 4px; width: 35%; vertical-align: bottom; text-align: center;">
+                                    <t t-if="doc.welding_position">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 800 800"
+                                             preserveAspectRatio="xMidYMid meet"
+                                             style="width: 100%; height: auto; max-width: 200px; margin-top: 30px;">
+                                            <path d="M 574.91 172.28 L 574.91 368.41" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 529.94 231.6 L 529.94 427.73" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 519.94 231.6 L 529.94 181.6 L 539.94 231.6 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 564.91 368.41 L 574.91 418.41 L 584.91 368.41 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 390 90 L 400 40 L 410 90 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 229.53 159.13 L 201.25 116.71 L 243.67 144.99 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 390 530 L 400 580 L 410 530 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 229.53 460.87 L 201.25 503.29 L 243.67 475.01 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 185 300 L 135 310 L 185 320 Z" fill="none" stroke="black" stroke-width="2"/>
+                                            <path d="M 625 85 L 625 535 L 700 535 L 700 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 625 85 L 700 85 L 700 10 L 400 10 L 475 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 325 85 L 400 10 L 100 10 L 100 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 175 235 L 100 310 L 100 85 L 175 85 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 175 385 L 100 310 L 100 535 L 175 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 175 535 L 100 535 L 100 610 L 400 610 L 325 535 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <path d="M 700 610 L 700 535 L 475 535 L 400 610 Z" fill="#e0e0e0" stroke="black" stroke-width="5"/>
+                                            <text x="380" y="100" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PE</text>
+                                            <text x="241.25" y="150" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PD</text>
+                                            <text x="201.38" y="290" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PC</text>
+                                            <text x="241.25" y="420" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PB</text>
+                                            <text x="380" y="480" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PA</text>
+                                            <text x="510" y="450" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PF</text>
+                                            <text x="550" y="120" font-family="Arial, sans-serif" font-size="40" fill="black" text-anchor="start" dominant-baseline="hanging">PG</text>
+                                        </svg>
+                                    </t>
+                                </td>
+                                <td style="padding: 4px; width: 40%; vertical-align: top; text-align: left;">
+                                    <t t-if="doc.welding_joint_geometry_id.weld_drawing_svg">
+                                        <img t-att-src="'data:image/svg+xml;base64,' + (doc.welding_joint_geometry_id.weld_drawing_svg.decode('utf-8') if doc.welding_joint_geometry_id.weld_drawing_svg else '')"
+                                             style="width: 100%; height: auto; max-width: 200px;" />
+                                    </t>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Materials -->
+                    <div class="section">
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <thead>
+                                <tr style="background-color: #B0C4DE; font-weight: bold;">
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Material Grade</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Material Grade Type</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Density (kg/m³)</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.material_ids" t-as="material">
+                                    <tr>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="material.name or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="material.material_grade_type or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="material.density or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="material.description or 'N/A'" /></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Equipment -->
+                    <div class="section">
+                        <table class="performance-table" style="width: 100%; border-collapse: collapse; margin-bottom: 20px; margin-top: 20px;">
+                            <thead>
+                                <tr style="background-color: #B0C4DE; font-weight: bold;">
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Equipment Name</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Manufacturer</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Model</th>
+                                    <th style="padding: 4px; text-align: left; width: 25%;">Serial Number</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.equipment_ids" t-as="equipment">
+                                    <tr>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="equipment.name or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="equipment.manufacturer or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="equipment.model or 'N/A'" /></td>
+                                        <td style="padding: 4px; text-align: left;"><t t-esc="equipment.serial_number or 'N/A'" /></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div t-field="doc.weld_deposition_summary" />
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+
